@@ -1,0 +1,24 @@
+a 0 5 5 vline 9
+a 1 15 5 vline 9
+a 2 3 5 hline 2
+a 3 15 5 hline 3
+a 4 10 18 ptline 9 19
+a 5 3 19 hline 6
+a 6 3 14 hline 2
+a 7 18 15 ptline 19 16
+a 8 1 16 ptline 2 15
+a 10 2 3 ptline 3 5
+a 11 17 5 ptline 18 3
+a 12 2 2 hline 2
+a 13 17 2 hline 2
+a 14 4 1 hline 2
+a 15 15 1 hline 2
+a 16 6 0 hline 9
+a 17 10 0 vline 2
+a 18 10 18 ptline 11 19
+a 19 3 19 ptline 1 17
+a 20 16 14 hline 2
+a 21 19 17 ptline 17 19
+a 22 12 19 hline 6
+w
+x

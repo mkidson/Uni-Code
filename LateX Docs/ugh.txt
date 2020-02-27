@@ -1,0 +1,407 @@
+C:\Windows\system32>pnputil -e
+Microsoft PnP Utility
+
+Published name :            oem21.inf
+Driver package provider :   A-Volute
+Class :                     Extensions
+Driver date and version :   08/13/2018 1.1.2.53155
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem4.inf
+Driver package provider :   INTEL
+Class :                     System devices
+Driver date and version :   07/18/1968 10.1.16.3
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem5.inf
+Driver package provider :   INTEL
+Class :                     System devices
+Driver date and version :   07/18/1968 10.1.16.3
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem6.inf
+Driver package provider :   INTEL
+Class :                     System devices
+Driver date and version :   07/18/1968 10.1.16.3
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem7.inf
+Driver package provider :   INTEL
+Class :                     System devices
+Driver date and version :   07/18/1968 10.1.14.3
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem62.inf
+Driver package provider :   Intel Corporation
+Class :                     Extensions
+Driver date and version :   06/27/2019 26.20.100.7000
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem68.inf
+Driver package provider :   Realtek Semiconductor Corp.
+Class :                     Extensions
+Driver date and version :   01/22/2019 6.0.1.8622
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem20.inf
+Driver package provider :   Realtek Semiconductor Corp.
+Class :                     Extensions
+Driver date and version :   08/21/2018 6.0.1.8519
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem28.inf
+Driver package provider :   Intel
+Class :                     System devices
+Driver date and version :   03/14/2018 1811.12.0.1115
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem2.inf
+Driver package provider :   Intel Corporation
+Class :                     IDE ATA/ATAPI controllers
+Driver date and version :   01/22/2018 16.0.1.1018
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem30.inf
+Driver package provider :   Intel Corporation
+Class :                     System devices
+Driver date and version :   07/03/2017 30.100.1727.1
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem31.inf
+Driver package provider :   Intel Corporation
+Class :                     System devices
+Driver date and version :   07/03/2017 30.100.1727.1
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem32.inf
+Driver package provider :   Intel Corporation
+Class :                     System devices
+Driver date and version :   07/03/2017 30.100.1727.1
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem3.inf
+Driver package provider :   Intel Corporation
+Class :                     Storage controllers
+Driver date and version :   01/22/2018 16.0.1.1018
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem29.inf
+Driver package provider :   ENE TECHNOLOGY INC.
+Class :                     Human Interface Devices
+Driver date and version :   04/23/2018 1.1.6.0
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem41.inf
+Driver package provider :   NVIDIA
+Class :                     Mice and other pointing devices
+Driver date and version :   06/06/2018 8.16.23319.34391
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem42.inf
+Driver package provider :   NVIDIA
+Class :                     System devices
+Driver date and version :   08/27/2018 3.3.2475.1519
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem14.inf
+Driver package provider :   NVIDIA
+Class :                     System devices
+Driver date and version :   12/27/2016 2.2.2151.6378
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem8.inf
+Driver package provider :   INTEL
+Class :                     System devices
+Driver date and version :   07/18/1968 10.1.7.2
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem53.inf
+Driver package provider :   A-Volute
+Class :                     Software components
+Driver date and version :   10/29/2018 1.2.1.0
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem26.inf
+Driver package provider :   A-Volute
+Class :                     Software components
+Driver date and version :   05/09/2018 1.1.0.0
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem10.inf
+Driver package provider :   A-Volute
+Class :                     Software components
+Driver date and version :   07/09/2019 1.4.2.0
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem57.inf
+Driver package provider :   A-Volute
+Class :                     Software components
+Driver date and version :   08/20/2018 1.1.7.0
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem59.inf
+Driver package provider :   Intel Corporation
+Class :                     Software components
+Driver date and version :   06/27/2019 26.20.100.7000
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem43.inf
+Driver package provider :   LogMeIn Inc.
+Class :                     Network adapters
+Driver date and version :   03/30/2015 15.28.40.464
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem25.inf
+Driver package provider :   Realtek Semiconductor Corp.
+Class :                     Sound, video and game controllers
+Driver date and version :   08/21/2018 6.0.1.8519
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem44.inf
+Driver package provider :   Realtek Semiconductor Corp.
+Class :                     Sound, video and game controllers
+Driver date and version :   01/22/2019 6.0.1.8622
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem39.inf
+Driver package provider :   Intel Corporation
+Class :                     Bluetooth
+Driver date and version :   05/04/2018 20.60.0.4
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem35.inf
+Driver package provider :   Intel Corporation
+Class :                     Bluetooth
+Driver date and version :   05/04/2018 20.60.0.4
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem34.inf
+Driver package provider :   Intel Corporation
+Class :                     Bluetooth
+Driver date and version :   05/04/2018 20.60.0.4
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem38.inf
+Driver package provider :   Intel Corporation
+Class :                     Bluetooth
+Driver date and version :   05/04/2018 20.60.0.4
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem33.inf
+Driver package provider :   Intel Corporation
+Class :                     Bluetooth
+Driver date and version :   05/04/2018 20.60.0.4
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem37.inf
+Driver package provider :   Intel Corporation
+Class :                     Bluetooth
+Driver date and version :   05/04/2018 20.60.0.4
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem36.inf
+Driver package provider :   Intel Corporation
+Class :                     Bluetooth
+Driver date and version :   05/04/2018 20.60.0.4
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem61.inf
+Driver package provider :   Intel Corporation
+Class :                     Software components
+Driver date and version :   06/27/2019 26.20.100.7000
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem54.inf
+Driver package provider :   Intel Corporation
+Class :                     Display adapters
+Driver date and version :   06/27/2019 26.20.100.7000
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem64.inf
+Driver package provider :   Intel(R) Corporation
+Class :                     Sound, video and game controllers
+Driver date and version :   05/17/2019 10.26.0.8
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem58.inf
+Driver package provider :   Intel(R) Corporation
+Class :                     Sound, video and game controllers
+Driver date and version :   05/17/2019 10.27.0.4
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem9.inf
+Driver package provider :   Intel(R) Corporation
+Class :                     Sound, video and game controllers
+Driver date and version :   03/22/2018 10.25.0.4
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem49.inf
+Driver package provider :   Vernier Software & Technology
+Class :                     Vernier WinUSB Bulk Sys Devices
+Driver date and version :   12/28/2011 1.0.0.0
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem63.inf
+Driver package provider :   Intel Corporation
+Class :                     Software components
+Driver date and version :   06/27/2019 26.20.100.7000
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem27.inf
+Driver package provider :   Qualcomm Atheros
+Class :                     Network adapters
+Driver date and version :   09/18/2017 2.1.0.27
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem15.inf
+Driver package provider :   Intel
+Class :                     Network adapters
+Driver date and version :   04/29/2018 18.33.13.4
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem16.inf
+Driver package provider :   Intel
+Class :                     Network adapters
+Driver date and version :   04/29/2018 18.33.13.4
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem17.inf
+Driver package provider :   Intel
+Class :                     Network adapters
+Driver date and version :   04/29/2018 19.51.13.2
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem18.inf
+Driver package provider :   Intel
+Class :                     Network adapters
+Driver date and version :   05/09/2018 20.60.0.7
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem70.inf
+Driver package provider :   NVIDIA
+Class :                     Display adapters
+Driver date and version :   09/05/2019 26.21.14.3630
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem12.inf
+Driver package provider :   NVIDIA
+Class :                     Sound, video and game controllers
+Driver date and version :   02/20/2018 4.6.0.0
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem40.inf
+Driver package provider :   NVIDIA
+Class :                     Sound, video and game controllers
+Driver date and version :   03/14/2019 4.13.0.0
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem13.inf
+Driver package provider :   Windscribe.com
+Class :                     Network adapters
+Driver date and version :   12/21/2016 9.0.0.21
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem1.inf
+Driver package provider :   Microsoft
+Class :                     Printers
+Driver date and version :   06/21/2006 10.0.17134.1
+Signer name :               Microsoft Windows
+
+Published name :            oem0.inf
+Driver package provider :   Microsoft
+Class :                     Printers
+Driver date and version :   06/21/2006 10.0.17134.1
+Signer name :               Microsoft Windows
+
+Published name :            oem19.inf
+Driver package provider :   Intel® Corporation
+Class :                     Intel® Power Sharing Manager
+Driver date and version :   04/26/2018 4.0.1.1
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem51.inf
+Driver package provider :   Realtek
+Class :                     Software components
+Driver date and version :   08/20/2018 11.0.6000.642
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem22.inf
+Driver package provider :   Realtek
+Class :                     Software components
+Driver date and version :   05/02/2018 11.0.6000.621
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem67.inf
+Driver package provider :   Realtek
+Class :                     Software components
+Driver date and version :   01/17/2019 11.0.6000.669
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem24.inf
+Driver package provider :   Realtek
+Class :                     Software components
+Driver date and version :   05/14/2018 11.0.6000.115
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem56.inf
+Driver package provider :   Realtek
+Class :                     Software components
+Driver date and version :   08/21/2018 11.0.6000.136
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem66.inf
+Driver package provider :   Realtek
+Class :                     Software components
+Driver date and version :   01/22/2019 11.0.6000.168
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem65.inf
+Driver package provider :   Realtek
+Class :                     Software components
+Driver date and version :   01/21/2019 1.0.0.149
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem23.inf
+Driver package provider :   Realtek
+Class :                     Software components
+Driver date and version :   05/15/2018 1.0.0.70
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem52.inf
+Driver package provider :   Realtek
+Class :                     Software components
+Driver date and version :   08/21/2018 1.0.0.103
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem60.inf
+Driver package provider :   Cisco Systems
+Class :                     Network adapters
+Driver date and version :   02/26/2014 3.1.6019.0
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem45.inf
+Driver package provider :   Jungo LTD.
+Class :                     VSTJungo
+Driver date and version :   07/04/2008 9.2.1.0
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem46.inf
+Driver package provider :   Jungo LTD.
+Class :                     VSTJungo
+Driver date and version :   07/04/2008 9.2.1.0
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem47.inf
+Driver package provider :   Jungo LTD.
+Class :                     VSTJungo
+Driver date and version :   07/04/2009 9.2.1.0
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+Published name :            oem48.inf
+Driver package provider :   Jungo
+Class :                     VSTJungo
+Driver date and version :   07/04/2008 9.2.1.0
+Signer name :               Microsoft Windows Hardware Compatibility Publisher
+
+
+C:\Windows\system32>

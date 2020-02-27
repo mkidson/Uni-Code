@@ -1,0 +1,599 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.22)  26 FEB 2020 14:50
+entering extended mode
+**"d:/Git Repositories/Uni-Code/PHY2004W Computational/CP1/CP1.tex"
+("d:/Git Repositories/Uni-Code/PHY2004W Computational/CP1/CP1.tex"
+LaTeX2e <2020-02-02> patch level 3
+L3 programming layer <2020-02-14> ("D:\Program Files\MikTeX\tex/latex/base\article.cls"
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+("D:\Program Files\MikTeX\tex/latex/base\size12.clo"
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+) ("D:\Program Files\MikTeX\tex/latex/geometry\geometry.sty"
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ ("D:\Program Files\MikTeX\tex/latex/graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+) ("D:\Program Files\MikTeX\tex/generic/iftex\ifvtex.sty"
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ ("D:\Program Files\MikTeX\tex/generic/iftex\iftex.sty"
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+))
+\Gm@cnth=\count175
+\Gm@cntv=\count176
+\c@Gm@tempcnt=\count177
+\Gm@bindingoffset=\dimen135
+\Gm@wd@mp=\dimen136
+\Gm@odd@mp=\dimen137
+\Gm@even@mp=\dimen138
+\Gm@layoutwidth=\dimen139
+\Gm@layoutheight=\dimen140
+\Gm@layouthoffset=\dimen141
+\Gm@layoutvoffset=\dimen142
+\Gm@dimlist=\toks15
+ ("D:\Program Files\MikTeX\tex/latex/geometry\geometry.cfg")) ("D:\Program Files\MikTeX\tex/latex/graphics\graphicx.sty"
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+ ("D:\Program Files\MikTeX\tex/latex/graphics\graphics.sty"
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+ ("D:\Program Files\MikTeX\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) ("D:\Program Files\MikTeX\tex/latex/graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+ ("D:\Program Files\MikTeX\tex/latex/graphics-def\pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen143
+\Gin@req@width=\dimen144
+) ("D:\Program Files\MikTeX\tex/latex/amsmath\amsmath.sty"
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+("D:\Program Files\MikTeX\tex/latex/amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+ ("D:\Program Files\MikTeX\tex/latex/amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen145
+)) ("D:\Program Files\MikTeX\tex/latex/amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen146
+) ("D:\Program Files\MikTeX\tex/latex/amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count178
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count179
+\leftroot@=\count180
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count181
+\DOTSCASE@=\count182
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box45
+\strutbox@=\box46
+\big@size=\dimen147
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count183
+\c@MaxMatrixCols=\count184
+\dotsspace@=\muskip16
+\c@parentequation=\count185
+\dspbrk@lvl=\count186
+\tag@help=\toks17
+\row@=\count187
+\column@=\count188
+\maxfields@=\count189
+\andhelp@=\toks18
+\eqnshift@=\dimen148
+\alignsep@=\dimen149
+\tagshift@=\dimen150
+\tagwidth@=\dimen151
+\totwidth@=\dimen152
+\lineht@=\dimen153
+\@envbody=\toks19
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+) ("D:\Program Files\MikTeX\tex/latex/physics\physics.sty"
+Package: physics 
+ ("D:\Program Files\MikTeX\tex/latex/l3packages/xparse\xparse.sty" ("D:\Program Files\MikTeX\tex/latex/l3kernel\expl3.sty"
+Package: expl3 2020-02-14 L3 programming layer (loader) 
+ ("D:\Program Files\MikTeX\tex/latex/l3backend\l3backend-pdfmode.def"
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count190
+\l__pdf_internal_box=\box47
+))
+Package: xparse 2020-02-14 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count191
+\g__xparse_grabber_int=\count192
+\l__xparse_m_args_int=\count193
+\l__xparse_v_nesting_int=\count194
+)) ("D:\Program Files\MikTeX\tex/latex/tabto-ltx\tabto.sty"
+Package: tabto 2018/12/28  v 1.4  Another tabbing mechanism
+\CurrentLineWidth=\dimen154
+\TabPrevPos=\dimen155
+) ("D:\Program Files\MikTeX\tex/latex/float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count195
+\float@exts=\toks21
+\float@box=\box48
+\@float@everytoks=\toks22
+\@floatcapt=\box49
+) ("D:\Program Files\MikTeX\tex/latex/amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ ("D:\Program Files\MikTeX\tex/latex/amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) ("D:\Program Files\MikTeX\tex/latex/pgfplots\pgfplots.sty" ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplots.revision.tex")
+Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
+ ("D:\Program Files\MikTeX\tex/latex/pgf/frontendlayer\tikz.sty" ("D:\Program Files\MikTeX\tex/latex/pgf/basiclayer\pgf.sty" ("D:\Program Files\MikTeX\tex/latex/pgf/utilities\pgfrcs.sty" ("D:\Program Files\MikTeX\tex/generic/pgf/utilities\pgfutil-common.tex"
+\pgfutil@everybye=\toks23
+\pgfutil@tempdima=\dimen156
+\pgfutil@tempdimb=\dimen157
+ ("D:\Program Files\MikTeX\tex/generic/pgf/utilities\pgfutil-common-lists.tex")) ("D:\Program Files\MikTeX\tex/generic/pgf/utilities\pgfutil-latex.def"
+\pgfutil@abb=\box50
+ ("D:\Program Files\MikTeX\tex/latex/ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+)) ("D:\Program Files\MikTeX\tex/generic/pgf/utilities\pgfrcs.code.tex" ("D:\Program Files\MikTeX\tex/generic/pgf\pgf.revision.tex")
+Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
+))
+Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
+ ("D:\Program Files\MikTeX\tex/latex/pgf/basiclayer\pgfcore.sty" ("D:\Program Files\MikTeX\tex/latex/pgf/systemlayer\pgfsys.sty" ("D:\Program Files\MikTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex"
+Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
+ ("D:\Program Files\MikTeX\tex/generic/pgf/utilities\pgfkeys.code.tex"
+\pgfkeys@pathtoks=\toks24
+\pgfkeys@temptoks=\toks25
+ ("D:\Program Files\MikTeX\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex"
+\pgfkeys@tmptoks=\toks26
+))
+\pgf@x=\dimen158
+\pgf@y=\dimen159
+\pgf@xa=\dimen160
+\pgf@ya=\dimen161
+\pgf@xb=\dimen162
+\pgf@yb=\dimen163
+\pgf@xc=\dimen164
+\pgf@yc=\dimen165
+\pgf@xd=\dimen166
+\pgf@yd=\dimen167
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count196
+\c@pgf@countb=\count197
+\c@pgf@countc=\count198
+\c@pgf@countd=\count199
+\t@pgf@toka=\toks27
+\t@pgf@tokb=\toks28
+\t@pgf@tokc=\toks29
+\pgf@sys@id@count=\count266
+ ("D:\Program Files\MikTeX\tex/generic/pgf/systemlayer\pgf.cfg"
+File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ ("D:\Program Files\MikTeX\tex/generic/pgf/systemlayer\pgfsys-pdftex.def"
+File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
+ ("D:\Program Files\MikTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def"
+File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
+))) ("D:\Program Files\MikTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex"
+File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfsyssoftpath@smallbuffer@items=\count267
+\pgfsyssoftpath@bigbuffer@items=\count268
+) ("D:\Program Files\MikTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex"
+File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)) ("D:\Program Files\MikTeX\tex/latex/xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+ ("D:\Program Files\MikTeX\tex/latex/graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) ("D:\Program Files\MikTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex"
+Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
+ ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmath.code.tex" ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathcalc.code.tex" ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathutil.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathparser.code.tex"
+\pgfmath@dimen=\dimen168
+\pgfmath@count=\count269
+\pgfmath@box=\box51
+\pgfmath@toks=\toks30
+\pgfmath@stack@operand=\toks31
+\pgfmath@stack@operation=\toks32
+) ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex" ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex"))) ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count270
+)) ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfint.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex"
+File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@picminx=\dimen169
+\pgf@picmaxx=\dimen170
+\pgf@picminy=\dimen171
+\pgf@picmaxy=\dimen172
+\pgf@pathminx=\dimen173
+\pgf@pathmaxx=\dimen174
+\pgf@pathminy=\dimen175
+\pgf@pathmaxy=\dimen176
+\pgf@xx=\dimen177
+\pgf@xy=\dimen178
+\pgf@yx=\dimen179
+\pgf@yy=\dimen180
+\pgf@zx=\dimen181
+\pgf@zy=\dimen182
+) ("D:\Program Files\MikTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex"
+File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@path@lastx=\dimen183
+\pgf@path@lasty=\dimen184
+) ("D:\Program Files\MikTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex"
+File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@shorten@end@additional=\dimen185
+\pgf@shorten@start@additional=\dimen186
+) ("D:\Program Files\MikTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex"
+File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfpic=\box52
+\pgf@hbox=\box53
+\pgf@layerbox@main=\box54
+\pgf@picture@serial@count=\count271
+) ("D:\Program Files\MikTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex"
+File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgflinewidth=\dimen187
+) ("D:\Program Files\MikTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex"
+File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@pt@x=\dimen188
+\pgf@pt@y=\dimen189
+\pgf@pt@temp=\dimen190
+) ("D:\Program Files\MikTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex"
+File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) ("D:\Program Files\MikTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex"
+File: pgfcoreobjects.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) ("D:\Program Files\MikTeX\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.tex"
+File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) ("D:\Program Files\MikTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex"
+File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowsep=\dimen191
+) ("D:\Program Files\MikTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex"
+File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@max=\dimen192
+\pgf@sys@shading@range@num=\count272
+\pgf@shadingcount=\count273
+) ("D:\Program Files\MikTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex"
+File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+ ("D:\Program Files\MikTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex"
+File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfexternal@startupbox=\box55
+)) ("D:\Program Files\MikTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex"
+File: pgfcorelayers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) ("D:\Program Files\MikTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex"
+File: pgfcoretransparency.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) ("D:\Program Files\MikTeX\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex"
+File: pgfcorepatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) ("D:\Program Files\MikTeX\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex"
+File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))) ("D:\Program Files\MikTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex"
+File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodeparttextbox=\box56
+) ("D:\Program Files\MikTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex"
+File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) ("D:\Program Files\MikTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty"
+Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@nodesepstart=\dimen193
+\pgf@nodesepend=\dimen194
+) ("D:\Program Files\MikTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty"
+Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
+)) ("D:\Program Files\MikTeX\tex/latex/pgf/utilities\pgffor.sty" ("D:\Program Files\MikTeX\tex/latex/pgf/utilities\pgfkeys.sty" ("D:\Program Files\MikTeX\tex/generic/pgf/utilities\pgfkeys.code.tex")) ("D:\Program Files\MikTeX\tex/latex/pgf/math\pgfmath.sty" ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmath.code.tex")) ("D:\Program Files\MikTeX\tex/generic/pgf/utilities\pgffor.code.tex"
+Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
+ ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmath.code.tex")
+\pgffor@iter=\dimen195
+\pgffor@skip=\dimen196
+\pgffor@stack=\toks33
+\pgffor@toks=\toks34
+)) ("D:\Program Files\MikTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex"
+Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
+ ("D:\Program Files\MikTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex"
+File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@plot@mark@count=\count274
+\pgfplotmarksize=\dimen197
+)
+\tikz@lastx=\dimen198
+\tikz@lasty=\dimen199
+\tikz@lastxsaved=\dimen256
+\tikz@lastysaved=\dimen257
+\tikz@lastmovetox=\dimen258
+\tikz@lastmovetoy=\dimen259
+\tikzleveldistance=\dimen260
+\tikzsiblingdistance=\dimen261
+\tikz@figbox=\box57
+\tikz@figbox@bg=\box58
+\tikz@tempbox=\box59
+\tikz@tempbox@bg=\box60
+\tikztreelevel=\count275
+\tikznumberofchildren=\count276
+\tikznumberofcurrentchild=\count277
+\tikz@fig@count=\count278
+ ("D:\Program Files\MikTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex"
+File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfmatrixcurrentrow=\count279
+\pgfmatrixcurrentcolumn=\count280
+\pgf@matrix@numberofcolumns=\count281
+)
+\tikz@expandcount=\count282
+ ("D:\Program Files\MikTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))) ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplots.code.tex" ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplotscore.code.tex"
+\t@pgfplots@toka=\toks35
+\t@pgfplots@tokb=\toks36
+\t@pgfplots@tokc=\toks37
+\pgfplots@tmpa=\dimen262
+\c@pgfplots@coordindex=\count283
+\c@pgfplots@scanlineindex=\count284
+ ("D:\Program Files\MikTeX\tex/generic/pgfplots/sys\pgfplotssysgeneric.code.tex")) ("D:\Program Files\MikTeX\tex/generic/pgfplots/libs\pgfplotslibrary.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgfplots/oldpgfcompatib\pgfplotsoldpgfsupp_loader.code.tex" ("D:\Program Files\MikTeX\tex/generic/pgf/libraries\pgflibraryfpu.code.tex")) ("D:\Program Files\MikTeX\tex/generic/pgfplots/util\pgfplotsutil.code.tex" ("D:\Program Files\MikTeX\tex/generic/pgfplots/liststructure\pgfplotsliststructure.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgfplots/liststructure\pgfplotsliststructureext.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgfplots/liststructure\pgfplotsarray.code.tex"
+\c@pgfplotsarray@tmp=\count285
+) ("D:\Program Files\MikTeX\tex/generic/pgfplots/liststructure\pgfplotsmatrix.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgfplots/numtable\pgfplotstableshared.code.tex"
+\c@pgfplotstable@counta=\count286
+\t@pgfplotstable@a=\toks38
+) ("D:\Program Files\MikTeX\tex/generic/pgfplots/liststructure\pgfplotsdeque.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgfplots/util\pgfplotsbinary.code.tex" ("D:\Program Files\MikTeX\tex/generic/pgfplots/util\pgfplotsbinary.data.code.tex")) ("D:\Program Files\MikTeX\tex/generic/pgfplots/util\pgfplotsutil.verb.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgfplots/libs\pgflibrarypgfplots.surfshading.code.tex"
+\c@pgfplotslibrarysurf@no=\count287
+ ("D:\Program Files\MikTeX\tex/generic/pgfplots/sys\pgflibrarypgfplots.surfshading.pgfsys-pdftex.def"))) ("D:\Program Files\MikTeX\tex/generic/pgfplots/util\pgfplotscolormap.code.tex" ("D:\Program Files\MikTeX\tex/generic/pgfplots/util\pgfplotscolor.code.tex")) ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplotsstackedplots.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplotsplothandlers.code.tex" ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplotsmeshplothandler.code.tex" ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplotsmeshplotimage.code.tex"))) ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplots.scaling.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplotscoordprocessing.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplots.errorbars.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplots.markers.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplotsticks.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplots.paths.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.code.tex" ("D:\Program Files\MikTeX\tex/generic/pgf/modules\pgfmoduledecorations.code.tex"
+\pgfdecoratedcompleteddistance=\dimen263
+\pgfdecoratedremainingdistance=\dimen264
+\pgfdecoratedinputsegmentcompleteddistance=\dimen265
+\pgfdecoratedinputsegmentremainingdistance=\dimen266
+\pgf@decorate@distancetomove=\dimen267
+\pgf@decorate@repeatstate=\count288
+\pgfdecorationsegmentamplitude=\dimen268
+\pgfdecorationsegmentlength=\dimen269
+)
+\tikz@lib@dec@box=\box61
+) ("D:\Program Files\MikTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathmorphing.code.tex" ("D:\Program Files\MikTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathmorphing.code.tex")) ("D:\Program Files\MikTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex" ("D:\Program Files\MikTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathreplacing.code.tex"))
+\pgfplots@numplots=\count289
+\pgfplots@xmin@reg=\dimen270
+\pgfplots@xmax@reg=\dimen271
+\pgfplots@ymin@reg=\dimen272
+\pgfplots@ymax@reg=\dimen273
+\pgfplots@zmin@reg=\dimen274
+\pgfplots@zmax@reg=\dimen275
+) ("D:\Program Files\MikTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryplotmarks.code.tex"
+File: tikzlibraryplotmarks.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+ ("D:\Program Files\MikTeX\tex/generic/pgf/libraries\pgflibraryplotmarks.code.tex"
+File: pgflibraryplotmarks.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))) ("D:\Program Files\MikTeX\tex/latex/tools\verbatim.sty"
+Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks39
+\verbatim@line=\toks40
+\verbatim@in@stream=\read3
+) ("D:\Program Files\MikTeX\tex/latex/tcolorbox\tcolorbox.sty"
+Package: tcolorbox 2019/11/15 version 4.22 text color boxes
+ ("D:\Program Files\MikTeX\tex/latex/environ\environ.sty"
+Package: environ 2014/05/04 v0.3 A new way to define environments
+ ("D:\Program Files\MikTeX\tex/latex/trimspaces\trimspaces.sty"
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)) ("D:\Program Files\MikTeX\tex/latex/etoolbox\etoolbox.sty"
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count290
+)
+\tcb@titlebox=\box62
+\tcb@upperbox=\box63
+\tcb@lowerbox=\box64
+\tcb@phantombox=\box65
+\c@tcbbreakpart=\count291
+\c@tcblayer=\count292
+\tcolorbox@number=\count293
+\tcb@temp=\box66
+\tcb@temp=\box67
+\tcb@temp=\box68
+\tcb@temp=\box69
+\tcb@out=\write4
+\tcb@record@out=\write5
+) ("D:\Program Files\MikTeX\tex/latex/listings\listings.sty"
+\lst@mode=\count294
+\lst@gtempboxa=\box70
+\lst@token=\toks41
+\lst@length=\count295
+\lst@currlwidth=\dimen276
+\lst@column=\count296
+\lst@pos=\count297
+\lst@lostspace=\dimen277
+\lst@width=\dimen278
+\lst@newlines=\count298
+\lst@lineno=\count299
+\lst@maxwidth=\dimen279
+ ("D:\Program Files\MikTeX\tex/latex/listings\lstmisc.sty"
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+\c@lstnumber=\count300
+\lst@skipnumbers=\count301
+\lst@framebox=\box71
+) ("D:\Program Files\MikTeX\tex/latex/listings\listings.cfg"
+File: listings.cfg 2019/09/10 1.8c listings configuration
+))
+Package: listings 2019/09/10 1.8c (Carsten Heinz)
+ ("D:\Program Files\MikTeX\tex/latex/listings\lstlang1.sty"
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+) ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP1\CP1.aux")
+\openout1 = `CP1.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(86.72377pt, 440.84746pt, 86.72377pt)
+* v-part:(T,H,B)=(86.72377pt, 621.52245pt, 86.72377pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=440.84746pt
+* \textheight=621.52245pt
+* \oddsidemargin=14.45378pt
+* \evensidemargin=14.45378pt
+* \topmargin=-22.54622pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+("D:\Program Files\MikTeX\tex/context/base/mkii\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count302
+\scratchdimen=\dimen280
+\scratchbox=\box72
+\nofMPsegments=\count303
+\nofMParguments=\count304
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count305
+\MPscratchDim=\dimen281
+\MPnumerator=\count306
+\makeMPintoPDFobject=\count307
+\everyMPtoPDFconversion=\toks43
+) ("D:\Program Files\MikTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+) ABD: EveryShipout initializing macros
+Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.16}).
+
+\c@lstlisting=\count308
+LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
+("D:\Program Files\MikTeX\tex/latex/amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
+ ("D:\Program Files\MikTeX\tex/latex/amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP1\CP1.toc")
+\tf@toc=\write6
+\openout6 = `CP1.toc'.
+
+ [1
+
+{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<CP1a results.png, id=11, 138.5175pt x 50.43843pt>
+File: CP1a results.png Graphic file (type png)
+<use CP1a results.png>
+Package pdftex.def Info: CP1a results.png  used on input line 54.
+(pdftex.def)             Requested size: 138.51715pt x 50.4383pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--75
+
+ []
+
+("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP1\CP1b plot.pgf")
+Overfull \hbox (21.6801pt too wide) in paragraph at lines 923--79
+ [] 
+ []
+
+[1 <d:/Git Repositories/Uni-Code/PHY2004W Computational/CP1/CP1a results.png>]
+<CP1c results.png, id=17, 84.315pt x 50.43843pt>
+File: CP1c results.png Graphic file (type png)
+<use CP1c results.png>
+Package pdftex.def Info: CP1c results.png  used on input line 93.
+(pdftex.def)             Requested size: 84.31477pt x 50.4383pt.
+ [2 <d:/Git Repositories/Uni-Code/PHY2004W Computational/CP1/CP1c results.png>]
+<CP1d part 1 results.png, id=24, 156.585pt x 39.89906pt>
+File: CP1d part 1 results.png Graphic file (type png)
+<use CP1d part 1 results.png>
+Package pdftex.def Info: CP1d part 1 results.png  used on input line 114.
+(pdftex.def)             Requested size: 156.58461pt x 39.89894pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--135
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--135
+
+ []
+
+[3 <d:/Git Repositories/Uni-Code/PHY2004W Computational/CP1/CP1d part 1 results.png>]
+<CP1a code.png, id=30, 409.53pt x 444.15938pt>
+File: CP1a code.png Graphic file (type png)
+<use CP1a code.png>
+Package pdftex.def Info: CP1a code.png  used on input line 142.
+(pdftex.def)             Requested size: 286.66904pt x 310.90944pt.
+<CP1b code.png, id=31, 523.9575pt x 572.89032pt>
+File: CP1b code.png Graphic file (type png)
+<use CP1b code.png>
+Package pdftex.def Info: CP1b code.png  used on input line 150.
+(pdftex.def)             Requested size: 366.76775pt x 401.0205pt.
+ [4 <d:/Git Repositories/Uni-Code/PHY2004W Computational/CP1/CP1a code.png>]
+<CP1c code 1.png, id=36, 432.86719pt x 316.18124pt>
+File: CP1c code 1.png Graphic file (type png)
+<use CP1c code 1.png>
+Package pdftex.def Info: CP1c code 1.png  used on input line 158.
+(pdftex.def)             Requested size: 303.00496pt x 221.32535pt.
+ [5 <d:/Git Repositories/Uni-Code/PHY2004W Computational/CP1/CP1b code.png>]
+<CP1c code 2.png, id=41, 454.69875pt x 300.3722pt>
+File: CP1c code 2.png Graphic file (type png)
+<use CP1c code 2.png>
+Package pdftex.def Info: CP1c code 2.png  used on input line 166.
+(pdftex.def)             Requested size: 318.28694pt x 210.2591pt.
+<CP1d part 1 code.png, id=42, 391.4625pt x 458.46281pt>
+File: CP1d part 1 code.png Graphic file (type png)
+<use CP1d part 1 code.png>
+Package pdftex.def Info: CP1d part 1 code.png  used on input line 174.
+(pdftex.def)             Requested size: 274.02187pt x 320.92177pt.
+ [6 <d:/Git Repositories/Uni-Code/PHY2004W Computational/CP1/CP1c code 1.png> <d:/Git Repositories/Uni-Code/PHY2004W Computational/CP1/CP1c code 2.png>] [7 <d:/Git Repositories/Uni-Code/PHY2004W Computational/CP1/CP1d part 1 code.png>] ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP1\CP1.aux") ) 
+Here is how much of TeX's memory you used:
+ 27361 strings out of 481515
+ 671401 string characters out of 2924072
+ 1180279 words of memory out of 3000000
+ 42199 multiletter control sequences out of 15000+200000
+ 541746 words of font info for 61 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 73i,7n,127p,885b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "d:/Git Repositories\Uni-Code\PHY2004W Computational\CP1\CP1.pdf" (8 pages, 205327 bytes).
+PDF statistics:
+ 73 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,23 @@
+{
+    "python.pythonPath": "C:\\Users\\miles\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe",
+    "files.exclude": {
+        "**/.aux": true,
+        "**/.classpath": true,
+        "**/.factorypath": true,
+        "**/.fdb_latexmk": true,
+        "**/.fls": true,
+        "**/.log": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.synctex.gz": true,
+        "**/.toc": true,
+        "**/.vscode": true
+    },
+    "cSpell.ignoreWords": [
+        "tuffy"
+    ],
+    "cSpell.words": [
+        "KDSMIL",
+        "kidson"
+    ]
+}

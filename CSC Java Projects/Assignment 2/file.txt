@@ -1,0 +1,9 @@
+8
+KP01, Kwik Pic, Bolton Hill, Cauliflower, R10.00, 120
+FM01, Farmers’ Market, Imizamo Yethu, Lettuce, R11.25, 132
+BAL01, Buy-A-lot, Salt River, Concrete Block, R3, 900
+NA01, NotAllot, Claremont, Hot Air, R99.99, 0
+STWD01, ShopTillWeDrop, Cape Town CBD, Lettuce, R10.00, 100
+24S01, 24-Seven, Milnerton, Fish fillets, R21.50, 132
+MM01, Mega Mart, Phillipi, Lettuce, R13.00, 132
+GNG01, GetnGo, Rantanga Junction, Lettuce, R9.00, 50

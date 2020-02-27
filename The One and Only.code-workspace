@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"cSpell.words": [
+			"KDSMIL"
+		],
+		"java.configuration.updateBuildConfiguration": "automatic",
+		"files.exclude": {
+			"**/.aux": true,
+			"**/.vscode": true,
+			"**/.fdb_latexmk": true,
+			"**/.fls": true,
+			"**/.log": true,
+			"**/.synctex.gz": true,
+			"**/.toc": true,
+		}
+	}
+}
+	

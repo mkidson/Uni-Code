@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tabto}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{verbatim}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    commentstyle=\color{commentcolor},
+    keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},
+    showstringspaces=false,
+    numbers=left,
+    upquote=true,
+    captionpos=b,
+    abovecaptionskip=12pt,
+    belowcaptionskip=12pt,
+    language=Python,
+    breaklines=true,
+    frame=leftline
+    }
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.16}
+
+\title{More Advanced Model Fitting and Plotting}
+\author{\textbf{PHY2004W \hspace{8cm} KDSMIL001}}
+\date{\textbf{24 Feb 2020}}
+
+\begin{document}
+
+    \begin{titlepage}
+        \maketitle
+        \tableofcontents
+    \end{titlepage}
+
+    
+    \section{Appendix}
+    \lstinputlisting[caption=CP2a Code]{CP2a.py}
+    \lstinputlisting[caption=CP2b Code]{CP2b.py}
+    
+    
+
+\end{document}
