@@ -11,6 +11,7 @@
 \usepackage{tcolorbox}
 \usepackage{listings}
 \usepackage{xcolor}
+\pgfplotsset{compat=1.16}
 \definecolor{stringcolor}{HTML}{C792EA}
 \definecolor{codeblue}{HTML}{2162DB}
 \definecolor{commentcolor}{HTML}{4A6E46}
@@ -30,7 +31,6 @@
     frame=leftline
     }
 \renewcommand{\lstlistingname}{Appendix}
-\pgfplotsset{compat=1.16}
 
 \title{More Advanced Model Fitting and Plotting}
 \author{\textbf{PHY2004W \hspace{8cm} KDSMIL001}}
@@ -43,10 +43,82 @@
         \tableofcontents
     \end{titlepage}
 
+    \section{Answers}
+    The first section of the activity was plotting the best-fit curve for a set of non-linear 
+    points. The code for everything in this section can be found in Appendix 1. 
+    Firstly, we were asked to plot the data supplied to us in DampedData.txt, which was a text 
+    file containing time and position data of a damped oscillator. To do this we used the errorbar 
+    function in \texttt{matplotlib.pyplot} [line 31]. Next, we defined a function that takes in 
+    a set of parameters and returns a value for $y(t)$ where
+
+    \begin{equation}
+        y(t) = A+Be^{-\gamma t}cos(\omega t-\alpha)
+    \end{equation}
     
-    \section{Appendix}
-    \lstinputlisting[caption=CP2a Code]{CP2a.py}
-    \lstinputlisting[caption=CP2b Code]{CP2b.py}
+    \noindent
+    This is the equation for the position of a damped oscillator with respect to time. $A, B, 
+    \gamma, \omega,$ and $\alpha$ are parameters that change the shape of the curve plotted 
+    by this function in various ways. The function defined on line 33 takes these parameters, 
+    as well as $t$, and returns a value for the position. \newline
+    In order to begin fitting a curve to this data, we first need a set of initial parameters. 
+    These are defined on line 20 and were obtained by guessing a few and then adjusting them 
+    until we reached a curve that very roughly fit the data points. They are defined in an array 
+    in order to be passed to the function that we'll be using later to properly fit the curve 
+    to the data. Below, in Figure \ref{fig:Initial Guess}, you can see the curve of our initial 
+    guess along with the values of each parameter in Table \ref{table:Initial Params}.
+    
+    \begin{figure}[H]
+        \begin{center}
+           \scalebox{.8}{\input{CP2a_Initial_Guess.pgf}}
+           \caption{Initial Guess Curve}
+           \label{fig:Initial Guess}
+        \end{center}
+    \end{figure}
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c c c c c}
+            \hline
+            A & B & $\gamma$ & $\omega$ & $\alpha$ \\
+            \hline
+            0.28 & 0.04 & 0.4 & 30 & 0 \\
+            \hline
+        \end{tabular}
+        \caption{Initial Guess Parameters}
+        \label{table:Initial Params}
+    \end{table}
+    
+    \noindent
+    As you can see, the curve fits reasonably well to the data points. It has roughly the same 
+    frequency, initial amplitude, and decay rate, which means it's a good initial guess for our 
+    algorithm to start with. 
+    \newline
+    \newline
+    The algorithm we used to fit the function to the set of data points was the Levenberg-Marquardt 
+    Algorithm, implemented in the \texttt{scipy.optimize} module, specifically the function 
+    \texttt{curve\_fit}. The implementation of this function [lines 44-46] is slightly complex 
+    but, after providing it with the function we defined earlier, the data points we are 
+    considering, and out initial guesses for the parameters, it returns an array of parameters 
+    that it determines to be the optimal parameters to use in order to approximately fit the 
+    curve to the data. We then feed these parameters back to our original function and it gives 
+    us values for $y(t)$ that are very close to correct. The "correctness" of these values are 
+    discussed later on. For now we can have a look at the plot of this curve [Figure \ref{fig:Best Fit}] 
+    and see that it seems to be acceptably accurate. 
+
+    \begin{figure}[H]
+        \begin{center}
+           \scalebox{.8}{\input{CP2a_Best_Fit.pgf}}
+           \caption{Algorithmically Determined Best Fit}
+           \label{fig:Best Fit}
+        \end{center}
+    \end{figure}
+    
     
 
+
+    \newpage
+    \section{Appendix}
+    \lstinputlisting[caption=CP2a\_Nonlinear\_Fitting.py]{CP2a_Nonlinear_Fitting.py}
+    \lstinputlisting[caption=CP2b\_Visualising\_Uncertainties.py]{CP2b_Visualising_Uncertainties.py}
+    
 \end{document}

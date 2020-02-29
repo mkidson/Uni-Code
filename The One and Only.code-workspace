@@ -17,7 +17,9 @@
 			"**/.log": true,
 			"**/.synctex.gz": true,
 			"**/.toc": true,
-		}
+		},
+		"latex-workshop.view.pdf.viewer": "tab",
+		"latex-workshop.view.pdf.zoom": "page-width"
 	}
 }
 	
