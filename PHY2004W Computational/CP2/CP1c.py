@@ -12,14 +12,17 @@ matplotlib.rcParams.update({
     'pgf.rcfonts': False,
 })
 
-f = open('PHY2004W Computational\CP1\LinearNoErrors.txt', 'r')
+f = open('PHY2004W Computational\CP2\LinearNoErrors.txt', 'r')
 header = f.readline()
 N = 12
-data = np.zeros([2, N])
+data = np.zeros([3, N])
 i = 0
+p0 = np.array([1, 1])
+name = np.array(['m', 'c'])
 for line in f:
     data[0, i] = line.split()[0]
     data[1, i] = line.split()[1]
+    data[2, i] = 1
     i += 1
 f.close()
 
@@ -47,21 +50,32 @@ print("m:", round(m, 5))
 print("u(m):", round(um, 5))
 print("c:", round(c, 5))
 print("u(c):", round(uc, 5))
-
+print()
+# Plots the data and the line of best fit calculated above
+xLine = np.arange(1, 12.5, 0.1)
+yLine = []
+for i in xLine:
+    yLine.append((m*i)+c)
+plt.figure(1)
+plt.plot(xLine, yLine, color='blue', label="Best Fit", lw=1)
+plt.errorbar(data[0], data[1], fmt='ob', lw=0.5, capsize=2, capthick=0.5, markersize=4, markeredgewidth=0.5, label='Data')
 # Plots the line of best fit using curve_fit
-popt, pcov = curve_fit(f, x, y, p0, sigma=yUn, absolute_sigma=True)
+def f(x, m, c):
+    return (m*x)+c
+popt, pcov = curve_fit(f, data[0], data[1], p0, sigma=data[2], absolute_sigma=True)
 dof = len(y)-len(popt)
-tmodel = np.linspace(0.5, 4.0, 1000)
+tmodel = np.linspace(1, 12, 1000)
 ystart = f(tmodel, *p0)
 yfit = f(tmodel, *popt)
 plt.plot(tmodel, yfit, '-r', lw=0.5, label='curve fit Best Fit')
 plt.xlabel("x (m)")
 plt.ylabel("y (m)")
 plt.title("Comparison of Experimental Data with Theoretical Prediction")
-plt.xlim(0,5)
-plt.ylim(0,30)
+plt.xlim(0,13)
+plt.legend()
+plt.savefig('PHY2004W Computational\CP2\CP1c_Data_Plot.pgf')
 # Calculates chi squared and does magic to work out the fit paramters
-dymin = (y-f(x, *popt))/yUn
+dymin = (y-f(x, *popt))/data[2]
 min_chisq = sum(dymin*dymin)
 dof = len(x) - len(popt)
 
@@ -91,7 +105,7 @@ Npts = 10000
 mscan = np.zeros(Npts)
 cscan = np.zeros(Npts)
 chi_dof = np.zeros(Npts)
-ncols = 10
+ncols = 25
 c = 0
 for mpar in np.linspace(0.5, 0.7, 100, True):
     for cpar in np.linspace(0.5, 1.7, 100, True):
@@ -100,12 +114,14 @@ for mpar in np.linspace(0.5, 0.7, 100, True):
         dymin = (data[1]-f(data[0], mpar, cpar))/data[2]
         chi_dof[c] = sum(dymin*dymin)/dof
         c += 1
-plt.figure(1)
+plt.figure(2)
 # Plots the contour and saves it
 plt.title('$\\frac{\\chi^2}{\\texttt{dof}}$ for various values of m and c', pad=15)
 plt.xlabel('m')
 plt.ylabel('c', rotation = 0)
-plt.tricontourf(mscan, cscan, chi_dof, ncols)
+cntPlt = plt.tricontourf(mscan, cscan, chi_dof, ncols, cmap='jet', levels=np.linspace(0, 40, 41))
+for r in cntPlt.collections:
+    r.set_edgecolor("face")
 cbar = plt.colorbar()
 cbar.set_label('$\\frac{\\chi^2}{\\texttt{dof}}$', rotation=0)
-plt.savefig('PHY2004W Computational\CP2\CP2b_Contour_Plot.pgf')
+plt.savefig('PHY2004W Computational\CP2\CP1c_Contour_Plot.pgf')

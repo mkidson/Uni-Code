@@ -29,6 +29,9 @@ for line in lines:
 file.close()
 # Plots the data
 plt.errorbar(data[0], data[1], u, fmt='_b', lw=0.5, capsize=2, capthick=0.5, markersize=4, markeredgewidth=0.5, label='Data')
+plt.title('Damped Oscillator')
+plt.xlabel('t(s)')
+plt.ylabel('y(m)')
 # Defines the function that the curve_fit function uses
 def f(t, A, B, gamma, omega, alpha):
     return A+(B*np.exp(-gamma*t))*np.cos((omega*t)-alpha)
