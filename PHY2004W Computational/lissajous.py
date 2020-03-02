@@ -1,8 +1,8 @@
 from numpy import cos,pi,linspace
 from pylab import plot,show,subplot
 
-a = [1,2,2] # plotting the curves for
-b = [2,2,1] # different values of a/b
+a = [1,4,2] # plotting the curves for
+b = [2,1,1] # different values of a/b
 delta = [pi/3, -pi/4, 0]
 t = linspace(-pi,pi,300)
 
