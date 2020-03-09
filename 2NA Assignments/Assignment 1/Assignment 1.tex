@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tabto}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{verbatim}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{siunitx}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily,
+    commentstyle=\color{commentcolor},
+    keywordstyle=\color{codeblue}
+    stringstyle=\color{stringcolor}
+    showstringspaces=false,
+    numbers=left,
+    upquote=true,
+    captionpos=t,
+    abovecaptionskip=12pt,
+    belowcaptionskip=12pt,
+    language=Python,
+    breaklines=true,
+    frame=single
+}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily,
+    commentstyle=\color{commentcolor},
+    keywordstyle=\color{codeblue}
+    stringstyle=\color{stringcolor}
+    showstringspaces=false,
+    numbers=left,
+    upquote=true,
+    frame=tb,
+    captionpos=b,
+    language=Python
+}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.16}
+
+\title{Assignment 1}
+\date{4 March 2020}
+
+\begin{document}
+
+    \begin{titlepage}
+        \maketitle
+        \center
+        \textbf{\large{MAM2046W 2NA}}\\[12pt]
+        \textbf{\large{KDSMIL001}}\\
+    \end{titlepage}
+
+    \begin{enumerate}
+        \item Newton-Raphson root-finding
+        \begin{enumerate}
+            \item a
+            \item b
+        \end{enumerate}
+        \item Fixed Point Iteration
+        \begin{enumerate}
+            \item Given the equation of the form $f(x)=x^2-x-2=0$, it doesn't take much manipulation to 
+            reduce it to the first two solutions:
+            \begin{equation*}
+                g_1(x) = x^2-2
+            \end{equation*}
+            \begin{equation*}
+                g_2(x) = \sqrt{x+2}
+            \end{equation*}
+            For the next two solutions, a little bit more manipulation is required:
+            \begin{equation*}
+                \begin{split}
+                    &x^2-x-2=0 \\
+                    \implies &x^2-x=2 \\
+                    \implies &x(x-1)=2 \\
+                    \implies &x=\frac{2}{x-1} \\
+                    \implies &g_3(x) = \frac{2}{x-1}
+                \end{split}
+            \end{equation*}
+            and
+            \begin{equation*}
+                \begin{split}
+                    &x^2-x-2=0 \\
+                    \implies &x^2-x=2 \\
+                    \implies &x(x-1)=2 \\
+                    \implies &x-1=\frac{2}{x} \\
+                    \implies &x=\frac{2}{x}+1 \\
+                    \implies &g_4(x)=\frac{2}{x}+1
+                \end{split}
+            \end{equation*}
+
+            \item To plot these functions on the same axes, I used Python with the \\ 
+            \texttt{matplotlib} module, below is the result [Figure \ref{fig:Q2_Plot}].
+
+            \begin{figure}[H]
+                \begin{center}
+                   \scalebox{.8}{\input{Q2_Plot.pgf}}
+                   \caption{Plot of each $g_i(x)$}
+                   \label{fig:Q2_Plot}
+                \end{center}
+            \end{figure}
+            
+            \noindent
+            It's clear to see that all of the graphs intersect the $y=x$ line at two points with the 
+            exception of $g_2(x)$, which has no values $<0$ as a function. 
+            
+            \item 
+        \end{enumerate}
+        \item Halley's Method
+            \begin{enumerate}
+                \item Idk
+                \newline
+                \lstinputlisting[title=Q3.py, style=inline]{Q3.py}
+            \end{enumerate}
+    \end{enumerate}
+
+\end{document}
