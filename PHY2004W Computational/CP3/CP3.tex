@@ -1,0 +1,418 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tabto}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{verbatim}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{siunitx}
+\usepackage[all]{nowidow}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,
+    commentstyle=\color{commentcolor},
+    keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},
+    showstringspaces=false,
+    numbers=left,
+    upquote=true,
+    captionpos=t,
+    abovecaptionskip=12pt,
+    belowcaptionskip=12pt,
+    language=Python,
+    breaklines=true,
+    frame=single,
+}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,
+    commentstyle=\color{commentcolor},
+    keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},
+    showstringspaces=false,
+    numbers=left,
+    upquote=true,
+    frame=tb,
+    captionpos=b,
+    language=Python
+}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.16}
+
+\title{Integrating Equations of Motion}
+\date{\textbf{9 March 2020}}
+\author{}
+
+\begin{document}
+
+    \begin{titlepage}
+        \maketitle
+        \center
+        \textbf{\large{PHY2004W}}\
+        \textbf{\large{KDSMIL001}}\
+        \tableofcontents
+    \end{titlepage}
+
+    \section{Introduction}
+    This computational activity was an introduction into the world of numerical integration, 
+    which is one of the methods that we can use to solve differential equations, something 
+    that we have to do quite often in physics as we are often solving second order ordinary 
+    differential equations that come out of applying Newton's second law. This is often 
+    reduced to two coupled equations:
+
+    \begin{equation}
+        \frac{d\vec{p}}{dt} = \vec{F}
+        \hspace{15pt}
+        \textrm{and}
+        \hspace{15pt}
+        \frac{d\vec{q}}{dt} = \frac{\vec{p}}{m}
+        \label{eq:newton}
+    \end{equation}
+
+    \noindent
+    where $\vec{p}$ is a momentum, $\vec{F}$ is a net force, $\vec{q}$ is a coordinate, 
+    and $m$ is a mass. 
+    \newline
+    In order to numerically solve these equations, we approximate the derivatives, which 
+    results in 2 equations, which we call update equations:
+
+    \begin{equation}
+        \begin{split}
+            &\vec{p}(t+\Delta t) = \vec{p}(t)+\vec{F}(\vec{q}(t))\Delta t \\
+            &\vec{q}(t+\Delta t) = \vec{q}(t)+\left(\frac{\vec{p}(t)}{m}\right)\Delta t 
+        \end{split}
+        \label{eq:update}
+    \end{equation}
+
+    \noindent
+    These are what we will use in this Activity in order to approximate the motion of, in 
+    this case, a simple pendulum. These equations are very tedious to evaluate for all t, 
+    but that's where the computer comes in. 
+
+    \section{Activity}
+    The first thing that we need to do is check the accuracy of these equations (\ref{eq:update}). 
+    In order to do this, we perform a Taylor expansion of $y(t+\Delta t)$, truncating after 
+    only 2 terms, a first order approximation, making the error small, but still significant:
+    
+    \begin{equation*}
+        \begin{split}
+            y(t+\Delta t) &= \sum_{n=0}^\infty \frac{y^{(n)}(t)\Delta t^n}{n!} \\
+            &= y(t) + \dot{y}(t) \Delta t + \ddot{y}(t) \Delta t^2 + \dots
+        \end{split}
+    \end{equation*}
+
+    \noindent
+    When truncating this at the second term, this gives us something of the form of the 
+    equation for $\vec{p}$ in Equation \ref{eq:update}, which confirms that we are using 
+    first order approximations in this activity. 
+    \newline
+    For the sake of interest, we can try to get a second order approximation of the first 
+    derivative. For the sake of computation, we have approximated the derivative to be 
+
+    \begin{equation}
+        \frac{dy}{dt} \approx \frac{y(t+\Delta t) - y(t)}{\Delta t}
+    \end{equation}
+
+    \noindent
+    From this, we can substitute in a second order approximation for $y(t+\Delta t)$, 
+    which returns
+
+    \begin{equation}
+        \begin{split}
+            \frac{dy}{dt} &\approx \frac{y(t) + \dot{y}(t) \Delta t + \ddot{y}(t) \Delta t^2 - y(t)}{\Delta t} \\
+            &= \dot{y}(t) + \ddot{y}(t) \Delta t
+        \end{split}
+    \end{equation}
+
+    \noindent
+    We see that this gives us something of the form of the equation for $\vec{q}$ in 
+    Equation \ref{eq:update}.
+    \newline
+    Next, we need to create the model that we will be using to simulate the system of 
+    interest. In its most complete form, the equation of motion for a pendulum is:
+
+    \begin{equation}
+        \frac{d^2\theta}{dt^2}+\Omega_0^2\sin\theta = 0 
+        \label{eq:pendulum}
+    \end{equation}
+
+    \noindent
+    where $\Omega_0^2 = \frac{g}{L}$, $\theta$ is the angle from the vertical, and $L$ is the 
+    length of the pendulum. This equation comes from an analysis of the forces on the system. 
+    We know that the torque $\tau = I\alpha$, where $I = mL^2$ is the moment of inertia for a pendulum 
+    with a massless string and $\alpha = \ddot{\theta}$ is the angular acceleration. Then, by 
+    equating all the forces, we get
+
+    \begin{equation*}
+        \begin{split}
+            &\tau = I\alpha = mL^2\ddot{\theta} \\
+            \textrm{Equating forces:}\hspace{5pt} &mL^2\ddot{\theta} = -mg\sin\theta L \\
+            \implies &\ddot{\theta} + \frac{g}{L}\sin\theta = 0 \\
+        \end{split}
+        \label{eq:pendulum derivation}
+    \end{equation*}
+
+    \noindent
+    In order to simplify this, we can take what we call a small angle approximation, where 
+    $\sin\theta = \theta$ for angles $<\sim\ang{10}$. This leads us to the equation 
+
+    \begin{equation}
+        \ddot{\theta} = -\Omega_0^2 \theta
+        \label{eq:SHM}
+    \end{equation}
+
+    \noindent
+    which we know is the general form for a simple harmonic oscillator.
+    \newline
+    \newline
+    Now, going back to Equation \ref{eq:pendulum derivation}, if we let 
+    $\Omega_0 = \sqrt{\frac{g}{L}}$, then we get the equation as in (\ref{eq:pendulum}). More 
+    manipulation will lead to a coupled form of this equation:
+
+    \begin{equation}
+        \frac{d\omega}{dt}=-\Omega_0^2 \sin\theta 
+        \hspace{15pt}
+        \textrm{and}
+        \hspace{15pt}
+        \frac{d\theta}{dt}=\omega
+        \label{eq:coupled pendulum}
+    \end{equation}
+
+    \noindent
+    Given the initial conditions of $\theta(0)=\ang{90}, \omega(0)=0$, we interpret this as the 
+    pendulum being held at \ang{90} to the vertical and at rest (angular velocity $\omega = 0$), 
+    then let go. In the small angle approximation, the system should oscillate with an angular 
+    frequency of $\Omega_0^2$, but these initial conditions do not satisfy the small angle 
+    approximation, so we will need another method in order to figure out what the motion of the 
+    system will look like, for example numerical integration. 
+    \newline
+    \newline
+    In order to perform this numerical integration, we need to have some equations in the form 
+    of Equation \ref{eq:update}, which we can adapt to have the following:
+
+    \begin{equation}
+        \begin{split}
+            &p_{i+1} = p_i - \Omega_0^2 \sin(q_i) \Delta t \\
+            &q_{i+1} = q_i + p_i \Delta t
+        \end{split}
+        \label{eq:pendulum update}
+    \end{equation}
+
+    \noindent
+    where $i=0,1,2\dots$ and $q \equiv \theta, p \equiv \omega$.
+    \newline
+    We can do this because we got the equations for the motion of the pendulum into a similar 
+    form in Equation \ref{eq:coupled pendulum} as in Equation \ref{eq:update}. This is known 
+    as Euler's Method and is a commonly used method for numerically solving systems that are 
+    hard or impossible to solve analytically. Now we can begin to implement this in Python in 
+    order for the computer to do the heavy lifting. 
+    \newline
+    \newline
+    The entire code for this calculation is in Appendix 1 but the most important part is the 
+    loop we use a loop to continuously update the values of $\theta$ and $\omega$, appending 
+    them to an array so that we can plot them later on, which can be seen below.
+    \newline
+        
+    \lstinputlisting[title=Euler's Method Loop, style=inline, linerange=25-29, firstnumber=25]{CP3a.py}
+    
+    \noindent
+    We also calculate a value for the total energy of the system at each step, the equation 
+    for which is 
+
+    \begin{equation}
+        E = E_K + E_P = \frac{1}{2}mL^2 \omega^2 + mgL(1-\cos\theta)
+    \end{equation}
+
+    \noindent
+    In this case, we are not given a value for the mass or the length of the pendulum, so 
+    we assume them to be 1 as this shouldn't affect the shape of the plot, just the scale 
+    of it. Below is the first plot [Figure \ref{fig:CP390}] which has initial conditions 
+    of $\theta = \ang{90}$ and $\omega = 0$. This clearly does not satisfy the conditions 
+    for a small angle approximation, and thus at around 6.5s, the plots go haywire, with 
+    $\theta$ and $\omega$ becoming only negative, which is not a natural way for this 
+    system to behave. 
+
+    \begin{figure}[H]
+        \begin{center}
+           \scalebox{.7}{\input{CP3 90.pgf}}
+           \caption{Plotting Values for Large $\theta$}
+           \label{fig:CP390}
+        \end{center}
+    \end{figure}
+
+    \begin{figure}[H]
+        \begin{center}
+           \scalebox{.7}{\input{CP3 10.pgf}}
+           \caption{Plotting Values for Small $\theta$}
+           \label{fig:CP310}
+        \end{center}
+    \end{figure}
+
+    \newpage\noindent
+    Figure \ref{fig:CP310} is another plot of the same thing, except with a initial 
+    angle of \ang{10}. This is well within the small angle approximation conditions and thus 
+    it seems to behave somewhat naturally, oscillating around $\theta, \omega = 0$.
+    \newline
+    \newline
+    The plot on the bottom left of the Figure is what we call a phase plot, effectively plotting 
+    the position of the bob against the velocity of the bob. It reveals information about the 
+    solution to the differential equation that describes the motion we're considering. In this 
+    case, for the two plots above, we notice that the solution is periodic in some sense but 
+    seems to be spiralling out of control, which we can attribute to the increasing amplitude 
+    of the oscillations. It's also clear that energy is not being conserved, which we will 
+    discuss next.
+    \newline
+    Firstly, $\theta$ seems to increase in amplitude as time goes on, as well as $\omega$. 
+    This obviously has an effect on the energy of the system, which seems to be increasing 
+    at some kind of exponential rate. It becomes obvious that the reason for this is rounding 
+    errors in the code when we change $\Delta t$ to be 0.001, rather than its initial value of 
+    0.01, producing the plots below in Figure \ref{fig:CP310b}.
+
+    \begin{figure}[H]
+        \begin{center}
+           \scalebox{.7}{\input{CP3 10b.pgf}}
+           \caption{Plotting values for Small $\theta$ with $\Delta t = 0.001$}
+           \label{fig:CP310b}
+        \end{center}
+    \end{figure}
+    
+    \noindent
+    Here we can see that, while energy isn't conserved entirely, it's doing a much better 
+    job of it than it was in the previous example. We can also observe that the phase plot is 
+    much more elliptical and therefore purely periodic, which we expect when analysing a pendulum 
+    oscillating with small $\theta$. In order to analytically prove that the energy increases 
+    with each step when looking at small angle approximations, we look at Equation \ref{eq:coupled pendulum}:
+
+    \begin{equation*}
+        \begin{split}
+            &p_{i+1} = p_i - \Omega_0^2 \sin(q_i) \Delta t \\
+            &q_{i+1} = q_i + p_i \Delta t \\
+        \end{split}
+    \end{equation*}
+
+    \begin{center}
+        At small angles we can approximate
+    \end{center}
+    \begin{equation*}
+        \begin{split}
+            &\sin\theta = \theta \\
+            &(1-\cos\theta) = 1 \\
+            \implies &p_{i+1} = p_i - \Omega_0^2 q_i \Delta t \\
+        \end{split}
+    \end{equation*}
+
+    \begin{center}
+        Now recall
+    \end{center}
+    \begin{equation*}
+        \begin{split}
+            &E = \frac{1}{2}mL^2 \omega^2 + mgL(1-\cos\theta) \\
+            \implies &E = \frac{1}{2}mL^2 \omega^2 + mgL
+        \end{split}
+    \end{equation*}
+    
+    \noindent
+    It's important to notice that this $E$ depends on $\omega$, which, when calculated 
+    in the program, is done so using a Taylor expansion which is truncated after the 
+    second term. While this error is not great, when squared and compounded 1000 times 
+    as it is in the first two examples, it's obvious that this is the source of the error. 
+    The only problem is that this error seems to be coming from a quadratic term, while the 
+    increase in energy seems to be exponential, which we can't seem to make sense of. 
+    \newline
+    \newline
+    One solution to the energy conservation problem is an adjustment to the method we use 
+    to approximate the values of, in this case, $\omega$ and $\theta$. The equations are 
+    valid for the entire interval of interest and so we can evaluate a point later in time 
+    in order to better approximate the derivative of the function of interest. This is an 
+    improvement to the Euler's method that we have been using and it doesn't quite solve the 
+    issue of energy not being conserved, but it does give a bound to the energy, making it 
+    periodic. This method is known as Symplectic Integration or the Symplectic Euler Method.
+    Below, Figure \ref{fig:symplectic}, is the set of plots for this method.
+
+    \begin{figure}[H]
+        \begin{center}
+           \scalebox{.7}{\input{CP3b 10.pgf}}
+           \caption{Symplectic Integration Method with $\theta$ small}
+           \label{fig:symplectic}
+        \end{center}
+    \end{figure}
+    
+    \noindent
+    The code for this entire section is in Appendix 2 and it can be seen that it is practically 
+    identical to the first section with the exception of the loop, which can be seen below.
+    \newline
+    \lstinputlisting[title=Symplectic Euler's Method Loop, style=inline, linerange=25-29, firstnumber=25]{CP3b.py}
+    
+    \noindent
+    As can be seen in Figure \ref{fig:symplectic}, this method is much better at keeping the 
+    energy bounded, with a total variation of $\sim 0.2$. Compared to the previous results, 
+    this is a great improvement in terms of accurately approximating the motion. We can again 
+    notice that the phase plot is purely elliptical, with no decay or growth, showing that our 
+    energy is conserved to some extent. We have effectively removed the approximation from the 
+    calculation, rather approximating the entire problem but accurately calculating the values. 
+    \newline
+    \newline
+    Finally, we will investigate the dependence of period on either the amplitude or the length. 
+    In our case, we will investigate length. In order to do this, we have written some code, 
+    Appendix 3, that is in most senses the exact same as the first two sections with a few extra 
+    arrays and calculations added. Most importantly, we added an extra loop so that we can simulate 
+    the motion of the pendulum for a range of different lengths, namely 1m to 100m, evaluating every 
+    metre. From this, we performed a Levenberg-Marquardt fit using the \texttt{curve\_fit} function 
+    in \texttt{scipy.optimize} and could then extract the angular frequency and from that find the 
+    period. Below are the most important lines from the code.
+    \newline
+    \lstinputlisting[title=Length Dependence of Period Code, style=inline, linerange=32-41, firstnumber=32]{CP3c.py}
+    
+    \noindent
+    Line 40 is the calculation of the observed period and line 41 is a calculation of the expected 
+    period given the angular frequency $\Omega_0$ supplied in line 37. Below, Figure \ref{fig:lengthperiod90}, 
+    is the plot of the observed period and the predicted period. Importantly, the predicted period is 
+    based off the small angle approximation, where $T = \frac{2\pi}{\Omega_0}$.
+
+    \begin{figure}[H]
+        \begin{center}
+           \scalebox{.7}{\input{CP3c 90.pgf}}
+           \caption{Length Dependence of Period with Starting $\theta = \ang{90}$}
+           \label{fig:lengthperiod90}
+        \end{center}
+    \end{figure}
+
+    \noindent
+    As can be seen, the prediction underestimates the period by an increasingly significant amount. 
+    However, when oscillating at small angles, as below in Figure \ref{fig:lengthperiod10}, the 
+    small angle approximation predicts the length dependence of period quite accurately. It might not 
+    be very visible but the two plots are practically on top of one another.
+
+    \begin{figure}[H]
+        \begin{center}
+           \scalebox{.7}{\input{CP3c 10.pgf}}
+           \caption{Length Dependence of Period with Starting $\theta = \ang{10}$}
+           \label{fig:lengthperiod10}
+        \end{center}
+    \end{figure}
+    
+    \noindent
+    From these two results we can conclude that at small angles Euler's Method, when using Symplectic 
+    Integration, is quite good at modelling something like an simple oscillator. However, when 
+    deviating slightly from the bounds of the small angle approximation, these numerical methods 
+    do well but are not accurate enough to trust entirely.
+    \newline
+    \newline
+    In conclusion, 
+
+    \newpage
+    \section{Appendix}
+    \setcounter{figure}{0} \renewcommand{\thefigure}{A.\arabic{figure}}
+
+    \lstinputlisting[caption=Pendulum Update Code, style=appendix]{CP3a.py}
+    \lstinputlisting[caption=Symplectic Euler Method, style=appendix]{CP3b.py}
+    \lstinputlisting[caption=Length Dependence of Period, style=appendix]{CP3c.py}
+
+\end{document}

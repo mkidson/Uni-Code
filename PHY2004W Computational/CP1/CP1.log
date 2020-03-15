@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.22)  26 FEB 2020 14:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.7)  12 MAR 2020 20:50
 entering extended mode
 **"d:/Git Repositories/Uni-Code/PHY2004W Computational/CP1/CP1.tex"
 ("d:/Git Repositories/Uni-Code/PHY2004W Computational/CP1/CP1.tex"
-LaTeX2e <2020-02-02> patch level 3
-L3 programming layer <2020-02-14> ("D:\Program Files\MikTeX\tex/latex/base\article.cls"
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-03> ("D:\Program Files\MikTeX\tex/latex/base\article.cls"
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
 ("D:\Program Files\MikTeX\tex/latex/base\size12.clo"
 File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
@@ -23,7 +23,7 @@ File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 Package: geometry 2020/01/02 v5.9 Page Geometry
  ("D:\Program Files\MikTeX\tex/latex/graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks14
+\KV@toks@=\toks15
 ) ("D:\Program Files\MikTeX\tex/generic/iftex\ifvtex.sty"
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
  ("D:\Program Files\MikTeX\tex/generic/iftex\iftex.sty"
@@ -40,7 +40,7 @@ Package: iftex 2019/11/07 v1.0c TeX engine tests
 \Gm@layoutheight=\dimen140
 \Gm@layouthoffset=\dimen141
 \Gm@layoutvoffset=\dimen142
-\Gm@dimlist=\toks15
+\Gm@dimlist=\toks16
  ("D:\Program Files\MikTeX\tex/latex/geometry\geometry.cfg")) ("D:\Program Files\MikTeX\tex/latex/graphics\graphicx.sty"
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
  ("D:\Program Files\MikTeX\tex/latex/graphics\graphics.sty"
@@ -65,7 +65,7 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2000/06/29 v2.01 AMS text
  ("D:\Program Files\MikTeX\tex/latex/amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks16
+\@emptytoks=\toks17
 \ex@=\dimen145
 )) ("D:\Program Files\MikTeX\tex/latex/amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
@@ -93,33 +93,33 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \dotsspace@=\muskip16
 \c@parentequation=\count185
 \dspbrk@lvl=\count186
-\tag@help=\toks17
+\tag@help=\toks18
 \row@=\count187
 \column@=\count188
 \maxfields@=\count189
-\andhelp@=\toks18
+\andhelp@=\toks19
 \eqnshift@=\dimen148
 \alignsep@=\dimen149
 \tagshift@=\dimen150
 \tagwidth@=\dimen151
 \totwidth@=\dimen152
 \lineht@=\dimen153
-\@envbody=\toks19
+\@envbody=\toks20
 \multlinegap=\skip50
 \multlinetaggap=\skip51
-\mathdisplay@stack=\toks20
+\mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
 ) ("D:\Program Files\MikTeX\tex/latex/physics\physics.sty"
 Package: physics 
  ("D:\Program Files\MikTeX\tex/latex/l3packages/xparse\xparse.sty" ("D:\Program Files\MikTeX\tex/latex/l3kernel\expl3.sty"
-Package: expl3 2020-02-14 L3 programming layer (loader) 
+Package: expl3 2020-03-03 L3 programming layer (loader) 
  ("D:\Program Files\MikTeX\tex/latex/l3backend\l3backend-pdfmode.def"
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count190
 \l__pdf_internal_box=\box47
 ))
-Package: xparse 2020-02-14 L3 Experimental document command parser
+Package: xparse 2020-03-03 L3 Experimental document command parser
 \l__xparse_current_arg_int=\count191
 \g__xparse_grabber_int=\count192
 \l__xparse_m_args_int=\count193
@@ -131,9 +131,9 @@ Package: tabto 2018/12/28  v 1.4  Another tabbing mechanism
 ) ("D:\Program Files\MikTeX\tex/latex/float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count195
-\float@exts=\toks21
+\float@exts=\toks22
 \float@box=\box48
-\@float@everytoks=\toks22
+\@float@everytoks=\toks23
 \@floatcapt=\box49
 ) ("D:\Program Files\MikTeX\tex/latex/amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -145,9 +145,9 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )) ("D:\Program Files\MikTeX\tex/latex/pgfplots\pgfplots.sty" ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplots.revision.tex")
-Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
+Package: pgfplots 2020/02/29 v1.17 Data Visualization (1.17)
  ("D:\Program Files\MikTeX\tex/latex/pgf/frontendlayer\tikz.sty" ("D:\Program Files\MikTeX\tex/latex/pgf/basiclayer\pgf.sty" ("D:\Program Files\MikTeX\tex/latex/pgf/utilities\pgfrcs.sty" ("D:\Program Files\MikTeX\tex/generic/pgf/utilities\pgfutil-common.tex"
-\pgfutil@everybye=\toks23
+\pgfutil@everybye=\toks24
 \pgfutil@tempdima=\dimen156
 \pgfutil@tempdimb=\dimen157
  ("D:\Program Files\MikTeX\tex/generic/pgf/utilities\pgfutil-common-lists.tex")) ("D:\Program Files\MikTeX\tex/generic/pgf/utilities\pgfutil-latex.def"
@@ -161,10 +161,10 @@ Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
  ("D:\Program Files\MikTeX\tex/latex/pgf/basiclayer\pgfcore.sty" ("D:\Program Files\MikTeX\tex/latex/pgf/systemlayer\pgfsys.sty" ("D:\Program Files\MikTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex"
 Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
  ("D:\Program Files\MikTeX\tex/generic/pgf/utilities\pgfkeys.code.tex"
-\pgfkeys@pathtoks=\toks24
-\pgfkeys@temptoks=\toks25
+\pgfkeys@pathtoks=\toks25
+\pgfkeys@temptoks=\toks26
  ("D:\Program Files\MikTeX\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex"
-\pgfkeys@tmptoks=\toks26
+\pgfkeys@tmptoks=\toks27
 ))
 \pgf@x=\dimen158
 \pgf@y=\dimen159
@@ -182,9 +182,9 @@ Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
 \c@pgf@countb=\count197
 \c@pgf@countc=\count198
 \c@pgf@countd=\count199
-\t@pgf@toka=\toks27
-\t@pgf@tokb=\toks28
-\t@pgf@tokc=\toks29
+\t@pgf@toka=\toks28
+\t@pgf@tokb=\toks29
+\t@pgf@tokc=\toks30
 \pgf@sys@id@count=\count266
  ("D:\Program Files\MikTeX\tex/generic/pgf/systemlayer\pgf.cfg"
 File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
@@ -221,9 +221,9 @@ Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
 \pgfmath@dimen=\dimen168
 \pgfmath@count=\count269
 \pgfmath@box=\box51
-\pgfmath@toks=\toks30
-\pgfmath@stack@operand=\toks31
-\pgfmath@stack@operation=\toks32
+\pgfmath@toks=\toks31
+\pgfmath@stack@operand=\toks32
+\pgfmath@stack@operation=\toks33
 ) ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex" ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex"))) ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfloat.code.tex"
 \c@pgfmathroundto@lastzeros=\count270
 )) ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfint.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex"
@@ -307,8 +307,8 @@ Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
  ("D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmath.code.tex")
 \pgffor@iter=\dimen195
 \pgffor@skip=\dimen196
-\pgffor@stack=\toks33
-\pgffor@toks=\toks34
+\pgffor@stack=\toks34
+\pgffor@toks=\toks35
 )) ("D:\Program Files\MikTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex"
 Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
  ("D:\Program Files\MikTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex"
@@ -342,9 +342,9 @@ File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
  ("D:\Program Files\MikTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ))) ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplots.code.tex" ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplotscore.code.tex"
-\t@pgfplots@toka=\toks35
-\t@pgfplots@tokb=\toks36
-\t@pgfplots@tokc=\toks37
+\t@pgfplots@toka=\toks36
+\t@pgfplots@tokb=\toks37
+\t@pgfplots@tokc=\toks38
 \pgfplots@tmpa=\dimen262
 \c@pgfplots@coordindex=\count283
 \c@pgfplots@scanlineindex=\count284
@@ -352,7 +352,7 @@ File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \c@pgfplotsarray@tmp=\count285
 ) ("D:\Program Files\MikTeX\tex/generic/pgfplots/liststructure\pgfplotsmatrix.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgfplots/numtable\pgfplotstableshared.code.tex"
 \c@pgfplotstable@counta=\count286
-\t@pgfplotstable@a=\toks38
+\t@pgfplotstable@a=\toks39
 ) ("D:\Program Files\MikTeX\tex/generic/pgfplots/liststructure\pgfplotsdeque.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgfplots/util\pgfplotsbinary.code.tex" ("D:\Program Files\MikTeX\tex/generic/pgfplots/util\pgfplotsbinary.data.code.tex")) ("D:\Program Files\MikTeX\tex/generic/pgfplots/util\pgfplotsutil.verb.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgfplots/libs\pgflibrarypgfplots.surfshading.code.tex"
 \c@pgfplotslibrarysurf@no=\count287
  ("D:\Program Files\MikTeX\tex/generic/pgfplots/sys\pgflibrarypgfplots.surfshading.pgfsys-pdftex.def"))) ("D:\Program Files\MikTeX\tex/generic/pgfplots/util\pgfplotscolormap.code.tex" ("D:\Program Files\MikTeX\tex/generic/pgfplots/util\pgfplotscolor.code.tex")) ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplotsstackedplots.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplotsplothandlers.code.tex" ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplotsmeshplothandler.code.tex" ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplotsmeshplotimage.code.tex"))) ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplots.scaling.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplotscoordprocessing.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplots.errorbars.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplots.markers.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplotsticks.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplots.paths.code.tex") ("D:\Program Files\MikTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.code.tex" ("D:\Program Files\MikTeX\tex/generic/pgf/modules\pgfmoduledecorations.code.tex"
@@ -380,8 +380,8 @@ File: tikzlibraryplotmarks.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 File: pgflibraryplotmarks.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ))) ("D:\Program Files\MikTeX\tex/latex/tools\verbatim.sty"
 Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks39
-\verbatim@line=\toks40
+\every@verbatim=\toks40
+\verbatim@line=\toks41
 \verbatim@in@stream=\read3
 ) ("D:\Program Files\MikTeX\tex/latex/tcolorbox\tcolorbox.sty"
 Package: tcolorbox 2019/11/15 version 4.22 text color boxes
@@ -409,7 +409,7 @@ Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
 ) ("D:\Program Files\MikTeX\tex/latex/listings\listings.sty"
 \lst@mode=\count294
 \lst@gtempboxa=\box70
-\lst@token=\toks41
+\lst@token=\toks42
 \lst@length=\count295
 \lst@currlwidth=\dimen276
 \lst@column=\count296
@@ -489,17 +489,17 @@ LaTeX Font Info:    ... okay on input line 32.
 \scratchbox=\box72
 \nofMPsegments=\count303
 \nofMParguments=\count304
-\everyMPshowfont=\toks42
+\everyMPshowfont=\toks43
 \MPscratchCnt=\count305
 \MPscratchDim=\dimen281
 \MPnumerator=\count306
 \makeMPintoPDFobject=\count307
-\everyMPtoPDFconversion=\toks43
+\everyMPtoPDFconversion=\toks44
 ) ("D:\Program Files\MikTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 ) ABD: EveryShipout initializing macros
-Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.16}).
+Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.17} (current compat level: 1.16).
 
 \c@lstlisting=\count308
 LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
@@ -583,10 +583,10 @@ Package pdftex.def Info: CP1d part 1 code.png  used on input line 174.
 (pdftex.def)             Requested size: 274.02187pt x 320.92177pt.
  [6 <d:/Git Repositories/Uni-Code/PHY2004W Computational/CP1/CP1c code 1.png> <d:/Git Repositories/Uni-Code/PHY2004W Computational/CP1/CP1c code 2.png>] [7 <d:/Git Repositories/Uni-Code/PHY2004W Computational/CP1/CP1d part 1 code.png>] ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP1\CP1.aux") ) 
 Here is how much of TeX's memory you used:
- 27361 strings out of 481515
- 671401 string characters out of 2924072
- 1180279 words of memory out of 3000000
- 42199 multiletter control sequences out of 15000+200000
+ 27441 strings out of 481254
+ 674823 string characters out of 2918041
+ 1183481 words of memory out of 3000000
+ 42540 multiletter control sequences out of 15000+200000
  541746 words of font info for 61 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,7n,127p,885b,609s stack positions out of 5000i,500n,10000p,200000b,50000s

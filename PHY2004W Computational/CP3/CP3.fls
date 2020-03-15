@@ -1,7 +1,7 @@
-PWD d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1
+PWD d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3
 INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
-INPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Assignment 1.tex
-OUTPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Assignment 1.log
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3.tex
+OUTPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3.log
 INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
 INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
 INPUT D:\Program Files\MikTeX\tex\latex\base\size12.clo
@@ -226,9 +226,17 @@ INPUT D:\Program Files\MikTeX\tex\latex\l3packages\l3keys2e\l3keys2e.sty
 INPUT D:\Program Files\MikTeX\tex\latex\translator\translator.sty
 INPUT D:\Program Files\MikTeX\tex\latex\translator\translator.sty
 INPUT D:\Program Files\MikTeX\tex\latex\translator\translator.sty
-INPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Assignment 1.aux
-INPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Assignment 1.aux
-OUTPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Assignment 1.aux
+INPUT D:\Program Files\MikTeX\tex\latex\nowidow\nowidow.sty
+INPUT D:\Program Files\MikTeX\tex\latex\nowidow\nowidow.sty
+INPUT D:\Program Files\MikTeX\tex\latex\kvoptions\kvoptions.sty
+INPUT D:\Program Files\MikTeX\tex\latex\kvoptions\kvoptions.sty
+INPUT D:\Program Files\MikTeX\tex\generic\ltxcmds\ltxcmds.sty
+INPUT D:\Program Files\MikTeX\tex\generic\ltxcmds\ltxcmds.sty
+INPUT D:\Program Files\MikTeX\tex\generic\kvsetkeys\kvsetkeys.sty
+INPUT D:\Program Files\MikTeX\tex\generic\kvsetkeys\kvsetkeys.sty
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3.aux
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3.aux
+OUTPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3.aux
 INPUT D:\Program Files\MikTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT D:\Program Files\MikTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
@@ -284,38 +292,58 @@ INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx12.tfm
-OUTPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Assignment 1.pdf
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr17.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3.toc
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3.toc
+OUTPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3.toc
+OUTPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3.pdf
 INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
-INPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q2 Plot.pgf
-INPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q2 Plot.pgf
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss8.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt8.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm0800.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm0600.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm0500.tfm
 INPUT D:\Program Files\MikTeX\tex\latex\listings\lstlang1.sty
 INPUT D:\Program Files\MikTeX\tex\latex\listings\lstlang1.sty
-INPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q3a.py
-INPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q3a.py
-INPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q3a.py
-INPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q3b.py
-INPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q3b.py
-INPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q3b.py
-INPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q3c.py
-INPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q3c.py
-INPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q3c.py
-INPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q4.py
-INPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q4.py
-INPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q4.py
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr17.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q2.py
-INPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q2.py
-INPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q2.py
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3a.py
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3a.py
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3a.py
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3 90.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3 90.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3 10.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3 10.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3 10b.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3 10b.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3b 10.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3b 10.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3b.py
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3b.py
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3b.py
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3c.py
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3c.py
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3c.py
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3c 90.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3c 90.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3c 10.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3c 10.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3a.py
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3a.py
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3a.py
 INPUT D:\Program Files\MikTeX\tex\latex\base\ts1cmtt.fd
 INPUT D:\Program Files\MikTeX\tex\latex\base\ts1cmtt.fd
 INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tctt1000.tfm
-INPUT d:\Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Assignment 1.aux
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3b.py
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3b.py
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3b.py
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3c.py
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3c.py
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3c.py
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3.aux
 INPUT D:\Program Files\MikTeX\fonts\enc\dvips\cm-super\cm-super-ts1.enc
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
@@ -335,8 +363,6 @@ INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
@@ -347,5 +373,7 @@ INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmtt12.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmtt12.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\cm-super\sfrm1200.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\cm-super\sfrm1200.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\cm-super\sftt1000.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\cm-super\sftt1000.pfb

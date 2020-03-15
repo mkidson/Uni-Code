@@ -16,10 +16,10 @@
 \definecolor{codeblue}{HTML}{2162DB}
 \definecolor{commentcolor}{HTML}{4A6E46}
 \lstdefinestyle{appendix}{
-    basicstyle=\ttfamily,
+    basicstyle=\ttfamily\footnotesize,
     commentstyle=\color{commentcolor},
-    keywordstyle=\color{codeblue}
-    stringstyle=\color{stringcolor}
+    keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},
     showstringspaces=false,
     numbers=left,
     upquote=true,
@@ -31,10 +31,10 @@
     frame=single
 }
 \lstdefinestyle{inline}{
-    basicstyle=\ttfamily,
+    basicstyle=\ttfamily\footnotesize,
     commentstyle=\color{commentcolor},
-    keywordstyle=\color{codeblue}
-    stringstyle=\color{stringcolor}
+    keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},
     showstringspaces=false,
     numbers=left,
     upquote=true,
@@ -47,6 +47,7 @@
 
 \title{Assignment 1}
 \date{4 March 2020}
+\author{}
 
 \begin{document}
 
@@ -60,8 +61,38 @@
     \begin{enumerate}
         \item Newton-Raphson root-finding
         \begin{enumerate}
-            \item a
-            \item b
+            \item We are to find $f(x)$. In the Newton-Raphson Method, the formula is 
+            \begin{equation*}
+                x_{n+1} = x_n - \frac{f(x)}{f'(x)}
+            \end{equation*}
+            So, we can deduce from the equation given to us
+            \begin{equation*}
+                x_{n+1} = x_n - (\cos x_n)(\sin x_n) + R\cos^2 x_n
+            \end{equation*}
+            that
+            \begin{equation*}
+                \begin{split}
+                    &\frac{f(x)}{f'(x)} = \cos x_n \sin x_n + R\cos x_n \\
+                    \implies &\frac{df}{f} = \frac{1}{\cos x_n \sin x_n + R\cos x_n}dx \\
+                \end{split}
+            \end{equation*}
+            Now, we perform a substitution in order to simplify some things. Let $x_n = \arctan u$. Then
+            \begin{equation*}
+                \begin{split}
+                    &dx = \frac{1}{1+u^2}du \\
+                    \implies &\int\frac{df}{f} = \int\frac{1}{\cos x_n \sin x_n + R\cos x_n}dx \\
+                    \implies &\ln|f| = \int\frac{1}{\frac{u}{\sqrt{1+u^2}}\frac{1}{\sqrt{1+u^2}} + \frac{R}{1+u^2}}\frac{1}{1+u^2}du \\
+                    \implies &\ln|f| = \int\frac{1}{\frac{u}{1+u^2} + \frac{R}{1+u^2}}\frac{1}{1+u^2}du \\
+                    \implies &\ln|f| = \int\frac{1}{u + R}du \\
+                    \implies &\ln|f| = \ln(u + R) + C, \hspace{15pt} C \in \Re \\
+                    \implies &f = (u + R)e^C
+                \end{split}
+            \end{equation*}
+            Let $e^C = A$, then 
+            \begin{equation*}
+                f = A(\tan x_n + R)
+            \end{equation*}
+            \item This formula can be used to find the roots of some function $f$.
         \end{enumerate}
         \item Fixed Point Iteration
         \begin{enumerate}
@@ -96,28 +127,103 @@
             \end{equation*}
 
             \item To plot these functions on the same axes, I used Python with the \\ 
-            \texttt{matplotlib} module, below is the result [Figure \ref{fig:Q2_Plot}].
+            \texttt{matplotlib} module, below is the result [Figure \ref{fig:Q2 Plot}].
+            It's clear to see that all of the graphs intersect the $y=x$ line at two points with the 
+            exception of $g_2(x)$, which has no values $<0$ as a function. The code for this can be 
+            found in [Appendix 1]
 
             \begin{figure}[H]
                 \begin{center}
-                   \scalebox{.8}{\input{Q2_Plot.pgf}}
+                   \scalebox{.8}{\input{Q2 Plot.pgf}}
                    \caption{Plot of each $g_i(x)$}
-                   \label{fig:Q2_Plot}
+                   \label{fig:Q2 Plot}
                 \end{center}
             \end{figure}
-            
-            \noindent
-            It's clear to see that all of the graphs intersect the $y=x$ line at two points with the 
-            exception of $g_2(x)$, which has no values $<0$ as a function. 
-            
-            \item 
+            \item As we can see from the plot, both $g'_2(x)$ and $g'_4(x)$ are less than 1, which means 
+            they will converge on the fixed point. The other two, however, will not converge on the 
+            positive root. We can't say whether they will diverge or whether they will converge on the 
+            negative root, but they will not converge on the positive root, which is what we are looking for. 
         \end{enumerate}
         \item Halley's Method
             \begin{enumerate}
-                \item Idk
+                \item The program below, [Q3a.py], results in a value of $x_n = 2.15443$ after 3 iterations, 
+                excluding the initial guess. As you can see, the stop condition for this method was that the 
+                difference between $x_n$ and $x_{n+1}$ has an absolute value less than 0.00001. This 
+                method is not guaranteed to work for every function, but in this case it was sufficient. 
                 \newline
-                \lstinputlisting[title=Q3.py, style=inline]{Q3.py}
+                \newline
+                \begin{minipage}{\linewidth}
+                    \lstinputlisting[title=Q3a.py, style=inline]{Q3a.py}
+                \end{minipage}
+                
+                \item Comparing the number of iterations for Halley's Method to the number of iterations 
+                needed to reach a root when using Newton's Method, which in this case would be 4 iterations 
+                excluding the initial guess, we can see that while Halley's Method is better, it's not by much. 
+                The code performing this calculation is below [Q3b.py]. It also returns $x_n = 2.15443$.
+                \newline
+                \newline
+                \begin{minipage}{\linewidth}
+                    \lstinputlisting[title=Q3b.py, style=inline]{Q3b.py}
+                \end{minipage}
+                
+                \item Firstly, to check that there is a root in the interval we can use the Intermediate 
+                Value Theorem along with the fact that $f(2)=-2$ and $f(4)=6$. Next we can write a program, 
+                [Q3c.py] below, which does the iterations for us. We know that $f(x_1)$ is the negative value, 
+                so we don't need to code that in. 
+                Comparing the result in Problem 3a to the result obtained when using the 
+                Bisection method, calculated below in [Q3c.py], we can see that Bisection converges 
+                in 18 iterations. Compared to the 3 iterations that Halley's Method took, this is terrible.
+                \newline
+                \newline
+                \begin{minipage}{\linewidth}
+                    \lstinputlisting[title=Q3c.py, style=inline]{Q3c.py}
+                \end{minipage}
             \end{enumerate}
+        \item Firstly, the functions we are looking at are
+        \begin{equation*}
+            \begin{split}
+                &g_1(x)=x^2-2 \\
+                &g_2(x)=\sqrt{x+2} \\
+                &g_3(x)=\frac{2}{x-1} \\
+                &g_4(x)=\frac{2}{x}+1 \\
+            \end{split}
+        \end{equation*}
+        
+        Using these functions, the code below uses Fixed Point Iteration to find one of the roots of the 
+        original function $f(x) = x^2 - x - 2$. We hoped to find the positive root that was visible 
+        in Figure \ref{fig:Q2 Plot}, but after running the program we found these results:
+
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{ccc}
+                \hline
+                Function & Fixed Point & \# of Iterations \\
+                \hline
+                $g_1(x)$ & Could not converge & 100 \\
+                $g_2(x)$ & 2 & 7 \\
+                $g_3(x)$ & -1 & 21 \\
+                $g_4(x)$ & 2 & 16 \\
+                \hline
+            \end{tabular}
+        \end{table}
+
+        These values are all rounded as the program ran to an accuracy of 0.00001, which returned values 
+        such as 1.9999998198672908, which are unnecessarily verbose. 
+        \newline
+        On the topic of convergence to a root, all but one of the functions converged to a root, but 
+        $g_3(x)$ seemed to converge on the negative root, namely -1. $g_1(x)$ did not converge, which was 
+        expected as $|g'_1(x)| > 1$ at the root. The same was true for $g_3(x)$, but its derivative was 
+        negative at the root, which led to it converging on the negative root. This is consistent with our 
+        prediction in Question2a but it also shows us which function converges on the negative root and 
+        which diverges. 
+        \newline
+        \lstinputlisting[title=Q4.py, style=inline]{Q4.py}
+        
+        \newpage
+        \section*{Appendix}
+        \lstinputlisting[caption=Q2.py, style=appendix]{Q2.py}
+        
+        
     \end{enumerate}
 
 \end{document}

@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.7)  9 MAR 2020 15:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.7)  15 MAR 2020 23:08
 entering extended mode
-**"d:/Git Repositories/Uni-Code/PHY2004W Computational/CP2/CP2.tex"
-("d:/Git Repositories/Uni-Code/PHY2004W Computational/CP2/CP2.tex"
+**"d:/Git Repositories/Uni-Code/PHY2004W Computational/CP3/CP3.tex"
+("d:/Git Repositories/Uni-Code/PHY2004W Computational/CP3/CP3.tex"
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-03> ("D:\Program Files\MikTeX\tex/latex/base\article.cls"
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -485,25 +485,32 @@ Package: l3keys2e 2020-03-03 LaTeX2e option processing using LaTeX3 keys
 
 ("D:\Program Files\MikTeX\tex/latex/translator\translator.sty"
 Package: translator 2019-05-31 v1.12a Easy translation of strings in LaTeX
-)) ("D:\Program Files\MikTeX\tex/latex/listings\lstlang1.sty"
-File: lstlang1.sty 2019/09/10 1.8c listings language file
-) ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP2\CP2.aux")
-\openout1 = `CP2.aux'.
+)) ("D:\Program Files\MikTeX\tex/latex/nowidow\nowidow.sty"
+Package: nowidow 2011/09/20 1.0 Easily prevent widows and orphans
+Package: nowidow 
+ ("D:\Program Files\MikTeX\tex/latex/kvoptions\kvoptions.sty"
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+ ("D:\Program Files\MikTeX\tex/generic/ltxcmds\ltxcmds.sty"
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+) ("D:\Program Files\MikTeX\tex/generic/kvsetkeys\kvsetkeys.sty"
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))) ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3.aux")
+\openout1 = `CP3.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -564,61 +571,88 @@ Dictionary: translator-basic-dictionary, Language: English
 ) ("D:\Program Files\MikTeX\tex/latex/siunitx\siunitx-abbreviations.cfg"
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 53.
  ("D:\Program Files\MikTeX\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 53.
  ("D:\Program Files\MikTeX\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP2\CP2.toc")
+) ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3.toc")
 \tf@toc=\write6
-\openout6 = `CP2.toc'.
+\openout6 = `CP3.toc'.
 
  [1
 
-{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP2\CP2a_Initial_Guess.pgf") [1]
-Underfull \hbox (badness 10000) in paragraph at lines 92--108
+{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [1]
+Underfull \hbox (badness 10000) in paragraph at lines 171--178
 
  []
 
-("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP2\CP2a_Best_Fit.pgf") [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 208--225
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--199
 
  []
 
-("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP2\CP1c_Data_Plot.pgf")
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 235--260
-[]$[]$ $[]$ 
- []
 
-[4]
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 263--289
-[]$[]$ $[]$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 305--327
+Underfull \hbox (badness 10000) in paragraph at lines 208--222
 
  []
 
-("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP2\CP2b_Data_Plot.pgf") [5] ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP2\CP2b_Contour_Plot.pgf") [6] ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP2\CP1c_Contour_Plot.pgf") [7] ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP2\CP2a_Nonlinear_Fitting.py"
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 8.
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--222
+
+ []
+
+[2] ("D:\Program Files\MikTeX\tex/latex/listings\lstlang1.sty"
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+) ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3a.py") ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3 90.pgf") [3] ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3 10.pgf") [4]
+Underfull \hbox (badness 10000) in paragraph at lines 258--277
+
+ []
+
+("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3 10b.pgf") [5]
+Underfull \hbox (badness 10000) in paragraph at lines 321--338
+
+ []
+
+("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3b 10.pgf") [6]
+Underfull \hbox (badness 10000) in paragraph at lines 347--351
+
+ []
+
+("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3b.py")
+Underfull \hbox (badness 10000) in paragraph at lines 353--371
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--371
+
+ []
+
+[7] ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3c.py") ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3c 90.pgf") [8] ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3c 10.pgf")
+Underfull \hbox (badness 10000) in paragraph at lines 401--409
+
+ []
+
+[9] ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3a.py"
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 5.
  ("D:\Program Files\MikTeX\tex/latex/base\ts1cmtt.fd"
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [8]) ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP2\CP2b_Visualising_Uncertainties.py" [9] [10]) ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP2\CP1c.py" [11] [12] [13]) [14] ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP2\CP2.aux") ) 
+) [10]) ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3b.py" [11]) ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3c.py" [12]) [13] ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3.aux") ) 
 Here is how much of TeX's memory you used:
- 30338 strings out of 481254
- 748300 string characters out of 2918041
- 1466779 words of memory out of 3000000
- 45390 multiletter control sequences out of 15000+200000
- 545340 words of font info for 76 fonts, out of 3000000 for 9000
+ 30655 strings out of 481254
+ 753401 string characters out of 2918041
+ 1442133 words of memory out of 3000000
+ 45681 multiletter control sequences out of 15000+200000
+ 546693 words of font info for 80 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,15n,127p,885b,1812s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Program Files/MikTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on "d:/Git Repositories\Uni-Code\PHY2004W Computational\CP2\CP2.pdf" (15 pages, 287220 bytes).
+ 73i,18n,127p,885b,1823s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/Program Files/MikTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sfrm1200.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on "d:/Git Repositories\Uni-Code\PHY2004W Computational\CP3\CP3.pdf" (14 pages, 297431 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
+ 116 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
