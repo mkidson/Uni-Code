@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tabto}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{verbatim}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{siunitx}
+\usepackage[all]{nowidow}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,
+    commentstyle=\color{commentcolor},
+    keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},
+    showstringspaces=false,
+    numbers=left,
+    upquote=true,
+    captionpos=t,
+    abovecaptionskip=12pt,
+    belowcaptionskip=12pt,
+    language=Python,
+    breaklines=true,
+    frame=single,
+}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.16}
+
+\title{Car on a Washboard Road Surface}
+\date{\textbf{25 March 2020}}
+\author{}
+
+\begin{document}
+
+    \maketitle
+    \center
+    \textbf{\large{MAM2046W 2OD}}\\
+    \textbf{\large{KDSMIL001}}\\
+
+    \begin{enumerate}
+        \item \textbf{Modelling} \newline
+        In order to model this system, we must consider all of the forces acting on the car. 
+        It's relatively safe to assume that the car is in an inertial reference frame, therefore 
+        we know that $\vec{F}_{net}=m\vec{a}$. On the other hand, we know that the only forces 
+        acting on the car are the force of gravity $\vec{F}_G = m\vec{g}$ and the force of the 
+        "spring", which can be modelled as $\vec{F}_S = k\Delta \vec{y}$ where $\Delta \vec{y}$ 
+        is the distance from the equilibrium position to the current position of the mass.
+        Now if we consider the system when it's at rest, in other words when the spring is at a 
+        relative equilibrium position, there is a force being applied on the car by the spring in 
+        order to perfectly balance the force of gravity, in which case we can effectively ignore 
+        the force of gravity and choose the new position from which to measure $\Delta \vec{y}$, 
+        leaving us with
+
+        \begin{equation}
+            \vec{F}_{net} = k\Delta \vec{y}
+        \end{equation}
+
+        \noindent
+        Now we must consider the dashpot, which applies a force on the mass in proportion to 
+        the velocity of the mass in the form $\vec{F}_D = c\vec{v}$. Adding this into our 
+        equation for $\vec{F_{net}}$, we find 
+
+        \begin{equation}
+            \vec{F}_{net} = k\Delta \vec{y} + c\vec{v}
+        \end{equation}
+
+        \noindent
+        With a usual mass on a spring system, this is as far as it goes as the only thing that 
+        moves is the mass, but in this case both the mass and the connection point of the 
+        "spring" are moving and they're not necessarily moving in sync with each other. In 
+        order to account for this we need to modify the $\Delta\vec{y}$ and $\vec{v}$ terms 
+        as they will not be changing in a simple manner. For the $\Delta\vec{y}$ term, this 
+        isn't too hard to do. We just need to consider the effect that different values of 
+        $\Delta\vec{y}$ will have on $\vec{F}_S$. From this we find 
+
+        \begin{equation}
+            \vec{F}_S = k(Y(t) - y(t))
+        \end{equation}
+
+        \noindent
+        where $Y(t)$ is the upward displacement of the car and $y(t)$ is the upward displacement 
+        of the connection point of the "spring", given by 
+
+        \begin{equation}
+            \begin{split}
+                y(t) &= a\sin\frac{2\pi x}{\lambda} \\
+                &= a\sin\frac{2\pi v t}{\lambda}
+            \end{split}
+        \end{equation}
+
+        \noindent
+        as $x = vt$.
+    \end{enumerate}
+
+\end{document}

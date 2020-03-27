@@ -146,9 +146,9 @@
         \end{enumerate}
         \item Halley's Method
             \begin{enumerate}
-                \item The program below, [Q3a.py], results in a value of $x_n = 2.15443$ after 3 iterations, 
+                \item The program below, [Q3a.py], results in a value of $x_n = 2.154434690031884$ after 4 iterations, 
                 excluding the initial guess. As you can see, the stop condition for this method was that the 
-                difference between $x_n$ and $x_{n+1}$ has an absolute value less than 0.00001. This 
+                difference between $x_n$ and $x_{n+1}$ has an absolute value less than $1\times10^{-12}$. This 
                 method is not guaranteed to work for every function, but in this case it was sufficient. 
                 \newline
                 \newline
@@ -157,9 +157,9 @@
                 \end{minipage}
                 
                 \item Comparing the number of iterations for Halley's Method to the number of iterations 
-                needed to reach a root when using Newton's Method, which in this case would be 4 iterations 
+                needed to reach a root when using Newton's Method, which in this case would be 5 iterations 
                 excluding the initial guess, we can see that while Halley's Method is better, it's not by much. 
-                The code performing this calculation is below [Q3b.py]. It also returns $x_n = 2.15443$.
+                The code performing this calculation is below [Q3b.py]. It also returns $x_n = 2.154434690032$.
                 \newline
                 \newline
                 \begin{minipage}{\linewidth}
@@ -168,11 +168,12 @@
                 
                 \item Firstly, to check that there is a root in the interval we can use the Intermediate 
                 Value Theorem along with the fact that $f(2)=-2$ and $f(4)=6$. Next we can write a program, 
-                [Q3c.py] below, which does the iterations for us. We know that $f(x_1)$ is the negative value, 
-                so we don't need to code that in. 
+                [Q3c.py] below, which does the iterations for us.
                 Comparing the result in Problem 3a to the result obtained when using the 
                 Bisection method, calculated below in [Q3c.py], we can see that Bisection converges 
-                in 18 iterations. Compared to the 3 iterations that Halley's Method took, this is terrible.
+                in 40 iterations. Compared to the 3 iterations that Halley's Method took, this is terrible. 
+                The upside to this method is that it is guaranteed to find the root, as long as the root exists 
+                in the interval.
                 \newline
                 \newline
                 \begin{minipage}{\linewidth}

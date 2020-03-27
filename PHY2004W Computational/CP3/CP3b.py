@@ -10,8 +10,8 @@ matplotlib.rcParams.update({
     'pgf.rcfonts': False,
 })
 # Defines a few starting conditions and constants we will need later on
-deltat = 0.01       # The time step
-omega0 = 5          # The angular frequency
+deltat = 0.01
+omega0 = 5
 T = 10
 N = int(T/deltat+1.5)
 time = np.zeros(N)

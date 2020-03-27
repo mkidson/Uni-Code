@@ -161,7 +161,7 @@
 
     \noindent
     In order to simplify this, we can take what we call a small angle approximation, where 
-    $\sin\theta = \theta$ for angles $<\sim\ang{10}$. This leads us to the equation 
+    $\sin\theta = \theta$ for angles $<\approx\ang{10}$. This leads us to the equation 
 
     \begin{equation}
         \ddot{\theta} = -\Omega_0^2 \theta
@@ -352,7 +352,7 @@
     
     \noindent
     As can be seen in Figure \ref{fig:symplectic}, this method is much better at keeping the 
-    energy bounded, with a total variation of $\sim 0.2$. Compared to the previous results, 
+    energy bounded, with a total variation of $\approx 0.2$. Compared to the previous results, 
     this is a great improvement in terms of accurately approximating the motion. We can again 
     notice that the phase plot is purely elliptical, with no decay or growth, showing that our 
     energy is conserved to some extent. We have effectively removed the approximation from the 
@@ -402,10 +402,19 @@
     From these two results we can conclude that at small angles Euler's Method, when using Symplectic 
     Integration, is quite good at modelling something like an simple oscillator. However, when 
     deviating slightly from the bounds of the small angle approximation, these numerical methods 
-    do well but are not accurate enough to trust entirely.
+    do well but are not accurate enough to trust entirely. 
+    \newline
+    In terms of the actual result obtained from investigating the length dependence of period for 
+    a simple pendulum, we can see that as length increases, so does the period, but at some sort of 
+    logarithmic or inverse quadratic rate. From analysing the equations of motion for the pendulum, 
+    we see that $T$ goes by $\frac{1}{\Omega_0}$, which itself goes by $\sqrt{\frac{1}{L}}$. Thus 
+    $T \sim \sqrt{L}$, which tells us that this is an inverse quadratic relationship. 
     \newline
     \newline
-    In conclusion, 
+    In conclusion, these numerical integration methods can be quite inaccurate but using a few tricks, 
+    such as symplectic integration and approximations to simplify things, we can confidently use 
+    these methods to model systems that have very complex, and often analytically impossible, solutions. 
+    
 
     \newpage
     \section{Appendix}

@@ -9,9 +9,9 @@ matplotlib.rcParams.update({
     'text.usetex': True,
     'pgf.rcfonts': False,
 })
-# Defines a few starting conditions and constants we will need later on
-deltat = 0.01       # The time step
-omega0 = 5          # The angular frequency
+# Defines a few starting conditions, constants, and arrays we will need later on
+deltat = 0.01
+omega0 = 5
 TotalT = 10
 N = int(TotalT/deltat+1.5)
 NL = 100
@@ -23,12 +23,12 @@ T = np.zeros(NL)
 TSmallAngles = np.zeros(NL)
 yfit = np.zeros((NL, N))
 omega = np.zeros(NL)
-p[:, 0] = 0            # Another initial condition that says we start from rest
 q[:, 0] = 90*np.pi/180 # Our initial condition of theta at 90 degrees to the vertical
+p[:, 0] = 0            # Another initial condition that says we start from rest
 p0 = [1, 0, 1, 1]
-def f(t, A, gamma, omega, alpha):
+def f(t, A, gamma, omega, alpha):   # The function that curve_fit will use later on
     return A*np.exp(-1*gamma*t/2)*np.cos(omega*t-alpha)
-# The Loop. Does all the calculations of theta and omega for each time step and then does it again for a different omega
+# The Loop. Does all the calculations of theta and omega for each time step and then does it again for different omegas
 for j in range(NL):
     time = np.zeros(N)
     omega[j] = np.sqrt(9.8/L[j])

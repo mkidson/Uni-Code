@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.7)  18 MAR 2020 16:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.7)  27 MAR 2020 12:09
 entering extended mode
-**"d:/Git Repositories/Uni-Code/2NA Assignments/Assignment 1/Assignment 1.tex"
-("d:/Git Repositories/Uni-Code/2NA Assignments/Assignment 1/Assignment 1.tex"
+**"d:/Git Repositories/Uni-Code/2ODE Projects/Project 1/Project 1.tex"
+("d:/Git Repositories/Uni-Code/2ODE Projects/Project 1/Project 1.tex"
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-03> ("D:\Program Files\MikTeX\tex/latex/base\article.cls"
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -485,23 +485,32 @@ Package: l3keys2e 2020-03-03 LaTeX2e option processing using LaTeX3 keys
 
 ("D:\Program Files\MikTeX\tex/latex/translator\translator.sty"
 Package: translator 2019-05-31 v1.12a Easy translation of strings in LaTeX
-)) ("d:/Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Assignment 1.aux")
-\openout1 = `"Assignment 1.aux"'.
+)) ("D:\Program Files\MikTeX\tex/latex/nowidow\nowidow.sty"
+Package: nowidow 2011/09/20 1.0 Easily prevent widows and orphans
+Package: nowidow 
+ ("D:\Program Files\MikTeX\tex/latex/kvoptions\kvoptions.sty"
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+ ("D:\Program Files\MikTeX\tex/generic/ltxcmds\ltxcmds.sty"
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+) ("D:\Program Files\MikTeX\tex/generic/kvsetkeys\kvsetkeys.sty"
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))) ("d:/Git Repositories\Uni-Code\2ODE Projects\Project 1\Project 1.aux")
+\openout1 = `"Project 1.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
-LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -562,54 +571,28 @@ Dictionary: translator-basic-dictionary, Language: English
 ) ("D:\Program Files\MikTeX\tex/latex/siunitx\siunitx-abbreviations.cfg"
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 41.
  ("D:\Program Files\MikTeX\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
  ("D:\Program Files\MikTeX\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [1] ("d:/Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q2 Plot.pgf") [2] ("D:\Program Files\MikTeX\tex/latex/listings\lstlang1.sty"
-File: lstlang1.sty 2019/09/10 1.8c listings language file
-) ("d:/Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q3a.py")
-Underfull \hbox (badness 10000) in paragraph at lines 149--158
-
- []
-
-[3] ("d:/Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q3b.py")
-Underfull \hbox (badness 10000) in paragraph at lines 159--168
-
- []
-
-("d:/Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q3c.py")
-Underfull \hbox (badness 10000) in paragraph at lines 169--182
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 211--221
-
- []
-
-[5] ("d:/Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q4.py") [6] ("d:/Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Q2.py"
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 5.
- ("D:\Program Files\MikTeX\tex/latex/base\ts1cmtt.fd"
-File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)) [7] ("d:/Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Assignment 1.aux") ) 
+{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] ("d:/Git Repositories\Uni-Code\2ODE Projects\Project 1\Project 1.aux") ) 
 Here is how much of TeX's memory you used:
- 30254 strings out of 481254
- 746445 string characters out of 2918041
- 1395313 words of memory out of 3000000
- 45318 multiletter control sequences out of 15000+200000
- 545340 words of font info for 76 fonts, out of 3000000 for 9000
+ 30044 strings out of 481254
+ 745440 string characters out of 2918041
+ 1054848 words of memory out of 3000000
+ 45122 multiletter control sequences out of 15000+200000
+ 543324 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,17n,127p,896b,1601s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Program Files/MikTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on "d:/Git Repositories\Uni-Code\2NA Assignments\Assignment 1\Assignment 1.pdf" (8 pages, 193142 bytes).
+ 73i,15n,127p,888b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "d:/Git Repositories\Uni-Code\2ODE Projects\Project 1\Project 1.pdf" (2 pages, 72096 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
+ 36 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

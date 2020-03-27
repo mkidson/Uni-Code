@@ -24,7 +24,7 @@ def y4(x):
 
 y32 = y3(x)[~np.isnan(y3(x))]
 
-plt.plot(x, y1(x), color='r', lw=0.5, label='$y = g_1(x)')
+plt.plot(x, y1(x), color='r', lw=0.5, label='$y = g_1(x)$')
 plt.plot(x, y2(x), color='b', lw=0.5, label='$y = g_2(x)$')
 plt.plot(x, y32, color='y', lw=0.5, label='$y = g_3(x)$')
 plt.plot(x, y4(x), color='g', lw=0.5, label='$y = g_4(x)$')
