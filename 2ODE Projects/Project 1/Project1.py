@@ -1,6 +1,6 @@
 from matplotlib import pyplot as plt
 import numpy as np
-from numpy import cos, pi, sin
+from numpy import cos, pi, sin, sqrt, exp
 from scipy.optimize import curve_fit
 import matplotlib
 # matplotlib.use('pgf')
@@ -11,28 +11,29 @@ matplotlib.rcParams.update({
     'pgf.rcfonts': False,
 })
 
-V = np.linspace(1, 50, 500)
-t = np.linspace(-10, 10, 500)
-y = np.linspace(-10, 10, 500)
+V = np.linspace(1, 100, 500)
+t = np.linspace(5, 100, 500)
 
-def Y(v, t):
-    a = 0.05
-    c = 2e3
-    k = 7e4
+C1 = 0.2
+C2 = sqrt(55)/55
+a = 0.05
+c = 2e3
+k = 7e4
+m = 800
+p = sqrt(1375/16)
+
+def Y(v, x):
     z = pi*v/5
-    m = 800
-
-    A1 = (a*(-((c*z)**2)-(k**2)+k*m*(z)**2))/(-((c*z)**2)-(k**2)-2*k*m*(z**2)+(m*(z**2))**2)
-    B1 = (a*c*m*(z**3))/(-((c*z)**2)-(k**2)-2*k*m*(z**2)+(m*(z**2))**2)
-    C1 = 5/(pi*v)
-    C2 = 0.2
-    return C1*sin(z*t)+C2*cos(z*t)+sin(z*t)*((k-m*(z**2))*A1-(c*z)*B1-(a*k))+cos(z*t)*((c*z)*A1+(k-m*(z**2)*B1)-(a*c*z))
+    A = (k*a*(k-m*z**2)+c**2*a*z**2)/((k-m*(z**2))**2+(c*z)**2)
+    B = (c*a*z*(k-m*z**2)-k*a*c*z)/((k-m*(z**2))**2+(c*z)**2)
+    return exp((-5/4)*x)*(C1*cos(p*x)+C2*sin(p*x))+A*sin(z*x)+B*cos(z*x)
 
 maxY = []
 for i in V:
-    maxY.append(max(Y(i, t)))
+    maxY.append(max(abs(Y(i, t))))
 
 maxMaxY = max(maxY)
 print(maxMaxY, V[maxY.index(maxMaxY)])
+
 plt.plot(V, maxY)
 plt.show()
