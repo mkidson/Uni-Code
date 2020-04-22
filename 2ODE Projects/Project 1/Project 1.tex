@@ -43,7 +43,7 @@
     \maketitle
     \center
     \textbf{\large{MAM2046W 2OD}}\\
-    \textbf{\large{KDSMIL001}}\\
+    \textbf{\large{EmplID: 1669971}}\\
 
     \begin{enumerate}
         \item \textbf{Modelling} \newline
@@ -82,7 +82,7 @@
         $\Delta\vec{y}$ will have on $\vec{F}_S$. From this we find 
 
         \begin{equation}
-            \vec{F}_S = k(Y(t) - y(t))
+            \vec{F}_S = k(y(t) - Y(t))
         \end{equation}
 
         \noindent
@@ -97,7 +97,40 @@
         \end{equation}
 
         \noindent
-        as $x = vt$.
+        as $x = vt$. Now to consider the $\vec{F}_D$ term. Through some careful consideration 
+        of the force depending on which way the mass and the connection point are moving, we 
+        can find that 
+
+        \begin{equation}
+            \vec{F}_D = c(\dot{y}(t) - \dot{Y}(t))
+        \end{equation}
+
+        \noindent
+        Putting this all together, we can see that 
+
+        \begin{equation}
+            \begin{split}
+                \vec{F}_{net} &= k(y - Y) + c(\dot{y} - \dot{Y}) \\
+                m\vec{a} &= k(y - Y) + c(\dot{y} - \dot{Y}) \\
+                m\ddot{Y} &= ky - kY + c\dot{y} - c\dot{Y} \\
+                m\ddot{Y} + c\dot{Y} + kY &= ky + c\dot{y}
+            \end{split}
+        \end{equation}
+
+        \noindent
+        which is the final form of the equation of motion we are looking for.
+
+        \item \textbf{Analysis} \newline
+        
+        \begin{equation}
+            \begin{aligned}
+                &\frac{a(-(cz)^2-k^2+kmz^2)}{-(cz)^2-k^2-2kmz^2+(mz^2)^2} (\sin(zt)(k-mz^2)+\cos(zt)(cz)) \\
+                &+ \frac{acmz^3}{-(cz)^2-k^2-2kmz^2+(mz^2)^2} (\cos(zt)(k-mz^2)+\sin(zt)(cz)) \\
+                &= \cos(zt)(acz) + \sin(zt)(ak)
+            \end{aligned}
+        \end{equation}
+        
+        
     \end{enumerate}
 
 \end{document}

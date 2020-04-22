@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.7)  27 MAR 2020 12:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.7)  18 APR 2020 01:59
 entering extended mode
 **"d:/Git Repositories/Uni-Code/2ODE Projects/Project 1/Project 1.tex"
 ("d:/Git Repositories/Uni-Code/2ODE Projects/Project 1/Project 1.tex"
@@ -494,7 +494,7 @@ Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
 ) ("D:\Program Files\MikTeX\tex/generic/kvsetkeys\kvsetkeys.sty"
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-))) ("d:/Git Repositories\Uni-Code\2ODE Projects\Project 1\Project 1.aux")
+))) ("d:\Git Repositories\Uni-Code\2ODE Projects\Project 1\Project 1.aux")
 \openout1 = `"Project 1.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
@@ -580,19 +580,24 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] ("d:/Git Repositories\Uni-Code\2ODE Projects\Project 1\Project 1.aux") ) 
+{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+
+ []
+
+[2] ("d:\Git Repositories\Uni-Code\2ODE Projects\Project 1\Project 1.aux") ) 
 Here is how much of TeX's memory you used:
- 30044 strings out of 481254
- 745440 string characters out of 2918041
- 1054848 words of memory out of 3000000
+ 30045 strings out of 481254
+ 745495 string characters out of 2918041
+ 1055847 words of memory out of 3000000
  45122 multiletter control sequences out of 15000+200000
  543324 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,15n,127p,888b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "d:/Git Repositories\Uni-Code\2ODE Projects\Project 1\Project 1.pdf" (2 pages, 72096 bytes).
+ 73i,16n,127p,888b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "d:\Git Repositories\Uni-Code\2ODE Projects\Project 1\Project 1.pdf" (2 pages, 83350 bytes).
 PDF statistics:
- 36 PDF objects out of 1000 (max. 8388607)
+ 40 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
