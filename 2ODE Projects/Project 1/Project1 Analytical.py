@@ -11,7 +11,7 @@ matplotlib.rcParams.update({
     'pgf.rcfonts': False,
 })
 
-V = np.linspace(1, 100, 500)
+Vs = np.linspace(1, 100, 500)
 t = np.linspace(5, 100, 500)
 
 C1 = 0.2
@@ -29,11 +29,14 @@ def Y(v, x):
     return exp((-5/4)*x)*(C1*cos(p*x)+C2*sin(p*x))+A*sin(z*x)+B*cos(z*x)
 
 maxY = []
-for i in V:
+for i in Vs:
     maxY.append(max(abs(Y(i, t))))
 
 maxMaxY = max(maxY)
-print(maxMaxY, V[maxY.index(maxMaxY)])
+print(maxMaxY, Vs[maxY.index(maxMaxY)])
 
-plt.plot(V, maxY)
+plt.plot(Vs, maxY)
 plt.show()
+# plt.savefig('2ODE Projects\Project 1\Analytical Plot.pgf')
+
+maxs = [0.19509896745635577, 14.68937875751503]
