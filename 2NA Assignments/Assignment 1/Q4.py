@@ -11,7 +11,7 @@ def FPI(g, startX):
     diff = abs(g(startX)-startX)
     xNew = g(startX)
     count = 0
-    while diff > 0.00001 and count < 100:
+    while diff > 1e-12 and count < 100:
         xNew = g(xNew)
         diff = abs(g(xNew)-xNew)
         count += 1

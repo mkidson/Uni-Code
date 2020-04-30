@@ -3,7 +3,7 @@ from numpy import cos, pi, sin, sqrt, exp
 from scipy.integrate import odeint
 import matplotlib
 from matplotlib import pyplot as plt
-# matplotlib.use('pgf')
+matplotlib.use('pgf')
 matplotlib.rcParams.update({
     'pgf.texsystem': 'pdflatex',
     'font.family': 'serif',
@@ -21,13 +21,13 @@ def dU_dx(U, x, v):
     return [U[1], (-(c/m)*U[1])-((k/m)*U[0])+((c*a*z/m)*cos(z*x))+((k*a/m)*sin(z*x))]
 
 U0 = [0.2, 1]
-Vs = np.linspace(1, 100, 500)
-ts = np.linspace(1, 100, 500)
+Vs = np.linspace(1, 30, 500)
+ts = np.linspace(0, 100, 500)
 
-# Us = odeint(dU_dx, U0, ts, args=(2,))
+# Us = odeint(dU_dx, U0, ts, args=(14,))
 # ys = Us[:,0]
 
-# plt.plot(ts, ys)
+# plt.plot(ts[25:], ys[25:])
 # plt.show()
 
 maxY = []
@@ -40,6 +40,8 @@ maxMaxY = max(maxY)
 print(maxMaxY, Vs[maxY.index(maxMaxY)])
 
 plt.plot(Vs, maxY)
+plt.xlabel("Velocity ($\\frac{m}{s}$)")
+plt.ylabel("Amplitude ($m$)")
 # plt.show()
 plt.savefig('2ODE Projects\Project 1\The Numerical Plot.pgf')
 

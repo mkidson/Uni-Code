@@ -11,7 +11,7 @@ matplotlib.rcParams.update({
     'pgf.rcfonts': False,
 })
 
-Vs = np.linspace(1, 100, 500)
+Vs = np.linspace(1, 30, 500)
 t = np.linspace(5, 100, 500)
 
 C1 = 0.2
@@ -24,9 +24,16 @@ p = sqrt(1375/16)
 
 def Y(v, x):
     z = pi*v/5
-    A = (k*a*(k-m*z**2)+c**2*a*z**2)/((k-m*(z**2))**2+(c*z)**2)
-    B = (c*a*z*(k-m*z**2)-k*a*c*z)/((k-m*(z**2))**2+(c*z)**2)
-    return exp((-5/4)*x)*(C1*cos(p*x)+C2*sin(p*x))+A*sin(z*x)+B*cos(z*x)
+    sinAlpha = (k*(k-m*z**2)+c**2*z**2)/sqrt((k-m*(z**2))**2+(c*z)**2)
+    cosAlpha = (c*m*z**3)/sqrt((k-m*(z**2))**2+(c*z)**2)
+    A = (a)/sqrt((k-m*(z**2))**2+(c*z)**2)
+    return A*(cos(z*x)*cosAlpha+sin(z*x)*sinAlpha)
+
+# maxY = max(abs(Y(14.88758171, t)))
+# plt.plot(t, Y(14.88758171, t))
+# print(maxY)
+
+# exp(-5*x/4)*(0.2*cos(p*t)+(sqrt(55)/55)*sin(p*t))+
 
 maxY = []
 for i in Vs:
@@ -36,6 +43,9 @@ maxMaxY = max(maxY)
 print(maxMaxY, Vs[maxY.index(maxMaxY)])
 
 plt.plot(Vs, maxY)
+plt.xlabel("Velocity ($\\frac{m}{s}$)")
+plt.ylabel("Amplitude ($m$)")
+
 plt.show()
 # plt.savefig('2ODE Projects\Project 1\Analytical Plot.pgf')
 

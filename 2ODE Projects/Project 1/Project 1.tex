@@ -35,15 +35,26 @@
 \pgfplotsset{compat=1.16}
 
 \title{Car on a Washboard Road Surface}
-\date{\textbf{25 March 2020}}
+\date{\textbf{25 April 2020}}
 \author{}
 
 \begin{document}
 
     \maketitle
-    \center
+    \begin{center}
     \textbf{\large{MAM2046W 2OD}}\\
     \textbf{\large{EmplID: 1669971}}\\
+    \end{center}
+
+    \section*{Abstract}
+    In this project we aim to analyse a system described by a second order differential equation 
+    both analytically and numerically. This equation describes a "car on a washboard surface". As 
+    the car drives along it oscillates up and down on a damped spring, but the washboard surface 
+    makes it much more complicated than that. We will first determine the differential equation, 
+    then solve it analytically using the method of Undetermined Coefficients in order to find the 
+    velocity at which the car oscillates with greatest amplitude. Then we will simulate the equation 
+    numerically to verify our result.
+
 
     \begin{enumerate}
         \item \textbf{Modelling} \newline
@@ -59,20 +70,18 @@
         the force of gravity and choose the new position from which to measure $\Delta \vec{y}$, 
         leaving us with
 
-        \begin{equation}
+        \begin{equation*}
             \vec{F}_{net} = k\Delta \vec{y}
-        \end{equation}
+        \end{equation*}
 
-        \noindent
         Now we must consider the dashpot, which applies a force on the mass in proportion to 
         the velocity of the mass in the form $\vec{F}_D = c\vec{v}$. Adding this into our 
         equation for $\vec{F_{net}}$, we find 
 
-        \begin{equation}
+        \begin{equation*}
             \vec{F}_{net} = k\Delta \vec{y} + c\vec{v}
-        \end{equation}
+        \end{equation*}
 
-        \noindent
         With a usual mass on a spring system, this is as far as it goes as the only thing that 
         moves is the mass, but in this case both the mass and the connection point of the 
         "spring" are moving and they're not necessarily moving in sync with each other. In 
@@ -81,56 +90,216 @@
         isn't too hard to do. We just need to consider the effect that different values of 
         $\Delta\vec{y}$ will have on $\vec{F}_S$. From this we find 
 
-        \begin{equation}
+        \begin{equation*}
             \vec{F}_S = k(y(t) - Y(t))
-        \end{equation}
+        \end{equation*}
 
-        \noindent
         where $Y(t)$ is the upward displacement of the car and $y(t)$ is the upward displacement 
         of the connection point of the "spring", given by 
 
-        \begin{equation}
+        \begin{equation*}
             \begin{split}
                 y(t) &= a\sin\frac{2\pi x}{\lambda} \\
                 &= a\sin\frac{2\pi v t}{\lambda}
             \end{split}
-        \end{equation}
+        \end{equation*}
 
-        \noindent
         as $x = vt$. Now to consider the $\vec{F}_D$ term. Through some careful consideration 
         of the force depending on which way the mass and the connection point are moving, we 
         can find that 
 
-        \begin{equation}
+        \begin{equation*}
             \vec{F}_D = c(\dot{y}(t) - \dot{Y}(t))
-        \end{equation}
+        \end{equation*}
 
-        \noindent
         Putting this all together, we can see that 
 
-        \begin{equation}
+        \begin{equation*}
             \begin{split}
                 \vec{F}_{net} &= k(y - Y) + c(\dot{y} - \dot{Y}) \\
                 m\vec{a} &= k(y - Y) + c(\dot{y} - \dot{Y}) \\
-                m\ddot{Y} &= ky - kY + c\dot{y} - c\dot{Y} \\
-                m\ddot{Y} + c\dot{Y} + kY &= ky + c\dot{y}
+                m\ddot{Y} &= ky - kY + c\dot{y} - c\dot{Y}
             \end{split}
+        \end{equation*}
+
+        and finally 
+
+        \begin{equation}
+            m\ddot{Y} + c\dot{Y} + kY = ky + c\dot{y}
+            \label{eqn:differential equation}
         \end{equation}
 
-        \noindent
         which is the final form of the equation of motion we are looking for.
 
         \item \textbf{Analysis} \newline
+        In order to analyse this differential equation we first need to recognise 
+        that it's a non-homogeneous second order linear ODE. This means that we can 
+        find the general solution to the homogeneous equation and a particular solution 
+        to the non-homogeneous equation and thus we will have found the general 
+        solution to the non-homogeneous equation. 
+        \newline
+        Firstly, the general solution to the homogeneous equation 
+
+        \begin{equation}
+            m\ddot{Y}+c\dot{Y}+kY=0
+            \label{eqn:homogeneous equation}
+        \end{equation}
+
+        \noindent
+        can be found by firstly finding the roots of the characteristic equation 
         
         \begin{equation}
-            \begin{aligned}
-                &\frac{a(-(cz)^2-k^2+kmz^2)}{-(cz)^2-k^2-2kmz^2+(mz^2)^2} (\sin(zt)(k-mz^2)+\cos(zt)(cz)) \\
-                &+ \frac{acmz^3}{-(cz)^2-k^2-2kmz^2+(mz^2)^2} (\cos(zt)(k-mz^2)+\sin(zt)(cz)) \\
-                &= \cos(zt)(acz) + \sin(zt)(ak)
-            \end{aligned}
+            mr^2+cr+k=0
+            \label{eqn:homogeneous characteristic}
         \end{equation}
         
+        which are $r_{1,2}=-\frac{5}{4}\pm i\sqrt{\frac{1375}{16}}$. Using the general formula for 
+        the solution to a second order linear homogeneous equation
+        
+        \begin{equation}
+            \begin{gathered}
+                r_{1,2} = a+bi \\
+                y_g = e^{at}(C1\cos(bt)+C2\sin(bt))
+            \end{gathered}
+            \label{eqn:gen formula homo soln}
+        \end{equation}
+
+        we find 
+
+        \begin{equation}
+            Y_{hg} = e^{-\frac{5t}{4}}(C1\cos(pt)+C2\sin(pt))
+            \label{eqn:homogeneous gen sol 1}
+        \end{equation}
+
+        where $p = \sqrt{\frac{1375}{16}}$. $C1$ and $C2$ are determined from initial conditions, which 
+        for this problem are relatively insignificant, so we've chosen $Y(0)=0.2$ and $\dot{Y}(0)=1$. By 
+        differentiating Equation (\ref{eqn:homogeneous gen sol 1}) and substituting those initial conditions, 
+        we find that $C1=0.2$ and $C2=\frac{\sqrt{55}}{55}$, resulting in
+        
+        \begin{equation}
+            Y_{hg} = e^{-\frac{5t}{4}}(0.2\cos(pt)+\frac{\sqrt{55}}{55}\sin(pt))
+            \label{eqn:homogeneous gen sol 2}
+        \end{equation}
+
+        Now, in order to find a general solution to the non-homogeneous equation we must find any 
+        particular solution to it and sum it with Equation (\ref{eqn:homogeneous gen sol 2}). To do 
+        this, we can use the method of Undetermined Coefficients, starting with a guessed solution. 
+        In our case we guess that $Y = A\sin(\frac{2\pi v}{\lambda}t)$ and substitute it into Equation 
+        (\ref{eqn:differential equation}) resulting in 
+
+        \begin{equation*}
+            \begin{gathered}
+                -mz^2[A\sin(zt)+B\cos(zt)]+cz[A\cos(zt)-B\sin(zt)] \\
+                +k[A\sin(zt)+B\cos(zt)]=caz\cos(zt)+ka\sin(zt)
+            \end{gathered}
+        \end{equation*}
+
+        where $z=\frac{\pi v}{5}$. Simplifying this we find 
+
+        \begin{equation*}
+            \begin{gathered}
+                \sin(zt)[A(k-mz^2)-B(cz)]+\cos(zt)[B(k-mz^2)+A(cz)] \\
+                =\sin(zt)(ka)+\cos(zt)(caz)
+            \end{gathered}
+        \end{equation*}
+
+        From the coefficients of the $\cos$'s and $\sin$'s we can extract a system of equations, which we 
+        can solve to find $A$ and $B$:
+
+        \begin{equation*}
+            \begin{split}
+                ka &= A(k-mz^2)-B(cz) \\
+                caz &= A(cz)+B(k-mz^2) \\
+                \implies A &= \frac{k^2a-mkaz^2+ac^2z^2}{(k-mz^2)^2+c^2z^2}; \\
+                B &= \frac{camz^3}{(k-mz^2)^2+c^2z^2}
+            \end{split}
+        \end{equation*}
+
+        So we have found a particular solution to the non-homogeneous equation, and thus the general 
+        solution to the differential equation, which is 
+
+        \begin{equation}
+            \begin{gathered}
+                Y_g = e^{-\frac{5t}{4}}(0.2\cos(pt)+\frac{\sqrt{55}}{55}\sin(pt)) \\
+                +\frac{k^2a-mkaz^2+ac^2z^2}{(k-mz^2)^2+c^2z^2}\sin(zt)+\frac{camz^3}{(k-mz^2)^2+c^2z^2}\cos(zt)
+            \end{gathered}
+            \label{eqn:non-homogeneous gen sol}
+        \end{equation}
+        
+        where, as before, $a=0.05, c=\num{2e3}, k=\num{7e4}, m=800, p=\sqrt{\frac{1375}{16}}$, and 
+        $z=\frac{\pi v}{5}$.
+        \newline
+        Now, in order to find out the velocity that maximises the amplitude of oscillations we need to 
+        substitute some things in and rearrange the equation to give us a term we can maximise. 
+        The two terms from $y_{hg}$ don't have any impact past the transient stage as the 
+        $e^{\frac{-5t}{4}}$ term goes to 0 as $t$ increases. So we have to maximise the second and 
+        third terms. Firstly, we can define two things:
+
+        \begin{equation*}
+            \sin(\alpha) = \frac{k^2-mka^2+a^2z^2}{\sqrt{(k-mz^2)^2+c^2z^2}};\hspace{5pt} \cos(\alpha) = \frac{cmz^3}{\sqrt{(k-mz^2)^2+c^2z^2}}
+        \end{equation*}
+        
+        Now we can simplify Equation (\ref{eqn:non-homogeneous gen sol}), ignoring $y_{hg}$ to find
+
+        \begin{equation}
+            \begin{split}
+                Y_g &= \frac{a}{\sqrt{(k-mz^2)^2+c^2z^2}}\left[\cos(zt)\cos(\alpha)+\sin(zt)\sin(\alpha)\right] \\
+                &= \frac{a}{\sqrt{(k-mz^2)^2+c^2z^2}}\cdot\cos(zt-\alpha)
+            \end{split}
+            \label{eqn:max amplitude soln}
+        \end{equation}
+
+        This gives us a nice term to maximise, namely by minimising the denominator. The $(cz)^2$ 
+        term can never be zero, apart from the trivial case where $v=0$ as $z=\frac{\pi v}{5}$, so 
+        we minimise $(k-mz^2)$:
+
+        \begin{equation*}
+            \begin{split}
+                k-mz^2=&0 \\
+                \implies z=&\sqrt{\frac{k}{m}} \\
+                \implies v=&\sqrt{\frac{k}{m}}\cdot\frac{5}{\pi} \\
+                v\approx&14.88758171
+            \end{split}
+        \end{equation*}
+
+        And that is the value of $v$ for which the oscillations have a maximum amplitude. To find 
+        that amplitude we can plot Equation (\ref{eqn:max amplitude soln}) using Python and extract the 
+        maximum amplitude. Below in Figure (\ref{fig:analytical}) we have plotted the amplitude of 
+        oscillations for various values of $v$. This has a shape very similar to a resonance curve 
+        and peaks at $v \approx 14.6573$ with a value of $A \approx 0.1952$.
+
+        \begin{figure}[H]
+            \begin{center}
+                \scalebox{.7}{\input{Analytical Plot.pgf}}
+                \caption{Analytical Plot}
+                \label{fig:analytical}
+            \end{center}
+        \end{figure}
+
+        \item \textbf{Numerical Simulation} \newline
+        To verify the result above we can simulate the original differential equation in Equation 
+        (\ref{eqn:differential equation}) using \texttt{scipy.integrate.odeint}. Following the 
+        documentation and extracting the amplitude for each value of $v \in [1, 30]$ with $dv \approx 0.5$ 
+        we get the plot in Figure (\ref{fig:numerical}), with its peak at $v \approx 14.6573$ with 
+        $A \approx 0.1952$.
+
+        \begin{figure}[H]
+            \begin{center}
+               \scalebox{.7}{\input{The Numerical Plot.pgf}}
+               \caption{Numerical Plot}
+               \label{fig:numerical}
+            \end{center}
+        \end{figure}
+
+        This agrees with our simulation of the solution but not with the analytical solution for $v$, 
+        which is strange but most likely a rounding error in the simulation. 
         
     \end{enumerate}
+
+    \section*{Conclusion}
+    To conclude, we found that the system we were analysing acts in some ways like we would expect, 
+    having a resonance curve that's very regular when looking at the amplitude of oscillations with 
+    respect to the velocity of the car. We also found that the velocity at which the amplitude was 
+    greatest was $\approx 14.89$.
 
 \end{document}

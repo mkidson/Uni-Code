@@ -1,4 +1,8 @@
-plt.plot(V, maxMaxY)
-# plt.xlim(0, 10)
-# plt.ylim(-5, 5)
-# plt.show()
+maxY = []
+for i in Vs:
+    maxY.append(max(abs(Y(i, t))))
+
+maxMaxY = max(maxY)
+print(maxMaxY, Vs[maxY.index(maxMaxY)])
+
+plt.plot(Vs, maxY)
