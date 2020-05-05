@@ -1,0 +1,131 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tabto}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{verbatim}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{siunitx}
+\usepackage{subfig}
+\usepackage{keyval2e}
+\usepackage{caption}
+\usepackage[all]{nowidow}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,
+    commentstyle=\color{commentcolor},
+    keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},
+    showstringspaces=false,
+    numbers=left,
+    upquote=true,
+    captionpos=t,
+    abovecaptionskip=12pt,
+    belowcaptionskip=12pt,
+    language=Python,
+    breaklines=true,
+    frame=single,
+}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,
+    commentstyle=\color{commentcolor},
+    keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},
+    showstringspaces=false,
+    numbers=left,
+    upquote=true,
+    frame=tb,
+    captionpos=b,
+    language={}
+}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.16}
+
+\title{Introduction to Monte Carlo Methods}
+\date{\textbf{5 May 2020}}
+\author{}
+
+\begin{document}
+
+    \begin{titlepage}
+        \maketitle
+        \center
+        \textbf{\large{PHY2004W}}\ \
+        \textbf{\large{KDSMIL001}}\ \
+        \tableofcontents
+    \end{titlepage}
+
+    \section{Introduction and Aim}
+    In this assignment we investigated the Monte Carlo method, a way of simulating systems by 
+    use of random numbers. We revisited some data from a previous assignment and created our 
+    own version of the data to analyse.
+
+    \section{Activity}
+    \begin{itemize}
+        \item \textbf{Histogramming Data}\newline
+        Firstly, we had a look back at some data from CP1, namely Activity1Data.txt, a list 
+        of 60 values generated with a certain mean ($\mu=40$) and standard deviation ($\sigma=2$) 
+        using a Monte Carlo method. We plotted these values on a histogram (Appendix 1) and plotted 
+        the gaussian based on a $\mu$ and $\sigma$ calculated from the data itself. We also plotted 
+        the expected gaussian given the $\mu$ and $\sigma$ used to generate the data. 
+        
+        \begin{figure}[H]
+            \begin{center}
+                \scalebox{.7}{\input{Activity1DataHist.pgf}}
+                \caption{Activity1Data Histogram and Gaussians}
+                \label{fig:Activity1DataHist}
+            \end{center}
+        \end{figure}
+        
+        \noindent
+        Before scaling, the histogram was much larger than the gaussian as the area under a gaussian 
+        distribution is always 1, whereas the histogram doesn't necessarily have an area of 1. To 
+        resolve this and make the graph more readable, we set the density argument to True when 
+        creating the histogram, which normalises it, giving us the graph above. 
+        \newline
+        Now, looking at the Actual Gaussian compared to the Expected Gaussian in Figure 
+        (\ref{fig:Activity1DataHist}), we see that they're a bit different, in fact the actual 
+        gaussian peaks slightly higher than the expected one. This is probably because the method 
+        of generating data isn't perfect so we can expect slight variations from dataset to dataset. 
+        We will investigate this further in the next section.
+
+        \item \textbf{Generating Random Numbers}\newline
+        Next, we created some of our own data to analyse in the same way (Appendix 2). Below is an 
+        example of the file we created to analyse.
+        \newline
+        \lstinputlisting[title=Randomised Data, style=inline, linerange=1-4, firstnumber=1]{RandomisedData.txt}
+        
+        Doing exactly the same analysis as before, we have the plots below, an example of 2 different 
+        datasets created from the same initial conditions.
+
+        \begin{figure}[H]%
+            \centering
+            \subfloat{\scalebox{0.45}{\input{RandomisedDataHist1.pgf}}}%
+            \qquad
+            \subfloat{\scalebox{0.45}{\input{RandomisedDataHist2.pgf}}}%
+            \caption{Randomised Data Histogram and Gaussians}
+            \label{fig:RandomDataHistograms}
+        \end{figure}
+        
+        \noindent
+        As can be seen, the mean still sits at around 40 but due to the different distributions of 
+        the random numbers used to create the data it's never exactly 40.
+
+
+    \end{itemize}
+    \newpage
+    \section{Appendix}
+    \setcounter{figure}{0} \renewcommand{\thefigure}{A.\arabic{figure}}
+    \lstinputlisting[caption=CP4\_2a, style=appendix]{CP4_2a.py}
+    \lstinputlisting[caption=CP4\_2b, style=appendix]{CP4_2b.py}
+    \lstinputlisting[caption=CP4\_3, style=appendix]{CP4_3.py}
+    
+\end{document}
