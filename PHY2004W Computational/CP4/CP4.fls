@@ -244,6 +244,44 @@ INPUT D:\Program Files\MikTeX\tex\generic\ltxcmds\ltxcmds.sty
 INPUT D:\Program Files\MikTeX\tex\generic\ltxcmds\ltxcmds.sty
 INPUT D:\Program Files\MikTeX\tex\generic\kvsetkeys\kvsetkeys.sty
 INPUT D:\Program Files\MikTeX\tex\generic\kvsetkeys\kvsetkeys.sty
+INPUT D:\Program Files\MikTeX\tex\latex\hyperref\hyperref.sty
+INPUT D:\Program Files\MikTeX\tex\latex\hyperref\hyperref.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdftexcmds\pdftexcmds.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdftexcmds\pdftexcmds.sty
+INPUT D:\Program Files\MikTeX\tex\generic\infwarerr\infwarerr.sty
+INPUT D:\Program Files\MikTeX\tex\generic\infwarerr\infwarerr.sty
+INPUT D:\Program Files\MikTeX\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT D:\Program Files\MikTeX\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT D:\Program Files\MikTeX\tex\generic\pdfescape\pdfescape.sty
+INPUT D:\Program Files\MikTeX\tex\generic\pdfescape\pdfescape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\hycolor\hycolor.sty
+INPUT D:\Program Files\MikTeX\tex\latex\hycolor\hycolor.sty
+INPUT D:\Program Files\MikTeX\tex\latex\letltxmacro\letltxmacro.sty
+INPUT D:\Program Files\MikTeX\tex\latex\letltxmacro\letltxmacro.sty
+INPUT D:\Program Files\MikTeX\tex\latex\auxhook\auxhook.sty
+INPUT D:\Program Files\MikTeX\tex\latex\auxhook\auxhook.sty
+INPUT D:\Program Files\MikTeX\tex\latex\hyperref\pd1enc.def
+INPUT D:\Program Files\MikTeX\tex\latex\hyperref\pd1enc.def
+INPUT D:\Program Files\MikTeX\tex\generic\intcalc\intcalc.sty
+INPUT D:\Program Files\MikTeX\tex\generic\intcalc\intcalc.sty
+INPUT D:\Program Files\MikTeX\tex\generic\etexcmds\etexcmds.sty
+INPUT D:\Program Files\MikTeX\tex\generic\etexcmds\etexcmds.sty
+INPUT D:\Program Files\MikTeX\tex\latex\url\url.sty
+INPUT D:\Program Files\MikTeX\tex\latex\url\url.sty
+INPUT D:\Program Files\MikTeX\tex\generic\bitset\bitset.sty
+INPUT D:\Program Files\MikTeX\tex\generic\bitset\bitset.sty
+INPUT D:\Program Files\MikTeX\tex\generic\bigintcalc\bigintcalc.sty
+INPUT D:\Program Files\MikTeX\tex\generic\bigintcalc\bigintcalc.sty
+INPUT D:\Program Files\MikTeX\tex\generic\atbegshi\atbegshi.sty
+INPUT D:\Program Files\MikTeX\tex\generic\atbegshi\atbegshi.sty
+INPUT D:\Program Files\MikTeX\tex\latex\hyperref\hpdftex.def
+INPUT D:\Program Files\MikTeX\tex\latex\hyperref\hpdftex.def
+INPUT D:\Program Files\MikTeX\tex\latex\atveryend\atveryend.sty
+INPUT D:\Program Files\MikTeX\tex\latex\atveryend\atveryend.sty
+INPUT D:\Program Files\MikTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
+INPUT D:\Program Files\MikTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
+INPUT D:\Program Files\MikTeX\tex\generic\uniquecounter\uniquecounter.sty
+INPUT D:\Program Files\MikTeX\tex\generic\uniquecounter\uniquecounter.sty
 INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4.aux
 INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4.aux
 OUTPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4.aux
@@ -255,6 +293,20 @@ INPUT D:\Program Files\MikTeX\tex\latex\translator\translator-basic-dictionary-E
 INPUT D:\Program Files\MikTeX\tex\latex\translator\translator-basic-dictionary-English.dict
 INPUT D:\Program Files\MikTeX\tex\latex\siunitx\siunitx-abbreviations.cfg
 INPUT D:\Program Files\MikTeX\tex\latex\siunitx\siunitx-abbreviations.cfg
+INPUT D:\Program Files\MikTeX\tex\latex\hyperref\nameref.sty
+INPUT D:\Program Files\MikTeX\tex\latex\hyperref\nameref.sty
+INPUT D:\Program Files\MikTeX\tex\latex\refcount\refcount.sty
+INPUT D:\Program Files\MikTeX\tex\latex\refcount\refcount.sty
+INPUT D:\Program Files\MikTeX\tex\generic\gettitlestring\gettitlestring.sty
+INPUT D:\Program Files\MikTeX\tex\generic\gettitlestring\gettitlestring.sty
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4.out
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4.out
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4.out
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4.out
+OUTPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4.pdf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4.out
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4.out
+OUTPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4.out
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr6.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmmi12.tfm
@@ -307,7 +359,6 @@ INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4.toc
 INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4.toc
 OUTPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4.toc
-OUTPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4.pdf
 INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\Activity1DataHist.pgf
@@ -320,10 +371,16 @@ INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
 INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\RandomisedData.txt
 INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\RandomisedData.txt
 INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\RandomisedData.txt
-INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\RandomisedDataHist1.pgf
-INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\RandomisedDataHist1.pgf
-INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\RandomisedDataHist2.pgf
-INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\RandomisedDataHist2.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\RandomisedDataHist60_1.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\RandomisedDataHist60_1.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\RandomisedDataHist60_2.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\RandomisedDataHist60_2.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\RandomisedDataHist600_1.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\RandomisedDataHist600_1.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\RandomisedDataHist600_2.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\RandomisedDataHist600_2.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\ApproxPi3.pgf
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\ApproxPi3.pgf
 INPUT D:\Program Files\MikTeX\tex\latex\listings\lstlang1.sty
 INPUT D:\Program Files\MikTeX\tex\latex\listings\lstlang1.sty
 INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4_2a.py
@@ -339,6 +396,8 @@ INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4_3.py
 INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4_3.py
 INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4_3.py
 INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4.aux
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4.out
+INPUT d:\Git Repositories\Uni-Code\PHY2004W Computational\CP4\CP4.out
 INPUT D:\Program Files\MikTeX\fonts\enc\dvips\cm-super\cm-super-ts1.enc
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
@@ -346,12 +405,18 @@ INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\cm-super\sfrm1200.pfb

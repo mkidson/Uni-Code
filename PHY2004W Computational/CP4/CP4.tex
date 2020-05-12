@@ -1,53 +1,22 @@
 \documentclass[12pt]{article}
 \usepackage[margin=1.2in]{geometry}
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{physics}
-\usepackage{tabto}
-\usepackage{float}
-\usepackage{amssymb}
-\usepackage{pgfplots}
-\usepackage{verbatim}
-\usepackage{tcolorbox}
-\usepackage{listings}
-\usepackage{xcolor}
-\usepackage{siunitx}
-\usepackage{subfig}
-\usepackage{keyval2e}
-\usepackage{caption}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,siunitx,subfig,keyval2e,caption}
 \usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
 \definecolor{stringcolor}{HTML}{C792EA}
 \definecolor{codeblue}{HTML}{2162DB}
 \definecolor{commentcolor}{HTML}{4A6E46}
 \lstdefinestyle{appendix}{
-    basicstyle=\ttfamily\footnotesize,
-    commentstyle=\color{commentcolor},
-    keywordstyle=\color{codeblue},
-    stringstyle=\color{stringcolor},
-    showstringspaces=false,
-    numbers=left,
-    upquote=true,
-    captionpos=t,
-    abovecaptionskip=12pt,
-    belowcaptionskip=12pt,
-    language=Python,
-    breaklines=true,
-    frame=single,
-}
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
 \lstdefinestyle{inline}{
-    basicstyle=\ttfamily\footnotesize,
-    commentstyle=\color{commentcolor},
-    keywordstyle=\color{codeblue},
-    stringstyle=\color{stringcolor},
-    showstringspaces=false,
-    numbers=left,
-    upquote=true,
-    frame=tb,
-    captionpos=b,
-    language={}
-}
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language={}}
 \renewcommand{\lstlistingname}{Appendix}
-\pgfplotsset{compat=1.16}
+\pgfplotsset{compat=1.17}
 
 \title{Introduction to Monte Carlo Methods}
 \date{\textbf{5 May 2020}}
@@ -91,8 +60,8 @@
         resolve this and make the graph more readable, we set the density argument to True when 
         creating the histogram, which normalises it, giving us the graph above. 
         \newline
-        Now, looking at the Actual Gaussian compared to the Expected Gaussian in Figure 
-        (\ref{fig:Activity1DataHist}), we see that they're a bit different, in fact the actual 
+        Now, looking at the Actual Gaussian compared to the Expected Gaussian in 
+        \autoref{fig:Activity1DataHist}, we see that they're a bit different, in fact the actual 
         gaussian peaks slightly higher than the expected one. This is probably because the method 
         of generating data isn't perfect so we can expect slight variations from dataset to dataset. 
         We will investigate this further in the next section.
@@ -103,29 +72,78 @@
         \newline
         \lstinputlisting[title=Randomised Data, style=inline, linerange=1-4, firstnumber=1]{RandomisedData.txt}
         
-        Doing exactly the same analysis as before, we have the plots below, an example of 2 different 
-        datasets created from the same initial conditions.
+        Doing exactly the same analysis as before, we have the plots in \autoref{fig:RandomDataHistograms60}, 
+        an example of 2 different datasets created from the same initial conditions.
 
         \begin{figure}[H]%
             \centering
-            \subfloat{\scalebox{0.45}{\input{RandomisedDataHist1.pgf}}}%
+            \subfloat{\scalebox{0.45}{\input{RandomisedDataHist60_1.pgf}}}%
             \qquad
-            \subfloat{\scalebox{0.45}{\input{RandomisedDataHist2.pgf}}}%
-            \caption{Randomised Data Histogram and Gaussians}
-            \label{fig:RandomDataHistograms}
+            \subfloat{\scalebox{0.45}{\input{RandomisedDataHist60_2.pgf}}}%
+            \caption{60 Random points with specific $\mu$ and $\sigma$}
+            \label{fig:RandomDataHistograms60}
         \end{figure}
         
         \noindent
         As can be seen, the mean still sits at around 40 but due to the different distributions of 
-        the random numbers used to create the data it's never exactly 40.
+        the random numbers used to create the data it's never exactly 40. It is likely that if we 
+        were to increase the number of random numbers, we would get a more accurate mean, as well as 
+        a consistently more accurate gaussian plot. Below in \autoref{fig:RandomDataHistograms600} 
+        is the exact same program but with 10 times as many data points. Clearly this gives more 
+        accurate results.
 
+        \begin{figure}[H]%
+            \centering
+            \subfloat{\scalebox{0.45}{\input{RandomisedDataHist600_1.pgf}}}%
+            \qquad
+            \subfloat{\scalebox{0.45}{\input{RandomisedDataHist600_2.pgf}}}%
+            \caption{600 Random points with specific $\mu$ and $\sigma$}
+            \label{fig:RandomDataHistograms600}
+        \end{figure}
 
+        \item \textbf{Monte Carlo Determination of $\pi$}\newline
+        Finally, to see what else Monte Carlo simulations can do, we tried to determine an approximation 
+        of $\pi$. To do this, we generated a number of random coordinates within a 2 $\times$ 2 square 
+        around the origin. Statistically, these points should distribute evenly around the square, 
+        but if we check which ones fall within a circle of radius 1 centred on the origin and divide 
+        it by the number that fall within the square, which is all of them, we should have 
+        $\frac{\pi}{4}$, the ratio of the area of the circle to that of the square. Finally we 
+        multiply that number by 4 to find and approximation of $\pi$. All of this code is in 
+        Appendix 3 which, after 1 run with 100000 random coordinates, gave a value of $\pi = 3.13924$. 
+        \newline
+        \newline
+        We can improve the accuracy of this number by running the program many times and taking the 
+        mean. We can also increase the number of random coordinates as this will increase the "resolution" 
+        of the circle that we're measuring the area of, increasing the accuracy of the approximation.
+        We will also find a standard deviation which, when divided by the square root of the number of 
+        times the program ran, would be our uncertainty for this value. So we ran 
+        the program from before 10000 times, producing the plot in \autoref{fig:ApproxPi} with 
+        a value of $\pi = 3.141615 \pm 0.000052$. %pi =  3.141615408  +/-  5.162349049951582e-05
+        
+        \begin{figure}[H]
+            \begin{center}
+               \scalebox{.7}{\input{ApproxPi3.pgf}}
+               \caption{Monte Carlo Approximation of $\pi$}
+               \label{fig:ApproxPi}
+            \end{center}
+        \end{figure}
+        
+        \noindent
+        To compare the effect of multiple runs to the effect of more data points, we ran it 100 times with 
+        10000000 coordinates, giving us a value of $\pi = 3.141591 \pm 0.000054$. The two runs effectively 
+        had the same number of evaluations and, as it turns out, resulted in roughly the same uncertainty.
+        When comparing our value to the actual value of $\pi = 3.14159265$ it's clear that both values 
+        agree with the actual value of pi, but the value determined with "higher resolution", in this 
+        case at least, seemed to be more accurate when not considering the uncertainty. This makes sense 
+        as having more points will effectively give a more accurate measurement of the circle, and thus 
+        a more accurate approximation. %pi =  3.141590832  +/-  5.4235216213824e-05
+        
     \end{itemize}
     \newpage
     \section{Appendix}
     \setcounter{figure}{0} \renewcommand{\thefigure}{A.\arabic{figure}}
-    \lstinputlisting[caption=CP4\_2a, style=appendix]{CP4_2a.py}
-    \lstinputlisting[caption=CP4\_2b, style=appendix]{CP4_2b.py}
-    \lstinputlisting[caption=CP4\_3, style=appendix]{CP4_3.py}
+    \lstinputlisting[caption={CP4\_2a}, style=appendix]{CP4_2a.py}
+    \lstinputlisting[caption={CP4\_2b}, style=appendix]{CP4_2b.py}
+    \lstinputlisting[caption={CP4\_3}, style=appendix]{CP4_3.py}
     
 \end{document}

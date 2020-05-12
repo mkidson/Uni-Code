@@ -1,2 +1,1 @@
-xplot = 
-# yplot = 
+gaussianMax = gaussian(dataMu, dataMu, dataSigma)

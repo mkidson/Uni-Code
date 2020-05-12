@@ -11,7 +11,8 @@ matplotlib.rcParams.update({
     'pgf.rcfonts': False,
 })
 # Creates random data to use, with specific mean and standard deviation and writes it to a file
-data = random.normal(40, 2, 60)
+N = 600
+data = random.normal(40, 2, N)
 writeFile = open(r"PHY2004W Computational\CP4\RandomisedData.txt", 'w+')
 writeFile.write("Random numbers drawn from Gaussian with mu = 40.0 and sigma = 2.0\n")
 c = 0
@@ -20,7 +21,7 @@ for i in data:
     writeFile.write(str(c)+" "+str(round(i, 3))+"\n")
 writeFile.close()
 # Creates a numpy array to hold the data
-data2 = np.zeros(60)
+data2 = np.zeros(N)
 i = 0
 # Reads the data and puts it into the array
 f = open(r"PHY2004W Computational\CP4\RandomisedData.txt", 'r')
@@ -54,6 +55,6 @@ plt.draw()
 gaussian = plt.plot(xplot, yplot, 'r-', label='Actual Gaussian')
 trueGaussian = plt.plot(xplot, trueGaussian, 'g-', label='Expected Gaussian')
 # plt.show()
-plt.legend()
+plt.legend(loc='upper left')
 plt.annotate(r'$\mu=$'+str(round(dataMu, 3))+'$; \sigma=$'+str(round(dataSigma, 3)), (dataMu, gaussianMax), textcoords='offset points', bbox=dict(facecolor='orange', edgecolor='black', boxstyle='round'))
-plt.savefig('PHY2004W Computational\CP4\RandomisedDataHist1.pgf')
+plt.savefig('PHY2004W Computational\CP4\RandomisedDataHist600_1.pgf')

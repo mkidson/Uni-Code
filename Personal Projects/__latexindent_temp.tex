@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tabto}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{verbatim}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{siunitx}
+\usepackage{subfig}
+\usepackage{keyval2e}
+\usepackage{caption}
+\usepackage[all]{nowidow}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,
+    commentstyle=\color{commentcolor},
+    keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},
+    showstringspaces=false,
+    numbers=left,
+    upquote=true,
+    captionpos=t,
+    abovecaptionskip=12pt,
+    belowcaptionskip=12pt,
+    language=Python,
+    breaklines=true,
+    frame=single,
+}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\title{ApproxPi}
+\date{\textbf{i}}
+\author{}
+
+\begin{document}
+
+    \begin{titlepage}
+        \maketitle
+        \center
+        \textbf{\large{don't}}\ \
+        \textbf{\large{care}}\ \
+        \tableofcontents
+    \end{titlepage}
+    
+    \begin{figure}[H]
+        \begin{center}
+           \scalebox{.7}{\input{ApproxPi2.pgf}}
+           \caption{caption}
+           \label{2}
+        \end{center}
+    \end{figure}
+    
+    3.1415831759999997 0.0005467703717503537
+    3.14176896 0.000577613689588442
+
+\end{document}

@@ -11,15 +11,17 @@
 		"java.configuration.updateBuildConfiguration": "automatic",
 		"files.exclude": {
 			"**/*.aux": true,
-			"**/*.vscode": true,
 			"**/*.fdb_latexmk": true,
 			"**/*.fls": true,
 			"**/*.log": true,
+			"**/*.out": true,
 			"**/*.synctex.gz": true,
 			"**/*.toc": true,
+			"**/*.vscode": true
 		},
 		"latex-workshop.view.pdf.viewer": "tab",
-		"latex-workshop.view.pdf.zoom": "page-width"
+		"latex-workshop.view.pdf.zoom": "page-width",
+		"latex-workshop.latex.autoBuild.run": "never"
 	}
 }
 	
