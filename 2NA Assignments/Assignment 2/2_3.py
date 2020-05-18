@@ -3,7 +3,7 @@ import numpy as np
 from scipy.optimize import curve_fit
 from numpy import cos, pi, sin, sqrt, exp, random
 import matplotlib
-#matplotlib.use('pgf')
+matplotlib.use('pgf')
 matplotlib.rcParams.update({
     'pgf.texsystem': 'pdflatex',
     'font.family': 'serif',
@@ -16,6 +16,8 @@ def Lagrange(x):
 
 xs = np.linspace(0, 2*pi, 2000)
 ys = np.zeros(2000)
+zeros = np.zeros(1000)
+axis = np.linspace(-10, 10, 1000)
 
 for i in range(xs.size):
     mod = xs[i]-np.floor(xs[i]/(2*pi))*(2*pi)
@@ -28,13 +30,25 @@ for i in range(xs.size):
     elif (3*pi/2) < mod <= (2*pi):
         ys[i] = Lagrange((2*pi)-mod)*(-1)
 
-plt.plot(xs, ys)
+plt.plot(axis, zeros, '#000000')
+plt.plot(zeros, axis, '#000000')
+plt.plot(xs, ys, label='Lagrange Approximation of $\sin(x)$')
 plt.grid(color='#CCCCCC', linestyle=':')
 plt.xlabel('x')
 plt.ylabel('y', rotation=0)
-plt.show()
-plt.plot(xs, ys-sin(xs))
+plt.legend()
+plt.xlim(-0.2, (2*pi)+0.5)
+plt.ylim(-1.5, 1.5)
+# plt.show()
+plt.savefig('2NA Assignments\Assignment 2\LagrangeExpanded.pgf')
+plt.plot(axis, zeros, '#000000')
+plt.plot(zeros, axis, '#000000')
+plt.plot(xs, ys-sin(xs), label='$P_3(x)-\sin(x)$')
 plt.grid(color='#CCCCCC', linestyle=':')
 plt.xlabel('x')
 plt.ylabel('y', rotation=0)
-plt.show()
+plt.legend()
+plt.xlim(-0.2, (2*pi)+0.5)
+plt.ylim(-.003, .003)
+# plt.show()
+plt.savefig('2NA Assignments\Assignment 2\LagrangeError.pgf')

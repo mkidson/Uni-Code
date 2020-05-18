@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage[margin=1.2in]{geometry}
-\usepackage[hyperfigures=true]{hyperref}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
 \usepackage[all]{nowidow}
 \usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
 \usepackage{listings,xcolor,siunitx,subfig,keyval2e,caption}
@@ -15,7 +15,7 @@
     basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
     stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
     captionpos=b,language=Python}
-\renewcommand{\lstlistingname}{Appendix}
+\renewcommand{\lstlistingname}{Code}
 \pgfplotsset{compat=1.17}
 
 \title{Assignment 2}
@@ -24,14 +24,202 @@
 
 \begin{document}
 
-    \begin{titlepage}
-        \maketitle
-        \center
-        \textbf{\large{MAM2046W 2NA}}\ \
-        \textbf{\large{KDSMIL001}}\ \
-        \tableofcontents
-    \end{titlepage}
+    \maketitle
+    \begin{center}
+    \textbf{\large{MAM2046W 2NA}}\\
+    \textbf{\large{KDSMIL001}}\\
+    \end{center}
 
-    
+    \begin{enumerate}
+        \section*{Analytical Problems}
+        \item \textbf{Interpolating $\sin(x)$}\newline
+        \begin{enumerate}
+            \item \textbf{Lagrange Method}
+            We are trying to approximate the function $f(x) = \sin x$ using a Lagrange interpolating 
+            polynomial. We have 4 nodes $0, \pi/6, \pi/3, \pi/2$ and their function values $0, 1/2, \sqrt{3}/2, 1$ 
+            which we will use with the form of the Lagrange interpolating polynomial, which is given by
+
+            \begin{equation}
+                P_{n}(x) = \sum_{i=0}^{n} y_i L_i(x)
+                \label{eqn:Lagrange Polynomial Form}
+            \end{equation}
+            where
+            \begin{equation}
+                L_{i,n} = \prod_{j=0, j\neq i}^{n} \frac{x-x_j}{x_i-x_j}
+                \label{eqn:Li}
+            \end{equation}
+
+            From \autoref{eqn:Li} we can find
+
+            \begin{equation*}
+                \begin{split}
+                    L_0(x) &= -\frac{36x^3}{\pi^3}+\frac{36x^2}{\pi^2}-\frac{11x}{\pi}+1 \\
+                    L_1(x) &= \frac{108x^3}{\pi^3}-\frac{90x^2}{\pi^2}-\frac{18x}{\pi} \\
+                    L_2(x) &= -\frac{108x^3}{\pi^3}+\frac{72x^2}{\pi^2}-\frac{9x}{\pi} \\
+                    L_3(x) &= \frac{36x^3}{\pi^3}-\frac{18x^2}{\pi^2}+\frac{2x}{\pi} 
+                \end{split}
+            \end{equation*}
+            
+            Which, when combined with \autoref{eqn:Lagrange Polynomial Form} gives us 
+
+            \begin{equation}
+                P_3 = x^3 \left(\frac{90-54\sqrt{3}}{\pi^3}\right) + x^2 \left(\frac{-63+36\sqrt{3}}{\pi^2}\right) 
+                + x \left( \frac{22-9\sqrt{3}}{2\pi}\right)
+                \label{eqn:Lagrange Polynomial}
+            \end{equation}
+
+            \item \textbf{Plotting} \newline
+
+            \begin{figure}[H]
+                \begin{center}
+                   \scalebox{.7}{\input{LagrangePlot.pgf}}
+                   \caption{Lagrange Interpolating Polynomial on $[0, \pi/2]$}
+                   \label{fig:LagrangePlot}
+                \end{center}
+            \end{figure}
+            
+            \item \textbf{Newton Method} \newline
+            Newton's method of finding the interpolating polynomial is slightly different. The polynomial is 
+            of the form 
+
+            \begin{equation}
+                P_n(x) = f(x_0) + \sum_{i=1}^n f[x_0, \dots, x_i] (x-x_0)  \dots (x-x_{-1})
+                \label{eqn:Newton Polynomial Form}
+            \end{equation}
+            where
+            \begin{equation*}
+                f[x_0, x_1, x_2] = \frac{f[x_0, x_1]-f[x_1, x_2]}{x_0-x_2} = \frac{\frac{f(x_0)-f(x_1)}{x_0-x_1}-\frac{f(x_1)-f(x_2)}{x_1-x_2}}{x_0-x_2}
+            \end{equation*}
+
+            Finding $P_3(x)$ in this case takes a lot of calculation but is relatively trivial and gives us 
+
+            \begin{equation}
+                P_3(x) = \frac{3x}{\pi}\frac{9(\sqrt{3}-2)}{\pi^2}(x^2-\frac{x\pi}{6})+\frac{18(5-3\sqrt{3})}{\pi^3}(x^3-\frac{x^2\pi}{2}+\frac{x\pi^2}{18})
+                \label{eqn:Newton Polynomial}
+            \end{equation}
+
+            and plotting this gives us 
+
+            \begin{figure}[H]
+                \begin{center}
+                   \scalebox{.7}{\input{NewtonPlot.pgf}}
+                   \caption{Newton Interpolating Polynomial on $[0, \pi/2]$}
+                   \label{fig:NewtonPlot}
+                \end{center}
+            \end{figure}
+            \noindent
+            which is identical to \autoref{fig:LagrangePlot}. They also simplify to the same thing if we check using 
+            Wolfram Alpha. 
+            
+        \end{enumerate}
+
+        \item \textbf{Error Analysis} \newline
+        \begin{enumerate}
+            \item \textbf{Polynomial Approximation}
+            The error bound formula for polynomial approximation $p_n(x)$ to a function $f(x)$ is given by
+
+            \begin{equation}
+                f(x)-p_n(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)\dots(x-x_n)
+                \label{eqn:Polynomial Approximation Error}
+            \end{equation}
+
+            and we are to show that it satisfies
+
+            \begin{equation}
+                |f(x)-p_3(x)| \leq \frac{h^4}{24} \max_{\xi \in [x_0, x_3]} |f^4(\xi)|
+                \label{eqn:To Solve 2a}
+            \end{equation}
+            
+            where $x_0, x_1, x_2, x_3$ are equally spaced nodes with step-size $h$. In terms of interpreting 
+            \autoref{eqn:To Solve 2a}, we can see that \autoref{eqn:Polynomial Approximation Error} gives us an 
+            upper and lower bound of the error of the polynomial. This means that taking the absolute value of 
+            that error bound will give us the maximum absolute value of the error. This simplifies things nicely 
+            and means that we can effectively ignore everything in \autoref{eqn:To Solve 2a} apart from $\frac{h^4}{24}$, 
+            leaving us with having to show that 
+
+            \begin{equation*}
+                \frac{1}{4!}(x-x_0)\dots(x-x_n) = \frac{h^4}{24}
+            \end{equation*}
+
+            and we know that $4! = 24$. Now we can use a substitution to simplify the rest, which we'll call $w(x)$. 
+            If we let $x = t+x_1+h/2$ and substitute in, we get 
+
+            \begin{equation*}
+                \begin{split}
+                    w(t) = &(t+x_1+\frac{h}{2}-x_0)(t+x_1+\frac{h}{2}-x_1)(t+x_1+\frac{h}{2}-x_2)(t+x_1+\frac{h}{2}-x_3) \\
+                    = &(t+\frac{3h}{2})(t+\frac{h}{2})(t-\frac{h}{2})(t-\frac{3h}{2}) \\
+                    = &(t^2-\frac{9h^2}{4})(t^2-\frac{h^2}{4})
+                \end{split}
+            \end{equation*}
+            We want to find the absolute maximum of this function, so we must find its stationary points and 
+            take the absolute values to find the max. Finding these stationary points is relatively trivial and we 
+            find them to be at 
+            
+            $t_{root} = 0, \pm \sqrt{5/4}h^2$ with the function being at its absolute maximum at $t=0$ with 
+            $w(0) = -h^4 \implies |w(0)| = h^4$, which is what we aimed to show.
+
+            \item \textbf{Hermite Approximation} \newline
+            Now we aim to show that, for a cubic Hermite Interpolating Polynomial, the error bound satisfies 
+
+            \begin{equation}
+                |f(x)-H_3(x)| \leq \frac{(b-a)^4}{384} \max_{\xi \in [a, b]} |f^4(\xi)|
+                \label{eqn:To Solve 2b}
+            \end{equation}
+
+            The error bound formula in question is
+
+            \begin{equation}
+                f(x)-H_{2n+1}(x) = \frac{f^{(2n+2)}(\xi)}{(2n+2)!}(x-x_0)^2\dots(x-x_n)^2
+                \label{eqn:Hermite Approximation Error}
+            \end{equation}
+
+            which, similarly to Question 2a above, we can ignore most of. We need only focus on showing that 
+
+            \begin{equation*}
+                \begin{split}
+                    \frac{1}{4!}(x-a)^2(x-b)^2 &= \frac{(b-a)^4}{384} \\
+                    \implies (x-a)^2(x-b)^2 &= \frac{(b-a)^4}{16}
+                \end{split}
+            \end{equation*}
+
+            For simplicity, we'll call the left hand side of this $w(x)$, as before. We can also make the same 
+            substitution as before, letting $x = t+b+\frac{b-a}{2}$, which gives us 
+
+            \begin{equation*}
+                \begin{split}
+                    w(t) &= (t+b-a+\frac{b-a}{2})^2(t+\frac{b-a}{2})^2 \\
+                    &= (t+\frac{3(b-a)}{2})^2(t+\frac{b-a}{2})
+                \end{split}
+            \end{equation*}
+
+            Once again we find the absolute maximum by taking the derivative and setting it to 0, which is 
+            relatively trivial and gives us stationary points at $t_{root} = \frac{3(a-b)}{2}, \frac{(a-b)}{2}, (a-b)$, 
+            with $w(t)$ being at its maximum when $t=(a-b)$, with $w(a-b) = \frac{(a-b)^4}{16} \implies |w(a-b)| = \frac{(b-a)^4}{16}$.
+            This is what we aimed to show.
+            
+        \end{enumerate}
+        
+        \section*{Numerical Problems}
+        \item \textbf{Expanding the Lagrange Approximation to any $x \in [0, \infty)$} \newline
+        
+        \begin{figure}[H]
+            \begin{center}
+                \scalebox{.7}{\input{LagrangeExpanded.pgf}}
+                \caption{Lagrange Approximation Expanded onto $[0, 2\pi]$}
+                \label{fig:LagrangeExpanded}
+            \end{center}
+        \end{figure}
+        
+        \begin{figure}[H]
+            \begin{center}
+                \scalebox{.7}{\input{LagrangeError.pgf}}
+                \caption{Expanded Lagrange Error}
+                \label{fig:LagrangeError}
+            \end{center}
+        \end{figure}
+
+        \lstinputlisting[caption=Expanding Lagrange Approximation, style=appendix]{2_3.py}
+        
+    \end{enumerate}
 
 \end{document}

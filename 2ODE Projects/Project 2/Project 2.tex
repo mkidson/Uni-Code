@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,siunitx,subfig,keyval2e,caption,cancel}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\title{The Man Who Flew Into Space}
+\date{\textbf{14 May 2020}}
+\author{}
+
+\begin{document}
+
+    \maketitle
+    \begin{center}
+    \textbf{\large{MAM2046W 2OD}}\\
+    \textbf{\large{EmplID: 1669971}}\\
+    \end{center}
+
+    \section{Abstract}
+
+    \begin{enumerate}
+        \item \textbf{Analysis} \newline
+        \begin{enumerate}
+            \item We aim to analyse the behaviour of the differential equation 
+            
+            \begin{equation}
+                \frac{d^2\theta}{d\tau^2}+\nu \theta +\epsilon\cos(2\tau)\theta = 0
+                \label{eqn:Main Differential Equation}
+            \end{equation}
+
+            for $\nu \approx 1$ and determine if this $\theta$ will grow exponentially or linearly. 
+            To do this we use an expansion of $\nu = \nu_0 +\epsilon\nu_1+\epsilon^2\nu_2\dots$ 
+            where in this case $\nu_0 = 1$, as well as the method of multiple time scales, to find 
+            the leading order solution to \autoref{eqn:Main Differential Equation}. The amplitude of 
+            this solution will show us the behaviour of this system. \newline
+            \newline
+            Firstly, we define an operator
+            \begin{equation*}
+                \begin{split}
+                    \frac{d}{d\tau} &= (D_0+\epsilon D_1+\epsilon^2 D_2+\dots) \\
+                    \implies \frac{d^2}{d\tau^2} &= (D_0+\epsilon D_1+\epsilon^2 D_2+\dots) \\
+                    &= D_0^2 + 2\epsilon D_0D_1 +\epsilon^2(D_1^2+2D_0D_2)
+                \end{split}
+            \end{equation*}
+            where $D_n = \frac{\partial}{\partial T_n}$ and $T_0=\tau, T_1=\epsilon\tau, T_2=\epsilon^2\tau$ etc. 
+            We can also expand $\theta = \theta_0+\epsilon\theta_1+\epsilon^2\theta_2+\dots$ and then we 
+            can rewrite \autoref{eqn:Main Differential Equation} as 
+            \begin{equation}
+                \begin{gathered}
+                    (D_0^2 + 2\epsilon D_0D_1 +\dots)(\theta_0+\epsilon\theta_1+\dots)+(\nu_0 +\epsilon\nu_1+\dots)(\theta_0+\epsilon\theta_1+\dots) \\
+                    +\epsilon\cos(2\tau)(\theta_0+\epsilon\theta_1+\dots) = 0
+                \end{gathered}
+                \label{eqn:Expanded Main Differential Equation A}
+            \end{equation}
+
+            We can then multiply these brackets out and set coefficients of powers of $\epsilon$ to 0, 
+            starting with $\epsilon^0$, which gives us
+            \begin{equation*}
+                D_0^2\theta_0 + \theta_0\cancelto{1}{\nu_1} = 0
+            \end{equation*}
+            which has the solution $\theta_0 = Ae^{iT_0}+A^*e^{-iT_0}$ where $A^*$ is the 
+            complex conjugate of $A$. Now the coefficients of $\epsilon^1$:
+            \begin{equation*}
+                \begin{split}    
+                    D_0^2 \theta_1 +\theta_1 =& -2D_0D_1\theta_0-\cos(2T_0)\theta_0-\nu_1\theta_0 \\
+                    =& -2D_0D_1(Ae^{iT_0}+A^*e^{-iT_0})-\cos(2T_0)(Ae^{iT_0}+A^*e^{-iT_0}) \\
+                    &-\nu_1(Ae^{iT_0}+A^*e^{-iT_0}) \\
+                    =& -2D_0D_1(Ae^{iT_0}+A^*e^{-iT_0})-\left(\frac{e^{2iT_0}+e^{-2iT_0}}{2}\right)(Ae^{iT_0}+A^*e^{-iT_0}) \\
+                    &-\nu_1(Ae^{iT_0}+A^*e^{-iT_0}) \\
+                    =& -2D_1(iAe^{iT_0}-iA^*e^{-iT_0})-\nu_1(Ae^{iT_0}+A^*e^{-iT_0}) \\
+                    &-\frac{1}{2}(Ae^{3iT_0}+Ae^{-iT_0}+A^*e^{iT_0}+A^*e^{-3iT_0})
+                \end{split}
+            \end{equation*}
+            At this point, we kill the secular terms by setting each of them to 0:
+            \begin{equation}
+                \begin{split}
+                    -2iD_1A-\nu_1A-\frac{1}{2}A^* = 0 \\
+                    2iD_1A^*-\nu_1A^*-\frac{1}{2}A = 0
+                \end{split}
+                \label{eqn:SecularA}
+            \end{equation}
+
+            We can solve this with an Ansatz. If we guess $A=a+ib; A^*=a-ib$ and substitute in, 
+            we end up with 
+
+        \end{enumerate}
+    \end{enumerate}
+
+\end{document}
