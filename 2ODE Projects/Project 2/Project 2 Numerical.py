@@ -4,7 +4,7 @@ from scipy.optimize import curve_fit
 from scipy.integrate import odeint
 from numpy import cos, pi, sin, sqrt, exp, random
 import matplotlib
-#matplotlib.use('pgf')
+matplotlib.use('pgf')
 matplotlib.rcParams.update({
     'pgf.texsystem': 'pdflatex',
     'font.family': 'serif',
@@ -12,22 +12,18 @@ matplotlib.rcParams.update({
     'pgf.rcfonts': False,
 })
 
-step = 0.01
-nu = np.arange(3.7, 4.3, step)
-epsilon = np.arange(0, 1, step)
+N = 1000
+step = 2.4/N
+nu = np.linspace(3.75, 4.5, N, endpoint=False)
+epsilon = np.linspace(1.6, 4, N, endpoint=False)
 ts = np.linspace(0, 100, 500)
 U0 = [1, 0]
 
 def dU_dx(U, t, nu, epsilon):
-    return [ U[1], (-nu*U[0]-epsilon*cos(2*t)*U[0])]
-
-# Us = odeint(dU_dx, U0, ts, args=(nu,epsilon,))
-# ys = Us[:,0]
-
-# plt.plot(ts[:], ys[:])
-# plt.show()
+    return [U[1], (-nu*U[0]-epsilon*cos(2*t)*U[0])]
 
 epsilons = []
+hasMax = True
 for i in nu:
     print(i)
     for c in epsilon:
@@ -35,13 +31,17 @@ for i in nu:
         ys = Us[:,0]
         if max(ys) >= 100:
             epsilons.append(c-step)
+            hasMax = False
             break
 
-    epsilons.append(c)
+    if hasMax:
+        epsilons.append(c)
+        hasMax = True
 
-print(epsilons)
-
-plt.plot(nu, epsilons)
-plt.xlabel(r"$\nu_1$")
-plt.ylabel(r"$\epsilon_1$", rotation=0)
-plt.show()
+plt.plot(nu, epsilons, 'b', label='Numerical Solution')
+# plt.plot(nu, (abs((2*nu)-2)), 'r', label='Analytical Solution')
+plt.xlabel(r"$\nu$")
+plt.ylabel(r"$\epsilon$", rotation=0)
+plt.legend()
+# plt.show()
+plt.savefig(r'2ODE Projects\Project 2\Nu4Numerical.pgf')

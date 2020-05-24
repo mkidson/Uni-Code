@@ -31,6 +31,11 @@
     \end{center}
 
     \section{Abstract}
+    In this project our aim is to compare the approaches of two people swinging on a swing set, regarding 
+    their aim of achieving growth in amplitudes, one aiming for exponential growth, the other for 
+    linear. The motion of a person on a swing driving themselves can be modelled with a differential 
+    equation, which we can analyse and work out how each person needs to tune their approach in order 
+    to obtain the kind of growth they are looking for.
 
     \begin{enumerate}
         \item \textbf{Analysis} \newline
@@ -48,12 +53,12 @@
             the leading order solution to \autoref{eqn:Main Differential Equation}. The amplitude of 
             this solution will show us the behaviour of this system. \newline
             \newline
-            Firstly, we define an operator
+            First, we define an operator
             \begin{equation*}
                 \begin{split}
                     \frac{d}{d\tau} &= (D_0+\epsilon D_1+\epsilon^2 D_2+\dots) \\
                     \implies \frac{d^2}{d\tau^2} &= (D_0+\epsilon D_1+\epsilon^2 D_2+\dots) \\
-                    &= D_0^2 + 2\epsilon D_0D_1 +\epsilon^2(D_1^2+2D_0D_2)
+                    &= D_0^2 + 2\epsilon D_0D_1 +\epsilon^2(D_1^2+2D_0D_2)+\dots
                 \end{split}
             \end{equation*}
             where $D_n = \frac{\partial}{\partial T_n}$ and $T_0=\tau, T_1=\epsilon\tau, T_2=\epsilon^2\tau$ etc. 
@@ -85,7 +90,8 @@
                     &-\frac{1}{2}(Ae^{3iT_0}+Ae^{-iT_0}+A^*e^{iT_0}+A^*e^{-3iT_0})
                 \end{split}
             \end{equation*}
-            At this point, we kill the secular terms by setting each of them to 0:
+            At this point, we kill the secular terms, those terms with frequency 1, by setting each 
+            of them to 0:
             \begin{equation}
                 \begin{split}
                     -2iD_1A-\nu_1A-\frac{1}{2}A^* = 0 \\
@@ -96,8 +102,151 @@
 
             We can solve this with an Ansatz. If we guess $A=a+ib; A^*=a-ib$ and substitute in, 
             we end up with 
+            \begin{equation*}
+                \begin{split}
+                    -2iD_1a+2D_1b-\nu_1(a+ib)-\frac{1}{2}(a-ib)=0 \\
+                    2iD_1a+2D_1b-\nu_1(a-ib)-\frac{1}{2}(a+ib)=0 \\
+                    \implies 2D_1b-i2D_1a=a(\nu_1+\frac{1}{2})+ib(\nu_1-\frac{1}{2}) \\
+                    2D_1b+i2D_1a=a(\nu_1+\frac{1}{2})+ib(\frac{1}{2}-\nu_1)
+                \end{split}
+            \end{equation*}
+            Now we can equate the real and imaginary parts of each equation, leaving us with 
+            \begin{equation*}
+                \begin{split}
+                    D_1b&=\frac{a}{2}(\nu_1+\frac{1}{2}) \\
+                    D_1b&=\frac{a}{2}(\nu_1+\frac{1}{2}) \\
+                    D_1a&=\frac{b}{2}(\frac{1}{2}-\nu_1) \\
+                    D_1a&=\frac{b}{2}(\frac{1}{2}-\nu_1) \\
+                    \implies a&=(\frac{1}{4}-\frac{\nu_1}{2})\int b dT_1 \\
+                    b&=(\frac{\nu_1}{2}+\frac{1}{4})\int a dT_1
+                \end{split}
+            \end{equation*}
+            we can solve for $a$ and $b$
+            \begin{equation*}
+                \begin{split}
+                    D_1a&=(\frac{1}{16}-\frac{\nu_1^2}{4})\int a dT_1 \hspace{15pt} | \frac{\partial}{\partial T_1} \\
+                    \implies D_1^2a&=(\frac{1}{16}-\frac{\nu_1^2}{4})a \\
+                    \implies 0&= D_1^2a + (\frac{\nu_1^2}{4}-\frac{1}{16})a
+                \end{split}
+            \end{equation*}
+            We can solve this with an Ansatz of $a = e^{kT_1}$
+            \begin{equation*}
+                \begin{split}
+                    \implies k^2 &= (\frac{\nu_1^2}{4}-\frac{1}{16}) \\
+                    \implies k &= \pm i\sqrt{(\frac{\nu_1^2}{4}-\frac{1}{16})} \\
+                    \implies a &= C e^{\frac{i}{4}\sqrt{4\nu_1^2-1}T_1} + C^* e^{\frac{-i}{4}\sqrt{4\nu_1^2-1}T_1} \\
+                    \implies b &= \frac{i(2\nu_1+1)}{\sqrt{4\nu_1^2-1}}\left[C^*e^{\frac{-i}{4}\sqrt{4\nu_1^2-1}T_1}-Ce^{\frac{i}{4}\sqrt{1-4\nu_1^2}T_1}\right]
+                \end{split}
+            \end{equation*}
+            Importantly, both $a$ and $b$ need to be real in order for $A$ and $A^*$ to be complex 
+            conjugates. Luckily for us, given a complex number $z=x+iy$ and its conjugate $z^*x-iy$, 
+            $z+z^*=2x$ and $z-z^*=2iy$ and so $a$ is entirely real and the bracket in $b$ is entirely 
+            imaginary, which means $b$ is also entirely real.
+            so we have found
+            \begin{equation*}
+                \begin{split}
+                    A = C e^{\frac{i}{4}\sqrt{4\nu_1^2-1}T_1} + C^* e^{\frac{-i}{4}\sqrt{4\nu_1^2-1}T_1} - \frac{(2\nu_1+1)}{\sqrt{4\nu_1^2-1}}\left[C^*e^{\frac{-i}{4}\sqrt{4\nu_1^2-1}T_1}-Ce^{\frac{i}{4}\sqrt{4\nu_1^2-1}T_1}\right] \\
+                    A^* = C e^{\frac{i}{4}\sqrt{4\nu_1^2-1}T_1} + C^* e^{\frac{-i}{4}\sqrt{4\nu_1^2-1}T_1} + \frac{(2\nu_1+1)}{\sqrt{4\nu_1^2-1}}\left[C^*e^{\frac{-i}{4}\sqrt{4\nu_1^2-1}T_1}-Ce^{\frac{i}{4}\sqrt{4\nu_1^2-1}T_1}\right]
+                \end{split}
+            \end{equation*}
+            and finally
+            \begin{equation}
+                \begin{gathered}
+                    \theta_0 = e^{iT_0}\left(C e^{\frac{i}{4}\sqrt{4\nu_1^2-1}T_1} + C^* e^{\frac{-i}{4}\sqrt{4\nu_1^2-1}T_1} - \frac{(2\nu_1+1)}{\sqrt{4\nu_1^2-1}}\left[C^*e^{\frac{-i}{4}\sqrt{4\nu_1^2-1}T_1}-Ce^{\frac{i}{4}\sqrt{4\nu_1^2-1}T_1}\right]\right) \\
+                    + e^{iT_0}\left(C e^{\frac{i}{4}\sqrt{4\nu_1^2-1}T_1} + C^* e^{\frac{-i}{4}\sqrt{4\nu_1^2-1}T_1} + \frac{(2\nu_1+1)}{\sqrt{4\nu_1^2-1}}\left[C^*e^{\frac{-i}{4}\sqrt{4\nu_1^2-1}T_1}-Ce^{\frac{i}{4}\sqrt{4\nu_1^2-1}T_1}\right]\right)
+                \end{gathered}
+                \label{eqn:Leading Term A}
+            \end{equation}
+
+            From our values of $A$ and $A^*$, our amplitudes, we can tell that $\theta$' growth will be governed 
+            by the $\sqrt{4\nu_1^2-1}$ term. If $\nu_1^2>\frac{1}{4}$, the motion will be purely oscillatory 
+            as the exponential term will be entirely imaginary. If $\nu_1^2<\frac{1}{4}$, the exponential 
+            term will be entirely real and thus the amplitude will grow exponentially. Thus we can return to 
+            our expansion of $\nu$ and find, in order to have exponential growth,
+            \begin{equation*}
+                \begin{gathered}
+                    \nu < 1+\frac{\epsilon}{2}; \nu > 1-\frac{\epsilon}{2} \\
+                    \implies \epsilon > |2\nu -2|
+                \end{gathered}
+            \end{equation*}
+            This gives us \autoref{fig:Nu1Analytical} below
+            \begin{figure}[H]
+                \begin{center}
+                   \scalebox{.7}{\input{Nu1Analytical.pgf}}
+                   \caption{Analytical Determination of $\epsilon_1(\nu)$}
+                   \label{fig:Nu1Analytical}
+                \end{center}
+            \end{figure}
+            \noindent
+            where any combination of $\epsilon, \nu$ above that line will produce exponential 
+            growth.
+
+            \item Now we aim to analyse the same equation but for $\nu \approx 4$. We do the same 
+            analysis as before, but this time we expand $\nu$ as $\nu = 4 + \epsilon\nu_1 + 
+            \epsilon^2 \nu_2 + \dots$, which gives us
+            \begin{equation*}
+                \begin{split}
+                    D_0^2\theta_0 + 4\theta_0 &= 0 \\
+                    \implies \theta_0 &= Ae^{2iT_0}+A^*e^{-2iT_0}
+                \end{split}
+            \end{equation*}
+            and then 
+            \begin{equation*}
+                D_0^2 \theta_1 +\theta_1 = -4iD_1(Ae^{2iT_0}-A^*e^{-2iT_0})-\frac{1}{2}(Ae^{4iT_0}
+                +A^*e^{-4iT_0}+A+A^*)-\nu_1(Ae^{2iT_0}-A^*e^{-2iT_0})
+            \end{equation*}
+            To kill the secular terms in this case, we kill terms with frequency 2, which gives us 
+            \begin{equation*}
+                \begin{split}
+                    4iD_1A-\nu_1A&=0 \\
+                    -4iD_1A^*-\nu_1A^*&=0 \\
+                    \implies A&=Ce^{-4i\nu_1T_1} \\
+                    \implies \theta_0 &= Ce^{i(T_0-4\nu_1T_1)}+C^*e^{i(4\nu_1T_1-T_0)} \\
+                    &= Ce^{i\tau(1-4\nu_1\epsilon)}+C^*e^{i\tau(4\nu_1\epsilon-1)}
+                \end{split}
+            \end{equation*}
+            This solution gives purely oscillatory motion, which might not be correct as, intuitively, 
+            we would expect Miu Miu to have some kind of growth, whether it be exponential or linear.
+            We aren't sure if finding the solution is possible. Maybe by finding $\theta_1$ by looking 
+            at coefficients of $\epsilon^2$ terms we could uncover a solution for $\epsilon_4(\nu)$.
+            
 
         \end{enumerate}
+
+        \item \textbf{Numerical}
+        \begin{enumerate}
+            \item To simulate this differential equation we use \texttt{scipy.integrate.odeint}, 
+            splitting up \autoref{eqn:Main Differential Equation} into two first order differential 
+            equations. Running that program for a series of values of $\nu$ around 1 and reasonably 
+            sized $\epsilon$'s, checking if $\theta$ goes to 100 before $\tau = 100$ and classifying 
+            that $\epsilon$ as being above $\epsilon_1$. This gives us the plot in 
+            \autoref{fig:nu1 Numerical} below.
+            \begin{figure}[H]
+                \begin{center}
+                    \scalebox{.7}{\input{Nu1Numerical.pgf}}
+                    \caption{Numerical Determination of $\epsilon_1(\nu)$}
+                    \label{fig:nu1 Numerical}
+                \end{center}
+            \end{figure}
+            \noindent
+            So our numerical result agrees somewhat with our analytical solution, with some 
+            exceptions for numerical methods being imperfect.
+
+            \item For $\nu \approx 4$, we do exactly the same thing but with values around 4, producing 
+            \autoref{fig:nu4 Numerical} below.
+            \begin{figure}[H]
+                \begin{center}
+                    \scalebox{.7}{\input{Nu4Numerical.pgf}}
+                    \caption{Numerical Determination of $\epsilon_4(\nu)$}
+                    \label{fig:nu4 Numerical}
+                \end{center}
+            \end{figure}
+            \noindent
+            This at least tells us that Miu Miu would obtain exponential growth with some combination 
+            of $\nu$ and $\epsilon$ but that solution has a rather strange form.
+            
+        \end{enumerate}
     \end{enumerate}
+
 
 \end{document}
