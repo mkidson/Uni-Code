@@ -6,7 +6,7 @@ data = np.zeros(60)
 i = 0
 
 #reads the data and puts it into the array
-f = open('PHY2004W Computational\CP1\Activity1Data.txt', 'r')
+f = open(r'PHY2004W Computational\CP1\Activity1Data.txt', 'r')
 header = f.readline()
 for line in f:
     line = line.strip()
