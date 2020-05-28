@@ -10,7 +10,7 @@ matplotlib.rcParams.update({
     'text.usetex': True,
     'pgf.rcfonts': False,
 })
-# Some starting constants and arrays needed, as well as opening the DampedData file
+
 file = open('PHY2004W Computational\CP5\DampedData1.txt', 'r')
 header = file.readline()
 lines = file.readlines()
@@ -21,7 +21,7 @@ jackknifeData = np.zeros((2, N, N-1))
 u = [0.001]*(N-1)
 p0 = [0.28, 0.03, 0.5, 20, 0]
 # p0 = [0.28, 0.04, 0.4, 30, 0]
-# Reading the file, getting the data into the data array
+
 for line in lines:
     line = line.strip()
     columns = line.split()
@@ -29,15 +29,14 @@ for line in lines:
     data[1, i] = float(columns[1])
     i += 1
 file.close()
-# The function that we give to curve_fit
+
 def f(t, A, B, gamma, omega, alpha):
     return A+(B*np.exp(-gamma*t))*np.cos((omega*t)-alpha)
-# Removes random values from the data sets
+
 for c in range(N):
-    r = random.randint(0, 250)
-    jackknifeData[0, c] = np.delete(data[0], r)
-    jackknifeData[1, c] = np.delete(data[1], r)
-# Fitting to the jackknifed datasets
+    jackknifeData[0, c] = np.delete(data[0], c)
+    jackknifeData[1, c] = np.delete(data[1], c)
+
 tmodel = np.linspace(0.0, 5.0, N-1)
 jackknifeFits = np.zeros((N, N-1))
 popts = []
