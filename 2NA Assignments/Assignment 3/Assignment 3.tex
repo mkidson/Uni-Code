@@ -120,9 +120,46 @@
         $c$ is arbitrary but we choose it to be the point which maximises the function on the given 
         interval in order to look at the "worst case scenario", if you will. Applying \autoref{eqn:TrapezoidRuleGeneralForm} 
         to \autoref{eqn:2ToEvaluate}, and ignoring the error term for now, we get 
-        \begin{equation*}
-            I = \frac{h}{2}\sum_{i=0}^{n-1}[e^{x_i}+e^{x_{i+1}}]
-        \end{equation*}
+        \begin{align*}
+            I &\approx \frac{h}{2}\sum_{i=0}^{n-1}[e^{x_i}+e^{x_{i+1}}] \\
+            &= \frac{h}{2}\left[\sum_{i=0}^{n-1}e^{x_i}+\sum_{i=0}^{n-1}e^{x_{i+1}}\right]
+        \end{align*}
+        These sums can be converted into 2 geometric series as each has a common ratio of $e^h$, therefore 
+        we get
+        \begin{equation}
+            I \approx \frac{h(1-e^{hn})}{2(1-e^h)}[e^a+e^{a+h}]
+            \label{eqn:2SolvedNoError}
+        \end{equation}
+        Of course, this is only an approximation as we haven't included the error term yet. In this 
+        error term though, there is $f''(c)$, where $c$ is the the point which maximises $f$. In this 
+        case, $c=b$ as $e^x$ is strictly increasing everywhere. So finally we have 
+        \begin{equation}
+            I = \frac{h(1-e^{hn})}{2(1-e^h)}[e^a+e^{a+h}]-\frac{h^2}{12}(b-a)f''(b)
+            \label{eqn:2Solved}
+        \end{equation}
+
+        \item \textbf{Implementing the Composite Midpoint Method} \newline
+        The composite midpoint method has the general form of 
+        \begin{equation}
+            \int_a^b f(x)dx = \underbrace{h\sum_{i=0}^{n-1}f(w_i)}_\text{approximation}
+            +\underbrace{\frac{h^2(b-a)}{24}f''(c)}_\text{error}
+            \label{eqn:3MidpointGenForm}
+        \end{equation}
+        where $h=(b-a)/n$, $w_i=a+(i+\frac{1}{2})h$, and $c\in[a,b]$. Again, we choose c to be 
+        the value which maximises $f$, to get a worst case scenario for the error. We were to use 
+        this method to estimate 
+        \begin{equation}
+            \int_0^1 \frac{4}{1+x^2}dx = \pi
+            \label{eqn:3ToEvaluate}
+        \end{equation}
+        with $n=1000$. Below is our implementation of \autoref{eqn:3MidpointGenForm} applied to 
+        \autoref{eqn:3ToEvaluate} in Python.
+        \newline
+        \lstinputlisting[title=Composite Midpoint Method, style=inline, linerange=1-15, firstnumber=1]{CompositeMidpoint.py}
+        
+        When we compute the value of the error term, using $c=0$ as that maximises the function, 
+        we get a value of $\pi = 3.141450894 \pm \num{3.33e-7}$. This doesn't agree with the known 
+        value of $\pi$ but it's quite close.
     \end{enumerate}
 
 \end{document}
