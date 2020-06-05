@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,siunitx,subfig,keyval2e,caption}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\title{Monte Carlo Estimation of Parameter Uncertainty}
+\date{\textbf{28 May 2020}}
+\author{}
+
+\begin{document}
+
+    \maketitle
+    \begin{center}
+    \textbf{\large{PHY2004W}}
+    \textbf{\large{KDSMIL001}}
+    \end{center}
+    
+    \section{Introduction and Aim}
+    In this activity, we investigate methods of estimating uncertainties of parameters found when 
+    fitting a curve to positional data of a damped oscillator.
+
+    \section{Activity}
+    We chose to implement the Jackknife method of estimating uncertainties. This involves taking our 
+    original data set, DampedData.txt, removing one value, and then using \texttt{scipy.optimize.curve\_fit} 
+    to fit a curve to those points. We then have a set of optimal fitting parameters. If we do this 
+    $N$ times, where $N$ is the number of values in the set, then we'll have $N$ sets of optimal fitting 
+    parameters. We can then do some analysis to find a value and uncertainty for those parameters. 
+    The mean $\bar{x}$ is found in the usual manner, but the variance is found by
+    \begin{equation}
+        \sigma_x^2 = \frac{N-1}{N}\sum_{i=0}^{N-1}(x_i-\bar{x})^2
+    \end{equation}
+    \noindent
+    We can then find the standard uncertainty with 
+    \begin{equation}
+        u(\bar{x}) = \sqrt{\frac{\sigma_x^2}{N-1}}
+    \end{equation}
+    \noindent
+    Where Monte Carlo methods come in is in choosing which value to remove each time. Usually the 
+    jackknife method requires you to remove sequential points, as in the first modified set is missing 
+    the first value, the second set is missing the second value, and so on. In our case, we will 
+    randomly choose a number between 1 and $N$, inclusive, and remove the value at that position in 
+    the array. We were sceptical that this approach is any better than doing it the usual way so we
+    did both. Below are the results.
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c c c}
+            \hline
+             & Monte Carlo Method & Standard Method \\
+            \hline
+            A: & $0.283379291 \pm \num{4.09e-6}$ & $0.283379121 \pm \num{4.1e-6}$ \\
+            B: & $0.0281486 \pm \num{2.53e-5}$ & $0.0281489 \pm \num{2.34e-5}$ \\
+            $\gamma$: & $0.28119 \pm \num{3.55e-3}$ & $0.28121 \pm \num{3.4e-3}$ \\
+            $\omega$: & $21.462285 \pm \num{3.08e-4}$ & $21.462277 \pm \num{2.91e-4}$ \\
+            $\alpha$: & $0.329399 \pm \num{6.88e-4}$ & $0.329386 \pm \num{6.36e-4}$ \\
+        \end{tabular}
+    \end{table}
+    \noindent
+    It seems that the uncertainties obtained using the standard method are actually smaller than 
+    those obtained using Monte Carlo while the values obtained definitely agree with each other. 
+    \newline
+    Comparing this to the results obtained using the covariance matrix from \texttt{curve\_fit} in 
+    CP2, which were
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c c c c c}
+            \hline
+            $u(A)$ & $u(B)$ & $u(\gamma)$ & $u(\omega)$ & $u(\alpha)$ \\
+            \hline
+            \num{6.33e-5} & \num{2.43e-4} & \num{4.54e-3} & \num{4.59e-3} & \num{8.73e-3} \\
+            \hline
+        \end{tabular}
+    \end{table}
+    \noindent
+    which shows that this method, Monte Carlo or not, gives us uncertainties of an order of magnitude 
+    smaller than using the covariance matrix from the fitting program. 
+
+\end{document}
