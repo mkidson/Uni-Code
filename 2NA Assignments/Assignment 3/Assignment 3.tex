@@ -117,7 +117,7 @@
             \label{eqn:TrapezoidRuleGeneralForm}
         \end{equation}
         where $n$ is the number of equal subintervals between $a$ and $b$, $h=(a-b)/n$, and $c\in[a,b]$.
-        $c$ is arbitrary but we choose it to be the point which maximises the function on the given 
+        $c$ is arbitrary but we choose it to be the point which maximises $f''(x)$ on the given 
         interval in order to look at the "worst case scenario", if you will. Applying \autoref{eqn:TrapezoidRuleGeneralForm} 
         to \autoref{eqn:2ToEvaluate}, and ignoring the error term for now, we get 
         \begin{align*}
@@ -131,8 +131,8 @@
             \label{eqn:2SolvedNoError}
         \end{equation}
         Of course, this is only an approximation as we haven't included the error term yet. In this 
-        error term though, there is $f''(c)$, where $c$ is the the point which maximises $f$. In this 
-        case, $c=b$ as $e^x$ is strictly increasing everywhere. So finally we have 
+        error term though, there is $f''(c)$, where $c$ is the the point which maximises $f''$. In this 
+        case, $c=b$ as $f''(x)=e^x$ is strictly increasing everywhere. So finally we have 
         \begin{equation}
             I = \frac{h(1-e^{hn})}{2(1-e^h)}[e^a+e^{a+h}]-\frac{h^2}{12}(b-a)f''(b)
             \label{eqn:2Solved}
@@ -146,7 +146,7 @@
             \label{eqn:3MidpointGenForm}
         \end{equation}
         where $h=(b-a)/n$, $w_i=a+(i+\frac{1}{2})h$, and $c\in[a,b]$. Again, we choose c to be 
-        the value which maximises $f$, to get a worst case scenario for the error. We were to use 
+        the value which maximises $f''$, to get a worst case scenario for the error. We were to use 
         this method to estimate 
         \begin{equation}
             \int_0^1 \frac{4}{1+x^2}dx = \pi
@@ -157,9 +157,9 @@
         \newline
         \lstinputlisting[title=Composite Midpoint Method, style=inline, linerange=1-15, firstnumber=1]{CompositeMidpoint.py}
         
-        When we compute the value of the error term, using $c=0$ as that maximises the function, 
-        we get a value of $\pi = 3.141450894 \pm \num{3.33e-7}$. This doesn't agree with the known 
-        value of $\pi$ but it's quite close.
+        When we compute the value of the error term, using $c=1$ as that maximises the $f''$, 
+        we get a value of $\pi = 3.1415928202531225$. The difference between this and the known 
+        value of $\pi$ is $\approx\num{1.667e-07}$. This is quite good. 
     \end{enumerate}
 
 \end{document}
