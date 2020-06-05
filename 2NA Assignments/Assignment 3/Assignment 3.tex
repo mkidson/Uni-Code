@@ -1,0 +1,128 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,siunitx,subfig,keyval2e,caption}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\title{Assignment 3}
+\date{\textbf{5 June 2020}}
+\author{}
+
+\begin{document}
+
+    \maketitle
+    \begin{center}
+    \textbf{\large{MAM2046W 2NA}}
+    \textbf{\large{KDSMIL001}}
+    \end{center}
+    \vspace*{15pt}
+    
+    \begin{enumerate}
+        \item \textbf{Deriving a second derivative approximation formula} \newline
+        We are looking for an equation that approximates the second derivative and is of the form 
+        \begin{equation}
+            f''(x) = \lambda_1f(x)+\lambda_2f(x+h)+\lambda_3f(x-h)+\lambda_4f(x+2h)+\lambda_5f(x-2h)
+            \label{eqn:1ToSolve}
+        \end{equation}
+        We can start by finding the Taylor expansions of each function
+        \begin{align*}
+            f(x) &= f(x) \\
+            f(x+h) &= f(x)+hf'(x)+\frac{h^2}{2!}f''(x)+\frac{h^3}{3!}f'''(x)+\frac{h^4}{4!}f^{(4)}(x)+\mathcal{O}(h^5) \\
+            f(x-h) &= f(x)-hf'(x)+\frac{h^2}{2!}f''(x)-\frac{h^3}{3!}f'''(x)+\frac{h^4}{4!}f^{(4)}(x)-\mathcal{O}(h^5) \\
+            f(x+2h) &= f(x)+2hf'(x)+2hf''(x)+\frac{8h^3}{3!}f'''(x)+\frac{16h^4}{4!}f^{(4)}(x)+\mathcal{O}(h^5) \\
+            f(x-2h) &= f(x)-2hf'(x)+2hf''(x)-\frac{8h^3}{3!}f'''(x)+\frac{16h^4}{4!}f^{(4)}(x)-\mathcal{O}(h^5) 
+        \end{align*}
+        and then, after collecting coefficients of derivatives of f, \autoref{eqn:1ToSolve} looks like 
+        this, ignoring the error term
+        \begin{equation}
+            \begin{gathered}
+                f''(x)=(\lambda_1+\lambda_2+\lambda_3+\lambda_4+\lambda_5)f(x)+(\lambda_2-\lambda_3+2\lambda_4-2\lambda_5)hf'(x) \\
+                +(\lambda_2+\lambda_3+4\lambda_4+4\lambda_5)h^2f''(x)+(\lambda_2-\lambda_3+8\lambda_4-8\lambda_5)h^3f'''(x) \\
+                +(\lambda_2+\lambda_3+16\lambda_4+16\lambda_5)h^4f^{(4)}(x)
+            \end{gathered}
+            \label{eqn:1ToSolveExpanded}
+        \end{equation}
+        Now we can equate coefficients of derivatives on either side of the equation, which we can 
+        turn into a matrix equation:
+        \begin{equation*}
+            \left(
+            \begin{array}{ccccc}
+                1 & 1 & 1 & 1 & 1 \\
+                0 & 1 & -1 & 2 & -2 \\
+                0 & 1 & 1 & 4 & 4 \\
+                0 & 1 & -1 & 8 & -8 \\
+                0 & 1 & 1 & 16 & 16 \\
+            \end{array}
+            \right)
+            \left(
+            \begin{array}{c}
+                \lambda_1 \\
+                \lambda_2 \\
+                \lambda_3 \\
+                \lambda_4 \\
+                \lambda_5
+            \end{array}
+            \right)
+            =
+            \left(
+            \begin{array}{c}
+                0 \\
+                0 \\
+                \frac{2}{h^2} \\
+                0 \\
+                0 \\
+            \end{array}
+            \right)
+        \end{equation*}
+        Solving this equation (finding the inverse of the $5\times5$ matrix) gives us values for 
+        our $\lambda$'s, which are:
+        \begin{equation*}
+            \lambda_1=\frac{-30}{12h^2};\hspace{5pt} \lambda_2=\frac{16}{12h^2};\hspace{5pt} 
+            \lambda_3=\frac{16}{12h^2};\hspace{5pt} \lambda_4=\frac{-1}{12h^2};\hspace{5pt}
+            \lambda_5=\frac{-1}{12h^2}
+        \end{equation*}
+        Finally, we have \autoref{eqn:1ToSolve} becoming
+        \begin{align}
+            f''(x) &= \frac{-30f(x)+16f(x+h)+16f(x-h)-f(x+2h)-f(x-2h)}{12h^2} \nonumber \\ 
+            &= \frac{-f(x-2h)+16f(x-h)-30f(x)+16f(x+h)-f(x+2h)}{12h^2}
+        \end{align}
+        \label{eqn:1Solved}
+
+        \item \textbf{Evaluating an integral with the Composite Trapezoid Method} \newline
+        We aim to evaluate the following integral using the composite trapezoid method, using n 
+        equal subintervals
+        \begin{equation}
+            I = \int_a^b e^xdx
+            \label{eqn:2ToEvaluate}
+        \end{equation}
+        Firstly, we can look at the general form of the trapezoid method for approximating an 
+        integral:
+        \begin{equation}
+            \int_a^b f(x)dx = \underbrace{\frac{h}{2}\sum_{i=0}^{n-1}[f(x_i)+f(x_{i+1})]}_\text{approximation}
+            -\underbrace{\frac{h^2}{12}(b-a)f''(c)}_\text{error}
+            \label{eqn:TrapezoidRuleGeneralForm}
+        \end{equation}
+        where $n$ is the number of equal subintervals between $a$ and $b$, $h=(a-b)/n$, and $c\in[a,b]$.
+        $c$ is arbitrary but we choose it to be the point which maximises the function on the given 
+        interval in order to look at the "worst case scenario", if you will. Applying \autoref{eqn:TrapezoidRuleGeneralForm} 
+        to \autoref{eqn:2ToEvaluate}, and ignoring the error term for now, we get 
+        \begin{equation*}
+            I = \frac{h}{2}\sum_{i=0}^{n-1}[e^{x_i}+e^{x_{i+1}}]
+        \end{equation*}
+    \end{enumerate}
+
+\end{document}
