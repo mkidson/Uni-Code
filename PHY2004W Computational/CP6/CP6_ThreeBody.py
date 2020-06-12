@@ -11,35 +11,50 @@ from vpython import *
 # m1 = 1
 # m2 = 1
 # mStar = 1
-r1 = vector(1,0,0)
-r2 = vector(-1,0,0)
-rStar = vector(0,0,0)
-p1 = vector(0,0.1,0)
-p2 = vector(0,-0.1,0)
-pStar = vector (0,0,0)
-m1 = 0.1
-m2 = 0.1
-mStar = 1
+
+# r1 = vector(1,0,0)
+# r2 = vector(-1,0,0)
+# rStar = vector(0,0,0)
+# p1 = vector(0,0.1,0)
+# p2 = vector(0,-0.1,0)
+# pStar = vector (0,0,0)
+# m1 = 0.1
+# m2 = 0.1
+# mStar = 1
+
+G = 6.67e-11
+r1=vector(1.5e11,0,0)
+r2=vector(2.5e11,0,0)
+rStar=vector(0,0,0)
+m1=1e30
+m2=6e27
+mStar=2e30
+p1=m1*vector(0,sqrt(G*mStar/mag(r1-rStar)),0)
+p2=m2*vector(0,-sqrt(G*(mStar+m1)/mag(r2-rStar)),2000)
+pStar=vector(0,0,0)
 rCoM = ((m1*r1)+(m2*r2)+(mStar*rStar))/(m1+m2+mStar)
+# Converting to CoM reference frame
+vCoM = (p1+p2+pStar)/(m1+m2+mStar)
+p1 -= m1*vCoM
+p2 -= m2*vCoM
+pStar -= mStar*vCoM
 # More constants, physical
-deltaT = 0.01
+deltaT = 86400
 t = 0
-G = 1
 # Creating the objects to be drawn on the canvas, as well as settings for the canvas
-planet1 = sphere(pos=r1, radius=0.05, color=color.blue)
-planet2 = sphere(pos=r2, radius=0.05, color=color.green)
-star = sphere(pos=rStar, radius=0.1, color=color.yellow)
-CoM = sphere(pos=rCoM, radius=0.01, color=color.red)
-planet1Trail = curve(color=color.blue, radius=0.005)
-planet2Trail = curve(color=color.green, radius=0.005)
-starTrail = curve(color=color.yellow, radius=0.005)
-CoMTrail = curve(color=color.red, radius=0.005)
+planet1 = sphere(pos=r1, radius=1e10, color=color.blue)
+planet2 = sphere(pos=r2, radius=1e10, color=color.green)
+star = sphere(pos=rStar, radius=1e10, color=color.yellow)
+CoM = sphere(pos=rCoM, radius=1e10, color=color.red)
+planet1Trail = curve(color=color.blue, radius=1e9)
+planet2Trail = curve(color=color.green, radius=1e9)
+starTrail = curve(color=color.yellow, radius=1e9)
+CoMTrail = curve(color=color.red, radius=1e9)
 scene.autoscale = 0
-scene.camera.follow(CoM)
 scene.title = 'Planet1 Initial Momentum: '+str(p1)+' Planet1 Mass: '+str(m1)+'\nPlanet2 Initial Momentum: '+str(p2)+' Planet2 Mass: '+str(m2)+\
     '\nStar Initial Momentum: '+str(pStar)+' Star Mass: '+str(mStar)+'\nSystem Initial Momentum: '+str(p1+p2+pStar)
 # The loop that calculates new positions based on forces
-while t < 100:
+while True:
     rate(100)
     # Updating positions and trails
     planet1Trail.append(pos=r1)
@@ -67,4 +82,5 @@ while t < 100:
     rCoM = ((m1*r1)+(m2*r2)+(mStar*rStar))/(m1+m2+mStar)
     # Housekeeping
     t += deltaT
-    scene.caption = 't = '+str(round(t,3))+'\nSystem Momentum at time t: '+str(p1+p2+pStar)
+    scene.caption = 't: '+str(round(t,3))+'\ndeltaT: '+str(deltaT)+'\nSystem Momentum at time t: '+str(p1+pStar) \
+        +'\nr1: '+str(r1)+'\nr2:'+str(r2)+'\nrStar: '+str(rStar)

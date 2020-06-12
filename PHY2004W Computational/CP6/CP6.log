@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.5.7)  6 JUN 2020 15:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.5.7)  12 JUN 2020 15:15
 entering extended mode
 **"d:/Git Repositories/Uni-Code/PHY2004W Computational/CP6/CP6.tex"
 ("d:/Git Repositories/Uni-Code/PHY2004W Computational/CP6/CP6.tex"
@@ -739,30 +739,102 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
  ("D:\Program Files\MikTeX\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+) ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP6\CP6.toc")
+\tf@toc=\write7
+\openout7 = `CP6.toc'.
+
+ [1
 
 {C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
+<TwoBody1.png, id=30, 487.8225pt x 406.51875pt>
+File: TwoBody1.png Graphic file (type png)
+<use TwoBody1.png>
+Package pdftex.def Info: TwoBody1.png  used on input line 66.
+(pdftex.def)             Requested size: 243.91064pt x 203.25887pt.
+<TwoBody2.png, id=33, 486.31688pt x 405.01312pt>
+File: TwoBody2.png Graphic file (type png)
+<use TwoBody2.png>
+Package pdftex.def Info: TwoBody2.png  used on input line 80.
+(pdftex.def)             Requested size: 243.15784pt x 202.50606pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2 <d:/Git Repositories/Uni-Code/PHY2004W Computational/CP6/TwoBody1.png>]
+<TwoBody3.png, id=43, 487.06969pt x 405.01312pt>
+File: TwoBody3.png Graphic file (type png)
+<use TwoBody3.png>
+Package pdftex.def Info: TwoBody3.png  used on input line 100.
+(pdftex.def)             Requested size: 243.53424pt x 202.50606pt.
+<TwoBody4.png, id=45, 487.8225pt x 404.26031pt>
+File: TwoBody4.png Graphic file (type png)
+<use TwoBody4.png>
+Package pdftex.def Info: TwoBody4.png  used on input line 111.
+(pdftex.def)             Requested size: 243.91064pt x 202.12965pt.
+ [3 <d:/Git Repositories/Uni-Code/PHY2004W Computational/CP6/TwoBody2.png> <d:/Git Repositories/Uni-Code/PHY2004W Computational/CP6/TwoBody3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 116--126
+
+ []
+
+<TwoBody5.png, id=54, 486.31688pt x 407.27156pt>
+File: TwoBody5.png Graphic file (type png)
+<use TwoBody5.png>
+Package pdftex.def Info: TwoBody5.png  used on input line 129.
+(pdftex.def)             Requested size: 243.15784pt x 203.63527pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <d:/Git Repositories/Uni-Code/PHY2004W Computational/CP6/TwoBody4.png>]
+<TwoBody6.png, id=66, 484.81125pt x 402.75468pt>
+File: TwoBody6.png Graphic file (type png)
+<use TwoBody6.png>
+Package pdftex.def Info: TwoBody6.png  used on input line 155.
+(pdftex.def)             Requested size: 242.40503pt x 201.37685pt.
+<TwoBody7.png, id=67, 484.81125pt x 402.75468pt>
+File: TwoBody7.png Graphic file (type png)
+<use TwoBody7.png>
+Package pdftex.def Info: TwoBody7.png  used on input line 162.
+(pdftex.def)             Requested size: 242.40503pt x 201.37685pt.
+ [5 <d:/Git Repositories/Uni-Code/PHY2004W Computational/CP6/TwoBody5.png> <d:/Git Repositories/Uni-Code/PHY2004W Computational/CP6/TwoBody6.png>]
+<TwoBody8.png, id=79, 486.31688pt x 405.76593pt>
+File: TwoBody8.png Graphic file (type png)
+<use TwoBody8.png>
+Package pdftex.def Info: TwoBody8.png  used on input line 181.
+(pdftex.def)             Requested size: 243.15784pt x 202.88246pt.
+ ("D:\Program Files\MikTeX\tex/latex/listings\lstlang1.sty"
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP6\CP6_TwoBody.py")
+<TwoBody9.png, id=81, 484.81125pt x 404.26031pt>
+File: TwoBody9.png Graphic file (type png)
+<use TwoBody9.png>
+Package pdftex.def Info: TwoBody9.png  used on input line 197.
+(pdftex.def)             Requested size: 242.40503pt x 202.12965pt.
+ [6 <d:/Git Repositories/Uni-Code/PHY2004W Computational/CP6/TwoBody7.png>] [7 <d:/Git Repositories/Uni-Code/PHY2004W Computational/CP6/TwoBody8.png> <d:/Git Repositories/Uni-Code/PHY2004W Computational/CP6/TwoBody9.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 212.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 212.
  ("d:/Git Repositories\Uni-Code\PHY2004W Computational\CP6\CP6.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 40.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 40.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 212.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 212.
 Package rerunfilecheck Info: File `CP6.out' has not changed.
 (rerunfilecheck)             Checksum: C453D1814224E37109142D68FA9C9E6E;90.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 212.
  ) 
 Here is how much of TeX's memory you used:
- 36134 strings out of 481254
- 841668 string characters out of 4668041
- 6190280 words of memory out of 19000000
- 51101 multiletter control sequences out of 15000+200000
- 543930 words of font info for 70 fonts, out of 5000000 for 9000
+ 36681 strings out of 481254
+ 847301 string characters out of 4668041
+ 6369340 words of memory out of 19000000
+ 51594 multiletter control sequences out of 15000+200000
+ 546739 words of font info for 79 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,5n,127p,1040b,711s stack positions out of 5000i,500n,10000p,5000000b,50000s
-<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on "d:/Git Repositories\Uni-Code\PHY2004W Computational\CP6\CP6.pdf" (1 page, 33815 bytes).
+ 74i,8n,127p,1040b,1490s stack positions out of 5000i,500n,10000p,5000000b,50000s
+<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on "d:/Git Repositories\Uni-Code\PHY2004W Computational\CP6\CP6.pdf" (7 pages, 615477 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 4 named destinations out of 1000 (max. 500000)
- 29 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 147 PDF objects out of 1000 (max. 8388607)
+ 29 named destinations out of 1000 (max. 500000)
+ 74 words of extra memory for PDF output out of 10000 (max. 10000000)
 
