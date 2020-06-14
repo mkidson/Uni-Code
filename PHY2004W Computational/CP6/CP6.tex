@@ -201,12 +201,78 @@
         \end{figure}
         \noindent
         This is a very stable system. Actually, most initial conditions for the Two-Body problem result in 
-        stable and periodic motion. It's also clear that this system now perfectly conserves momentum, which 
+        stable motion. It's also clear that this system now perfectly conserves momentum, which 
         is a comforting side effect.
         \newpage
 
+        \item \textbf{The Three-Body Problem} \newline
+        Next up, we elevate the program to three bodies. On the surface, this seems like a small step 
+        up from before. We're only adding 1 body, how bad could it be? Well, trying to solve this 
+        analytically can prove to be extremely hard and in some cases impossible. The previous section 
+        is solvable by analytical means in a reasonable time period but this problem absolutely 
+        requires the use of numerical methods. Thankfully we have already investigated most of the 
+        shortcomings of these methods so we can move onto more interesting things. \newline
+        To simulate this problem we only need to add a few lines of code. We obviously need to create 
+        this new body in the scene and give it a mass and momentum, however most importantly we need 
+        to add 2 more force calculations in the loop. As before, we could compute the forces for each 
+        pair of bodies and directions, but that's unnecessary as 2 bodies exert the same magnitude of 
+        force on each other. \newline
+        As a first test of our program, to make sure it's working correctly, we'll investigate a 
+        relatively simple system: A star with 2 planets orbiting around it at the same distance but 
+        half a period away from each other.
+        \begin{figure}[H]
+            \begin{center}
+               \includegraphics[scale=.5]{ThreeBody1.png}
+               \caption{Three-Body Problem with Simple Conditions}
+               \label{fig:ThreeBody1}
+            \end{center}
+        \end{figure}
+        This system is stable but that's because the initial conditions are very carefully chosen to 
+        not introduce too many opportunities for errors to show up, such as the bodies coming close 
+        together and thus moving at high velocities. They were also chosen in order to keep the system 
+        stable in another way. It turns out that the Three-Body Problem is what we call chaotic, 
+        meaning that it is extremely sensitive to initial conditions. This is why it's so hard to 
+        solve analytically. We can see this in action by changing the mass of one of the planets by 
+        one part in $10^9$:
+        \begin{figure}[H]
+            \begin{center}
+               \includegraphics[scale=.5]{ThreeBody2.png}
+               \caption{Slightly Adjusted Initial Conditions}
+               \label{fig:ThreeBody2}
+            \end{center}
+        \end{figure}
+        After less than half the amount of time as before, this system has fully devolved into 
+        unpredictable and chaotic behaviour.\newline
+        So we know that this system is incredibly sensitive to initial conditions, let's see what 
+        interesting things we can do. 
+        \begin{figure}[h]
+            \begin{center}
+               \includegraphics[scale=.5]{ThreeBody3.png}
+               \caption{An Interesting System}
+               \label{fig:ThreeBody3}
+            \end{center}
+        \end{figure}
+        \autoref{fig:ThreeBody3} is quite cool and extremely hard to find, but surprisingly stable. 
+        Changing initial conditions even by one part in $10^3$ doesn't do much to affect the system, 
+        at least in the time frame we're looking at. \newline
+        Finally, we'll look at a semi-realistic system, changing masses and momenta to something that 
+        we're likely to find in reality (\autoref{fig:ThreeBody4}). This system is stable but any 
+        adjustment to something like the mass or momenta of the stars will greatly affect the stability, 
+        leading the system to devolve into something chaotic and wild.
+        \begin{figure}[H]
+            \begin{center}
+               \includegraphics[scale=.5]{ThreeBody4.png}
+               \caption{A Realistic Binary Star System}
+               \label{fig:ThreeBody4}
+            \end{center}
+        \end{figure}
 
     \end{enumerate}
 
-
+    \newpage
+    \section{Appendix}
+    \setcounter{figure}{0} \renewcommand{\thefigure}{A.\arabic{figure}}
+    \lstinputlisting[caption=Two-Body Problem Code, style=appendix]{CP6_TwoBody.py}
+    \lstinputlisting[caption=Three-Body Problem Code, style=appendix]{CP6_ThreeBody.py}
+    
 \end{document}

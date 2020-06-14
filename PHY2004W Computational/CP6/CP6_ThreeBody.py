@@ -2,33 +2,13 @@ import numpy as np
 from numpy import cos, pi, sin, sqrt, exp, random
 from vpython import *
 # Constants to be used later, such as start positions and start momenta
-# r1 = vector(0.97000436, -0.24308753, 0)
-# r2 = vector(-0.97000436, 0.24308753, 0)
-# rStar = vector(0,0,0)
-# pStar = vector (-0.93240737, -0.86473146, 0)
-# p1 = -pStar/2
-# p2 = -pStar/2
-# m1 = 1
-# m2 = 1
-# mStar = 1
-
-# r1 = vector(1,0,0)
-# r2 = vector(-1,0,0)
-# rStar = vector(0,0,0)
-# p1 = vector(0,0.1,0)
-# p2 = vector(0,-0.1,0)
-# pStar = vector (0,0,0)
-# m1 = 0.1
-# m2 = 0.1
-# mStar = 1
-
-G = 6.67e-11
-r1=vector(1.5e11,0,0)
+r1=vector(1e11,0,0)
 r2=vector(2.5e11,0,0)
 rStar=vector(0,0,0)
 m1=1e30
 m2=6e27
 mStar=2e30
+G = 6.67e-11
 p1=m1*vector(0,sqrt(G*mStar/mag(r1-rStar)),0)
 p2=m2*vector(0,-sqrt(G*(mStar+m1)/mag(r2-rStar)),2000)
 pStar=vector(0,0,0)
@@ -45,7 +25,7 @@ t = 0
 planet1 = sphere(pos=r1, radius=1e10, color=color.blue)
 planet2 = sphere(pos=r2, radius=1e10, color=color.green)
 star = sphere(pos=rStar, radius=1e10, color=color.yellow)
-CoM = sphere(pos=rCoM, radius=1e10, color=color.red)
+CoM = sphere(pos=rCoM, radius=7e9, color=color.red)
 planet1Trail = curve(color=color.blue, radius=1e9)
 planet2Trail = curve(color=color.green, radius=1e9)
 starTrail = curve(color=color.yellow, radius=1e9)
@@ -54,7 +34,7 @@ scene.autoscale = 0
 scene.title = 'Planet1 Initial Momentum: '+str(p1)+' Planet1 Mass: '+str(m1)+'\nPlanet2 Initial Momentum: '+str(p2)+' Planet2 Mass: '+str(m2)+\
     '\nStar Initial Momentum: '+str(pStar)+' Star Mass: '+str(mStar)+'\nSystem Initial Momentum: '+str(p1+p2+pStar)
 # The loop that calculates new positions based on forces
-while True:
+while t < deltaT*365*15:
     rate(100)
     # Updating positions and trails
     planet1Trail.append(pos=r1)
@@ -82,5 +62,5 @@ while True:
     rCoM = ((m1*r1)+(m2*r2)+(mStar*rStar))/(m1+m2+mStar)
     # Housekeeping
     t += deltaT
-    scene.caption = 't: '+str(round(t,3))+'\ndeltaT: '+str(deltaT)+'\nSystem Momentum at time t: '+str(p1+pStar) \
+    scene.caption = 't: '+str(round((t/86400),3))+' days'+'\ndeltaT: '+str(deltaT)+'\nSystem Momentum at time t: '+str(p1+pStar) \
         +'\nr1: '+str(r1)+'\nr2:'+str(r2)+'\nrStar: '+str(rStar)

@@ -5,7 +5,6 @@ from vpython import *
 r1 = vector(1,0,0)
 rStar = vector(0,0,0)
 p1 = vector(0,1,0)
-# p1 = vector(cos(pi/6),sin(pi/6),0)
 pStar = vector(0,0,0)
 mStar = 1
 m1 = 1
