@@ -1,4 +1,3 @@
-
 tots = []
 
 for a in range(2, 101):

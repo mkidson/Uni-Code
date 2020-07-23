@@ -4,9 +4,7 @@
 
 def main():
     t = 20
-
     lst = []
-
     while t != 0:
         for i in range(1, 21):
             if t % i == 0:
@@ -19,7 +17,6 @@ def main():
         else:
             t += 20
             lst = []
-
 
 if __name__ == '__main__':
     main()

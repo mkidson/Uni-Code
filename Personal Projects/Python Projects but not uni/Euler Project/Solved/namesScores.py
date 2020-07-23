@@ -10,7 +10,7 @@ def calcScore1(string):
     # print(tot)
     return tot
 
-file = open("Python Projects but not uni\\Euler Project\\names.txt", "r")
+file = open("Python Projects but not uni\\Euler Project\\Solved\\names.txt", "r")
 
 for line in file:
     lines = line.split(',')
