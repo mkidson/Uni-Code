@@ -21,7 +21,8 @@
 		},
 		"latex-workshop.view.pdf.viewer": "tab",
 		"latex-workshop.view.pdf.zoom": "page-width",
-		"latex-workshop.latex.autoBuild.run": "never"
+		"latex-workshop.latex.autoBuild.run": "never",
+		"terminal.explorerKind": "external"
 	}
 }
 	
