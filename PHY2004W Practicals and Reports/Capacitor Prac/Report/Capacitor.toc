@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {2}Theory Questions and Answers}{1}{section.2}%
+\contentsline {section}{\numberline {3}Practical Questions and Answers}{2}{section.3}%
+\contentsline {section}{\numberline {4}Data Collecting}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Resistance and Frequency Investigation}{3}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Decay Time from the Oscilloscope}{4}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Analysis}{5}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Frequency and Resistor Response}{5}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Time Constant $\tau =RC$}{7}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Appendix}{8}{section.6}%
