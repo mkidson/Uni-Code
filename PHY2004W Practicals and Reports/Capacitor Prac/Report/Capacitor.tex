@@ -102,7 +102,7 @@
                \label{fig:Question4Answer}
             \end{center}
         \end{figure}
-        \noindent
+        
         The reason for this is the fact that in the other two pictures the capacitor was being short 
         circuited, once by inserting both ends into the same power rail, the long connected pieces at 
         the top and bottom, and once by inserting both ends into the same terminal strip, the shorter 
@@ -134,7 +134,7 @@
     \subsection{Resistance and Frequency Investigation}
     We were given data in the form of a text file that contained voltage measurements made by the myDAQ. 
     The myDAQ measured the voltage across the 100nF capacitor in an RC circuit as well as across the 
-    function generator supplying a square wave voltage with peak-to-peak voltage of $8V_{pp}$. This circuit 
+    function generator supplying a square wave voltage with peak-to-peak voltage of $V_{pp}=8$. This circuit 
     was set up with 5.6k$\Omega$, 8.2k$\Omega$, and 15k$\Omega$ resistors separately. Each circuit was 
     recorded with 100Hz, 200Hz, 500Hz, and 1000Hz, giving us 12 datasets to work with. This data can be 
     regarded as having a 2\% uncertainty due to the accuracy of the equipment used. We used Python to 
@@ -165,9 +165,14 @@
     That gives us a final measurement of Decay Time = $3.400\pm 0.082$ms. 
 
     \subsection{Current Measurement}
+    In order to investigate the phase difference between current and source voltage in an RC circuit 
+    (\autoref{sec:current}) we needed to collect some data. We did this by measuring the voltage supplied 
+    by the function generator, which was producing a sinusoidal signal with $V_{pp}=8$, as well as the 
+    current through a 15k$\Omega$ resistor. This was done using the myDAQ as we did above. As before, the 
+    circuit was completed with a 100nF capacitor. The code for this is in 
+    % \autoref{code:current}
 
-
-    \newpage
+    % \newpage
     \section{Analysis}
     \subsection{Frequency and Resistor Response}\label{sec:FreqResistorResponse}
     Apologies in advance for the small plot size but they are vectorised so you can zoom in as far as you like. 
@@ -223,13 +228,30 @@
         \label{fig:15kResistor}
     \end{figure}
 
-    \subsection{Time Constant $\tau=RC$}
-    In this section we will try to experimentally determine the value of the 
+    \subsection{Time Constant \texorpdfstring{$\tau=RC$}{t=RC}}
+    In this section we will try to experimentally determine the value of the time constant for two RC circuits 
+    with C = 100nF and R = 15k$\Omega$ and 5.6k$\Omega$ respectively. To do this, we will look at the equations 
+    that describe the charging and discharging of a capacitor:
+    \begin{align}
+        \text{Charging:}\hspace{15pt} V_C(t)&=V_\epsilon[1-e^{-\frac{t}{RC}}] \label{eqn:CapCharging}\\
+        \text{Discharging:}\hspace{15pt} V_C(t)&=V_\epsilon e^{-\frac{t}{RC}} \label{eqn:CapDischarging}
+    \end{align}
+    By linearising these equations we get the following
+    \begin{align}
+        \text{Charging:}\hspace{15pt} &\ln(V_C-V_\epsilon)=\frac{t}{RC}-\ln(V\epsilon) \label{eqn:CapChargingLinearised}\\
+        \text{Discharging:}\hspace{15pt} &\ln(V_C)=-\frac{t}{RC}+\ln(V\epsilon) \label{eqn:CapDischargingLinearised}
+    \end{align}
+    Now we need to take the values from our collected data and plot, in the first case $\ln(V_C-V_\epsilon)$ 
+    against $t$ and in the second case $\ln(V_C)$ against $t$. We can then perform a linear least squares fit 
+    on this data to determine the slope, which will give us $\frac{1}{RC}$ and $-\frac{1}{RC}$ respectively. 
+
+    \subsection{Phase Difference Between Current \texorpdfstring{$I$}{I} and Source Voltage \texorpdfstring{$V_\epsilon$}{Ve} in and RC Circuit}\label{sec:current}
 
     \newpage
     \section{Appendix}
     \setcounter{figure}{0} \renewcommand{\thefigure}{A.\arabic{figure}}
     % \lstinputlisting[caption=Code that interprets Resistance Frequency data, style=appendix, label=code:FreqRes]{FrequencyResistance.py}
+    % \lstinputlisting[caption=Code that interprets Current data, style=appendix, label=code:current]{Current.py}
     
 
 \end{document}

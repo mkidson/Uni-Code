@@ -4,7 +4,9 @@
 \BOOKMARK [1][-]{section.4}{Data Collecting}{}% 4
 \BOOKMARK [2][-]{subsection.4.1}{Resistance and Frequency Investigation}{section.4}% 5
 \BOOKMARK [2][-]{subsection.4.2}{Decay Time from the Oscilloscope}{section.4}% 6
-\BOOKMARK [1][-]{section.5}{Analysis}{}% 7
-\BOOKMARK [2][-]{subsection.5.1}{Frequency and Resistor Response}{section.5}% 8
-\BOOKMARK [2][-]{subsection.5.2}{Time Constant =RC}{section.5}% 9
-\BOOKMARK [1][-]{section.6}{Appendix}{}% 10
+\BOOKMARK [2][-]{subsection.4.3}{Current Measurement}{section.4}% 7
+\BOOKMARK [1][-]{section.5}{Analysis}{}% 8
+\BOOKMARK [2][-]{subsection.5.1}{Frequency and Resistor Response}{section.5}% 9
+\BOOKMARK [2][-]{subsection.5.2}{Time Constant t=RC}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.3}{Phase Difference Between Current I and Source Voltage Ve in and RC Circuit}{section.5}% 11
+\BOOKMARK [1][-]{section.6}{Appendix}{}% 12
