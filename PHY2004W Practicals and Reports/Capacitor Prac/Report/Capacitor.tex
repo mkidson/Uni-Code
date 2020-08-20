@@ -164,15 +164,14 @@
     In our case our best guess could be between 3.2ms and 3.6 ms, so $a=0.4$. This gives us $u=0.081649$.
     That gives us a final measurement of Decay Time = $3.400\pm 0.082$ms. 
 
-    \subsection{Current Measurement}
+    \subsection{Current Measurement}\label{sec:currentMeasurement}
     In order to investigate the phase difference between current and source voltage in an RC circuit 
     (\autoref{sec:current}) we needed to collect some data. We did this by measuring the voltage supplied 
     by the function generator, which was producing a sinusoidal signal with $V_{pp}=8$, as well as the 
-    current through a 15k$\Omega$ resistor. This was done using the myDAQ as we did above. As before, the 
+    voltage across a 15k$\Omega$ resistor. This was done using the myDAQ as we did above. As before, the 
     circuit was completed with a 100nF capacitor. The code for this is in 
     % \autoref{code:current}
 
-    % \newpage
     \section{Analysis}
     \subsection{Frequency and Resistor Response}\label{sec:FreqResistorResponse}
     Apologies in advance for the small plot size but they are vectorised so you can zoom in as far as you like. 
@@ -238,14 +237,28 @@
     \end{align}
     By linearising these equations we get the following
     \begin{align}
-        \text{Charging:}\hspace{15pt} &\ln(V_C-V_\epsilon)=\frac{t}{RC}-\ln(V\epsilon) \label{eqn:CapChargingLinearised}\\
+        \text{Charging:}\hspace{15pt} &\ln(V_\epsilon-V_C)=\ln(V\epsilon)-\frac{t}{RC} \label{eqn:CapChargingLinearised}\\
         \text{Discharging:}\hspace{15pt} &\ln(V_C)=-\frac{t}{RC}+\ln(V\epsilon) \label{eqn:CapDischargingLinearised}
     \end{align}
-    Now we need to take the values from our collected data and plot, in the first case $\ln(V_C-V_\epsilon)$ 
+    Now we need to take the values from our collected data and plot, in the first case $\ln(V_\epsilon-V_C)$ 
     against $t$ and in the second case $\ln(V_C)$ against $t$. We can then perform a linear least squares fit 
-    on this data to determine the slope, which will give us $\frac{1}{RC}$ and $-\frac{1}{RC}$ respectively. 
+    on this data to determine the slope, which will give us a value for $-\frac{1}{RC}$, from which we can extract the
+    value of $\tau$.
 
     \subsection{Phase Difference Between Current \texorpdfstring{$I$}{I} and Source Voltage \texorpdfstring{$V_\epsilon$}{Ve} in and RC Circuit}\label{sec:current}
+    We will now investigate the phase difference between Current $I$ and Source Voltage $V_\epsilon$ in an RC 
+    circuit. To do this we will use the data collected in \autoref{sec:currentMeasurement}. Below is the plot 
+    of the source voltage and the voltage across the resistor. We aren't displaying the current as it is 
+    minuscule compared to the source voltage, but the voltage will have the same period and phase difference.
+    \begin{figure}[H]
+        \begin{center}
+           \scalebox{.7}{\subimport{Plots}{Res_100Hz_15k.pgf}}
+           \caption{Voltage across a 15k$\Omega$ resistor in an RC circuit and the applied AC voltage}
+           \label{fig:CurrentPhaseDiff}
+        \end{center}
+    \end{figure}
+    
+
 
     \newpage
     \section{Appendix}

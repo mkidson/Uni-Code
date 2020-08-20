@@ -8,5 +8,5 @@
 \contentsline {section}{\numberline {5}Analysis}{5}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Frequency and Resistor Response}{5}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Time Constant $\tau =RC$}{7}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Phase Difference Between Current $I$ and Source Voltage $V_\epsilon $ in and RC Circuit}{7}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Appendix}{8}{section.6}%
+\contentsline {subsection}{\numberline {5.3}Phase Difference Between Current $I$ and Source Voltage $V_\epsilon $ in and RC Circuit}{8}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Appendix}{9}{section.6}%
