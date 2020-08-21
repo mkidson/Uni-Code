@@ -155,14 +155,16 @@
         \end{center}
     \end{figure}
     Looking at where the blue line meets the yellow line, it seems to properly come in contact after 17 
-    subdivisions, which corresponds to 3.4ms. The measurement has a triangular probability density function, 
-    so in order to calculate the uncertainty we use the following formula
+    subdivisions, which corresponds to 3.4ms. The is an analogue measurement so it has a triangular 
+    probability density function, so in order to calculate the uncertainty we use the following formula
     \begin{equation}
         u=\frac{a}{2\sqrt{6}}
     \end{equation}
     where $a$ is the difference between our best upper bound and our best lower bound for the measurement. 
-    In our case our best guess could be between 3.2ms and 3.6 ms, so $a=0.4$. This gives us $u=0.081649$.
-    That gives us a final measurement of Decay Time = $3.400\pm 0.082$ms. 
+    In our case our best guess could be between 3.2ms and 3.6 ms, so $a=0.4$. This gives us $u=0.081649$. 
+    We also need to consider that the oscilloscope has an uncertainty of 2\%. Thus our uncertainty is 
+    $\sqrt{(0.081649)^2+(2\%\cdot 3.4)^2}=0.27325$
+    That gives us a final measurement of Decay Time = $3.40\pm 0.27$ms. 
 
     \subsection{Current Measurement}\label{sec:currentMeasurement}
     In order to investigate the phase difference between current and source voltage in an RC circuit 
@@ -257,6 +259,15 @@
            \label{fig:CurrentPhaseDiff}
         \end{center}
     \end{figure}
+    We used the function \texttt{scipy.signal.find\_peaks} to find the positions of the maximums of both 
+    sets of data. We could then calculate the average time difference between peaks and found it to be 
+    exactly $0.001077$. There was originally an uncertainty on this value but it turned out to be 
+    due to rounding errors in \texttt{float64} precision when calculating the standard deviation 
+    with \texttt{numpy.std}. However there \textit{must} be some uncertainty to this measurement and since 
+    we didn't include the uncertainty due to the inaccuracy of the equipment used since we took an average, 
+    we'll use that for this. That gives us a difference in phase of $0.001077\pm 0.000022$ seconds. Taking 
+    the wavelength into account ($0.00992267\pm 0.00000019$), we can get a value in radians, namely 
+    $0.2170788\pi \pm 0.0000042$. This is around $\frac{\pi}{5}$
     
 
 
