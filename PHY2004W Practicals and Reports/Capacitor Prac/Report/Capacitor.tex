@@ -139,7 +139,7 @@
     recorded with 100Hz, 200Hz, 500Hz, and 1000Hz, giving us 12 datasets to work with. This data can be 
     regarded as having a 2\% uncertainty due to the accuracy of the equipment used. We used Python to 
     interpret this data into the plots in \autoref{sec:FreqResistorResponse}, the code for which is in
-    % \autoref{code:FreqRes}
+    \autoref{code:FreqRes}
 
     \subsection{Decay Time from the Oscilloscope}
     The figure below is the screen of an oscilloscope measuring the voltage across the frequency generator 
@@ -171,8 +171,7 @@
     (\autoref{sec:current}) we needed to collect some data. We did this by measuring the voltage supplied 
     by the function generator, which was producing a sinusoidal signal with $V_{pp}=8$, as well as the 
     voltage across a 15k$\Omega$ resistor. This was done using the myDAQ as we did above. As before, the 
-    circuit was completed with a 100nF capacitor. The code for this is in 
-    % \autoref{code:current}
+    circuit was completed with a 100nF capacitor. 
 
     \section{Analysis}
     \subsection{Frequency and Resistor Response}\label{sec:FreqResistorResponse}
@@ -227,7 +226,8 @@
         \subfloat[1000Hz]{\scalebox{0.4}{\subimport{Plots}{Cap_1000Hz_15k.pgf}}}
         \caption{Voltage readings for various frequencies of AC voltage across a 15k$\Omega$ resistor}
         \label{fig:15kResistor}
-    \end{figure}
+    \end{figure}\noindent
+    All of these plots were created using the code in \autoref{code:FreqRes}
 
     \subsection{Time Constant \texorpdfstring{$\tau=RC$}{t=RC}}
     In this section we will try to experimentally determine the value of the time constant for two RC circuits 
@@ -239,27 +239,60 @@
     \end{align}
     By linearising these equations we get the following
     \begin{align}
-        \text{Charging:}\hspace{15pt} &\ln(V_\epsilon-V_C)=\ln(V\epsilon)-\frac{t}{RC} \label{eqn:CapChargingLinearised}\\
+        \text{Charging:}\hspace{15pt} &\ln(V_\epsilon-V_C)=-\frac{t}{RC}+\ln(V\epsilon) \label{eqn:CapChargingLinearised}\\
         \text{Discharging:}\hspace{15pt} &\ln(V_C)=-\frac{t}{RC}+\ln(V\epsilon) \label{eqn:CapDischargingLinearised}
     \end{align}
     Now we need to take the values from our collected data and plot, in the first case $\ln(V_\epsilon-V_C)$ 
     against $t$ and in the second case $\ln(V_C)$ against $t$. We can then perform a linear least squares fit 
     on this data to determine the slope, which will give us a value for $-\frac{1}{RC}$, from which we can extract the
-    value of $\tau$.
+    value of $\tau$. Below are the results. \newline \newline
+    Starting with the 5.6k$\Omega$ resistor (\autoref{fig:DeterminingTau5k6}), our expected value is 
+    \begin{equation*}
+        \tau=RC=5600\times \num{1e-7}=\num{5.6e-4}
+    \end{equation*}
+    When we find $\tau$ for the charging and discharging plots and take their average we get a value of 
+    $\tau=\num{5.7230225e-4}$. The uncertainty on this measurement starts as a standard uncertainty for 
+    the line of best fit parameters and through propagation of uncertainties for the inversion and averaging 
+    out we get a final value of $\tau = \num{5.7230e-4}\pm\num{0.0309e-4}$. This is quite close to our expected 
+    value but does not agree within experimental uncertainty. The reason for this is likely only using 
+    one charging/discharging cycle to run the analysis on. 
+    \begin{figure}[H]%
+        \centering
+        \subfloat[Charging]{\scalebox{0.45}{\subimport{Plots}{Cap_100Hz_5k6_Charging.pgf}}}
+        \qquad
+        \subfloat[Discharging]{\scalebox{0.45}{\subimport{Plots}{Cap_100Hz_5k6_Discharging.pgf}}}
+        \caption{5.6k$\Omega$ at 100Hz}
+        \label{fig:DeterminingTau5k6}
+    \end{figure}\noindent
+    For the 15k$\Omega$ resistor (\autoref{fig:DeterminingTau15k}) our expected value is 
+    \begin{equation*}
+        \tau=RC=15000\times\num{1e-7}=\num{1.5e-3}
+    \end{equation*}
+    Performing exactly the same operations as above, we find $\tau=\num{1.5562e-3}\pm\num{0.0058e-3}$. Again 
+    this is fairly close but does not agree within experimental uncertainty. This is likely for the same reason: 
+    only using one charging/discharging cycle. All of the code for this section is in \autoref{code:DeterminingTau}
+    \begin{figure}[H]%
+        \centering
+        \subfloat[Charging]{\scalebox{0.45}{\subimport{Plots}{Cap_100Hz_15k_Charging.pgf}}}
+        \qquad
+        \subfloat[Discharging]{\scalebox{0.45}{\subimport{Plots}{Cap_100Hz_15k_Discharging.pgf}}}
+        \caption{15k$\Omega$ at 100Hz}
+        \label{fig:DeterminingTau15k}
+    \end{figure}
 
-    \subsection{Phase Difference Between Current \texorpdfstring{$I$}{I} and Source Voltage \texorpdfstring{$V_\epsilon$}{Ve} in and RC Circuit}\label{sec:current}
+    \subsection{Phase Difference Between Current \texorpdfstring{$I$}{I} and Source Voltage \texorpdfstring{$V_\epsilon$}{Ve} in an RC Circuit}\label{sec:current}
     We will now investigate the phase difference between Current $I$ and Source Voltage $V_\epsilon$ in an RC 
     circuit. To do this we will use the data collected in \autoref{sec:currentMeasurement}. Below is the plot 
     of the source voltage and the voltage across the resistor. We aren't displaying the current as it is 
     minuscule compared to the source voltage, but the voltage will have the same period and phase difference.
     \begin{figure}[H]
         \begin{center}
-           \scalebox{.7}{\subimport{Plots}{Res_100Hz_15k.pgf}}
+           \scalebox{.6}{\subimport{Plots}{Res_100Hz_15k.pgf}}
            \caption{Voltage across a 15k$\Omega$ resistor in an RC circuit and the applied AC voltage}
            \label{fig:CurrentPhaseDiff}
         \end{center}
     \end{figure}
-    We used the function \texttt{scipy.signal.find\_peaks} to find the positions of the maximums of both 
+    We used the function \texttt{scipy.signal.find\_peaks} to find the positions of the maxima of both 
     sets of data. We could then calculate the average time difference between peaks and found it to be 
     exactly $0.001077$. There was originally an uncertainty on this value but it turned out to be 
     due to rounding errors in \texttt{float64} precision when calculating the standard deviation 
@@ -267,15 +300,69 @@
     we didn't include the uncertainty due to the inaccuracy of the equipment used since we took an average, 
     we'll use that for this. That gives us a difference in phase of $0.001077\pm 0.000022$ seconds. Taking 
     the wavelength into account ($0.00992267\pm 0.00000019$), we can get a value in radians, namely 
-    $0.2170788\pi \pm 0.0000042$. This is around $\frac{\pi}{5}$
-    
+    $0.2170788\pi \pm 0.0000042$. All of the code for this section is in \autoref{code:current}
 
+    \subsection{Capacitance C}
+    In this section we will verify the capacitance C of the capacitor used in this experiment. To do this 
+    we will derive an equation for C from the equation describing the discharging of a capacitor $V_{C} = V_\epsilon e^{-\frac{t}{RC}}$:
+    \begin{align*}
+        V_{C1} &= V_\epsilon e^{-\frac{t_1}{RC}} \\
+        V_\epsilon &= V_{C2}e^{\frac{t_2}{RC}} \\
+        \therefore V_{C1} &=  V_{C2}e^{\frac{t_2}{RC}}e^{-\frac{t_1}{RC}} \\
+        &=V_{C2}e^{\frac{t_2-t_1}{RC}} \\
+        \implies \frac{V_{C1}}{V_{C2}} &= e^{\frac{t_2-t_1}{RC}} \\
+        \implies \log_e(\frac{V_{C1}}{V_{C2}}) &= \frac{t_2-t_1}{RC} \\
+        \implies C &= \frac{t_2-t_1}{R\log_e(\frac{V_{C1}}{V_{C2}})}
+    \end{align*}
+    This would be valid if the discharging started at $V_C=0$, but ours starts at $V_C=4$ so we must adjust 
+    this equation, leaving us with
+    \begin{equation}
+        C = \frac{t_2-t_1}{R\log_e(\frac{V_{C1}+4}{V_{C2}+4})}
+        \label{eqn:capacitanceExperimental}
+    \end{equation}
+    Calculating this using two reasonably chosen points we get 
+    \begin{align*}
+        t_1&=0.005692, V_{C1}=-0.5 \\
+        t_2&=0.007307, V_{C2}=-3.9 \\
+        \therefore C&= \num{8.111522479e-8} \text{F}
+    \end{align*}
+    Now we need to consider the uncertainty of this measurement. It's a complicated one but if we break it 
+    down we see that uncertainties come from the measurement of the time and voltage for each point, which 
+    is 2\% of the value as that's the accuracy of the equipment used in this experiment. Then the logarithm 
+    needs to be considered, as well as the final division. Note that there is no uncertainty on the value 
+    of the resistor as we know it to be 5.6k$\Omega$. Below are each of the separate uncertainties as well 
+    as the final.
+    \begin{alignat*}{2}
+        t_2-t_1 &=\num{1.615e-3}\pm \num{0.1852469843e-3} &&: \text{Type B, Addition Propagation}\\
+        \log_e(\frac{V_{C1}+4}{V_{C2}+4})&=3.555348061\pm 0.7800052328 &&: \text{Type B, Function Propagation}\\
+        R\log_e(\frac{V_{C1}+4}{V_{C2}+4})&=19909.94914 \pm 4369.029304 &&: \text{Multiplication by a Constant}\\
+        C&= \num{8.111522479e-8} \pm \num{2.008132925e-8} &&: \text{Division Propagation}
+    \end{alignat*}
+    and so our final result is $C= \num{8.112e-8}\pm\num{2.008e-8}$F, which agrees with our expected 
+    result of 100nF or $\num{10e-8}$F.
+
+    \section{Conclusion and Recommendations}
+    To conclude, in many respects these experiments were successful. We investigated the relationship 
+    between resistor value in an RC circuit and the frequency of the AC voltage supplied to it and found 
+    that the resistance has a proportional effect on the time constant $\tau$ of the circuit, as we would 
+    expect from the equation $\tau=RC$. \newline
+    We determined the time constant $\tau$ in its own right for two set-ups of RC circuit and found them 
+    to be close to, but not in agreement within experimental uncertainty with, the relevant expected values.
+    This disagreement could likely be avoided in future experiments by taking data from multiple charging/discharging 
+    cycles to analyse. \newline
+    We investigated the phase difference between current and source voltage in an RC circuit and found it 
+    to be around $\frac{\pi}{5}$. \newline
+    Finally we verified that the capacitance in our circuit was in fact (around) 100nF by using equations 
+    that describe the discharging of a capacitor in an RC circuit. Our experimentally determined value 
+    agreed with the expected value but the uncertainty could likely be greatly improved by using more than 
+    one set of points and averaging the final value.
 
     \newpage
     \section{Appendix}
     \setcounter{figure}{0} \renewcommand{\thefigure}{A.\arabic{figure}}
-    % \lstinputlisting[caption=Code that interprets Resistance Frequency data, style=appendix, label=code:FreqRes]{FrequencyResistance.py}
-    % \lstinputlisting[caption=Code that interprets Current data, style=appendix, label=code:current]{Current.py}
+    \lstinputlisting[caption=Code that interprets Resistance Frequency data, style=appendix, label=code:FreqRes]{FrequencyResistance.py}
+    \lstinputlisting[caption=Code that determines $\tau$ from charging and discharging data, style=appendix, label=code:DeterminingTau]{DeterminingTau.py}
+    \lstinputlisting[caption=Code that interprets Current data, style=appendix, label=code:current]{Current.py}
     
 
 \end{document}

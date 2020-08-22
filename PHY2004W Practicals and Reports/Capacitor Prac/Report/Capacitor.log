@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.5.7)  21 AUG 2020 01:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.5.7)  23 AUG 2020 01:01
 entering extended mode
 **"d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Capacitor Prac/Report/Capacitor.tex"
 ("d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Capacitor Prac/Report/Capacitor.tex"
@@ -752,49 +752,72 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
                    \relax 
 l.84         \begin{equation*}
                                [1]
-<PhotoC.png, id=88, 238.64156pt x 216.05719pt>
+<PhotoC.png, id=98, 238.64156pt x 216.05719pt>
 File: PhotoC.png Graphic file (type png)
 <use PhotoC.png>
 Package pdftex.def Info: PhotoC.png  used on input line 100.
 (pdftex.def)             Requested size: 119.32048pt x 108.02832pt.
-<Question5Diagram.png, id=90, 727.96968pt x 423.83344pt>
+<Question5Diagram.png, id=100, 727.96968pt x 423.83344pt>
 File: Question5Diagram.png Graphic file (type png)
 <use Question5Diagram.png>
 Package pdftex.def Info: Question5Diagram.png  used on input line 115.
 (pdftex.def)             Requested size: 363.98395pt x 211.91618pt.
  [2 <d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Capacitor Prac/Report/PhotoC.png>]
-<Photo2.png, id=101, 2324.685pt x 1390.19376pt>
+<Photo2.png, id=112, 2324.685pt x 1390.19376pt>
 File: Photo2.png Graphic file (type png)
 <use Photo2.png>
 Package pdftex.def Info: Photo2.png  used on input line 152.
 (pdftex.def)             Requested size: 440.84746pt x 263.63045pt.
- [3 <d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Capacitor Prac/Report/Question5Diagram.png>] [4 <d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Capacitor Prac/Report/Photo2.png>] ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_100Hz_5k6.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_200Hz_5k6.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_500Hz_5k6.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_1000Hz_5k6.pgf") [5] ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_100Hz_8k2.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_200Hz_8k2.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_500Hz_8k2.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_1000Hz_8k2.pgf")
-Underfull \hbox (badness 10000) in paragraph at lines 211--218
+ [3 <d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Capacitor Prac/Report/Question5Diagram.png>] [4 <d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Capacitor Prac/Report/Photo2.png>] ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_100Hz_5k6.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_200Hz_5k6.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_500Hz_5k6.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_1000Hz_5k6.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_100Hz_8k2.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_200Hz_8k2.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_500Hz_8k2.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_1000Hz_8k2.pgf") [5]
+Underfull \hbox (badness 10000) in paragraph at lines 210--217
 
  []
 
-("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_100Hz_15k.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_200Hz_15k.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_500Hz_15k.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_1000Hz_15k.pgf") [6] ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Res_100Hz_15k.pgf") [7] [8] [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 281.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 281.
+("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_100Hz_15k.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_200Hz_15k.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_500Hz_15k.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_1000Hz_15k.pgf") [6]
+Underfull \hbox (badness 10000) in paragraph at lines 244--250
+
+ []
+
+[7] ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_100Hz_5k6_Charging.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_100Hz_5k6_Discharging.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_100Hz_15k_Charging.pgf") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Cap_100Hz_15k_Discharging.pgf")
+Overfull \hbox (23.3208pt too wide) in paragraph at lines 270--281
+\OT1/cmr/m/n/12 Performing ex-actly the same op-er-a-tions as above, we find $\OML/cmm/m/it/12  \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12  []$\OT1/cmr/m/n/12 .
+ []
+
+[8] ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Plots/Res_100Hz_15k.pgf") [9] [10]
+Overfull \hbox (45.87056pt too wide) detected at line 340
+[]
+ []
+
+[11] ("D:\Program Files\MikTeX\tex/latex/listings\lstlang1.sty"
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 363.
+ ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\FrequencyResistance.py"
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 5.
+ ("D:\Program Files\MikTeX\tex/latex/base\ts1cmtt.fd"
+File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)) [12] ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\DeterminingTau.py" [13]) [14] ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Current.py" [15]) [16]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 368.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 368.
  ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Capacitor.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 281.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 281.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 368.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 368.
 Package rerunfilecheck Info: File `Capacitor.out' has not changed.
-(rerunfilecheck)             Checksum: 451368D9053C433A89CA708A372859AB;821.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 281.
+(rerunfilecheck)             Checksum: F3E767D74CC8584658C5758DEDA7E24E;949.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 368.
  ) 
 Here is how much of TeX's memory you used:
- 36358 strings out of 481254
- 848445 string characters out of 4668041
- 6249585 words of memory out of 19000000
- 51219 multiletter control sequences out of 15000+200000
- 545390 words of font info for 76 fonts, out of 5000000 for 9000
+ 37129 strings out of 481254
+ 858417 string characters out of 4668041
+ 6370025 words of memory out of 19000000
+ 51748 multiletter control sequences out of 15000+200000
+ 545687 words of font info for 77 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,11n,127p,1080b,821s stack positions out of 5000i,500n,10000p,5000000b,50000s
-<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Capacitor.pdf" (10 pages, 6055767 bytes).
+ 74i,13n,127p,1080b,2433s stack positions out of 5000i,500n,10000p,5000000b,50000s
+{D:/Program Files/MikTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on "d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Capacitor Prac\Report\Capacitor.pdf" (17 pages, 6183058 bytes).
 PDF statistics:
- 226 PDF objects out of 1000 (max. 8388607)
- 53 named destinations out of 1000 (max. 500000)
- 124 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 539 PDF objects out of 1000 (max. 8388607)
+ 265 named destinations out of 1000 (max. 500000)
+ 140 words of extra memory for PDF output out of 10000 (max. 10000000)
 
