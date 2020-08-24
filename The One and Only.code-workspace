@@ -6,7 +6,8 @@
 	],
 	"settings": {
 		"cSpell.words": [
-			"KDSMIL"
+			"KDSMIL",
+			"coprime"
 		],
 		"java.configuration.updateBuildConfiguration": "automatic",
 		"files.exclude": {

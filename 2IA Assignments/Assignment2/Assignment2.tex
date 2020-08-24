@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,siunitx,subfig,keyval2e,caption,import}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\title{IA Assignment 2}
+\date{\textbf{24 August 2020}}
+\author{}
+
+\begin{document}
+
+    \maketitle
+    \begin{center}
+    \textbf{\large{MAM2000W 2IA}}\hspace{25pt}
+    \textbf{\large{KDSMIL001}}
+    \end{center}
+
+    \begin{enumerate}
+        \item By the fact that gcd($a,b$)=1, we know that $a$ and $b$ are coprime. That means we can 
+        write them as their prime factorisations
+        \begin{equation*}
+            a=p_1^{a_1}p_2^{a_2}\dots p_r^{a_r},\;b=p_1^{b_1}p_2^{b_2}\dots p_r^{b_r}
+        \end{equation*}
+        where $p_i$ are the prime numbers, $a_i,b_i\geq 0$, and 
+        \begin{align*}
+            a_i\neq0&\implies b_i=0 \\
+            b_i\neq0&\implies a_i=0
+        \end{align*}
+        What we mean by this is that any prime factor $p_i$ of $a$ with $a_i\geq1$ is not a prime factor 
+        of $b$, and vice versa. \newline
+        Now we can write $c$ as its prime factorisation, as well as $c^2$:
+        \begin{equation*}
+            c=p_1^{c_1}p_2^{c_2}\dots p_r^{c_r}\implies c^2=p_1^{2c_1}p_2^{2c_2}\dots p_r^{2c_r}
+        \end{equation*}
+        But we are given that $c^2=ab$, so we can write 
+        \begin{equation*}
+            c^2=p_1^{a_1+b_1}p_2^{a_2+b_2}\dots p_r^{a_r+b_r}
+        \end{equation*}
+        and since $a$ and $b$ share no prime factors, all exponents in the equation above are either 
+        $a_i$ or $b_i$ (or 0) but never $a_i+b_i$. Thus we can write 
+        \begin{equation*}
+            a_i=2c_i=2m_i,\; b_i=2c_i=2n_i
+        \end{equation*}
+        for $m_i,n_i\in\mathbb{Z},\; m_i,n_i\geq0$. Finally we can write 
+        \begin{alignat*}{3}
+            a&=p_1^{2m_1}p_2^{2m_2}\dots p_r^{2m_r}&&=(p_1^{m_1}p_2^{m_2}\dots p_r^{m_r})^2&&=m^2 \\
+            b&=p_1^{2n_1}p_2^{2n_2}\dots p_r^{2n_r}&&=(p_1^{n_1}p_2^{n_2}\dots p_r^{n_r})^2&&=n^2
+        \end{alignat*}
+        for $m,n\in\mathbb{Z}^+$. Thus $a$ and $b$ are each squares.
+        \newline
+        \begin{flushright}$\square$\end{flushright}
+
+    \end{enumerate}
+\end{document}
