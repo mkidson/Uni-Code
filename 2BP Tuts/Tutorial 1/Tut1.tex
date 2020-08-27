@@ -1,0 +1,352 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,siunitx,subfig,keyval2e,caption,import}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\title{Tutorial 1}
+\date{\textbf{25 August 2020}}
+\author{KDSMIL001 \; MAM2046W 2BP}
+
+\begin{document}
+    \maketitle
+    \begin{enumerate}
+        \item Given the differential equation $y''+\lambda y=0$ we can guess the solution $y=e^{rx}$, 
+        which will give us the characteristic equation
+        \begin{equation*}
+            r^2+\lambda=0
+        \end{equation*}
+        This has different solutions depending on the value of $\lambda$:
+        \begin{itemize}
+            \item $\lambda>0 \implies r=\pm \sqrt{\lambda}i,\; i^2=-1$\newline
+            This gives us a general solution for the DE of
+            \begin{align*}
+                y(x)&=Ae^{i\sqrt\lambda x}+Be^{-i\sqrt\lambda x}\\
+                &= C_1\cos(\sqrt\lambda x)+C_2\sin(\sqrt\lambda x)
+            \end{align*}
+            Now we apply the boundary conditions. First, $y(-3)=y(3)$:
+            \begin{align*}
+                C_1\cos(-\sqrt{\lambda} 3)+C_2\sin(-\sqrt{\lambda} 3)&=C_1\cos(\sqrt{\lambda} 3)+C_2\sin(\sqrt{\lambda} 3)\\
+                C_1\cos(\sqrt{\lambda} 3)-C_2\sin(\sqrt{\lambda} 3)&=C_1\cos(\sqrt{\lambda} 3)+C_2\sin(\sqrt{\lambda} 3)\\
+                2C_2\sin(\sqrt{\lambda} 3)&=0\\
+                C_2\sin(\sqrt{\lambda} 3)&=0
+            \end{align*}
+            We can't say for sure that $C_2=0$ or that $\sin(\sqrt{\lambda}3)=0$, so we continue.\newline
+            Now $y'(-3)=y'(3)$. Firstly we see that $y'(x)=\sqrt{\lambda}(-C_1\sin(\sqrt{\lambda} 3)+C_2\cos(\sqrt{\lambda} 3))$
+            \begin{align*}
+                \sqrt{\lambda}(-C_1\sin(-\sqrt{\lambda} 3)+C_2\cos(-\sqrt{\lambda} 3))&=\sqrt{\lambda}(-C_1\sin(\sqrt{\lambda} 3)+C_2\cos(\sqrt{\lambda} 3))\\
+                -C_1\sin(-\sqrt{\lambda} 3)+C_2\cos(-\sqrt{\lambda} 3)&=-C_1\sin(\sqrt{\lambda} 3)+C_2\cos(\sqrt{\lambda} 3)\\
+                C_1\sin(\sqrt{\lambda} 3)+C_2\cos(\sqrt{\lambda} 3)&=-C_1\sin(\sqrt{\lambda} 3)+C_2\cos(\sqrt{\lambda} 3)\\
+                2C_1\sin(\sqrt{\lambda} 3)&=0\\
+                C_1\sin(\sqrt{\lambda} 3)&=0
+            \end{align*}
+            From these two results we can say that either $C_1=C_2=0$, which is the trivial solution, or 
+            \begin{align*}
+                \sqrt{\lambda}3&=n\pi,\; n\in\mathbb{N}\\
+                \implies \lambda_n&=\frac{n^2\pi^2}{9}
+            \end{align*}
+            which are the eigenvalues for this solution, the corresponding eigenfunctions being 
+            \begin{equation*}
+                y_n(x)=C_1\cos(\frac{n\pi}{3}x)+C_2\sin(\frac{n\pi}{3}x),\; n\in\mathbb{N}
+            \end{equation*}
+
+            \item $\lambda=0\implies r=0$ is our only, and therefore repeated, root. This gives us
+            \begin{align*}
+                y(x)&=Ae^{rx}+Bxe^{rx}\\
+                &=A+Bx
+            \end{align*}
+            Applying the first initial condition $y(-3)=y(3)$ we get 
+            \begin{align*}
+                A-3B&=A+3B\\
+                6B&=0\\
+                B&=0\\
+                \implies y(x)&=A,\; A\in\mathbb{R}
+            \end{align*}
+            We can choose any $A$, so we choose 1. Thus our eigenvalue is 0 and our eigenfunction is $y(x)=1$.
+
+            \item $\lambda<0 \implies r=\pm\sqrt{-\lambda}$ where both roots are real. Substituting this into 
+            our original guess we get
+            \begin{align*}
+                y(x)&=Ae^{\sqrt{-\lambda}x}+Be^{-\sqrt{-\lambda}x}\\
+                &=C_1\cosh(\sqrt{-\lambda}x)+C_2\sinh(\sqrt{-\lambda}x)
+            \end{align*}
+            Now we apply the BCs, starting with $y(-3)=y(3)$:
+            \begin{align*}
+                C_1\cosh(-\sqrt{-\lambda}3)+C_2\sinh(-\sqrt{-\lambda}3)&=C_1\cosh(\sqrt{-\lambda}3)+C_2\sinh(\sqrt{-\lambda}3)\\
+                C_1\cosh(\sqrt{-\lambda}3)-C_2\sinh(\sqrt{-\lambda}3)&=C_1\cosh(\sqrt{-\lambda}3)+C_2\sinh(\sqrt{-\lambda}3)\\
+                2C_2\sinh(\sqrt{-\lambda}3)&=0\\
+                C_2\sinh(\sqrt{-\lambda}3)&=0
+            \end{align*}
+            $\sinh(x)=0$ in one case only: $x=0$. That means either $\sqrt{-\lambda}=0$, which can't be as $\lambda>0$, or 
+            $C_2=0$, which must be the case. \newline
+            Now we look at the second BC. Firstly we know that 
+            \begin{align*}
+                y'(x)&=\sqrt{-\lambda}(C_1\sinh(\sqrt{-\lambda}x)+C_2\cosh(\sqrt{-\lambda}x))\\
+                &=\sqrt{-\lambda}C_1\sinh(\sqrt{-\lambda}x)
+            \end{align*}
+            Applying our BC of $y'(-3)=y'(3)$ gives us
+            \begin{align*}
+                \sqrt{-\lambda}C_1\sinh(-\sqrt{-\lambda}3)&=\sqrt{-\lambda}C_1\sinh(\sqrt{-\lambda}3)\\
+                -C_1\sinh(\sqrt{\lambda}3)&=C_1\sinh(\sqrt{\lambda}3)\\
+                2C_1\sinh(\sqrt{\lambda}3)&=0\\
+                C_1\sinh(\sqrt{\lambda}3)&=0
+            \end{align*}
+            Again we can see that $C_1=0$ as $\sinh$ can't be 0 for the same reasons as before. This means 
+            that this case has no eigenvalues and no eigenfunctions.
+        \end{itemize}
+
+        \item To begin, we guess a solution $y(x)=x^r$ for $x>r$. We differentiate this to get 
+        $y'(x)=rx^{r-1},\;y''(x)=r(r-1)x^{r-2}$. Plugging these back in we get 
+        \begin{align*}
+            0&=x^2x^{r-2}r(r-1)+\lambda(rx^{r-1}x-x^r)\\
+            &=rx^r(r-1)+\lambda x^r(r-1)\\
+            &=x^r(r-1)(r+\lambda)
+        \end{align*}
+        We know that $x^r\neq0$ so our two roots are $r=1,\; r=-\lambda$. Using these values gives us two 
+        linearly independent solutions: $y(x)=x$ and $y(x)=x^{-\lambda}$. These can be combined to find a 
+        general solution:
+        \begin{align*}
+            y(x)&=C_1x+C_2x^{-\lambda}\\
+            \implies y'(x)&=C_1-C_2\lambda x^{-\lambda-1}
+        \end{align*}
+        Applying our Mixed BCs $y(1)=0,\; y'(e)=0$ we get 
+        \begin{align*}
+            y(1)=0&=C_1+C_2\\
+            \implies C_1&=-C_2\\
+            y'(e)=0&=C_1-C_2\lambda e^{-\lambda-1}\\
+            \implies C_1&=C_2\lambda e^{-\lambda-1}\\
+            \implies -C_2&=C_2\lambda e^{-\lambda-1}\\
+            \implies -1&=\lambda e^{-\lambda-1}
+        \end{align*}
+        The only solution to this is $\lambda=-1$, and thus we have found our one and only real eigenvalue. 
+        Its corresponding eigenfunction is found by simply substituting this into the general equation to find 
+        \begin{equation*}
+            y_1(x)=C_1x+C_2x^1=C_3x,\; \lambda_1=-1
+        \end{equation*}
+        
+        \item Given the PDE 
+        \begin{equation*}
+            \frac{\partial C}{\partial t}=\frac{\partial^2 C}{\partial x^2}-hC
+        \end{equation*}
+        where $h>0$ is a constant and $C(x,t)$ describes a concentration of chemicals, with boundary conditions 
+        $C(0,t)=0, C(L,t)=0, t>0$ and initial condition $C(x,0)=x$ for $0<x\leq \frac{L}{2}$ and $C(x,0)=0$ for 
+        $\frac{L}{2}<x<L$:
+        \begin{enumerate}
+            \item We solve it using separation of variables. This starts by splitting the function $C(x,t)$ into 
+            two functions dependent on $x$ and $t$ separately: $C(x,t)=\phi(x)G(t)$. Because these functions are 
+            independent of each other, we can write the original PDE as
+            \begin{align*}
+                \dot{G}\phi&=\phi'' G-h\phi G\\
+                \implies \frac{\dot{G}}{G}&=\frac{\phi''-h\phi}{\phi}=-\lambda
+            \end{align*}
+            where $\lambda$ is arbitrary. We use this $\lambda$ to solve each ODE separately, but first we must 
+            examine our BCs as they are affected by this separation of variables:
+            \begin{align*}
+                C(0,t)=0&\implies \phi(0)G(t)=0\implies\phi(0)=0\\
+                C(L,t)=0&\implies \phi(L)G(t)=0\implies\phi(L)=0
+            \end{align*}
+            Now we solve $\dot{G}=-\lambda G$, which is easily seen to be $G(t)=Ae^{-\lambda t}$. We know that 
+            this function will govern $C$ and it makes sense that the concentration of chemicals will decrease as 
+            time goes on, not increase, so we can assume that $\lambda>0$.\newline
+            Next we move to the more complicated $\phi'' -\phi(h-\lambda)=0$. If we guess the solution $y=e^{rx}$ 
+            then its characteristic equation is $r^2-(h-\lambda)=0$. We know that $\lambda>0$ so we examine 
+            three cases: 
+            \begin{itemize}
+                \item $\lambda>h \implies r=\pm \sqrt{\lambda-h}i$. Our guess leads us to a general solution
+                \begin{align*}
+                    \phi(x)&=Ae^{i\sqrt{\lambda-h}x}+Be^{-i\sqrt{\lambda-h}x}\\
+                    &=C_1\cos(\sqrt{\lambda-h}x)+C_2\sin(\sqrt{\lambda-h}x)
+                \end{align*}
+                Applying our BCs we get 
+                \begin{align*}
+                    \phi(0)=0&=C_1\cos(0)+C_2\sin(0)\\
+                    0&=C_1\\
+                    \phi(L)=0&=C_2\sin(\sqrt{\lambda-h}L)\\
+                    \implies \sqrt{\lambda-h}L&=n\pi,\; n\in\mathbb{N} \\
+                    \implies \lambda_n&=\frac{n^2\pi^2}{L^2}+h,\; n\in\mathbb{N}
+                \end{align*}
+                We can make the assumption that $C_2\neq 0$ because having both constants 0 is the trivial solution, 
+                so the $\sin$ term must be 0. With this infinite family of eigenvalues we can find their corresponding 
+                eigenfunctions:
+                \begin{equation*}
+                    \phi_n(x)=C_2\sin(\frac{n\pi}{L}x)
+                \end{equation*}
+
+                \item $\lambda=h \implies r^2-0=0 \implies r=0$ is our repeated root. Our general solution becomes 
+                \begin{align*}
+                    \phi(x)&=Ae^{rx}+Bxe^{rx}\\
+                    &=A+Bx
+                \end{align*}
+                Applying our BCs we get 
+                \begin{align*}
+                    \phi(0)=0&=A\\
+                    \phi(L)=0&=BL
+                \end{align*}
+                We know by the construction of the problem that $L\neq0$ so it must be that $B=0$. Both our constants 
+                are 0 so there are no eigenvalues or eigenfunctions.
+
+                \item $0<\lambda<h \implies r=\pm\sqrt{h-\lambda}$. Our general solution becomes 
+                \begin{align*}
+                    \phi(x)&=Ae^{\sqrt{h-\lambda}x}+Be^{-\sqrt{h-\lambda}x}\\
+                    &=C_1\cosh(\sqrt{h-\lambda}x)+C_2\sinh(\sqrt{h-\lambda}x)
+                \end{align*}
+                Applying the BCs we find 
+                \begin{align*}
+                    \phi(0)=0&=C_1\cosh(0)+C_2\sinh(0)\\
+                    &=C_1\\
+                    \phi(L)=0&=C_2\sinh(\sqrt{h-\lambda}L)\\
+                    \implies C_2&=0
+                \end{align*}
+                as $\sinh(x)=0$ at $x=0$ only, and neither $\sqrt{h-\lambda}$ or $L$ are 0, so we have the trivial 
+                solution: No eigenvalues or eigenfunctions.
+            \end{itemize}
+            Finally we can combine our two functions back into $C(x,t)$:
+            \begin{equation*}
+                C(x,t)=\phi(x)G(t)=C\sin(\frac{n\pi}{L}x)e^{-\lambda_n t}
+            \end{equation*}
+            where $C=C_1A,\; \lambda_n=\frac{n^2\pi^2}{L^2}+h,\; n\in\mathbb{N}$. This tells us there is an infinite 
+            family of solutions to this PDE, meaning we can construct another solution by taking a linear combination 
+            of them all:
+            \begin{equation*}
+                C(x,t)=\sum_{n=1}^{\infty}C_n \sin(\frac{n\pi}{L}x) e^{-\left(\frac{n^2\pi^2}{L^2}+h\right)t}
+            \end{equation*}
+            And now it's time to apply our initial conditions, which are 
+            \begin{align*}
+                C(x,0)&=x \;\text{for}\; 0<x\leq \frac{L}{2}\\
+                C(x,0)&=0 \;\text{for}\; \frac{L}{2}<x<L
+            \end{align*}
+            Applying these to our linear combination solution we have 
+            \begin{align*}
+                C(x,0)=x&=\sum_{n=1}^{\infty} C_n\sin(\frac{n\pi}{L}x) e^0,\; 0<x\leq \frac{L}{2}\\
+                C(x,0)=0&=\sum_{n=1}^{\infty} C_n\sin(\frac{n\pi}{L}x) e^0,\; \frac{L}{2}<x<L
+            \end{align*}
+            For $\frac{L}{2}<x<L$, either all $C_n=0$, or $\frac{n\pi}{L}x=0 \implies x=L$ which isn't possible, 
+            so $C_n=0$ for all $n$ in that case. Going back to the first case, eigenfunctions form a complete 
+            orthogonal set, meaning we can find the value of $C_n$ in the following way:
+            \begin{align*}
+                C_n&=\frac{4}{L}\langle x | \sin(\frac{n\pi x}{L})\rangle\\
+                &= \frac{4}{L} \int_0^{\frac{L}{2}} x\sin(\frac{n\pi x}{L})dx\\
+                &= \frac{4}{L} \frac{L \left(L\sin(\frac{\pi n}{2})-\frac{1}{2}\pi Ln\cos(\frac{\pi  n}{2})\right)}{\pi^2n^2}\\
+                &= \frac{4\left(L\sin(\frac{\pi n}{2})-\frac{1}{2}\pi Ln\cos(\frac{\pi  n}{2})\right)}{\pi^2n^2}
+            \end{align*}
+            Finally we have a complete solution:
+            \begin{equation*}
+                C(x,t)=\sum_{n=1}^{\infty}\frac{4\left(L\sin(\frac{\pi n}{2})-\frac{1}{2}\pi Ln\cos(\frac{\pi  n}{2})\right)}{\pi^2n^2}\sin(\frac{n\pi}{L}x)e^{-\left(\frac{n^2\pi^2}{L^2}+h\right)t}
+            \end{equation*}
+
+            \item From the equation above, it's clear to see that 
+            \begin{equation*}
+                t\rightarrow\infty \implies C(x,t)\rightarrow\sum_{n=1}^{\infty}\frac{4\left(L\sin(\frac{\pi n}{2})-\frac{1}{2}\pi Ln\cos(\frac{\pi  n}{2})\right)}{\pi^2n^2}\sin(\frac{n\pi}{L}x)
+            \end{equation*}
+        \end{enumerate}
+
+        \item 
+        \begin{enumerate}
+            \item This problem can be imagined as a rod that begins with a distribution of heat along it relative 
+            whose one end is perfectly insulated and begins at temperature 0, and whose other end is perfectly 
+            insulated and begins at some temperature.
+
+            \item Firstly we expand the given PDE into a more useful form:
+            \begin{align*}
+                \mathcal{H}u&=0\\
+                \implies \frac{\partial u}{\partial t}&=k\frac{\partial^2 u}{\partial x^2}\\
+                \implies \dot{G}\phi &= kG\phi''
+            \end{align*}
+            where we have split $u(x,t)$ into two functions dependent on only $x$ and $t$ respectively, $G(t),\;\phi(x)$.
+            Separating these "variables" we can recover 2 completely separate differential equations, so long 
+            as the both equal the same constant, which we'll call $-\lambda$:
+            \begin{align*}
+                \dot{G}&=-kG\lambda\\
+                \phi''&=-\phi\lambda
+            \end{align*}
+            Looking at $G(t)$ first, it's easy to see that the solution to this DE is $G(t)=Ae^{-k\lambda t}$. 
+            If we think about this a bit more we can actually see that this equation will govern $u(x,t)$ 
+            somewhat, meaning we can deduce some things about $\lambda$. Most importantly we can see that 
+            $\lambda>0$ as we would expect that the heat in a bar of some kind, without any external sources, 
+            will not increase with time and especially not at an exponential rate. \newline
+            Next we'll look at $\phi(x)$. Luckily we only need to consider the case where $\lambda>0$, which 
+            makes things easier. In fact we have already studied this exact form of equation in question 1, so 
+            borrowing from that answer, we know that 
+            \begin{align*}
+                \phi(x)&=C_1\cos(\sqrt\lambda x)+C_2\sin(\sqrt\lambda x)\\
+                \phi'(x)&=\sqrt{\lambda}(-C_1\sin(\sqrt{\lambda}x)+C_2\cos(\sqrt{\lambda}x))
+            \end{align*}
+            Now we consider the BCs, which are affected by our splitting of $u$ in the following way:
+            \begin{align*}
+                u_x(0,t)=0&=G'\phi+\phi' G=\phi'(0)G(t)=\phi'(0)\\
+                \implies 0&=\sqrt{\lambda}(-C_1\sin(\sqrt{\lambda}0)+C_2\cos(\sqrt{\lambda}0))\\
+                &=C_2\\
+                u(L,t)=0&=G(t)\phi(L)=\phi(L)\\
+                \implies 0&=C_1\cos(\sqrt\lambda L)\\
+                \implies \sqrt\lambda L&=n\pi \\
+                \implies \lambda_n =\frac{n^2\pi^2}{L^2},\; n\in\mathbb{N}
+            \end{align*}
+            We can assume that $C_1\neq0$ as that would just be the trivial solution. Thus we have found our 
+            infinite family of eigenvalues, and their corresponding eigenfunctions are 
+            \begin{equation*}
+                \phi_n(x)=C_n\cos(\frac{n\pi}{L} x),\; n\in\mathbb{N}
+            \end{equation*}
+            Now we can reconstruct $u$ as 
+            \begin{equation*}
+                u(x,t)=G(t)\phi(x)=C_ne^{-k\frac{n^2\pi^2}{L^2} t}\cos(\frac{n\pi}{L} x),\; n\in\mathbb{N}
+            \end{equation*}
+            but because this is an infinite family of linearly independent solutions to $u$, a linear combination 
+            of them all is also a solution to $u$, thus we have 
+            \begin{equation*}
+                u(x,t)=\sum_{n=1}^\infty C_ne^{-k\frac{n^2\pi^2}{L^2} t}\cos(\frac{n\pi}{L} x)
+            \end{equation*}
+            Now we can apply our initial condition $u(x,0)=x,\; 0<x<L$, giving us 
+            \begin{equation*}
+                u(x,0)=x=\sum_{n=1}^\infty C_ne^{0}\cos(\frac{n\pi}{L} x),\; 0<x<L
+            \end{equation*}
+            And now we can finally find a value for $C_n$ using the formula
+            \begin{align*}
+                C_n&=\frac{\langle x|\cos(\frac{n\pi}{L} x) \rangle}{\langle \cos(\frac{n\pi}{L} x)|\cos(\frac{n\pi}{L} x) \rangle}\\
+                &=\frac{2}{L} \int_0^L x \cos(\frac{n\pi}{L} x) dx\\
+                &=\frac{2}{L}\frac{L^2(\pi n\sin(\pi n)+\cos(\pi n)-1)}{\pi^2 n^2}\\
+                &=\frac{2L(\pi n\sin(\pi n)+\cos(\pi n)-1)}{\pi^2 n^2}
+            \end{align*}
+            Which leaves us with a final family of eigenfunctions:
+            \begin{equation*}
+                \sum_{n=1}^\infty \frac{2L(\pi n\sin(\pi n)+\cos(\pi n)-1)}{\pi^2 n^2}e^{-k\frac{n^2\pi^2}{L^2} t}\cos(\frac{n\pi}{L} x)
+            \end{equation*}
+
+            \item To find the equilibrium solution we consider the case where the function $u$ has no dependence 
+            on time, that is $\dot{u}(x,t)=0$. We can find this by solving
+            \begin{equation*}
+                \frac{d^2u_E}{dx^2}=0
+            \end{equation*}
+            and this is a full derivative as $u_E$ is a function of $x$ only. We can integrate this twice to find 
+            \begin{align*}
+                u_E(x)&=C_1x+C_2\\
+                u_E'(x)&=C_1
+            \end{align*}
+            Looking at our BCs for this problem, we get
+            \begin{align*}
+                u_E(L)=0&=C_1L+C_2\\
+                \implies C_1L&=-C_2\\
+                u_E'(0)=0&=C_1\\
+                \implies C_2&=0
+            \end{align*}
+            And I can't work out how to make this work.
+
+        \end{enumerate}
+    \end{enumerate}    
+
+\end{document}
