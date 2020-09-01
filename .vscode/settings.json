@@ -14,6 +14,9 @@
         "**/.vscode": true
     },
     "cSpell.ignoreWords": [
+        "csim",
+        "l",
+        "l csim",
         "levenberg",
         "marquardt",
         "pcov",
