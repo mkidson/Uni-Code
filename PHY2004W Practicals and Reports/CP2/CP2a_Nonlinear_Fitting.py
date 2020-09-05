@@ -10,7 +10,7 @@ matplotlib.rcParams.update({
     'pgf.rcfonts': False,
 })
 # File reading and initialisation of variables
-file = open('PHY2004W Computational\CP2\DampedData1.txt', 'r')
+file = open('PHY2004W Practicals and Reports\CP2\DampedData1.txt', 'r')
 header = file.readline()
 lines = file.readlines()
 i = 0
@@ -41,7 +41,7 @@ tmodel = np.linspace(0.0, 5.0, 1000)
 ystart = f(tmodel, *p0)
 plt.plot(tmodel, ystart, '-g', lw=0.5, label='Initial Guess')
 plt.legend()
-plt.savefig('PHY2004W Computational/CP2/CP2a_Initial_Guess.pgf')
+# plt.savefig('PHY2004W Computational/CP2/CP2a_Initial_Guess.pgf')
 
 # Plots the Levenberg-Marquardt best fit
 popt, pcov = curve_fit(f, data[0], data[1], p0, sigma=u, absolute_sigma=True)
@@ -76,4 +76,4 @@ for i in range(len(popt)):
     print()
 # Finally saves the best fit curve
 plt.legend()
-plt.savefig('PHY2004W Computational/CP2/CP2a_Best_Fit.pgf')
+# plt.savefig('PHY2004W Computational/CP2/CP2a_Best_Fit.pgf')

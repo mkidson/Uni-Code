@@ -11,7 +11,7 @@ matplotlib.rcParams.update({
     'pgf.rcfonts': False,
 })
 # Some starting constants and arrays needed, as well as opening the DampedData file
-file = open('PHY2004W Computational\CP5\DampedData1.txt', 'r')
+file = open('PHY2004W Practicals and Reports\CP5\DampedData1.txt', 'r')
 header = file.readline()
 lines = file.readlines()
 i = 0
