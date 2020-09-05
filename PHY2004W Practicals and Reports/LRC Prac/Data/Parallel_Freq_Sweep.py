@@ -75,7 +75,7 @@ resIndex=find_peaks(-yfit)[0][0]
 resFreq=tmodel[resIndex]
 resAngularFreq=2*pi*resFreq
 resAngularFreqL=resAngularFreq*pOptimals[0][0]
-Q=resAngularFreqL/pOptimals[0][1]
+Q=pOptimals[0][1]/resAngularFreqL
 # Uncertainty calculations
 resAngularFreqUn=0.02*resAngularFreq
 resAngularFreqLUn=resAngularFreqL*sqrt((resAngularFreqUn/resAngularFreq)**2 + (pOptimals[1][0]/pOptimals[0][0])**2)
@@ -92,4 +92,4 @@ plt.xlabel('Frequency (Hz)')
 plt.ylabel('$V_{out}/V_{in}$')
 plt.legend()
 # plt.show()
-plt.savefig('Parallel_Freq_Sweep.pgf')
+# plt.savefig('Parallel_Freq_Sweep.pgf')
