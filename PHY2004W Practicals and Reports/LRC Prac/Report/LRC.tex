@@ -160,10 +160,10 @@
     \subsection{Apparatus}\label{sec:Apparatus}
     We used the following items, all with standard measurement uncertainty of 2\%:
     \begin{itemize}
-        \item 1 1 k$\Omega$ resistor (actual measured value 984.4 $\Omega$).
-        \item 2 100 $\Omega$ resistors (actual measured value 98.0 and 98.6 $\Omega$).
-        \item 1 96.51 nF capacitor (actual measured value 93.94 nF).
-        \item 1 70 mH inductor (actual measured value 73.62 mH).
+        \item 1 $\SI{1000}{\ohm}$ resistor (actual measured value $\SI{984.40\pm19.67}{\ohm}$).
+        \item 2 $\SI{100}{\ohm}$ resistors (actual measured value totalling $\SI{196.60\pm2.78}{\ohm}$).
+        \item 1 $\SI{96.51e-9}{\farad}$ capacitor (actual measured value $\SI{93.94\pm1.88e-9}{\farad}$).
+        \item 1 $\SI{70e-3}{\henry}$ inductor (actual measured value $\SI{73.62\pm1.47e-3}{\henry}$).
         \item 1 myDAQ.
         \item 1 screwdriver.
         \item 1 function generator.
@@ -206,13 +206,13 @@
     $u=\frac{a}{2\sqrt{6}}$. That gives us a wavelength of $\lambda=\SI{5.5\pm0.2641e-4}{\second}$. 
     As we know, $f=\frac{1}{\lambda}$, and the uncertainty is given by 
     $u(f)=\frac{u(\lambda)}{\lambda^2}$, which was derived from the multiplicative propagation 
-    equation. This gives us a resonant frequency of $f_0=1818.18\pm67.48\;\si{\hertz}$. \newline
+    equation. This gives us a resonant frequency of $f_0=\SI{1818.18\pm67.48}{\hertz}$. \newline
     \newline
     For the series circuit, \autoref{fig:Series Resonance Scope}, we counted 12 small divisions 
-    with the same upper and lower bound. Doing the same calculations and uncertainty propagations 
-    we found the resonant frequency to be $f_0=1666.67\pm73.37\;\si{\hertz}$. The expected value for 
+    with the same upper and lower bound as before. Doing the same calculations and uncertainty propagations 
+    we found the resonant frequency to be $f_0=\SI{1666.67\pm73.37}{\hertz}$. The expected value for 
     both circuits can be found from $\omega_0=2\pi f_0=\frac{1}{\sqrt{LC}}$. If we use the measured 
-    values for $L$ and $C$ with uncertainties of 2\% we get $f_0=1913.802\pm27.064\;\si{\hertz}$, 
+    values for $L$ and $C$ with uncertainties of 2\% we get $f_0=\SI{1913.802\pm27.064}{\hertz}$, 
     where the uncertainty is given by
     \begin{equation*}
         u(f)=\sqrt{\frac{L^2u(C)^2+C^2u(L)^2}{4C^3L^3}}
@@ -221,11 +221,13 @@
     Next we used the \texttt{LCsim.exe} program to simulate the parallel and series circuits with 
     a range of different resistance values to investigate how the value of R affects the value of $Q$. 
     We simulated two circuits with the same inductance and capacitance values as the real circuits we 
-    used (70 mH and 96.51 nF) and ran each circuit separately with 100, 200, 400, and 1000 $\Omega$s 
+    used (70 mH and 96.51 nF) and ran each circuit separately with 100, 200, 400, and 1000 $\Omega$ 
     of resistance, 1 Volt peak-to-peak, and from 1000 to 4000 Hz with 2000 data points. The program 
     can export as text so we copied the outputs into \text{.txt} files and did our usual plotting 
     procedure. We then used \texttt{scipy.optimize.curve\_fit} to fit the data to the relevant 
-    transfer function. The results are in \autoref{fig:Parallel Resonance Circuit} and 
+    transfer function. Our initial conditions for each fitting were the same values used when 
+    generating the data and a scale factor of 0.5.
+    The results are in \autoref{fig:Parallel Resonance Circuit} and 
     \autoref{fig:Series Resonance Circuit}.
     \begin{figure}[H]%
         \centering
@@ -259,9 +261,12 @@
     myDAQ to apply a range of frequencies of alternating voltage with 1 Volt peak-to-peak to the 
     circuits described in \autoref{sec:Apparatus}. The myDAQ also recorded the voltage across the 
     resistor. We could then plot that data and use \texttt{curve\_fit} to fit it to the relevant 
-    transfer function. The results are in \autoref{fig:Parallel Frequency Sweep}, 
+    transfer function. The initial conditions for these fittings were the measured values for each 
+    component and a scale factor of 0.5 and 0.35 for parallel and series respectively.
+    The results are in \autoref{fig:Parallel Frequency Sweep}, 
     \autoref{fig:Series Frequency Sweep}, and \autoref{tbl:Resonant Frequency and Quality Factor}.
-    The $Q$ values were calculated from \autoref{eqn:Quality Factor}.
+    The $Q$ values were calculated from \autoref{eqn:Quality Factor} for series and the inverse 
+    for parallel.
 
     \begin{figure}[H]
         \begin{center}
@@ -284,9 +289,9 @@
             \textbf{Parallel} \\
             \begin{tabular}{c c}
                 \hline
-                $f_0$: & $1926.80\pm38.54\; \si{\hertz}$\\
+                $f_0$: & $\SI{1926.80\pm38.54}{\hertz}$\\
                 $L$: & $\SI{65.78\pm3.33e-3}{\henry}$\\
-                $R$: & $931.98\pm49.22\;\si{\ohm}$\\
+                $R$: & $\SI{931.98\pm49.22}{\ohm}$\\
                 $C$: & $\SI{106.41\pm5.41e-09}{\farad}$\\
                 Scale Factor: & $0.48716\pm0.00059$\\
                 $Q$: & $1.17\pm0.082$
@@ -298,15 +303,15 @@
             \textbf{Series} \\
             \begin{tabular}{c c}
                 \hline
-                $f_0$: & $1866.90\pm37.34\; \si{\hertz}$\\
+                $f_0$: & $\SI{1866.90\pm37.34}{\hertz}$\\
                 $L$: & $\SI{73.31\pm3.25e-3}{\henry}$\\
-                $R$: & $272.95\pm12.66\;\si{\ohm}$\\
+                $R$: & $\SI{272.95\pm12.66}{\ohm}$\\
                 $C$: & $\SI{98.954\pm4.097e-09}{\farad}$\\
                 Scale Factor: & $ 0.3888\pm0.0014$\\
                 $Q$: & $3.15\pm0.18$
             \end{tabular}
         \end{minipage}
-        \caption{Resonant Frequency and Quality Factor for Parallel and Series Resonant Circuits}
+        \caption{Resonant Frequency, Optimal Fitting Parameters, and Quality Factor for Parallel and Series Resonant Circuits}
         \label{tbl:Resonant Frequency and Quality Factor}
     \end{table}
     On the uncertainties for these values, we used the 2\% accuracy rating for the equipment used 
@@ -327,11 +332,11 @@
     The two resonant frequencies found in \autoref{sec:Method and Results} from examining 
     \autoref{fig:Parallel Resonance Scope} and \autoref{fig:Series Resonance Scope} were 
     \begin{align*}
-        \text{Parallel:}&\hspace{25pt}f_0=1818.18\pm67.48\;\si{\hertz}\\
-        \text{Series:}&\hspace{25pt}f_0=1666.67\pm73.37\;\si{\hertz}\\
-        \text{Expected:}&\hspace{25pt}f_0=1913.802\pm27.064\;\si{\hertz}
+        \text{Parallel:}&\hspace{25pt}f_0=\SI{1818.18\pm67.48}{\hertz}\\
+        \text{Series:}&\hspace{25pt}f_0=\SI{1666.67\pm73.37}{\hertz}\\
+        \text{Expected:}&\hspace{25pt}f_0=\SI{1913.802\pm27.064}{\hertz}
     \end{align*}
-    These values do not agree. The reason for this discrepancy is likely due to the lack of control 
+    These values do not agree within experimental uncertainty. The reason for this discrepancy is likely due to the lack of control 
     we have when finding the resonant frequency as the effective resolution on the oscilloscope when 
     modulating the driving frequency is quite low, so it's hard to find the exact resonant frequency. 
     To improve this experiment we recommend using the methods we used when analysing the myDAQ data as 
@@ -347,8 +352,43 @@
     and find the relationship between $Q$ and $R$ quantitatively. 
 
     \subsection{Frequency Sweep}\label{sec:Frequency Sweep}
-    Finally we will analyse the results we found in 
+    Finally we will discuss the results found when looking at the real circuits and their resonance 
+    curves: \autoref{fig:Parallel Frequency Sweep}, \autoref{fig:Series Frequency Sweep}, and 
+    \autoref{tbl:Resonant Frequency and Quality Factor}. \newline
+    Starting with the parallel circuit: The resonant frequency, which was determined from the fitted 
+    function, agrees with the expected value of $f_0=\SI{1913.802\pm27.064}{\hertz}$ within 
+    experimental uncertainty. In terms of the optimal fitted parameters $L$, $R$, and $C$ only $R$ 
+    agrees with the expected value within experimental uncertainty, but they are all in roughly the 
+    right ballpark. The Scale Factor, which is effectively an amplitude, is not relevant to any result 
+    we are looking for. Finally the value of $Q=1.17\pm0.082$ agrees with the expected value of 
+    $Q=1.112\pm0.035$, determined using the inverse of \autoref{eqn:Quality Factor} and the measured 
+    values and their 2\% uncertainties, within experimental uncertainty. \newline
+    Moving on to the series circuit: The same resonant frequency is expected as with the parallel 
+    circuit, but this time the values do not agree. We are unsure where this discrepancy comes from, 
+    possibly inefficiency in the Monte Carlo method used to determine the fitting parameters. 
+    Speaking of those parameters, the inductance and capacitance values do agree with the expected 
+    measured values within experimental uncertainty, but the resistance is way off. We expect a value 
+    of $R=\SI{196.60\pm2.78}{\ohm}$ and our optimised value is almost 50\% more than that. This may be 
+    for the same reason as before. Regarding the quality factor for this circuit, we expect a value 
+    of $Q=4.50\pm0.14$ and found $Q=3.15\pm0.18$. These do not agree within experimental uncertainty 
+    and this is likely because of the miscalculation of $R$ and $f_0$ above. Do note that the values 
+    are at least within the same order of magnitude, so there is at least some evidence that the 
+    experiment was useful.\newline
+    \newline
+    To improve the accuracy of the results we found, we would recommend using more data points 
+    in the same range of frequencies as well as trying to improve the Monte Carlo method by which 
+    we approximated the fitting parameters. 
 
+    \section{Conclusion}\label{sec:Colclusion}
+    To conclude, this experiment, or group of experiments, was largely a success. We found that 
+    determining the resonant frequency of an LRC circuit is hard to do to an appropriate degree 
+    of accuracy by eye and that analysing data using a program is far more effective. We found that there 
+    is a direct proportionality between resistance value and quality factor in a parallel LRC circuit, 
+    and an inverse proportionality between the two in a series LRC circuit. We found that we could 
+    determine the quality of a resonance curve for an LRC circuit to a reasonable degree of accuracy, 
+    as well as the resonant frequency. \newline
+    This experiment was by no means perfect. There are many improvements that can be made, such as not 
+    relying on making analogue measurements and using more data points. 
 
     \newpage
     \section{Appendix}

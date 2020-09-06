@@ -4,7 +4,7 @@ from scipy.signal import find_peaks
 from scipy. optimize import curve_fit
 from numpy import cos, pi, sin, sqrt, exp, random, power
 import matplotlib
-matplotlib.use('pgf')
+# matplotlib.use('pgf')
 matplotlib.rcParams.update({
     'pgf.texsystem': 'pdflatex',
     'font.family': 'serif',
@@ -89,5 +89,5 @@ for res in resistances:
     plt.xlabel('Frequency (Hz)')
     plt.ylabel('$V_{out}/V_{in}$')
     plt.legend()
-    plt.savefig('PHY2004W Practicals and Reports\LRC Prac\Data\Parallel_Freq_Sweep_'+res+'.pgf')
-# plt.show()
+    # plt.savefig('PHY2004W Practicals and Reports\LRC Prac\Data\Parallel_Freq_Sweep_'+res+'.pgf')
+plt.show()
