@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage[separate-uncertainty=true]{siunitx}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,subfig,keyval2e,caption,import}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\title{IA Assignment 3}
+\author{KDSMIL001 \; 2IA MAM2000W}
+\date{\textbf{7 September 2020}}
+
+\begin{document}
+    \maketitle
+    \begin{enumerate}
+        \item \begin{enumerate}
+            \item First of all, we use the basic division theorem:
+            \begin{align*}
+                47&=(1)27+20\\
+                27&=(1)20+7\\
+                20&=(2)7+6\\
+                7&=(1)6+1
+            \end{align*}
+            So we know that $\gcd(47,27)=1$, i.e. they are coprime, so there exists a number $b$ 
+            such that $1=27b+47k$, for some integer k, which is the inverse of $27\pmod{47}$, or 
+            more generally $[27]^{-1}$. We can find this $b$ using the extended division algorithm:
+            \begin{align*}
+                1&=7-6\\
+                &=7-(20-(2)7)\\
+                &=(3)7-20\\
+                &=(3)(27-20)-20\\
+                &=(3)27-(4)20\\
+                &=(3)27-(4)(47-27)\\
+                &=(7)27-(4)47
+            \end{align*}
+            and so we have $27^{-1}=7$ (mod 47).
+            
+            \item Given the congruence $[135][x]=[15]\pmod{235}$ we must first check if 135 and 235 
+            are coprime. To do this we use the division algorithm:
+            \begin{align*}
+                235&=135+100\\
+                135&=100+35\\
+                100&=(2)35+30\\
+                35&=30+5\\
+                30&=(6)5
+            \end{align*}
+            So they are not coprime, but we can see that our congruence can be divided by 5, so we have 
+            \begin{equation*}
+                [27][x]=[3] \pmod{47}
+            \end{equation*}
+            To solve this we need the inverse of $27\pmod{47}$, but we already know this from (a), so we have 
+            \begin{align*}
+                [x]&=[3][27]^{-1}\\
+                &=[3][7]\\
+                &=[3\cdot7]\\
+                &=[21]
+            \end{align*}
+            And we're done.
+            
+            \item As we saw above in (b), 135 and 235 are not coprime, but this time we have the 
+            congruence 
+            \begin{equation*}
+                [135][x]=[14] \pmod{235}
+            \end{equation*}
+            and $5\nmid14$, so there is no solution for $x$.
+        \end{enumerate}
+    \end{enumerate}
+
+\end{document}
