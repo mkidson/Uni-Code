@@ -55,7 +55,7 @@ for product in products:
 
 
 # Writes the contents of the master array to a JSON file using the json.dump method
-with open('data.JSON', 'w') as writeFile:
+with open('Personal Projects\WebScraping\data.JSON', 'w') as writeFile:
     json.dump(finalProducts, writeFile, indent=4)
 
 port = 465
