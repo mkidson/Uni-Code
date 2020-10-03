@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.5.7)  2 OCT 2020 21:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.5.7)  3 OCT 2020 22:00
 entering extended mode
 **"d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Induction/Report/Induction.tex"
 ("d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Induction/Report/Induction.tex"
@@ -636,22 +636,22 @@ Package: import 2020/01/22  v 6.0
 ) ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Induction\Report\Induction.aux")
 \openout1 = `Induction.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -688,7 +688,7 @@ LaTeX Font Info:    ... okay on input line 28.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box81
-Package hyperref Info: Link coloring OFF on input line 28.
+Package hyperref Info: Link coloring OFF on input line 29.
 ("D:\Program Files\MikTeX\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  ("D:\Program Files\MikTeX\tex/latex/refcount\refcount.sty"
@@ -698,9 +698,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count346
 )
-LaTeX Info: Redefining \ref on input line 28.
-LaTeX Info: Redefining \pageref on input line 28.
-LaTeX Info: Redefining \nameref on input line 28.
+LaTeX Info: Redefining \ref on input line 29.
+LaTeX Info: Redefining \pageref on input line 29.
+LaTeX Info: Redefining \nameref on input line 29.
  ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Induction\Report\Induction.out") ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Induction\Report\Induction.out")
 \@outlinefile=\write6
 \openout6 = `Induction.out'.
@@ -732,11 +732,11 @@ Package pgfplots notification 'compat/show suggested version=true': document has
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 28.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
 ("D:\Program Files\MikTeX\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
  ("D:\Program Files\MikTeX\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Induction\Report\Induction.toc")
@@ -746,37 +746,49 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1
 
 {C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<PrimaryCircuit.png, id=35, 346.29375pt x 233.37187pt>
+<PrimaryCircuit.png, id=45, 346.29375pt x 233.37187pt>
 File: PrimaryCircuit.png Graphic file (type png)
 <use PrimaryCircuit.png>
-Package pdftex.def Info: PrimaryCircuit.png  used on input line 57.
+Package pdftex.def Info: PrimaryCircuit.png  used on input line 58.
 (pdftex.def)             Requested size: 286.54816pt x 193.1146pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.66     \section
-                 {Experiment} [1 <d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Induction/Report/PrimaryCircuit.png>] [2] ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Induction\Report\Data/FieldAxisData.pgf") [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 137.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 137.
+l.67     \section
+                 {Experiment} [1 <d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Induction/Report/PrimaryCircuit.png>]
+Overfull \hbox (39.018pt too wide) in paragraph at lines 102--115
+\OT1/cmr/m/n/12 The cross-sectional area of the search coil is $\OML/cmm/m/it/12 A \OT1/cmr/m/n/12 = ([])[]\OML/cmm/m/it/12  \OT1/cmr/m/n/12 = [] []$.
+ []
+
+[2] ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Induction\Report\Data/FieldAxisData.pgf")
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Induction\Report\Data/EmfPropToFreq.pgf") [3]
+Overfull \vbox (13.13008pt too high) has occurred while \output is active []
+
+ [4] [5] ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Induction\Report\Data/ResistanceInductance.pgf") [6] [7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 239.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 239.
  ("d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Induction\Report\Induction.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 137.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 137.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 239.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 239.
 Package rerunfilecheck Info: File `Induction.out' has not changed.
-(rerunfilecheck)             Checksum: D3E12C20304FAA1E320A43C9F1BD518B;229.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 137.
+(rerunfilecheck)             Checksum: 6DD6BEBD57DF80A168042B7405FEF820;411.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 239.
  ) 
 Here is how much of TeX's memory you used:
- 36249 strings out of 481254
- 844594 string characters out of 4668041
- 6195037 words of memory out of 19000000
- 51188 multiletter control sequences out of 15000+200000
+ 36274 strings out of 481254
+ 845302 string characters out of 4668041
+ 6219062 words of memory out of 19000000
+ 51196 multiletter control sequences out of 15000+200000
  545380 words of font info for 76 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,16n,127p,1067b,840s stack positions out of 5000i,500n,10000p,5000000b,50000s
-{D:/Program Files/MikTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Induction\Report\Induction.pdf" (4 pages, 169566 bytes).
+ 74i,18n,127p,1067b,876s stack positions out of 5000i,500n,10000p,5000000b,50000s
+{D:/Program Files/MikTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on "d:/Git Repositories\Uni-Code\PHY2004W Practicals and Reports\Induction\Report\Induction.pdf" (8 pages, 214691 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
- 13 named destinations out of 1000 (max. 500000)
- 50 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 159 PDF objects out of 1000 (max. 8388607)
+ 24 named destinations out of 1000 (max. 500000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

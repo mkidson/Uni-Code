@@ -7,6 +7,7 @@
 \usepackage{listings,xcolor,subfig,keyval2e,caption,import}
 \numberwithin{equation}{section}
 \numberwithin{figure}{section}
+\numberwithin{table}{section}
 \definecolor{stringcolor}{HTML}{C792EA}
 \definecolor{codeblue}{HTML}{2162DB}
 \definecolor{commentcolor}{HTML}{4A6E46}
@@ -102,10 +103,11 @@
     Finally we collected some data: \newline
     We ran the signal generator at 
     $\SI{1000}{\hertz}=\SI{2000\pi}{\radian\second^{-1}}$ and $2V_{pp}$, with the amplifier 
-    setting the current to $I_{rms}=\SI{0.353\pm0.00289}{\ampere}=\SI{0.49498\pm0.00409}{\ampere}$. 
+    setting the current to $I_{rms}=\SI{0.353\pm0.02020}{\ampere}=\SI{0.495\pm0.029}{\ampere}$. 
     This uncertainty comes from reading the current off of our ammeter, which displayed 
     $\SI{0.35}{\ampere}$ rms, so we use a digital pdf with uncertainty $\frac{a}{2\sqrt3}$ 
-    and $a=0.01$ to find $u(I_{rms})=0.00289$, so $u(I_0)=0.00289\sqrt{2}=0.00409$. \newline
+    and $a=0.01$ as well as the 2\% uncertainty rating on the ammeter 
+    to find $u(I_{rms})=\sqrt{0.02^2+\frac{0.01}{2\sqrt 3}}=0.02020$, so $u(I_0)=0.02020\sqrt{2}=0.029$. \newline
     The cross-sectional area of the search coil is $A=(\num{6.5e-3})^2\pi=\SI{1.3273\pm0.0204e-4}{\metre^2}$. 
     This uncertainty comes from the uncertainty on the measurement of the diameter of the 
     search coil, using the formula $u(x^n)=|n|x^{n-1}u(x)$. \newline
@@ -121,10 +123,10 @@
         u(\epsilon)&=\sqrt{0.02^2+\left(\frac{\num{1e-5}}{2\sqrt3}\right)}\\
         &=0.01
     \end{align*}
-    Below is the data and the theoretical model
-    \begin{figure}[H]
+    The data and the theoretical model are in \autoref{fig:FieldAxisData}.
+    \begin{figure}[h]
         \begin{center}
-           \scalebox{.7}{\subimport*{Data}{FieldAxisData.pgf}}
+           \scalebox{.7}{\subimport{Data}{FieldAxisData.pgf}}
            \caption{Magnetic field determined using the calibration factor and $\epsilon$ 
            induced in a search coil due to a large primary coil, along with the theoretical 
            prediction made using \autoref{eqn:MagFieldOnAxis}}
@@ -132,10 +134,106 @@
         \end{center}
     \end{figure}
     
-    \subsection{Induction}
-    This section focuses on the effect of a varying frequency of alternating current on the 
-    system we're investigating. For simplicity's sake we moved the coil to position $z=0$ and 
-    varied the resistance from 100 Hz to 2 kHz. We didn't operate below 100 Hz as that would 
-    result in an increase in 
+    \subsection{Frequency Dependence of Induced Voltage}
+    This section focuses on the effect of varying the frequency of alternating current on the 
+    system we're investigating. We suspect that the relationship is linear.
+    For simplicity's sake we moved the coil to position $z=0$ and varied the frequency from 
+    100 Hz to 2 kHz. 
+    
+    We didn't operate below 100 Hz as that would 
+    result in an increase in current through the coil as the impedance would decrease, so the 
+    coil would heat up.
+
+    The current was kept at $I_{rms}=\SI{0.57\pm0.0202}{\ampere}$ so $I_0=\SI{0.806\pm0.029}{\ampere}$ 
+    using the same methods as before. This is done to ensure that the magnetic field remains at 
+    the same magnitude throughout the experiment. The current needs to be adjusted as we change 
+    frequency to keep it the same as $I=\frac{V}{Z}=\frac{V}{\sqrt{R^2+L^2\omega^2}}$, so the 
+    current changes with respect to frequency. \newline
+    Now onto the experiment: Altering the current at each frequency and finding the induced 
+    $\epsilon$ at each $\omega$, we found the plot in \autoref{fig:EmfPropToFreq}. 
+    \begin{figure}[H]
+        \begin{center}
+           \scalebox{.7}{\subimport{Data}{EmfPropToFreq.pgf}}
+           \caption{The emf induced in the axial coil due to a changing frequency of alternating 
+           current through the primary coil, kept at the same current to preserve the magnitude 
+           of the magnetic field.}
+           \label{fig:EmfPropToFreq}
+        \end{center}
+    \end{figure}
+    The data is clearly linear. This confirms our earlier suspicion, but now let us check if 
+    our gradient calculated from the line of best fit agrees with what we would expect. Our 
+    linear least squares fit gave us a value of $m=\num{3.8188\pm0.0104e-05}$. To verify this 
+    we will use two methods. We notice that \autoref{eqn:Faradays Law} gives us a relation 
+    between induced $\epsilon$ and $\omega$:
+    \begin{equation}
+        \epsilon=N_aA\omega B(z)
+    \end{equation}
+    Since we are keeping $B$ constant, we should have a gradient of $m=N_aAB$. $N_a$ and $A$ 
+    are the number of winds in the axial coil and the cross-sectional area of the axial coil 
+    respectively and are constants. $B$ is also a constant but we have two ways of determining 
+    it. Firstly we can find it from the induced $\epsilon$, using our calibration factor from 
+    the previous section on each $\epsilon$ and averaging it to find a $B$. Secondly we can 
+    use \autoref{eqn:MagFieldOnAxis} where $z=0$, so 
+    \begin{equation}
+        B=\frac{\mu_0NI_0}{2a}
+        \label{eqn:MagFieldAt0}
+    \end{equation}
+    Using the first method we found $B_1=\SI{1.640\pm0.056e-3}{\tesla}$, so \newline
+    $m_1=\num{3.81\pm0.14e-05}$. The uncertainty on $B_1$ is found with 
+    \begin{align*}
+        u(B_1)&=\frac{1}{n}u(\sum_i B_i) =\frac{1}{n}\sqrt{\sum_i u(B_i)^2}\\
+        u(B_i)&=B_i\sqrt{\left( \frac{u(\epsilon)}{\epsilon}\right)^2+\left( \frac{u(A)}{A}\right)^2+\left( \frac{u(\omega)}{\omega}\right)^2}
+    \end{align*}
+    Using the second method we found $B_2=\SI{1.788\pm0.028e-3}{\tesla}$, so \newline
+    $m_2=\num{4.15\pm0.64e-5}$. The uncertainty on $B_2$ is found with
+    \begin{equation*}
+        u(B_2)=B_2*\sqrt{\left( \frac{u(I_0)}{I_0}\right)^2+\left( \frac{u(a)}{a}\right)^2}
+    \end{equation*}
+    where $u(I_0)$ is as given above and $u(a)=\frac{u(d_{primary})}{2}=\SI{0.05e-2}{\metre}$.
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c c}
+            Experimental: & $m_E = \num{3.8188\pm0.0104e-05}$\\
+            Theoretical: & $m_1 = \num{3.81\pm0.14e-05}$\\
+            & $m_2 = \num{4.15\pm0.64e-5}$
+        \end{tabular}
+        \caption{The experimental and two theoretical determinations of the gradient of 
+        induced voltage $\epsilon$ with respect to $\omega$, the angular frequency of the AC voltage}
+    \end{table}
+    
+    \subsection{Resistance and Inductance of the Primary Coil}
+    This section focuses in on the primary coil as we aimed to determine the resistance and 
+    inductance of the primary coil. We used the same set-up as the previous section.
+    To do this we look at the equation
+    \begin{align*}
+        V&=IZ\\
+        &=I\sqrt{R^2+L^2\omega^2}
+    \end{align*}
+    and see that, since we have kept the current constant, we have $V$ as a function of $\omega$, 
+    with $R$ and $L$ as parameters that we can optimise using \texttt{scipy.optimize.curve\_fit}. 
+    Using the data from before, but this time with the voltage across the primary coil, we have 
+    \autoref{fig:ResistanceInductance}.
+    \begin{figure}[H]
+        \begin{center}
+           \scalebox{.7}{\subimport{Data}{ResistanceInductance.pgf}}
+           \caption{The amplitude of the voltage across the primary coil as a function 
+           of the angular frequency $\omega$, with the \texttt{curve\_fit} approximation 
+           of a line of best fit using the Jackknife method.}
+           \label{fig:ResistanceInductance}
+        \end{center}
+    \end{figure}
+    The error on the experimental data is a result of the limitations of the oscilloscope display 
+    and the uncertainty associated with digital measurement, given by 
+    \begin{equation*}
+        u(V_{\text{primary}})=\frac{\sqrt{\left(\frac{0.01}{2\sqrt 3}\right)^2+2^2}}{2}
+    \end{equation*}
+    Note the division by 2 that's necessary as the data was recorded as a $V_{pp}$, so we divide 
+    it by 2 to find the amplitude, and thus divide the uncertainty by 2. \newline
+    \texttt{curve\_fit} gives us the following values for $R$ and $L$, with the uncertainties 
+    coming from the Jackknife method of error approximation.
+    \begin{align*}
+        R&=\SI{3.3326\pm0.0085}{\ohm}\\
+        L&=\SI{1.50820\pm0.00037e-3}{\henry}
+    \end{align*}
 
 \end{document}

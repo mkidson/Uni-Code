@@ -3,7 +3,7 @@ import numpy as np
 from scipy.optimize import curve_fit
 from numpy import cos, pi, sin, sqrt, exp, random
 import matplotlib
-#matplotlib.use('pgf')
+matplotlib.use('pgf')
 matplotlib.rcParams.update({
     'pgf.texsystem': 'pdflatex',
     'font.family': 'serif',
@@ -11,7 +11,7 @@ matplotlib.rcParams.update({
     'pgf.rcfonts': False,
 })
 # The usual stripping of data from the files
-file = open('PHY2004W Practicals and Reports\Induction\Data\InductanceData.txt', 'r')
+file = open('PHY2004W Practicals and Reports\Induction\Report\Data\InductanceData.txt', 'r')
 header = file.readline()
 lines = file.readlines()
 N = len(lines)
@@ -33,13 +33,13 @@ data[0]*=2*pi
 # Current measured in amps
 theoreticalCurrent=0.8
 measuredCurrent=0.806101
-measuredCurrentUn=0.004087
+measuredCurrentUn=0.02857738033
 # The function for curve_fit
 def emfFromFreq(omega,R,L):
     return theoreticalCurrent*sqrt(R**2 + (L**2)*(omega**2))
 # Things needed for curve_fit
 freqs=np.linspace(200*pi,4000*pi,N,endpoint=True)
-u=[2]*N
+u=[sqrt((1e-2/(2*sqrt(3)))**2 + (2)**2)*0.5]*N
 p0=[10,0.01]
 # Jackknife curve_fitting
 jackknifeData = np.zeros((4, N, N-1))
@@ -75,9 +75,10 @@ yfit=emfFromFreq(freqs,*pOptimals[0])
 print('Resistance of the Large Coil:',pOptimals[0][0],'+/-',pOptimals[1][0])
 print('Inductance of the Large Coil:',pOptimals[0][1],'+/-',pOptimals[1][1])
 # Plotting but more
-plt.plot(data[0],data[1],'bs',ms=3,label='Experimental Data')
+plt.errorbar(data[0],data[1],yerr=u,fmt='bs',ms=3,elinewidth=0.7,capsize=3,label='Experimental Data')
 plt.plot(freqs,yfit,'r',label='curve\_fit Approximation')
 plt.xlabel('Angular Frequency $\omega$ (rad/s)')
 plt.ylabel('Amplitude of Voltage Across the Large Coil (V)')
 plt.legend()
-plt.show()
+# plt.show()
+plt.savefig(r'PHY2004W Practicals and Reports\Induction\Report\Data\ResistanceInductance.pgf')
