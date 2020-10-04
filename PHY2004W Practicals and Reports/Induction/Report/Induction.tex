@@ -65,7 +65,7 @@
     to hold it at set distances from the primary coil, along the primary coil's axis. 
 
     \section{Experiment}
-    \subsection{Field on the axis of a circular coil}
+    \subsection{Field on the Axis of a Circular Coil}\label{sec:FieldAxis}
     In this section we looked specifically at the relationship between magnetic field 
     $\vec{B}(\vec{r},t)$ and induced $\epsilon$. First we look at Faraday's law, which says 
     \begin{equation}
@@ -134,16 +134,13 @@
         \end{center}
     \end{figure}
     
-    \subsection{Frequency Dependence of Induced Voltage}
+    \subsection{Frequency Dependence of Induced Voltage}\label{sec:EmfPropToFreq}
     This section focuses on the effect of varying the frequency of alternating current on the 
     system we're investigating. We suspect that the relationship is linear.
     For simplicity's sake we moved the coil to position $z=0$ and varied the frequency from 
-    100 Hz to 2 kHz. 
-    
-    We didn't operate below 100 Hz as that would 
-    result in an increase in current through the coil as the impedance would decrease, so the 
-    coil would heat up.
-
+    100 Hz to 2 kHz. We did not operate below 100 Hz as that would lead to the inductive 
+    reactance $X_R=L\omega$ to decrease, effectively causing the coil to become a short 
+    circuit. The current would spike and the coil would heat up rapidly.
     The current was kept at $I_{rms}=\SI{0.57\pm0.0202}{\ampere}$ so $I_0=\SI{0.806\pm0.029}{\ampere}$ 
     using the same methods as before. This is done to ensure that the magnetic field remains at 
     the same magnitude throughout the experiment. The current needs to be adjusted as we change 
@@ -194,14 +191,15 @@
         \centering
         \begin{tabular}{c c}
             Experimental: & $m_E = \num{3.8188\pm0.0104e-05}$\\
-            Theoretical: & $m_1 = \num{3.81\pm0.14e-05}$\\
+            Expected: & $m_1 = \num{3.81\pm0.14e-05}$\\
             & $m_2 = \num{4.15\pm0.64e-5}$
         \end{tabular}
         \caption{The experimental and two theoretical determinations of the gradient of 
         induced voltage $\epsilon$ with respect to $\omega$, the angular frequency of the AC voltage}
+        \label{tbl:ExpectedGradients}
     \end{table}
     
-    \subsection{Resistance and Inductance of the Primary Coil}
+    \subsection{Resistance and Inductance of the Primary Coil}\label{sec:ResistanceInductance}
     This section focuses in on the primary coil as we aimed to determine the resistance and 
     inductance of the primary coil. We used the same set-up as the previous section.
     To do this we look at the equation
@@ -231,9 +229,68 @@
     it by 2 to find the amplitude, and thus divide the uncertainty by 2. \newline
     \texttt{curve\_fit} gives us the following values for $R$ and $L$, with the uncertainties 
     coming from the Jackknife method of error approximation.
-    \begin{align*}
-        R&=\SI{3.3326\pm0.0085}{\ohm}\\
-        L&=\SI{1.50820\pm0.00037e-3}{\henry}
-    \end{align*}
+    \begin{table}
+        \centering
+        \begin{tabular}{c c}
+            Resistance: & $\SI{3.3326\pm0.0085}{\ohm}$\\
+            Inductance: & $\SI{1.50820\pm0.00037e-3}{\henry}$
+        \end{tabular}
+        \caption{Resistance and inductance of the primary coil determined using 
+        \texttt{curve\_fit} on the emf across the primary coil when varying the frequency 
+        of AC voltage input, keeping current the same.}
+        \label{tbl:ResistanceInductance}
+    \end{table}
+
+    \section{Discussion and Recommendations}
+    \subsection{Field on the Axis of a Circular Coil}
+    Examining \autoref{fig:FieldAxisData} we see that for the most part our experimental data 
+    agrees comfortably with the theoretical prediction within experimental uncertainty. Most 
+    importantly, they have a very similar shape and both have a maximum at $z=0$, which 
+    makes sense considering magnetic field is inversely proportional to distance, in the most 
+    basic form. \newline
+    To improve the results of this experiment, we would recommend using a larger axial coil 
+    as it would then cover more of the magnetic field, as well as not making approximations 
+    when modifying Faraday's Law. This should lead to more accurate predictions of the fringe 
+    effects of magnetic field, which can be prominent.
+
+    \subsection{Frequency Dependence of Induced Voltage}
+    The linear least squares fit in \autoref{fig:EmfPropToFreq} fits well to the data, the 
+    uncertainty on the experimentally determined gradient being $\sim 0.2\%$ of the value. 
+    Regarding the expected values in \autoref{tbl:ExpectedGradients}, $m_1$ agrees with 
+    the $m_E$ to an almost suspicious degree, but this makes sense since we 
+    used the calibration factor in the calculation of both the experimental and expected 
+    values. What's really interesting is that $m_2$ agrees with $m_E$ within experimental 
+    uncertainty. This confirms that the methods we used to determine these values experimentally 
+    were valid. \newline
+    The same improvements as in the previous section would improve these results. It's clear 
+    that the theoretical prediction of $m$ is greater than that of $m$ found using the 
+    approximation in Faraday's Law, meaning that our approximation underestimates the 
+    magnitude of the magnetic field. 
+
+    \subsection{Resistance and Inductance of the Primary Coil}
+    The results in \autoref{tbl:ResistanceInductance} seem quite reasonable for a coil of wire. 
+    We don't expect a large resistance value, and inductance is usually on the scale of 
+    $\num{1e-3}$. Our confidence in these values is confirmed by the small uncertainties. \newline
+    There is not much that can be done to improve this section of the experiment except for an 
+    improvement in the accuracy of the tools used to measure the values, which should give us 
+    lower uncertainty values.
+
+    \section{Conclusion}
+    To conclude, this experiment produced values which agreed with their theoretical 
+    counterparts, when there were predictions for the values at least, and values which 
+    make sense considering the physical attributes of the apparatus used. We accurately 
+    determined the relationship between the magnetic field produced by a coil of wire 
+    driven by and AC voltage and the voltage induced in a second coil oriented in the same 
+    direction as the primary coil. We confirmed that the relationship between induced voltage 
+    and frequency of the AC supply current in that circuit is linear, and found values for 
+    the resistance and inductance of the primary coil. 
+
+    \newpage
+    \section{Appendix}
+    \setcounter{figure}{0} \renewcommand{\thefigure}{A.\arabic{figure}}
+    \lstinputlisting[caption=Code for \autoref{sec:FieldAxis},label=app:FieldAxis,style=appendix]{FieldAxis.py}
+    \lstinputlisting[caption=Code for \autoref{sec:EmfPropToFreq},label=app:EmfPropToFreq,style=appendix]{EmfPropToFreq.py}
+    \lstinputlisting[caption=Code for \autoref{sec:ResistanceInductance},label=app:ResistanceInductance,style=appendix]{ResistanceInductance.py}
+    
 
 \end{document}
