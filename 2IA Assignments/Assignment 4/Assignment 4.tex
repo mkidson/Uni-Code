@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage[separate-uncertainty=true,group-digits=false]{siunitx}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,subfig,keyval2e,caption,import}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\title{Assignment 4}
+\author{KDSMIL001 \; MAM2000W 2IA}
+\date{\textbf{12 October 2020}}
+
+\begin{document}
+    \maketitle
+    \begin{enumerate}
+        \setcounter{enumi}{6}
+        \item \begin{enumerate}
+            \item True. Given some $\sigma=(k_1\, k_2)(k_3\, k_4)\dots(k_{r-1}\, k_r)$ which is a product of disjoint transpositions, 
+            we know that the inverse of a transposition is the transposition itself, so we can write
+            \begin{align*}
+                \sigma^{-1}&=((k_1\, k_2)(k_3\, k_4)\dots(k_{r-1}\, k_r))^{-1}\\
+                &=(k_1\, k_2)^{-1}(k_3\, k_4)^{-1}\dots(k_{r-1}\, k_r)^{-1}\\
+                &=(k_1\, k_2)(k_3\, k_4)\dots(k_{r-1}\, k_r)\\
+                &=\sigma
+            \end{align*}
+            \newline
+            \begin{flushright}$\square$\end{flushright}
+            \item True. Any permutation in $S_n$, aside from the identity permutation $\epsilon$, is not disjoint with its inverse. Firstly $\epsilon^{-1}=\epsilon$ 
+            and $\epsilon$ fixes every value so its inverse fixes every element, making them disjoint as neither move the same element. Then any other element in $S_n$ 
+            will be a product of one or more disjoint cycles of length at least 2 (by the Cycle Decomposition Theorem) and any cycle is not disjoint with its inverse since 
+            the inverse \textit{must} move the same elements as the original cycle in order to reverse the moves.
+            \newline
+            \begin{flushright}$\square$\end{flushright}
+        \end{enumerate}
+    \end{enumerate}
+
+\end{document}

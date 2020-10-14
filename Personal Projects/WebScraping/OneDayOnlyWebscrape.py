@@ -62,7 +62,7 @@ port = 465
 senderEmail = "miles.dev.email@gmail.com"
 receiverEmail = "miles.kidson@gmail.com"
 
-with open('data.JSON', 'r') as fileRead:
+with open('Personal Projects\WebScraping\data.JSON', 'r') as fileRead:
     data = json.load(fileRead)
 
 msg = MIMEMultipart('alternative')

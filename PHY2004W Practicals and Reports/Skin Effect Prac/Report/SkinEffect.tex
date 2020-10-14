@@ -1,0 +1,143 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage[separate-uncertainty=true,group-digits=false]{siunitx}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,subfig,keyval2e,caption,import}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\title{Skin Depth in Conductors}
+\author{KDSMIL001 \; PHY2004W: PHYLAB 2}
+\date{\textbf{13 October 2020}}
+
+\begin{document}
+    \begin{titlepage}
+        \maketitle
+        \center
+        \tableofcontents
+    \end{titlepage}
+    
+    \section{Introduction}\label{sec:Introduction}
+    When an alternating current is travelling on a conductor a phenomenon known as 
+    Skin Effect is observed, where it appears that the only part of the conductor that is 
+    actually conducting the current is the outermost part, or the ``skin". This extends to 
+    conductors present in time-varying magnetic fields, where we find this relation
+    \begin{equation}
+        B(z)=B(0)e^{-\frac{z}{\delta}}
+        \label{eqn:SkinDepthSheet}
+    \end{equation}
+    for a uniform alternating magnetic field at the surface of an infinite sheet of conductor. 
+    In this case $z$ is the distance from the conductor surface and $\delta$ is a length known 
+    as the skin depth, given by $\delta=\sqrt{\frac{2}{\mu\sigma\omega}}$ where $\mu$ is the 
+    permeability of the conductor, $\sigma$ is the conductivity, $\omega$ is the angular 
+    frequency of the field $B$, and $B(0)$ is the amplitude of the field without any conductor 
+    in place. In this experiment we are using a copper tube so we have cylindrical symmetry, 
+    resulting in the relation
+    \begin{equation}
+        B(d)=B(0)\frac{1}{\sqrt{1+(Rd/\delta^2)^2}}
+        \label{eqn:SkinDepthCylinder}
+    \end{equation}
+    where $R$ is the inner radius of the tube and $R+d$ is the outer radius. This $B(d)$ represents 
+    the magnetic field present within a tube of wall thickness $d$. It's important to note here 
+    that the original field $B(0)$ is taken as being uniform, as well as the resultant field $B(d)$. 
+    This means that measuring the field at any point within the tube will return the same result. 
+
+    \section{Aim}\label{sec:Aim}
+    The aim of this experiment is to investigate the shielding effect of a copper tube in a 
+    time-varying magnetic field and to find the conductivity of the copper tube using 
+    \autoref{eqn:SkinDepthCylinder} by varying the frequency of the magnetic field and fitting 
+    the equation to the experimental data. 
+
+    \section{Apparatus}\label{sec:Apparatus}
+    \begin{itemize}
+        \item Signal generator producing a sinusoidal AC current
+        \item Audio amplifier
+        \item Ammeter
+        \item Helmholtz coil with 80 winds on each coil
+        \item Axial search coil with 200 winds
+        \item Oscilloscope 
+        \item Copper tube with inner radius $R=\SI{20\pm0.1e-3}{\metre}$ and wall thickness 
+        $d=\SI{1\pm0.1e-3}{\metre}.$
+    \end{itemize}
+    In order to produce the time-varying magnetic field we used a signal generator feeding into 
+    an audio amplifier, to control the amplitude of the current, which in turn fed into a 
+    Helmholtz coil, which is two identical coils connected in series, separated by a gap. This 
+    is used in order to create a more stable magnetic field than if we were to use just one. 
+    On this circuit is an ammeter connected in series in order to monitor the amplitude of the 
+    current (in rms) to make sure it doesn't exceed 1 A or else the coils would heat up and 
+    distort the sinusoidal current. \newline
+    Along with this we had an axial search coil, aligned in the same way as the two larger coils, 
+    in the middle of the two and connected to an oscilloscope to monitor the emf induced in the 
+    axial coil. Lastly we had a copper tube that would fit over the axial coil.
+
+    \section{Method}\label{sec:Method}
+    With a sinusoidal AC current being supplied by the signal generator and the amplitude of this 
+    current being kept below 1 A by adjusting the audio amplifier, we varied the frequency 
+    of the supplied signal from 100 Hz to 5 kHz, measuring the induced voltage at each frequency 
+    with and without the copper tube around the axial coil. Looking at \autoref{eqn:SkinDepthCylinder}, 
+    we can see that the ratio between the reduced magnetic field $B(d)$ and the magnetic field 
+    without any shielding $B(0)$ should give us
+    \begin{equation}
+        \frac{B(d)}{B(0)}=\frac{1}{\sqrt{1+(Rd/\frac{2}{\mu\sigma\omega})^2}}
+        \label{eqn:TheoreticalModel}
+    \end{equation}
+    Taking our measurements of the induced voltage with and without shielding and finding their 
+    ratio should give us the same result. This is a consequence of Faraday's Law which says 
+    \begin{equation}
+        \epsilon = -N_a \frac{d}{dt}\int \vec{B}\cdot d\vec{A}\approx-N_a A \frac{dB}{dt}
+        \label{eqn:FaradaysLaw}
+    \end{equation}
+    where $N_a$ is the number of winds in a search coil and $A$ is the cross-sectional area of 
+    that coil. Since we're interested in amplitudes and the amplitude of our supplied $B$ does 
+    not change with respect to time, we find the relation 
+    \begin{equation}
+        |\epsilon|\approx N_a A |B|
+        \label{eqn:emfToB}
+    \end{equation}
+    for the amplitudes of induced emf and magnetic field. From this we find 
+    \begin{equation*}
+        \frac{B(d)}{B(0)}\approx \frac{N_a A \epsilon(d)}{N_a A \epsilon(0)}=\frac{\epsilon(d)}{\epsilon(0)}
+    \end{equation*}
+    so we did not need to do any conversions, we only needed to compare induced emfs. Plotting the 
+    ratio of emfs above against angular frequency $\omega$, we then used the value for the 
+    permeability of copper, $\mu=\SI{1.256629e-6}{\henry/\metre}$, and used 
+    \texttt{scipy.optimize.curve\_fit} to fit \autoref{eqn:TheoreticalModel} to the plotted data, 
+    thus finding the only unknown parameter $\sigma$, the conductivity. 
+
+    \section{Results}\label{sec:Results}
+    \begin{figure}[H]
+        \begin{center}
+           \scalebox{.7}{\subimport{Data}{SkinEffect.pgf}}
+           \caption{Plot of the ratio between shielded emf and non-shielded emf induced in an axial 
+           search coil placed within a Helmholtz coil, against the angular frequency of the magnetic 
+           field inducing the emf. The theoretical model is fitted to the data with 
+           \texttt{curve\_fit} to find the conductivity of the copper tube shielding the axial coil.}
+           \label{fig:SkinEffect}
+        \end{center}
+    \end{figure}
+    The fitting to the data shown in \autoref{fig:SkinEffect} gave us a value for the 
+    conductivity of copper:
+    \begin{equation*}
+        \sigma=\num{1958.9\pm1.2e4}
+    \end{equation*}
+    
+    \section{Discussion and Recommendations}\label{sec:DiscussionRecommendations}
+    
+    
+
+\end{document}

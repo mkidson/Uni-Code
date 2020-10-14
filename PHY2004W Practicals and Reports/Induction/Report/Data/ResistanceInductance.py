@@ -3,7 +3,7 @@ import numpy as np
 from scipy.optimize import curve_fit
 from numpy import cos, pi, sin, sqrt, exp, random
 import matplotlib
-matplotlib.use('pgf')
+# matplotlib.use('pgf')
 matplotlib.rcParams.update({
     'pgf.texsystem': 'pdflatex',
     'font.family': 'serif',
@@ -40,6 +40,7 @@ def emfFromFreq(omega,R,L):
 # Things needed for curve_fit
 freqs=np.linspace(200*pi,4000*pi,N,endpoint=True)
 u=[sqrt((1e-2/(2*sqrt(3)))**2 + (2)**2)*0.5]*N
+print(u)
 p0=[10,0.01]
 # Jackknife curve_fitting
 jackknifeData = np.zeros((4, N, N-1))
@@ -80,5 +81,5 @@ plt.plot(freqs,yfit,'r',label='curve\_fit Approximation')
 plt.xlabel('Angular Frequency $\omega$ (rad/s)')
 plt.ylabel('Amplitude of Voltage Across the Large Coil (V)')
 plt.legend()
-# plt.show()
-plt.savefig(r'PHY2004W Practicals and Reports\Induction\Report\Data\ResistanceInductance.pgf')
+plt.show()
+# plt.savefig(r'PHY2004W Practicals and Reports\Induction\Report\Data\ResistanceInductance.pgf')
