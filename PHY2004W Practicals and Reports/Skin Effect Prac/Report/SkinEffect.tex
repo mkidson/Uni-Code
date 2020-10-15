@@ -64,6 +64,7 @@
     the equation to the experimental data. 
 
     \section{Apparatus}\label{sec:Apparatus}
+    All measurement devices used have an uncertainty rating of 2\%.
     \begin{itemize}
         \item Signal generator producing a sinusoidal AC current
         \item Audio amplifier
@@ -89,7 +90,12 @@
     With a sinusoidal AC current being supplied by the signal generator and the amplitude of this 
     current being kept below 1 A by adjusting the audio amplifier, we varied the frequency 
     of the supplied signal from 100 Hz to 5 kHz, measuring the induced voltage at each frequency 
-    with and without the copper tube around the axial coil. Looking at \autoref{eqn:SkinDepthCylinder}, 
+    with and without the copper tube around the axial coil. It is vital that the source is AC 
+    as a DC current in the coil will produce a magnetic field, but it won't be time-varying. The 
+    time-varying nature of the magnetic field is crucial as, by Faraday's Law, the emf induced 
+    in a conductor by a magnetic field is proportional to the time derivative of the magnetic 
+    field. With no time-variance, no emf is induced and so no field can be set up in the shielding 
+    material to oppose the original field. Looking at \autoref{eqn:SkinDepthCylinder}, 
     we can see that the ratio between the reduced magnetic field $B(d)$ and the magnetic field 
     without any shielding $B(0)$ should give us
     \begin{equation}
@@ -117,7 +123,13 @@
     ratio of emfs above against angular frequency $\omega$, we then used the value for the 
     permeability of copper, $\mu=\SI{1.256629e-6}{\henry/\metre}$, and used 
     \texttt{scipy.optimize.curve\_fit} to fit \autoref{eqn:TheoreticalModel} to the plotted data, 
-    thus finding the only unknown parameter $\sigma$, the conductivity. 
+    thus finding the only unknown parameter $\sigma$, the conductivity. To determine uncertainties 
+    we used the Jackknife Monte Carlo method of determining uncertainties of fitted parameters. 
+    The uncertainty on our data points is found from the 2\% uncertainty of the measurement device, 
+    propagated using the following formula. 
+    \begin{equation*}
+        u\left(\frac{x}{y}\right)=\left|\frac{x}{y}\right|\sqrt{\left(\frac{u(x)}{x}\right)^2+\left(\frac{u(y)}{y}\right)^2}
+    \end{equation*}
 
     \section{Results}\label{sec:Results}
     \begin{figure}[H]
@@ -137,7 +149,32 @@
     \end{equation*}
     
     \section{Discussion and Recommendations}\label{sec:DiscussionRecommendations}
+    Thanks to the magic of Google, we are able to find the agreed upon value for the conductivity 
+    of copper:
+    \begin{equation*}
+        \sigma=\num{5.96e7}
+    \end{equation*}
+    Comparing this value to ours, we see that they are within an order of magnitude of each other, 
+    but our value does not agree with the actual value within experimental uncertainty. There 
+    are a few possible reasons for this discrepancy. We only took 23 data points and this isn't 
+    really an appropriate amount of data to have when trying to accurately determine a property 
+    of a material such as conductivity. A possible source of uncertainty could be the measurement 
+    of the thickness of the copper tube. It could be that our measurement was off by a significant 
+    amount, which would likely affect the result. The uncertainty on the data points in \autoref{fig:SkinEffect} 
+    is also quite large at some points. This could be reduced with more accurate equipment, although 
+    it would likely not solve the problem of our $\sigma$ being roughly a third of the expected 
+    value. 
+
+    \section{Conclusion}\label{sec:Conclusion}
+    To conclude, we found a value for $\sigma$, the conductivity of copper, by examining the 
+    shielding effect of a copper tube on a roughly uniform time-varying magnetic field and 
+    fitting an appropriate equation to data. The value we found does not agree with the 
+    expected value but we have outlined some possible reasons for this. 
     
+    \newpage
+    \section{Appendix}\label{sec:Appendix}
+    \setcounter{figure}{0} \renewcommand{\thefigure}{A.\arabic{figure}}
+    \lstinputlisting[caption=Code for determining $\sigma$ and plotting the data,label=app:SkinEffect,style=appendix]{Data/SkinEffect.py}
     
 
 \end{document}

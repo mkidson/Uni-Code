@@ -3,7 +3,7 @@ import numpy as np
 from scipy.optimize import curve_fit
 from numpy import cos, pi, sin, sqrt, exp, random
 import matplotlib
-matplotlib.use('pgf')
+# matplotlib.use('pgf')
 matplotlib.rcParams.update({
     'pgf.texsystem': 'pdflatex',
     'font.family': 'serif',
@@ -83,5 +83,5 @@ plt.xlabel('Angular Frequency $\omega$ (rad/s)')
 plt.ylabel('$\epsilon(d)/\epsilon(0)$')
 plt.grid(color='#CCCCCC', linestyle=':')    
 plt.legend()
-# plt.show()
-plt.savefig(r'PHY2004W Practicals and Reports\Skin Effect Prac\Report\Data\SkinEffect.pgf')
+plt.show()
+# plt.savefig(r'PHY2004W Practicals and Reports\Skin Effect Prac\Report\Data\SkinEffect.pgf')

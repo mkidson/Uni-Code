@@ -3,4 +3,6 @@
 \contentsline {section}{\numberline {3}Apparatus}{1}{section.3}%
 \contentsline {section}{\numberline {4}Method}{2}{section.4}%
 \contentsline {section}{\numberline {5}Results}{3}{section.5}%
-\contentsline {section}{\numberline {6}Discussion and Recommendations}{3}{section.6}%
+\contentsline {section}{\numberline {6}Discussion and Recommendations}{4}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{4}{section.7}%
+\contentsline {section}{\numberline {8}Appendix}{5}{section.8}%
