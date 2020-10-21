@@ -1,13 +1,13 @@
 pascal=[[1],[1,1]]
-for i in range(2,128):
+for i in range(2,1003):
     print(i)
     x=[1]
     for j in range(1,i):
         x.append(pascal[i-1][j-1]+pascal[i-1][j])
     x.append(1)
-    print(len(x))
     pascal.append(x)
-    # print(pascal)
+    # if i%1000==0:
+    #     pascal=pascal[0:i-1]
 
 even=0
 odd=0
@@ -23,3 +23,4 @@ print(tot)
 print(even)
 print(odd)
 print(odd/tot)
+print(pascal)

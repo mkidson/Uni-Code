@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage[separate-uncertainty=true,group-digits=false]{siunitx}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,subfig,keyval2e,caption,import}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\title{Assignment 5}
+\author{KDSMIL001 \; MAM2000W 2IA}
+\date{\textbf{20 October 2020}}
+
+\begin{document}
+    \maketitle
+    \begin{enumerate}
+        \setcounter{enumi}{4}
+        \item \begin{enumerate}
+            \item False. Row $a$ could contain $e$ in, for example, column $b$, meaning that $a*b=e$. However it is not necessarily true that 
+            $b*a=e$ so the condition for an inverse of $a$ is not necessarily satisfied, so $a$ could not have an inverse.
+
+            \item False. $\mathbb{N}\cup\{0\}$ is a set which is closed under addition, which is a binary operation. The set has identity $e=0$. 
+            Every element $n$ in this set has an inverse $-n$, but this $-n$ is not in the set, except when $n=0$. So the set is not a group.
+
+            \item False. A group must have that every element in the group has an inverse which is itself in the group. In the case of the odd integers, any 
+            element is some $z\in\mathbb{Z}_{odd}$, so any multiplicative inverse of $z$ must be $z^{-1}=\frac{1}{z}$, which is not an integer, save for 
+            when $z=1$. Thus it is not a group. 
+            
+            \item False. Any group must be closed under its binary operator. The odd integers can be written as $2n+1,\; n\in\mathbb{Z}$, so adding two odd integers 
+            together we see 
+            \begin{equation*}
+                (2n+1)+(2n'+1)=2(\underbrace{n+n'+1}_{\in\mathbb{Z}})
+            \end{equation*}
+            which is even, thus the sum of any two odd integers is an even integer and thus not in the set, so the set is not closed under addition and thus isn't a group. 
+
+            \item True. Starting with $S_1$, we see that 
+            \begin{equation*}
+                (0)(0)=(0)=(0)(0)
+            \end{equation*}
+            So the operation is commutative and $S_1$ is abelian. For $S_2$, we can see that 
+            \begin{equation*}
+                (0,1)(1,0)=(0,1)=(1,0)(0,1)
+            \end{equation*}
+            Again, the operation is commutative over all elements of $S_2$, so it is abelian. For $n\geq 3$, we can show that $S_n$ is non-abelian by first looking 
+            at $n=3$:
+            \begin{align*}
+                (1,0,2)(2,0,1)&=(2,1,0)\\
+                (2,0,1)(1,0,2)&=(0,2,1)
+            \end{align*}
+            We can see that the operation is not commutative for every element in the set. It is simple to see that, given any value of $n$ we can construct 
+            permutations which are the identity aside from the first 3 element, which we can set to the two permutations used above. If we then perform the operation 
+            on these two permutations we will find the same result, that it is not commutative for any $n\geq 3$, thus any $S_n$ is non-abelian for $n\geq 3$.
+        \end{enumerate}
+    \end{enumerate}
+
+\end{document}
