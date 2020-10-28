@@ -1,0 +1,158 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage[separate-uncertainty=true,group-digits=false]{siunitx}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,subfig,keyval2e,caption,import}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\title{Waves}
+\author{KDSMIL001 \; PHY2004W PHYLAB2}
+\date{\textbf{26 October 2020}}
+
+\begin{document}
+    \begin{titlepage}
+        \maketitle
+        \center
+        \tableofcontents
+    \end{titlepage}
+    
+    \section{Introduction}\label{sec:Introduction}
+    Electromagnetic waves can propagate on a transmission line as well as in free space. One 
+    example of such a transmission line is the coaxial cable, most commonly known as the cable 
+    that connects a TV set to an aerial. 
+
+    \section{Aim}\label{sec:Aim}
+    The standard for propagating electromagnetic (EM) waves is those propagating in a vacuum, 
+    the speed of which is well established as $c=\SI{299792458}{\metre/\second}$, but in this 
+    experiment we are more interested in the speed of propagation for EM waves in the coaxial 
+    cable. We will also determine the characteristic impedance of the cable. 
+
+    \section{Theory}\label{sec:Theory}
+    Coaxial cables are a special type of Transmission Line, with an inner and outer conductor 
+    separated by some dielectric. These cables have some intrinsic properties, namely a 
+    capacitance and inductance per unit length, which are
+    \begin{equation*}
+        C=\frac{2\pi\epsilon}{\ln(r_{out}/r_{in})}\hspace{20pt}\text{and}\hspace{20pt}L=\frac{\mu}{2\pi}\ln\frac{r_{out}}{r_{in}}
+    \end{equation*}
+    where we have $\epsilon$ and $\mu$ are the permittivity and permeability of the dielectric 
+    in the cable respectively. For our case, we will actually take $\mu=\mu_0=\SI{4\pi e-7}{\henry/\metre}$. 
+    Finally $r_{out}$ and $r_{in}$ are the outer and inner radius of the cable, that is the outer 
+    radius of the outer and inner conductor respectively. For and EM wave in the cable, the 
+    electric and magnetic energy densities are equal, given by 
+    \begin{equation*}
+        E_E=\frac{1}{2}CV^2\hspace{20pt}\text{and}\hspace{20pt}E_B=\frac{1}{2}LI^2
+    \end{equation*}
+    where $V$ and $I$ are the the potential and current at a point in the cable. \newline
+    \textbf{Exercise 1:} We want to find an expression for the characteristic impedance $Z_0$ 
+    of the cable, so we have 
+    \begin{align*}
+        Z_0&=\frac{V}{I}=\sqrt{\frac{E_E2}{C}}\sqrt{\frac{L}{2E_B}}\\
+        E_E&=E_B\\
+        \implies Z_0&=\sqrt{\frac{L}{C}}=\sqrt{\frac{\mu}{2\pi}\ln\frac{r_{out}}{r_{in}}\frac{\ln(r_{out}/r_{in})}{2\pi\epsilon}}\\
+        &=\frac{1}{2\pi}\sqrt{\frac{\mu}{\epsilon}}\ln\frac{r_{out}}{r_{in}}
+    \end{align*}
+    Another characteristic of the coaxial cable is that EM waves will propagate through it at 
+    a speed 
+    \begin{equation}
+        v=\frac{c}{\sqrt{\epsilon\mu}}=\frac{c}{n}
+        \label{eqn:PropagationSpeedInMedium}
+    \end{equation}
+    where we call $n$ the refractive index of the dielectric (at the specific frequency of 
+    propagation). \newline
+    For these cables, if the characteristic impedance changes at some point, the propagation 
+    of the wave will be affected, namely the wave will be partially reflected. The reflection 
+    coefficient for a purely resistive load $R$ is given by 
+    \begin{equation}
+        \mathcal{R}=\frac{R-Z_0}{R+Z_0}
+        \label{eqn:ReflectionCoefficient}
+    \end{equation}
+    Note that 
+    \textbf{Exercise 2:} We want to show that $\lim_{R\rightarrow\infty} \mathcal{R}=1$:
+    \begin{align*}
+        \mathcal{R}&=\frac{R-Z_0}{R+Z_0}\\
+        \lim_{R\rightarrow\infty} \frac{R-Z_0}{R+Z_0}&=\lim_{R\rightarrow\infty} \frac{1-\frac{Z_0}{R}}{1+\frac{Z_0}{R}}\\
+        &=\frac{1-0}{1+0}=1
+    \end{align*}
+    By measuring the time it takes for reflections of pulses to return to the start of the cable, 
+    we will be able to determine the speed of propagation for the waves in the cable with a known 
+    length. A similar technique can be used for more extended waves, such as sine waves. \newline
+    \newline
+    For the pulses we would expect that, depending on the conditions at the end of the cable, 
+    we will have different types of reflection. For an open circuit, that is the cable is not 
+    connected to anything on the other side, as we have shown in Exercise 2, $\mathcal{R}=1$, so 
+    there will be perfect reflection of the pulse. For a short circuit, $R=0$, so we will have 
+    $\mathcal{R}=-1$, resulting in a perfectly reflected wave, but with negative voltage.\newline 
+    \newline
+    For the extended sine wave, we expect to see particular resonant frequencies depending on 
+    the length of the cable, resulting in standing waves. Again these frequencies depend on the 
+    condition at the end of the cable. For an open circuit, the resonant frequencies will be 
+    \begin{equation}
+        f_n=n\frac{v}{4L},\;\;\;\; n=1,3,5\dots
+        \label{eqn:OpenResonantFrequency}
+    \end{equation}
+    For a short circuit, we expect 
+    \begin{equation}
+        f_n=n\frac{v}{2L},\;\;\;\; n=1,2,3\dots 
+        \label{eqn:ShortResonantFrequency}
+    \end{equation}
+    With both of these, we obviously expect a fundamental frequency with harmonics on top of that, 
+    hence the multiple nodes. 
+    
+    \section{Apparatus}\label{sec:Apparatus}
+    \begin{itemize}
+        \item Signal generator (with duty cycle control).
+        \item Oscilloscope.
+        \item Digital multimeter.
+        \item Coaxial cable of length $\SI{55.845\pm0.005}{\metre}$ with switch to switch termination 
+        end between short circuit, open circuit, and variable resistance. 
+    \end{itemize}
+    We set up the signal generator to feed into the coaxial cable, measuring the voltage at that 
+    point with the oscilloscope. 
+
+    \section{Method}\label{sec:Method}
+    \subsection{Propagation Speed of the Wave}\label{sec:PropagationSpeed}
+    In this section we aimed to determine the speed at which EM waves propagate through the 
+    coaxial cable. We did this by two methods. \newline
+    \newline
+    Firstly we looked at the pulses. We know the length of the cable, so all we needed to do was 
+    time how long it took for the pulse to travel from the start of the cable to the end, be 
+    reflected, and return to the start. The velocity will simply be given by 
+    \begin{equation}
+        v=\frac{2L}{\Delta t}
+        \label{eqn:PulseVelocity}
+    \end{equation}
+    To measure measure this $\Delta t$ we set the signal generator to a square wave with the 
+    duty cycle to a minimum (20\%), and set the frequency to 1MHz. We measured $\Delta t$ for 
+    both the open and short circuit by looking at the oscilloscope. Using these values we 
+    could find $v$ for each. \newline
+    \newline
+    The second method we used to find $v$ was by using \autoref{eqn:OpenResonantFrequency} and 
+    \autoref{eqn:ShortResonantFrequency}, varying the frequency of a sine wave supplied by the 
+    signal generator to try find the first and second resonant frequencies of both the open and 
+    closed circuit. We could then find $v$ for both. 
+
+    \subsection{Characteristic Impedance $Z_0$}\label{sec:CharacteristicImpedance}
+    In this section we aimed to find the characteristic impedance $Z_0$ of the coaxial cable. 
+    For this we use the variable resistance setting for the termination end of the cable. We know 
+    from \autoref{eqn:ReflectionCoefficient} that $\mathcal{R}=0$ when $R=Z_0$, and we can find 
+    this resistance by looking at the oscilloscope for when the reflections vanish completely 
+    while varying the resistance. 
+
+
+\end{document}
