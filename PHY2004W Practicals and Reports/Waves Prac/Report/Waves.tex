@@ -126,7 +126,7 @@
     point with the oscilloscope. 
 
     \section{Method}\label{sec:Method}
-    \subsection{Propagation Speed of the Wave}\label{sec:PropagationSpeed}
+    \subsection{Propagation Speed of the Wave}\label{sec:PropagationSpeedMethod}
     In this section we aimed to determine the speed at which EM waves propagate through the 
     coaxial cable. We did this by two methods. \newline
     \newline
@@ -147,12 +147,144 @@
     signal generator to try find the first and second resonant frequencies of both the open and 
     closed circuit. We could then find $v$ for both. 
 
-    \subsection{Characteristic Impedance $Z_0$}\label{sec:CharacteristicImpedance}
+    \subsection{Characteristic Impedance}\label{sec:CharacteristicImpedanceMethod}
     In this section we aimed to find the characteristic impedance $Z_0$ of the coaxial cable. 
     For this we use the variable resistance setting for the termination end of the cable. We know 
     from \autoref{eqn:ReflectionCoefficient} that $\mathcal{R}=0$ when $R=Z_0$, and we can find 
     this resistance by looking at the oscilloscope for when the reflections vanish completely 
     while varying the resistance. 
 
+    \section{Results}\label{sec:Results}
+    \subsection{Propagation Speed of the Wave}\label{sec:PropagationSpeedResults}
+    First, the pulses.
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[width=.65\textwidth]{Open_Zoom.jpg}
+            \caption{Oscilloscope display showing voltage across the start of an open circuit 
+            coaxial cable with 1 MHz square wave signal with duty cycle 20\%.}
+            \label{fig:OpenCircuitPulse}
+        \end{center}
+    \end{figure}
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[width=.65\textwidth]{Short_Zoom.jpg}
+            \caption{Oscilloscope display showing voltage across the start of a short circuit 
+            coaxial cable with 1 MHz square wave signal with duty cycle 20\%.}
+            \label{fig:ShortCircuitPulse}
+        \end{center}
+    \end{figure}
+    Measuring from the peak of the first spike of the larger signal to the peak of the first 
+    spike of the smaller signal we find a $\Delta t$ of $12\pm1$ small divisions. Looking at the 
+    time scale of the oscilloscope we see that each small division is 50 ns. The uncertainty of 
+    this measurement comes from 2\% of the time scale, as well as from the triangular pdf 
+    associated with analogue measurements. We have, for both the open and short circuits:
+    \begin{align*}
+        \Delta t&=\SI{600e-9}{\second}\\
+        u(\Delta t)&=\sqrt{\left(\frac{2\cdot \num{50e-9}}{2\sqrt{6}}\right)^2 + (0.02\cdot \num{250e-9})^2}\\
+        \implies \Delta t&=\SI{600\pm21e-9}{\second}
+    \end{align*}
+    Using \autoref{eqn:PulseVelocity}, we can find $v$. We have $L=\SI{55.845\pm0.005}{\metre}$ so 
+    $2L=\SI{111.69\pm0.01}{\metre}$. The uncertainty comes from the uncertainty propagation for 
+    multiplication, giving us
+    \begin{align*}
+        v&=\frac{111.69}{\num{600e-9}}=\SI{186150000}{\metre\cdot\second^{-1}}\\
+        u(v)&=v\sqrt{\left(\frac{u(\Delta t)}{\Delta t}\right)^2 + \left(\frac{u(2L)}{2L}\right)^2}\\
+        &=186150000\sqrt{\left(\frac{\num{21e-9}}{\num{600e-9}}\right)^2 + \left(\frac{0.01}{111.69}\right)^2}\\
+        &=6515271.317\\
+        \implies v_{open}=v_{short}&=\SI{186200000\pm6500000}{\metre\cdot\second^{-1}}
+    \end{align*}
+    \newline
+    Now moving on to the resonant frequencies:
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c c}
+            \textbf{Open} & \\
+            \hline
+            $f_1$: & $\SI{830\pm1e3}{\hertz}$\\
+            $f_3$: & $\SI{2.5\pm0.1e6}{\hertz}$\\
+            \hspace{3pt} & \\
+            \textbf{Short} & \\
+            \hline
+            $f_1$: & $\SI{1.7\pm0.1e6}{\hertz}$\\
+            $f_2$: & $\SI{3.4\pm0.1e6}{\hertz}$
+        \end{tabular}
+    \end{table}
+    \noindent
+    Using these in \autoref{eqn:OpenResonantFrequency} and \autoref{eqn:ShortResonantFrequency}, 
+    we find, for the open circuit 
+    \begin{align*}
+        v_1&=\frac{4f_1L}{1}=185405400\\
+        v_3&=\frac{4f_3L}{3}=186150000
+    \end{align*}
+    and for the short circuit
+    \begin{align*}
+        v_1&=\frac{2f_1L}{1}=189873000\\
+        v_2&=\frac{2f_2L}{2}=189873000
+    \end{align*}
+    Uncertainty on these values comes from the multiplicative propagation formula, as well as 
+    propagation when multiplying by a constant. For the open circuit we find
+    \begin{align*}
+        u(v_1)&=v_1\sqrt{\left(\frac{u(f_1)}{f_1}\right)^2+\left(\frac{u(L)}{L}\right)^2}\\
+        &=223995.9473\\
+        u(v_3)&=v_3\sqrt{\left(\frac{u(f_3)}{f_3}\right)^2+\left(\frac{u(L)}{L}\right)^2}\\
+        &=744698.653\\
+    \end{align*}
+    And for the short circuit:
+    \begin{align*}
+        u(v_1)&=v_1\sqrt{\left(\frac{u(f_1)}{f_1}\right)^2+\left(\frac{u(L)}{L}\right)^2}\\
+        &=11169012.94\\
+        u(v_2)&=v_2\sqrt{\left(\frac{u(f_2)}{f_2}\right)^2+\left(\frac{u(L)}{L}\right)^2}\\
+        &=5584506.469\\
+    \end{align*}
+    And so we have 
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c c}
+            \textbf{Open} & \\
+            \hline
+            $v_1$: & $\SI{185400000\pm220000}{\metre\cdot\second^{-1}}$\\
+            $v_3$: & $\SI{186150000\pm740000}{\metre\cdot\second^{-1}}$\\
+            \hspace{3pt} & \\
+            \textbf{Short} & \\
+            \hline
+            $v_1$: & $\SI{189000000\pm11000000}{\metre\cdot\second^{-1}}$\\
+            $v_2$: & $\SI{189870000\pm560000}{\metre\cdot\second^{-1}}$
+        \end{tabular}
+    \end{table}
+    \noindent
 
+    \subsection{Characteristic Impedance}\label{sec:CharacteristicImpedanceResults}
+    After finding the frequency which results in having no reflection, we measured it to be 
+    \begin{equation*}
+        R=\SI{47.1\pm4.0}{\ohm}
+    \end{equation*}
+    using a digital multimeter. This uncertainty is the uncertainty associated with a digital 
+    reading, $\frac{a}{2\sqrt3}$, combined with the 2\% uncertainty rating of the multimeter, 
+    which was set to the $200\Omega$ scale. From this we can simply see that 
+    \begin{equation*}
+        Z_0=\SI{47.1\pm4.0}{\ohm}
+    \end{equation*}
+
+    \section{Discussion and Recommendations}\label{sec:DiscussionRecommendations}
+    Looking first at the propagation speeds of the EM waves in the coaxial cable, the likely 
+    most accurate method would be the first method: measuring the time it takes for a pulse 
+    to travel the length of the cable. We say this because the second method requires 
+    judgement of the resonant frequency simply by looking at the screen of the oscilloscope as 
+    well as tuning the frequency with a signal generator that only increases in relatively 
+    large increments. For this reason we will take the first result as being the most accurate 
+    and judging the rest off of that one. \newline
+    All of the standing wave speeds agree with the pulse speed within their own experimental 
+    uncertainty, except for the second short circuit speed. It still, however, agrees within the 
+    uncertainty of the pulse speed.\newline
+    \newline
+    Regarding the characteristic impedance of the coaxial cable, we do not have a theoretical 
+    estimate for $Z_0$, so we have nothing to compare our value to.
+
+    \section{Conclusion}\label{sec:Conclusion}
+    To conclude, we found that we could use two methods to determine the speed of propagation 
+    for EM waves in a given coaxial cable and that both of these methods are quite reliable, both 
+    supplying values that agree with each other within experimental uncertainty. We also 
+    found a value for the characteristic impedance of the coaxial cable, but we could not 
+    confirm whether it was a reasonable value.
+    
 \end{document}

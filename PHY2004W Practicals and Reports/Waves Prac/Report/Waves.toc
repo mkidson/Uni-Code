@@ -4,4 +4,9 @@
 \contentsline {section}{\numberline {4}Apparatus}{3}{section.4}%
 \contentsline {section}{\numberline {5}Method}{3}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Propagation Speed of the Wave}{3}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Characteristic Impedance $Z_0$}{3}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.2}Characteristic Impedance}{3}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Results}{4}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Propagation Speed of the Wave}{4}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Characteristic Impedance}{6}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Discussion and Recommendations}{7}{section.7}%
+\contentsline {section}{\numberline {8}Conclusion}{7}{section.8}%
