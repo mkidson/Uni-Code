@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1604064881 "d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Waves Prac/Report/Waves.tex" "d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Waves Prac/Report/Waves.pdf" "Waves" 1604064885
+["pdflatex"] 1604153203 "d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Waves Prac/Report/Waves.tex" "d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Waves Prac/Report/Waves.pdf" "Waves" 1604153206
   "C:/Users/miles/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1588804792 10399695 ffe43b4bb0ff6150522197bb98f21504 ""
   "C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1589194786 4668661 9ae453ace9a92dff78aa4727c21b356f ""
   "D:/Program Files/MikTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1001775420 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -225,17 +225,17 @@
   "D:/Program Files/MikTeX/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
   "Open_Zoom.jpg" 1603900405 1305902 690f11a54204c1fe125620ffa58ed2b4 ""
   "Short_Zoom.jpg" 1603900341 1094654 67a388d56b51323a72ad05ae4dbc8ac1 ""
-  "Waves.aux" 1604064885 4311 51b81c8e8cb7307d9ada8d22c5943f1b "pdflatex"
-  "Waves.out" 1604064885 668 5abc69f5aafac0da68d2f4f52ceeda72 "pdflatex"
-  "Waves.tex" 1604064868 15570 5651c8bc6d0c972c79c43dead71cf1f4 ""
-  "Waves.toc" 1604064885 901 e74797d18f6c1468ac916cd807c25f73 "pdflatex"
-  "d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Waves Prac/Report/Waves.aux" 1604064885 4311 51b81c8e8cb7307d9ada8d22c5943f1b ""
-  "d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Waves Prac/Report/Waves.tex" 1604064868 15570 5651c8bc6d0c972c79c43dead71cf1f4 ""
+  "Waves.aux" 1604153206 4311 51b81c8e8cb7307d9ada8d22c5943f1b "pdflatex"
+  "Waves.out" 1604153206 668 5abc69f5aafac0da68d2f4f52ceeda72 "pdflatex"
+  "Waves.tex" 1604153201 15455 0d8b9429a701ab90d5395ba18e2a9b68 ""
+  "Waves.toc" 1604153206 901 e74797d18f6c1468ac916cd807c25f73 "pdflatex"
+  "d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Waves Prac/Report/Waves.aux" 1604153206 4311 51b81c8e8cb7307d9ada8d22c5943f1b ""
+  "d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Waves Prac/Report/Waves.tex" 1604153201 15455 0d8b9429a701ab90d5395ba18e2a9b68 ""
   (generated)
-  "Waves.toc"
-  "Waves.pdf"
-  "d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Waves Prac/Report/Waves.log"
   "Waves.aux"
+  "d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Waves Prac/Report/Waves.log"
+  "Waves.pdf"
   "Waves.log"
+  "Waves.toc"
   "Waves.out"
   "d:/Git Repositories/Uni-Code/PHY2004W Practicals and Reports/Waves Prac/Report/Waves.pdf"
