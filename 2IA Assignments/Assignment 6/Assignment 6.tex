@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage[separate-uncertainty=true,group-digits=false]{siunitx}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,subfig,keyval2e,caption,import}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\title{Assignment 6}
+\author{KDSMIL001 \; MAM2000W 2IA}
+\date{\textbf{30 October 2020}}
+
+\begin{document}
+    \maketitle
+    \begin{enumerate}
+        \setcounter{enumi}{2}
+        \item We can, in fact, drop the first condition. Provided $H$ is non-empty, we can choose some $h\in H$. 
+        Since $H$ is closed under inversion we have that $h^{-1}\in H$. Since $H$ is also closed under the group operation, 
+        we have that $e=hh^{-1}=h^{-1}h\in H$.
+
+        \item For $H$ to be a subgroup of $G$, it must pass the subgroup test.
+        \begin{itemize}
+            \item Take the identity $e\in G$. $e^2=ee=e$ and thus $e$ satisfies the condition allowing $e\in H$. 
+            \item If we take some $h_1, h_2\in H$, given that $G$ is abelian and $h_1,h_2\in G$, we have 
+            \begin{equation}
+                h_1h_2h_1h_2=h_1h_2h_2h_1=h_1eh_1=h_1h_1=e
+            \end{equation}
+            so $h_1h_2\in H$, i.e. $H$ is closed under the group operation of $G$.
+            \item Take some $h\in H$. We have that $h^2=hh=e=hh^{-1}$ under $G$, and by left cancellation law, we have that $h=h^{-1}$, 
+            so $h^{-1}\in H$.
+        \end{itemize}
+        Thus $H$ passes the subgroup test. 
+
+        \item For $H\cap K$ to be a subgroup of $G$, it must pass the subgroup test.
+        \begin{itemize}
+            \item $H$ and $K$ are subgroups of $G$, so we know that if $e$ is the identity of $G$ then $e\in H$ and $e\in K$. 
+            It is simple to see then that $e\in H\cap K$.
+            \item We know that $H$ and $K$ are closed under the group operation, which we will call $*$. Thus, given some 
+            $q_1,q_2\in H\cap K$, we know that $q_1,q_2\in H$ and $q_1,q_2\in K$. Since $H$ and $K$ are subgroups of $G$, they must be closed under $*$ and so it 
+            must be that $q_1*q_2\in H$ and $q_1*q_2\in K$, and so clearly $q_1*q_2\in H\cap K$. So $*$ is closed under $H\cap K$. 
+            \item Given some $q\in H\cap K$, we know then that $q\in H$ and $q\in K$. Since $H$ and $K$ are subgroups of $G$, they 
+            must be closed under inversion, so $q^{-1}\in H$ and $q^{-1}\in K$. Clearly this means $q^{-1}\in H\cap K$, so $H\cap K$ is closed under inversion.
+        \end{itemize}
+        Thus $H\cap K$ passes the subgroup test. 
+    \end{enumerate}
+
+\end{document}
