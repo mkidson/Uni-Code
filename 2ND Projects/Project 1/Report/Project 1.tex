@@ -1,0 +1,239 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage[separate-uncertainty=true,group-digits=false]{siunitx}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,subfig,keyval2e,caption,import}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\title{Chaotic Ingredients}
+\author{KDSMIL001 \; MAM2046W 2ND}
+\date{\textbf{10 November 2020}}
+
+\begin{document}
+    \maketitle
+    
+    \section{Introduction}\label{sec:Introduction}
+    The purpose of this project is to investigate one of the simplest system in which chaotic 
+    behaviour can be observed. We know from the Poincar\'{e}-Bendixon theorem that we must 
+    be looking at a 3-dimensional system in order to have chaos, however to illustrate our 
+    point we begin in 2-D.
+
+    \section{A 2-dimensional Prologue}\label{sec:Prologue}
+    We consider the following system:
+    \begin{align*}
+        \dot x&=-y\\
+        \dot y&-x+ay
+    \end{align*}
+    where we have $a=0.1$. This system is clearly represented by 
+    \begin{equation}
+        \begin{pmatrix}
+            \dot x \\
+            \dot y
+        \end{pmatrix}=
+        \underbrace{
+        \begin{pmatrix}
+            0 & -1\\
+            1 & a
+        \end{pmatrix}}_{Jacobian}
+        \begin{pmatrix}
+            x \\
+            y
+        \end{pmatrix}
+        \label{eqn:System 1}
+    \end{equation}
+    The system clearly has a fixed point at the origin and we can analyse the stability of that 
+    fixed point by looking at the Jacobian. The trace is $\tau=a>0$ and the determinant is 
+    $\Delta=1>0$, meaning our fixed point is an unstable spiral. \autoref{fig:Q1} is a plot of 
+    a trajectory starting at $(0.3,0.3)$.
+    \begin{figure}[H]
+        \begin{center}
+           \scalebox{.7}{\subimport{Plots}{Q1.pgf}}
+           \caption{A trajectory of the system in \autoref{eqn:System 1} starting from $(0.3,0.3)$}
+           \label{fig:Q1}
+        \end{center}
+    \end{figure}
+    
+    \section{A 3-dimensional Linear System}\label{sec:3D Linear}
+    As stated before, we require 3 dimensions to even be able to observe chaotic behaviour, so 
+    let us add on to our original system the following:
+    \begin{equation*}
+        \dot z=a-bz
+    \end{equation*}
+    where $b$ is some positive parameter that we can vary. We can notice that $z$ is decoupled 
+    from the other two coordinates, and that it's stable, so it will return to its fixed point 
+    as time goes on, that fixed point being easily found to be $(0,0,\frac{a}{b})$. To confirm 
+    this stability in $z$, we look at the Jacobian:
+    \begin{equation}
+        J=
+        \begin{pmatrix}
+            0 & -1 & 0\\
+            1 & a & 0\\
+            0 & 0 & -b
+        \end{pmatrix}
+        \label{eqn:3D Linear Jacobian}
+    \end{equation}
+    The eigenvalues of this Jacobian are 
+    \begin{equation*}
+        \lambda_{1,2}=\frac{1}{2}(0.1\pm\sqrt{0.1^2-4}),\;\; \lambda_3=-b
+    \end{equation*}
+    Since $b$ is a positive parameter, we can see that $\lambda_3<0$, so the eigenvector 
+    associated with it is stable, while the other two eigenvectors are unstable, as their 
+    real part is $>0$. The eigenvector associated with $\lambda_3$ is 
+    \begin{equation*}
+        \begin{pmatrix}
+            0\\0\\1
+        \end{pmatrix}
+    \end{equation*}
+    so $z$ will always return to its fixed point, regardless of the behaviour of $x$ or $y$. 
+    To visualise this, we have plotted the trajectories from random initial conditions near to 
+    the fixed point for various values of $b$, and it's clear to see that $z$ always returns 
+    to its fixed point $\frac{a}{b}$.
+    \begin{figure}[H]%
+        \centering
+        \subfloat[$b=0.01$]{\scalebox{0.4}{\subimport{Plots}{Q2_0.01.pgf}}}
+        \,
+        \subfloat[$b=0.1$]{\scalebox{0.4}{\subimport{Plots}{Q2_0.1.pgf}}}
+        \,
+        \subfloat[$b=1$]{\scalebox{0.4}{\subimport{Plots}{Q2_1.pgf}}}
+        \,
+        \subfloat[$b=10$]{\scalebox{0.4}{\subimport{Plots}{Q2_10.pgf}}}
+        \caption{Trajectories starting from the same random initial conditions near to the 
+        origin, for the system in \autoref{eqn:3D Linear Jacobian}, for various values of $b$.}
+        \label{fig:Q2}
+    \end{figure}
+    As can be see from the plots in \autoref{fig:Q2}, any initial condition near to the origin 
+    will lead to an unstable spiral around the origin of the $xy$-plane, with the $z$ coordinate 
+    returning to $\frac{a}{b}$. For smaller $b$, the fixed point of $z$ is further from the origin, 
+    so it takes longer to get there. 
+
+    \section{A 3-dimensional Nonlinear System}\label{sec:3D Nonlinear}
+    Clearly just adding a third dimension doesn't automatically give us chaotic behaviour, it's 
+    a little bit more complicated than that. We actually need to have all three equations coupled, 
+    and feeding back into each other, so we change the system to
+    \begin{align*}
+        \dot x&=-y-z\\
+        \dot y&=x+ay\\
+        \dot z&=a+z(x-b)
+    \end{align*}
+    This means that as $x$ grows, so will z, leading to some lovely feedback. As always we want 
+    to examine this system to understand its fixed points and their stability. We can find the 
+    fixed points to be 
+    \begin{align*}
+        x&=\frac{b\pm\sqrt{b^2-0.04}}{2}\\
+        y&=-\frac{b\pm\sqrt{b^2-0.04}}{0.2}\\
+        z&=\frac{b\pm\sqrt{b^2-0.04}}{0.2}
+    \end{align*}
+    which we will call $\vec x_+$ and $\vec x_-$. The Jacobian of the system is
+    \begin{equation}
+        J=
+        \begin{pmatrix}
+            0 & -1 & -1\\
+            1 & a & 0 \\
+            z & 0 & x-b
+        \end{pmatrix}
+        \label{eqn:3D Nonlinear Jacobian}
+    \end{equation}
+    Expressing the eigenvalues of this matrix with respect to $b$ is extremely messy, so we have 
+    done you the service of calculating them for a wide range of values of $b$ in \autoref{tbl:Eigenvalues}.
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c|c c}
+            $b$ & $\vec x_+$ & $\vec x_-$\\
+            \hline
+            $0.01$ & $0.451-1.12j$ & $0.451+1.12j$\\
+             & $-0.451+1.12j$ & $-0.451-1.12j$\\
+             & $0.0951+0.099j$ & $0.0951-0.099j$\\
+            $0.02$ & $0.442-1.14j$ & $0.442+1.14j$\\
+             & $-0.442+1.14j$ & $-0.442-1.14j$\\
+             & $0.0902+0.0986j$ & $0.0902-0.0986j$\\
+            $0.1$ & $0.344-1.27j$ & $0.344+1.27j$\\
+             & $-0.345+1.27j$ & $-0.345-1.27j$\\
+             & $0.0505+0.0863j$ & $0.0505-0.0863j$\\
+            $0.2$ & $1.41j$ & $1.41j$\\
+             & $-1.41j$ & $-1.41j$\\
+             & $\num{-4.79e-19}$ & $\num{-4.79e-19}$\\
+            $1$ & $\num{-4.16e-06}+3.30j$ & $0.0234+1.02j$\\
+             & $\num{-4.16e-06}-3.30j$ & $0.0234-1.02j$\\
+             & $\num{8.99e-02}$ & $-0.937$\\
+            $2$ & $\num{-1.14e-06}+4.56j$ & $0.0398+1.003j$\\
+             & $\num{-1.14e-06}-4.56j$ & $0.0398-1.003j$\\
+             & $\num{9.5e-02}$ & $-1.97$\\
+            $10$ & $\num{-4.9e-08}+10.05j$ & $0.0495+0.999j$\\
+             & $\num{-4.9e-08}-10.05j$ & $0.0495-0.999j$\\
+             & $\num{9.9e-02}$ & $-9.9$\\
+            $20$ & $\num{-1.24e-08}+14.2j$ & $0.0499+0.999j$\\
+             & $\num{-1.24e-08}-14.2j$ & $0.0499-0.999j$\\
+             & $\num{9.95e-02}$ & $-19.9$\\
+        \end{tabular}
+        \caption{Eigenvalues of the system in \autoref{eqn:3D Nonlinear Jacobian} for various 
+        values of $b$.}
+        \label{tbl:Eigenvalues}
+    \end{table}
+    Note that these values have been rounded in order to be displayed easily but this doesn't 
+    affect our analysis, since all we are interested in is the sign of the real part of the 
+    eigenvalues as that tells us the stability of the respective eigenvector. What we can see 
+    from the eigenvalues is that for $b<0.2$ the real part of the first two eigenvalues for a 
+    given fixed point have opposite sign but equal magnitude, which is some sort of unstable 
+    spiral. For $b>0.2$ the two eigenvalues have the same real part for a given fixed point, 
+    indicating a stable spiral. For $b=0.2$ we expect stable orbits, at least in some sense. 
+    Any instability will come from the third eigenvalue. Speaking of, the third eigenvalue is 
+    always different in magnitude from the first two, but we notice that for $b<0.2$ it always 
+    has positive real part, indicating instability for both fixed points. For $b>0.2$ we see 
+    that it is stable for one fixed point and unstable for the other. 
+    \newline
+    \newline
+    Now we get to the exciting part, visualising some lovely trajectories. 
+    \begin{figure}[H]%
+        \centering
+        \subfloat[$b=0.01$]{\scalebox{0.4}{\subimport{Plots}{Q3_0.01.pgf}}}
+        \,
+        \subfloat[$b=0.02$]{\scalebox{0.4}{\subimport{Plots}{Q3_0.02.pgf}}}
+        \,
+        \subfloat[$b=0.1$]{\scalebox{0.4}{\subimport{Plots}{Q3_0.1.pgf}}}
+        \,
+        \subfloat[$b=0.2$]{\scalebox{0.4}{\subimport{Plots}{Q3_0.2.pgf}}}
+        \,
+        \subfloat[$b=1$]{\scalebox{0.4}{\subimport{Plots}{Q3_1.pgf}}}
+        \,
+        \subfloat[$b=2$]{\scalebox{0.4}{\subimport{Plots}{Q3_2.pgf}}}
+        \,
+        \subfloat[$b=10$]{\scalebox{0.4}{\subimport{Plots}{Q3_10.pgf}}}
+        \,
+        \subfloat[$b=20$]{\scalebox{0.4}{\subimport{Plots}{Q3_20.pgf}}}
+        \caption{Trajectories starting from the same random initial conditions near to the 
+        origin, for the system in \autoref{eqn:3D Nonlinear Jacobian}, for various values of $b$.}
+        \label{fig:Q3}
+    \end{figure}
+    \autoref{fig:Q3} shows the trajectories of the systems we found eigenvalues for earlier. We 
+    can clearly see that for $b>0.2$, everything looks nice and regular with $z$ collapsing to 
+    its fixed point pretty quickly and then leading to unstable spirals around the origin of 
+    the $xy$-plane. For $b<0.2$ however, things get a little crazy, with chaos-like behaviour 
+    being seen. The reason that we attribute to this behaviour is the fact that, for $b<0.2$, 
+    the fixed points of the system become complex, which leads to all sorts of mishaps and mistakes. 
+
+    \section{Conclusion}\label{sec:Conclusion}
+    We found that simply introducing a third dimension doesn't automatically create a chaotic 
+    system. This makes sense as pretty much all systems in the real world are three dimensional 
+    and don't devolve into chaos immediately. In fact they take millions of years to do it 
+    properly. Either way, it takes some careful consideration of the constructions of the system 
+    to allow for chaos, and even then it only seems to arise for, in our case, some values of $b$. 
+
+
+\end{document}
