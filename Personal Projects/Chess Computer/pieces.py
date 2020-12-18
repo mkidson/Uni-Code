@@ -1,37 +1,97 @@
-class Piece:
-    possibleMoves=[]
+from abc import ABC, abstractmethod
+
+class Piece(ABC):
     def __init__(self, side, pos, string, state=True):
         self.side=side
         self.pos=pos
         self.string=string
-        self.state=state
+        self.state=state # might be redundant as if the piece is not alive, then it won't be in the pieces dictionary
+        self.possMoves=[]
+        self.availPaths=[]
     
-    def possibleMoves(self):
+    @abstractmethod
+    def possibleMoves(self, pieces):
         pass
-
-    def position(self):
-        print(self.x,self.y)
     
+    @abstractmethod
     def move(self, destination):
-        if destination in self.possibleMoves:
-            self.x=destination[0]
-            self.y=destination[1]
-        else:
-            print('Uh oh, that\'s not a legal move, try again.')
+        pass
     
     def __str__(self):
         return self.string
     
 class Pawn(Piece):
-    def possibleMoves(self):
-        possibleMoves.append([self.x, self.y+1])
-        possibleMoves.append([self.x+1, self.y+1])
-        possibleMoves.append([self.x-1, self.y+1])
+    # to code not moving through other pieces, make each move a combination of many moves if the move is more than one square away
+    def possibleMoves(self, pieces):
+        self.possMoves=[]
+        self.availPaths=[]
+        if self.side==1:
+            self.availPaths.append([(self.pos[0],self.pos[1]+1)])
+            self.availPaths.append([(self.pos[0]+1,self.pos[1]+1)])
+            self.availPaths.append([(self.pos[0]-1,self.pos[1]+1)])
+        elif self.side==-1:
+            self.availPaths.append([(self.pos[0],self.pos[1]-1)])
+            self.availPaths.append([(self.pos[0]+1,self.pos[1]-1)])
+            self.availPaths.append([(self.pos[0]-1,self.pos[1]-1)])
+
+        for i in self.availPaths:
+            for c in pieces.keys():
+                if c in i:
+                    if pieces[c].side == self.side:
+                        self.availPaths.remove(i)
+                        break
+                    elif pieces[c].side != self.side:
+                        if i.index(c) != -1:
+                            self.availPaths.remove(i)
+                            break
+                elif c not in i:
+                    if i[-1][0]==self.pos[0]:
+                        pass
+                    elif i[-1][0]==self.pos[0]+1:
+                        self.availPaths.remove(i)
+                        break
+                    elif i[-1][0]==self.pos[0]-1:
+                        self.availPaths.remove(i)
+                        break
+
+        for i in self.availPaths:
+            self.possMoves.append(i[-1])
+            # for p in i:
+            #     for c in pieces.keys():
+            #         if p == c and self.side==pieces[c].side:
+            #             availPaths.remove(i)
+            #             break
+            #         elif p == c and self.side!=pieces[c].side and availPaths.index(p) == -1:
+            #             pass
+            #         elif p == c and self.side!=pieces[c].side:
+            #             availPaths.remove(i)
+            #             break
+            #         elif p != c:
+            #             pass
+        
+
+                    # whole fuckin thing doesn't work. shit
+                    # below if doesn't work, tries to only allow capture if the x-coord is different
+                    # if ((i == c) and (self.side!=pieces[c].side)) and not(self.pos[0]==i[0]):
+                    #     pass
+                    # elif i == c and self.side==pieces[c].side:
+                    #     self.possMoves.remove(i)
+                    # elif i!=c and i[0]==c[0]:
+                    #     pass
+            
+
+    
+    def move(self, destination):
+        self.pos=destination
+
 
 class Rook(Piece):
-    def possibleMoves(self):
-        possibleMoves.append([(self.x+1)%8, self.y])
+    def possibleMoves(self, pieces):
+        self.possMoves=[]
+        self.availPaths=[]
         
+        
+
 
 class Knight:
     pass
@@ -48,24 +108,6 @@ class King:
 class TestPiece(Piece):
     def move(self, destination):
         self.pos=destination
-
-        # start=input('Enter the square you are moving from: ')
-        # start=start.split(' ')
-        # start=[int(c) for c in start]
-        # end=input('Enter the square you are moving to: ')
-        # end=end.split(' ')
-        # end=[int(i) for i in end]
-        # val=True
-        # while val:
-        #     if 0<end[0]<9 and 0<end[1]<9:
-        #         self.x=end[0]
-        #         self.y=end[1]
-        #         val=False
-        #     else:
-        #         inpt=input('Uh oh, that\'s not a legal move. Try again: ')
-        #         inpt=inpt.split(' ')
-        #         inpt=[int(i) for i in inpt]
-        # # Board.update()# some way to find the name of the piece being moved
 
 
 if __name__ == "__main__":

@@ -2,8 +2,10 @@ from board import *
 from pieces import *
 
 board=Board()
-piece=TestPiece(1,(1,1),'wQ',True)
-board.addPiece(piece)
+wp1=Pawn(1,(4,7),'wp',True)
+bp1=Pawn(-1,(5,3),'bp',True)
+board.addPiece(wp1)
+board.addPiece(bp1)
 board.update()
-board.move()
-board.update()
+while True:
+    board.move()
