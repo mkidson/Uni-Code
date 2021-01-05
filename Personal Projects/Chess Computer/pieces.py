@@ -10,7 +10,7 @@ class Piece(ABC):
         self.availPaths=[]
     
     @abstractmethod
-    def possibleMoves(self, pieces):
+    def possibleMoves(self, boardState):
         pass
     
     @abstractmethod
@@ -22,7 +22,7 @@ class Piece(ABC):
     
 class Pawn(Piece):
     # to code not moving through other pieces, make each move a combination of many moves if the move is more than one square away
-    def possibleMoves(self, pieces):
+    def possibleMoves(self, boardState): # rework this whole thing
         self.possMoves=[]
         self.availPaths=[]
         if self.side==1:
@@ -89,6 +89,7 @@ class Rook(Piece):
     def possibleMoves(self, pieces):
         self.possMoves=[]
         self.availPaths=[]
+        
         
         
 
