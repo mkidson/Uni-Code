@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage[separate-uncertainty=true,group-digits=false]{siunitx}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,subfig,keyval2e,caption,import}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\title{Telescope Measurement Challenge}
+\author{KDSMIL001 \; PHY3004W PHYLAB3}
+\date{\textbf{date}}
+
+\begin{document}
+    \textbf{Measurement Challenge}\hspace{25pt}\textbf{KDSMIL001 \; PHY3004W PHYLAB3}
+
+    \section{Introduction}\label{sec:Introduction}
+    In this report we measure the distance between the two telescopes on the roof of the 
+    R.W. James building without going onto the roof of the building ourselves. 
+
+    \section{Apparatus and Method}\label{sec:Apparatus and Method}
+    To make this measurement we used a pair of shoes and a ruler. We went to the south side 
+    of the building, onto the balcony that runs almost the full width of the building, and 
+    approximated that the box the first telescope sits on starts at the same place the wall 
+    starts lower down and the box for the second telescope starts at the same place as a line 
+    that conveniently runs down the side of the building. Assuming both of these features 
+    are constructed with sufficient precision, measuring the distance between them will 
+    give us the same result as measuring the distance between the two boxes. Assuming that 
+    the telescopes are both situated directly in the centre of their respective boxes, 
+    measuring the distance between the start of the boxes is equivalent to measuring the 
+    distance between the peaks of the domes of the telescopes. \newline
+    We placed one shoe in front of the other for the whole distance we were measuring and 
+    then measured the length of the shoe. 
+
+    \section{Results}\label{sec:Results}
+    We found the distance to be 75 shoes long and each shoe to be $\SI{30.5}{\cm}$ long. 
+    Using this we find the distance between the peaks of the domes of the telescopes to be 
+    \begin{equation*}
+        \SI{2287.5}{\cm}=\SI{22.875}{\metre}
+    \end{equation*}
+    The uncertainty for this measurement comes from the uncertainty on the length of the 
+    shoe and the uncertainty on the number of shoe-lengths it took to cover the side of 
+    the building. On the measurement of the shoe we can use an analogue pdf with our 
+    interval $a=\SI{0.5}{\cm}$ to get $u(\text{shoe})=\frac{0.5}{2\sqrt{6}}=0.10$. Since 
+    our shoe was the smallest unit we had when measuring the side of the building, we must 
+    take that as our interval. So $a=1$ gives us 
+    $u(\text{shoe-lengths})=\frac{1}{2\sqrt{6}}=0.20$. This means that our final uncertainty 
+    is $\sqrt{(75\cdot 0.1)^2 + 0.2^2}=\SI{7.5}{\cm}$.
+
+    \section{Conclusion}\label{sec:Conclusion}
+    We found the distance between the telescopes to be $\SI{22.875\pm0.075}{\metre}$.
+    
+    
+
+\end{document}

@@ -10,7 +10,7 @@ matplotlib.rcParams.update({
     'pgf.rcfonts': False,
 })
 
-a=0
+a=1
 b=4
 dt=0.2
 u0=[1,0]
