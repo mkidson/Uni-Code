@@ -32,7 +32,7 @@ uSol=solve_ivp(particular, [t[0],t[-1]], u0, t_eval=t)
 vSol=solve_ivp(homog, [t[0],t[-1]], v0, t_eval=t)
 C=(1/3 - uSol.y[1][-1])/(vSol.y[1][-1])
 print(C)
-ySol=uSol.y[1]+C*vSol.y[1]
+ySol=uSol.y[0]+C*vSol.y[0]
 
 plt.figure(1)
 plt.plot(uSol.t, uSol.y[0], label='u', c='r')
