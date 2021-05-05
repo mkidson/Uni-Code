@@ -53,6 +53,6 @@ final=u_0+c
 
 plt.plot(rs, final, label='u(finite difference)')
 plt.plot(rs, u_0, label='u0')
-plt.plot(rs, c, label='c')
+# plt.plot(rs, c, label='c')
 plt.legend()
 plt.show()
