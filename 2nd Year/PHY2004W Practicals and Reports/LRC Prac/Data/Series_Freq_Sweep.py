@@ -12,7 +12,7 @@ matplotlib.rcParams.update({
     'pgf.rcfonts': False,
 })
 # Extracting all the relevant data, sorting it into our data array, for use later
-file = open('Series_Freq_Sweep.txt', 'r')
+file = open('2nd Year\PHY2004W Practicals and Reports\LRC Prac\Data\Series_Freq_Sweep.txt', 'r')
 header = file.readline()
 lines = file.readlines()
 N = len(lines)

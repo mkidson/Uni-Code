@@ -2,7 +2,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 from scipy.optimize import curve_fit
 import matplotlib 
-matplotlib.use("pgf")
+# matplotlib.use("pgf")
 matplotlib.rcParams.update({
     "pgf.texsystem": "pdflatex",
     'font.family': 'serif',
@@ -10,7 +10,7 @@ matplotlib.rcParams.update({
     'pgf.rcfonts': False,
 })
 # File reading and initialisation of variables
-file = open('PHY2004W Practicals and Reports\CP2\DampedData1.txt', 'r')
+file = open(r'2nd Year\PHY2004W Practicals and Reports\CP2\DampedData1.txt', 'r')
 header = file.readline()
 lines = file.readlines()
 i = 0
@@ -76,4 +76,5 @@ for i in range(len(popt)):
     print()
 # Finally saves the best fit curve
 plt.legend()
+plt.show()
 # plt.savefig('PHY2004W Computational/CP2/CP2a_Best_Fit.pgf')
