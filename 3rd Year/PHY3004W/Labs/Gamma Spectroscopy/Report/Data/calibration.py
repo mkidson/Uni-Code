@@ -3,7 +3,7 @@ import numpy as np
 from scipy.optimize import curve_fit
 from numpy import cos, pi, sin, sqrt, exp, random
 import matplotlib
-matplotlib.use('pgf')
+# matplotlib.use('pgf')
 matplotlib.rcParams.update({
     'pgf.texsystem': 'pdflatex',
     'font.family': 'serif',
@@ -51,5 +51,5 @@ plt.errorbar(unknownX, unknownY, unknownU, label='Unknown Source', fmt='s', caps
 plt.legend()
 plt.xlabel('Energy (keV)')
 plt.ylabel('Voltage (V)')
-# plt.show()
-plt.savefig(r'3rd Year\PHY3004W\Labs\Gamma Spectroscopy\Report\Plots\linearRegression.pgf')
+plt.show()
+# plt.savefig(r'3rd Year\PHY3004W\Labs\Gamma Spectroscopy\Report\Plots\linearRegression.pgf')

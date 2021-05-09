@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1620511125 "d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Gamma Spectroscopy/Report/GammaSpectroscopy_KDSMIL001.tex" "d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Gamma Spectroscopy/Report/GammaSpectroscopy_KDSMIL001.pdf" "GammaSpectroscopy_KDSMIL001" 1620511130
+["pdflatex"] 1620558416 "d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Gamma Spectroscopy/Report/GammaSpectroscopy_KDSMIL001.tex" "d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Gamma Spectroscopy/Report/GammaSpectroscopy_KDSMIL001.pdf" "GammaSpectroscopy_KDSMIL001" 1620558422
   "C:/Users/miles/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1588804792 10399695 ffe43b4bb0ff6150522197bb98f21504 ""
   "C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1620469948 4668661 9ae453ace9a92dff78aa4727c21b356f ""
   "D:/Program Files/MikTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -242,20 +242,20 @@
   "D:/Program Files/MikTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "D:/Program Files/MikTeX/tex/latex/wrapfig/wrapfig.sty" 1044403200 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "D:/Program Files/MikTeX/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
-  "GammaSpectroscopy_KDSMIL001.aux" 1620511129 3266 0557f5fd73b3d149bf445898823cd811 "pdflatex"
-  "GammaSpectroscopy_KDSMIL001.out" 1620511129 172 ab27e09172aded4d040b7ea95a4e6856 "pdflatex"
-  "GammaSpectroscopy_KDSMIL001.tex" 1620511123 10647 1fa9043056968eed738612e53405a03b ""
+  "GammaSpectroscopy_KDSMIL001.aux" 1620558421 4120 57b8de77270807cea852c8d0953d7db5 "pdflatex"
+  "GammaSpectroscopy_KDSMIL001.out" 1620558421 217 88fb04287d4eea7d39e45f9956a6c550 "pdflatex"
+  "GammaSpectroscopy_KDSMIL001.tex" 1620558415 11498 b568a0d17371e48f0fd8923ca3fd8299 ""
   "Plots/137Cs.pgf" 1620502541 165138 b387e7a3d89cb746dd5184897f986004 ""
   "Plots/22Na.pgf" 1620502539 173660 1bdca9219a5453e5e35d00e6f18b4a6e ""
   "Plots/Unknown.pgf" 1620502543 211006 b9f6493bf80d5bd9f57b15b188cde88e ""
   "Plots/linearRegression.pgf" 1620508850 65614 58c405d0a946980980fbbd24d19e1b57 ""
   "apparatus.pdf" 1620479793 34628 264e7b81f5b9bfc6c110a3551d8543de ""
-  "d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Gamma Spectroscopy/Report/GammaSpectroscopy_KDSMIL001.aux" 1620511129 3266 0557f5fd73b3d149bf445898823cd811 ""
-  "d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Gamma Spectroscopy/Report/GammaSpectroscopy_KDSMIL001.tex" 1620511123 10647 1fa9043056968eed738612e53405a03b ""
+  "d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Gamma Spectroscopy/Report/GammaSpectroscopy_KDSMIL001.aux" 1620558421 4120 57b8de77270807cea852c8d0953d7db5 ""
+  "d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Gamma Spectroscopy/Report/GammaSpectroscopy_KDSMIL001.tex" 1620558415 11498 b568a0d17371e48f0fd8923ca3fd8299 ""
   (generated)
+  "GammaSpectroscopy_KDSMIL001.pdf"
   "GammaSpectroscopy_KDSMIL001.aux"
   "GammaSpectroscopy_KDSMIL001.log"
   "d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Gamma Spectroscopy/Report/GammaSpectroscopy_KDSMIL001.pdf"
-  "GammaSpectroscopy_KDSMIL001.pdf"
   "GammaSpectroscopy_KDSMIL001.out"
   "d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Gamma Spectroscopy/Report/GammaSpectroscopy_KDSMIL001.log"
