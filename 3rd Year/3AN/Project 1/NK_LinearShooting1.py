@@ -23,6 +23,7 @@ print('h',h)
 
 r_span=np.array([a,b])
 rs=np.linspace(a,b,N)
+print(rs[-1])
 u_0=p*rs # Initial guess
 u_1=p # Initial guess first derivative
 particularICs=[0,0]

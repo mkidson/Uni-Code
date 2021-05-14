@@ -22,13 +22,13 @@ h=(b-a)/N
 print('h',h)
 
 r_span=np.array([a,b])
-rs=np.arange(a,b,h)
-print(len(rs))
-print(rs[-1])
+rs=np.linspace(a,b,N)
+h=rs[1]-rs[0]
 guess=p*rs # Initial guess
 particularICs=[0,0]
 homogICs=[0,1]
 
+print(np.where(rs==rs[0])[0][0])
 
 def UPrime(arr):
     out=[]
@@ -38,17 +38,55 @@ def UPrime(arr):
     out.append((arr[-2]-arr[-1])/h)
     return np.array(out)
 
-def f(r, u):
-    return -((1/r)*UPrime(u) + (u/(1-(u)**2))*(UPrime(u)**2 - (n**2)/(r**2)) + (u)*(1-(u)**2))
+def f(r, guess):
+    uPr=UPrime(guess)
+    ind=np.where(rs==r)[0][0]
+    return -((1/r)*uPr[ind] + (guess[ind]/(1-(guess[ind])**2))*(uPr[ind]**2 - (n**2)/(r**2)) + (guess[ind])*(1-(guess[ind])**2))
 
-def Q(r, u):
-    return -((1+(u)**2)/((1-(u)**2)**2)*(UPrime(u)**2 - (n**2)/(r**2)) + (1-3*(u)**2))
+def Q(r, guess):
+    uPr=UPrime(guess)
+    ind=np.where(rs==r)[0][0]
+    return -((1+(guess[ind])**2)/((1-(guess[ind])**2)**2)*(uPr[ind]**2 - (n**2)/(r**2)) + (1-3*(guess[ind])**2))
 
-def P(r, u):
-    return -((1/r) + (u)/(1-(u)**2)*(2*UPrime(u)))
+def P(r, guess):
+    uPr=UPrime(guess)
+    ind=np.where(rs==r)[0][0]
+    return -((1/r) + (guess[ind])/(1-(guess[ind])**2)*(2*uPr[ind]))
 
-def N(r, u):
-    return -UPrime(UPrime(u))+f(r, u)
+def N(r, guess):
+    uPr=UPrime(guess)
+    uPrPr=UPrime(uPr)
+    ind=np.where(rs==r)[0][0]
+    return -uPrPr[ind]+f(r, guess)
+
+# def f(r, guess):
+#     out=[]
+#     uPr=UPrime(guess)
+#     for ind, elem in enumerate(r):
+#         out.append(-((1/elem)*uPr[ind] + (guess[ind]/(1-(guess[ind])**2))*(uPr[ind]**2 - (n**2)/(elem**2)) + (guess[ind])*(1-(guess[ind])**2)))
+#     return out
+
+# def Q(r, guess):
+#     out=[]
+#     uPr=UPrime(guess)
+#     for ind, elem in enumerate(r):
+#         out.append(-((1+(guess[ind])**2)/((1-(guess[ind])**2)**2)*(uPr[ind]**2 - (n**2)/(elem**2)) + (1-3*(guess[ind])**2)))
+#     return out
+
+# def P(r, guess):
+#     out=[]
+#     uPr=UPrime(guess)
+#     for ind, elem in enumerate(r):
+#         out.append(-((1/elem) + (guess[ind])/(1-(guess[ind])**2)*(2*uPr[ind])))
+#     return out
+
+# def N(r, guess):
+#     out=[]
+#     uPr=UPrime(guess)
+#     uPrPr=UPrime(uPr)
+#     for ind, elem in enumerate(r):
+#         out.append(-uPrPr[ind]+f(r, guess))
+#     return out
 
 def particular(r,u):
     y=u[0]

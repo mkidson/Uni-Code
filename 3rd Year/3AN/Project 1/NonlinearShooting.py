@@ -14,7 +14,7 @@ matplotlib.rcParams.update({
 In order to make this work for vorticity of 3, N needs to be greater than 50 and maxIter needs to be greater than 200. Not sure why this is but it seems to be fine. 
 """
 
-n=1 # Vorticity
+n=2 # Vorticity
 a=0.001 # Start of r, should be 0 but that leads to problems
 b=10 # End of r, meant to be infinity
 
@@ -84,7 +84,7 @@ t=soln.t
 
 # Plotting details
 plt.plot(t, u, label='u')
-plt.plot(t,0.1*t)
+# plt.plot(t,0.1*t)
 # plt.plot(u_0_t, u_0, label='u0')
 
 plt.legend()
