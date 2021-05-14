@@ -11,7 +11,7 @@ matplotlib.rcParams.update({
 })
 
 """
-In order to make this work for vorticity of 3, N needs to be greater than 50 and maxIter needs to be greater than 200. Not sure why this is but it seems to be fine. 
+In order to make this work for vorticity of 3, N needs to be greater than 50 and maxIter needs to be greater than 200. Not sure why this is but it seems to be fine. Also this takes a little while to run fully so don't be surprised and think it's not working.
 """
 
 n=2 # Vorticity

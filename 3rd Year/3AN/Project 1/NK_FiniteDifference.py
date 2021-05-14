@@ -16,7 +16,7 @@ b=5 # End of r, should be infty but again we get issues
 alpha=0 # Left BC
 beta=1 # Right BC
 p=(beta-alpha)/(b-a) # Slope for initial guess, not used
-N=100 # Number of iterations. Too small and our approximations to the derivatibe get innacurate
+N=1000 # Number of iterations. Too small and our approximations to the derivative get innacurate. Make nice and big and you're gucci gang
 
 rs=np.linspace(a,b,N) # Array of rs. linspace not arange in order to keep spacing consistent with h and the last point in the array being b
 h=rs[1]-rs[0] # Getting an h to use later
@@ -85,7 +85,7 @@ tol=1 # Initial tolerance so the loop doesn't break.
 maxIter=100 # Just to put an upper limit so the program can reach the tolerance. doesn't always manage it but idc
 k=1 # Counter variable
 
-while k < maxIter and tol > 1e-3:
+while k < maxIter and tol > 1e-5:
     print('-------------------------------------------------------------------------')
     print(f'Iteration: {k}')
     # Gets arrays of p, q, and n excluding the endpoints, as i don't need the endpoints for the matrix eqn
@@ -112,7 +112,7 @@ while k < maxIter and tol > 1e-3:
     u+=z # Updates our guess
     k+=1
     # Plotting things
-    plt.figure()
-    plt.plot(rs, u, label='u(finite difference)')
-    plt.legend()
+plt.figure()
+plt.plot(rs, u, label='u(finite difference)')
+plt.legend()
 plt.show()
