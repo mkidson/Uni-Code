@@ -1,0 +1,135 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in, top=0.5in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage[separate-uncertainty=true,group-digits=false]{siunitx}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,subfig,keyval2e,caption,import,wrapfig}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+\begin{center}
+    {\huge 3AN Project 1: Newton Shooting}\\
+    \vspace{0.2in}
+    \textbf{KDSMIL001 | May 2021}    
+\end{center}
+
+\section{Introduction}\label{sec:Introduction}
+In this project we will investigate two different numerical methods for finding the solution to the second order nonlinear boundary value problem
+\begin{equation}
+\begin{gathered}
+    \frac{d^2u}{dr^2}+\frac{1}{r}\frac{du}{dr}+\frac{u}{1-u^2}\left[\left(\frac{du}{dr}\right)^2-\frac{n^2}{r^2}\right]+u(1-u^2)=0\\
+    u(0)=0, \;\; u(\infty)=1
+\end{gathered}
+\label{eqn:BVP}
+\end{equation}
+where $n=1,2,3,\dots$ is the vorticity. The methods we will use to solve this BVP are nonlinear shooting with Newton's method, and Newton-Kantorovich method with linear finite differences. We will implement both and assess their benefits and drawbacks. We are using \texttt{Python 3.9}.
+
+\section{Implementation}\label{sec:Implementation}
+\subsection{Nonlinear Shooting}
+\par The nonlinear shooting method works by replacing the BVP with a system of initial value problems and guessing one of the initial conditions, then correcting that guess using some root finding method. In our case we have the IVPs 
+\begin{equation}
+    \begin{gathered}
+        u''=f(r,u,u')=-\frac{1}{r}\frac{du}{dr}-\frac{u}{1-u^2}\left[\left(\frac{du}{dr}\right)^2-\frac{n^2}{r^2}\right]-u(1-u^2)\\
+        u(0)=0,\;\; u'(0)=p\\
+        z''=\frac{df}{du'}z'+\frac{df}{du}z\\
+        z(0)=0,\;\; z'(0)=1
+    \end{gathered}
+    \label{eqn:Nonlinear Shooting IVP}
+\end{equation}
+where $p$ is our shooting parameter, which we will update using Newton's method. The details of this replacement can be found in \textit{Numerical Analysis, Section 11.2} \cite{burden}. This kind of IVP is relatively easy to solve using a numerical integrator such as \texttt{scipy.integrate.solve\_ivp}, seen below. 
+
+\lstinputlisting[title=Code used to solve the IVP in \autoref{eqn:Nonlinear Shooting IVP}, style=inline, linerange={32-47, 57-57, 61-61, 72-73}, firstnumber=32]{NonlinearShooting.py}
+
+\par Note \texttt{u\_1} and \texttt{z\_1} are the values of $u$ and $z$ at the right BC, line 50 is the updating of the shooting parameter by Newton's method, and \texttt{alpha} and \texttt{beta} are the value of $u$ at the left and right BC respectively. 
+\par Regarding the left and right boundaries, we chose to only look at the interval $r\in[0.001,10]$. We began at 0.001 because we couldn't have a value of $r=0$ since our equations include a $\frac{1}{r}$ term and that would cause complications, and we ended at 10 since going any larger led to instability. The array of points along which we integrate, our $r$'s, had 100 points. This could not be below 50 as it would lead to the integrator failing to properly approximate the function, and couldn't be much larger than 100 as that leads to instability for an unknown reason, particularly with higher vorticities. 
+\par We iterated the code above with the end condition being 400 iterations or \texttt{u\_1-beta} $>\num{1e-5}$ for $n=1,2,3$ with the results in \autoref{fig:Nonlinear Shooting}.
+
+\begin{figure}[h]
+    \centering
+    \subfloat{\scalebox{0.65}{\subimport{Plots}{NonlinearShooting.pgf}}}
+    \,
+    \scalebox{0.75}{
+    \begin{tabular}{|c|c|c|c|}\hline
+        Vorticity & $n=1$ & $n=2$ & $n=3$ \\\hline
+        Initial $p$ & 0.1 & 0.1 & 0.1 \\\hline
+        Final $p$ & 1 & $\num{5e-4}$ & $\num{1.3e-7}$ \\\hline
+        Iterations & 227 & 196 & 210 \\\hline
+        Time Taken (s) & 6.52 & 5.58 & 6.33 \\\hline
+    \end{tabular}}
+    \caption{The solutions to \autoref{eqn:BVP} for $n=1,2,3$ solved using the nonlinear shooting method, as well as details of the convergence to the solution.}
+    \label{fig:Nonlinear Shooting}
+\end{figure}
+
+\subsection{Newton-Kantorovich}
+\par This method works by first linearising the BVP in question, and then we are able to use any method we would like to solve that linear problem. We choose the method of linear finite differences. 
+\par The linearisation of \autoref{eqn:BVP} gives us the system
+\begin{equation}
+    \begin{gathered}
+        z''-\frac{df}{du'}(r,u^n, (u^n)')z'-\frac{df}{du}(r,u^n, (u^n)')z=-(u^n)''+f(r,u^n, (u^n)')\\
+        z(0)=-u^n(0)+u(0)\\
+        z(\infty)-u^n(\infty)+u(\infty)\\
+        \text{where}\\
+        f(r,u^n, (u^n)')=-\frac{1}{r}(u^n)'-\frac{u^n}{1-(u^n)^2}\left[\left((u^n)'\right)^2-\frac{n^2}{r^2}\right]-u^n(1-(u^n)^2)\\
+    \end{gathered}
+    \label{eqn:NK System}
+\end{equation}
+where $u^n$ is the current guess of the solution $u$, and we update our guess at every step with $u^{n+1}=u^n+z$. 
+\par This linear system is solvable at each iteration by the method of finite differences, where solve a matrix equation. The details of this can be found in \textit{Numerical Analysis, Section 11.3} \cite{burden} but the essential parts of the implementation can be found in \autoref{NKCode}. \texttt{rs} is our vector of mesh points and \texttt{alpha} and \texttt{beta} are the left and right BCs respectively. 
+\par We solve the matrix equation $A\vec{z}=\vec{b}$ where $A$ and $\vec{b}$ are described on pg. 686 of \textit{Numerical Analysis} \cite{burden} and $\vec{z}$ is the solution we want, besides the start and end points, which are defined by the BCs in \autoref{eqn:NK System}. Thus we have our correction $z$ to our current guess $u^n$ and we repeat until we reach 100 iterations or $|\vec{b}|<\num{1e-5}$. For all vorticities the method is stable enough to reach that tolerance, but it comes at the cost of having to increase the number of mesh points by quite a lot. We found that 4000 mesh points on the interval [0.1,10] were needed in order to reach the tolerance before we see blow-up. This blow-up is most likely a result of the inherent instability of the method seeing as it relies on approximations to the derivative in many areas and thus instability can be prolonged but never quite avoided entirely. 
+\par We also had some issues when choosing an initial guess, finding that we needed to have an initial guess that was close to satisfying both BCs as well as had the rough shape of the solution, so we chose $u^0=-e^{-r}+1$ as it's monotonically increasing and is 1 at $\infty$.
+\par The solutions found using this method can be found in \autoref{fig:NK FD}.
+
+\begin{figure}[h]
+    \centering
+    \subfloat{\scalebox{0.65}{\subimport{Plots}{NK_FD.pgf}}}
+    \,
+    \scalebox{0.75}{
+    \begin{tabular}{|c|c|c|c|}\hline
+        Vorticity & $n=1$ & $n=2$ & $n=3$ \\\hline
+        Iterations & 11 & 13 & 14 \\\hline
+        Time Taken (s) & 128.94 & 164.23 & 183.19 \\\hline
+    \end{tabular}}
+    \caption{The solutions to \autoref{eqn:BVP} for $n=1,2,3$ solved using the Newton-Kantorovich method with the linear finite difference method, as well as details of the convergence to the solution.}
+    \label{fig:NK FD}
+\end{figure}
+
+\section{Comparing the two Methods}\label{sec:Analysis}
+\par The first thing to notice about the results of using these two methods is the difference in time taken to find the solution to the same tolerance. Clearly the nonlinear shooting method is quicker, even though it requires far more iterations. However, through implementing these methods we found that the time taken to find a solution using the Newton-Kantorovich method is a small price to pay for the stability that the method seems to bring to the table.
+\par When implementing the nonlinear shooting method, we found that the conditions under which the method finds a stable solution, and finds it to the desired tolerance, are extremely sensitive. If we looked at any interval other that [0.001,10], leaving all other parameters the same (vorticity, number of points to integrate on, tolerance), we would see a wide range of unstable solutions. There didn't seem to be a way to mitigate these instabilities, but with Newton-Kantorovich there were.
+\par When implementing Newton-Kantorovich we found that it can converge to a solution given pretty much any interval, provided we didn't start at 0. That's not to say this method doesn't have instability, but it seems that the only instability it had came as a result of the nature of the method, along with the nature of the linear finite differences method, being that we approximate the solution on a mesh and at some point these approximations get inaccurate. We found that if the number of mesh points was too low then the solution would blow up due to these inaccuracies before we could reach the desired tolerance, but by simply increasing the number of mesh points we found that the tolerance could be reached. Granted this comes with the matrix equation taking a while to solve and thus the method taking much longer than the nonlinear shooting method, but we believe that this trade-off is worth it. 
+\par Regarding the number of iterations taken to reach a solution, it's clear that the Newton-Kantorovich method converges to a solution ``quicker'' than nonlinear shooting, in terms of iterations, and this is definitely a benefit. 
+\par Lastly we consider the sensitivity of each method to the initial guess. Nonlinear shooting requires an initial guess of the shooting parameter, in this case the gradient of the solution at the left boundary, and we found that an initial guess of 0.1 led to convergence to a solution for all 3 vorticities. This guess was chosen as it is the gradient of a straight line from (0,0) to (10,1) and this seemed like a reasonable guess. Other guesses in the neighbourhood of 0.1 also led to stable solutions. Newton-Kantorovich was not so well behaved. We initially used the same initial guess as with nonlinear shooting, a straight line connecting the BCs, but this led to some strange solutions that were either not monotonically increasing or weren't stable at all. After some thinking about the fact that the real solution goes to 1 at $\infty$, we chose the function $-e^{-r}+1$ as our initial guess as it has an asymptote at $u=1$. This turned out to be a great guess as we began to see stable and correct looking solutions after that. 
+\par It's hard to say what a reasonable guess would be for either method as it's entirely possible that we just happened upon a guess that worked well, but it certainly seems that the initial guess for nonlinear shooting was much easier to find. 
+
+\section{Conclusion}\label{sec:Conclusion}
+Looking at the benefits and drawbacks of these two methods it's clear that the Newton-Kantorovich method is superior in most discernible ways. It converges to a solution in fewer steps, it seems more stable on a wider range of spatial intervals, it's much less sensitive to certain parameters. It requires a bit more computations time but that seems like a reasonable price to pay for a much more stable method in the general sense. 
+
+
+
+\newpage
+\section{Appendix}\label{sec:Appendix}
+\setcounter{figure}{0} \renewcommand{\thefigure}{A.\arabic{figure}}
+\lstinputlisting[caption=Code used to solve the linear BVP in \autoref{eqn:NK System}, label=NKCode, style=appendix, linerange={27-62, 74-99}, firstnumber=27]{NK_FiniteDifference.py}
+
+\begin{thebibliography}{9}
+    \bibitem{burden}
+    Burden, R. and Faires, J., 2005. \textit{Numerical Analysis}. 9th ed. Belmont, CA: Thomson Brooks/Cole.
+\end{thebibliography}
+
+\end{document}

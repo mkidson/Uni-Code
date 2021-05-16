@@ -2,8 +2,8 @@ from matplotlib import pyplot as plt
 import numpy as np
 from scipy.integrate import solve_ivp
 from numpy import cos, pi, sin, sqrt, exp, random
-import matplotlib
-matplotlib.use('pgf')
+import matplotlib, time
+# matplotlib.use('pgf')
 matplotlib.rcParams.update({
     'pgf.texsystem': 'pdflatex',
     'font.family': 'serif',
@@ -12,12 +12,12 @@ matplotlib.rcParams.update({
 })
 
 ns=[1,2,3] # Vorticity
-a=1 # Start of r, should be 0 but the program freaks out if we go smaller
-b=5 # End of r, should be infty but again we get issues
+a=0.1 # Start of r, should be 0 but the program freaks out if we go smaller
+b=10 # End of r, should be infty but again we get issues
 alpha=0 # Left BC
 beta=1 # Right BC
 p=(beta-alpha)/(b-a) # Slope for initial guess, not used
-N=1000 # Number of iterations. Too small and our approximations to the derivative get innacurate. Make nice and big and you're gucci gang
+N=4000 # Number of iterations. Too small and our approximations to the derivative get innacurate. Make nice and big and you're gucci gang
 
 rs=np.linspace(a,b,N) # Array of rs. linspace not arange in order to keep spacing consistent with h and the last point in the array being b
 h=rs[1]-rs[0] # Getting an h to use later
@@ -71,40 +71,45 @@ for n in ns:
     tol=1 # Initial tolerance so the loop doesn't break. 
     maxIter=100 # Just to put an upper limit so the program can reach the tolerance. doesn't always manage it but idc
     k=1 # Counter variable
-while k < maxIter and tol > 2e-5:
-    print('-------------------------------------------------------------------------')
-    print(f'Iteration: {k}')
-    # Gets arrays of p, q, and n excluding the endpoints, as i don't need the endpoints for the matrix eqn
-    ps=P(rs[1:-1], u)
-    qs=Q(rs[1:-1], u)
-    ns=N(rs[1:-1], u)
-    # creates the tridiagonal matrix, note the slicing for p
-    A=np.diag((-2-(h**2)*qs), k=0)+np.diag((1+(h*ps[1:])/2),k=-1)+np.diag((1-(h*ps[:-1])/2),k=1)
-    B=(h**2)*ns # The RHS vector. not complete yet, needs some additions which happens in the next few lines
-    # Calculates the endpoints for the correction z as per the NK equations and uses them for those extra naughty bits on the front and end of the RHS vector
-    newAlpha=-u[0]+alpha
-    print(f'left BC correction: {newAlpha}')
-    B[0]-=newAlpha*(1+(h*ps[0])/2)
-    newBeta=-u[-1]+beta
-    print(f'right BC correction: {newBeta}')
-    B[-1]-=newBeta*(1-(h*ps[-1])/2)
-    
-    tol=np.linalg.norm(B) # Updates tolerance
-    print('tol:',tol)
-    z1=np.linalg.solve(A,B) # Solves the matrix eqn
-    z=np.insert(z1,0,[newAlpha]) # These two lines just add the endpoints for z onto the front and end of it
-    z=np.append(z,[newBeta])
-    print('correction:',np.linalg.norm(z))
-    u+=z # Updates our guess
-    k+=1
+    t0=time.time()
+    while k < maxIter and tol > 1e-5:
+        print('-------------------------------------------------------------------------')
+        print(f'Iteration: {k}')
+        # Gets arrays of p, q, and n excluding the endpoints, as i don't need the endpoints for the matrix eqn
+        ps=P(rs[1:-1], u)
+        qs=Q(rs[1:-1], u)
+        ns=N(rs[1:-1], u)
+        # creates the tridiagonal matrix, note the slicing for p
+        A=np.diag((-2-(h**2)*qs), k=0)+np.diag((1+(h*ps[1:])/2),k=-1)+np.diag((1-(h*ps[:-1])/2),k=1)
+        B=(h**2)*ns # The RHS vector. not complete yet, needs some additions which happens in the next few lines
+        # Calculates the endpoints for the correction z as per the NK equations and uses them for those extra naughty bits on the front and end of the RHS vector
+        newAlpha=-u[0]+alpha
+        print(f'left BC correction: {newAlpha}')
+        B[0]-=newAlpha*(1+(h*ps[0])/2)
+        newBeta=-u[-1]+beta
+        print(f'right BC correction: {newBeta}')
+        B[-1]-=newBeta*(1-(h*ps[-1])/2)
+        
+        tol=np.linalg.norm(B) # Updates tolerance
+        print('tol:',tol)
+        z1=np.linalg.solve(A,B) # Solves the matrix eqn
+        z=np.insert(z1,0,[newAlpha]) # These two lines just add the endpoints for z onto the front and end of it
+        z=np.append(z,[newBeta])
+        print('correction:',np.linalg.norm(z))
+        u+=z # Updates our guess
+        k+=1
 
     # Plots things
     # plt.figure()
+    print('--------------------------------------')
+    print(f'Iterations: {k}')
+    t1=time.time()
+    print(f'Time taken: {t1-t0}')
     plt.plot(rs, u, label=f'n={n}')
 
 plt.legend()
 plt.xlabel('r')
 plt.ylabel('u')
 plt.title('Newton-Kantorovich method using Finite Differences')
-# plt.show()
-plt.savefig(r'3rd Year\3AN\Project 1\NK_FD.pgf')
+plt.show()
+# plt.savefig(r'3rd Year\3AN\Project 1\Plots\NK_FD.pgf')

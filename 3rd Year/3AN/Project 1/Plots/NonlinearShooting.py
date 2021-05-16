@@ -2,8 +2,8 @@ from matplotlib import pyplot as plt
 import numpy as np
 from scipy.integrate import solve_ivp
 from numpy import cos, pi, sin, sqrt, exp, random
-import matplotlib
-# matplotlib.use('pgf')
+import matplotlib, time
+matplotlib.use('pgf')
 matplotlib.rcParams.update({
     'pgf.texsystem': 'pdflatex',
     'font.family': 'serif',
@@ -18,7 +18,7 @@ In order to make this work for vorticity of 3, N needs to be greater than 50 and
 ns=[1,2,3] # Vorticity
 a=0.001 # Start of r, should be 0 but that leads to problems
 b=10 # End of r, meant to be infinity
-N=200 # Number of integration points
+N=100 # Number of integration points
 h=(b-a)/N
 
 r_span=np.array([a,b]) # Array containing start and end of r, used for solve_ivp
@@ -54,11 +54,12 @@ for n in ns:
     k=1 # Counter variable
     p=(beta-alpha)/(b-a)
     print('Initial p:', p)
-ICs=np.array([alpha,p,0,1])
+    ICs=np.array([alpha,p,0,1])
+    t0=time.time()
     # The actual loop that implements the shooting method
     while k <= maxIter and (abs(u_1-beta)>tol):
         # Integrator. I could use RK45 but it seems to struggle with the higher vorticities, so this higher order RK method is better
-soln=solve_ivp(du_dr, r_span, ICs, t_eval=rs, method='DOP853')
+        soln=solve_ivp(du_dr, r_span, ICs, t_eval=rs, method='DOP853')
         # Saves a copy of the initial guess but at higher vorticities the initial guess is pretty much unintegrable, so plotting it leads to unusable plots
         if k==1:
             u_0=soln.y[0]
@@ -69,13 +70,15 @@ soln=solve_ivp(du_dr, r_span, ICs, t_eval=rs, method='DOP853')
         z=soln.y[2]
         z_1=z[-1]
         # And then updates p and updates the ICs
-p=p-(u_1-beta)/(z_1)
-ICs[1]=p
+        p=p-(u_1-beta)/(z_1)
+        ICs[1]=p
         # print(k)
         k+=1
         # print(abs(u_1-b))
     print("Final p:",p)
-    print(k)
+    print(f'Iterations {k}')
+    t1=time.time()
+    print(f'Time taken: {t1-t0}')
     # r values for plotting. They should all be the same across u, v, z, w. I called it t because that's what the integrator calls it
     t=soln.t
     # Plotting details
@@ -85,5 +88,5 @@ plt.xlabel('r')
 plt.ylabel('u')
 plt.title('Nonlinear Shooting with Newtown\'s Method')
 plt.legend()
-plt.show()
-# plt.savefig(r'3rd Year\3AN\Project 1\NonlinearShooting.pgf')
+# plt.show()
+plt.savefig(r'3rd Year\3AN\Project 1\Plots\NonlinearShooting.pgf')
