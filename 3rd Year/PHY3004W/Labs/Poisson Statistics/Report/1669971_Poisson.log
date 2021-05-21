@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.5.7)  21 MAY 2021 20:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.5.7)  21 MAY 2021 22:53
 entering extended mode
-**"d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Gamma Spectroscopy/Report/GammaSpectroscopy_KDSMIL001.tex"
-("d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Gamma Spectroscopy/Report/GammaSpectroscopy_KDSMIL001.tex"
+**"d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Poisson Statistics/Report/1669971_Poisson.tex"
+("d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Poisson Statistics/Report/1669971_Poisson.tex"
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-03> ("D:\Program Files\MikTeX\tex/latex/base\article.cls"
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
-("D:\Program Files\MikTeX\tex/latex/base\size11.clo"
-File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+("D:\Program Files\MikTeX\tex/latex/base\size12.clo"
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
 \c@part=\count167
 \c@section=\count168
@@ -633,53 +633,38 @@ Package: keyval2e 2011/08/24 v0.0.2 Lightweight and robust key-value parser (AM)
 \kve@keydepth=\count345
 ) ("D:\Program Files\MikTeX\tex/latex/import\import.sty"
 Package: import 2020/01/22  v 6.0
-) ("D:\Program Files\MikTeX\tex/latex/svg\svg.sty"
-Package: svg 2020/01/13 v2.02e (include SVG pictures)
- ("D:\Program Files\MikTeX\tex/latex/koma-script\scrbase.sty"
-Package: scrbase 2020/01/24 v3.29 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
- ("D:\Program Files\MikTeX\tex/latex/koma-script\scrlfile.sty"
-Package: scrlfile 2020/01/24 v3.29 KOMA-Script package (loading files)
-))
-("D:\Program Files\MikTeX\tex/latex/tools\shellesc.sty"
-Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
-)
-\svg@box=\box81
-\c@svg@param@lastpage=\count346
-\c@svg@param@currpage=\count347
-) ("D:\Program Files\MikTeX\tex/latex/transparent\transparent.sty"
-Package: transparent 2019/11/29 v1.4 Transparency via pdfTeX's color stack (HO)
 ) ("D:\Program Files\MikTeX\tex/latex/wrapfig\wrapfig.sty"
 \wrapoverhang=\dimen307
 \WF@size=\dimen308
-\c@WF@wrappedlines=\count348
-\WF@box=\box82
+\c@WF@wrappedlines=\count346
+\WF@box=\box81
 \WF@everypar=\toks44
 Package: wrapfig 2003/01/31  v 3.6
 ) ("D:\Program Files\MikTeX\tex/latex/lipsum\lipsum.sty"
 Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
  ("D:\Program Files\MikTeX\tex/latex/lipsum\lipsum.ltd.tex"
 File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
-)) ("D:\Program Files\MikTeX\tex/latex/mhchem\mhchem.sty"
+))
+("D:\Program Files\MikTeX\tex/latex/mhchem\mhchem.sty"
 Package: mhchem 2018/06/22 v4.08 for typesetting chemical formulae
  ("D:\Program Files\MikTeX\tex/latex/tools\calc.sty"
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count349
-\calc@Bcount=\count350
+\calc@Acount=\count347
+\calc@Bcount=\count348
 \calc@Adimen=\dimen309
 \calc@Bdimen=\dimen310
 \calc@Askip=\skip64
 \calc@Bskip=\skip65
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count351
+\calc@Ccount=\count349
 \calc@Cskip=\skip66
 ) ("D:\Program Files\MikTeX\tex/latex/chemgreek\chemgreek.sty"
 Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use in chemistry (CN)
-\l__chemgreek_tmpa_int=\count352
-\g__chemgreek_tmpa_int=\count353
+\l__chemgreek_tmpa_int=\count350
+\g__chemgreek_tmpa_int=\count351
 )
-\l__mhchem_ce_distanceFromLastComma_int=\count354
+\l__mhchem_ce_distanceFromLastComma_int=\count352
 \__mhchem_arrow_extPgfLength_skip=\skip67
 \mhchem@minispace@tmp=\skip68
 \mhchem@minibackspace@tmp=\skip69
@@ -690,13 +675,13 @@ Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use 
 \mhchem@smallbondwidth=\skip74
 \mhchem@bondtmp@minussidebearingleft=\skip75
 \mhchem@bondtmp@minussidebearingright=\skip76
-\l__mhchem_option_version_int=\count355
+\l__mhchem_option_version_int=\count353
 \mhchem@option@minusmathsidebearingleft=\dimen311
 \mhchem@option@minusmathsidebearingright=\dimen312
 \mhchem@option@minustextsidebearingleft=\dimen313
 \mhchem@option@minustextsidebearingright=\dimen314
-) ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Gamma Spectroscopy\Report\GammaSpectroscopy_KDSMIL001.aux")
-\openout1 = `GammaSpectroscopy_KDSMIL001.aux'.
+) ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Poisson Statistics\Report\1669971_Poisson.aux")
+\openout1 = `1669971_Poisson.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
@@ -723,23 +708,23 @@ LaTeX Font Info:    ... okay on input line 26.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
-* v-part:(T,H,B)=(36.135pt, 686.565pt, 72.26999pt)
+* h-part:(L,W,R)=(57.81621pt, 498.66258pt, 57.81621pt)
+* v-part:(T,H,B)=(36.135pt, 701.01878pt, 57.81621pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=469.75502pt
-* \textheight=686.565pt
-* \oddsidemargin=0.0pt
-* \evensidemargin=0.0pt
+* \textwidth=498.66258pt
+* \textheight=701.01878pt
+* \oddsidemargin=-14.45378pt
+* \evensidemargin=-14.45378pt
 * \topmargin=-73.135pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=11.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=59.0pt
+* \marginparwidth=44.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -749,7 +734,7 @@ LaTeX Font Info:    ... okay on input line 26.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box83
+\AtBeginShipoutBox=\box82
 Package hyperref Info: Link coloring OFF on input line 26.
 ("D:\Program Files\MikTeX\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -758,14 +743,14 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) ("D:\Program Files\MikTeX\tex/generic/gettitlestring\gettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count356
+\c@section@level=\count354
 )
 LaTeX Info: Redefining \ref on input line 26.
 LaTeX Info: Redefining \pageref on input line 26.
 LaTeX Info: Redefining \nameref on input line 26.
- ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Gamma Spectroscopy\Report\GammaSpectroscopy_KDSMIL001.out") ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Gamma Spectroscopy\Report\GammaSpectroscopy_KDSMIL001.out")
+ ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Poisson Statistics\Report\1669971_Poisson.out") ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Poisson Statistics\Report\1669971_Poisson.out")
 \@outlinefile=\write6
-\openout6 = `GammaSpectroscopy_KDSMIL001.out'.
+\openout6 = `1669971_Poisson.out'.
 
  ("D:\Program Files\MikTeX\tex/latex/translator\translator-basic-dictionary-English.dict"
 Dictionary: translator-basic-dictionary, Language: English 
@@ -773,16 +758,16 @@ Dictionary: translator-basic-dictionary, Language: English
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 ) ("D:\Program Files\MikTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count357
+\scratchcounter=\count355
 \scratchdimen=\dimen315
-\scratchbox=\box84
-\nofMPsegments=\count358
-\nofMParguments=\count359
+\scratchbox=\box83
+\nofMPsegments=\count356
+\nofMParguments=\count357
 \everyMPshowfont=\toks45
-\MPscratchCnt=\count360
+\MPscratchCnt=\count358
 \MPscratchDim=\dimen316
-\MPnumerator=\count361
-\makeMPintoPDFobject=\count362
+\MPnumerator=\count359
+\makeMPintoPDFobject=\count360
 \everyMPtoPDFconversion=\toks46
 ) ("D:\Program Files\MikTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -790,7 +775,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 ) ABD: EveryShipout initializing macros
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.17}).
 
-\c@lstlisting=\count363
+\c@lstlisting=\count361
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: wrapfig package is loaded.
@@ -805,50 +790,101 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
  ("D:\Program Files\MikTeX\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+) [1
 
-pdfTeX warning: pdflatex (file d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Gamma Spectroscopy/Report/apparatus.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<apparatus.pdf, id=28, 214.8828pt x 139.4811pt>
-File: apparatus.pdf Graphic file (type pdf)
-<use apparatus.pdf>
-Package pdftex.def Info: apparatus.pdf  used on input line 47.
-(pdftex.def)             Requested size: 214.88226pt x 139.48074pt.
-[1
-
-{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Gamma Spectroscopy\Report\Plots/137Cs.pgf") ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Gamma Spectroscopy\Report\Plots/22Na.pgf") ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Gamma Spectroscopy\Report\Plots/linearRegression.pgf") [2 <d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Gamma Spectroscopy/Report/apparatus.pdf>] ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Gamma Spectroscopy\Report\Plots/Unknown.pgf")
-Underfull \hbox (badness 3168) in paragraph at lines 106--107
-\OT1/cmr/m/n/10.95 not a par-tic-u-larly sim-ple job. We be-
- []
+{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots/mu4_runningMean.pgf"
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 211.
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 106--107
-\OT1/cmtt/m/n/10.95 http://atom.kaeri.re.kr/ \OT1/cmr/m/n/10.95 [[]], set-ting the
- []
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <15> not available
+(Font)              size <14.4> substituted on input line 3062.
 
-[3] [4
+) ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots/mu10_runningMean.pgf") ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots/mu30_runningMean.pgf") ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots/mu100_runningMean.pgf") [4] [5] [6] ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots/s2_x.pgf"
+LaTeX Font Info:    Calculating math sizes for size <15> on input line 775.
 
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 122.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 122.
- ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Gamma Spectroscopy\Report\GammaSpectroscopy_KDSMIL001.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 122.
-Package rerunfilecheck Info: File `GammaSpectroscopy_KDSMIL001.out' has not changed.
-(rerunfilecheck)             Checksum: 88FB04287D4EEA7D39E45F9956A6C550;217.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.49995> not available
+(Font)              size <10.95> substituted on input line 775.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 775.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <15> not available
+(Font)              size <14.4> substituted on input line 775.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.49995> not available
+(Font)              size <10.95> substituted on input line 775.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <7.5> not available
+(Font)              size <7> substituted on input line 775.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <15> not available
+(Font)              size <14.4> substituted on input line 775.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.49995> not available
+(Font)              size <10.95> substituted on input line 775.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 775.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <15> not available
+(Font)              size <14.4> substituted on input line 775.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <10.49995> not available
+(Font)              size <10.95> substituted on input line 775.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 775.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <15> not available
+(Font)              size <14.4> substituted on input line 775.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <10.49995> not available
+(Font)              size <10.95> substituted on input line 775.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 775.
+
+) [7] ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots/poisson_mu4.pgf") ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots/poisson_mu10.pgf") ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots/poisson_mu30.pgf") ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots/poisson_mu100.pgf") [8] [9] ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots/binAgree.pgf") [10] [11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 261.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 261.
+ ("d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Poisson Statistics\Report\1669971_Poisson.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 261.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 261.
+Package rerunfilecheck Info: File `1669971_Poisson.out' has not changed.
+(rerunfilecheck)             Checksum: 00676E493086263BC7404C12B6880E21;300.
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.6pt have occurred.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 261.
  ) 
 Here is how much of TeX's memory you used:
- 38120 strings out of 481254
- 885721 string characters out of 4668041
- 6544601 words of memory out of 19000000
- 52998 multiletter control sequences out of 15000+200000
- 545079 words of font info for 75 fonts, out of 5000000 for 9000
+ 37444 strings out of 481254
+ 872779 string characters out of 4668041
+ 6642037 words of memory out of 19000000
+ 52309 multiletter control sequences out of 15000+200000
+ 549010 words of font info for 92 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,25n,127p,1104b,735s stack positions out of 5000i,500n,10000p,5000000b,50000s
-<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Gamma Spectroscopy\Report\GammaSpectroscopy_KDSMIL001.pdf" (4 pages, 248333 bytes).
+ 74i,16n,127p,1088b,740s stack positions out of 5000i,500n,10000p,5000000b,50000s
+<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "d:/Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Poisson Statistics\Report\1669971_Poisson.pdf" (11 pages, 239489 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
- 58 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 200 PDF objects out of 1000 (max. 8388607)
+ 42 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
