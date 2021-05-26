@@ -1,5 +1,7 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Running Mean}{}% 2
-\BOOKMARK [1][-]{section.3}{Arithmetic Mean and Sample Variance of the Data}{}% 3
-\BOOKMARK [1][-]{section.4}{Poisson Plots}{}% 4
-\BOOKMARK [1][-]{section.5}{Fraction of Bins Not Described by Poisson}{}% 5
+\BOOKMARK [1][-]{section.2}{Analysis}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Running Mean}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Arithmetic Mean and Sample Variance of the Data}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Poisson Plots}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Fraction of Bins Not Described by Poisson}{section.2}% 6
+\BOOKMARK [1][-]{section.3}{Conclusion}{}% 7

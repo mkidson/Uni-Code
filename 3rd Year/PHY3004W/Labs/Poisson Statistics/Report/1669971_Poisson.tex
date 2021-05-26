@@ -2,7 +2,7 @@
 \usepackage[margin=.8in, top=0.5in]{geometry}
 \usepackage[all]{nowidow}
 \usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
-\usepackage[group-digits=false]{siunitx}
+\usepackage[separate-uncertainty=true, group-digits=false]{siunitx}
 \usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
 \usepackage{listings,xcolor,subfig,keyval2e,caption,import,wrapfig,lipsum}
 \usepackage[version=4]{mhchem}
@@ -30,9 +30,17 @@
     \vspace{0.2in}
     \textbf{May 2021}
 
+    \section*{Abstract}
+    We test the hypothesis that count data from a Geiger counter detecting radiation from a \ce{^{60}Co} source follows a Poisson distribution. This includes deriving the equations for quantities that describe the distribution, such as mean and variance. 
+
 \end{center}
 
 \section{Introduction}\label{sec:Introduction}
+
+
+
+
+\section{Analysis}\label{sec:Analysis}
 \par Our sample of \ce{^{60}Co} has a number of nuclei on the order of Avagadro's number, $\sim 10^{23}$, and since the half life of \ce{^{60}Co} is 5.27 years \cite{manual} while the time taken collecting data was around 30 minutes, the total number of nuclei throughout the course of the experiment was approximately constant: $N_n$. The number of nuclei that decay in any one time step is in general given by the binomial distribution $B(n;p,N_n)$ but since in our case $N_n$ is huge and $p$ is tiny, we can safely approximate this distribution by the Poisson distribution $P(n;\mu)$, where $\mu=pN_n$. To justify this, we can compute the probability $p$ of any one nucleus decaying during one trial of 10 seconds:
 \par The probability that any one nucleus will decay in a trial of length 5.27 years is 0.5. Thus the probability that any one nucleus will decay in a trial of length 10 seconds is
 \begin{align*}
@@ -115,7 +123,7 @@ where $N$ is the number of data points or trials and $\vec{\theta}$ is the other
     \label{eqn:Mean Count}
 \end{equation}
 
-\section{Running Mean}\label{sec:Running Mean}
+\subsection{Running Mean}\label{sec:Running Mean}
 \par In order to visualise how the arithmetic mean converges to a value and how the uncertainty for it shrinks, we plot a running mean 
 \begin{equation}
     r_c(j)\equiv\bar{x}_j=\frac{1}{j}\sum_{i=1}^{i=j}x_i
@@ -141,7 +149,7 @@ with the uncertainty for each running mean given by
 \end{figure}
 \par We can clearly see the value of the mean tending to a value for each count rate, even if that value is not the expected value, as well as the uncertainty for each mean shrinking with each step. We also see that in the first 10 or so trials, the estimate for the uncertainty on the mean is very large as the estimation we use depends on a large number of trials, so for small $j$ the estimate is inaccurate.
 
-\section{Arithmetic Mean and Sample Variance of the Data}\label{sec:Sample Variance}
+\subsection{Arithmetic Mean and Sample Variance of the Data}\label{sec:Sample Variance}
 \par In order to test with more certainty that our measured distribution is Poisson or not we must look at the variance of the data. A Poisson distribution has precisely the same mean and variance, as proved in the pre-lab questions, and so now we look for an unbiased estimator for the variance of a Poisson distribution. The sample variance is defined as 
 \begin{equation}
     s^2\equiv\frac{1}{N-1}\sum_{i=1}^N (x_i-\bar{x})^2
@@ -201,14 +209,14 @@ and we can check that this is unbiased for a Poisson distribution, i.e. $E[s^2]=
 
 \begin{figure}[H]
     \begin{center}
-       \scalebox{.7}{\subimport{Plots}{s2_x.pgf}}
-       \caption{The ratio between the sample variance and the sample mean of our data, for each approximate count rate, plotted as a function of the sample mean. Uncertainty on $s^2/\bar{x}$ found from \autoref{eqn:s2/x Uncertainty} and on $\bar{x}$ found from \autoref{eqn:Mean Count Uncertainty}. The expected value of 1 is shown. }
+       \subimport{Plots}{s2_x.pgf}
+       \caption{The ratio between the sample variance and the sample mean of our data, for each approximate count rate, plotted as a function of the sample mean. Uncertainty on $s^2/\bar{x}$ found from \autoref{eqn:s2/x Uncertainty} and on $\bar{x}$ found from \autoref{eqn:Mean Count Uncertainty}. The expected value of 1 is shown.}
        \label{fig:s2_x}
     \end{center}
 \end{figure}
-\par We see that 2 of the 4 count rates produce values of $s^2/\bar{x}$ that agree with the expected value within their uncertainty, with a third one being extremely close. This partially confirms our hypothesis but more tests are required. 
+\par We see that 2 of the 4 count rates produce values of $s^2/\bar{x}$ that agree with the expected value within their uncertainty. This partially confirms our hypothesis but more tests are required. 
 
-\section{Poisson Plots}\label{sec:Poisson Plots}
+\subsection{Poisson Plots}\label{sec:Poisson Plots}
 \par Now we visualise the Poisson nature of our data in a different way. We will plot a histogram of our data where the x-axis shows the number of counts per trial and the y-axis shows how many trials had that many counts. We generally describe binned data such as this with a binomial distribution $B(n_i;p_i, N)$ where $n_i$ is the number of counts in bin $i$, N is the total number of trials, and $p_i$ is the probability of a single measurement giving a result in the given bin $i$. The binomial distribution says that $E[n_i]=Np_i$ and the variance is $V[n_i]=Np_i(1-p_i)$, so we can estimate the uncertainty of the measured value $n_i$ as 
 \begin{equation}
     \sqrt{n_i\left(1-\frac{n_i}{N}\right)}
@@ -230,7 +238,7 @@ and we can check that this is unbiased for a Poisson distribution, i.e. $E[s^2]=
 \end{figure}
 \par We see that to some degree our data matches the Poisson distribution but a more rigorous approach is needed to confirm of reject our hypothesis. 
 
-\section{Fraction of Bins Not Described by Poisson}\label{sec:Poisson Bins}
+\subsection{Fraction of Bins Not Described by Poisson}\label{sec:Poisson Bins}
 We want to have a mathematical test that tells us if our estimates for our error bars was correct, in other words we are checking if our underlying hypothesis is correct as those estimates are based on that hypothesis. Our error bars really do represent the probability that 68\% of future measurements will lie within their bounds, then there should a 68\% chance that the Poisson prediction made using the arithmetic mean of the data lies within the error bars of each bin. Thus in order to check our hypothesis we can check to see the percentage of bins whose error bars enclose the Poisson curve and see if it is close to 68\%. 
 \par Counting the number of bins that don't agree with the Poisson curve is easy, we can do it by inspection, but we want to have some kind of uncertainty associated with that number and since each bin has a probability $p_a$ of agreeing with the curve and there are $N_{bins}$ bins, the number of bins that agree with the curve $n_a$ is given by the binomial distribution and thus the uncertainty of $n_a$ is the square root of the variance of the binomial distribution: $N_{bins}p_a(1-p_a)$. Thus we report the uncertainty of $n_a$ as 
 \begin{equation}
@@ -240,13 +248,17 @@ We want to have a mathematical test that tells us if our estimates for our error
 
 \begin{figure}[H]
     \begin{center}
-       \scalebox{.7}{\subimport{Plots}{binAgree.pgf}}
+       \subimport{Plots}{binAgree.pgf}
        \caption{Fraction of bins that agree with the Poisson curve within their uncertainty. The expected value of 0.68 is shown. The uncertainty of each fraction is given by \autoref{eqn:Bin Agree Uncertainty}$/N_{bins}$.}
        \label{fig:Bin Agree}
     \end{center}
 \end{figure}
 
-\par So we see that for 3 of the 4 count rates we are reasonably sure that the Poisson hypothesis is correct. There is obviously one outlier but this could be for many reasons. We had to guess when it came to the size of the bins in \autoref{fig:Poisson Plots} and that could affect this result. 
+\par So we see that for 2 of the 4 count rates we are reasonably sure that the Poisson hypothesis is correct. The mean of the fraction of bins that agree across all 4 runs is \num{0.7143(36)} with the uncertainty given by the square root of the sample variance given by \autoref{eqn:Sample Variance}. This does not agree within its uncertainty with 0.68, but for the relatively low number of runs and low number of trials per run, this seems reasonable. 
+
+\section{Conclusion}\label{sec:Conclusion}
+
+
 
 
 
@@ -257,5 +269,9 @@ We want to have a mathematical test that tells us if our estimates for our error
     W.A. Horowitz, \textit{Poisson Statistics}, (UCT, 2021)
 
 \end{thebibliography}
+
+
+
+
 
 \end{document}
