@@ -1,10 +1,10 @@
 from matplotlib import pyplot as plt
 import numpy as np
 from scipy.special import gamma
-from scipy.stats import poisson
+from scipy.stats import poisson, norm
 from numpy import cos, pi, sin, sqrt, exp, random
 import matplotlib, math
-matplotlib.use('pgf')
+# matplotlib.use('pgf')
 matplotlib.rcParams.update({
     'pgf.texsystem': 'pdflatex',
     'font.family': 'serif',
@@ -106,7 +106,6 @@ for q, name in enumerate(names):
     # plt.plot(xmodel, N*step*myPoisson(xmodel, meanCount), label=f'Poisson Distribution\nwith $\mu={meanCount}$')
     # plt.plot([histBins[-2], histBins[-2]+step], yUpper, color='C1')
     # plt.plot([histBins[1]-step, histBins[1]], yLower, color='C1')
-    # # plt.plot(xmodelLower, poisson(xmodelLower, meanCount))
     # plt.xticks(binMiddles, xTicks)
     # plt.xlabel('Counts per Trial')
     # plt.ylabel('No. Trials with Given No. Counts')
@@ -151,6 +150,18 @@ for q, name in enumerate(names):
 
 # endregion
 
+# region Fluctuation bins
+
+    flucDistArr=(histData[1:-1] - N*step*myPoisson(binMiddles[1:-1], meanCount))
+    flucDistMean=np.mean(flucDistArr)
+    distSampleVariance=sum((flucDistArr-flucDistMean)**2)/(len(flucDistArr)-1)
+
+    # print(flucDistMean)
+    # print(distSampleVariance)
+    # print(2*(1-norm.cdf(abs(max(flucDistArr)), loc=flucDistMean, scale=distSampleVariance)))
+
+# endregion
+
 # Everything before this point is in the big for loop
 
 # region s^2/x
@@ -173,7 +184,8 @@ numTotalBins=np.array([8,6,7,8])
 numAgreeBins=np.array([5,3,6,7])
 # print(np.mean(numAgreeBins/numTotalBins))
 # binsAgreeMean=np.mean(numAgreeBins/numTotalBins)
-# binsAgreeUncertainty=sum(((numAgreeBins/numTotalBins)-binsAgreeMean)**2)/(np.sum(numTotalBins)-1)
+# binsAgreeMeanUncertainty=sqrt(binsAgreeMean/np.sum(numTotalBins))
+# binsAgreeUncertainty=sqrt(sum(((numAgreeBins/numTotalBins)-binsAgreeMean)**2)/(np.sum(numTotalBins)-1))
 # print(f'{binsAgreeMean} +/- {binsAgreeUncertainty}')
 
 # plt.figure()
@@ -188,4 +200,4 @@ numAgreeBins=np.array([5,3,6,7])
 # endregion
 
 
-# plt.show()
+plt.show()

@@ -38,3 +38,22 @@ plt.errorbar(binMiddles, histData, np.sqrt(histData*(1-histData/N)), fmt='.', ca
 
 # more aesthetic things
 plt.xticks(binMiddles, xTicks)
+
+# function to make the continuous poisson plot
+def myPoisson(x, mu):
+    return ((mu**x)/(scipy.special.gamma(x+1)))*exp(-mu)
+
+# x array for the poisson to plot on
+xmodel=np.linspace(histBins[1], histBins[-2], 1000)
+
+# mean of the data, needed for poisson
+meanCount=np.mean(data)
+
+# These are the cumulative tallies of the poisson from 0 to the first bin and from the last bin to infty. I multiply by N to scale them just like how i scale the poisson plot later on. horowitz says to do this and it works so yeah. also they're arrays just for plotting purposes
+yUpper=[(1-poisson.cdf(histBins[-2], meanCount))*N]*2
+yLower=[(poisson.cdf(histBins[1], meanCount))*N]*2
+
+# plotting things. note the poisson is *N*step. don't ask why this is needed but it is. also the color='C1' is just so the poisson is the same colour for all 3 lines, you can change it if you don't want them to be the default second colour that pyplot uses
+plt.plot(xmodel, N*step*myPoisson(xmodel, meanCount), label=f'Poisson Distribution\nwith $\mu={meanCount}$')
+plt.plot([histBins[-2], histBins[-2]+step], yUpper, color='C1')
+plt.plot([histBins[1]-step, histBins[1]], yLower, color='C1')

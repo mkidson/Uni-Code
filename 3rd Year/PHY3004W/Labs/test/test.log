@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  28 MAY 2021 02:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  28 MAY 2021 02:14
 entering extended mode
-**"d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Poisson Statistics/Report/1669971_Poisson.tex"
-(d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Poisson Statistics/Report/1669971_Poisson.tex
+**"d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/test/test.tex"
+(d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/test/test.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-05-11> (D:\Program Files\MikTeX\tex/latex/base\article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
@@ -201,12 +201,6 @@ File: l3backend-pdftex.def 2021-05-07 L3 backend support: PDF output (pdfTeX)
 ))
 Package: l3keys2e 2021-05-07 LaTeX2e option processing using LaTeX3 keys
 )
-
-Package siunitx Info: Option "separate-uncertainty" has been deprecated in
-(siunitx)             this release.
-(siunitx)             
-(siunitx)             Use "uncertainty-mode = separate" as a replacement.
-
 
 Package siunitx Info: Option "group-digits = false" has been deprecated in
 (siunitx)             this release.
@@ -450,10 +444,15 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (D:\Program Files\MikTeX\tex/latex/pgfplots\pgfplots.sty (D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplots.revision.tex)
+)) (D:\Program Files\MikTeX\tex/latex/latex-tools\verbatim.sty
+Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks25
+\verbatim@line=\toks26
+\verbatim@in@stream=\read2
+) (D:\Program Files\MikTeX\tex/latex/pgfplots\pgfplots.sty (D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplots.revision.tex)
 Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
  (D:\Program Files\MikTeX\tex/latex/pgf/frontendlayer\tikz.sty (D:\Program Files\MikTeX\tex/latex/pgf/basiclayer\pgf.sty (D:\Program Files\MikTeX\tex/latex/pgf/utilities\pgfrcs.sty (D:\Program Files\MikTeX\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks25
+\pgfutil@everybye=\toks27
 \pgfutil@tempdima=\dimen170
 \pgfutil@tempdimb=\dimen171
  (D:\Program Files\MikTeX\tex/generic/pgf/utilities\pgfutil-common-lists.tex)) (D:\Program Files\MikTeX\tex/generic/pgf/utilities\pgfutil-latex.def
@@ -465,10 +464,10 @@ Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
  (D:\Program Files\MikTeX\tex/latex/pgf/basiclayer\pgfcore.sty (D:\Program Files\MikTeX\tex/latex/pgf/systemlayer\pgfsys.sty (D:\Program Files\MikTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
 Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
  (D:\Program Files\MikTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks26
-\pgfkeys@temptoks=\toks27
+\pgfkeys@pathtoks=\toks28
+\pgfkeys@temptoks=\toks29
  (D:\Program Files\MikTeX\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex
-\pgfkeys@tmptoks=\toks28
+\pgfkeys@tmptoks=\toks30
 ))
 \pgf@x=\dimen172
 \pgf@y=\dimen173
@@ -481,14 +480,14 @@ Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@xd=\dimen180
 \pgf@yd=\dimen181
 \w@pgf@writea=\write3
-\r@pgf@reada=\read2
+\r@pgf@reada=\read3
 \c@pgf@counta=\count290
 \c@pgf@countb=\count291
 \c@pgf@countc=\count292
 \c@pgf@countd=\count293
-\t@pgf@toka=\toks29
-\t@pgf@tokb=\toks30
-\t@pgf@tokc=\toks31
+\t@pgf@toka=\toks31
+\t@pgf@tokb=\toks32
+\t@pgf@tokc=\toks33
 \pgf@sys@id@count=\count294
  (D:\Program Files\MikTeX\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
@@ -526,9 +525,9 @@ Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
 \pgfmath@dimen=\dimen182
 \pgfmath@count=\count297
 \pgfmath@box=\box63
-\pgfmath@toks=\toks32
-\pgfmath@stack@operand=\toks33
-\pgfmath@stack@operation=\toks34
+\pgfmath@toks=\toks34
+\pgfmath@stack@operand=\toks35
+\pgfmath@stack@operation=\toks36
 ) (D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex (D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex))) (D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count298
 )) (D:\Program Files\MikTeX\tex/generic/pgf/math\pgfint.code.tex) (D:\Program Files\MikTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
@@ -612,8 +611,8 @@ Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
  (D:\Program Files\MikTeX\tex/generic/pgf/math\pgfmath.code.tex)
 \pgffor@iter=\dimen265
 \pgffor@skip=\dimen266
-\pgffor@stack=\toks35
-\pgffor@toks=\toks36
+\pgffor@stack=\toks37
+\pgffor@toks=\toks38
 )) (D:\Program Files\MikTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
  (D:\Program Files\MikTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
@@ -647,9 +646,9 @@ File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (D:\Program Files\MikTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))) (D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplots.code.tex (D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplotscore.code.tex
-\t@pgfplots@toka=\toks37
-\t@pgfplots@tokb=\toks38
-\t@pgfplots@tokc=\toks39
+\t@pgfplots@toka=\toks39
+\t@pgfplots@tokb=\toks40
+\t@pgfplots@tokc=\toks41
 \pgfplots@tmpa=\dimen276
 \c@pgfplots@coordindex=\count311
 \c@pgfplots@scanlineindex=\count312
@@ -657,7 +656,7 @@ File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \c@pgfplotsarray@tmp=\count313
 ) (D:\Program Files\MikTeX\tex/generic/pgfplots/liststructure\pgfplotsmatrix.code.tex) (D:\Program Files\MikTeX\tex/generic/pgfplots/numtable\pgfplotstableshared.code.tex
 \c@pgfplotstable@counta=\count314
-\t@pgfplotstable@a=\toks40
+\t@pgfplotstable@a=\toks42
 ) (D:\Program Files\MikTeX\tex/generic/pgfplots/liststructure\pgfplotsdeque.code.tex) (D:\Program Files\MikTeX\tex/generic/pgfplots/util\pgfplotsbinary.code.tex (D:\Program Files\MikTeX\tex/generic/pgfplots/util\pgfplotsbinary.data.code.tex)) (D:\Program Files\MikTeX\tex/generic/pgfplots/util\pgfplotsutil.verb.code.tex) (D:\Program Files\MikTeX\tex/generic/pgfplots/libs\pgflibrarypgfplots.surfshading.code.tex
 \c@pgfplotslibrarysurf@no=\count315
  (D:\Program Files\MikTeX\tex/generic/pgfplots/sys\pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (D:\Program Files\MikTeX\tex/generic/pgfplots/util\pgfplotscolormap.code.tex (D:\Program Files\MikTeX\tex/generic/pgfplots/util\pgfplotscolor.code.tex)) (D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplotsstackedplots.code.tex) (D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplotsplothandlers.code.tex (D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplotsmeshplothandler.code.tex (D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplotsmeshplotimage.code.tex))) (D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplots.scaling.code.tex) (D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplotscoordprocessing.code.tex) (D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplots.errorbars.code.tex) (D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplots.markers.code.tex) (D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplotsticks.code.tex) (D:\Program Files\MikTeX\tex/generic/pgfplots\pgfplots.paths.code.tex) (D:\Program Files\MikTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.code.tex (D:\Program Files\MikTeX\tex/generic/pgf/modules\pgfmoduledecorations.code.tex
@@ -683,12 +682,7 @@ File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 File: tikzlibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (D:\Program Files\MikTeX\tex/generic/pgf/libraries\pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-))) (D:\Program Files\MikTeX\tex/latex/latex-tools\verbatim.sty
-Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks41
-\verbatim@line=\toks42
-\verbatim@in@stream=\read3
-) (D:\Program Files\MikTeX\tex/latex/tcolorbox\tcolorbox.sty
+))) (D:\Program Files\MikTeX\tex/latex/tcolorbox\tcolorbox.sty
 Package: tcolorbox 2020/10/09 version 4.42 text color boxes
  (D:\Program Files\MikTeX\tex/latex/environ\environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
@@ -764,73 +758,39 @@ Package caption Info: listings package is loaded.
 \c@lotdepth=\count337
 \sf@top=\skip58
 \sf@bottom=\skip59
-) (D:\Program Files\MikTeX\tex/latex/import\import.sty
-Package: import 2020/04/01  v 6.2
-) (D:\Program Files\MikTeX\tex/latex/wrapfig\wrapfig.sty
-\wrapoverhang=\dimen302
-\WF@size=\dimen303
-\c@WF@wrappedlines=\count338
-\WF@box=\box84
-\WF@everypar=\toks44
-Package: wrapfig 2003/01/31  v 3.6
-) (D:\Program Files\MikTeX\tex/latex/lipsum\lipsum.sty
-Package: lipsum 2021-03-03 v2.3 150 paragraphs of Lorem Ipsum dummy text
- (D:\Program Files\MikTeX\tex/latex/lipsum\lipsum.ltd.tex
-File: lipsum.ltd.tex 2021-03-03 v2.3 The Lorem ipsum dummy text
-)) (D:\Program Files\MikTeX\tex/latex/pdfpages\pdfpages.sty
-Package: pdfpages 2021/03/06 v0.5t Insert pages of external PDF documents (AM)
- (D:\Program Files\MikTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-) (D:\Program Files\MikTeX\tex/latex/latex-tools\calc.sty
+) (D:\Program Files\MikTeX\tex/latex/keyval2e\keyval2e.sty (D:\Program Files\MikTeX\tex/latex/catoptions\catoptions.sty
+\m@one=\count338
+\z@pt=\dimen302
+Package: catoptions 2014/08/29 v0.2.7h Securing catcodes and parsing options (AM)
+\cpt@csvdepth=\count339
+\cpt@optdepth=\count340
+\cpt@cnta=\count341
+\indrisdepth=\count342
+\cpt@foreachdepth=\count343
+\cpt@exprcnt=\count344
+)
+Package: keyval2e 2011/08/24 v0.0.2 Lightweight and robust key-value parser (AM) (Ahmed Musa)
+\kve@keydepth=\count345
+) (D:\Program Files\MikTeX\tex/latex/mhchem\mhchem.sty
+Package: mhchem 2018/06/22 v4.08 for typesetting chemical formulae
+ (D:\Program Files\MikTeX\tex/latex/latex-tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count339
-\calc@Bcount=\count340
-\calc@Adimen=\dimen304
-\calc@Bdimen=\dimen305
+\calc@Acount=\count346
+\calc@Bcount=\count347
+\calc@Adimen=\dimen303
+\calc@Bdimen=\dimen304
 \calc@Askip=\skip60
 \calc@Bskip=\skip61
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count341
+\calc@Ccount=\count348
 \calc@Cskip=\skip62
-)
-(D:\Program Files\MikTeX\tex/latex/eso-pic\eso-pic.sty
-Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
-\ESO@tempdima=\dimen306
-\ESO@tempdimb=\dimen307
-)
-\AM@pagewidth=\dimen308
-\AM@pageheight=\dimen309
-\AM@fboxrule=\dimen310
- (D:\Program Files\MikTeX\tex/latex/pdfpages\pppdftex.def
-File: pppdftex.def 2021/03/06 v0.5t Pdfpages driver for pdfTeX (AM)
-)
-\pdfpages@includegraphics@status=\count342
-\AM@pagebox=\box85
-\AM@global@opts=\toks45
-\AM@pagecnt=\count343
-\AM@toc@title=\toks46
-\c@AM@survey=\count344
-\AM@templatesizebox=\box86
-) (D:\Program Files\MikTeX\tex/latex/pdflscape\pdflscape.sty
-Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
- (D:\Program Files\MikTeX\tex/latex/graphics\lscape.sty
-Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
-)
-Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-) (D:\Program Files\MikTeX\tex/latex/appendix\appendix.sty
-Package: appendix 2020/02/08 v1.2c extra appendix facilities
-\c@@pps=\count345
-\c@@ppsavesec=\count346
-\c@@ppsaveapp=\count347
-) (D:\Program Files\MikTeX\tex/latex/mhchem\mhchem.sty
-Package: mhchem 2018/06/22 v4.08 for typesetting chemical formulae
- (D:\Program Files\MikTeX\tex/latex/chemgreek\chemgreek.sty
+) (D:\Program Files\MikTeX\tex/latex/chemgreek\chemgreek.sty
 Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use in chemistry (CN)
-\l__chemgreek_tmpa_int=\count348
-\g__chemgreek_tmpa_int=\count349
+\l__chemgreek_tmpa_int=\count349
+\g__chemgreek_tmpa_int=\count350
 )
-\l__mhchem_ce_distanceFromLastComma_int=\count350
+\l__mhchem_ce_distanceFromLastComma_int=\count351
 \__mhchem_arrow_extPgfLength_skip=\skip63
 \mhchem@minispace@tmp=\skip64
 \mhchem@minibackspace@tmp=\skip65
@@ -841,34 +801,41 @@ Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use 
 \mhchem@smallbondwidth=\skip70
 \mhchem@bondtmp@minussidebearingleft=\skip71
 \mhchem@bondtmp@minussidebearingright=\skip72
-\l__mhchem_option_version_int=\count351
-\mhchem@option@minusmathsidebearingleft=\dimen311
-\mhchem@option@minusmathsidebearingright=\dimen312
-\mhchem@option@minustextsidebearingleft=\dimen313
-\mhchem@option@minustextsidebearingright=\dimen314
+\l__mhchem_option_version_int=\count352
+\mhchem@option@minusmathsidebearingleft=\dimen305
+\mhchem@option@minusmathsidebearingright=\dimen306
+\mhchem@option@minustextsidebearingleft=\dimen307
+\mhchem@option@minustextsidebearingright=\dimen308
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 27.
- (1669971_Poisson.aux)
-\openout1 = `1669971_Poisson.aux'.
+d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/test/test.tex:39: Extra \endgroup.
+\document ->\endgroup 
+                      \let \BeforeStartOfDocument \@firstofone \cpt@beforest...
+l.39 \begin{document}
+                     
+Things are pretty mixed up, but I think the worst is over.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 39.
+(test.aux)
+\openout1 = `test.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -878,14 +845,14 @@ LaTeX Font Info:    ... okay on input line 27.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(57.81621pt, 498.66258pt, 57.81621pt)
-* v-part:(T,H,B)=(36.135pt, 701.01878pt, 57.81621pt)
+* h-part:(L,W,R)=(86.72377pt, 440.84746pt, 86.72377pt)
+* v-part:(T,H,B)=(36.135pt, 672.11122pt, 86.72377pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=498.66258pt
-* \textheight=701.01878pt
-* \oddsidemargin=-14.45378pt
-* \evensidemargin=-14.45378pt
+* \textwidth=440.84746pt
+* \textheight=672.11122pt
+* \oddsidemargin=14.45378pt
+* \evensidemargin=14.45378pt
 * \topmargin=-73.135pt
 * \headheight=12.0pt
 * \headsep=25.0pt
@@ -904,7 +871,7 @@ LaTeX Font Info:    ... okay on input line 27.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 27.
+Package hyperref Info: Link coloring OFF on input line 39.
 (D:\Program Files\MikTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (D:\Program Files\MikTeX\tex/latex/refcount\refcount.sty
@@ -912,230 +879,76 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (D:\Program Files\MikTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count352
+\c@section@level=\count353
 )
-LaTeX Info: Redefining \ref on input line 27.
-LaTeX Info: Redefining \pageref on input line 27.
-LaTeX Info: Redefining \nameref on input line 27.
- (1669971_Poisson.out) (1669971_Poisson.out)
+LaTeX Info: Redefining \ref on input line 39.
+LaTeX Info: Redefining \pageref on input line 39.
+LaTeX Info: Redefining \nameref on input line 39.
+ (test.out) (test.out)
 \@outlinefile=\write6
-\openout6 = `1669971_Poisson.out'.
+\openout6 = `test.out'.
 
  (D:\Program Files\MikTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 27.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 39.
  (D:\Program Files\MikTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count353
-\scratchdimen=\dimen315
-\scratchbox=\box87
-\nofMPsegments=\count354
-\nofMParguments=\count355
-\everyMPshowfont=\toks47
-\MPscratchCnt=\count356
-\MPscratchDim=\dimen316
-\MPnumerator=\count357
-\makeMPintoPDFobject=\count358
-\everyMPtoPDFconversion=\toks48
+\scratchcounter=\count354
+\scratchdimen=\dimen309
+\scratchbox=\box84
+\nofMPsegments=\count355
+\nofMParguments=\count356
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count357
+\MPscratchDim=\dimen310
+\MPnumerator=\count358
+\makeMPintoPDFobject=\count359
+\everyMPtoPDFconversion=\toks45
 ) (D:\Program Files\MikTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (D:\Program Files\MikTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
+Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-\c@lstlisting=\count359
+\c@lstlisting=\count360
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
-Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-Package chemgreek Info: Activating mapping `default' on line 27.
+Package chemgreek Info: Activating mapping `default' on line 39.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 39.
 (D:\Program Files\MikTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
  (D:\Program Files\MikTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4] (Plots/mu4_runningMean.pgf
+{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (test.aux)
+Package rerunfilecheck Info: File `test.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ )
+(\end occurred inside a group at level 1)
 
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 211.
-
-LaTeX Font Info:    Calculating math sizes for size <20> on input line 211.
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <13.99994> not available
-(Font)              size <14.4> substituted on input line 211.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <20> not available
-(Font)              size <20.74> substituted on input line 211.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <13.99994> not available
-(Font)              size <14.4> substituted on input line 211.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 211.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <13.99994> not available
-(Font)              size <14.4> substituted on input line 211.
-
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 211.
-
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <13.99994> not available
-(Font)              size <14.4> substituted on input line 211.
-
-
-LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 211.
-
-
-LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <13.99994> not available
-(Font)              size <14.4> substituted on input line 211.
-
-) (Plots/mu10_runningMean.pgf) (Plots/mu30_runningMean.pgf) (Plots/mu100_runningMean.pgf) [5] [6] [7] (Plots/s2_x.pgf) [8] [9] (Plots/poisson_mu4.pgf
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 942.
-
-LaTeX Font Info:    Calculating math sizes for size <16> on input line 948.
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <16> not available
-(Font)              size <17.28> substituted on input line 948.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 948.
-
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 948.
-
-
-LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 948.
-
-) (Plots/poisson_mu10.pgf) (Plots/poisson_mu30.pgf) (Plots/poisson_mu100.pgf) [10] (Plots/binAgree.pgf) [11]
-<PrelabQs.pdf, id=158, 597.53236pt x 845.05714pt>
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf>
-Package pdftex.def Info: PrelabQs.pdf  used on input line 270.
-(pdftex.def)             Requested size: 597.5309pt x 845.05507pt.
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf>
-Package pdftex.def Info: PrelabQs.pdf  used on input line 270.
-(pdftex.def)             Requested size: 597.5309pt x 845.05507pt.
-<PrelabQs.pdf, id=161, page=1, 597.53236pt x 845.05714pt>
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 1>
-Package pdftex.def Info: PrelabQs.pdf , page1 used on input line 270.
-(pdftex.def)             Requested size: 597.5309pt x 845.05507pt.
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 1>
-Package pdftex.def Info: PrelabQs.pdf , page1 used on input line 270.
-(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 1>
-Package pdftex.def Info: PrelabQs.pdf , page1 used on input line 270.
-(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 1>
-Package pdftex.def Info: PrelabQs.pdf , page1 used on input line 270.
-(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 1>
-Package pdftex.def Info: PrelabQs.pdf , page1 used on input line 270.
-(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
- [12 <./PrelabQs.pdf>]
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf>
-Package pdftex.def Info: PrelabQs.pdf  used on input line 271.
-(pdftex.def)             Requested size: 597.5309pt x 845.05507pt.
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf>
-Package pdftex.def Info: PrelabQs.pdf  used on input line 271.
-(pdftex.def)             Requested size: 597.5309pt x 845.05507pt.
-<PrelabQs.pdf, id=170, page=2, 597.53236pt x 845.05714pt>
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 2>
-Package pdftex.def Info: PrelabQs.pdf , page2 used on input line 271.
-(pdftex.def)             Requested size: 597.5309pt x 845.05507pt.
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 2>
-Package pdftex.def Info: PrelabQs.pdf , page2 used on input line 271.
-(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 2>
-Package pdftex.def Info: PrelabQs.pdf , page2 used on input line 271.
-(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 2>
-Package pdftex.def Info: PrelabQs.pdf , page2 used on input line 271.
-(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 2>
-Package pdftex.def Info: PrelabQs.pdf , page2 used on input line 271.
-(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
- [13 <./PrelabQs.pdf>]
-<PrelabQs.pdf, id=177, page=3, 597.53236pt x 845.05714pt>
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 3>
-Package pdftex.def Info: PrelabQs.pdf , page3 used on input line 271.
-(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 3>
-Package pdftex.def Info: PrelabQs.pdf , page3 used on input line 271.
-(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 3>
-Package pdftex.def Info: PrelabQs.pdf , page3 used on input line 271.
-(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
- [14 <./PrelabQs.pdf>]
-<PrelabQs.pdf, id=183, page=4, 597.53236pt x 845.05714pt>
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 4>
-Package pdftex.def Info: PrelabQs.pdf , page4 used on input line 271.
-(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 4>
-Package pdftex.def Info: PrelabQs.pdf , page4 used on input line 271.
-(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 4>
-Package pdftex.def Info: PrelabQs.pdf , page4 used on input line 271.
-(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
- [15 <./PrelabQs.pdf>] [16] (1669971_Poisson.aux)
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 1.28pt have occurred.
-
-Package rerunfilecheck Info: File `1669971_Poisson.out' has not changed.
-(rerunfilecheck)             Checksum: 6AD78FE9F706B2D0B29F93D5D512DD68;1322.
- ) 
+### semi simple group (level 1) entered at line 39 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 40651 strings out of 479125
- 939229 string characters out of 4612535
- 6706929 words of memory out of 19000000
- 57584 multiletter control sequences out of 15000+600000
- 422246 words of font info for 102 fonts, out of 5000000 for 9000
+ 40611 strings out of 479125
+ 932318 string characters out of 4612535
+ 6323712 words of memory out of 19000000
+ 57670 multiletter control sequences out of 15000+600000
+ 410093 words of font info for 53 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,18n,103p,874b,859s stack positions out of 5000i,500n,10000p,5000000b,80000s
-<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 1669971_Poisson.pdf (16 pages, 1272597 bytes).
+ 99i,5n,103p,782b,2756s stack positions out of 5000i,500n,10000p,5000000b,80000s
+<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on test.pdf (1 page, 29330 bytes).
 PDF statistics:
- 265 PDF objects out of 1000 (max. 8388607)
- 53 named destinations out of 1000 (max. 500000)
- 130 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 PDF objects out of 1000 (max. 8388607)
+ 2 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

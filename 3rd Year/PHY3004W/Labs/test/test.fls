@@ -1,7 +1,7 @@
-PWD d:\Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Poisson Statistics\Report
+PWD d:\Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\test
 INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
-INPUT d:\Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Poisson Statistics\Report\1669971_Poisson.tex
-OUTPUT 1669971_Poisson.log
+INPUT d:\Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\test\test.tex
+OUTPUT test.log
 INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
 INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
 INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
@@ -621,6 +621,17 @@ INPUT D:\Program Files\MikTeX\tex\latex\amsfonts\amsfonts.sty
 INPUT D:\Program Files\MikTeX\tex\latex\amsfonts\amsfonts.sty
 INPUT D:\Program Files\MikTeX\tex\latex\amsfonts\amsfonts.sty
 INPUT D:\Program Files\MikTeX\tex\latex\amsfonts\amsfonts.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
 INPUT D:\Program Files\MikTeX\tex\latex\pgfplots\pgfplots.sty
 INPUT D:\Program Files\MikTeX\tex\latex\pgfplots\pgfplots.sty
 INPUT D:\Program Files\MikTeX\tex\latex\pgfplots\pgfplots.sty
@@ -908,17 +919,6 @@ INPUT D:\Program Files\MikTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzl
 INPUT D:\Program Files\MikTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryplotmarks.code.tex
 INPUT D:\Program Files\MikTeX\tex\generic\pgf\libraries\pgflibraryplotmarks.code.tex
 INPUT D:\Program Files\MikTeX\tex\generic\pgf\libraries\pgflibraryplotmarks.code.tex
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\verbatim.sty
 INPUT D:\Program Files\MikTeX\tex\latex\tcolorbox\tcolorbox.sty
 INPUT D:\Program Files\MikTeX\tex\latex\tcolorbox\tcolorbox.sty
 INPUT D:\Program Files\MikTeX\tex\latex\tcolorbox\tcolorbox.sty
@@ -1011,174 +1011,44 @@ INPUT D:\Program Files\MikTeX\tex\latex\caption\caption3.sty
 INPUT D:\Program Files\MikTeX\tex\latex\caption\caption3.sty
 INPUT D:\Program Files\MikTeX\tex\latex\caption\caption3.sty
 INPUT D:\Program Files\MikTeX\tex\latex\graphics\keyval.sty
-INPUT D:\Program Files\MikTeX\tex\latex\caption\caption.sty
-INPUT D:\Program Files\MikTeX\tex\latex\import\import.sty
-INPUT D:\Program Files\MikTeX\tex\latex\import\import.sty
-INPUT D:\Program Files\MikTeX\tex\latex\import\import.sty
-INPUT D:\Program Files\MikTeX\tex\latex\import\import.sty
-INPUT D:\Program Files\MikTeX\tex\latex\import\import.sty
-INPUT D:\Program Files\MikTeX\tex\latex\import\import.sty
-INPUT D:\Program Files\MikTeX\tex\latex\import\import.sty
-INPUT D:\Program Files\MikTeX\tex\latex\import\import.sty
-INPUT D:\Program Files\MikTeX\tex\latex\import\import.sty
-INPUT D:\Program Files\MikTeX\tex\latex\import\import.sty
-INPUT D:\Program Files\MikTeX\tex\latex\import\import.sty
-INPUT D:\Program Files\MikTeX\tex\latex\wrapfig\wrapfig.sty
-INPUT D:\Program Files\MikTeX\tex\latex\wrapfig\wrapfig.sty
-INPUT D:\Program Files\MikTeX\tex\latex\wrapfig\wrapfig.sty
-INPUT D:\Program Files\MikTeX\tex\latex\wrapfig\wrapfig.sty
-INPUT D:\Program Files\MikTeX\tex\latex\wrapfig\wrapfig.sty
-INPUT D:\Program Files\MikTeX\tex\latex\wrapfig\wrapfig.sty
-INPUT D:\Program Files\MikTeX\tex\latex\wrapfig\wrapfig.sty
-INPUT D:\Program Files\MikTeX\tex\latex\wrapfig\wrapfig.sty
-INPUT D:\Program Files\MikTeX\tex\latex\wrapfig\wrapfig.sty
-INPUT D:\Program Files\MikTeX\tex\latex\wrapfig\wrapfig.sty
-INPUT D:\Program Files\MikTeX\tex\latex\wrapfig\wrapfig.sty
-INPUT D:\Program Files\MikTeX\tex\latex\lipsum\lipsum.sty
-INPUT D:\Program Files\MikTeX\tex\latex\lipsum\lipsum.sty
-INPUT D:\Program Files\MikTeX\tex\latex\lipsum\lipsum.sty
-INPUT D:\Program Files\MikTeX\tex\latex\lipsum\lipsum.sty
-INPUT D:\Program Files\MikTeX\tex\latex\lipsum\lipsum.sty
-INPUT D:\Program Files\MikTeX\tex\latex\lipsum\lipsum.sty
-INPUT D:\Program Files\MikTeX\tex\latex\lipsum\lipsum.sty
-INPUT D:\Program Files\MikTeX\tex\latex\lipsum\lipsum.sty
-INPUT D:\Program Files\MikTeX\tex\latex\lipsum\lipsum.sty
-INPUT D:\Program Files\MikTeX\tex\latex\lipsum\lipsum.sty
-INPUT D:\Program Files\MikTeX\tex\latex\lipsum\lipsum.sty
-INPUT D:\Program Files\MikTeX\tex\latex\l3kernel\expl3.sty
-INPUT D:\Program Files\MikTeX\tex\latex\l3packages\xparse\xparse.sty
-INPUT D:\Program Files\MikTeX\tex\latex\lipsum\lipsum.ltd.tex
-INPUT D:\Program Files\MikTeX\tex\latex\lipsum\lipsum.ltd.tex
-INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
-INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
-INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
-INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
-INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
-INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
-INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
-INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
-INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
-INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
-INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
-INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
-INPUT D:\Program Files\MikTeX\tex\latex\graphics\keyval.sty
-INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphicx.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pppdftex.def
-INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pppdftex.def
-INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pppdftex.def
-INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pppdftex.def
-INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
-INPUT D:\Program Files\MikTeX\tex\generic\atbegshi\atbegshi.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
-INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
-INPUT D:\Program Files\MikTeX\tex\generic\iftex\iftex.sty
-INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
-INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
-INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
-INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
-INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
-INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
-INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
-INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
-INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
-INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
-INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
-INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphics.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
-INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
-INPUT D:\Program Files\MikTeX\tex\latex\appendix\appendix.sty
-INPUT D:\Program Files\MikTeX\tex\latex\appendix\appendix.sty
-INPUT D:\Program Files\MikTeX\tex\latex\appendix\appendix.sty
-INPUT D:\Program Files\MikTeX\tex\latex\appendix\appendix.sty
-INPUT D:\Program Files\MikTeX\tex\latex\appendix\appendix.sty
-INPUT D:\Program Files\MikTeX\tex\latex\appendix\appendix.sty
-INPUT D:\Program Files\MikTeX\tex\latex\appendix\appendix.sty
-INPUT D:\Program Files\MikTeX\tex\latex\appendix\appendix.sty
-INPUT D:\Program Files\MikTeX\tex\latex\appendix\appendix.sty
-INPUT D:\Program Files\MikTeX\tex\latex\appendix\appendix.sty
-INPUT D:\Program Files\MikTeX\tex\latex\appendix\appendix.sty
+INPUT D:\Program Files\MikTeX\tex\latex\keyval2e\keyval2e.sty
+INPUT D:\Program Files\MikTeX\tex\latex\keyval2e\keyval2e.sty
+INPUT D:\Program Files\MikTeX\tex\latex\keyval2e\keyval2e.sty
+INPUT D:\Program Files\MikTeX\tex\latex\keyval2e\keyval2e.sty
+INPUT D:\Program Files\MikTeX\tex\latex\keyval2e\keyval2e.sty
+INPUT D:\Program Files\MikTeX\tex\latex\keyval2e\keyval2e.sty
+INPUT D:\Program Files\MikTeX\tex\latex\keyval2e\keyval2e.sty
+INPUT D:\Program Files\MikTeX\tex\latex\keyval2e\keyval2e.sty
+INPUT D:\Program Files\MikTeX\tex\latex\keyval2e\keyval2e.sty
+INPUT D:\Program Files\MikTeX\tex\latex\keyval2e\keyval2e.sty
+INPUT D:\Program Files\MikTeX\tex\latex\keyval2e\keyval2e.sty
+INPUT D:\Program Files\MikTeX\tex\latex\catoptions\catoptions.sty
+INPUT D:\Program Files\MikTeX\tex\latex\catoptions\catoptions.sty
+INPUT D:\Program Files\MikTeX\tex\latex\catoptions\catoptions.sty
+INPUT D:\Program Files\MikTeX\tex\latex\catoptions\catoptions.sty
+INPUT D:\Program Files\MikTeX\tex\latex\catoptions\catoptions.sty
+INPUT D:\Program Files\MikTeX\tex\latex\catoptions\catoptions.sty
+INPUT D:\Program Files\MikTeX\tex\latex\catoptions\catoptions.sty
+INPUT D:\Program Files\MikTeX\tex\latex\catoptions\catoptions.sty
+INPUT D:\Program Files\MikTeX\tex\latex\catoptions\catoptions.sty
+INPUT D:\Program Files\MikTeX\tex\latex\catoptions\catoptions.sty
+INPUT D:\Program Files\MikTeX\tex\latex\catoptions\catoptions.sty
 INPUT D:\Program Files\MikTeX\tex\latex\mhchem\mhchem.sty
 INPUT D:\Program Files\MikTeX\tex\latex\mhchem\mhchem.sty
 INPUT D:\Program Files\MikTeX\tex\latex\mhchem\mhchem.sty
 INPUT D:\Program Files\MikTeX\tex\latex\mhchem\mhchem.sty
-INPUT D:\Program Files\MikTeX\tex\latex\mhchem\mhchem.sty
-INPUT D:\Program Files\MikTeX\tex\latex\mhchem\mhchem.sty
-INPUT D:\Program Files\MikTeX\tex\latex\mhchem\mhchem.sty
-INPUT D:\Program Files\MikTeX\tex\latex\mhchem\mhchem.sty
-INPUT D:\Program Files\MikTeX\tex\latex\mhchem\mhchem.sty
-INPUT D:\Program Files\MikTeX\tex\latex\mhchem\mhchem.sty
-INPUT D:\Program Files\MikTeX\tex\latex\mhchem\mhchem.sty
-INPUT D:\Program Files\MikTeX\tex\latex\l3kernel\expl3.sty
-INPUT D:\Program Files\MikTeX\tex\latex\l3packages\l3keys2e\l3keys2e.sty
 INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
-INPUT D:\Program Files\MikTeX\tex\latex\amsmath\amsmath.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
 INPUT D:\Program Files\MikTeX\tex\latex\chemgreek\chemgreek.sty
 INPUT D:\Program Files\MikTeX\tex\latex\chemgreek\chemgreek.sty
 INPUT D:\Program Files\MikTeX\tex\latex\chemgreek\chemgreek.sty
 INPUT D:\Program Files\MikTeX\tex\latex\chemgreek\chemgreek.sty
-INPUT D:\Program Files\MikTeX\tex\latex\chemgreek\chemgreek.sty
-INPUT D:\Program Files\MikTeX\tex\latex\chemgreek\chemgreek.sty
-INPUT D:\Program Files\MikTeX\tex\latex\chemgreek\chemgreek.sty
-INPUT D:\Program Files\MikTeX\tex\latex\chemgreek\chemgreek.sty
-INPUT D:\Program Files\MikTeX\tex\latex\chemgreek\chemgreek.sty
-INPUT D:\Program Files\MikTeX\tex\latex\chemgreek\chemgreek.sty
-INPUT D:\Program Files\MikTeX\tex\latex\chemgreek\chemgreek.sty
-INPUT D:\Program Files\MikTeX\tex\latex\l3kernel\expl3.sty
-INPUT D:\Program Files\MikTeX\tex\latex\l3packages\xparse\xparse.sty
-INPUT D:\Program Files\MikTeX\tex\latex\amsmath\amstext.sty
-INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphics.sty
-INPUT .\1669971_Poisson.aux
-INPUT 1669971_Poisson.aux
-INPUT 1669971_Poisson.aux
-OUTPUT 1669971_Poisson.aux
-INPUT D:\Program Files\MikTeX\tex\latex\hyperref\nameref.sty
-INPUT D:\Program Files\MikTeX\tex\latex\hyperref\nameref.sty
-INPUT D:\Program Files\MikTeX\tex\latex\hyperref\nameref.sty
-INPUT D:\Program Files\MikTeX\tex\latex\hyperref\nameref.sty
-INPUT D:\Program Files\MikTeX\tex\latex\hyperref\nameref.sty
-INPUT D:\Program Files\MikTeX\tex\latex\hyperref\nameref.sty
-INPUT D:\Program Files\MikTeX\tex\latex\hyperref\nameref.sty
+INPUT .\test.aux
+INPUT test.aux
+INPUT test.aux
+OUTPUT test.aux
 INPUT D:\Program Files\MikTeX\tex\latex\hyperref\nameref.sty
 INPUT D:\Program Files\MikTeX\tex\latex\hyperref\nameref.sty
 INPUT D:\Program Files\MikTeX\tex\latex\hyperref\nameref.sty
@@ -1187,40 +1057,22 @@ INPUT D:\Program Files\MikTeX\tex\latex\refcount\refcount.sty
 INPUT D:\Program Files\MikTeX\tex\latex\refcount\refcount.sty
 INPUT D:\Program Files\MikTeX\tex\latex\refcount\refcount.sty
 INPUT D:\Program Files\MikTeX\tex\latex\refcount\refcount.sty
-INPUT D:\Program Files\MikTeX\tex\latex\refcount\refcount.sty
-INPUT D:\Program Files\MikTeX\tex\latex\refcount\refcount.sty
-INPUT D:\Program Files\MikTeX\tex\latex\refcount\refcount.sty
-INPUT D:\Program Files\MikTeX\tex\latex\refcount\refcount.sty
-INPUT D:\Program Files\MikTeX\tex\latex\refcount\refcount.sty
-INPUT D:\Program Files\MikTeX\tex\latex\refcount\refcount.sty
-INPUT D:\Program Files\MikTeX\tex\latex\refcount\refcount.sty
-INPUT D:\Program Files\MikTeX\tex\generic\ltxcmds\ltxcmds.sty
-INPUT D:\Program Files\MikTeX\tex\generic\infwarerr\infwarerr.sty
 INPUT D:\Program Files\MikTeX\tex\generic\gettitlestring\gettitlestring.sty
 INPUT D:\Program Files\MikTeX\tex\generic\gettitlestring\gettitlestring.sty
 INPUT D:\Program Files\MikTeX\tex\generic\gettitlestring\gettitlestring.sty
 INPUT D:\Program Files\MikTeX\tex\generic\gettitlestring\gettitlestring.sty
-INPUT D:\Program Files\MikTeX\tex\generic\gettitlestring\gettitlestring.sty
-INPUT D:\Program Files\MikTeX\tex\generic\gettitlestring\gettitlestring.sty
-INPUT D:\Program Files\MikTeX\tex\generic\gettitlestring\gettitlestring.sty
-INPUT D:\Program Files\MikTeX\tex\generic\gettitlestring\gettitlestring.sty
-INPUT D:\Program Files\MikTeX\tex\generic\gettitlestring\gettitlestring.sty
-INPUT D:\Program Files\MikTeX\tex\generic\gettitlestring\gettitlestring.sty
-INPUT D:\Program Files\MikTeX\tex\generic\gettitlestring\gettitlestring.sty
-INPUT D:\Program Files\MikTeX\tex\latex\kvoptions\kvoptions.sty
-INPUT D:\Program Files\MikTeX\tex\generic\ltxcmds\ltxcmds.sty
-INPUT .\1669971_Poisson.out
-INPUT 1669971_Poisson.out
-INPUT .\1669971_Poisson.out
-INPUT 1669971_Poisson.out
-INPUT .\1669971_Poisson.out
-INPUT 1669971_Poisson.out
-INPUT .\1669971_Poisson.out
-INPUT 1669971_Poisson.out
-OUTPUT 1669971_Poisson.pdf
-INPUT .\1669971_Poisson.out
-INPUT .\1669971_Poisson.out
-OUTPUT 1669971_Poisson.out
+INPUT .\test.out
+INPUT test.out
+INPUT .\test.out
+INPUT test.out
+INPUT .\test.out
+INPUT test.out
+INPUT .\test.out
+INPUT test.out
+INPUT .\test.out
+INPUT .\test.out
+OUTPUT test.out
+OUTPUT test.pdf
 INPUT D:\Program Files\MikTeX\tex\latex\translations\dicts\translations-basic-dictionary-english.trsl
 INPUT D:\Program Files\MikTeX\tex\latex\translations\dicts\translations-basic-dictionary-english.trsl
 INPUT D:\Program Files\MikTeX\tex\latex\translations\dicts\translations-basic-dictionary-english.trsl
@@ -1233,18 +1085,10 @@ INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
 INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
 INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
 INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
-INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
-INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
-INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
-INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
-INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
-INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
-INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
 INPUT D:\Program Files\MikTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT D:\Program Files\MikTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT D:\Program Files\MikTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT D:\Program Files\MikTeX\tex\latex\00miktex\epstopdf-sys.cfg
-INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr6.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmmi12.tfm
@@ -1278,234 +1122,13 @@ INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt8.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt8.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr17.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr12.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT .\Plots\mu4_runningMean.pgf
-INPUT Plots\mu4_runningMean.pgf
-INPUT .\Plots\mu4_runningMean.pgf
-INPUT Plots\mu4_runningMean.pgf
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss8.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss8.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt8.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt8.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr17.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmmi12.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmmi12.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss17.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss12.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt12.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt12.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT .\Plots\mu10_runningMean.pgf
-INPUT Plots\mu10_runningMean.pgf
-INPUT .\Plots\mu10_runningMean.pgf
-INPUT Plots\mu10_runningMean.pgf
-INPUT .\Plots\mu30_runningMean.pgf
-INPUT Plots\mu30_runningMean.pgf
-INPUT .\Plots\mu30_runningMean.pgf
-INPUT Plots\mu30_runningMean.pgf
-INPUT .\Plots\mu100_runningMean.pgf
-INPUT Plots\mu100_runningMean.pgf
-INPUT .\Plots\mu100_runningMean.pgf
-INPUT Plots\mu100_runningMean.pgf
-INPUT .\Plots\s2_x.pgf
-INPUT Plots\s2_x.pgf
-INPUT .\Plots\s2_x.pgf
-INPUT Plots\s2_x.pgf
-INPUT .\Plots\poisson_mu4.pgf
-INPUT Plots\poisson_mu4.pgf
-INPUT .\Plots\poisson_mu4.pgf
-INPUT Plots\poisson_mu4.pgf
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmmi12.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmmi10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss17.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt12.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT .\Plots\poisson_mu10.pgf
-INPUT Plots\poisson_mu10.pgf
-INPUT .\Plots\poisson_mu10.pgf
-INPUT Plots\poisson_mu10.pgf
-INPUT .\Plots\poisson_mu30.pgf
-INPUT Plots\poisson_mu30.pgf
-INPUT .\Plots\poisson_mu30.pgf
-INPUT Plots\poisson_mu30.pgf
-INPUT .\Plots\poisson_mu100.pgf
-INPUT Plots\poisson_mu100.pgf
-INPUT .\Plots\poisson_mu100.pgf
-INPUT Plots\poisson_mu100.pgf
-INPUT .\Plots\binAgree.pgf
-INPUT Plots\binAgree.pgf
-INPUT .\Plots\binAgree.pgf
-INPUT Plots\binAgree.pgf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT PrelabQs.pdf
-INPUT .\PrelabQs.pdf
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmti12.tfm
-INPUT 1669971_Poisson.aux
-INPUT .\1669971_Poisson.out
-INPUT .\1669971_Poisson.out
+INPUT test.aux
+INPUT .\test.out
+INPUT .\test.out
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy6.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy6.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmti12.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmti12.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb

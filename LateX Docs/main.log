@@ -1,0 +1,93 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  28 MAY 2021 02:34
+entering extended mode
+**"d:/Git Repositories/Uni-Code/LateX Docs/main.tex"
+(d:/Git Repositories/Uni-Code/LateX Docs/main.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-05-11> (D:\Program Files\MikTeX\tex/latex/base\article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(D:\Program Files\MikTeX\tex/latex/base\size11.clo
+File: size11.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count179
+\c@section=\count180
+\c@subsection=\count181
+\c@subsubsection=\count182
+\c@paragraph=\count183
+\c@subparagraph=\count184
+\c@figure=\count185
+\c@table=\count186
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (D:\Program Files\MikTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2020/08/01 v1.3d Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+) (D:\Program Files\MikTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+) (D:\Program Files\MikTeX\tex/latex/psnfss\mathpazo.sty
+Package: mathpazo 2020/03/25 PSNFSS-v9.3 Palatino w/ Pazo Math (D.Puga, WaS) 
+\symupright=\mathgroup4
+)
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 6.
+ (D:\Program Files\MikTeX\tex/latex/psnfss\t1ppl.fd
+File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
+) (D:\Program Files\MikTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-05-07 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count187
+\l__pdf_internal_box=\box47
+) (main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+\big@size=\dimen139
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 25.
+ (D:\Program Files\MikTeX\tex/latex/psnfss\ot1ppl.fd
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
+)
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 25.
+ (D:\Program Files\MikTeX\tex/latex/psnfss\omlzplm.fd
+File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 25.
+ (D:\Program Files\MikTeX\tex/latex/psnfss\omszplm.fd
+File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 25.
+ (D:\Program Files\MikTeX\tex/latex/psnfss\omxzplm.fd
+File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 25.
+ (D:\Program Files\MikTeX\tex/latex/psnfss\ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+) [1
+
+{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (main.aux) ) 
+Here is how much of TeX's memory you used:
+ 860 strings out of 479125
+ 12317 string characters out of 4612535
+ 5295266 words of memory out of 19000000
+ 18532 multiletter control sequences out of 15000+600000
+ 426314 words of font info for 61 fonts, out of 5000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 32i,4n,38p,197b,242s stack positions out of 5000i,500n,10000p,5000000b,80000s
+{D:/Program Files/MikTeX/fonts/enc/dvips/base/8r.enc}<D:/Program Files/MikTeX/fonts/type1/urw/palatino/uplb8a.pfb><D:/Program Files/MikTeX/fonts/type1/urw/palatino/uplr8a.pfb><D:/Program Files/MikTeX/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (1 page, 41629 bytes).
+PDF statistics:
+ 19 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

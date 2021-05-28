@@ -4,7 +4,8 @@
 \usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
 \usepackage[separate-uncertainty=true, group-digits=false]{siunitx}
 \usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
-\usepackage{listings,xcolor,subfig,keyval2e,caption,import,wrapfig,lipsum}
+\usepackage{listings,xcolor,subfig,caption,import,wrapfig,lipsum,pdfpages,eso-pic}
+\usepackage{atbegshi,pdflscape,ifthen,calc,appendix}
 \usepackage[version=4]{mhchem}
 \numberwithin{equation}{section}
 \numberwithin{figure}{section}
@@ -36,12 +37,16 @@
 \end{center}
 
 \section{Introduction}\label{sec:Introduction}
+\par The underlying goal of any experiment is to collect data on some phenomenon or process and decide, by some rigorous mathematical method, whether or not the data supports the theory describing that phenomenon or process. Theory often predicts outcomes to an exact precision, but due to the nature of measurement, experiments will never be able to exactly confirm theories, they will only ever be able to agree within an accepted experimental uncertainty. The method by which these uncertainties are estimated is explored in this experiment, as well as some implementation of those methods to attempt to confirm a hypothesis. 
+\par The hypothesis in question is that the ionising radiation emitted by some radioactive source is emitted with a varying frequency that is distributed according to a Poisson distribution. We will test this hypothesis by using a Geiger counter to see a representation of the amount of radiation emitted in a given time period and then using some mathematical methods, outlined in the first part of \autoref{sec:Analysis}, to test whether this data actually follows a Poisson distribution.
 
-
-
+\section{Method}\label{sec:Method}
+\par Due to the limitations of equipment, we are not able to detect every single emission from the source but since there is no bias for radiation to be emitted in a certain direction, we can simply place our detector, a Geiger counter, pointing at the source and this should give a representative sample of the emitted radiation. Since we are not concerned with the quantitative data, such as number of emissions per second, but only with the qualitative distribution of the data this limitation is no issue. 
+\par We began by letting the Geiger counter run for 10 seconds, 100 times, with no radioactive source nearby in order to determine the background radiation in the lab. After this we retrieved our \ce{^{60}Co} source and placed it in front of the Geiger counter. We wanted to analyse the data from multiple approximate count rates or frequencies: 4/10s, 10/10s, 30/10s, and 100/10s. To achieve different rates the source could be moved closer to or further away from the Geiger counter.
+\par Each student was assigned a count rate from the 3 higher rates and we shared our data among ourselves in order to have a complete set, as well as used the example data supplied for the 4/10s count rate. For each rate we ran the experiment for 100 trials of 10 seconds each.
 
 \section{Analysis}\label{sec:Analysis}
-\par Our sample of \ce{^{60}Co} has a number of nuclei on the order of Avagadro's number, $\sim 10^{23}$, and since the half life of \ce{^{60}Co} is 5.27 years \cite{manual} while the time taken collecting data was around 30 minutes, the total number of nuclei throughout the course of the experiment was approximately constant: $N_n$. The number of nuclei that decay in any one time step is in general given by the binomial distribution $B(n;p,N_n)$ but since in our case $N_n$ is huge and $p$ is tiny, we can safely approximate this distribution by the Poisson distribution $P(n;\mu)$, where $\mu=pN_n$. To justify this, we can compute the probability $p$ of any one nucleus decaying during one trial of 10 seconds:
+\par Our sample of \ce{^{60}Co} has a number of nuclei on the order of Avagadro's number, $\sim 10^{23}$, and since the half life of \ce{^{60}Co} is 5.27 years \cite{manual} while the time taken collecting data was around 30 minutes, the total number of nuclei throughout the course of the experiment was approximately constant: $N_n$. The number of nuclei that decay in any one time step is in general given by the binomial distribution $B(n;p,N_n)$ but since in our case $N_n$ is huge and $p$ is tiny, we can safely approximate this distribution by the Poisson distribution $P(n;\mu)$, where $\mu=pN_n$ (). To justify this, we can compute the probability $p$ of any one nucleus decaying during one trial of 10 seconds:
 \par The probability that any one nucleus will decay in a trial of length 5.27 years is 0.5. Thus the probability that any one nucleus will decay in a trial of length 10 seconds is
 \begin{align*}
     p&=0.5\frac{10s}{5.27y}\\
@@ -51,7 +56,7 @@
 \par Since the Poisson distribution gives $p=\frac{\mu}{N_n}$ and $N_n$ is very large, $p$ being of order $\num{1e-8}$ is reasonable. 
 \par Our assumption is that the data we have collected is distributed according to a Poisson distribution, that is it has a mean value $\mu$. In order to extract the value of $\mu$ for our data we use the Method of Maximum Likelihood (MML), which states that the estimator, in our case $\hat\mu$, for a given distribution is found at the maximum of the joint probability distribution function (pdf), so it's a solution to 
 \begin{equation}
-    \partial_{\hat\mu}\prod_{i=1}^N P(x_i;\hat\mu,\vec{\theta})
+    \partial_{\hat\mu}\prod_{i=1}^N P(x_i;\hat\mu,\vec{\theta})\cite{cowan}
     \label{eqn:Joint PDF}
 \end{equation}
 where $N$ is the number of data points or trials and $\vec{\theta}$ is the other parameters that the distribution could depend on. For a Poisson distribution this $\vec{\theta}$ is 0, and for a Gaussian distribution it's $\sigma$. We find the value of this estimator $\hat\mu$ for both the Poisson and Gaussian distributions by first noticing that the maximum of the joint pdf will occur at the same point as the maximum of the log of the joint pdf since log is monotonic. So we solve:
@@ -254,24 +259,25 @@ We want to have a mathematical test that tells us if our estimates for our error
     \end{center}
 \end{figure}
 
-\par So we see that for 2 of the 4 count rates we are reasonably sure that the Poisson hypothesis is correct. The mean of the fraction of bins that agree across all 4 runs is \num{0.7143(36)} with the uncertainty given by the square root of the sample variance given by \autoref{eqn:Sample Variance}. This does not agree within its uncertainty with 0.68, but for the relatively low number of runs and low number of trials per run, this seems reasonable. 
+\par So we see that for 2 of the 4 count rates we are reasonably sure that the Poisson hypothesis is correct. The mean of the fraction of bins that agree across all 4 runs is \num{0.714\pm0.059} with the uncertainty given by the square root of the sample variance given by \autoref{eqn:Sample Variance}. This agrees within its uncertainty with 0.68 and so we can fairly confidently say that our hypothesis is . 
 
 \section{Conclusion}\label{sec:Conclusion}
 
 
 
-
-
-
 \newpage
+\appendix
+\includepdf[pages=1,scale=0.8,pagecommand=\section{Pre-Lab Questions}\label{app:prelab}]{PrelabQs.pdf}
+\includepdf[pages=2-,scale=0.8]{PrelabQs.pdf}
+
+
 \begin{thebibliography}{9}
     \bibitem{manual}
     W.A. Horowitz, \textit{Poisson Statistics}, (UCT, 2021)
+    \bibitem{cowan}
+    G. Cowan, \textit{Statistical Data Analysis, Ch. 6}, (Oxford Science Publications, 1998)
 
 \end{thebibliography}
-
-
-
 
 
 \end{document}
