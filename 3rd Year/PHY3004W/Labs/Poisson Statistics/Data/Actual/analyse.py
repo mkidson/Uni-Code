@@ -10,32 +10,15 @@ matplotlib.rcParams.update({
     'font.family': 'serif',
     'text.usetex': True,
     'pgf.rcfonts': False,
-    # 'axes.labelsize': 10*2,
-    # 'axes.titlesize': 10*2,
-    # 'legend.fontsize': 8*2
+    'axes.labelsize': 10*2,
+    'axes.titlesize': 10*2,
+    'legend.fontsize': 8*2
 })
-# region Background
-file = open(r'3rd Year\PHY3004W\Labs\Poisson Statistics\Data\Actual\background.txt', 'r')
-blines = file.readlines()
-bN = len(blines)
-bi=0
-bkgData = np.zeros(bN, dtype=int)
-# Reading the file, getting the data into the data array
-for line in blines:
-    line = line.strip()
-    columns = line.split()
-    bkgData[bi] = float(columns[0])
-    bi += 1
-file.close()
-bMean=np.mean(bkgData)
-bUncertainty=sqrt(np.var(bkgData))
-# print(bMean)
-# print(bUncertainty)
-
-# endregion
 
 names=[4, 10, 30, 100]
 steps=[1,2,3,4]
+# names=['background']
+# steps=[1]
 sampleVarianceArr=np.array([])
 sampleVarianceUncertaintyArr=np.array([])
 meanCountArr=np.array([])
@@ -103,15 +86,17 @@ for q, name in enumerate(names):
     xTicks=np.concatenate(([f'$<${histBins[1]}'],[f'[{x},{x+step})' for x in histBins[1:-2]],[f'$\geq${histBins[-2]}']))
     # plt.figure()
     # plt.errorbar(binMiddles, histData, sqrt(histData*(1-histData/N)), fmt='.', capsize=2, elinewidth=1)
-    # plt.plot(xmodel, N*step*myPoisson(xmodel, meanCount), label=f'Poisson Distribution\nwith $\mu={meanCount}$')
+    # plt.plot(xmodel, N*step*myPoisson(xmodel, meanCount), label=f'Poisson Distribution\nwith $\mu={meanCount:.3}$')
     # plt.plot([histBins[-2], histBins[-2]+step], yUpper, color='C1')
     # plt.plot([histBins[1]-step, histBins[1]], yLower, color='C1')
     # plt.xticks(binMiddles, xTicks)
     # plt.xlabel('Counts per Trial')
     # plt.ylabel('No. Trials with Given No. Counts')
-    # plt.title(f'Approximate Count Rate of {name}/10s')
+    # plt.title('Background')
+    # # plt.title(f'Approximate Count Rate of {name}/10s')
     # plt.legend()
-    # plt.savefig(f'3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots\poisson_mu{name}.pgf')
+    # # plt.savefig(f'3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots\poisson_mu{name}.pgf')
+    # plt.savefig(r'3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots\bkg_poisson.pgf')
     
 # endregion
 
@@ -125,13 +110,15 @@ for q, name in enumerate(names):
         runningMeansUncertainty.append(currRunningMeanUncertainty)
 
     # plt.figure()
-    # plt.plot(list(range(N)), [meanCount]*N, label=f'Arithmetic Mean: {meanCount}', color='C1')
+    # plt.plot(list(range(N)), [meanCount]*N, label=f'Arithmetic Mean: {meanCount:.3}', color='C1')
     # plt.errorbar(list(range(N)), runningMeans, runningMeansUncertainty, fmt='.', elinewidth=1, capsize=2, ms=3, label='Running mean', color='C0')
     # plt.xlabel('Trial Number $j$')
     # plt.ylabel(r'Arithmetic Mean $\bar{x}_j$')
-    # plt.title(f'Approximate Count Rate of {name}/10s')
+    # # plt.title(f'Approximate Count Rate of {name}/10s')
+    # plt.title('Background')
     # plt.legend()
-    # plt.savefig(f'3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots\mu{name}_runningMean.pgf')
+    # # plt.savefig(f'3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots\mu{name}_runningMean.pgf')
+    # plt.savefig(r'3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots\bkg_runningMean.pgf')
 # endregion
 
 # region Sample variance
@@ -169,12 +156,15 @@ sampleVar_meanCount=sampleVarianceArr/meanCountArr
 sampleVar_meanCountUncertainty=sampleVar_meanCount*sqrt((sampleVarianceUncertaintyArr/sampleVarianceArr)**2 + (meanCountUncertaintyArr/meanCountArr)**2)
 # plt.figure()
 # plt.errorbar(meanCountArr, sampleVar_meanCount, xerr=meanCountUncertaintyArr, yerr=sampleVar_meanCountUncertainty, fmt='.', elinewidth=1, capsize=2, ms=3, label=r'$s^2/\bar{x}$')
-# plt.plot(np.linspace(meanCountArr[0], meanCountArr[-1], 20), [1]*20, label='Expected value of 1')
+# # plt.plot(np.linspace(meanCountArr[0], meanCountArr[-1], 20), [1]*20, label='Expected value of 1')
+# plt.plot(np.linspace(0, 10, 20), [1]*20, label='Expected value of 1')
 # plt.xlabel(r'$\bar{x}$')
 # plt.ylabel(r'$s^2/\bar{x}$')
-# plt.title(r'Plot of $s^2/\bar{x}$ against sample mean for each approximate count rate')
+# # plt.title(r'Plot of $s^2/\bar{x}$ against sample mean for each approximate count rate')
+# plt.title(r'Plot of $s^2/\bar{x}$ against sample mean for background')
 # plt.legend()
-# plt.savefig(r'3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots\s2_x.pgf')
+# # plt.savefig(r'3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots\s2_x.pgf')
+# plt.savefig(r'3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots\bkg_s2_x.pgf')
 
 # endregion
 
@@ -182,20 +172,23 @@ sampleVar_meanCountUncertainty=sampleVar_meanCount*sqrt((sampleVarianceUncertain
 
 numTotalBins=np.array([8,6,7,8])
 numAgreeBins=np.array([5,3,6,7])
-# print(np.mean(numAgreeBins/numTotalBins))
-# binsAgreeMean=np.mean(numAgreeBins/numTotalBins)
-# binsAgreeMeanUncertainty=sqrt(binsAgreeMean/np.sum(numTotalBins))
-# binsAgreeUncertainty=sqrt(sum(((numAgreeBins/numTotalBins)-binsAgreeMean)**2)/(np.sum(numTotalBins)-1))
-# print(f'{binsAgreeMean} +/- {binsAgreeUncertainty}')
+# numTotalBins=np.array([7])
+# numAgreeBins=np.array([4])
+binsAgreeMean=np.mean(numAgreeBins/numTotalBins)
+binsAgreeMeanUncertainty=sqrt(binsAgreeMean/np.sum(numTotalBins))
+binsAgreeUncertainty=sqrt(sum(((numAgreeBins/numTotalBins)-binsAgreeMean)**2)/(np.sum(numTotalBins)-1))
+print(f'{binsAgreeMean} +/- {binsAgreeUncertainty}')
 
 # plt.figure()
-# plt.errorbar(meanCountArr, numAgreeBins/numTotalBins, sqrt(numAgreeBins*(1-(numAgreeBins/numTotalBins)))/numTotalBins, fmt='.', elinewidth=1, capsize=2, ms=3)
-# plt.plot(np.linspace(4,100,10), [0.68]*10, label='Expected value: 0.68')
-# plt.xlabel('Arithmetic Mean')
+# plt.errorbar(meanCountArr, numAgreeBins/numTotalBins, xerr=meanCountUncertaintyArr, yerr=sqrt(numAgreeBins*(1-(numAgreeBins/numTotalBins)))/numTotalBins, fmt='.', elinewidth=1, capsize=2, ms=3)
+# # plt.plot(np.linspace(4,100,10), [0.68]*10, label='Expected value: 0.68')
+# plt.plot(np.linspace(0,10,10), [0.68]*10, label='Expected value: 0.68')
+# plt.xlabel(r'$\bar{x}$')
 # plt.ylabel('$n_a/N_{bins}$')
 # plt.title('Fraction of bins that agree with the Poisson curve')
 # plt.legend()
-# plt.savefig(r'3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots\binAgree.pgf')
+# # plt.savefig(r'3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots\binAgree.pgf')
+# plt.savefig(r'3rd Year\PHY3004W\Labs\Poisson Statistics\Report\Plots\bkg_binAgree.pgf')
 
 # endregion
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  28 MAY 2021 02:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  28 MAY 2021 18:05
 entering extended mode
 **"d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Poisson Statistics/Report/1669971_Poisson.tex"
 (d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Poisson Statistics/Report/1669971_Poisson.tex
@@ -1027,115 +1027,115 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <16> not available
 LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <16> not available
 (Font)              size <17.28> substituted on input line 948.
 
-) (Plots/poisson_mu10.pgf) (Plots/poisson_mu30.pgf) (Plots/poisson_mu100.pgf) [10] (Plots/binAgree.pgf) [11]
-<PrelabQs.pdf, id=158, 597.53236pt x 845.05714pt>
+) (Plots/poisson_mu10.pgf) (Plots/poisson_mu30.pgf) (Plots/poisson_mu100.pgf) [10] (Plots/binAgree.pgf) [11] (Plots/bkg_runningMean.pgf) (Plots/bkg_s2_x.pgf) (Plots/bkg_poisson.pgf) (Plots/bkg_binAgree.pgf) [12] [13]
+<PrelabQs.pdf, id=198, 597.53236pt x 845.05714pt>
 File: PrelabQs.pdf Graphic file (type pdf)
 <use PrelabQs.pdf>
-Package pdftex.def Info: PrelabQs.pdf  used on input line 270.
-(pdftex.def)             Requested size: 597.5309pt x 845.05507pt.
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf>
-Package pdftex.def Info: PrelabQs.pdf  used on input line 270.
-(pdftex.def)             Requested size: 597.5309pt x 845.05507pt.
-<PrelabQs.pdf, id=161, page=1, 597.53236pt x 845.05714pt>
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 1>
-Package pdftex.def Info: PrelabQs.pdf , page1 used on input line 270.
-(pdftex.def)             Requested size: 597.5309pt x 845.05507pt.
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 1>
-Package pdftex.def Info: PrelabQs.pdf , page1 used on input line 270.
-(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 1>
-Package pdftex.def Info: PrelabQs.pdf , page1 used on input line 270.
-(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 1>
-Package pdftex.def Info: PrelabQs.pdf , page1 used on input line 270.
-(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 1>
-Package pdftex.def Info: PrelabQs.pdf , page1 used on input line 270.
-(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
- [12 <./PrelabQs.pdf>]
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf>
-Package pdftex.def Info: PrelabQs.pdf  used on input line 271.
+Package pdftex.def Info: PrelabQs.pdf  used on input line 301.
 (pdftex.def)             Requested size: 597.5309pt x 845.05507pt.
 File: PrelabQs.pdf Graphic file (type pdf)
 <use PrelabQs.pdf>
-Package pdftex.def Info: PrelabQs.pdf  used on input line 271.
+Package pdftex.def Info: PrelabQs.pdf  used on input line 301.
 (pdftex.def)             Requested size: 597.5309pt x 845.05507pt.
-<PrelabQs.pdf, id=170, page=2, 597.53236pt x 845.05714pt>
+<PrelabQs.pdf, id=201, page=1, 597.53236pt x 845.05714pt>
 File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 2>
-Package pdftex.def Info: PrelabQs.pdf , page2 used on input line 271.
+<use PrelabQs.pdf, page 1>
+Package pdftex.def Info: PrelabQs.pdf , page1 used on input line 301.
 (pdftex.def)             Requested size: 597.5309pt x 845.05507pt.
 File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 2>
-Package pdftex.def Info: PrelabQs.pdf , page2 used on input line 271.
+<use PrelabQs.pdf, page 1>
+Package pdftex.def Info: PrelabQs.pdf , page1 used on input line 301.
 (pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
 File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 2>
-Package pdftex.def Info: PrelabQs.pdf , page2 used on input line 271.
+<use PrelabQs.pdf, page 1>
+Package pdftex.def Info: PrelabQs.pdf , page1 used on input line 301.
 (pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
 File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 2>
-Package pdftex.def Info: PrelabQs.pdf , page2 used on input line 271.
+<use PrelabQs.pdf, page 1>
+Package pdftex.def Info: PrelabQs.pdf , page1 used on input line 301.
 (pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
 File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 2>
-Package pdftex.def Info: PrelabQs.pdf , page2 used on input line 271.
-(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
- [13 <./PrelabQs.pdf>]
-<PrelabQs.pdf, id=177, page=3, 597.53236pt x 845.05714pt>
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 3>
-Package pdftex.def Info: PrelabQs.pdf , page3 used on input line 271.
-(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 3>
-Package pdftex.def Info: PrelabQs.pdf , page3 used on input line 271.
-(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
-File: PrelabQs.pdf Graphic file (type pdf)
-<use PrelabQs.pdf, page 3>
-Package pdftex.def Info: PrelabQs.pdf , page3 used on input line 271.
+<use PrelabQs.pdf, page 1>
+Package pdftex.def Info: PrelabQs.pdf , page1 used on input line 301.
 (pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
  [14 <./PrelabQs.pdf>]
-<PrelabQs.pdf, id=183, page=4, 597.53236pt x 845.05714pt>
+File: PrelabQs.pdf Graphic file (type pdf)
+<use PrelabQs.pdf>
+Package pdftex.def Info: PrelabQs.pdf  used on input line 302.
+(pdftex.def)             Requested size: 597.5309pt x 845.05507pt.
+File: PrelabQs.pdf Graphic file (type pdf)
+<use PrelabQs.pdf>
+Package pdftex.def Info: PrelabQs.pdf  used on input line 302.
+(pdftex.def)             Requested size: 597.5309pt x 845.05507pt.
+<PrelabQs.pdf, id=210, page=2, 597.53236pt x 845.05714pt>
+File: PrelabQs.pdf Graphic file (type pdf)
+<use PrelabQs.pdf, page 2>
+Package pdftex.def Info: PrelabQs.pdf , page2 used on input line 302.
+(pdftex.def)             Requested size: 597.5309pt x 845.05507pt.
+File: PrelabQs.pdf Graphic file (type pdf)
+<use PrelabQs.pdf, page 2>
+Package pdftex.def Info: PrelabQs.pdf , page2 used on input line 302.
+(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
+File: PrelabQs.pdf Graphic file (type pdf)
+<use PrelabQs.pdf, page 2>
+Package pdftex.def Info: PrelabQs.pdf , page2 used on input line 302.
+(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
+File: PrelabQs.pdf Graphic file (type pdf)
+<use PrelabQs.pdf, page 2>
+Package pdftex.def Info: PrelabQs.pdf , page2 used on input line 302.
+(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
+File: PrelabQs.pdf Graphic file (type pdf)
+<use PrelabQs.pdf, page 2>
+Package pdftex.def Info: PrelabQs.pdf , page2 used on input line 302.
+(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
+ [15 <./PrelabQs.pdf>]
+<PrelabQs.pdf, id=216, page=3, 597.53236pt x 845.05714pt>
+File: PrelabQs.pdf Graphic file (type pdf)
+<use PrelabQs.pdf, page 3>
+Package pdftex.def Info: PrelabQs.pdf , page3 used on input line 302.
+(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
+File: PrelabQs.pdf Graphic file (type pdf)
+<use PrelabQs.pdf, page 3>
+Package pdftex.def Info: PrelabQs.pdf , page3 used on input line 302.
+(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
+File: PrelabQs.pdf Graphic file (type pdf)
+<use PrelabQs.pdf, page 3>
+Package pdftex.def Info: PrelabQs.pdf , page3 used on input line 302.
+(pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
+ [16 <./PrelabQs.pdf>]
+<PrelabQs.pdf, id=222, page=4, 597.53236pt x 845.05714pt>
 File: PrelabQs.pdf Graphic file (type pdf)
 <use PrelabQs.pdf, page 4>
-Package pdftex.def Info: PrelabQs.pdf , page4 used on input line 271.
+Package pdftex.def Info: PrelabQs.pdf , page4 used on input line 302.
 (pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
 File: PrelabQs.pdf Graphic file (type pdf)
 <use PrelabQs.pdf, page 4>
-Package pdftex.def Info: PrelabQs.pdf , page4 used on input line 271.
+Package pdftex.def Info: PrelabQs.pdf , page4 used on input line 302.
 (pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
 File: PrelabQs.pdf Graphic file (type pdf)
 <use PrelabQs.pdf, page 4>
-Package pdftex.def Info: PrelabQs.pdf , page4 used on input line 271.
+Package pdftex.def Info: PrelabQs.pdf , page4 used on input line 302.
 (pdftex.def)             Requested size: 478.02654pt x 676.04663pt.
- [15 <./PrelabQs.pdf>] [16] (1669971_Poisson.aux)
+ [17 <./PrelabQs.pdf>] [18] (1669971_Poisson.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
 
 Package rerunfilecheck Info: File `1669971_Poisson.out' has not changed.
-(rerunfilecheck)             Checksum: 6AD78FE9F706B2D0B29F93D5D512DD68;1322.
+(rerunfilecheck)             Checksum: 539105DAE0B7130B59204A6EAA9859A3;1430.
  ) 
 Here is how much of TeX's memory you used:
- 40651 strings out of 479125
- 939229 string characters out of 4612535
- 6706929 words of memory out of 19000000
- 57584 multiletter control sequences out of 15000+600000
+ 40684 strings out of 479125
+ 940180 string characters out of 4612535
+ 6707429 words of memory out of 19000000
+ 57596 multiletter control sequences out of 15000+600000
  422246 words of font info for 102 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,18n,103p,874b,859s stack positions out of 5000i,500n,10000p,5000000b,80000s
+ 99i,18n,103p,1186b,859s stack positions out of 5000i,500n,10000p,5000000b,80000s
 <D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 1669971_Poisson.pdf (16 pages, 1272597 bytes).
+Output written on 1669971_Poisson.pdf (18 pages, 1293923 bytes).
 PDF statistics:
- 265 PDF objects out of 1000 (max. 8388607)
- 53 named destinations out of 1000 (max. 500000)
- 130 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 306 PDF objects out of 1000 (max. 8388607)
+ 62 named destinations out of 1000 (max. 500000)
+ 138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -38,11 +38,12 @@
 
 \section{Introduction}\label{sec:Introduction}
 \par The underlying goal of any experiment is to collect data on some phenomenon or process and decide, by some rigorous mathematical method, whether or not the data supports the theory describing that phenomenon or process. Theory often predicts outcomes to an exact precision, but due to the nature of measurement, experiments will never be able to exactly confirm theories, they will only ever be able to agree within an accepted experimental uncertainty. The method by which these uncertainties are estimated is explored in this experiment, as well as some implementation of those methods to attempt to confirm a hypothesis. 
-\par The hypothesis in question is that the ionising radiation emitted by some radioactive source is emitted with a varying frequency that is distributed according to a Poisson distribution. We will test this hypothesis by using a Geiger counter to see a representation of the amount of radiation emitted in a given time period and then using some mathematical methods, outlined in the first part of \autoref{sec:Analysis}, to test whether this data actually follows a Poisson distribution.
+\par The hypothesis in question is that the ionising radiation emitted by some radioactive source is emitted with a varying frequency that is distributed according to a Poisson distribution. We will test this hypothesis by using a Geiger counter to see a representation of the amount of radiation emitted in a given time period and then using some mathematical methods, outlined in the first part of \autoref{sec:Analysis}, to test whether this data actually follows a Poisson distribution in \autoref{sec:Analysis}. 
+\par We also hypothesise that background radiation, as detected by a Geiger counter, follows a Poisson frequency distribution. We will test this at the end of \autoref{sec:Analysis}.
 
 \section{Method}\label{sec:Method}
 \par Due to the limitations of equipment, we are not able to detect every single emission from the source but since there is no bias for radiation to be emitted in a certain direction, we can simply place our detector, a Geiger counter, pointing at the source and this should give a representative sample of the emitted radiation. Since we are not concerned with the quantitative data, such as number of emissions per second, but only with the qualitative distribution of the data this limitation is no issue. 
-\par We began by letting the Geiger counter run for 10 seconds, 100 times, with no radioactive source nearby in order to determine the background radiation in the lab. After this we retrieved our \ce{^{60}Co} source and placed it in front of the Geiger counter. We wanted to analyse the data from multiple approximate count rates or frequencies: 4/10s, 10/10s, 30/10s, and 100/10s. To achieve different rates the source could be moved closer to or further away from the Geiger counter.
+\par We began by letting the Geiger counter, set at \SI{600}{\volt}, run for 10 seconds, 100 times, with no radioactive source nearby in order to determine the background radiation in the lab. After this we retrieved our \ce{^{60}Co} source and placed it in front of the Geiger counter. We wanted to analyse the data from multiple approximate count rates or frequencies: 4/10s, 10/10s, 30/10s, and 100/10s. To achieve different rates the source could be moved closer to or further away from the Geiger counter.
 \par Each student was assigned a count rate from the 3 higher rates and we shared our data among ourselves in order to have a complete set, as well as used the example data supplied for the 4/10s count rate. For each rate we ran the experiment for 100 trials of 10 seconds each.
 
 \section{Analysis}\label{sec:Analysis}
@@ -227,7 +228,7 @@ and we can check that this is unbiased for a Poisson distribution, i.e. $E[s^2]=
     \sqrt{n_i\left(1-\frac{n_i}{N}\right)}
     \label{eqn:Bin Count Uncertainty}
 \end{equation}
-\par We could bin our data where each bin has width of 1, but this leads to some inaccurate estimates of means and uncertainties for bins, especially when we have bins with 0 trials. For this reason we tweak our bins in order to get better statistics. Sometimes tweaking is not necessary however. We also made sure that, on either side, we never had a bin with fewer than 5 trials. Finally we plotted the Poisson distribution with the arithmetic mean from the data as we expect the data to fit to the distribution if our hypothesis that this data obeys a Poisson distribution is correct. 
+\par We could bin our data where each bin has width of 1, but this leads to some inaccurate estimates of means and uncertainties for bins, especially when we have bins with 0 trials. For this reason we tweak our bins in order to get better statistics. Sometimes tweaking is not necessary however. We also made sure that, on either side, we never had a bin with fewer than 5 trials. Finally we plotted the Poisson distribution with the arithmetic mean from the data as we expect the data to fit to the distribution if our hypothesis that this data obeys a Poisson distribution is correct. Note that the tails of the smooth curves are discontinuous. This is to compensate for the fact that the Poisson distribution does not terminate at the limits of our data. We used a Cumulative Distribution Function (CDF) to calculate the cumulative value of the curve from the edge to its limit on either side, 0 or $\infty$. We also combined the outer bins with small numbers of trials in them so that no outer bin had less than 5 trials in it. This is also in the interest of better statistics.
 
 \begin{figure}[H]%
     \centering
@@ -259,11 +260,41 @@ We want to have a mathematical test that tells us if our estimates for our error
     \end{center}
 \end{figure}
 
-\par So we see that for 2 of the 4 count rates we are reasonably sure that the Poisson hypothesis is correct. The mean of the fraction of bins that agree across all 4 runs is \num{0.714\pm0.059} with the uncertainty given by the square root of the sample variance given by \autoref{eqn:Sample Variance}. This agrees within its uncertainty with 0.68 and so we can fairly confidently say that our hypothesis is . 
+\par We see that 2 of our 4 runs have a fraction of agreeing bins that agrees with the expected value of 0.68 within $1\sigma$, and the other two within $2\sigma$. This definitely supports our hypothesis. The mean of the fraction of bins that agree across all 4 runs is \num{0.714\pm0.059} with the uncertainty given by the square root of the sample variance as given by \autoref{eqn:Sample Variance}. This agrees within its uncertainty with 0.68 and so is further support for our hypothesis. 
+\par We see that for every single test we tried; the behaviour of the running mean, $s^2/\bar{x}$, the fraction of bins which agree with the Poisson curve, our data gave us values that for the most part agreed with the expectation within experimental uncertainty. For that reason we can say that our hypothesis is, at least provisionally, confirmed. 
+
+\subsection{Background}\label{sec:background}
+The process of testing our hypothesis regarding the frequency distribution of background radiation is essentially identical to that done for the radioactive source. The graphical results are found in \autoref{fig:Background} and the sample mean and variance in \autoref{tbl:Background Mean and Variance}.
+
+\begin{figure}[H]%
+    \centering
+    \subfloat{\scalebox{0.5}{\subimport{Plots}{bkg_runningMean.pgf}}}
+    \,
+    \subfloat{\scalebox{0.5}{\subimport{Plots}{bkg_s2_x.pgf}}}
+    \,
+    \subfloat{\scalebox{0.5}{\subimport{Plots}{bkg_poisson.pgf}}}
+    \,
+    \subfloat{\scalebox{0.5}{\subimport{Plots}{bkg_binAgree.pgf}}}
+    \caption{All 4 mathematical tests, outlined in \autoref{sec:Running Mean}, \autoref{eqn:s2/x Uncertainty}, \autoref{sec:Poisson Plots}, \autoref{sec:Poisson Bins}, applied to the data taken for background radiation.}
+    \label{fig:Background}
+\end{figure}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+         & Sample Mean & Sample Variance \\\hline
+        Background & \num{3.61(19)} & \num{3.20(55)}\\\hline
+    \end{tabular}
+    \caption{Sample Mean and Sample Variance for background data, calculated using \autoref{eqn:Mean Count}, \autoref{eqn:Mean Count Uncertainty}, \autoref{eqn:Sample Variance}, and \autoref{eqn:Sample Variance Uncertainty}}
+    \label{tbl:Background Mean and Variance}
+\end{table}
+
+\par We can see that for all 4 tests we see either the expected behaviour such as the uncertainty on a running mean decreasing as $j$ increases, or we see that numerical values extracted from the data agree within uncertainty with our expectations, such as $s^2/\bar{x}$ and the fraction of bins which agree with the Poisson curve. 
 
 \section{Conclusion}\label{sec:Conclusion}
-
-
+\par For both the background data and the data from a radioactive source, the tests applied to our hypothesis, that emitted radiation follows a Poisson frequency distribution, gave us very positive results. We are confident that in both cases our hypothesis is correct. 
+\par Improvements can be made in order to reduce the uncertainties estimated in this process, namely increasing the number of trials done for each count rate. We see from \autoref{eqn:Mean Count Uncertainty} that the uncertainty goes by $1/\sqrt{N}$ where $N$ is the number of trials. Another improvement is to attempt to properly shield the Geiger counter from background radiation. No attempt was made in this case and we believe that for lower approximate count rates, $\sim 4$ and $\sim 10$, the background radiation can have a considerable effect. 
 
 \newpage
 \appendix

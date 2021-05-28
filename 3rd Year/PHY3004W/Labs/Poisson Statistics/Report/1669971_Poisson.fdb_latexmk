@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1622162843 "d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Poisson Statistics/Report/1669971_Poisson.tex" "1669971_Poisson.pdf" "1669971_Poisson" 1622162852
-  "1669971_Poisson.aux" 1622162851 6617 30d40e05b58c8ba7221100ce3867e772 "pdflatex"
-  "1669971_Poisson.out" 1622162851 1322 6ad78fe9f706b2d0b29f93d5d512dd68 "pdflatex"
-  "1669971_Poisson.tex" 1622162832 22284 b82a26e808bc8a96130294e863d9c656 ""
+["pdflatex"] 1622217912 "d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Poisson Statistics/Report/1669971_Poisson.tex" "1669971_Poisson.pdf" "1669971_Poisson" 1622218226
+  "1669971_Poisson.aux" 1622217920 8063 14de4a72e0d55b0dc82bb289bf36e701 "pdflatex"
+  "1669971_Poisson.out" 1622217920 1430 539105dae0b7130b59204a6eaa9859a3 "pdflatex"
+  "1669971_Poisson.tex" 1622217909 26058 879efca10937d3148ebf1dad678ccf66 ""
   "C:/Users/miles/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1622159364 10261458 96b628fbe04cd2bda6c832da7db40e7a ""
   "C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1622160044 4735360 eccb59d2b35948648078db10d1edeb16 ""
   "D:/Program Files/MikTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -254,6 +254,10 @@
   "D:/Program Files/MikTeX/tex/latex/wrapfig/wrapfig.sty" 1044403200 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "D:/Program Files/MikTeX/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
   "Plots/binAgree.pgf" 1622048470 27044 c49b77eb2ffd664a158720ea1544272d ""
+  "Plots/bkg_binAgree.pgf" 1622215052 26627 42e141b1be827d22656b755c3fc20b7e ""
+  "Plots/bkg_poisson.pgf" 1622216956 32059 ce4ccb7604a11f152e4d058f8635557a ""
+  "Plots/bkg_runningMean.pgf" 1622216930 112231 b8e3604203686e4f4a72b67106480065 ""
+  "Plots/bkg_s2_x.pgf" 1622215036 31617 5ddc82f0e66206c9e3374e5c59cf54f3 ""
   "Plots/mu100_runningMean.pgf" 1621975860 113125 5f0ce95f70d3dc064aa201955e7b9804 ""
   "Plots/mu10_runningMean.pgf" 1621975860 115091 10090cfe6bb0150527fbc0254789856c ""
   "Plots/mu30_runningMean.pgf" 1621975860 116102 83d12fd1eb1d576251b22f6d1f12ba77 ""
@@ -264,9 +268,9 @@
   "Plots/poisson_mu4.pgf" 1622048060 37293 43cd7e102c1b95f4210238d9f8dd4d0d ""
   "Plots/s2_x.pgf" 1621962706 37229 d8ffafd2e46d2e3a804ae009a808680a ""
   "PrelabQs.pdf" 1622156371 996249 0b9a7b72867a7e53c8c4546f43166c0b ""
-  "d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Poisson Statistics/Report/1669971_Poisson.tex" 1622162832 22284 b82a26e808bc8a96130294e863d9c656 ""
+  "d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Poisson Statistics/Report/1669971_Poisson.tex" 1622217909 26058 879efca10937d3148ebf1dad678ccf66 ""
   (generated)
+  "1669971_Poisson.pdf"
+  "1669971_Poisson.out"
   "1669971_Poisson.aux"
   "1669971_Poisson.log"
-  "1669971_Poisson.out"
-  "1669971_Poisson.pdf"
