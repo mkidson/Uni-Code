@@ -8,9 +8,9 @@ h2=h^2;
 y=1-1/4*x.^2;
 plot(x,y,'r'), hold on
 
-uPrime=[(guess(2)-guess(1))/h;(guess(2:end)-guess(1:end-1))/(2*h);(guess(end)-guess(end-1))/h]
+uPrime=[(guess(2)-guess(1))/h;(guess(2:end)-guess(1:end-1))/(2*h);(guess(end)-guess(end-1))/h];
 uPrimePrime
-g=[-uPrimePrime-1/r]
+g=[-uPrimePrime-1/r];
 
 rhs=[-3*y(1)+4*y(2)-y(3)+h/2;y(1:N-1)-2*y(2:N)+y(3:N+1)-2*h2*y(2:N).^3;...
     2*h*y(N+1)+3*y(N+1)-4*y(N)+y(N-1)-h*8/25];
