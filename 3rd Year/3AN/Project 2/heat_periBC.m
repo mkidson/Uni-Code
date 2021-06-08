@@ -6,6 +6,7 @@ x=h*(j-1);
 u0=sin(x)';
 u=zeros(size(u0));
 clf
+
 plot(x,u0,'r')
 hold on
 ta=0.2;
