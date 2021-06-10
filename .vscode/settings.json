@@ -22,8 +22,10 @@
         "levenberg",
         "marquardt",
         "nndc",
+        "odinger",
         "ortec",
         "pcov",
+        "schr",
         "spectech",
         "tuffy"
     ],

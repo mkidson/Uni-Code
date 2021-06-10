@@ -11,7 +11,7 @@ matplotlib.rcParams.update({
     'pgf.rcfonts': False,
 })
 #region Ingesting background data, only needs to be done once
-backgroundFile=open(r'3rd Year\PHY3004W\Labs\Gamma Spectroscopy\Report\Data\Background.csv','r')
+backgroundFile=open(r'3rd Year\PHY3004W\Labs\Gamma Spectroscopy\Data\Background.csv','r')
 bLiveTime=float(backgroundFile.readline().strip())
 # Gets info from top of file: ,Low,High,Gross,Net,FWHM,Centroid
 bVitals=backgroundFile.readline().strip().split(',')
@@ -38,11 +38,11 @@ def gaussian(x, mu, sigma, A):
 
 names=['22Na', '60Co', '109Cd', '133Ba', '137Cs', '152Eu', 'Unknown']
 
-for name in {'133Ba'}:
+for name in {'22Na'}:
     print('----------------------------------------------------------------------------------------')
     print(name)
     #region Ingesting data
-    f=open(f'3rd Year\PHY3004W\Labs\Gamma Spectroscopy\Report\Data\{name}.csv','r')
+    f=open(f'3rd Year\PHY3004W\Labs\Gamma Spectroscopy\Data\{name}.csv','r')
     liveTime=float(f.readline().strip())
     # Gets info from top of file: ,Low,High,Gross,Net,FWHM,Centroid
     vitals=f.readline().strip().split(',')

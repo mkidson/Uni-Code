@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  8 JUN 2021 18:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  10 JUN 2021 11:43
 entering extended mode
 **"d:/Git Repositories/Uni-Code/3rd Year/3AN/Project 2/Report/project2.tex"
 (d:/Git Repositories/Uni-Code/3rd Year/3AN/Project 2/Report/project2.tex
@@ -767,64 +767,77 @@ Package: import 2020/04/01  v 6.2
 \WF@box=\box84
 \WF@everypar=\toks44
 Package: wrapfig 2003/01/31  v 3.6
+) (D:\Program Files\MikTeX\tex/latex/matlab-prettifier\matlab-prettifier.sty
+Package: matlab-prettifier 2014/06/19 v0.3 A package for prettyprinting Matlab source code
+ (D:\Program Files\MikTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+\netBracketCount@mlpr=\count339
+\blkLvl@mlpr=\count340
+\blkLvlAtClassdef@mlpr=\count341
+\emHeight@mlpr=\skip60
+\jayDepth@mlpr=\skip61
+\sectionRuleOffset@mlpr=\skip62
+\toks@mlpr=\toks45
 ) (D:\Program Files\MikTeX\tex/latex/mhchem\mhchem.sty
 Package: mhchem 2018/06/22 v4.08 for typesetting chemical formulae
  (D:\Program Files\MikTeX\tex/latex/latex-tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count339
-\calc@Bcount=\count340
+\calc@Acount=\count342
+\calc@Bcount=\count343
 \calc@Adimen=\dimen304
 \calc@Bdimen=\dimen305
-\calc@Askip=\skip60
-\calc@Bskip=\skip61
+\calc@Askip=\skip63
+\calc@Bskip=\skip64
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count341
-\calc@Cskip=\skip62
+\calc@Ccount=\count344
+\calc@Cskip=\skip65
 ) (D:\Program Files\MikTeX\tex/latex/chemgreek\chemgreek.sty
 Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use in chemistry (CN)
-\l__chemgreek_tmpa_int=\count342
-\g__chemgreek_tmpa_int=\count343
+\l__chemgreek_tmpa_int=\count345
+\g__chemgreek_tmpa_int=\count346
 )
-\l__mhchem_ce_distanceFromLastComma_int=\count344
-\__mhchem_arrow_extPgfLength_skip=\skip63
-\mhchem@minispace@tmp=\skip64
-\mhchem@minibackspace@tmp=\skip65
-\mhchem@bondwidth=\skip66
-\mhchem@bondheight=\skip67
-\mhchem@smallbondwidth@tmpA=\skip68
-\mhchem@smallbondwidth@tmpB=\skip69
-\mhchem@smallbondwidth=\skip70
-\mhchem@bondtmp@minussidebearingleft=\skip71
-\mhchem@bondtmp@minussidebearingright=\skip72
-\l__mhchem_option_version_int=\count345
+\l__mhchem_ce_distanceFromLastComma_int=\count347
+\__mhchem_arrow_extPgfLength_skip=\skip66
+\mhchem@minispace@tmp=\skip67
+\mhchem@minibackspace@tmp=\skip68
+\mhchem@bondwidth=\skip69
+\mhchem@bondheight=\skip70
+\mhchem@smallbondwidth@tmpA=\skip71
+\mhchem@smallbondwidth@tmpB=\skip72
+\mhchem@smallbondwidth=\skip73
+\mhchem@bondtmp@minussidebearingleft=\skip74
+\mhchem@bondtmp@minussidebearingright=\skip75
+\l__mhchem_option_version_int=\count348
 \mhchem@option@minusmathsidebearingleft=\dimen306
 \mhchem@option@minusmathsidebearingright=\dimen307
 \mhchem@option@minustextsidebearingleft=\dimen308
 \mhchem@option@minustextsidebearingright=\dimen309
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 26.
- (project2.aux)
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 20.
+
+(project2.aux)
 \openout1 = `project2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -860,7 +873,7 @@ LaTeX Font Info:    ... okay on input line 26.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 26.
+Package hyperref Info: Link coloring OFF on input line 20.
 (D:\Program Files\MikTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (D:\Program Files\MikTeX\tex/latex/refcount\refcount.sty
@@ -868,11 +881,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (D:\Program Files\MikTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count346
+\c@section@level=\count349
 )
-LaTeX Info: Redefining \ref on input line 26.
-LaTeX Info: Redefining \pageref on input line 26.
-LaTeX Info: Redefining \nameref on input line 26.
+LaTeX Info: Redefining \ref on input line 20.
+LaTeX Info: Redefining \pageref on input line 20.
+LaTeX Info: Redefining \nameref on input line 20.
  (project2.out) (project2.out)
 \@outlinefile=\write6
 \openout6 = `project2.out'.
@@ -880,20 +893,20 @@ LaTeX Info: Redefining \nameref on input line 26.
  (D:\Program Files\MikTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 26.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 20.
  (D:\Program Files\MikTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count347
+\scratchcounter=\count350
 \scratchdimen=\dimen310
 \scratchbox=\box85
-\nofMPsegments=\count348
-\nofMParguments=\count349
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count350
+\nofMPsegments=\count351
+\nofMParguments=\count352
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count353
 \MPscratchDim=\dimen311
-\MPnumerator=\count351
-\makeMPintoPDFobject=\count352
-\everyMPtoPDFconversion=\toks46
+\MPnumerator=\count354
+\makeMPintoPDFobject=\count355
+\everyMPtoPDFconversion=\toks47
 ) (D:\Program Files\MikTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -902,59 +915,393 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
 
-\c@lstlisting=\count353
+\c@lstlisting=\count356
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-Package chemgreek Info: Activating mapping `default' on line 26.
+Package chemgreek Info: Activating mapping `default' on line 20.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 20.
 (D:\Program Files\MikTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 20.
  (D:\Program Files\MikTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+) [1
+
+{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+
+ []
+
+[2]
+Package epstopdf Info: Source file: <Plots/splitStep_Main.eps>
+(epstopdf)                    date: 2021-06-08 17:54:49
+(epstopdf)                    size: 147456 bytes
+(epstopdf)             Output file: <Plots/splitStep_Main-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-06-09 23:19:34
+(epstopdf)                    size: 70826 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/splitStep_Main-eps-converted-to.pdf Plots/splitStep_Main.eps>
+(epstopdf)             \includegraphics on input line 89.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Plots/splitStep_Main-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/splitStep_Main-eps-converted-to.pdf, id=69, 421.575pt x 316.18124pt>
+File: Plots/splitStep_Main-eps-converted-to.pdf Graphic file (type pdf)
+<use Plots/splitStep_Main-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/splitStep_Main-eps-converted-to.pdf  used on input line 89.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+Package epstopdf Info: Source file: <Plots/FD_Main.eps>
+(epstopdf)                    date: 2021-06-09 18:58:19
+(epstopdf)                    size: 143981 bytes
+(epstopdf)             Output file: <Plots/FD_Main-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-06-09 23:19:38
+(epstopdf)                    size: 71427 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/FD_Main-eps-converted-to.pdf Plots/FD_Main.eps>
+(epstopdf)             \includegraphics on input line 91.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Plots/FD_Main-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/FD_Main-eps-converted-to.pdf, id=70, 421.575pt x 316.18124pt>
+File: Plots/FD_Main-eps-converted-to.pdf Graphic file (type pdf)
+<use Plots/FD_Main-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/FD_Main-eps-converted-to.pdf  used on input line 91.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+Package epstopdf Info: Source file: <Plots/splitStep_S02.eps>
+(epstopdf)                    date: 2021-06-08 17:55:59
+(epstopdf)                    size: 131154 bytes
+(epstopdf)             Output file: <Plots/splitStep_S02-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-06-09 14:09:32
+(epstopdf)                    size: 69517 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/splitStep_S02-eps-converted-to.pdf Plots/splitStep_S02.eps>
+(epstopdf)             \includegraphics on input line 99.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Plots/splitStep_S02-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/splitStep_S02-eps-converted-to.pdf, id=71, 421.575pt x 316.18124pt>
+File: Plots/splitStep_S02-eps-converted-to.pdf Graphic file (type pdf)
+<use Plots/splitStep_S02-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/splitStep_S02-eps-converted-to.pdf  used on input line 99.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+Package epstopdf Info: Source file: <Plots/FD_S02.eps>
+(epstopdf)                    date: 2021-06-09 19:17:30
+(epstopdf)                    size: 130328 bytes
+(epstopdf)             Output file: <Plots/FD_S02-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-06-09 23:48:12
+(epstopdf)                    size: 71421 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/FD_S02-eps-converted-to.pdf Plots/FD_S02.eps>
+(epstopdf)             \includegraphics on input line 101.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Plots/FD_S02-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/FD_S02-eps-converted-to.pdf, id=72, 421.575pt x 316.18124pt>
+File: Plots/FD_S02-eps-converted-to.pdf Graphic file (type pdf)
+<use Plots/FD_S02-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/FD_S02-eps-converted-to.pdf  used on input line 101.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+[3 <./Plots/splitStep_Main-eps-converted-to.pdf> <./Plots/FD_Main-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Plots/splitStep_S0.eps>
+(epstopdf)                    date: 2021-06-08 17:58:28
+(epstopdf)                    size: 118409 bytes
+(epstopdf)             Output file: <Plots/splitStep_S0-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-06-09 14:09:34
+(epstopdf)                    size: 68355 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/splitStep_S0-eps-converted-to.pdf Plots/splitStep_S0.eps>
+(epstopdf)             \includegraphics on input line 108.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Plots/splitStep_S0-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/splitStep_S0-eps-converted-to.pdf, id=93, 421.575pt x 316.18124pt>
+File: Plots/splitStep_S0-eps-converted-to.pdf Graphic file (type pdf)
+<use Plots/splitStep_S0-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/splitStep_S0-eps-converted-to.pdf  used on input line 108.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+Package epstopdf Info: Source file: <Plots/FD_S0.eps>
+(epstopdf)                    date: 2021-06-09 19:44:20
+(epstopdf)                    size: 117132 bytes
+(epstopdf)             Output file: <Plots/FD_S0-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-06-09 23:48:15
+(epstopdf)                    size: 69903 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/FD_S0-eps-converted-to.pdf Plots/FD_S0.eps>
+(epstopdf)             \includegraphics on input line 110.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Plots/FD_S0-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/FD_S0-eps-converted-to.pdf, id=94, 421.575pt x 316.18124pt>
+File: Plots/FD_S0-eps-converted-to.pdf Graphic file (type pdf)
+<use Plots/FD_S0-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/FD_S0-eps-converted-to.pdf  used on input line 110.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
 Package epstopdf Info: Source file: <Plots/splitStep_S-05.eps>
 (epstopdf)                    date: 2021-06-08 17:59:51
 (epstopdf)                    size: 154330 bytes
 (epstopdf)             Output file: <Plots/splitStep_S-05-eps-converted-to.pdf>
-(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/splitStep_S-05-eps-converted-to.pdf Plots/splitStep_S-05.eps>
-(epstopdf)             \includegraphics on input line 40.
-runsystem(miktex-epstopdf --outfile=Plots/splitStep_S-05-eps-converted-to.pdf Plots/splitStep_S-05.eps)...executed (allowed).
-
-Package epstopdf Info: Result file: <Plots/splitStep_S-05-eps-converted-to.pdf>
 (epstopdf)                    date: 2021-06-08 18:15:27
-(epstopdf)                    size: 72021 bytes.
+(epstopdf)                    size: 72021 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/splitStep_S-05-eps-converted-to.pdf Plots/splitStep_S-05.eps>
+(epstopdf)             \includegraphics on input line 117.
+Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Plots/splitStep_S-05-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Plots/splitStep_S-05-eps-converted-to.pdf, id=6, 421.575pt x 316.18124pt>
+<Plots/splitStep_S-05-eps-converted-to.pdf, id=95, 421.575pt x 316.18124pt>
 File: Plots/splitStep_S-05-eps-converted-to.pdf Graphic file (type pdf)
 <use Plots/splitStep_S-05-eps-converted-to.pdf>
-Package pdftex.def Info: Plots/splitStep_S-05-eps-converted-to.pdf  used on input line 40.
+Package pdftex.def Info: Plots/splitStep_S-05-eps-converted-to.pdf  used on input line 117.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
-[1
+Package epstopdf Info: Source file: <Plots/FD_S-05.eps>
+(epstopdf)                    date: 2021-06-09 20:03:00
+(epstopdf)                    size: 162902 bytes
+(epstopdf)             Output file: <Plots/FD_S-05-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-06-09 23:48:18
+(epstopdf)                    size: 74970 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/FD_S-05-eps-converted-to.pdf Plots/FD_S-05.eps>
+(epstopdf)             \includegraphics on input line 119.
+Package epstopdf Info: Output file is already uptodate.
 
-{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Plots/splitStep_S-05-eps-converted-to.pdf>] (project2.aux)
+
+pdfTeX warning: pdflatex (file ./Plots/FD_S-05-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/FD_S-05-eps-converted-to.pdf, id=96, 421.575pt x 316.18124pt>
+File: Plots/FD_S-05-eps-converted-to.pdf Graphic file (type pdf)
+<use Plots/FD_S-05-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/FD_S-05-eps-converted-to.pdf  used on input line 119.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+Package epstopdf Info: Source file: <Plots/splitStep_v10.eps>
+(epstopdf)                    date: 2021-06-08 18:03:59
+(epstopdf)                    size: 122840 bytes
+(epstopdf)             Output file: <Plots/splitStep_v10-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-06-09 14:22:48
+(epstopdf)                    size: 70917 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/splitStep_v10-eps-converted-to.pdf Plots/splitStep_v10.eps>
+(epstopdf)             \includegraphics on input line 126.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Plots/splitStep_v10-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/splitStep_v10-eps-converted-to.pdf, id=97, 421.575pt x 316.18124pt>
+File: Plots/splitStep_v10-eps-converted-to.pdf Graphic file (type pdf)
+<use Plots/splitStep_v10-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/splitStep_v10-eps-converted-to.pdf  used on input line 126.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+Package epstopdf Info: Source file: <Plots/FD_v10.eps>
+(epstopdf)                    date: 2021-06-09 20:24:17
+(epstopdf)                    size: 114619 bytes
+(epstopdf)             Output file: <Plots/FD_v10-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-06-09 23:48:21
+(epstopdf)                    size: 65631 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/FD_v10-eps-converted-to.pdf Plots/FD_v10.eps>
+(epstopdf)             \includegraphics on input line 128.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Plots/FD_v10-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/FD_v10-eps-converted-to.pdf, id=98, 421.575pt x 316.18124pt>
+File: Plots/FD_v10-eps-converted-to.pdf Graphic file (type pdf)
+<use Plots/FD_v10-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/FD_v10-eps-converted-to.pdf  used on input line 128.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+[4 <./Plots/splitStep_S02-eps-converted-to.pdf> <./Plots/FD_S02-eps-converted-to.pdf> <./Plots/splitStep_S0-eps-converted-to.pdf> <./Plots/FD_S0-eps-converted-to.pdf> <./Plots/splitStep_S-05-eps-converted-to.pdf> <./Plots/FD_S-05-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Plots/splitStep_v2.eps>
+(epstopdf)                    date: 2021-06-08 18:09:10
+(epstopdf)                    size: 190398 bytes
+(epstopdf)             Output file: <Plots/splitStep_v2-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-06-09 14:22:50
+(epstopdf)                    size: 78299 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/splitStep_v2-eps-converted-to.pdf Plots/splitStep_v2.eps>
+(epstopdf)             \includegraphics on input line 135.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Plots/splitStep_v2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/splitStep_v2-eps-converted-to.pdf, id=148, 421.575pt x 316.18124pt>
+File: Plots/splitStep_v2-eps-converted-to.pdf Graphic file (type pdf)
+<use Plots/splitStep_v2-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/splitStep_v2-eps-converted-to.pdf  used on input line 135.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+Package epstopdf Info: Source file: <Plots/FD_v2.eps>
+(epstopdf)                    date: 2021-06-09 21:26:27
+(epstopdf)                    size: 188296 bytes
+(epstopdf)             Output file: <Plots/FD_v2-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-06-09 23:48:25
+(epstopdf)                    size: 79224 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/FD_v2-eps-converted-to.pdf Plots/FD_v2.eps>
+(epstopdf)             \includegraphics on input line 137.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Plots/FD_v2-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/FD_v2-eps-converted-to.pdf, id=149, 421.575pt x 316.18124pt>
+File: Plots/FD_v2-eps-converted-to.pdf Graphic file (type pdf)
+<use Plots/FD_v2-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/FD_v2-eps-converted-to.pdf  used on input line 137.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+Package epstopdf Info: Source file: <Plots/splitStep_v1.eps>
+(epstopdf)                    date: 2021-06-08 18:54:38
+(epstopdf)                    size: 227376 bytes
+(epstopdf)             Output file: <Plots/splitStep_v1-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-06-09 14:22:52
+(epstopdf)                    size: 85540 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/splitStep_v1-eps-converted-to.pdf Plots/splitStep_v1.eps>
+(epstopdf)             \includegraphics on input line 144.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Plots/splitStep_v1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/splitStep_v1-eps-converted-to.pdf, id=150, 421.575pt x 316.18124pt>
+File: Plots/splitStep_v1-eps-converted-to.pdf Graphic file (type pdf)
+<use Plots/splitStep_v1-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/splitStep_v1-eps-converted-to.pdf  used on input line 144.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+Package epstopdf Info: Source file: <Plots/FD_v1.eps>
+(epstopdf)                    date: 2021-06-10 08:58:26
+(epstopdf)                    size: 217300 bytes
+(epstopdf)             Output file: <Plots/FD_v1-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-06-10 09:03:12
+(epstopdf)                    size: 84457 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/FD_v1-eps-converted-to.pdf Plots/FD_v1.eps>
+(epstopdf)             \includegraphics on input line 146.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Plots/FD_v1-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/FD_v1-eps-converted-to.pdf, id=151, 421.575pt x 316.18124pt>
+File: Plots/FD_v1-eps-converted-to.pdf Graphic file (type pdf)
+<use Plots/FD_v1-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/FD_v1-eps-converted-to.pdf  used on input line 146.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+Package epstopdf Info: Source file: <Plots/splitStep_x80.eps>
+(epstopdf)                    date: 2021-06-08 19:33:34
+(epstopdf)                    size: 174713 bytes
+(epstopdf)             Output file: <Plots/splitStep_x80-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-06-09 14:22:54
+(epstopdf)                    size: 78590 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/splitStep_x80-eps-converted-to.pdf Plots/splitStep_x80.eps>
+(epstopdf)             \includegraphics on input line 153.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Plots/splitStep_x80-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/splitStep_x80-eps-converted-to.pdf, id=152, 421.575pt x 316.18124pt>
+File: Plots/splitStep_x80-eps-converted-to.pdf Graphic file (type pdf)
+<use Plots/splitStep_x80-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/splitStep_x80-eps-converted-to.pdf  used on input line 153.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+Package epstopdf Info: Source file: <Plots/FD_x80.eps>
+(epstopdf)                    date: 2021-06-09 22:05:48
+(epstopdf)                    size: 182951 bytes
+(epstopdf)             Output file: <Plots/FD_x80-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-06-09 23:48:29
+(epstopdf)                    size: 81680 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/FD_x80-eps-converted-to.pdf Plots/FD_x80.eps>
+(epstopdf)             \includegraphics on input line 155.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Plots/FD_x80-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/FD_x80-eps-converted-to.pdf, id=153, 421.575pt x 316.18124pt>
+File: Plots/FD_x80-eps-converted-to.pdf Graphic file (type pdf)
+<use Plots/FD_x80-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/FD_x80-eps-converted-to.pdf  used on input line 155.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+[5 <./Plots/splitStep_v10-eps-converted-to.pdf> <./Plots/FD_v10-eps-converted-to.pdf> <./Plots/splitStep_v2-eps-converted-to.pdf> <./Plots/FD_v2-eps-converted-to.pdf> <./Plots/splitStep_v1-eps-converted-to.pdf> <./Plots/FD_v1-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Plots/splitStep_x20.eps>
+(epstopdf)                    date: 2021-06-08 19:35:46
+(epstopdf)                    size: 126228 bytes
+(epstopdf)             Output file: <Plots/splitStep_x20-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-06-09 14:22:55
+(epstopdf)                    size: 65471 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/splitStep_x20-eps-converted-to.pdf Plots/splitStep_x20.eps>
+(epstopdf)             \includegraphics on input line 162.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Plots/splitStep_x20-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/splitStep_x20-eps-converted-to.pdf, id=203, 421.575pt x 316.18124pt>
+File: Plots/splitStep_x20-eps-converted-to.pdf Graphic file (type pdf)
+<use Plots/splitStep_x20-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/splitStep_x20-eps-converted-to.pdf  used on input line 162.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+Package epstopdf Info: Source file: <Plots/FD_x20.eps>
+(epstopdf)                    date: 2021-06-09 22:24:33
+(epstopdf)                    size: 118315 bytes
+(epstopdf)             Output file: <Plots/FD_x20-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-06-09 23:48:32
+(epstopdf)                    size: 64660 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/FD_x20-eps-converted-to.pdf Plots/FD_x20.eps>
+(epstopdf)             \includegraphics on input line 164.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Plots/FD_x20-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/FD_x20-eps-converted-to.pdf, id=204, 421.575pt x 316.18124pt>
+File: Plots/FD_x20-eps-converted-to.pdf Graphic file (type pdf)
+<use Plots/FD_x20-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/FD_x20-eps-converted-to.pdf  used on input line 164.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+Package epstopdf Info: Source file: <Plots/splitStep_x10.eps>
+(epstopdf)                    date: 2021-06-08 19:41:32
+(epstopdf)                    size: 113354 bytes
+(epstopdf)             Output file: <Plots/splitStep_x10-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-06-09 14:22:57
+(epstopdf)                    size: 61874 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/splitStep_x10-eps-converted-to.pdf Plots/splitStep_x10.eps>
+(epstopdf)             \includegraphics on input line 171.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Plots/splitStep_x10-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/splitStep_x10-eps-converted-to.pdf, id=205, 421.575pt x 316.18124pt>
+File: Plots/splitStep_x10-eps-converted-to.pdf Graphic file (type pdf)
+<use Plots/splitStep_x10-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/splitStep_x10-eps-converted-to.pdf  used on input line 171.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+Package epstopdf Info: Source file: <Plots/FD_x10.eps>
+(epstopdf)                    date: 2021-06-09 22:31:51
+(epstopdf)                    size: 114895 bytes
+(epstopdf)             Output file: <Plots/FD_x10-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-06-09 23:48:35
+(epstopdf)                    size: 61539 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/FD_x10-eps-converted-to.pdf Plots/FD_x10.eps>
+(epstopdf)             \includegraphics on input line 173.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Plots/FD_x10-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/FD_x10-eps-converted-to.pdf, id=206, 421.575pt x 316.18124pt>
+File: Plots/FD_x10-eps-converted-to.pdf Graphic file (type pdf)
+<use Plots/FD_x10-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/FD_x10-eps-converted-to.pdf  used on input line 173.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+[6 <./Plots/splitStep_x80-eps-converted-to.pdf> <./Plots/FD_x80-eps-converted-to.pdf> <./Plots/splitStep_x20-eps-converted-to.pdf> <./Plots/FD_x20-eps-converted-to.pdf> <./Plots/splitStep_x10-eps-converted-to.pdf> <./Plots/FD_x10-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 181--183
+
+ []
+
+[7] (project2.aux)
 Package rerunfilecheck Info: File `project2.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 3BEBFC31168B6308FBEB2CD5DB97E146;347.
  ) 
 Here is how much of TeX's memory you used:
- 39440 strings out of 479125
- 916817 string characters out of 4612535
- 6276340 words of memory out of 19000000
- 56482 multiletter control sequences out of 15000+600000
+ 40150 strings out of 479125
+ 928467 string characters out of 4612535
+ 6281292 words of memory out of 19000000
+ 57114 multiletter control sequences out of 15000+600000
  410699 words of font info for 55 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,6n,103p,824b,723s stack positions out of 5000i,500n,10000p,5000000b,80000s
-<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on project2.pdf (1 page, 110170 bytes).
+ 99i,10n,103p,865b,2309s stack positions out of 5000i,500n,10000p,5000000b,80000s
+<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on project2.pdf (7 pages, 1563616 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 4 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 316 PDF objects out of 1000 (max. 8388607)
+ 68 named destinations out of 1000 (max. 500000)
+ 145 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1034,6 +1034,30 @@ INPUT D:\Program Files\MikTeX\tex\latex\wrapfig\wrapfig.sty
 INPUT D:\Program Files\MikTeX\tex\latex\wrapfig\wrapfig.sty
 INPUT D:\Program Files\MikTeX\tex\latex\wrapfig\wrapfig.sty
 INPUT D:\Program Files\MikTeX\tex\latex\wrapfig\wrapfig.sty
+INPUT D:\Program Files\MikTeX\tex\latex\matlab-prettifier\matlab-prettifier.sty
+INPUT D:\Program Files\MikTeX\tex\latex\matlab-prettifier\matlab-prettifier.sty
+INPUT D:\Program Files\MikTeX\tex\latex\matlab-prettifier\matlab-prettifier.sty
+INPUT D:\Program Files\MikTeX\tex\latex\matlab-prettifier\matlab-prettifier.sty
+INPUT D:\Program Files\MikTeX\tex\latex\matlab-prettifier\matlab-prettifier.sty
+INPUT D:\Program Files\MikTeX\tex\latex\matlab-prettifier\matlab-prettifier.sty
+INPUT D:\Program Files\MikTeX\tex\latex\matlab-prettifier\matlab-prettifier.sty
+INPUT D:\Program Files\MikTeX\tex\latex\matlab-prettifier\matlab-prettifier.sty
+INPUT D:\Program Files\MikTeX\tex\latex\matlab-prettifier\matlab-prettifier.sty
+INPUT D:\Program Files\MikTeX\tex\latex\matlab-prettifier\matlab-prettifier.sty
+INPUT D:\Program Files\MikTeX\tex\latex\matlab-prettifier\matlab-prettifier.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
+INPUT D:\Program Files\MikTeX\tex\latex\xcolor\xcolor.sty
+INPUT D:\Program Files\MikTeX\tex\latex\listings\listings.sty
 INPUT D:\Program Files\MikTeX\tex\latex\mhchem\mhchem.sty
 INPUT D:\Program Files\MikTeX\tex\latex\mhchem\mhchem.sty
 INPUT D:\Program Files\MikTeX\tex\latex\mhchem\mhchem.sty
@@ -1123,10 +1147,10 @@ INPUT .\project2.out
 INPUT project2.out
 INPUT .\project2.out
 INPUT project2.out
+OUTPUT project2.pdf
 INPUT .\project2.out
 INPUT .\project2.out
 OUTPUT project2.out
-OUTPUT project2.pdf
 INPUT D:\Program Files\MikTeX\tex\latex\translations\dicts\translations-basic-dictionary-english.trsl
 INPUT D:\Program Files\MikTeX\tex\latex\translations\dicts\translations-basic-dictionary-english.trsl
 INPUT D:\Program Files\MikTeX\tex\latex\translations\dicts\translations-basic-dictionary-english.trsl
@@ -1185,23 +1209,271 @@ INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
+INPUT .\Plots\splitStep_Main.eps
+INPUT .\Plots\splitStep_Main.eps
+INPUT Plots\splitStep_Main.eps
+INPUT .\Plots\splitStep_Main.eps
+INPUT .\Plots\splitStep_Main.eps
+INPUT .\Plots\splitStep_Main-eps-converted-to.pdf
+INPUT .\Plots\splitStep_Main-eps-converted-to.pdf
+INPUT .\Plots\splitStep_Main.eps
+INPUT .\Plots\splitStep_Main-eps-converted-to.pdf
+INPUT .\Plots\splitStep_Main-eps-converted-to.pdf
+INPUT .\Plots\splitStep_Main-eps-converted-to.pdf
+INPUT .\Plots\splitStep_Main-eps-converted-to.pdf
+INPUT .\Plots\FD_Main.eps
+INPUT .\Plots\FD_Main.eps
+INPUT Plots\FD_Main.eps
+INPUT .\Plots\FD_Main.eps
+INPUT .\Plots\FD_Main.eps
+INPUT .\Plots\FD_Main-eps-converted-to.pdf
+INPUT .\Plots\FD_Main-eps-converted-to.pdf
+INPUT .\Plots\FD_Main.eps
+INPUT .\Plots\FD_Main-eps-converted-to.pdf
+INPUT .\Plots\FD_Main-eps-converted-to.pdf
+INPUT .\Plots\FD_Main-eps-converted-to.pdf
+INPUT .\Plots\FD_Main-eps-converted-to.pdf
+INPUT .\Plots\splitStep_S02.eps
+INPUT .\Plots\splitStep_S02.eps
+INPUT Plots\splitStep_S02.eps
+INPUT .\Plots\splitStep_S02.eps
+INPUT .\Plots\splitStep_S02.eps
+INPUT .\Plots\splitStep_S02-eps-converted-to.pdf
+INPUT .\Plots\splitStep_S02-eps-converted-to.pdf
+INPUT .\Plots\splitStep_S02.eps
+INPUT .\Plots\splitStep_S02-eps-converted-to.pdf
+INPUT .\Plots\splitStep_S02-eps-converted-to.pdf
+INPUT .\Plots\splitStep_S02-eps-converted-to.pdf
+INPUT .\Plots\splitStep_S02-eps-converted-to.pdf
+INPUT .\Plots\FD_S02.eps
+INPUT .\Plots\FD_S02.eps
+INPUT Plots\FD_S02.eps
+INPUT .\Plots\FD_S02.eps
+INPUT .\Plots\FD_S02.eps
+INPUT .\Plots\FD_S02-eps-converted-to.pdf
+INPUT .\Plots\FD_S02-eps-converted-to.pdf
+INPUT .\Plots\FD_S02.eps
+INPUT .\Plots\FD_S02-eps-converted-to.pdf
+INPUT .\Plots\FD_S02-eps-converted-to.pdf
+INPUT .\Plots\FD_S02-eps-converted-to.pdf
+INPUT .\Plots\FD_S02-eps-converted-to.pdf
+INPUT .\Plots\splitStep_S0.eps
+INPUT .\Plots\splitStep_S0.eps
+INPUT Plots\splitStep_S0.eps
+INPUT .\Plots\splitStep_S0.eps
+INPUT .\Plots\splitStep_S0.eps
+INPUT .\Plots\splitStep_S0-eps-converted-to.pdf
+INPUT .\Plots\splitStep_S0-eps-converted-to.pdf
+INPUT .\Plots\splitStep_S0.eps
+INPUT .\Plots\splitStep_S0-eps-converted-to.pdf
+INPUT .\Plots\splitStep_S0-eps-converted-to.pdf
+INPUT .\Plots\splitStep_S0-eps-converted-to.pdf
+INPUT .\Plots\splitStep_S0-eps-converted-to.pdf
+INPUT .\Plots\FD_S0.eps
+INPUT .\Plots\FD_S0.eps
+INPUT Plots\FD_S0.eps
+INPUT .\Plots\FD_S0.eps
+INPUT .\Plots\FD_S0.eps
+INPUT .\Plots\FD_S0-eps-converted-to.pdf
+INPUT .\Plots\FD_S0-eps-converted-to.pdf
+INPUT .\Plots\FD_S0.eps
+INPUT .\Plots\FD_S0-eps-converted-to.pdf
+INPUT .\Plots\FD_S0-eps-converted-to.pdf
+INPUT .\Plots\FD_S0-eps-converted-to.pdf
+INPUT .\Plots\FD_S0-eps-converted-to.pdf
+INPUT .\Plots\splitStep_S-05.eps
 INPUT .\Plots\splitStep_S-05.eps
 INPUT Plots\splitStep_S-05.eps
 INPUT .\Plots\splitStep_S-05.eps
 INPUT .\Plots\splitStep_S-05.eps
+INPUT .\Plots\splitStep_S-05-eps-converted-to.pdf
+INPUT .\Plots\splitStep_S-05-eps-converted-to.pdf
 INPUT .\Plots\splitStep_S-05.eps
 INPUT .\Plots\splitStep_S-05-eps-converted-to.pdf
 INPUT .\Plots\splitStep_S-05-eps-converted-to.pdf
 INPUT .\Plots\splitStep_S-05-eps-converted-to.pdf
 INPUT .\Plots\splitStep_S-05-eps-converted-to.pdf
-INPUT .\Plots\splitStep_S-05-eps-converted-to.pdf
-INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
+INPUT .\Plots\FD_S-05.eps
+INPUT .\Plots\FD_S-05.eps
+INPUT Plots\FD_S-05.eps
+INPUT .\Plots\FD_S-05.eps
+INPUT .\Plots\FD_S-05.eps
+INPUT .\Plots\FD_S-05-eps-converted-to.pdf
+INPUT .\Plots\FD_S-05-eps-converted-to.pdf
+INPUT .\Plots\FD_S-05.eps
+INPUT .\Plots\FD_S-05-eps-converted-to.pdf
+INPUT .\Plots\FD_S-05-eps-converted-to.pdf
+INPUT .\Plots\FD_S-05-eps-converted-to.pdf
+INPUT .\Plots\FD_S-05-eps-converted-to.pdf
+INPUT .\Plots\splitStep_v10.eps
+INPUT .\Plots\splitStep_v10.eps
+INPUT Plots\splitStep_v10.eps
+INPUT .\Plots\splitStep_v10.eps
+INPUT .\Plots\splitStep_v10.eps
+INPUT .\Plots\splitStep_v10-eps-converted-to.pdf
+INPUT .\Plots\splitStep_v10-eps-converted-to.pdf
+INPUT .\Plots\splitStep_v10.eps
+INPUT .\Plots\splitStep_v10-eps-converted-to.pdf
+INPUT .\Plots\splitStep_v10-eps-converted-to.pdf
+INPUT .\Plots\splitStep_v10-eps-converted-to.pdf
+INPUT .\Plots\splitStep_v10-eps-converted-to.pdf
+INPUT .\Plots\FD_v10.eps
+INPUT .\Plots\FD_v10.eps
+INPUT Plots\FD_v10.eps
+INPUT .\Plots\FD_v10.eps
+INPUT .\Plots\FD_v10.eps
+INPUT .\Plots\FD_v10-eps-converted-to.pdf
+INPUT .\Plots\FD_v10-eps-converted-to.pdf
+INPUT .\Plots\FD_v10.eps
+INPUT .\Plots\FD_v10-eps-converted-to.pdf
+INPUT .\Plots\FD_v10-eps-converted-to.pdf
+INPUT .\Plots\FD_v10-eps-converted-to.pdf
+INPUT .\Plots\FD_v10-eps-converted-to.pdf
+INPUT .\Plots\splitStep_v2.eps
+INPUT .\Plots\splitStep_v2.eps
+INPUT Plots\splitStep_v2.eps
+INPUT .\Plots\splitStep_v2.eps
+INPUT .\Plots\splitStep_v2.eps
+INPUT .\Plots\splitStep_v2-eps-converted-to.pdf
+INPUT .\Plots\splitStep_v2-eps-converted-to.pdf
+INPUT .\Plots\splitStep_v2.eps
+INPUT .\Plots\splitStep_v2-eps-converted-to.pdf
+INPUT .\Plots\splitStep_v2-eps-converted-to.pdf
+INPUT .\Plots\splitStep_v2-eps-converted-to.pdf
+INPUT .\Plots\splitStep_v2-eps-converted-to.pdf
+INPUT .\Plots\FD_v2.eps
+INPUT .\Plots\FD_v2.eps
+INPUT Plots\FD_v2.eps
+INPUT .\Plots\FD_v2.eps
+INPUT .\Plots\FD_v2.eps
+INPUT .\Plots\FD_v2-eps-converted-to.pdf
+INPUT .\Plots\FD_v2-eps-converted-to.pdf
+INPUT .\Plots\FD_v2.eps
+INPUT .\Plots\FD_v2-eps-converted-to.pdf
+INPUT .\Plots\FD_v2-eps-converted-to.pdf
+INPUT .\Plots\FD_v2-eps-converted-to.pdf
+INPUT .\Plots\FD_v2-eps-converted-to.pdf
+INPUT .\Plots\splitStep_v1.eps
+INPUT .\Plots\splitStep_v1.eps
+INPUT Plots\splitStep_v1.eps
+INPUT .\Plots\splitStep_v1.eps
+INPUT .\Plots\splitStep_v1.eps
+INPUT .\Plots\splitStep_v1-eps-converted-to.pdf
+INPUT .\Plots\splitStep_v1-eps-converted-to.pdf
+INPUT .\Plots\splitStep_v1.eps
+INPUT .\Plots\splitStep_v1-eps-converted-to.pdf
+INPUT .\Plots\splitStep_v1-eps-converted-to.pdf
+INPUT .\Plots\splitStep_v1-eps-converted-to.pdf
+INPUT .\Plots\splitStep_v1-eps-converted-to.pdf
+INPUT .\Plots\FD_v1.eps
+INPUT .\Plots\FD_v1.eps
+INPUT Plots\FD_v1.eps
+INPUT .\Plots\FD_v1.eps
+INPUT .\Plots\FD_v1.eps
+INPUT .\Plots\FD_v1-eps-converted-to.pdf
+INPUT .\Plots\FD_v1-eps-converted-to.pdf
+INPUT .\Plots\FD_v1.eps
+INPUT .\Plots\FD_v1-eps-converted-to.pdf
+INPUT .\Plots\FD_v1-eps-converted-to.pdf
+INPUT .\Plots\FD_v1-eps-converted-to.pdf
+INPUT .\Plots\FD_v1-eps-converted-to.pdf
+INPUT .\Plots\splitStep_x80.eps
+INPUT .\Plots\splitStep_x80.eps
+INPUT Plots\splitStep_x80.eps
+INPUT .\Plots\splitStep_x80.eps
+INPUT .\Plots\splitStep_x80.eps
+INPUT .\Plots\splitStep_x80-eps-converted-to.pdf
+INPUT .\Plots\splitStep_x80-eps-converted-to.pdf
+INPUT .\Plots\splitStep_x80.eps
+INPUT .\Plots\splitStep_x80-eps-converted-to.pdf
+INPUT .\Plots\splitStep_x80-eps-converted-to.pdf
+INPUT .\Plots\splitStep_x80-eps-converted-to.pdf
+INPUT .\Plots\splitStep_x80-eps-converted-to.pdf
+INPUT .\Plots\FD_x80.eps
+INPUT .\Plots\FD_x80.eps
+INPUT Plots\FD_x80.eps
+INPUT .\Plots\FD_x80.eps
+INPUT .\Plots\FD_x80.eps
+INPUT .\Plots\FD_x80-eps-converted-to.pdf
+INPUT .\Plots\FD_x80-eps-converted-to.pdf
+INPUT .\Plots\FD_x80.eps
+INPUT .\Plots\FD_x80-eps-converted-to.pdf
+INPUT .\Plots\FD_x80-eps-converted-to.pdf
+INPUT .\Plots\FD_x80-eps-converted-to.pdf
+INPUT .\Plots\FD_x80-eps-converted-to.pdf
+INPUT .\Plots\splitStep_x20.eps
+INPUT .\Plots\splitStep_x20.eps
+INPUT Plots\splitStep_x20.eps
+INPUT .\Plots\splitStep_x20.eps
+INPUT .\Plots\splitStep_x20.eps
+INPUT .\Plots\splitStep_x20-eps-converted-to.pdf
+INPUT .\Plots\splitStep_x20-eps-converted-to.pdf
+INPUT .\Plots\splitStep_x20.eps
+INPUT .\Plots\splitStep_x20-eps-converted-to.pdf
+INPUT .\Plots\splitStep_x20-eps-converted-to.pdf
+INPUT .\Plots\splitStep_x20-eps-converted-to.pdf
+INPUT .\Plots\splitStep_x20-eps-converted-to.pdf
+INPUT .\Plots\FD_x20.eps
+INPUT .\Plots\FD_x20.eps
+INPUT Plots\FD_x20.eps
+INPUT .\Plots\FD_x20.eps
+INPUT .\Plots\FD_x20.eps
+INPUT .\Plots\FD_x20-eps-converted-to.pdf
+INPUT .\Plots\FD_x20-eps-converted-to.pdf
+INPUT .\Plots\FD_x20.eps
+INPUT .\Plots\FD_x20-eps-converted-to.pdf
+INPUT .\Plots\FD_x20-eps-converted-to.pdf
+INPUT .\Plots\FD_x20-eps-converted-to.pdf
+INPUT .\Plots\FD_x20-eps-converted-to.pdf
+INPUT .\Plots\splitStep_x10.eps
+INPUT .\Plots\splitStep_x10.eps
+INPUT Plots\splitStep_x10.eps
+INPUT .\Plots\splitStep_x10.eps
+INPUT .\Plots\splitStep_x10.eps
+INPUT .\Plots\splitStep_x10-eps-converted-to.pdf
+INPUT .\Plots\splitStep_x10-eps-converted-to.pdf
+INPUT .\Plots\splitStep_x10.eps
+INPUT .\Plots\splitStep_x10-eps-converted-to.pdf
+INPUT .\Plots\splitStep_x10-eps-converted-to.pdf
+INPUT .\Plots\splitStep_x10-eps-converted-to.pdf
+INPUT .\Plots\splitStep_x10-eps-converted-to.pdf
+INPUT .\Plots\FD_x10.eps
+INPUT .\Plots\FD_x10.eps
+INPUT Plots\FD_x10.eps
+INPUT .\Plots\FD_x10.eps
+INPUT .\Plots\FD_x10.eps
+INPUT .\Plots\FD_x10-eps-converted-to.pdf
+INPUT .\Plots\FD_x10-eps-converted-to.pdf
+INPUT .\Plots\FD_x10.eps
+INPUT .\Plots\FD_x10-eps-converted-to.pdf
+INPUT .\Plots\FD_x10-eps-converted-to.pdf
+INPUT .\Plots\FD_x10-eps-converted-to.pdf
+INPUT .\Plots\FD_x10-eps-converted-to.pdf
 INPUT project2.aux
 INPUT .\project2.out
 INPUT .\project2.out
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmtt12.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmtt12.pfb
