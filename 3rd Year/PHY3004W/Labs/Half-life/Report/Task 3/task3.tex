@@ -1,0 +1,58 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in, top=0.3in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage[group-digits=false]{siunitx}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,subfig,caption,import,wrapfig,pgf}
+\usepackage[version=4]{mhchem}
+\numberwithin{equation}{section}
+\numberwithin{table}{section}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+
+\begin{center}
+    {\textbf{\LARGE Half Life Lab Task 3}}\\
+    \vspace{0.2in}
+    KDSMIL001 | June 2021
+    
+\end{center}
+
+\begin{figure}[h]
+    \begin{center}
+        \subimport{Plots}{task4.pgf}
+        \caption{Gamma ray spectrum for \ce{^{28}Al} from NaI scintillator detector at experimental station 1 in PHYLAB3. Energy calibration done using \ce{^{137}Cs}, \ce{^{22}Na}, and \ce{^{60}Co} and data from the Nudat2 database \cite{nudat}. Identification of features done with the help of the Nudat2 database \cite{nudat} and Gilmore (2008)\cite{gilmore}.}
+        \label{fig:28Al Gamma Ray Spectrum}
+    \end{center}
+\end{figure}
+% Going from left to right in \autoref{fig:28Al Gamma Ray Spectrum}:
+% \begin{itemize}
+%     \item Bremsstrahlung: The $\beta^{-}$ particles emitted by \ce{^{28}Al} being detected.
+%     \item $\sim 647$ keV Compton edge: The Compton edge for the 843.76 keV photopeak.
+%     \item 843.76 keV photopeak: One of the two primary gamma ray emissions from \ce{^{27}Mg} $\beta^{-}$ decay. The \ce{^{27}Mg} comes from a neutron knocking out and replacing a proton in \ce{^{27}Al}.
+%     \item 1014.52 keV photopeak: The second primary gamma ray emission from \ce{^{27}Mg}.
+%     \item $\sim 1555$ keV Compton edge: The Compton edge for the 1778.987 keV photopeak.
+%     \item 1778.987 keV photopeak: The primary gamma ray emission from \ce{^{28}Al}.
+% \end{itemize}
+
+\begin{thebibliography}{9}
+    \bibitem{nudat}
+    National Nuclear Data Center, Brookhaven National Laboratory. (2008, March 18). NuDat (Nuclear Structure and Decay Data). https://www.nndc.bnl.gov/nudat2/
+    \bibitem{gilmore}
+    Gordon Gilmore. (2008). \textit{Practical Gamma-ray Spectrometry}. Chichester: Wiley
+\end{thebibliography}
+
+\end{document}

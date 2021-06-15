@@ -10,6 +10,8 @@ matplotlib.rcParams.update({
     'font.family': 'serif',
     'text.usetex': True,
     'pgf.rcfonts': False,
+    'figure.constrained_layout.use': True,
+    'savefig.bbox': 'tight',
 })
 
 
@@ -43,25 +45,51 @@ for n in range(1,181):
     # Sum up each run to make a whole nice long spectrum
     data[1]+=nData[1]
 
-data[0]=(nData[0]-0.6)/0.333
-# data[1]/=180 not sure about this one. makes it look like her plot but idk if it's the right way to do it
 
-# Plots the histogram now
-plt.hist(data[0], bins=data[0], weights=data[1], label=r'Counts per Channel', histtype='step')
-plt.xlabel(r'Gamma ray energy (keV)')
-plt.ylabel(r'Event rate ($s^{-1}$)')
+# data[0]=(nData[0]-0.6)/0.333
+data[0]=nData[0]
+data[1]/=1800 
 
-# region Gaussian stuff, not needed anymore
+# region plotting shit
+ax=plt.axes()
+ax.set_box_aspect(5/14) # for wide boys use 5/14
+
+ax.step(data[0], data[1], linewidth=1)
+
+ax.set_xlabel(r'Gamma ray energy (keV)')
+ax.set_ylabel(r'Event rate ($s^{-1}$)')
+ax.set_xlim(left=0)
+ax.set_ylim(bottom=0)
+
+ax.fill_between(data[0][0:130], data[1][0:130], step='pre', color='green', alpha=0.5, label='Bremsstrahlung')
+ax.fill_between(data[0][180:235], data[1][180:235], step='pre', color='blue', alpha=0.5, label='843.76 keV $\gamma$ Compton continuum')
+ax.axvline(data[0][279], linestyle='dashed', color='black', linewidth=1)
+ax.text(data[0][279], 0.15, '843.76 $\gamma$ photopeak', rotation='vertical', horizontalalignment='right')
+ax.axvline(data[0][336], linestyle='dashed', color='black', linewidth=1)
+ax.text(data[0][336], 0.15, '1014.52 $\gamma$ photopeak', rotation='vertical', horizontalalignment='right')
+ax.fill_between(data[0][460:535], data[1][460:535], step='pre', color='red', alpha=0.5, label='1778.987 keV $\gamma$ Compton continuum')
+ax.axvline(data[0][583], linestyle='dashed', color='black', linewidth=1)
+ax.text(data[0][583], 0.15, '1778.987 $\gamma$ photopeak', rotation='vertical', horizontalalignment='right')
+
+
+ax.legend()
+
+plt.show()
+# plt.savefig(r'3rd Year\PHY3004W\Labs\Half-life\Report\Task 3\task3Plot.pgf')
+
+# endregion
+
+# region Gaussian stuff, not needed after calibration
 # Fits a gaussian to the data for each region between a local minimum. Slightly overkill since not all of those regions are photopeaks but i'm lazy
-# for p in range(len(minima)-1):
+# for p in range(1):
 #     try:
 #         # Isolates the regions of interest 
-#         xFit=data[0][minima[p]:minima[p+1]]
-#         yFit=data[1][minima[p]:minima[p+1]]
+#         xFit=data[0][551:615]
+#         yFit=data[1][551:615]
 #         # Need a new N for each region since the size is changing
 #         newN=len(xFit)
 #         # Approximates the median to be in the middle of the two endpoint, it's a reasonable guess
-#         approxCentroid=(minima[p]+minima[p+1])/2
+#         approxCentroid=(data[0][551]+data[0][615])/2
 #         p0=[approxCentroid,50,1]
 #         numParams=len(p0)
 
@@ -72,16 +100,7 @@ plt.ylabel(r'Event rate ($s^{-1}$)')
 #         dof = newN-numParams
 
 #         print(f'Fit: {p}\nMu: {popt[0]}\nSigma: {popt[1]}\nAmplitude: {popt[2]}\nChi Squared per dof: {chi_sq/dof}\n')
-#         plt.plot(xFit, toPlot, linewidth=1, label=f'Gaussian fit {p}')
-#         # arrowProps = dict(arrowstyle='->')
-#         # str661='661.657 keV photopeak\n$\mu=417.37$\n$\sigma=15.28$'
-#         # plt.annotate(str661, (419,5.9), (20,-60), textcoords='offset points', arrowprops=arrowProps)
-#         # plt.annotate('Compton Edge\nfor 661.657 keV', (273,1.4), (5,20), textcoords='offset points', arrowprops=arrowProps)
-#         # plt.annotate('Backscatter', (131, 2.1), (0,20), textcoords='offset points', arrowprops=arrowProps)
+#         ax.plot(xFit, toPlot, linewidth=1, label=f'Gaussian fit {p}')
 #     except RuntimeError as identifier:
 #         print(identifier)
 # endregion
-
-# plt.plot(data[0], smootherData)
-plt.legend()
-plt.show()
