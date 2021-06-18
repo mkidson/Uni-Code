@@ -7,11 +7,13 @@ np.set_printoptions(threshold=np.inf)
 # matplotlib.use('pgf')
 matplotlib.rcParams.update({
     'pgf.texsystem': 'pdflatex',
-    'font.family': 'serif',
+    'font.family': 'sans-serif',
     'text.usetex': True,
     'pgf.rcfonts': False,
     'figure.constrained_layout.use': True,
     'savefig.bbox': 'tight',
+    'axes.labelsize': 24,
+    'legend.fontsize': 15
 })
 
 
@@ -42,28 +44,38 @@ for n in range(1,181):
     # print(np.where(nData >= 1555))
     # halfLifeData[n-1]=sum(np.where(nData[1] >= 1555 and nData[1] <= 1825))
 
+bkgAv=np.mean(halfLifeData[120:])
+bkgAvErr=sqrt(bkgAv)/60
+halfLifeData-=bkgAv
+
 halfLifeXData=np.arange(0,180)*10
-halfLifeDataErr=sqrt(halfLifeData)
+halfLifeDataErr=sqrt(sqrt(halfLifeData)**2 + sqrt(bkgAvErr)**2)
 halfLifeDataLinear=np.log(halfLifeData)
 halfLifeDataErrLinear=halfLifeDataErr/halfLifeData
+
+endFitNum=61
+
+fitX=halfLifeXData[:endFitNum]
+fitY=halfLifeDataLinear[:endFitNum]
+fitYErr=halfLifeDataErrLinear[:endFitNum]
 
 # region Linear fitting to the half-life curve
 
 print('------------------------------------------------')
 print('Kirkup Weighted Linear Fit')
 print('------------------------------------------------')
-Delta=sum(1/(halfLifeDataErrLinear**2))*sum((halfLifeXData**2)/(halfLifeDataErrLinear**2))-(sum(halfLifeXData/(halfLifeDataErrLinear**2)))**2
+Delta=sum(1/(fitYErr**2))*sum((fitX**2)/(fitYErr**2))-(sum(fitX/(fitYErr**2)))**2
 
-m=(sum(1/(halfLifeDataErrLinear**2))*sum((halfLifeXData*halfLifeDataLinear)/(halfLifeDataErrLinear**2))-sum(halfLifeXData/(halfLifeDataErrLinear**2))*sum(halfLifeDataLinear/(halfLifeDataErrLinear**2)))/Delta
-um=sqrt((sum(1/(halfLifeDataErrLinear**2)))/Delta)
+m=(sum(1/(fitYErr**2))*sum((fitX*fitY)/(fitYErr**2))-sum(fitX/(fitYErr**2))*sum(fitY/(fitYErr**2)))/Delta
+um=sqrt((sum(1/(fitYErr**2)))/Delta)
 
-c=(sum((halfLifeXData**2)/(halfLifeDataErrLinear**2))*sum(halfLifeDataLinear/(halfLifeDataErrLinear**2))-sum(halfLifeXData/(halfLifeDataErrLinear**2))*sum((halfLifeXData*halfLifeDataLinear)/(halfLifeDataErrLinear**2)))/Delta
-uc=sqrt((sum((halfLifeXData**2)/(halfLifeDataErrLinear**2)))/Delta)
+c=(sum((fitX**2)/(fitYErr**2))*sum(fitY/(fitYErr**2))-sum(fitX/(fitYErr**2))*sum((fitX*fitY)/(fitYErr**2)))/Delta
+uc=sqrt((sum((fitX**2)/(fitYErr**2)))/Delta)
 
-kirkupFit=m*halfLifeXData+c
+kirkupFit=m*fitX+c
 
-chiSqKirk=sum(((halfLifeDataLinear-kirkupFit)/halfLifeDataErrLinear)**2)
-dofKirk=len(halfLifeXData)-2
+chiSqKirk=sum(((fitY-kirkupFit)/fitYErr)**2)
+dofKirk=len(fitX)-2
 
 print(f'Chi Squared per d.o.f = {chiSqKirk/dofKirk}\n')
 
@@ -74,28 +86,39 @@ print(f'c = {c} +/- {uc}\nlambda = {m} +/- {um}')
 # region plotting shit
 
 ax=plt.axes()
-ax.set_box_aspect(5/14)
+ax.set_box_aspect()
 
 # ax.step(halfLifeXData, halfLifeData+halfLifeDataErr, linewidth=1, linestyle='--', color='r')
 # ax.step(halfLifeXData, halfLifeData-halfLifeDataErr, linewidth=1, linestyle='--', color='r')
 # ax.step(halfLifeXData, halfLifeData, linewidth=2)
 
-ax.step(halfLifeXData, halfLifeDataLinear+halfLifeDataErrLinear, linewidth=0.5, linestyle='--', color='r', label='Uncertainty')
-ax.step(halfLifeXData, halfLifeDataLinear-halfLifeDataErrLinear, linewidth=0.5, linestyle='--', color='r')
-ax.step(halfLifeXData, halfLifeDataLinear, linewidth=1, label='Number of detector events')
-ax.plot(halfLifeXData, m*halfLifeXData+c, linewidth=1)
+# ax.step(halfLifeXData, halfLifeDataLinear+halfLifeDataErrLinear, linewidth=0.5, linestyle='--', color='r', label='Uncertainty')
+# ax.step(halfLifeXData, halfLifeDataLinear-halfLifeDataErrLinear, linewidth=0.5, linestyle='--', color='r')
+# ax.step(halfLifeXData, halfLifeDataLinear, linewidth=1, label='Number of detector events')
+
+ax.errorbar(halfLifeXData[:endFitNum], halfLifeDataLinear[:endFitNum], yerr=halfLifeDataErrLinear[:endFitNum], fmt='s', elinewidth=1, capsize=2, capthick=1, ms=2)
+
+# ax.errorbar(halfLifeXData, halfLifeData, yerr=halfLifeDataErr, fmt='s', elinewidth=1, capsize=2, capthick=1, ms=2)
+
+# ax.errorbar(halfLifeXData, halfLifeDataLinear, yerr=halfLifeDataErrLinear, fmt='s', elinewidth=1, capsize=2, capthick=1, ms=2)
+
+ax.plot(fitX, m*fitX+c, linewidth=1, color='red', label=r'Best Fit Line $\chi^2$/dof$=1.18$')
 
 
 ax.set_xlabel(r'Time (s)')
-ax.set_ylabel(r'Number of detector events')
-ax.set_xlim(left=0)
-ax.set_ylim(bottom=0)
+ax.set_ylabel(r'$\ln$(Number of detector events)')
+ax.set_xlim(left=-10)
+# ax.set_ylim(bottom=0)
+ax.grid(color='#CCCCCC', linestyle=':')
 
 ax.legend()
 # plt.yscale('log')
 
+# plt.figure()
+# plt.errorbar(halfLifeData[:endFitNum], (m*fitX+c)-halfLifeDataLinear[:endFitNum], fmt='.')
+
 plt.show()
-# plt.savefig(r'3rd Year\PHY3004W\Labs\Half-life\Report\Task 3\Plots\task4.pgf')
+# plt.savefig(r'3rd Year\PHY3004W\Labs\Half-life\Report\Plots\28AlDecay.pgf')
 
 
 '''

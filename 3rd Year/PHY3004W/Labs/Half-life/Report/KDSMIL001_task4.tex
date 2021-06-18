@@ -1,0 +1,91 @@
+\documentclass[11pt]{article}
+\usepackage[margin=.8in, top=0.3in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage[separate-uncertainty=true, group-digits=false]{siunitx}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,subfig,caption,import,wrapfig,lipsum}
+\usepackage[version=4]{mhchem}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\captionsetup{font=small, belowskip=0pt}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+
+\begin{center}
+    {\huge Measuring the half-life of \ce{^{28}Al}}\\
+    \vspace{0.2in}
+    \textbf{KDSMIL001 | June 2021}
+\end{center}
+
+\section{Introduction}\label{sec:Introduction}
+\par In this report we aim to determine the half-life of \ce{^{28}Al}. This isotope is not naturally occurring so in order to produce it we bombarded a cylinder of \ce{^{27}Al} with neutrons from a 2.2GBq americium-beryllium (AmBe) neutron source. These neutrons were moderated by water, hopefully slowing them enough to be thermal neutrons ($\lesssim 1$ MeV) at which point they have a larger interaction cross section with the \ce{^{27}Al} nucleus. Once the \ce{^{27}Al} has been `activated', i.e. a large proportion of the nuclei have absorbed a nucleus, (about 30 minutes in our case) we then placed a NaI(Tl) scintillator detector, connected to a high voltage power supply, pre-amplifier, amplifier, and multi-channel analyser with data acquisition software USX, inside the cylinder and recorded 180 10 second runs using the Multiple Runs feature. 
+\par Taking 180 10 second runs as opposed to 1 30 minute run allows us to observe the change in total counts for a specific portion of the gamma ray spectrum for each time step and this should, provided we choose our portion properly, tell us about the half-life of \ce{^{28}Al}. This assumes that the number of \ce{^{28}Al} atoms in the cylinder is proportional to the number of gamma rays detected.
+
+\section{Results and Analysis}\label{sec:Results}
+\par Our first step in determining the half-life of \ce{^{28}Al} was determining which region to consider when trying to observe the decay of \ce{^{28}Al} in the source. \autoref{fig:Spectrum} shows the gamma ray spectrum for our activated \ce{^{27}Al} cylinder.
+
+\begin{figure}[H]
+    \begin{center}
+       \subimport{Plots}{28AlSpectrum.pgf}
+       \caption{Gamma ray spectrum for activated \ce{^{27}Al} made using a NaI scintillator detector at experimental station 1 in PHYLAB3. Energy calibration done using the same set-up by examining the primary photopeaks of \ce{^{137}Cs} \cite{137Cs}, \ce{^{22}Na} \cite{22Na}, and \ce{^{60}Co} \cite{60Co}. The 1778.987 keV photopeak is from the $\beta^-$ decay of \ce{^{28}Al} \cite{28Al}. The 843.76 and 1014.52 keV photopeaks both most likely come from a \ce{^{27}Al(n,p)^{27}Mg} interaction \cite{geneseo}, where the neutrons are too high energy to simply be absorbed and rather knock a proton out the nucleus and replace it. This \ce{^{27}Mg} then emits these two principle gamma rays when it decays through $\beta^-$ decay \cite{27Mg}. More details on Bremsstrahlung in Gilmore (2008).}
+       \label{fig:Spectrum}
+    \end{center}
+\end{figure}
+\par There are many features in the spectrum that aren't directly related to the decay of \ce{^{28}Al}, so they are not useful for measuring the half-life. What we did was fit a Gaussian function to the photopeak at 1778.987 keV, as we expect it to have a Gaussian form, and thus found $\sigma$ for the peak. We then chose the data within $\mu\pm3\sigma$ for the peak as that is very unlikely to include contributions from anything other than \ce{^{28}Al} and background \cite{geneseo}. We considered including contributions from the Compton continuum but in this case it isn't very well defined so we chose to leave it out.
+\par We summed up the counts from all the channels within our range of interest for each 10 second run to find a decay curve. Now we expect that this decay curve will have the form of exponential decay, described by
+\begin{equation}
+    R(t)=R(0)e^{-\lambda t}+B\;\cite{manual}
+    \label{eqn:exp decay}
+\end{equation}
+where $B$ is the level of background radiation. An initial approximation of the half-life by inspection found that it was around 2 minutes, which means that after 20 minutes, or 2/3 of the total experiment time, the \ce{^{28}Al} would be down to about 0.1\% of its original concentration, so by averaging the last 1/3 of the decay curve we can estimate the level of background radiation and subtract it from our data. 
+\begin{wrapfigure}[18]{r}{0.5\textwidth}
+    \begin{center}
+        \scalebox{0.5}{\subimport{Plots}{28AlDecay.pgf}}    
+        \caption{The linearised decay curve for \ce{^{28}Al} for 600s, data from between $\mu\pm3\sigma$ for the 1778.987 keV photopeak in \autoref{fig:Spectrum}. Best Fit Line calculated using a weighted linear least squares fit from Kirkup (2019).}
+        \label{fig:decay}
+    \end{center}
+\end{wrapfigure}
+\par Linearising the data and performing a weighted linear least squares fit \cite{kirkup} on the first 1/3 of the data to avoid dealing with negative or NaN values from when we subtracted background, we found $\lambda=\num{526.7(8.9)e-5}$. 
+\par Using $t_{1/2}=\ln2/\lambda$ \cite{manual} we find a half life of $t_{1/2}=\SI{131.6(3.2)}{\second}=\SI{2.193(0.053)}{\minute}$. This does in fact agree with the value of \SI{2.245(0.002)}{\minute} stated in \cite{28Al} but in the interest of repeating measurements we used data taken by BNTVIC003 and ALMMOH008 and performed precisely the same analysis on it. Combining the results we get a half-life of $t_{1/2}=\SI{2.202(0.046)}{\minute}$.
+
+\section{Conclusion}\label{sec:Conclusion}
+The $\chi^2/$dof in \autoref{fig:decay}, as well as similar values for the other two datasets we analysed, give us confidence that the result $t_{1/2}=\SI{2.202(0.046)}{\minute}$ is accurate. This is again confirmed by its agreement within experimental uncertainty with the value in \cite{28Al}. The most notable improvement that could be made to the precision of our final result would be making sure the source contains as much \ce{^{28}Al} as possible through a longer time left exposed to the AmBe source. This, combined with better shielding against background radiation, is recommended.
+
+
+\begin{thebibliography}{9}
+    \bibitem{137Cs}
+    E. Browne, J. K. Tuli, Nuclear Data Sheets 108, p2173 (2007)
+    \bibitem{22Na}
+    M. Shamsuzzoha Basunia, Nuclear Data Sheets 127, p69 (2015)
+    \bibitem{60Co}
+    E. Browne, J. K. Tuli, Nuclear Data Sheets 114, p1849 (2013)
+    \bibitem{27Mg}
+    M. Shamsuzzoha Basunia, Nuclear Data Sheets 112, p1875 (2011)
+    \bibitem{28Al}
+    M. Shamsuzzoha Basunia, Nuclear Data Sheets 114, p1189 (2013)
+    \bibitem{geneseo}
+    Nuclear Physics, Gamma Ray Spectra, 
+    \texttt{https://www.geneseo.edu/nuclear/gamma-ray-spectra}
+    \bibitem{manual}
+    T. Hutton, \textit{PHY3004W Laboratory: Half-life experiment}, UCT Physics, 2021.
+    \bibitem{kirkup}
+    L. Kirkup, \textit{Experimental methods for science and engineering students}, (2019)
+    
+\end{thebibliography}
+
+\end{document}

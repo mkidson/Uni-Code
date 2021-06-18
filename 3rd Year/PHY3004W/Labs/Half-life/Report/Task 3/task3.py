@@ -4,14 +4,15 @@ from scipy.optimize import curve_fit
 from numpy import cos, pi, sin, sqrt, exp, random
 import matplotlib, scipy.signal
 np.set_printoptions(threshold=np.inf)
-# matplotlib.use('pgf')
+matplotlib.use('pgf')
 matplotlib.rcParams.update({
     'pgf.texsystem': 'pdflatex',
-    'font.family': 'serif',
+    'font.family': 'sans-serif',
     'text.usetex': True,
     'pgf.rcfonts': False,
     'figure.constrained_layout.use': True,
     'savefig.bbox': 'tight',
+    'legend.handlelength': 1
 })
 
 
@@ -46,8 +47,8 @@ for n in range(1,181):
     data[1]+=nData[1]
 
 
-# data[0]=(nData[0]-0.6)/0.333
-data[0]=nData[0]
+data[0]=(nData[0]-0.6)/0.333
+# data[0]=nData[0]
 data[1]/=1800 
 
 # region plotting shit
@@ -62,20 +63,20 @@ ax.set_xlim(left=0)
 ax.set_ylim(bottom=0)
 
 ax.fill_between(data[0][0:130], data[1][0:130], step='pre', color='green', alpha=0.5, label='Bremsstrahlung')
-ax.fill_between(data[0][180:235], data[1][180:235], step='pre', color='blue', alpha=0.5, label='843.76 keV $\gamma$ Compton continuum')
+ax.fill_between(data[0][180:235], data[1][180:235], step='pre', color='blue', alpha=0.5, label='843.76 keV Compton continuum')
 ax.axvline(data[0][279], linestyle='dashed', color='black', linewidth=1)
-ax.text(data[0][279], 0.15, '843.76 $\gamma$ photopeak', rotation='vertical', horizontalalignment='right')
+ax.text(data[0][279], 0.105, '843.76 keV photopeak', rotation='vertical', horizontalalignment='right')
 ax.axvline(data[0][336], linestyle='dashed', color='black', linewidth=1)
-ax.text(data[0][336], 0.15, '1014.52 $\gamma$ photopeak', rotation='vertical', horizontalalignment='right')
-ax.fill_between(data[0][460:535], data[1][460:535], step='pre', color='red', alpha=0.5, label='1778.987 keV $\gamma$ Compton continuum')
+ax.text(data[0][336], 0.105, '1014.52 keV photopeak', rotation='vertical', horizontalalignment='right')
+ax.fill_between(data[0][460:535], data[1][460:535], step='pre', color='red', alpha=0.5, label='1778.987 keV Compton continuum')
 ax.axvline(data[0][583], linestyle='dashed', color='black', linewidth=1)
-ax.text(data[0][583], 0.15, '1778.987 $\gamma$ photopeak', rotation='vertical', horizontalalignment='right')
+ax.text(data[0][583], 0.105, '1778.987 keV photopeak', rotation='vertical', horizontalalignment='right')
 
-
+ax.grid(color='#CCCCCC', linestyle=':')
 ax.legend()
 
-plt.show()
-# plt.savefig(r'3rd Year\PHY3004W\Labs\Half-life\Report\Task 3\task3Plot.pgf')
+# plt.show()
+plt.savefig(r'3rd Year\PHY3004W\Labs\Half-life\Report\Plots\28AlSpectrum.pgf')
 
 # endregion
 
