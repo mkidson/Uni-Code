@@ -2,10 +2,8 @@
 #read in raw waveform from dat files 
 #Chloe Sole
 
-
 import numpy as np
 import matplotlib.pyplot as plt
-
 
 # Open file and skip over header preamble
 class readFile(object):
@@ -21,8 +19,6 @@ class readFile(object):
         self.endFile = False
         print('init complete')
         
-       
-
     def readEvent(self):
         
         preamble = np.frombuffer(self.inputFile.read(self.preambleSize),dtype=np.uint32)
@@ -39,7 +35,6 @@ class readFile(object):
         #number of samples in that active channel
         self.chActive = np.argwhere(self.channelSizes>0).flatten()
         
-
         #init trace array
         traces = np.empty((len(self.chActive),self.channelSizes[self.chActive[0]]))
         self.eventCounter+=1

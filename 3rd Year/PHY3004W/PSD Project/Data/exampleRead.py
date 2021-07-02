@@ -2,21 +2,16 @@ import readRaw
 import numpy as np 
 import matplotlib.pyplot as plt 
 
-maxEvents = 10
-
+maxEvents = 2
 fileName = r"3rd Year\PHY3004W\PSD Project\Data\Raw\STNG"
-
 
 # conversion factors
 bitsToVolt = 2.0 / 2.0**14 # in V
 sampleToTime = 1.0 / 500e6 * 1e9 # in ns
 
-
-
 # open file stream, read preamble and initialise
 ipf = readRaw.readFile(fileName)
 eventCounter=0
-
 
 while eventCounter < maxEvents:
     # read from file event-by-event

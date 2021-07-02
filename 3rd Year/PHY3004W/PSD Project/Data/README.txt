@@ -6,18 +6,12 @@ Directory contents:
 	exampleRead.py - demonstrates a basic implementation of readRaw
 	Raw/ - directory in which you should keep your uncompressed QtDAQ files
 
+Step 1: Change "fileName" in exampleRead.py to be the same as the uncompressed file.
 
-
-Step 1: Uncompress the .dtz file with "the unarchiver" (mac) or "7zip" (windows).
-
-Step 2: Place uncompressed file in Raw/ directory.
-
-Step 3: Change "fileName" in exampleRead.py to be the same as the uncompressed file.
-
-Step 4: Run exampleRead.py. This should display the anode and dynode waveforms acquired 
+Step 2: Run exampleRead.py. This should display the anode and dynode waveforms acquired 
 	for each event (up to "maxEvents"). 
 
-Step 5: Explore/edit/improve... 
+Step 3: Explore/edit/improve... 
 
 You might want to:
 	 - Subtract a baseline from the waveforms, then...
