@@ -45,6 +45,7 @@ for n in range(1,181):
     # halfLifeData[n-1]=sum(np.where(nData[1] >= 1555 and nData[1] <= 1825))
 
 bkgAv=np.mean(halfLifeData[120:])
+print(bkgAv)
 bkgAvErr=sqrt(bkgAv)/60
 halfLifeData-=bkgAv
 

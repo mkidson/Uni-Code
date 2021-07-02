@@ -6,67 +6,6 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Hangman",
-            "request": "launch",
-            "mainClass": "Hangman",
-            "projectName": "Uni-Code_c9d7fb4a"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - GUITest",
-            "request": "launch",
-            "mainClass": "GUITest",
-            "projectName": "Uni-Code_c9d7fb4a"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - TestHarness",
-            "request": "launch",
-            "mainClass": "TestHarness",
-            "projectName": "Uni-Code_c9d7fb4a"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Question2",
-            "request": "launch",
-            "mainClass": "Question2",
-            "projectName": "Uni-Code_c9d7fb4a"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Question3",
-            "request": "launch",
-            "mainClass": "Question3",
-            "projectName": "Uni-Code_c9d7fb4a"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - CalculateDuration",
-            "request": "launch",
-            "mainClass": "CalculateDuration"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - HelloWorld",
-            "request": "launch",
-            "mainClass": "HelloWorld"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Hello",
-            "request": "launch",
-            "mainClass": "Hello",
-            "projectName": "Uni-Code_c9d7fb4a"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - HelloWorld",
-            "request": "launch",
-            "mainClass": "HelloWorld",
-            "projectName": "Uni-Code_c9d7fb4a"
         }
     ]
 }

@@ -12,7 +12,7 @@ matplotlib.rcParams.update({
 })
 
 # region Ingest data
-file = open(r'3rd Year\PHY3004W\Labs\Half-life\Data\CV100Days.txt', 'r')
+file = open(r'CV100Days.txt', 'r')
 lines = file.readlines()
 N = len(lines)
 i=0
