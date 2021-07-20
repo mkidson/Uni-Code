@@ -2,7 +2,7 @@ import readRaw
 import numpy as np 
 import matplotlib.pyplot as plt 
 
-maxEvents = 2
+maxEvents = 1
 fileName = r"3rd Year\PHY3004W\PSD Project\Data\Raw\STNG"
 
 # conversion factors
@@ -38,7 +38,7 @@ while eventCounter < maxEvents:
         plt.legend()
     
     except: 
-        print('EOF at %d'%event_counter)
+        print('EOF at %d'%eventCounter)
         break
      
 # close file stream (important)
