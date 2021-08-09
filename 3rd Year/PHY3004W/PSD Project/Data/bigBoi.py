@@ -1,6 +1,7 @@
-from matplotlib import pyplot as plt
+from matplotlib import pyplot as plt, colors
 import numpy as np
 import matplotlib, readRaw, analysePulse
+from scipy.interpolate import pade
 np.set_printoptions(threshold=np.inf)
 # matplotlib.use('pgf')
 matplotlib.rcParams.update({
@@ -12,12 +13,14 @@ matplotlib.rcParams.update({
     'savefig.bbox': 'tight',
 })
 
-maxEvents = 10000
+maxEvents = 20
 fileName = r"3rd Year\PHY3004W\PSD Project\Data\Raw\STNG"
 
 # conversion factors
 bitsToVolt = 2.0 / 2.0**14 # in V
 sampleToTime = 1.0 / 500e6 * 1e9 # in ns
+
+# print(sampleToTime)
 
 # open file stream, read preamble and initialise
 ipf = readRaw.readFile(fileName)
@@ -25,6 +28,8 @@ eventCounter=0
 
 maxes=[]
 CCM_PSDs = []
+laplace_PSDs = []
+voltages = []
 
 while eventCounter < maxEvents:
     # read from file event-by-event
@@ -45,39 +50,53 @@ while eventCounter < maxEvents:
         baselineRMS = np.sqrt(np.mean(np.square(anode[:350])))
         maxIndex = np.where(anode==max(anode))[0][0]
 
-        intStart = maxIndex - (round(10/sampleToTime))
-        intShort = maxIndex + (round(25/sampleToTime))
-        intLong = maxIndex + (round(100/sampleToTime))
-
-        shortIntegral = np.trapz(anode[intStart:intShort], tArr[intStart:intShort])
-        longIntegral = np.trapz(anode[intStart:intLong], tArr[intStart:intLong])
-
-        CCM_PSD = longIntegral/shortIntegral
-        # print(CCM_PSD)
+        CCM_PSD = analysePulse.CCM(anode, tArr)
         CCM_PSDs.append(CCM_PSD)
+        voltages.append(max(anode))
                 
-        # plotting for sanity checking - remove if using large number of events
+        # region plotting for sanity checking - remove if using large number of events
         # plt.figure()
         
         # plt.title(f'Event {eventCounter}')
         
-        # plt.plot(tArr, anode, label='anode', alpha=1, color='blue', lw='1')
+        # plt.scatter(tArr[maxIndex:750], anode[maxIndex:750], label='anode', alpha=1, color='blue', lw='1')
         # plt.plot(tArr, [baselineRMS]*len(anode), color='red', ls='--', lw=0.6)
         # plt.plot(tArr, [baselineRMS*3]*len(anode), color='green', ls='--', lw=0.6)
         # plt.grid(color='#CCCCCC', linestyle=':')
-        # plt.vlines(tArr[intStart], 0, 0.08)
-        # plt.vlines(tArr[intShort], 0, 0.08)
-        # plt.vlines(tArr[intLong], 0, 0.08)
         
         # plt.xlabel('Time (ns)')
         # plt.ylabel('Voltage (V)')
         
         # plt.legend()
-    
-    except: 
-        print(f'EOF at {eventCounter}')
+        # endregion
+
+    except Exception as e: 
+        print(f'EOF at {eventCounter}\nError is {e}')
         break
-     
+
+    # testing out the pade method from scipy
+
+
+    nDecays = 2
+
+    res, poles = analysePulse.PadeLaplace(anode, tArr, nDecays)
+
+    print(poles, res)
+
+    # fit = 0
+    # for i in range(nDecays):
+    #     fit += res[i]*np.exp(-poles[i]*tArr[:-maxIndex])
+
+
+
+    # plt.plot(tArr[maxIndex:750], movingAves[:750-maxIndex])
+
+
+    # laplace_PSDs.append(res[1]/res[0])
+    # print(res[0]/res[1])
+    # print(res)
+    
+    
 # close file stream (important)
 ipf.closeFile()
 # print(np.array(maxes))
@@ -86,6 +105,8 @@ ipf.closeFile()
 # print(CCM_PSDs)
 
 # Actually got CCM working, no 2d hist yet but the concept is there. Do need to optimise the integral windows
-histData, histBins = np.histogram(CCM_PSDs, bins=100)
-plt.step(histBins[:-1], histData)
-plt.show()
+# histData, histBins = np.histogram(CCM_PSDs, bins=100)
+# histData, histBins = np.histogram(laplace_PSDs, bins=100)
+# plt.step(histBins[:-1], histData)
+# plt.hist2d(voltages, CCM_PSDs, bins=1000)#, norm=colors.LogNorm())
+# plt.show()
