@@ -39,10 +39,7 @@ def CCM(pulse, t):
     longIntegral = np.trapz(pulse[intervalStart:intervalLongEnd], t[intervalStart:intervalLongEnd])
     shortIntegral = np.trapz(pulse[intervalStart:intervalShortEnd], t[intervalStart:intervalShortEnd])
 
-    return longIntegral/shortIntegral
-
-# def myPade(an):
-#     mat = 
+    return shortIntegral/longIntegral
 
 
 def PadeLaplace(pulse, t, nDecays=2):

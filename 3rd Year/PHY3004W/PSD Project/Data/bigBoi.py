@@ -13,8 +13,10 @@ matplotlib.rcParams.update({
     'savefig.bbox': 'tight',
 })
 
-maxEvents = 20
-fileName = r"3rd Year\PHY3004W\PSD Project\Data\Raw\STNG"
+# maxEvents = 218796
+maxEvents = 5000000
+fileName = r"3rd Year\PHY3004W\PSD Project\Data\Raw\STNG1"
+# fileName = r"3rd Year\PHY3004W\PSD Project\Data\Raw\AmBe"
 
 # conversion factors
 bitsToVolt = 2.0 / 2.0**14 # in V
@@ -50,9 +52,15 @@ while eventCounter < maxEvents:
         baselineRMS = np.sqrt(np.mean(np.square(anode[:350])))
         maxIndex = np.where(anode==max(anode))[0][0]
 
-        CCM_PSD = analysePulse.CCM(anode, tArr)
-        CCM_PSDs.append(CCM_PSD)
-        voltages.append(max(anode))
+        # CCM_PSD = analysePulse.CCM(anode, tArr)
+        # CCM_PSDs.append(CCM_PSD)
+        # voltages.append(max(anode))
+
+        if eventCounter % 100 == 0:
+            print(eventCounter)
+            print(max(anode))
+
+        
                 
         # region plotting for sanity checking - remove if using large number of events
         # plt.figure()
@@ -74,23 +82,16 @@ while eventCounter < maxEvents:
         print(f'EOF at {eventCounter}\nError is {e}')
         break
 
-    # testing out the pade method from scipy
-
-
-    nDecays = 2
-
-    res, poles = analysePulse.PadeLaplace(anode, tArr, nDecays)
-
-    print(poles, res)
+    # testing out pade laplace
+    # nDecays = 2
+    # res, poles = analysePulse.PadeLaplace(anode, tArr, nDecays)
+    # print(poles, res)
 
     # fit = 0
     # for i in range(nDecays):
     #     fit += res[i]*np.exp(-poles[i]*tArr[:-maxIndex])
 
-
-
     # plt.plot(tArr[maxIndex:750], movingAves[:750-maxIndex])
-
 
     # laplace_PSDs.append(res[1]/res[0])
     # print(res[0]/res[1])
@@ -108,5 +109,5 @@ ipf.closeFile()
 # histData, histBins = np.histogram(CCM_PSDs, bins=100)
 # histData, histBins = np.histogram(laplace_PSDs, bins=100)
 # plt.step(histBins[:-1], histData)
-# plt.hist2d(voltages, CCM_PSDs, bins=1000)#, norm=colors.LogNorm())
+# plt.hist2d(voltages, CCM_PSDs, bins=2000, norm=colors.LogNorm())
 # plt.show()
