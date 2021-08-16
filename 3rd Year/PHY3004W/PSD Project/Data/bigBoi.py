@@ -14,8 +14,8 @@ matplotlib.rcParams.update({
 })
 
 # maxEvents = 218796
-maxEvents = 5000000
-fileName = r"3rd Year\PHY3004W\PSD Project\Data\Raw\STNG1"
+maxEvents = 10000
+fileName = r"Raw\STNG"
 # fileName = r"3rd Year\PHY3004W\PSD Project\Data\Raw\AmBe"
 
 # conversion factors
@@ -52,24 +52,32 @@ while eventCounter < maxEvents:
         baselineRMS = np.sqrt(np.mean(np.square(anode[:350])))
         maxIndex = np.where(anode==max(anode))[0][0]
 
+        # intervalStart = maxIndex - (round(10/sampleToTime))
+        # intervalLongEnd = maxIndex + (round(100/sampleToTime))
+        # intervalShortEnd = maxIndex + (round(25/sampleToTime))
+
         # CCM_PSD = analysePulse.CCM(anode, tArr)
         # CCM_PSDs.append(CCM_PSD)
-        # voltages.append(max(anode))
+        voltages.append(max(anode))
 
-        if eventCounter % 100 == 0:
-            print(eventCounter)
-            print(max(anode))
+        # if eventCounter % 100 == 0:
+        #     print(eventCounter)
+        #     print(max(anode))
 
-        
-                
         # region plotting for sanity checking - remove if using large number of events
         # plt.figure()
         
         # plt.title(f'Event {eventCounter}')
         
-        # plt.scatter(tArr[maxIndex:750], anode[maxIndex:750], label='anode', alpha=1, color='blue', lw='1')
-        # plt.plot(tArr, [baselineRMS]*len(anode), color='red', ls='--', lw=0.6)
-        # plt.plot(tArr, [baselineRMS*3]*len(anode), color='green', ls='--', lw=0.6)
+        # plt.plot(tArr, anode, label='anode', alpha=1, color='blue', lw='1')
+        # # plt.plot(tArr, [baselineRMS]*len(anode), color='red', ls='--', lw=0.6)
+        # # plt.plot(tArr, [baselineRMS*3]*len(anode), color='green', ls='--', lw=0.6)
+        # plt.axvline(tArr[intervalStart], linestyle='dashed', color='black', linewidth=1)
+        # plt.axvline(tArr[intervalLongEnd], linestyle='dashed', color='black', linewidth=1)
+        # plt.axvline(tArr[intervalShortEnd], linestyle='dashed', color='black', linewidth=1)
+
+
+        # # plt.plot(tArr, anode)
         # plt.grid(color='#CCCCCC', linestyle=':')
         
         # plt.xlabel('Time (ns)')
@@ -83,8 +91,8 @@ while eventCounter < maxEvents:
         break
 
     # testing out pade laplace
-    # nDecays = 2
-    # res, poles = analysePulse.PadeLaplace(anode, tArr, nDecays)
+    nDecays = 2
+    res, poles = analysePulse.PadeLaplace(anode, tArr, nDecays)
     # print(poles, res)
 
     # fit = 0
@@ -93,21 +101,19 @@ while eventCounter < maxEvents:
 
     # plt.plot(tArr[maxIndex:750], movingAves[:750-maxIndex])
 
-    # laplace_PSDs.append(res[1]/res[0])
+    laplace_PSDs.append(res[1]/res[0])
     # print(res[0]/res[1])
     # print(res)
     
     
 # close file stream (important)
 ipf.closeFile()
-# print(np.array(maxes))
-# plt.show()
-
-# print(CCM_PSDs)
 
 # Actually got CCM working, no 2d hist yet but the concept is there. Do need to optimise the integral windows
 # histData, histBins = np.histogram(CCM_PSDs, bins=100)
 # histData, histBins = np.histogram(laplace_PSDs, bins=100)
 # plt.step(histBins[:-1], histData)
 # plt.hist2d(voltages, CCM_PSDs, bins=2000, norm=colors.LogNorm())
-# plt.show()
+plt.hist2d(voltages, laplace_PSDs, bins=2000, norm=colors.LogNorm())
+# plt.ylim(-2,2)
+plt.show()

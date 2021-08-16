@@ -24,14 +24,14 @@ for name in names:
     data0, data1 = np.genfromtxt(f'{name}', delimiter=',', skip_header=14, unpack=True)
     data = np.array((data0, data1))
 
-    def gaussian(x, mu, sigma):
-        return (1/(sigma*sqrt(2*pi)))*exp(-(1/2)*((x-mu)/sigma)**2)
+    def gaussian(x, mu, sigma, A, y):
+        return A*(1/(sigma*sqrt(2*pi)))*exp(-(1/2)*((x-mu)/sigma)**2)+y
     
-    p0=[data[0][np.where(data[1]==max(data[1]))[0][0]],1]
+    p0=[data[0][np.where(data[1]==max(data[1]))[0][0]],1,1000,100]
 
     popt, pcov = curve_fit(gaussian, data[0], data[1], p0=p0, sigma=sqrt(data[1]))
-    mean = popt[0]-22.1
-    meanUn = sqrt(popt[1]**2 + 4.9**2)
+    mean = popt[0]-22.65271604014015
+    meanUn = sqrt(popt[1]**2 + 2.3765123833175035**2)
 
     fit = gaussian(data[0], *popt)
     chiSq=sum(((data[1]-fit)/1)**2)
@@ -47,7 +47,7 @@ for name in names:
 
     xmodel = np.linspace(min(data[0]), max(data[0]), 1000)
     plt.plot(xmodel, gaussian(xmodel, *popt))
-    plt.step(data[0], data[1]/sum(data[1]))
+    plt.step(data[0], data[1])#/sum(data[1]))
 
 # plt.show()
 
