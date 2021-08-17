@@ -13,31 +13,50 @@ matplotlib.rcParams.update({
     'savefig.bbox': 'tight',
 })
 
-# region Ingest Data
-data0, data1 = np.genfromtxt(r'BalmerCalibrationJoJoSaSaMiMi.csv', delimiter=',', skip_header=14, unpack=True)
+names = ['THRSAM005/HeNe_0.2A_200ms_05um_6300to6400.csv','THRSAM005/HeNe_0.2A_200ms_10um_6300to6400.csv','THRSAM005/HeNe_0.2A_200ms_15um_6300to6400.csv','THRSAM005/HeNe_0.5A_200ms_05um_6300to6400.csv','THRSAM005/HeNe_0.5A_200ms_10um_6300to6400.csv','THRSAM005/HeNe_0.5A_200ms_15um_6300to6400.csv','THRSAM005/HeNe_0.8A_200ms_05um_6300to6400.csv','THRSAM005/HeNe_0.8A_200ms_10um_6300to6400.csv','THRSAM005/HeNe_0.8A_200ms_15um_6300to6400.csv','THRSAM005/HeNe_1.0A_200ms_05um_6300to6400.csv','THRSAM005/HeNe_1.0A_200ms_10um_6300to6400.csv','THRSAM005/HeNe_1.0A_200ms_15um_6300to6400.csv']
 
-data = np.array((data0, data1))
-# endregion
+# names = ['THRSAM005/HeNe_0.8A_200ms_05um_6300to6400.csv']
+corrs = []
+corrsUn = []
 
-# normalising
-# data[1] /= sum(data[1])
+for name in names:
+    # region Ingest Data
+    data0, data1 = np.genfromtxt(f'{name}', delimiter=',', skip_header=14, unpack=True)
 
-def gaussian(x, mu, sigma, A, y):
-    return A*(1/(sigma*sqrt(2*pi)))*exp(-(1/2)*((x-mu)/sigma)**2)+y
+    data = np.array((data0, data1))
+    # endregion
 
-p0 = [data[0][np.where(data[1]==max(data[1]))[0][0]],1,1000,100]
+    # normalising
+    # data[1] /= sum(data[1])
 
-popt, pcov = curve_fit(gaussian, data[0], data[1], p0=p0, sigma=sqrt(data[1]))
-xmodel = np.linspace(min(data[0]), max(data[0]), 1000)
+    def gaussian(x, mu, sigma, A, y):
+        return A*(1/(sigma*sqrt(2*pi)))*exp(-(1/2)*((x-mu)/sigma)**2)+y
 
-fit = gaussian(data[0], *popt)
-chiSq=sum(((data[1]-fit)/1)**2)
-dof=len(data[0])-2
+    p0 = [data[0][np.where(data[1]==max(data[1]))[0][0]],0.5,1000,100]
 
-print(f'\nMean at {popt[0]} +/- {popt[1]} A')
-print(f'Laser is expected to have wavelength of 6328 A, so our correction factor is:\n-{popt[0]-6328} +/- {popt[1]} A\n')
-print(f'Chi Squared per d.o.f = {chiSq/dof}\n')
+    popt, pcov = curve_fit(gaussian, data[0], data[1], p0=p0, sigma=sqrt(data[1]))
+    xmodel = np.linspace(min(data[0]), max(data[0]), 1000)
 
-plt.plot(xmodel, gaussian(xmodel, *popt))
-plt.step(data[0], data[1])#/sum(data[1]))
-plt.show()
+    fit = gaussian(data[0], *popt)
+    chiSq=sum(((data[1]-fit)/1)**2)
+    dof=len(data[0])-2
+
+    # print(f'\nMean at {popt[0]} +/- {popt[1]} A')
+    # print(f'Laser is expected to have wavelength of 6328 A, so our correction factor is:\n-{popt[0]-6328} +/- {popt[1]} A\n')
+    # print(f'Chi Squared per d.o.f = {chiSq/dof}\n')
+    corrs.append(popt[0]-6328)
+    corrsUn.append(popt[1])
+
+    # plt.figure()
+    # plt.step(data[0], data[1])
+    # plt.plot(xmodel, gaussian(xmodel, *popt))
+
+# plt.show()
+corrs = np.array(corrs)
+corrsUn = np.array(corrsUn)
+corrsWeights = 1/(corrsUn**2)
+
+correction = sum(corrs*corrsWeights)/sum(corrsWeights)
+correctionUn = sqrt((sum(corrsWeights*corrs**2)/sum(corrsWeights))-correction**2)*(1/sqrt(len(corrs)-1))
+
+print(f'Correction is -{correction} +/- {correctionUn}')

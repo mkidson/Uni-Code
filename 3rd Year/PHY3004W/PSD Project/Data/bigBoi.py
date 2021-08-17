@@ -14,9 +14,9 @@ matplotlib.rcParams.update({
 })
 
 # maxEvents = 218796
-maxEvents = 10000
+maxEvents = 4
 fileName = r"Raw\STNG"
-# fileName = r"3rd Year\PHY3004W\PSD Project\Data\Raw\AmBe"
+# fileName = r"Raw\AmBe"
 
 # conversion factors
 bitsToVolt = 2.0 / 2.0**14 # in V
@@ -65,11 +65,11 @@ while eventCounter < maxEvents:
         #     print(max(anode))
 
         # region plotting for sanity checking - remove if using large number of events
-        # plt.figure()
+        plt.figure()
         
         # plt.title(f'Event {eventCounter}')
         
-        # plt.plot(tArr, anode, label='anode', alpha=1, color='blue', lw='1')
+        plt.plot(tArr, anode, label='anode', alpha=1, color='blue', lw='1')
         # # plt.plot(tArr, [baselineRMS]*len(anode), color='red', ls='--', lw=0.6)
         # # plt.plot(tArr, [baselineRMS*3]*len(anode), color='green', ls='--', lw=0.6)
         # plt.axvline(tArr[intervalStart], linestyle='dashed', color='black', linewidth=1)
@@ -92,7 +92,11 @@ while eventCounter < maxEvents:
 
     # testing out pade laplace
     nDecays = 2
-    res, poles = analysePulse.PadeLaplace(anode, tArr, nDecays)
+    res, poles, fit, tNew = analysePulse.PadeLaplace(anode, tArr, nDecays)
+
+    plt.plot(tArr[maxIndex:],fit,linewidth=2)
+    # plt.semilogx(); plt.grid(True); plt.legend()
+
     # print(poles, res)
 
     # fit = 0
@@ -108,12 +112,12 @@ while eventCounter < maxEvents:
     
 # close file stream (important)
 ipf.closeFile()
-
+plt.show()
 # Actually got CCM working, no 2d hist yet but the concept is there. Do need to optimise the integral windows
 # histData, histBins = np.histogram(CCM_PSDs, bins=100)
 # histData, histBins = np.histogram(laplace_PSDs, bins=100)
 # plt.step(histBins[:-1], histData)
 # plt.hist2d(voltages, CCM_PSDs, bins=2000, norm=colors.LogNorm())
-plt.hist2d(voltages, laplace_PSDs, bins=2000, norm=colors.LogNorm())
+# plt.hist2d(voltages, laplace_PSDs, bins=2000, norm=colors.LogNorm())
 # plt.ylim(-2,2)
-plt.show()
+# plt.show()

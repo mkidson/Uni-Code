@@ -95,4 +95,9 @@ def PadeLaplace(pulse, t, nDecays=2):
         # print(f'Poles are {poles}')
         # print(f'Residues are {residues}')
     
-    return residues, poles
+    fit=zeros(len(t),dtype=complex)         #Create fit from poles and residues
+    for i in np.arange(0,n):
+        fit = fit + residues[i]*np.exp(-poles[i]*t)
+
+    
+    return residues, poles, fit, t
