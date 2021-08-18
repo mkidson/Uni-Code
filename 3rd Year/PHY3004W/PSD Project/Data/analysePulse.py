@@ -1,5 +1,5 @@
 # 02-07-2021
-# Methods for PSD 
+# Methods for digita PSD 
 # Miles Kidson KDSMIL001
 
 import numpy as np
@@ -58,10 +58,14 @@ def PadeLaplace(pulse, t, nDecays=2):
     p0 = 1/((halfMaxIndex-maxIndex)*sampleToTime)
     # print(p0)
     dt = sampleToTime
+    # nDecays = 5
     # Slices the two arrays so they start at the peak of the pulse, as in this method we are only interested in the shape of the tail.
     pulse = pulse[maxIndex:]
     t = t[:-maxIndex]
+    polesMain = []
+    residuesMain = []
 
+    # region didn't work 
     # N = 3
     # cumsum, moving_aves = [0], []
 
@@ -73,10 +77,17 @@ def PadeLaplace(pulse, t, nDecays=2):
     #         moving_aves.append(moving_ave)
     
     # pulse = moving_aves
+    
+    # ds=zeros(2*nDecays)
+    # for c in np.arange(0,2*nDecays):
+    #     ds[c]=(dt * (1/math.factorial(c)) * (0.5*((((-t[0])**c) * np.exp(-p0 * t[0]) * pulse[0]) + (((-t[-1])**c) * np.exp(-p0 * t[-1]) * pulse[-1])) + np.sum(((-t[1:-1])**c) * np.exp(-p0 * t[1:-1]) * pulse[1:-1])))
+    
+    # p = np.arange(0.01,1,0.001)
+    # transform = [np.sum(ds_i*(p_i-p0)**(ds_enum) for ds_enum, ds_i in enumerate(ds)) for p_i in p]
 
-    ds = []
-    nDecays = 2
-
+    # return transform, p
+    # endregion
+    finished = False
     for n in np.arange(1,nDecays+1):
         # print('n = ',n)
         ds=zeros(2*n)
@@ -85,6 +96,7 @@ def PadeLaplace(pulse, t, nDecays=2):
             ds[c]=(dt * (1/math.factorial(c)) * (0.5*((((-t[0])**c) * np.exp(-p0 * t[0]) * pulse[0]) + (((-t[-1])**c) * np.exp(-p0 * t[-1]) * pulse[-1])) + np.sum(((-t[1:-1])**c) * np.exp(-p0 * t[1:-1]) * pulse[1:-1])))
         
         num, denom = pade(ds, n, n-1)
+        # print('a')
         
         residues, p, k = residue(list(num), list(denom))
         poles = -(p+p0)
@@ -92,12 +104,26 @@ def PadeLaplace(pulse, t, nDecays=2):
         residues = residues[::-1]
         poles = poles[::-1]
 
-        # print(f'Poles are {poles}')
-        # print(f'Residues are {residues}')
-    
-    fit=zeros(len(t),dtype=complex)         #Create fit from poles and residues
-    for i in np.arange(0,n):
-        fit = fit + residues[i]*np.exp(-poles[i]*t)
+        # if n==3:
+        for i in residues:
+            if residues.dtype == 'float64':
+                pass # needs some check to see if one of the values is smaller than the other by a considerable amount. can't think of one rn
+            elif residues.dtype == 'complex128':
+                if np.conjugate(np.around(i,7)) in np.around(residues,7):
+                    finished = True
 
-    
-    return residues, poles, fit, t
+        if finished:
+            # print(f'total decay constants is: {n-1}')
+            # for k in range(len(polesMain[n-2])):
+                # print(f'lambda: {polesMain[n-2][k]:25.5} A: {residuesMain[n-2][k]:25.5}')
+            break
+        
+        polesMain.append(poles)
+        residuesMain.append(residues)
+    # fit=zeros(len(t),dtype=complex)         #Create fit from poles and residues
+    # for i in np.arange(0,n):
+    #     fit = fit + residues[i]*np.exp(-poles[i]*t)
+
+    # print(polesMain[-1])
+    # print(residuesMain[-1])
+    return residuesMain[-1], polesMain[-1], n-1#, fit, t

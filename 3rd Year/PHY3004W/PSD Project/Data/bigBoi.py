@@ -1,6 +1,7 @@
 from matplotlib import pyplot as plt, colors
 import numpy as np
 import matplotlib, readRaw, analysePulse
+from math import factorial
 from scipy.interpolate import pade
 np.set_printoptions(threshold=np.inf)
 # matplotlib.use('pgf')
@@ -14,9 +15,9 @@ matplotlib.rcParams.update({
 })
 
 # maxEvents = 218796
-maxEvents = 4
+maxEvents = 100000
+# fileName = r"3rd Year\PHY3004W\PSD Project\Data\Raw\STNG"
 fileName = r"Raw\STNG"
-# fileName = r"Raw\AmBe"
 
 # conversion factors
 bitsToVolt = 2.0 / 2.0**14 # in V
@@ -32,6 +33,7 @@ maxes=[]
 CCM_PSDs = []
 laplace_PSDs = []
 voltages = []
+ns = []
 
 while eventCounter < maxEvents:
     # read from file event-by-event
@@ -65,11 +67,11 @@ while eventCounter < maxEvents:
         #     print(max(anode))
 
         # region plotting for sanity checking - remove if using large number of events
-        plt.figure()
+        # plt.figure()
         
         # plt.title(f'Event {eventCounter}')
         
-        plt.plot(tArr, anode, label='anode', alpha=1, color='blue', lw='1')
+        # plt.plot(tArr, anode, label='anode', alpha=1, color='blue', lw='1')
         # # plt.plot(tArr, [baselineRMS]*len(anode), color='red', ls='--', lw=0.6)
         # # plt.plot(tArr, [baselineRMS*3]*len(anode), color='green', ls='--', lw=0.6)
         # plt.axvline(tArr[intervalStart], linestyle='dashed', color='black', linewidth=1)
@@ -91,10 +93,11 @@ while eventCounter < maxEvents:
         break
 
     # testing out pade laplace
-    nDecays = 2
-    res, poles, fit, tNew = analysePulse.PadeLaplace(anode, tArr, nDecays)
+    nDecays = 5
+    # res, poles, fit, tNew = analysePulse.PadeLaplace(anode, tArr, nDecays)
+    res, poles, n = analysePulse.PadeLaplace(anode, tArr, nDecays)
 
-    plt.plot(tArr[maxIndex:],fit,linewidth=2)
+    # plt.plot(tArr[maxIndex:],fit,linewidth=2)
     # plt.semilogx(); plt.grid(True); plt.legend()
 
     # print(poles, res)
@@ -105,14 +108,18 @@ while eventCounter < maxEvents:
 
     # plt.plot(tArr[maxIndex:750], movingAves[:750-maxIndex])
 
-    laplace_PSDs.append(res[1]/res[0])
+    # laplace_PSDs.append(res[1]/res[0])
     # print(res[0]/res[1])
     # print(res)
-    
-    
+
+    # transform, p = analysePulse.PadeLaplace(anode, tArr)
+    # plt.plot(p,transform)
+    # print(transform)
+
+
 # close file stream (important)
 ipf.closeFile()
-plt.show()
+# plt.show()
 # Actually got CCM working, no 2d hist yet but the concept is there. Do need to optimise the integral windows
 # histData, histBins = np.histogram(CCM_PSDs, bins=100)
 # histData, histBins = np.histogram(laplace_PSDs, bins=100)
@@ -121,3 +128,4 @@ plt.show()
 # plt.hist2d(voltages, laplace_PSDs, bins=2000, norm=colors.LogNorm())
 # plt.ylim(-2,2)
 # plt.show()
+print(max(ns))
