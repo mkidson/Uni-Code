@@ -15,7 +15,7 @@ matplotlib.rcParams.update({
 })
 
 # maxEvents = 218796
-maxEvents = 100000
+maxEvents = 4
 # fileName = r"3rd Year\PHY3004W\PSD Project\Data\Raw\STNG"
 fileName = r"Raw\STNG"
 
@@ -33,7 +33,6 @@ maxes=[]
 CCM_PSDs = []
 laplace_PSDs = []
 voltages = []
-ns = []
 
 while eventCounter < maxEvents:
     # read from file event-by-event
@@ -97,6 +96,7 @@ while eventCounter < maxEvents:
     # res, poles, fit, tNew = analysePulse.PadeLaplace(anode, tArr, nDecays)
     res, poles, n = analysePulse.PadeLaplace(anode, tArr, nDecays)
 
+    # plt.figure()
     # plt.plot(tArr[maxIndex:],fit,linewidth=2)
     # plt.semilogx(); plt.grid(True); plt.legend()
 
@@ -119,13 +119,7 @@ while eventCounter < maxEvents:
 
 # close file stream (important)
 ipf.closeFile()
-# plt.show()
-# Actually got CCM working, no 2d hist yet but the concept is there. Do need to optimise the integral windows
-# histData, histBins = np.histogram(CCM_PSDs, bins=100)
-# histData, histBins = np.histogram(laplace_PSDs, bins=100)
-# plt.step(histBins[:-1], histData)
+
 # plt.hist2d(voltages, CCM_PSDs, bins=2000, norm=colors.LogNorm())
 # plt.hist2d(voltages, laplace_PSDs, bins=2000, norm=colors.LogNorm())
-# plt.ylim(-2,2)
-# plt.show()
-print(max(ns))
+plt.show()

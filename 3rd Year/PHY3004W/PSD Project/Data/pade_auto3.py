@@ -26,11 +26,11 @@ a1=0.5; a2=0.5; a3=0.5; k1=5.0; k2=1.0; k3= 0.2
 noise = 0.02
 # Note, this assumes data can be negative.
 f = a1*exp(-k1*t)+a2*exp(-k2*t)+a3*exp(-k3*t) + noise*(randn(len(t))-0.5)
-# ion()
-# figure(1)
-# plot(t,f,',k')
-# grid(True); title('Decay Data')
-# draw()
+ion()
+figure(1)
+plot(t,f,',k')
+grid(True); title('Decay Data')
+draw()
 
 print('The only input parameter is p0 = 1/t, where t is approx half-time.')
 tau = t[np.where(f<=max(f)/2)[0][0]]
@@ -42,10 +42,10 @@ print('------------------------------------')
 n_decays=5           # Max Number of decay constants tested for.
 err=zeros(n_decays)  # To keep track of closeness of fits.
 
-# figure(2)
-# plot(t,f,'kx',label='data')  #Plot data. Pade-Laplace fits added below.
-# semilogx(); legend()
-# draw()
+figure(2)
+plot(t,f,'kx',label='data')  #Plot data. Pade-Laplace fits added below.
+semilogx(); legend()
+draw()
 
 for n in arange(1,n_decays+1):  
     print('n = ',n)
@@ -111,40 +111,40 @@ for n in arange(1,n_decays+1):
     print('residue mag ',abs(resid))
     print('------------------------------------')
 
-    # print(np.round(list(pAlt),4))
-    # print(np.round(list(qAlt),4))
-    # print('---')
-    # print(a[::-1])
-    # print(b[::-1])
+    print(np.round(list(pAlt),4))
+    print(np.round(list(qAlt),4))
+    print('---')
+    print(a[::-1])
+    print(b[::-1])
   
-    # fit=zeros(npts,dtype=complex)         #Create fit from poles and residues
-    # for i in arange(0,n):
-    #     fit = fit + resid[i]*exp(-pole[i]*t)
-    # for i in arange(0,npts):           #Get average error from SSE
-    #     err[n-1]=err[n-1]+sqrt((fit[i]-f[i])**2)
-    # err[n-1] = err[n-1]/npts
-    # print('error = ',err[n-1])
+    fit=zeros(npts,dtype=complex)         #Create fit from poles and residues
+    for i in arange(0,n):
+        fit = fit + resid[i]*exp(-pole[i]*t)
+    for i in arange(0,npts):           #Get average error from SSE
+        err[n-1]=err[n-1]+sqrt((fit[i]-f[i])**2)
+    err[n-1] = err[n-1]/npts
+    print('error = ',err[n-1])
 
-    # figure(2)
-    # plot(t,fit,label='n = '+str(n),linewidth=2) #Plot each Pade-Laplace fit on data.
-    # semilogx(); grid(True); legend()
-    # ylim(-noise,1.1*(a1+a2+a3))
-    # draw()
+    figure(2)
+    plot(t,fit,label='n = '+str(n),linewidth=2) #Plot each Pade-Laplace fit on data.
+    semilogx(); grid(True); legend()
+    ylim(-noise,1.1*(a1+a2+a3))
+    draw()
     input('Press Enter to continue.')
     print('--------------------------------------------')
 
-# # Check for significant improvement in residual error. 1%
-# small_err = err[0]
-# small_n = 0
-# for i in arange(1,n_decays):
-#     if (small_err-err[i])/small_err > 0.01:
-#         small_n = i 
-#         small_err=err[i]
-# print('Based on error, detected # of decay constants is ',small_n+1)
-# text(1.5,0.9,(str(small_n+1)+' decay constants detected'),fontsize=14,color='red')
-# draw()
+# Check for significant improvement in residual error. 1%
+small_err = err[0]
+small_n = 0
+for i in arange(1,n_decays):
+    if (small_err-err[i])/small_err > 0.01:
+        small_n = i 
+        small_err=err[i]
+print('Based on error, detected # of decay constants is ',small_n+1)
+text(1.5,0.9,(str(small_n+1)+' decay constants detected'),fontsize=14,color='red')
+draw()
 
-# ioff()
+ioff()
 input('Press Enter to end.')
 close('all')
-#show()
+show()

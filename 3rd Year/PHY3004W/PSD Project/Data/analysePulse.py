@@ -106,24 +106,26 @@ def PadeLaplace(pulse, t, nDecays=2):
 
         # if n==3:
         for i in residues:
-            if residues.dtype == 'float64':
-                pass # needs some check to see if one of the values is smaller than the other by a considerable amount. can't think of one rn
-            elif residues.dtype == 'complex128':
+            if residues.dtype == 'complex128':
                 if np.conjugate(np.around(i,7)) in np.around(residues,7):
                     finished = True
+            elif residues.dtype == 'float64':
+                pass # needs some check to see if one of the values is smaller than the other by a considerable amount. can't think of one rn
 
         if finished:
-            # print(f'total decay constants is: {n-1}')
-            # for k in range(len(polesMain[n-2])):
-                # print(f'lambda: {polesMain[n-2][k]:25.5} A: {residuesMain[n-2][k]:25.5}')
+            print(f'total decay constants is: {n-1}')
+            for k in range(len(polesMain[n-2])):
+                print(f'lambda: {polesMain[n-2][k]:12.8} A: {residuesMain[n-2][k]:12.8}')
             break
         
         polesMain.append(poles)
         residuesMain.append(residues)
-    # fit=zeros(len(t),dtype=complex)         #Create fit from poles and residues
-    # for i in np.arange(0,n):
-    #     fit = fit + residues[i]*np.exp(-poles[i]*t)
+
+    fit=zeros(len(t),dtype=complex)         #Create fit from poles and residues
+    for i in np.arange(0,n-1):
+        fit = fit + residuesMain[-1][i]*np.exp(-polesMain[-1][i]*t)
 
     # print(polesMain[-1])
     # print(residuesMain[-1])
     return residuesMain[-1], polesMain[-1], n-1#, fit, t
+    # return fit

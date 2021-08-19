@@ -62,3 +62,8 @@ plt.scatter(fitX, fitY)
 plt.plot(fitX, kirkupFit)
 plt.show()
 
+
+#m_e =  9.109 383 7015(28) x 10-31 kg
+#m_p = 1.672 621 923 69(51) x 10-27 kg
+#R_H = 1.0967758340 x 10+7 m^-1
+#R_H_U = 3.34243085 x 10-3 m^-1

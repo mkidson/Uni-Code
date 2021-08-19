@@ -1,0 +1,106 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in, top=0.3in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage[separate-uncertainty=true, group-digits=false]{siunitx}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,subfig,caption,import,wrapfig}
+\usepackage[version=4]{mhchem}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\captionsetup{font=small, belowskip=0pt}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+
+\begin{center}
+    {\huge Determining the Rydberg constant from the Balmer series of hydrogen}\\
+    \vspace{0.2in}
+    \textbf{KDSMIL001 | 18 August 2021}
+    
+    
+    \section*{Abstract}\label{sec:Abstract}
+    We aim to find a value for the Rydberg constant by measuring the wavelengths of the visible hydrogen emission spectral lines and using the Balmer series to fit those wavelengths to a linear plot.
+\end{center}
+    
+\section{Introduction}\label{sec:Introduction}
+\par The Balmer series is a describes a subset of the spectral line emissions of a hydrogen atom. The wavelengths of the lines in this series are given by the formula
+\begin{equation}
+    \frac{1}{\lambda}=R\left(\frac{1}{n^2}-\frac{1}{m^2}\right)\cite{Foot}
+    \label{eqn:Balmer}
+\end{equation}
+where $n=2$, $m=3,4,5,\dots$, and $R$ is the Rydberg constant, given by
+\begin{equation}
+    R=\frac{m_ee^4}{8\varepsilon^2h^3c}=\SI{10973731.568160(21)}{\metre^-1}\cite{CODATA}
+    \label{eqn:Rydberg Constant}
+\end{equation}
+\par Note that \autoref{eqn:Balmer} describes much more than just the Balmer series but only the Balmer series is needed for this experiment, and only 4 of the many spectral lines in the series at that. These 4 lines are called H-$\alpha$ (m=3), H-$\beta$ (m=4), H-$\gamma$ (m=5), and H-$\delta$ (m=6) and they will be used as they are the 4 that (formally) lie within the visible spectrum.
+\par To determine a value for $R$, the wavelengths of H-$\alpha$, H-$\beta$, H-$\gamma$, and H-$\delta$ will be measured and a linear fit will be made with $\left(\frac{1}{n^2}-\frac{1}{m^2}\right)$ as the x values and $\frac{1}{\lambda}$ as the y values, thus $R$ will be the gradient.
+
+\section{Apparatus}\label{sec:Apparatus}
+\par A Heath EU-700 Czerny-Turner monochromator with a photo-multiplier detector and pulse-counting electronics was used to measure the wavelengths of the spectral lines coming from a hydrogen spectral tube. The measurement system has three primary measurement parameters: slit width, dwell time, and step increment. The system counts how many times a photon was incident on the detector for the given wavelength, incrementing through a range of wavelengths measured in Angstroms.
+\par The monochromator reports an incorrect wavelength, off by about 20 Angstroms, so the set-up needed to be calibrated. A HeNe laser of known wavelength (6328 A) was fired at the measurement system as show in \autoref{fig:Calibration}.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=.65\textwidth]{calibration.png}
+        \caption{Calibration set-up}
+        \label{fig:Calibration}
+    \end{center}
+\end{figure}
+
+\section{Method}\label{sec:Method}
+\subsection{Calibration}\label{sec:Calibration}
+\par Using the wavelength of the HeNe laser as a known value, data was taken with a variety of parameters, the details of which can be found in \autoref{sec:Appendix}, around the expected value. Gaussians could be fitted to the data using \texttt{scipy.optimize.curve\_fit} and a $\mu$ and $\sigma$ extracted for each set. These values were combined in a mean weighted by their uncertainty $\sigma$ using
+\begin{align}
+    \bar \mu_{wtd}&=\frac{\sum\limits_{i=1}^nw_i\mu_i}{\sum\limits_{i=1}^nw_i}\label{eqn:Weighted Mean}\\
+    \sigma_{wtd}&=\sqrt{\frac{\frac{\sum\limits_{i=1}^nw_i\mu_i^2}{\sum\limits_{i=1}^nw_i}-(\bar\mu_{wtd})^2}{n-1}}\label{eqn:Weighted Mean Uncertainty}
+\end{align}
+where $w_i=\frac{1}{\sigma^2}$ is the weighting \cite{Data Reduction}. 
+\par The count data was assumed to be Poissonian and thus the uncertainty on a count of $N$ is simply $\sqrt{N}$. This uncertainty was provided to \texttt{curve\_fit}. \autoref{fig:Calibration Main} shows an example of one calibration run.
+
+\begin{figure}[H]
+    \begin{center}
+       \subimport{Plots}{calibrationMain.pgf}
+       \caption{Calibration data with slit width $\SI{10}{\mu\m}$, dwell time $\SI{200}{m\second}$, increment 0.5 A, and on the range 6300-6400 A. The Gaussian was fit using \texttt{scipy.optimize.curve\_fit} with the initial guess $\mu=$ the position of the maximum of the data and $\sigma=1$. A vertical shift was included to account for background and an amplitude to account for Gaussians being a PDF.}
+       \label{fig:Calibration Main}
+    \end{center}
+\end{figure}
+
+
+The system scanned through an interval around the wavelength of the spectral lines with a variety of slit widths and wavelength increments 
+
+
+
+
+
+
+
+\begin{thebibliography}{9}
+    \bibitem{CODATA}
+    2018 CODATA list of the Fundamental Physical Constants, \texttt{https://physics.nist.gov/cuu/Constants/Table/allascii.txt}
+    \bibitem{Foot}
+    C. Foot, \textit{Atomic Physics}, Oxford University Press, 2005
+    \bibitem{Data Reduction}
+    Bevington, P. R., \textit{Data Reduction and Error Analysis for the Physical Sciences},McGraw-Hill, 1969
+\end{thebibliography}
+
+
+\newpage
+\section{Appendix}\label{sec:Appendix}
+\setcounter{figure}{0} \renewcommand{\thefigure}{A.\arabic{figure}}
+
+\end{document}

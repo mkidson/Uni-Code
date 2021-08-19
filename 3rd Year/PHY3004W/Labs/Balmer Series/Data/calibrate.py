@@ -3,7 +3,7 @@ import numpy as np
 from scipy.optimize import curve_fit
 from numpy import cos, pi, sin, sqrt, exp, random
 import matplotlib
-# matplotlib.use('pgf')
+matplotlib.use('pgf')
 matplotlib.rcParams.update({
     'pgf.texsystem': 'pdflatex',
     'font.family': 'serif',
@@ -13,9 +13,9 @@ matplotlib.rcParams.update({
     'savefig.bbox': 'tight',
 })
 
-names = ['THRSAM005/HeNe_0.2A_200ms_05um_6300to6400.csv','THRSAM005/HeNe_0.2A_200ms_10um_6300to6400.csv','THRSAM005/HeNe_0.2A_200ms_15um_6300to6400.csv','THRSAM005/HeNe_0.5A_200ms_05um_6300to6400.csv','THRSAM005/HeNe_0.5A_200ms_10um_6300to6400.csv','THRSAM005/HeNe_0.5A_200ms_15um_6300to6400.csv','THRSAM005/HeNe_0.8A_200ms_05um_6300to6400.csv','THRSAM005/HeNe_0.8A_200ms_10um_6300to6400.csv','THRSAM005/HeNe_0.8A_200ms_15um_6300to6400.csv','THRSAM005/HeNe_1.0A_200ms_05um_6300to6400.csv','THRSAM005/HeNe_1.0A_200ms_10um_6300to6400.csv','THRSAM005/HeNe_1.0A_200ms_15um_6300to6400.csv']
+# names = ['THRSAM005/HeNe_0.2A_200ms_05um_6300to6400.csv','THRSAM005/HeNe_0.2A_200ms_10um_6300to6400.csv','THRSAM005/HeNe_0.2A_200ms_15um_6300to6400.csv','THRSAM005/HeNe_0.5A_200ms_05um_6300to6400.csv','THRSAM005/HeNe_0.5A_200ms_10um_6300to6400.csv','THRSAM005/HeNe_0.5A_200ms_15um_6300to6400.csv','THRSAM005/HeNe_0.8A_200ms_05um_6300to6400.csv','THRSAM005/HeNe_0.8A_200ms_10um_6300to6400.csv','THRSAM005/HeNe_0.8A_200ms_15um_6300to6400.csv','THRSAM005/HeNe_1.0A_200ms_05um_6300to6400.csv','THRSAM005/HeNe_1.0A_200ms_10um_6300to6400.csv','THRSAM005/HeNe_1.0A_200ms_15um_6300to6400.csv']
 
-# names = ['THRSAM005/HeNe_0.8A_200ms_05um_6300to6400.csv']
+names = ['THRSAM005/HeNe_0.5A_200ms_10um_6300to6400.csv']
 corrs = []
 corrsUn = []
 
@@ -47,16 +47,19 @@ for name in names:
     corrs.append(popt[0]-6328)
     corrsUn.append(popt[1])
 
-    # plt.figure()
-    # plt.step(data[0], data[1])
-    # plt.plot(xmodel, gaussian(xmodel, *popt))
-
+    plt.figure()
+    plt.step(data[0], data[1], label='Data')
+    plt.plot(xmodel, gaussian(xmodel, *popt), label=f'Gaussian Fit:\n$\mu={np.around(popt[0],decimals=3)}$\n$\sigma={np.around(popt[1],decimals=3)}$')
+plt.legend()
+plt.xlabel('Wavelength $\lambda$ (A)')
+plt.ylabel('Counts')
 # plt.show()
-corrs = np.array(corrs)
-corrsUn = np.array(corrsUn)
-corrsWeights = 1/(corrsUn**2)
+plt.savefig(r'calibrationMain.pgf')
+# corrs = np.array(corrs)
+# corrsUn = np.array(corrsUn)
+# corrsWeights = 1/(corrsUn**2)
 
-correction = sum(corrs*corrsWeights)/sum(corrsWeights)
-correctionUn = sqrt((sum(corrsWeights*corrs**2)/sum(corrsWeights))-correction**2)*(1/sqrt(len(corrs)-1))
+# correction = sum(corrs*corrsWeights)/sum(corrsWeights)
+# correctionUn = sqrt((sum(corrsWeights*corrs**2)/sum(corrsWeights))-correction**2)*(1/sqrt(len(corrs)-1))
 
-print(f'Correction is -{correction} +/- {correctionUn}')
+# print(f'Correction is -{correction} +/- {correctionUn}')
