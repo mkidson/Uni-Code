@@ -52,40 +52,44 @@ where $n=2$, $m=3,4,5,\dots$, and $R$ is the Rydberg constant, given by
 
 \section{Apparatus}\label{sec:Apparatus}
 \par A Heath EU-700 Czerny-Turner monochromator with a photo-multiplier detector and pulse-counting electronics was used to measure the wavelengths of the spectral lines coming from a hydrogen spectral tube. The measurement system has three primary measurement parameters: slit width, dwell time, and step increment. The system counts how many times a photon was incident on the detector for the given wavelength, incrementing through a range of wavelengths measured in Angstroms.
-\par The monochromator reports an incorrect wavelength, off by about 20 Angstroms, so the set-up needed to be calibrated. A HeNe laser of known wavelength (6328 A) was fired at the measurement system as show in \autoref{fig:Calibration}.
+\par The monochromator reports an incorrect wavelength, off by about 20 Angstroms, so the set-up needed to be calibrated. A HeNe laser of known wavelength (6328 A) was fired at the measurement system as show in \autoref{fig:Calibration Set-up}.
 
 \begin{figure}[H]
     \begin{center}
         \includegraphics[width=.65\textwidth]{calibration.png}
         \caption{Calibration set-up}
-        \label{fig:Calibration}
+        \label{fig:Calibration Set-up}
     \end{center}
 \end{figure}
 
 \section{Method}\label{sec:Method}
 \subsection{Calibration}\label{sec:Calibration}
-\par Using the wavelength of the HeNe laser as a known value, data was taken with a variety of parameters, the details of which can be found in \autoref{sec:Appendix}, around the expected value. Gaussians could be fitted to the data using \texttt{scipy.optimize.curve\_fit} and a $\mu$ and $\sigma$ extracted for each set. These values were combined in a mean weighted by their uncertainty $\sigma$ using
+\par Using the wavelength of the HeNe laser (6328 A) as a known value, data was taken with a variety of parameters, the details of which can be found in \autoref{sec:Appendix}, around the expected value. Gaussians could be fitted to the data using \texttt{scipy.optimize.curve\_fit} and a $\mu$ and $\sigma$ extracted for each set. The difference between this $\mu$ and the known wavelength is the correction factor that needs to be applied to all measurements taken with this set-up. These corrections were combined in a mean weighted by their uncertainty $\sigma$ using
 \begin{align}
     \bar \mu_{wtd}&=\frac{\sum\limits_{i=1}^nw_i\mu_i}{\sum\limits_{i=1}^nw_i}\label{eqn:Weighted Mean}\\
     \sigma_{wtd}&=\sqrt{\frac{\frac{\sum\limits_{i=1}^nw_i\mu_i^2}{\sum\limits_{i=1}^nw_i}-(\bar\mu_{wtd})^2}{n-1}}\label{eqn:Weighted Mean Uncertainty}
 \end{align}
 where $w_i=\frac{1}{\sigma^2}$ is the weighting \cite{Data Reduction}. 
-\par The count data was assumed to be Poissonian and thus the uncertainty on a count of $N$ is simply $\sqrt{N}$. This uncertainty was provided to \texttt{curve\_fit}. \autoref{fig:Calibration Main} shows an example of one calibration run.
+\par The count data was assumed to be Poissonian and thus the uncertainty on a count of $N$ is simply $\sqrt{N}$. This uncertainty was provided to \texttt{curve\_fit}. \autoref{fig:Calibration Main} shows an example of one calibration run. The final correction was found to be \num{-22.46\pm0.14}.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \begin{center}
-       \subimport{Plots}{calibrationMain.pgf}
+       \scalebox{0.75}{\subimport{Plots}{calibrationMain.pgf}}
        \caption{Calibration data with slit width $\SI{10}{\mu\m}$, dwell time $\SI{200}{m\second}$, increment 0.5 A, and on the range 6300-6400 A. The Gaussian was fit using \texttt{scipy.optimize.curve\_fit} with the initial guess $\mu=$ the position of the maximum of the data and $\sigma=1$. A vertical shift was included to account for background and an amplitude to account for Gaussians being a PDF.}
        \label{fig:Calibration Main}
     \end{center}
 \end{figure}
 
+\subsection{Data}\label{sec:Data}
+\par Data was taken for each of the spectral lines with a variety of parameters, the details of which can be found in \autoref{sec:Appendix}, and their wavelengths found as in \autoref{sec:Calibration} by fitting a Gaussian. After subtracting the correction factor and combining the uncertainties of the wavelength and correction factor in quadrature, the wavelengths found for each spectral line were combined using \autoref{eqn:Weighted Mean} and \autoref{eqn:Weighted Mean Uncertainty} where again $w_i=\frac{1}{\sigma^2}$. \autoref{fig:DataMain} shows an example for the fitting done.
 
-The system scanned through an interval around the wavelength of the spectral lines with a variety of slit widths and wavelength increments 
-
-
-
-
+\begin{figure}[H]
+    \begin{center}
+       \scalebox{0.75}{\subimport{Plots}{dataMain.pgf}}
+       \caption{Data for spectral line H-$\delta$ with slit width $\SI{100}{\mu\m}$, dwell time $\SI{300}{m\second}$, increment 0.2 A, and on the range 4099-4150 A. The expected wavelength is \num{4101.734\pm0.006}\cite{Spectral Lines} and after correction the measured wavelength is \num{4100.0\pm1.1}. The initial conditions for this fit were as in \autoref{fig:Calibration Main}}
+       \label{fig:DataMain}
+    \end{center}
+\end{figure}
 
 
 
@@ -93,9 +97,11 @@ The system scanned through an interval around the wavelength of the spectral lin
     \bibitem{CODATA}
     2018 CODATA list of the Fundamental Physical Constants, \texttt{https://physics.nist.gov/cuu/Constants/Table/allascii.txt}
     \bibitem{Foot}
-    C. Foot, \textit{Atomic Physics}, Oxford University Press, 2005
+    Foot, C., \textit{Atomic Physics}, Oxford University Press, 2005
     \bibitem{Data Reduction}
     Bevington, P. R., \textit{Data Reduction and Error Analysis for the Physical Sciences},McGraw-Hill, 1969
+    \bibitem{Spectral Lines}
+    Kramida, A., Ralchenko, Yu., Reader, J., and NIST ASD Team (2020). NIST Atomic Spectra Database (ver. 5.8), [Online]. Available: \texttt{https://physics.nist.gov/asd} [2021, August 21]. National Institute of Standards and Technology, Gaithersburg, MD. DOI: \texttt{https://doi.org/10.18434/T4W}
 \end{thebibliography}
 
 

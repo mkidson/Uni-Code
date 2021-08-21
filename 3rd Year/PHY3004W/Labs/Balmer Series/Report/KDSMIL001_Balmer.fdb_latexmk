@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1629407875 "d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Balmer Series/Report/KDSMIL001_Balmer.tex" "KDSMIL001_Balmer.pdf" "KDSMIL001_Balmer" 1629407880
+["pdflatex"] 1629543086 "d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Balmer Series/Report/KDSMIL001_Balmer.tex" "KDSMIL001_Balmer.pdf" "KDSMIL001_Balmer" 1629543090
   "C:/Users/miles/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1622159364 10261458 96b628fbe04cd2bda6c832da7db40e7a ""
   "C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1622160044 4735360 eccb59d2b35948648078db10d1edeb16 ""
   "D:/Program Files/MikTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -235,14 +235,15 @@
   "D:/Program Files/MikTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "D:/Program Files/MikTeX/tex/latex/wrapfig/wrapfig.sty" 1044403200 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "D:/Program Files/MikTeX/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
-  "KDSMIL001_Balmer.aux" 1629407880 3256 d259b3a076c700958f3ca6a63fd7ca3a "pdflatex"
-  "KDSMIL001_Balmer.out" 1629407880 459 b28d89d3a7e2e994c701ae9bad33b06c "pdflatex"
-  "KDSMIL001_Balmer.tex" 1629407869 6416 3d448ac9029be241738f6d91f0137d07 ""
+  "KDSMIL001_Balmer.aux" 1629543090 4471 2f106b51d3c26c45253b2f50afe29434 "pdflatex"
+  "KDSMIL001_Balmer.out" 1629543090 536 e59cd9faf6eaa2d3b2f3e61c981a6d60 "pdflatex"
+  "KDSMIL001_Balmer.tex" 1629543078 8028 c68b5718bf11484ec7c9bf45c2a08d72 ""
   "Plots/calibrationMain.pgf" 1629407226 42960 ffaa747c726a6d2d66758576e2dfa98c ""
+  "Plots/dataMain.pgf" 1629542200 50222 5ccf772feda6f9680743d8fe2ce1d4f1 ""
   "calibration.png" 1629404072 11636 776b8d10fb6c0dbce0f8be7846c3e415 ""
-  "d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Balmer Series/Report/KDSMIL001_Balmer.tex" 1629407869 6416 3d448ac9029be241738f6d91f0137d07 ""
+  "d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Balmer Series/Report/KDSMIL001_Balmer.tex" 1629543078 8028 c68b5718bf11484ec7c9bf45c2a08d72 ""
   (generated)
-  "KDSMIL001_Balmer.out"
   "KDSMIL001_Balmer.log"
-  "KDSMIL001_Balmer.pdf"
+  "KDSMIL001_Balmer.out"
   "KDSMIL001_Balmer.aux"
+  "KDSMIL001_Balmer.pdf"

@@ -3,7 +3,7 @@ import numpy as np
 from scipy.optimize import curve_fit
 from numpy import cos, pi, sin, sqrt, exp, random
 import matplotlib
-# matplotlib.use('pgf')
+matplotlib.use('pgf')
 matplotlib.rcParams.update({
     'pgf.texsystem': 'pdflatex',
     'font.family': 'serif',
@@ -15,9 +15,9 @@ matplotlib.rcParams.update({
 
 # region Ingest Data
 
-names = ['H3 (6563 A)/H3-210808-1304-100um-300ms-6562-6600A-0.2A-lightsOff.csv','H3 (6563 A)/H3-210808-1308-050um-300ms-6561-6600A-0.2A-lightsOff.csv','H3 (6563 A)/H3-210808-1311-020um-300ms-6557-6600A-0.2A-lightsOff.csv','H4 (4861 A)/H4-210808-1300-020um-300ms-4861-4900A-0.2A-lightsOff.csv','H5 (4341 A)/H5-210808-1239-100um-300ms-4338-4380A-0.2A-lightsOff.csv','H5 (4341 A)/H5-210808-1244-050um-300ms-4332-4380A-0.2A-lightsOff.csv','H5 (4341 A)/H5-210808-1247-020um-300ms-4340-4380A-0.2A-lightsOff.csv','H6 (4102 A)/H6-210808-1201-100um-300ms-4099-4150A-0.2A-lightsOff.csv','H6 (4102 A)/H6-210808-1210-050um-300ms-4099-4150A-0.2A-lightsOff.csv','H6 (4102 A)/H6-210808-1218-020um-300ms-4102-4150A-0.2A-lightsOff.csv']
+# names = ['H3 (6563 A)/H3-210808-1304-100um-300ms-6562-6600A-0.2A-lightsOff.csv','H3 (6563 A)/H3-210808-1308-050um-300ms-6561-6600A-0.2A-lightsOff.csv','H3 (6563 A)/H3-210808-1311-020um-300ms-6557-6600A-0.2A-lightsOff.csv','H4 (4861 A)/H4-210808-1300-020um-300ms-4861-4900A-0.2A-lightsOff.csv','H5 (4341 A)/H5-210808-1239-100um-300ms-4338-4380A-0.2A-lightsOff.csv','H5 (4341 A)/H5-210808-1244-050um-300ms-4332-4380A-0.2A-lightsOff.csv','H5 (4341 A)/H5-210808-1247-020um-300ms-4340-4380A-0.2A-lightsOff.csv','H6 (4102 A)/H6-210808-1201-100um-300ms-4099-4150A-0.2A-lightsOff.csv','H6 (4102 A)/H6-210808-1210-050um-300ms-4099-4150A-0.2A-lightsOff.csv','H6 (4102 A)/H6-210808-1218-020um-300ms-4102-4150A-0.2A-lightsOff.csv']
 
-# names = ['H3 (6563 A)\H3-210808-1306-050um-300ms-6559-6600A-1.0A-lightsOff.csv']
+names = ['H6 (4102 A)/H6-210808-1201-100um-300ms-4099-4150A-0.2A-lightsOff.csv']
 means = []
 uns = []
 for name in names:
@@ -46,10 +46,14 @@ for name in names:
     plt.figure()
 
     xmodel = np.linspace(min(data[0]), max(data[0]), 1000)
-    plt.step(data[0], data[1])
-    plt.plot(xmodel, gaussian(xmodel, *popt))
+    plt.step(data[0], data[1], label='Data')
+    plt.plot(xmodel, gaussian(xmodel, *popt), label=f'Gaussian Fit:\n$\mu={np.around(popt[0],decimals=3)}$\n$\sigma={np.around(popt[1],decimals=3)}$')
 
+plt.legend()
+plt.xlabel('Wavelength $\lambda$ (A)')
+plt.ylabel('Counts')
 # plt.show()
+plt.savefig('dataMain.pgf')
 
 print(means)
 print(uns)

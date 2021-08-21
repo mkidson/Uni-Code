@@ -1213,6 +1213,10 @@ INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT .\Plots\dataMain.pgf
+INPUT Plots\dataMain.pgf
+INPUT .\Plots\dataMain.pgf
+INPUT Plots\dataMain.pgf
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT KDSMIL001_Balmer.aux
 INPUT .\KDSMIL001_Balmer.out
