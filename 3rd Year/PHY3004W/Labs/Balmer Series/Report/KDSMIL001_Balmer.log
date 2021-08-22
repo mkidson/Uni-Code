@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  21 AUG 2021 12:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  22 AUG 2021 14:20
 entering extended mode
 **"d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Balmer Series/Report/KDSMIL001_Balmer.tex"
 (d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Balmer Series/Report/KDSMIL001_Balmer.tex
@@ -928,7 +928,7 @@ Overfull \hbox (2.7368pt too wide) in paragraph at lines 54--55
 \OT1/cmr/m/n/10.95 A Heath EU-700 Czerny-Turner monochro-ma-tor with a photo-multiplier de-tec-tor and pulse-counting
  []
 
-<calibration.png, id=34, 472.76625pt x 231.86626pt>
+<calibration.png, id=54, 472.76625pt x 231.86626pt>
 File: calibration.png Graphic file (type png)
 <use calibration.png>
 Package pdftex.def Info: calibration.png  used on input line 59.
@@ -939,27 +939,27 @@ Package pdftex.def Info: calibration.png  used on input line 59.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-(Plots/dataMain.pgf) [2 <./calibration.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+(Plots/dataMain.pgf) [2 <./calibration.png>] [3] (Plots/fit.pgf) [4]
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
 []\OT1/cmr/m/n/10.95 2018 CO-DATA list of the Fun-da-men-tal Phys-i-cal Con-stants,
  []
 
-[3] [4] [5] (KDSMIL001_Balmer.aux)
+[5] [6] (KDSMIL001_Balmer.aux)
 Package rerunfilecheck Info: File `KDSMIL001_Balmer.out' has not changed.
-(rerunfilecheck)             Checksum: E59CD9FAF6EAA2D3B2F3E61C981A6D60;536.
+(rerunfilecheck)             Checksum: D85E3BD72AEC73F3D7860FE6E20EC1AB;1201.
  ) 
 Here is how much of TeX's memory you used:
- 39523 strings out of 479125
- 918423 string characters out of 4612535
- 6318379 words of memory out of 19000000
- 56544 multiletter control sequences out of 15000+600000
- 414758 words of font info for 72 fonts, out of 5000000 for 9000
+ 39562 strings out of 479125
+ 919032 string characters out of 4612535
+ 6319377 words of memory out of 19000000
+ 56569 multiletter control sequences out of 15000+600000
+ 416481 words of font info for 79 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,11n,103p,846b,859s stack positions out of 5000i,500n,10000p,5000000b,80000s
-<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on KDSMIL001_Balmer.pdf (5 pages, 196085 bytes).
+ 99i,11n,103p,851b,851s stack positions out of 5000i,500n,10000p,5000000b,80000s
+<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on KDSMIL001_Balmer.pdf (6 pages, 235677 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 206 PDF objects out of 1000 (max. 8388607)
+ 34 named destinations out of 1000 (max. 500000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 

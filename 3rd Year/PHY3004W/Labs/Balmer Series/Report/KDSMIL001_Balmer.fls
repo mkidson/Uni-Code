@@ -1217,6 +1217,17 @@ INPUT .\Plots\dataMain.pgf
 INPUT Plots\dataMain.pgf
 INPUT .\Plots\dataMain.pgf
 INPUT Plots\dataMain.pgf
+INPUT .\Plots\fit.pgf
+INPUT Plots\fit.pgf
+INPUT .\Plots\fit.pgf
+INPUT Plots\fit.pgf
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss12.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt12.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT KDSMIL001_Balmer.aux
 INPUT .\KDSMIL001_Balmer.out
@@ -1231,16 +1242,22 @@ INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cmextra\cmex8.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cmextra\cmex8.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
