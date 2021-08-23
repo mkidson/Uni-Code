@@ -41,8 +41,8 @@ weightedMeansUn = np.array([H3Un, H4Un, H5Un, H6Un])*1e-10
 fitX = np.array([0.25 - 1/(3**2), 0.25 - 1/(4**2), 0.25 - 1/(5**2), 0.25 - 1/(6**2)])#, 0.25 - 1/(7**2), 0.25 - 1/(8**2), 0.25 - 1/(9**2), 0.25 - 1/(10**2)])
 # fitY = 1/weightedMeans
 # fitYErr = weightedMeansUn/(weightedMeans**2)
-fitY = 1/expected
-fitYErr = expectedUns/(expected**2)
+fitY = 1/weightedMeans
+fitYErr = weightedMeansUn/(weightedMeans**2)
 
 def f(x,m,c):
     return m*x+c
@@ -65,9 +65,9 @@ kirkupFit=m*fitX+c
 SS_total = np.sum((fitY - np.average(fitY))**2)
 SS_res = np.sum((fitY - kirkupFit)**2)
 R2=1-(SS_res)/(SS_total)
-print(f'R-Squared: {R2}\n')
+# print(f'R-Squared: {R2}\n')
 
-print(f'c = {c} +/- {uc}\nlambda = {m} +/- {um}')
+# print(f'c = {c} +/- {uc}\nlambda = {m} +/- {um}')
 
 plt.errorbar(fitX[0], fitY[0], yerr=fitYErr[0], fmt='s', markersize=4, label='H-$\\alpha$')
 plt.errorbar(fitX[1], fitY[1], yerr=fitYErr[1], fmt='s', markersize=4, label='H-$\\beta$')
@@ -80,8 +80,15 @@ plt.ylabel(r'$\frac{1}{\lambda}$', rotation=0)
 plt.show()
 # plt.savefig('fit.pgf')
 
+# for i in range(7,10):
+#     wvl = m*((1/4 - 1/(i**2)))
+#     invWvl = 1/wvl
+#     wvlUn = um*((1/4 - 1/(i**2)))
+#     invWvlUn = wvlUn/(wvl**2)
+#     print(f'$\SI{{{invWvl}\pm{invWvlUn}}}{{A}}$')
 
 #m_e =  9.109 383 7015(28) x 10-31 kg
 #m_p = 1.672 621 923 69(51) x 10-27 kg
 #R_H = 1.0967758340 x 10+7 m^-1
 #R_H_U = 3.34243085 x 10-3 m^-1
+

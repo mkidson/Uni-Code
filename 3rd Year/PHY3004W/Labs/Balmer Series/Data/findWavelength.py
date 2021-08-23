@@ -3,7 +3,7 @@ import numpy as np
 from scipy.optimize import curve_fit
 from numpy import cos, pi, sin, sqrt, exp, random
 import matplotlib
-# matplotlib.use('pgf')
+matplotlib.use('pgf')
 matplotlib.rcParams.update({
     'pgf.texsystem': 'pdflatex',
     'font.family': 'serif',
@@ -11,6 +11,8 @@ matplotlib.rcParams.update({
     'pgf.rcfonts': False,
     'figure.constrained_layout.use': True,
     'savefig.bbox': 'tight',
+    'axes.labelsize': 16,
+    'legend.fontsize': 16
 })
 
 # region Ingest Data
@@ -49,11 +51,11 @@ for name in names:
     plt.step(data[0], data[1], label='Data')
     plt.plot(xmodel, gaussian(xmodel, *popt), label=f'Gaussian Fit:\n$\mu={np.around(popt[0],decimals=3)}$\n$\sigma={np.around(popt[1],decimals=3)}$')
 
-plt.legend()
-plt.xlabel('Wavelength $\lambda$ (A)')
-plt.ylabel('Counts')
-plt.show()
-# plt.savefig('dataMain.pgf')
+    plt.legend()
+    plt.xlabel('Wavelength $\lambda$ (A)')
+    plt.ylabel('Counts')
+    plt.savefig(f'Spectral/{name[12:]}.pgf')
+# plt.show()
 
 print(means)
 print(uns)

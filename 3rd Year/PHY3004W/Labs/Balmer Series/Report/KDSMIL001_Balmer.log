@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  22 AUG 2021 14:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  23 AUG 2021 12:15
 entering extended mode
 **"d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Balmer Series/Report/KDSMIL001_Balmer.tex"
 (d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Balmer Series/Report/KDSMIL001_Balmer.tex
@@ -730,8 +730,6 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
- (D:\Program Files\MikTeX\tex/latex/subfig\subfig.sty
-Package: subfig 2005/06/28 ver: 1.3 subfig package
  (D:\Program Files\MikTeX\tex/latex/caption\caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
  (D:\Program Files\MikTeX\tex/latex/caption\caption3.sty
@@ -750,87 +748,77 @@ Package caption Info: Standard document class detected.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
-)
-\c@KVtest=\count331
-\sf@farskip=\skip55
-\sf@captopadj=\dimen301
-\sf@capskip=\skip56
-\sf@nearskip=\skip57
-\c@subfigure=\count332
-\c@subfigure@save=\count333
-\c@lofdepth=\count334
-\c@subtable=\count335
-\c@subtable@save=\count336
-\c@lotdepth=\count337
-\sf@top=\skip58
-\sf@bottom=\skip59
 ) (D:\Program Files\MikTeX\tex/latex/import\import.sty
 Package: import 2020/04/01  v 6.2
 ) (D:\Program Files\MikTeX\tex/latex/wrapfig\wrapfig.sty
-\wrapoverhang=\dimen302
-\WF@size=\dimen303
-\c@WF@wrappedlines=\count338
+\wrapoverhang=\dimen301
+\WF@size=\dimen302
+\c@WF@wrappedlines=\count331
 \WF@box=\box84
 \WF@everypar=\toks44
 Package: wrapfig 2003/01/31  v 3.6
+) (D:\Program Files\MikTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+\c@subfigure=\count332
+\c@subtable=\count333
 ) (D:\Program Files\MikTeX\tex/latex/mhchem\mhchem.sty
 Package: mhchem 2018/06/22 v4.08 for typesetting chemical formulae
  (D:\Program Files\MikTeX\tex/latex/latex-tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count339
-\calc@Bcount=\count340
-\calc@Adimen=\dimen304
-\calc@Bdimen=\dimen305
-\calc@Askip=\skip60
-\calc@Bskip=\skip61
+\calc@Acount=\count334
+\calc@Bcount=\count335
+\calc@Adimen=\dimen303
+\calc@Bdimen=\dimen304
+\calc@Askip=\skip55
+\calc@Bskip=\skip56
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count341
-\calc@Cskip=\skip62
+\calc@Ccount=\count336
+\calc@Cskip=\skip57
 ) (D:\Program Files\MikTeX\tex/latex/chemgreek\chemgreek.sty
 Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use in chemistry (CN)
-\l__chemgreek_tmpa_int=\count342
-\g__chemgreek_tmpa_int=\count343
+\l__chemgreek_tmpa_int=\count337
+\g__chemgreek_tmpa_int=\count338
 )
-\l__mhchem_ce_distanceFromLastComma_int=\count344
-\__mhchem_arrow_extPgfLength_skip=\skip63
-\mhchem@minispace@tmp=\skip64
-\mhchem@minibackspace@tmp=\skip65
-\mhchem@bondwidth=\skip66
-\mhchem@bondheight=\skip67
-\mhchem@smallbondwidth@tmpA=\skip68
-\mhchem@smallbondwidth@tmpB=\skip69
-\mhchem@smallbondwidth=\skip70
-\mhchem@bondtmp@minussidebearingleft=\skip71
-\mhchem@bondtmp@minussidebearingright=\skip72
-\l__mhchem_option_version_int=\count345
-\mhchem@option@minusmathsidebearingleft=\dimen306
-\mhchem@option@minusmathsidebearingright=\dimen307
-\mhchem@option@minustextsidebearingleft=\dimen308
-\mhchem@option@minustextsidebearingright=\dimen309
+\l__mhchem_ce_distanceFromLastComma_int=\count339
+\__mhchem_arrow_extPgfLength_skip=\skip58
+\mhchem@minispace@tmp=\skip59
+\mhchem@minibackspace@tmp=\skip60
+\mhchem@bondwidth=\skip61
+\mhchem@bondheight=\skip62
+\mhchem@smallbondwidth@tmpA=\skip63
+\mhchem@smallbondwidth@tmpB=\skip64
+\mhchem@smallbondwidth=\skip65
+\mhchem@bondtmp@minussidebearingleft=\skip66
+\mhchem@bondtmp@minussidebearingright=\skip67
+\l__mhchem_option_version_int=\count340
+\mhchem@option@minusmathsidebearingleft=\dimen305
+\mhchem@option@minusmathsidebearingright=\dimen306
+\mhchem@option@minustextsidebearingleft=\dimen307
+\mhchem@option@minustextsidebearingright=\dimen308
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 27.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 29.
  (KDSMIL001_Balmer.aux)
 \openout1 = `KDSMIL001_Balmer.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -866,7 +854,7 @@ LaTeX Font Info:    ... okay on input line 27.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 27.
+Package hyperref Info: Link coloring OFF on input line 29.
 (D:\Program Files\MikTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (D:\Program Files\MikTeX\tex/latex/refcount\refcount.sty
@@ -874,11 +862,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (D:\Program Files\MikTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count346
+\c@section@level=\count341
 )
-LaTeX Info: Redefining \ref on input line 27.
-LaTeX Info: Redefining \pageref on input line 27.
-LaTeX Info: Redefining \nameref on input line 27.
+LaTeX Info: Redefining \ref on input line 29.
+LaTeX Info: Redefining \pageref on input line 29.
+LaTeX Info: Redefining \nameref on input line 29.
  (KDSMIL001_Balmer.out) (KDSMIL001_Balmer.out)
 \@outlinefile=\write6
 \openout6 = `KDSMIL001_Balmer.out'.
@@ -886,19 +874,19 @@ LaTeX Info: Redefining \nameref on input line 27.
  (D:\Program Files\MikTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 27.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 29.
  (D:\Program Files\MikTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count347
-\scratchdimen=\dimen310
+\scratchcounter=\count342
+\scratchdimen=\dimen309
 \scratchbox=\box85
-\nofMPsegments=\count348
-\nofMParguments=\count349
+\nofMPsegments=\count343
+\nofMParguments=\count344
 \everyMPshowfont=\toks45
-\MPscratchCnt=\count350
-\MPscratchDim=\dimen311
-\MPnumerator=\count351
-\makeMPintoPDFobject=\count352
+\MPscratchCnt=\count345
+\MPscratchDim=\dimen310
+\MPnumerator=\count346
+\makeMPintoPDFobject=\count347
 \everyMPtoPDFconversion=\toks46
 ) (D:\Program Files\MikTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -908,30 +896,29 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
 
-\c@lstlisting=\count353
+\c@lstlisting=\count348
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-Package chemgreek Info: Activating mapping `default' on line 27.
+Package chemgreek Info: Activating mapping `default' on line 29.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
 (D:\Program Files\MikTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
  (D:\Program Files\MikTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (2.7368pt too wide) in paragraph at lines 54--55
+Overfull \hbox (2.7368pt too wide) in paragraph at lines 56--57
 \OT1/cmr/m/n/10.95 A Heath EU-700 Czerny-Turner monochro-ma-tor with a photo-multiplier de-tec-tor and pulse-counting
  []
 
-<calibration.png, id=54, 472.76625pt x 231.86626pt>
+<calibration.png, id=58, 472.76625pt x 231.86626pt>
 File: calibration.png Graphic file (type png)
 <use calibration.png>
-Package pdftex.def Info: calibration.png  used on input line 59.
+Package pdftex.def Info: calibration.png  used on input line 61.
 (pdftex.def)             Requested size: 305.33789pt x 149.75601pt.
 [1
 
@@ -940,26 +927,107 @@ Package pdftex.def Info: calibration.png  used on input line 59.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 (Plots/dataMain.pgf) [2 <./calibration.png>] [3] (Plots/fit.pgf) [4]
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
 []\OT1/cmr/m/n/10.95 2018 CO-DATA list of the Fun-da-men-tal Phys-i-cal Con-stants,
  []
 
-[5] [6] (KDSMIL001_Balmer.aux)
+[5] (Plots/calibration/HeNe_0.2A_200ms_05um_6300to6400.csv.pgf
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 211.
+
+LaTeX Font Info:    Calculating math sizes for size <16> on input line 211.
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <16> not available
+(Font)              size <17.28> substituted on input line 211.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 211.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 211.
+
+
+LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 211.
+
+) (Plots/calibration/HeNe_0.2A_200ms_10um_6300to6400.csv.pgf)
+Overfull \hbox (5.4629pt too wide) in paragraph at lines 166--169
+[][] [] 
+ []
+
+(Plots/calibration/HeNe_0.2A_200ms_15um_6300to6400.csv.pgf) (Plots/calibration/HeNe_0.5A_200ms_05um_6300to6400.csv.pgf)
+Overfull \hbox (5.4629pt too wide) in paragraph at lines 171--174
+[][] [] 
+ []
+
+(Plots/calibration/HeNe_0.5A_200ms_10um_6300to6400.csv.pgf) (Plots/calibration/HeNe_0.5A_200ms_15um_6300to6400.csv.pgf)
+Overfull \hbox (5.4629pt too wide) in paragraph at lines 176--179
+[][] [] 
+ []
+
+(Plots/calibration/HeNe_0.8A_200ms_05um_6300to6400.csv.pgf) (Plots/calibration/HeNe_0.8A_200ms_10um_6300to6400.csv.pgf)
+Overfull \hbox (5.4629pt too wide) in paragraph at lines 181--184
+[][] [] 
+ []
+
+(Plots/calibration/HeNe_0.8A_200ms_15um_6300to6400.csv.pgf) (Plots/calibration/HeNe_1.0A_200ms_05um_6300to6400.csv.pgf)
+Overfull \hbox (5.4629pt too wide) in paragraph at lines 186--189
+[][] [] 
+ []
+
+[6] (Plots/calibration/HeNe_1.0A_200ms_10um_6300to6400.csv.pgf) (Plots/calibration/HeNe_1.0A_200ms_15um_6300to6400.csv.pgf)
+Overfull \hbox (5.4629pt too wide) in paragraph at lines 191--194
+[][] [] 
+ []
+
+(Plots/Spectral/H3-210808-1304-100um-300ms-6562-6600A-0.2A-lightsOff.csv.pgf) (Plots/Spectral/H3-210808-1308-050um-300ms-6561-6600A-0.2A-lightsOff.csv.pgf)
+Overfull \hbox (5.4629pt too wide) in paragraph at lines 198--201
+[][] [] 
+ []
+
+(Plots/Spectral/H3-210808-1311-020um-300ms-6557-6600A-0.2A-lightsOff.csv.pgf) (Plots/Spectral/H4-210808-1300-020um-300ms-4861-4900A-0.2A-lightsOff.csv.pgf)
+Overfull \hbox (5.4629pt too wide) in paragraph at lines 203--206
+[][] [] 
+ []
+
+[7] (Plots/Spectral/H5-210808-1239-100um-300ms-4338-4380A-0.2A-lightsOff.csv.pgf) (Plots/Spectral/H5-210808-1244-050um-300ms-4332-4380A-0.2A-lightsOff.csv.pgf)
+Overfull \hbox (5.4629pt too wide) in paragraph at lines 208--211
+[][] [] 
+ []
+
+(Plots/Spectral/H5-210808-1247-020um-300ms-4340-4380A-0.2A-lightsOff.csv.pgf) (Plots/Spectral/H6-210808-1201-100um-300ms-4099-4150A-0.2A-lightsOff.csv.pgf)
+Overfull \hbox (5.4629pt too wide) in paragraph at lines 213--216
+[][] [] 
+ []
+
+(Plots/Spectral/H6-210808-1210-050um-300ms-4099-4150A-0.2A-lightsOff.csv.pgf) (Plots/Spectral/H6-210808-1218-020um-300ms-4102-4150A-0.2A-lightsOff.csv.pgf)
+Overfull \hbox (5.4629pt too wide) in paragraph at lines 218--221
+[][] [] 
+ []
+
+[8] [9] (KDSMIL001_Balmer.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.28pt have occurred.
+
 Package rerunfilecheck Info: File `KDSMIL001_Balmer.out' has not changed.
-(rerunfilecheck)             Checksum: D85E3BD72AEC73F3D7860FE6E20EC1AB;1201.
+(rerunfilecheck)             Checksum: AE2014894F04609F1007E7CD3D48A757;1343.
  ) 
 Here is how much of TeX's memory you used:
- 39562 strings out of 479125
- 919032 string characters out of 4612535
- 6319377 words of memory out of 19000000
- 56569 multiletter control sequences out of 15000+600000
- 416481 words of font info for 79 fonts, out of 5000000 for 9000
+ 39648 strings out of 479125
+ 927431 string characters out of 4612535
+ 6435356 words of memory out of 19000000
+ 56562 multiletter control sequences out of 15000+600000
+ 421152 words of font info for 98 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,11n,103p,851b,851s stack positions out of 5000i,500n,10000p,5000000b,80000s
-<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on KDSMIL001_Balmer.pdf (6 pages, 235677 bytes).
+ 99i,11n,103p,851b,849s stack positions out of 5000i,500n,10000p,5000000b,80000s
+<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on KDSMIL001_Balmer.pdf (9 pages, 356602 bytes).
 PDF statistics:
- 206 PDF objects out of 1000 (max. 8388607)
- 34 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 258 PDF objects out of 1000 (max. 8388607)
+ 50 named destinations out of 1000 (max. 500000)
+ 114 words of extra memory for PDF output out of 10000 (max. 10000000)
 

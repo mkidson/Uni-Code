@@ -4,8 +4,10 @@
 \usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
 \usepackage[separate-uncertainty=true, group-digits=false]{siunitx}
 \usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
-\usepackage{listings,xcolor,subfig,caption,import,wrapfig}
+\usepackage{listings,xcolor,caption,import,wrapfig,subcaption}
 \usepackage[version=4]{mhchem}
+\captionsetup[subfloat]{labelformat=empty}
+\graphicspath{{Plots/Calibration}}
 \numberwithin{equation}{section}
 \numberwithin{figure}{section}
 \numberwithin{table}{section}
@@ -37,7 +39,7 @@
 \end{center}
     
 \section{Introduction}\label{sec:Introduction}
-\par The Balmer series is a describes a subset of the spectral line emissions of a hydrogen atom. The wavelengths of the lines in this series are given by the formula
+\par The Balmer series is a subset of the spectral line emissions of a hydrogen atom. The wavelengths of the lines in this series are given by the formula
 \begin{equation}
     \frac{1}{\lambda}=R\left(\frac{1}{n^2}-\frac{1}{m^2}\right)\cite{Foot}
     \label{eqn:Balmer}
@@ -64,7 +66,7 @@ where $n=2$, $m=3,4,5,\dots$, and $R$ is the Rydberg constant, given by
 
 \section{Method}\label{sec:Method}
 \subsection{Calibration}\label{sec:Calibration}
-\par Using the wavelength of the HeNe laser (6328 A) as a known value, measurements were made with a variety of parameters, the details of which can be found in \autoref{sec:Calibration Data}, around the expected value. Gaussians could be fitted to the data using \texttt{scipy.optimize.curve\_fit} and a $\mu$ and $\sigma$ extracted for each set. The difference between this $\mu$ and the known wavelength is the correction factor that needs to be applied to all measurements taken with this set-up. These corrections were combined in a mean weighted by their uncertainty $\sigma$ using
+\par Using the wavelength of the HeNe laser (6328 A) as a known value, measurements were made with a variety of parameters, the details of which can be found in \autoref{sec:Calibration Data}, around the expected value. Gaussians could be fitted to the data using \texttt{scipy.optimize.curve\_fit} and a $\mu$ and $\sigma$ extracted for each set. The difference between this $\mu$ and the known wavelength is the correction factor that needs to be applied to all measurements taken with this set-up. These corrections were combined in a mean, weighted by their uncertainty $\sigma$ using
 \begin{align}
     \bar \mu_{wtd}&=\frac{\sum\limits_{i=1}^nw_i\mu_i}{\sum\limits_{i=1}^nw_i}\label{eqn:Weighted Mean}\\
     \sigma_{wtd}&=\sqrt{\frac{\frac{\sum\limits_{i=1}^nw_i\mu_i^2}{\sum\limits_{i=1}^nw_i}-(\bar\mu_{wtd})^2}{n-1}}\label{eqn:Weighted Mean Uncertainty}
@@ -86,7 +88,7 @@ where $w_i=\frac{1}{\sigma^2}$ is the weighting \cite{Data Reduction}.
 \begin{figure}[H]
     \begin{center}
        \scalebox{0.75}{\subimport{Plots}{dataMain.pgf}}
-       \caption{Data for spectral line H-$\delta$ with slit width $\SI{100}{\mu\m}$, dwell time $\SI{300}{m\second}$, increment 0.2 A, and on the range 4099-4150 A. The expected wavelength is \num{4101.734\pm0.006}\cite{Spectral Lines} and after correction the measured wavelength is \num{4100.0\pm1.1}. The initial conditions for this fit were as in \autoref{fig:Calibration Main}}
+       \caption{Data for spectral line H-$\delta$ with slit width $\SI{100}{\mu\m}$, dwell time $\SI{300}{m\second}$, increment 0.2 A, and on the range 4099-4150 A. The expected wavelength is \num{4101.734\pm0.006}\cite{Spectral Lines} and after correction the measured wavelength is \num{4100.0\pm1.1} A. The initial conditions for this fit were as in \autoref{fig:Calibration Main}}
        \label{fig:DataMain}
     \end{center}
 \end{figure}
@@ -110,7 +112,7 @@ where $w_i=\frac{1}{\sigma^2}$ is the weighting \cite{Data Reduction}.
 \begin{figure}[H]
     \begin{center}
        \scalebox{0.75}{\subimport{Plots}{fit.pgf}}
-       \caption{Weighted linear least squares fit of the inverse of the measured spectral line wavelengths to \autoref{eqn:Balmer}. The uncertainty on the inverse wavelengths is plotted but due to the method described in \autoref{eqn:Rydberg Constant} and \autoref{eqn:Weighted Mean Uncertainty}, these uncertainties are reduced to the point of being unnoticeable at this scale. The slope $m$ is the Rydberg constant $R$.}
+       \caption{Weighted linear least squares fit of the inverse of the measured spectral line wavelengths to \autoref{eqn:Balmer}. The uncertainty on the inverse wavelengths is plotted but due to the method described in \autoref{eqn:Weighted Mean} and \autoref{eqn:Weighted Mean Uncertainty}, these uncertainties are reduced to the point of being unnoticeable at this scale. The slope $m$ is the Rydberg constant $R$.}
        \label{fig:Fit}
     \end{center}
 \end{figure}
@@ -120,9 +122,26 @@ where $w_i=\frac{1}{\sigma^2}$ is the weighting \cite{Data Reduction}.
 \par In the interest of a sanity check, we performed the same linear fitting using the literature values for the wavelengths of the four spectral lines, found in \cite{Spectral Lines}, and found a value of $R=\SI{10971003\pm93}{\metre^-1}$, which still does not agree with $R_H$, but is at least closer to it than our value, implying that our technique is valid to some extent, but our data is where the problem lies.
 \par As can be seen in \autoref{tbl:Spectral Lines}, the uncertainty on our wavelengths, aside from H-$\beta$ which did not have the same amount of data, are all approximately the same, and yet the difference between our value and the literature value varies considerably from line to line. This leads us to believe that the main reason for the discrepancy in measured values for $R$ is that the calibration we performed was not sufficient. We suspect that the relationship between measured wavelength and actual wavelength is not linear, or at least was not accurately captured by our one data point. We recommend calibrating using more than one laser, or capturing more than one known wavelength in some other way.
 
-\section{Conclusion}\label{sec:Conclusion}
-\par We found the value of the Rydberg constant to be $\SI{10983450\pm280}{\metre^-1}$, which does not agree with the literature value of either $R$ or $R_H$ within experimental uncertainty. We suspect that this is a result of the insufficient calibration method and recommend using more than one known wavelength to calibrate. Another source of uncertainty could lie in our lack of good data for the H-$\beta$ spectral line and we recommend using more than one dataset per wavelength.
+\section{Further Exploration}\label{sec:Further Exploration}
+\par Using the measured value of the Rydberg constant, we can find the wavelengths of the next spectral lines in the Balmer series, show in \autoref{tbl:Balmer Next}.
 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c|c|c}
+         & $m$ & $\lambda$ & Literature Value \\\hline
+        H-$\varepsilon$ & 7 & $\SI{3965.563\pm0.099}{A}$ & $\SI{3970.075\pm0.006}{A}$ \\\hline
+        H-$\zeta$ & 8 & $\SI{3884.633\pm0.097}{A}$ & $\SI{3889.064\pm0.006}{A}$ \\\hline
+        H-$\eta$ & 9 & $\SI{3831.030\pm0.096}{A}$ & $\SI{3835.397\pm0.006}{A}$ \\\hline
+    \end{tabular}
+    \caption{The wavelengths of the next three spectral lines in the Balmer series, calculated using \autoref{eqn:Balmer} with $R=\SI{10983450\pm280}{\metre^-1}$, compared to the literature values from \cite{Spectral Lines}.}
+    \label{tbl:Balmer Next}
+\end{table}
+
+\par The equation consistently underestimates the wavelengths by about 5 A, which is to be expected given our value of $R$ was overestimated.
+
+
+\section{Conclusion}\label{sec:Conclusion}
+\par We found the value of the Rydberg constant to be $\SI{10983450\pm280}{\metre^-1}$, which does not agree with the literature value of either $R$ or $R_H$ within experimental uncertainty. We suspect that this is a result of the insufficient calibration method and recommend using more than one known wavelength to calibrate. Another source of uncertainty could be our lack of good data for the H-$\beta$ spectral line so we recommend using more than one dataset per wavelength.
 
 \begin{thebibliography}{9}
     \bibitem{CODATA}
@@ -143,7 +162,62 @@ where $w_i=\frac{1}{\sigma^2}$ is the weighting \cite{Data Reduction}.
 \setcounter{figure}{0} \renewcommand{\thefigure}{A.\arabic{figure}}
 \subsection{Calibration Data}\label{sec:Calibration Data}
 
+\begin{figure}[H]%
+    \subfloat[\centering Increment: 0.2A, Dwell Time: 200ms, Slit Width: 5$\mu$m, Range: 6300-6400 A]{\scalebox{0.5}{\subimport{Plots/calibration}{HeNe_0.2A_200ms_05um_6300to6400.csv.pgf}}}
+    \,
+    \subfloat[\centering 0.2 A, 200 ms, 10 $\mu$m, 6300-6400 A]{\scalebox{0.5}{\subimport{Plots/calibration}{HeNe_0.2A_200ms_10um_6300to6400.csv.pgf}}}
+\end{figure}
+\begin{figure}[H]%
+    \subfloat[\centering 0.2 A, 200 ms, 15 $\mu$m, 6300-6400 A]{\scalebox{0.5}{\subimport{Plots/calibration}{HeNe_0.2A_200ms_15um_6300to6400.csv.pgf}}}
+    \,
+    \subfloat[\centering 0.5 A, 200 ms, 5 $\mu$m, 6300-6400 A]{\scalebox{0.5}{\subimport{Plots/calibration}{HeNe_0.5A_200ms_05um_6300to6400.csv.pgf}}}
+\end{figure}
+\begin{figure}[H]%
+    \subfloat[\centering 0.5 A, 200 ms, 10 $\mu$m, 6300-6400 A]{\scalebox{0.5}{\subimport{Plots/calibration}{HeNe_0.5A_200ms_10um_6300to6400.csv.pgf}}}
+    \,
+    \subfloat[\centering 0.5 A, 200 ms, 15 $\mu$m, 6300-6400 A]{\scalebox{0.5}{\subimport{Plots/calibration}{HeNe_0.5A_200ms_15um_6300to6400.csv.pgf}}}
+\end{figure}
+\begin{figure}[H]%
+    \subfloat[\centering 0.8 A, 200 ms, 5 $\mu$m, 6300-6400 A]{\scalebox{0.5}{\subimport{Plots/calibration}{HeNe_0.8A_200ms_05um_6300to6400.csv.pgf}}}
+    \,
+    \subfloat[\centering 0.8 A, 200 ms, 10 $\mu$m, 6300-6400 A]{\scalebox{0.5}{\subimport{Plots/calibration}{HeNe_0.8A_200ms_10um_6300to6400.csv.pgf}}}
+\end{figure}
+\begin{figure}[H]%
+    \subfloat[\centering 0.8 A, 200 ms, 15 $\mu$m, 6300-6400 A]{\scalebox{0.5}{\subimport{Plots/calibration}{HeNe_0.8A_200ms_15um_6300to6400.csv.pgf}}}
+    \,
+    \subfloat[\centering 1.0 A, 200 ms, 5 $\mu$m, 6300-6400 A]{\scalebox{0.5}{\subimport{Plots/calibration}{HeNe_1.0A_200ms_05um_6300to6400.csv.pgf}}}
+\end{figure}
+\begin{figure}[H]%
+    \subfloat[\centering 1.0 A, 200 ms, 10 $\mu$m, 6300-6400 A]{\scalebox{0.5}{\subimport{Plots/calibration}{HeNe_1.0A_200ms_10um_6300to6400.csv.pgf}}}
+    \,
+    \subfloat[\centering 1.0 A, 200 ms, 15 $\mu$m, 6300-6400 A]{\scalebox{0.5}{\subimport{Plots/calibration}{HeNe_1.0A_200ms_15um_6300to6400.csv.pgf}}}
+\end{figure}
 
 \subsection{Spectral Line Data}\label{sec:Spectral Line Data}
+\begin{figure}[H]%
+    \subfloat[\centering Line: H-$\alpha$, Increment: 0.2 A, Dwell Time: 300 ms, Slit Width: 100 $\mu$m, Range: 6562-6600 A]{\scalebox{0.5}{\subimport{Plots/Spectral}{H3-210808-1304-100um-300ms-6562-6600A-0.2A-lightsOff.csv.pgf}}}
+    \,
+    \subfloat[\centering H-$\alpha$, 0.2 A, 300 ms, 50 $\mu$m, 6561-6600 A]{\scalebox{0.5}{\subimport{Plots/Spectral}{H3-210808-1308-050um-300ms-6561-6600A-0.2A-lightsOff.csv.pgf}}}
+\end{figure}
+\begin{figure}[H]%
+    \subfloat[\centering H-$\alpha$, 0.2 A, 300 ms, 20 $\mu$m, 6557-6600 A]{\scalebox{0.5}{\subimport{Plots/Spectral}{H3-210808-1311-020um-300ms-6557-6600A-0.2A-lightsOff.csv.pgf}}}
+    \,
+    \subfloat[\centering H-$\beta$, 0.2 A, 300 ms, 20 $\mu$m, 4861-4900 A]{\scalebox{0.5}{\subimport{Plots/Spectral}{H4-210808-1300-020um-300ms-4861-4900A-0.2A-lightsOff.csv.pgf}}}
+\end{figure}
+\begin{figure}[H]%
+    \subfloat[\centering H-$\gamma$, 0.2 A, 300 ms, 100 $\mu$m, 4338-4380 A]{\scalebox{0.5}{\subimport{Plots/Spectral}{H5-210808-1239-100um-300ms-4338-4380A-0.2A-lightsOff.csv.pgf}}}
+    \,
+    \subfloat[\centering H-$\gamma$, 0.2 A, 300 ms, 50 $\mu$m, 4332-4380 A]{\scalebox{0.5}{\subimport{Plots/Spectral}{H5-210808-1244-050um-300ms-4332-4380A-0.2A-lightsOff.csv.pgf}}}
+\end{figure}
+\begin{figure}[H]%
+    \subfloat[\centering H-$\gamma$, 0.2 A, 300 ms, 20 $\mu$m, 4340-4380 A]{\scalebox{0.5}{\subimport{Plots/Spectral}{H5-210808-1247-020um-300ms-4340-4380A-0.2A-lightsOff.csv.pgf}}}
+    \,
+    \subfloat[\centering H-$\delta$, 0.2 A, 300 ms, 100 $\mu$m, 4099-4150 A]{\scalebox{0.5}{\subimport{Plots/Spectral}{H6-210808-1201-100um-300ms-4099-4150A-0.2A-lightsOff.csv.pgf}}}
+\end{figure}
+\begin{figure}[H]%
+    \subfloat[\centering H-$\delta$, 0.2 A, 300 ms, 50 $\mu$m, 4099-4150 A]{\scalebox{0.5}{\subimport{Plots/Spectral}{H6-210808-1210-050um-300ms-4099-4150A-0.2A-lightsOff.csv.pgf}}}
+    \,
+    \subfloat[\centering H-$\delta$, 0.2 A, 300 ms, 20 $\mu$m, 4102-4150 A]{\scalebox{0.5}{\subimport{Plots/Spectral}{H6-210808-1218-020um-300ms-4102-4150A-0.2A-lightsOff.csv.pgf}}}
+\end{figure}
 
 \end{document}
