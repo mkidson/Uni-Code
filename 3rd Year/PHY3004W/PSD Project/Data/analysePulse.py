@@ -1,5 +1,5 @@
 # 02-07-2021
-# Methods for digita PSD 
+# Methods for digital PSD 
 # Miles Kidson KDSMIL001
 
 import numpy as np
@@ -11,7 +11,7 @@ from scipy.signal import residue
 from matplotlib import pyplot as plt, colors
 
 
-def CCM(pulse, t):
+def CCM(pulse, t, short=26):
     """
     Integrates over "short" and "long" windows for a pulse and returns a discrimination parameter given by PSD_{CCM} = I_{long}/I_{short}. This is the Charge Comparison Method. 
 
@@ -34,12 +34,12 @@ def CCM(pulse, t):
     # Finds the index of the starts and ends of the integration windows. The values it shifts by need to be optimised in some way. I think this method effectively centers every event on the peak of the pulse. Not sure if that's correct and if it's correct not sure if that's what we want
     intervalStart = maxIndex - (round(10/sampleToTime))
     intervalLongEnd = maxIndex + (round(100/sampleToTime))
-    intervalShortEnd = maxIndex + (round(25/sampleToTime))
+    intervalShortEnd = maxIndex + (round(short/sampleToTime))
     # Integrates the pulse from the start to the long or short end
     longIntegral = np.trapz(pulse[intervalStart:intervalLongEnd], t[intervalStart:intervalLongEnd])
     shortIntegral = np.trapz(pulse[intervalStart:intervalShortEnd], t[intervalStart:intervalShortEnd])
 
-    return shortIntegral/longIntegral
+    return shortIntegral/longIntegral, max(pulse), longIntegral
 
 
 def PadeLaplace(pulse, t, nDecays=2):
@@ -129,3 +129,6 @@ def PadeLaplace(pulse, t, nDecays=2):
     # print(residuesMain[-1])
     return residuesMain[-1], polesMain[-1], n-1#, fit, t
     # return fit
+
+def gaussian(x, mu, sigma, A):
+    return (A*(1/(sigma*np.sqrt(2*np.pi)))*np.exp(-(1/2)*((x-mu)/sigma)**2))
