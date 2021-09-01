@@ -168,7 +168,7 @@ xModelP = np.linspace(histBins[cutoff], histBins[-1], 1000)
 # print(p0P)
 # print(poptP)
 
-# FoM = (poptP[0]-poptP[1])/(poptP[1]*2.35 + poptN[1]*2.35)
+FoM = (poptP[0]-poptP[1])/(poptP[1]*2.35 + poptN[1]*2.35)
 # FoMs.append(FoM)
 # print(ps, FoM)
 
