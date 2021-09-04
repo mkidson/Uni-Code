@@ -109,7 +109,19 @@ print(f'c = {c} +/- {uc}\nm = {m} +/- {um}')
 print(f'R-Squared: {R2}')
 plt.errorbar(fitX, fitY, yerr=fitYErr, fmt='.')
 plt.plot(np.sort(fitX), m*np.sort(fitX)+c)
-plt.show()
+# plt.show()
 
 # blue: m = 0.3488421803288909 +/- 0.011242627314320509, c = -0.0001325744712578748 +/- 0.010195728439634526, R2 = 0.9996883132391094
 # red: m = 0.34919335675192653 +/- 0.01148026252472518, c = c = -0.00013939501839624682 +/- 0.010324622974044462, R2 = 0.9999890226156749
+
+blueCorrected = (blueMus+0.0001325744712578748)/0.3488421803288909
+blueCorrectedUn = blueCorrected*sqrt((sqrt(blueSigmas**2+0.010195728439634526**2)/(blueMus+0.0001325744712578748))**2 + (0.011242627314320509/0.3488421803288909)**2)
+redCorrected = (redMus+0.00013939501839624682)/0.34919335675192653
+redCorrectedUn = redCorrected*sqrt((sqrt(redSigmas**2+0.010324622974044462**2)/(redMus+0.00013939501839624682))**2 + (0.01148026252472518/0.34919335675192653)**2)
+
+
+print(blueCorrected)
+print(blueCorrectedUn)
+print(redCorrected)
+print(redCorrectedUn)
+print(fitX)
