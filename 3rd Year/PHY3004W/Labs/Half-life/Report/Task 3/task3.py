@@ -4,7 +4,7 @@ from scipy.optimize import curve_fit
 from numpy import cos, pi, sin, sqrt, exp, random
 import matplotlib, scipy.signal
 np.set_printoptions(threshold=np.inf)
-matplotlib.use('pgf')
+# matplotlib.use('pgf')
 matplotlib.rcParams.update({
     'pgf.texsystem': 'pdflatex',
     'font.family': 'sans-serif',
@@ -75,8 +75,8 @@ ax.text(data[0][583], 0.105, '1778.987 keV photopeak', rotation='vertical', hori
 ax.grid(color='#CCCCCC', linestyle=':')
 ax.legend()
 
-# plt.show()
-plt.savefig(r'3rd Year\PHY3004W\Labs\Half-life\Report\Plots\28AlSpectrum.pgf')
+plt.show()
+# plt.savefig(r'3rd Year\PHY3004W\Labs\Half-life\Report\Plots\28AlSpectrum.pgf')
 
 # endregion
 

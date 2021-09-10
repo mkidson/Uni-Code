@@ -1,0 +1,76 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in, top=0.3in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage[separate-uncertainty=true, group-digits=false]{siunitx}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,subfig,caption,import,wrapfig,gensymb}
+\usepackage[version=4]{mhchem}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\captionsetup{font=small, belowskip=0pt}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+
+\begin{center}
+    {\huge Gamma-Gamma coincidence}\\
+    \vspace{0.2in}
+    \textbf{KDSMIL001 | September 2021}
+    
+    \section*{Abstract}\label{sec:Abstract}
+    
+\end{center}
+
+\section{Introduction}\label{sec:Introduction}
+\par When a positron is emitted in a nuclear decay, it will almost immediately annihilate with an electron either in the surrounding material or in the air surrounding the source of the radiation. When this happens, two photons of energy 511 keV will be emitted and travel in opposite directions. If two scintillation detectors are positioned on either side of the radiation source, some of the signals received will correspond to these 511 keV gamma rays. When gamma rays of this energy are detected at the same time in both detectors, we can be reasonably sure that these came from the same positron-electron annihilation event. 
+\par These coincident gamma rays can be used to investigate some properties of the radiation sources, the detectors, and positron-electron annihilation itself. The radioactive sources used were \ce{^{22}Na} and \ce{^{60}Co}.
+
+\section{Method}\label{sec:Method}
+\par The scintillator detectors used were Rexon 50 mm x 50 mm NaI(Tl) scintillator detectors. They were powered by Ortec 556 HV power supplies and each output their signal through an Ortec 113 preamplifier (PA), an Ortec 590A amplifier (AMP)/timing single channel analyser (TSCA), and an Ortec 427A delay amplifier (DA). Also used, as described later, were an Ortec 416A gate and delay generator (GDG), an Ortec 418A universal coincidence (UCO) unit, and an Ortec 974 quad counter/timer. Lastly the dat was captured by a UCS30 multichannel analyser (MCA).
+\par The two detectors were called red and blue, and will be distinguished as such going forward.
+
+\subsection{Coincident gamma spectra}
+\par In order to work out which of the gamma rays detected were coincident, the signal from the detectors needs to be gated so that only data that arrives at the same time is counted. This was done using the TSCA and the GDG. When the TSCA receives a pulse from the detector, it outputs a logic pulse to the GDG, which sends a signal to the MCA and tells it to capture the incoming signal from the detector. The TSCA has a window that can be configured so it only sends a logic pulse only when the incoming pulse is within a certain voltage range.
+\par Firstly, only the blue detector was used. For both the \ce{^{22}Na} and \ce{^{60}Co} sources, an energy spectrum was captured once with the TSCA window fully open and once with the window centred on a photopeak (511 keV for the \ce{^{22}Na} and 1332 keV for the \ce{^{60}Co}). The red detector was then included, where the signal was gated by the TSCA for the blue detector. One spectrum was captured for each source, where the window was again centred on the respective photopeaks.
+
+\subsection{Angular correlation}
+\par The angular correlation function $P(\theta)$ of two coincident gamma rays is defined as the relative probability of those two rays being emitted at a relative angle $\theta$. To measure this probability, the set-up was modified to count individual events from each detector, as well as coincident events. This was done using the UCO unit and the quad counter/timer. The TSCA unit was also included so that the incoming signals could be restricted to a specific voltage range.
+\par Data was taken using \ce{^{22}Na} for a range of relative angles, where $\theta=0\degree$ is how the detectors were configured before, and $\theta\pm90\degree$ is with the detectors facing perpendicular to each other. 3 runs were performed. For the first run, each detector was placed 15 cm from the source and the TSCA windows were set wide open. With the same distances, the second run had the windows be focused on the 511 keV peaks. Finally the third run had the blue detector placed 30 cm away and both windows set wide open. 
+\par Each of these runs were made with 30 s for each angle increment, and the increment was smaller the closer the angle was to $0\degree$ in order to get a better resolution for the correlation function at that point.
+
+\subsection{Absolute efficiency determination}
+\par One thing that can be determined is the absolute efficiency of one of the detectors for detecting a 511 keV photon moving axially through the detector. To do this, the red detector was placed 8 cm from the \ce{^{22}Na} source, and the blue detector placed 24 cm away. Using the UCO unit and quad counter as before, with the TSCA restricting the voltage window, data was taken in three runs.
+\par First both windows were set wide open, then both set tight on the 511 keV photopeak, then tight on the 511 keV photopeak for the blue detector, and wide open for the red. Each of these runs lasted 600 s.
+
+\subsection{Activity of the \ce{^{60}Co} source}
+\par Due to the nature of the decay of \ce{^{60}Co}, we know that if a 1332 keV gamma ray is emitted, there must have been a 1173 keV gamma ray emitted at roughly the same time. Since those are the most likely gammas from this decay, and by quite some margin, it's reasonable to assume that all decays result in these two gammas. Assuming that these gammas are emitted isotropically, we can work out the activity of the \ce{^{60}Co} source. 
+\par The details of this calculation will be shown later but the data taken to make the calculation were simply one run of 1200 s with both detectors 15 cm away from the source, using the UCO, counter, and TSCA set-up as before. Both TSCA windows were set wide open as we only expect the two most likely gammas to contribute in any meaningful way, and events were counted for both detectors as well as the coincidence events
+
+\section{Results}\label{sec:Results}
+\subsection{Coincident gamma spectra}
+
+\begin{figure}[H]
+    \begin{center}
+       \subimport{Plots}{60Co_Gated.pgf}
+       \caption{caption}
+       \label{label}
+    \end{center}
+\end{figure}
+
+
+
+\end{document}
