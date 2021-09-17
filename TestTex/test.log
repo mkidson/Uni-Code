@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  16 SEP 2021 15:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  13 SEP 2021 16:46
 entering extended mode
-**"d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Gamma Gamma/Report/KDSMIL001_GammaGamma.tex"
-(d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/Gamma Gamma/Report/KDSMIL001_GammaGamma.tex
+**"d:/Git Repositories/Uni-Code/TestTex/test.tex"
+(d:/Git Repositories/Uni-Code/TestTex/test.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-05-11> (D:\Program Files\MikTeX\tex/latex/base\article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
-(D:\Program Files\MikTeX\tex/latex/base\size11.clo
-File: size11.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+(D:\Program Files\MikTeX\tex/latex/base\size10.clo
+File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
 \c@part=\count179
 \c@section=\count180
@@ -773,10 +773,11 @@ Package: import 2020/04/01  v 6.2
 \WF@box=\box84
 \WF@everypar=\toks44
 Package: wrapfig 2003/01/31  v 3.6
-) (D:\Program Files\MikTeX\tex/latex/base\textcomp.sty
-Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-) (D:\Program Files\MikTeX\tex/latex/was\gensymb.sty
-Package: gensymb 2003/07/02 v1.0 (WaS)
+) (D:\Program Files\MikTeX\tex/latex/simpsons\simpsons.sty
+Package: simpsons 
+) (D:\Program Files\MikTeX\tex/latex/jknappen\mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
 ) (D:\Program Files\MikTeX\tex/latex/mhchem\mhchem.sty
 Package: mhchem 2018/06/22 v4.08 for typesetting chemical formulae
  (D:\Program Files\MikTeX\tex/latex/latex-tools\calc.sty
@@ -813,45 +814,33 @@ Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use 
 \mhchem@option@minustextsidebearingleft=\dimen308
 \mhchem@option@minustextsidebearingright=\dimen309
 )
-(D:\Program Files\MikTeX\tex/latex/cleveref\cleveref.sty
-Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
-Package cleveref Info: `hyperref' support loaded on input line 2370.
-LaTeX Info: Redefining \cref on input line 2370.
-LaTeX Info: Redefining \Cref on input line 2370.
-LaTeX Info: Redefining \crefrange on input line 2370.
-LaTeX Info: Redefining \Crefrange on input line 2370.
-LaTeX Info: Redefining \cpageref on input line 2370.
-LaTeX Info: Redefining \Cpageref on input line 2370.
-LaTeX Info: Redefining \cpagerefrange on input line 2370.
-LaTeX Info: Redefining \Cpagerefrange on input line 2370.
-LaTeX Info: Redefining \labelcref on input line 2370.
-LaTeX Info: Redefining \labelcpageref on input line 2370.
-Package cleveref Info: `listings' support loaded on input line 3131.
-Package cleveref Info: `subfig' support loaded on input line 3164.
-Package cleveref Info: no abbreviation of names on input line 7852.
-)
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 29.
- (KDSMIL001_GammaGamma.aux)
-\openout1 = `KDSMIL001_GammaGamma.aux'.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 27.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+
+LaTeX Warning: Unused global option(s):
+    [24pt].
+
+(test.aux)
+\openout1 = `test.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -872,12 +861,12 @@ LaTeX Font Info:    ... okay on input line 29.
 * \topmargin=-87.58878pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=11.0pt
+* \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=59.0pt
-* \marginparsep=10.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -887,7 +876,7 @@ LaTeX Font Info:    ... okay on input line 29.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 29.
+Package hyperref Info: Link coloring OFF on input line 27.
 (D:\Program Files\MikTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (D:\Program Files\MikTeX\tex/latex/refcount\refcount.sty
@@ -897,17 +886,17 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count346
 )
-LaTeX Info: Redefining \ref on input line 29.
-LaTeX Info: Redefining \pageref on input line 29.
-LaTeX Info: Redefining \nameref on input line 29.
- (KDSMIL001_GammaGamma.out) (KDSMIL001_GammaGamma.out)
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
+ (test.out) (test.out)
 \@outlinefile=\write6
-\openout6 = `KDSMIL001_GammaGamma.out'.
+\openout6 = `test.out'.
 
  (D:\Program Files\MikTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 29.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 27.
  (D:\Program Files\MikTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count347
@@ -934,113 +923,38 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\symgns@font=\mathgroup6
-LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/cmr/m/n --> TS1/cmr/b/n on input line 29.
-Package gensymb Info: Math companion symbols declared on input line 29.
-LaTeX Info: Redefining \degree on input line 29.
-LaTeX Info: Redefining \celsius on input line 29.
-Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 29.
-LaTeX Info: Redefining \ohm on input line 29.
-Package gensymb Info: Using \textohm for \ohm on input line 29.
-LaTeX Info: Redefining \micro on input line 29.
-Package gensymb Info: Using \textmu for \micro on input line 29.
 
-Package chemgreek Info: Activating mapping `default' on line 29.
+Package chemgreek Info: Activating mapping `default' on line 27.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
 (D:\Program Files\MikTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
  (D:\Program Files\MikTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 27.
+ (D:\Program Files\MikTeX\tex/latex/jknappen\ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
-{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mhchem@cee' on input line 63.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 63.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
-
- []
-
-[2] (Plots/blue_60Co_gated.pgf)
-Overfull \hbox (1.20418pt too wide) in paragraph at lines 1798--76
- [] 
- []
-
-(Plots/blue_22Na_gated.pgf)
-Overfull \hbox (1.20418pt too wide) in paragraph at lines 1308--84
- [] 
- []
-
-[3] (Plots/red_60Co_gated.pgf) (Plots/red_22Na_gated.pgf)
-Overfull \hbox (1.20418pt too wide) in paragraph at lines 1337--100
- [] 
- []
-
-[4] (Plots/angular_1.pgf
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 721.
-
-LaTeX Font Info:    Calculating math sizes for size <16> on input line 1131.
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 1131.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <16> not available
-(Font)              size <17.28> substituted on input line 1131.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 1131.
-
-
-LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 1131.
-
-
-LaTeX Font Warning: Font shape `TS1/cmr/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 1131.
-
-) [5] (Plots/angular_2.pgf) (Plots/angular_3.pgf) [6] [7]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mhchem@cee' on input line 171.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 171.
-
-[8] [9] (KDSMIL001_GammaGamma.aux)
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 1.28pt have occurred.
-
-Package rerunfilecheck Info: File `KDSMIL001_GammaGamma.out' has not changed.
-(rerunfilecheck)             Checksum: F3F3AE73AE1648A28EACC0170856C9D8;1825.
+{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (test.aux)
+Package rerunfilecheck Info: File `test.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 41323 strings out of 479125
- 959183 string characters out of 4612535
- 6504603 words of memory out of 19000000
- 58291 multiletter control sequences out of 15000+600000
- 422770 words of font info for 101 fonts, out of 5000000 for 9000
+ 39451 strings out of 479125
+ 916458 string characters out of 4612535
+ 6276514 words of memory out of 19000000
+ 56501 multiletter control sequences out of 15000+600000
+ 413650 words of font info for 72 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,20n,103p,964b,891s stack positions out of 5000i,500n,10000p,5000000b,80000s
-{D:/Program Files/MikTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sfrm1000.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on KDSMIL001_GammaGamma.pdf (9 pages, 281091 bytes).
+ 99i,5n,103p,816b,723s stack positions out of 5000i,500n,10000p,5000000b,80000s
+ <C:\Users\miles\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/simpsons/dpi900\simpsons.pk><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on test.pdf (1 page, 14977 bytes).
 PDF statistics:
- 237 PDF objects out of 1000 (max. 8388607)
- 40 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 PDF objects out of 1000 (max. 8388607)
+ 2 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

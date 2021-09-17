@@ -1,7 +1,7 @@
-PWD d:\Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Gamma Gamma\Report
+PWD d:\Git Repositories\Uni-Code\TestTex
 INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
-INPUT d:\Git Repositories\Uni-Code\3rd Year\PHY3004W\Labs\Gamma Gamma\Report\KDSMIL001_GammaGamma.tex
-OUTPUT KDSMIL001_GammaGamma.log
+INPUT d:\Git Repositories\Uni-Code\TestTex\test.tex
+OUTPUT test.log
 INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
 INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
 INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
@@ -13,11 +13,10 @@ INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
 INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
 INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
 INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
-INPUT D:\Program Files\MikTeX\tex\latex\base\size11.clo
-INPUT D:\Program Files\MikTeX\tex\latex\base\size11.clo
-INPUT D:\Program Files\MikTeX\tex\latex\base\size11.clo
-INPUT D:\Program Files\MikTeX\tex\latex\base\size11.clo
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr10.tfm
+INPUT D:\Program Files\MikTeX\tex\latex\base\size10.clo
+INPUT D:\Program Files\MikTeX\tex\latex\base\size10.clo
+INPUT D:\Program Files\MikTeX\tex\latex\base\size10.clo
+INPUT D:\Program Files\MikTeX\tex\latex\base\size10.clo
 INPUT D:\Program Files\MikTeX\tex\latex\geometry\geometry.sty
 INPUT D:\Program Files\MikTeX\tex\latex\geometry\geometry.sty
 INPUT D:\Program Files\MikTeX\tex\latex\geometry\geometry.sty
@@ -1034,28 +1033,29 @@ INPUT D:\Program Files\MikTeX\tex\latex\wrapfig\wrapfig.sty
 INPUT D:\Program Files\MikTeX\tex\latex\wrapfig\wrapfig.sty
 INPUT D:\Program Files\MikTeX\tex\latex\wrapfig\wrapfig.sty
 INPUT D:\Program Files\MikTeX\tex\latex\wrapfig\wrapfig.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
-INPUT D:\Program Files\MikTeX\tex\latex\base\textcomp.sty
-INPUT D:\Program Files\MikTeX\tex\latex\was\gensymb.sty
-INPUT D:\Program Files\MikTeX\tex\latex\was\gensymb.sty
-INPUT D:\Program Files\MikTeX\tex\latex\was\gensymb.sty
-INPUT D:\Program Files\MikTeX\tex\latex\was\gensymb.sty
-INPUT D:\Program Files\MikTeX\tex\latex\was\gensymb.sty
-INPUT D:\Program Files\MikTeX\tex\latex\was\gensymb.sty
-INPUT D:\Program Files\MikTeX\tex\latex\was\gensymb.sty
-INPUT D:\Program Files\MikTeX\tex\latex\was\gensymb.sty
-INPUT D:\Program Files\MikTeX\tex\latex\was\gensymb.sty
-INPUT D:\Program Files\MikTeX\tex\latex\was\gensymb.sty
-INPUT D:\Program Files\MikTeX\tex\latex\was\gensymb.sty
+INPUT D:\Program Files\MikTeX\tex\latex\simpsons\simpsons.sty
+INPUT D:\Program Files\MikTeX\tex\latex\simpsons\simpsons.sty
+INPUT D:\Program Files\MikTeX\tex\latex\simpsons\simpsons.sty
+INPUT D:\Program Files\MikTeX\tex\latex\simpsons\simpsons.sty
+INPUT D:\Program Files\MikTeX\tex\latex\simpsons\simpsons.sty
+INPUT D:\Program Files\MikTeX\tex\latex\simpsons\simpsons.sty
+INPUT D:\Program Files\MikTeX\tex\latex\simpsons\simpsons.sty
+INPUT D:\Program Files\MikTeX\tex\latex\simpsons\simpsons.sty
+INPUT D:\Program Files\MikTeX\tex\latex\simpsons\simpsons.sty
+INPUT D:\Program Files\MikTeX\tex\latex\simpsons\simpsons.sty
+INPUT D:\Program Files\MikTeX\tex\latex\simpsons\simpsons.sty
+INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\fonts\tfm\public\simpsons\simpsons.tfm
+INPUT D:\Program Files\MikTeX\tex\latex\jknappen\mathrsfs.sty
+INPUT D:\Program Files\MikTeX\tex\latex\jknappen\mathrsfs.sty
+INPUT D:\Program Files\MikTeX\tex\latex\jknappen\mathrsfs.sty
+INPUT D:\Program Files\MikTeX\tex\latex\jknappen\mathrsfs.sty
+INPUT D:\Program Files\MikTeX\tex\latex\jknappen\mathrsfs.sty
+INPUT D:\Program Files\MikTeX\tex\latex\jknappen\mathrsfs.sty
+INPUT D:\Program Files\MikTeX\tex\latex\jknappen\mathrsfs.sty
+INPUT D:\Program Files\MikTeX\tex\latex\jknappen\mathrsfs.sty
+INPUT D:\Program Files\MikTeX\tex\latex\jknappen\mathrsfs.sty
+INPUT D:\Program Files\MikTeX\tex\latex\jknappen\mathrsfs.sty
+INPUT D:\Program Files\MikTeX\tex\latex\jknappen\mathrsfs.sty
 INPUT D:\Program Files\MikTeX\tex\latex\mhchem\mhchem.sty
 INPUT D:\Program Files\MikTeX\tex\latex\mhchem\mhchem.sty
 INPUT D:\Program Files\MikTeX\tex\latex\mhchem\mhchem.sty
@@ -1096,21 +1096,10 @@ INPUT D:\Program Files\MikTeX\tex\latex\l3kernel\expl3.sty
 INPUT D:\Program Files\MikTeX\tex\latex\l3packages\xparse\xparse.sty
 INPUT D:\Program Files\MikTeX\tex\latex\amsmath\amstext.sty
 INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphics.sty
-INPUT D:\Program Files\MikTeX\tex\latex\cleveref\cleveref.sty
-INPUT D:\Program Files\MikTeX\tex\latex\cleveref\cleveref.sty
-INPUT D:\Program Files\MikTeX\tex\latex\cleveref\cleveref.sty
-INPUT D:\Program Files\MikTeX\tex\latex\cleveref\cleveref.sty
-INPUT D:\Program Files\MikTeX\tex\latex\cleveref\cleveref.sty
-INPUT D:\Program Files\MikTeX\tex\latex\cleveref\cleveref.sty
-INPUT D:\Program Files\MikTeX\tex\latex\cleveref\cleveref.sty
-INPUT D:\Program Files\MikTeX\tex\latex\cleveref\cleveref.sty
-INPUT D:\Program Files\MikTeX\tex\latex\cleveref\cleveref.sty
-INPUT D:\Program Files\MikTeX\tex\latex\cleveref\cleveref.sty
-INPUT D:\Program Files\MikTeX\tex\latex\cleveref\cleveref.sty
-INPUT .\KDSMIL001_GammaGamma.aux
-INPUT KDSMIL001_GammaGamma.aux
-INPUT KDSMIL001_GammaGamma.aux
-OUTPUT KDSMIL001_GammaGamma.aux
+INPUT .\test.aux
+INPUT test.aux
+INPUT test.aux
+OUTPUT test.aux
 INPUT D:\Program Files\MikTeX\tex\latex\hyperref\nameref.sty
 INPUT D:\Program Files\MikTeX\tex\latex\hyperref\nameref.sty
 INPUT D:\Program Files\MikTeX\tex\latex\hyperref\nameref.sty
@@ -1148,18 +1137,18 @@ INPUT D:\Program Files\MikTeX\tex\generic\gettitlestring\gettitlestring.sty
 INPUT D:\Program Files\MikTeX\tex\generic\gettitlestring\gettitlestring.sty
 INPUT D:\Program Files\MikTeX\tex\latex\kvoptions\kvoptions.sty
 INPUT D:\Program Files\MikTeX\tex\generic\ltxcmds\ltxcmds.sty
-INPUT .\KDSMIL001_GammaGamma.out
-INPUT KDSMIL001_GammaGamma.out
-INPUT .\KDSMIL001_GammaGamma.out
-INPUT KDSMIL001_GammaGamma.out
-INPUT .\KDSMIL001_GammaGamma.out
-INPUT KDSMIL001_GammaGamma.out
-INPUT .\KDSMIL001_GammaGamma.out
-INPUT KDSMIL001_GammaGamma.out
-OUTPUT KDSMIL001_GammaGamma.pdf
-INPUT .\KDSMIL001_GammaGamma.out
-INPUT .\KDSMIL001_GammaGamma.out
-OUTPUT KDSMIL001_GammaGamma.out
+INPUT .\test.out
+INPUT test.out
+INPUT .\test.out
+INPUT test.out
+INPUT .\test.out
+INPUT test.out
+INPUT .\test.out
+INPUT test.out
+INPUT .\test.out
+INPUT .\test.out
+OUTPUT test.out
+OUTPUT test.pdf
 INPUT D:\Program Files\MikTeX\tex\latex\translations\dicts\translations-basic-dictionary-english.trsl
 INPUT D:\Program Files\MikTeX\tex\latex\translations\dicts\translations-basic-dictionary-english.trsl
 INPUT D:\Program Files\MikTeX\tex\latex\translations\dicts\translations-basic-dictionary-english.trsl
@@ -1183,159 +1172,69 @@ INPUT D:\Program Files\MikTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT D:\Program Files\MikTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT D:\Program Files\MikTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT D:\Program Files\MikTeX\tex\latex\00miktex\epstopdf-sys.cfg
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr8.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr6.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmmi10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmmi8.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmmi6.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmsy8.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmsy6.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT D:\Program Files\MikTeX\tex\latex\amsfonts\umsa.fd
-INPUT D:\Program Files\MikTeX\tex\latex\amsfonts\umsa.fd
-INPUT D:\Program Files\MikTeX\tex\latex\amsfonts\umsa.fd
-INPUT D:\Program Files\MikTeX\tex\latex\amsfonts\umsa.fd
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
-INPUT D:\Program Files\MikTeX\tex\latex\amsfonts\umsb.fd
-INPUT D:\Program Files\MikTeX\tex\latex\amsfonts\umsb.fd
-INPUT D:\Program Files\MikTeX\tex\latex\amsfonts\umsb.fd
-INPUT D:\Program Files\MikTeX\tex\latex\amsfonts\umsb.fd
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm0800.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm0600.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss8.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss8.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt8.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt8.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr17.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr12.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr12.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmmi12.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss12.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt12.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx8.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx6.tfm
-INPUT .\Plots\blue_60Co_gated.pgf
-INPUT Plots\blue_60Co_gated.pgf
-INPUT .\Plots\blue_60Co_gated.pgf
-INPUT Plots\blue_60Co_gated.pgf
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss12.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss8.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss8.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt8.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt8.tfm
+INPUT D:\Program Files\MikTeX\tex\latex\amsfonts\umsa.fd
+INPUT D:\Program Files\MikTeX\tex\latex\amsfonts\umsa.fd
+INPUT D:\Program Files\MikTeX\tex\latex\amsfonts\umsa.fd
+INPUT D:\Program Files\MikTeX\tex\latex\amsfonts\umsa.fd
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
+INPUT D:\Program Files\MikTeX\tex\latex\amsfonts\umsb.fd
+INPUT D:\Program Files\MikTeX\tex\latex\amsfonts\umsb.fd
+INPUT D:\Program Files\MikTeX\tex\latex\amsfonts\umsb.fd
+INPUT D:\Program Files\MikTeX\tex\latex\amsfonts\umsb.fd
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm0700.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm0500.tfm
-INPUT .\Plots\blue_22Na_gated.pgf
-INPUT Plots\blue_22Na_gated.pgf
-INPUT .\Plots\blue_22Na_gated.pgf
-INPUT Plots\blue_22Na_gated.pgf
-INPUT .\Plots\red_60Co_gated.pgf
-INPUT Plots\red_60Co_gated.pgf
-INPUT .\Plots\red_60Co_gated.pgf
-INPUT Plots\red_60Co_gated.pgf
-INPUT .\Plots\red_22Na_gated.pgf
-INPUT Plots\red_22Na_gated.pgf
-INPUT .\Plots\red_22Na_gated.pgf
-INPUT Plots\red_22Na_gated.pgf
-INPUT .\Plots\angular_1.pgf
-INPUT Plots\angular_1.pgf
-INPUT .\Plots\angular_1.pgf
-INPUT Plots\angular_1.pgf
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss17.tfm
+INPUT D:\Program Files\MikTeX\tex\latex\jknappen\ursfs.fd
+INPUT D:\Program Files\MikTeX\tex\latex\jknappen\ursfs.fd
+INPUT D:\Program Files\MikTeX\tex\latex\jknappen\ursfs.fd
+INPUT D:\Program Files\MikTeX\tex\latex\jknappen\ursfs.fd
+INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\fonts\tfm\public\rsfs\rsfs10.tfm
+INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\fonts\tfm\public\rsfs\rsfs7.tfm
+INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\fonts\tfm\public\rsfs\rsfs5.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss10.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss8.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss8.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt10.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt8.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt8.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr17.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss17.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss17.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss17.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt12.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt12.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt12.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm1728.tfm
-INPUT .\Plots\angular_2.pgf
-INPUT Plots\angular_2.pgf
-INPUT .\Plots\angular_2.pgf
-INPUT Plots\angular_2.pgf
-INPUT .\Plots\angular_3.pgf
-INPUT Plots\angular_3.pgf
-INPUT .\Plots\angular_3.pgf
-INPUT Plots\angular_3.pgf
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmti10.tfm
-INPUT KDSMIL001_GammaGamma.aux
-INPUT .\KDSMIL001_GammaGamma.out
-INPUT .\KDSMIL001_GammaGamma.out
-INPUT D:\Program Files\MikTeX\fonts\enc\dvips\cm-super\cm-super-ts1.enc
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx8.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx8.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\fonts\tfm\public\rsfs\rsfs10.tfm
+INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\fonts\tfm\public\rsfs\rsfs10.tfm
+INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\fonts\tfm\public\rsfs\rsfs10.tfm
+INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
+INPUT test.aux
+INPUT .\test.out
+INPUT .\test.out
+INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\simpsons\dpi900\simpsons.pk
+INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\simpsons\dpi900\simpsons.pk
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmss12.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmss12.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmss17.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmss17.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\cm-super\sfrm1000.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\cm-super\sfrm1000.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\cm-super\sfrm1095.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\cm-super\sfrm1095.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\rsfs\rsfs10.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\rsfs\rsfs10.pfb

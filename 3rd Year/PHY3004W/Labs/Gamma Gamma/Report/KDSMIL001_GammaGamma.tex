@@ -4,8 +4,10 @@
 \usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
 \usepackage[separate-uncertainty=true, group-digits=false]{siunitx}
 \usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
-\usepackage{listings,xcolor,subfig,caption,import,wrapfig,gensymb}
+\usepackage{listings,xcolor,subfig,caption,import,wrapfig,textcomp,gensymb}
 \usepackage[version=4]{mhchem}
+\usepackage[noabbrev]{cleveref}
+\newcommand{\creflastconjunction}{, and\nobreakspace}
 \numberwithin{equation}{section}
 \numberwithin{figure}{section}
 \numberwithin{table}{section}
@@ -32,44 +34,173 @@
     \textbf{KDSMIL001 | September 2021}
     
     \section*{Abstract}\label{sec:Abstract}
+    In this report we investigate coincident gamma rays from two radionuclide sources: \ce{^{22}Na} and \ce{^{60}Co}. We find that for \ce{^{22}Na}, coincident gammas are emitted in opposite directions far more than for \ce{^{60}Co}. This is expected given the nature of the creation of these gammas. We determine the efficiency of one of our detectors for detecting a 511 keV gamma ray passing axially through the detector. Finally we find the activity of the \ce{^{60}Co} source.
     
 \end{center}
 
 \section{Introduction}\label{sec:Introduction}
-\par When a positron is emitted in a nuclear decay, it will almost immediately annihilate with an electron either in the surrounding material or in the air surrounding the source of the radiation. When this happens, two photons of energy 511 keV will be emitted and travel in opposite directions. If two scintillation detectors are positioned on either side of the radiation source, some of the signals received will correspond to these 511 keV gamma rays. When gamma rays of this energy are detected at the same time in both detectors, we can be reasonably sure that these came from the same positron-electron annihilation event. 
-\par These coincident gamma rays can be used to investigate some properties of the radiation sources, the detectors, and positron-electron annihilation itself. The radioactive sources used were \ce{^{22}Na} and \ce{^{60}Co}.
+\par When a positron is emitted in a nuclear decay, it will almost immediately annihilate with an electron either in the surrounding material or in the air surrounding the source of the radiation. When this happens, two photons of energy 511 keV will be emitted and travel in opposite directions. If two scintillation detectors are positioned on either side of the radiation source, some of the signals received will correspond to these 511 keV gamma rays. When gamma rays of this energy are detected at the same time in both detectors, we can be reasonably sure that these came from the same positron-electron annihilation event. \ce{^{22}Na} decays by $\beta^+$ decay, resulting in a positron \cite{22NaDecay}. 
+\par \ce{^{60}Co} decays by $\beta^-$ decay and thus does not result in these gamma rays. It does, however, result in two gammas of different energies (1173 and 1332 keV), emitted isotropically. 
+\par These coincident gamma rays can be used to investigate some properties of the radiation sources, the detectors, and positron-electron annihilation itself. 
 
 \section{Method}\label{sec:Method}
-\par The scintillator detectors used were Rexon 50 mm x 50 mm NaI(Tl) scintillator detectors. They were powered by Ortec 556 HV power supplies and each output their signal through an Ortec 113 preamplifier (PA), an Ortec 590A amplifier (AMP)/timing single channel analyser (TSCA), and an Ortec 427A delay amplifier (DA). Also used, as described later, were an Ortec 416A gate and delay generator (GDG), an Ortec 418A universal coincidence (UCO) unit, and an Ortec 974 quad counter/timer. Lastly the dat was captured by a UCS30 multichannel analyser (MCA).
-\par The two detectors were called red and blue, and will be distinguished as such going forward.
+\par The scintillator detectors used were Rexon 50 mm x 50 mm NaI(Tl) scintillator detectors. They were powered by Ortec 556 HV power supplies and each output their signal through an Ortec 113 preamplifier (PA), an Ortec 590A amplifier (AMP)/timing single channel analyser (TSCA), and an Ortec 427A delay amplifier (DA). Also used, as described later, were an Ortec 416A gate and delay generator (GDG), an Ortec 418A universal coincidence (UCO) unit, and an Ortec 974 quad counter/timer. Lastly the data was captured by a UCS30 multichannel analyser (MCA).
+\par The two detectors were called red and blue, and will be distinguished as such going forward. The detectors were calibrated for energy using \ce{^{22}Na}, \ce{^60Co}, and \ce{^{137}Cs}. The channel number of their photopeaks were estimated and a weighted linear fit was performed to find calibration parameters. The data presented in this report is all after calibration. 
 
 \subsection{Coincident gamma spectra}
-\par In order to work out which of the gamma rays detected were coincident, the signal from the detectors needs to be gated so that only data that arrives at the same time is counted. This was done using the TSCA and the GDG. When the TSCA receives a pulse from the detector, it outputs a logic pulse to the GDG, which sends a signal to the MCA and tells it to capture the incoming signal from the detector. The TSCA has a window that can be configured so it only sends a logic pulse only when the incoming pulse is within a certain voltage range.
-\par Firstly, only the blue detector was used. For both the \ce{^{22}Na} and \ce{^{60}Co} sources, an energy spectrum was captured once with the TSCA window fully open and once with the window centred on a photopeak (511 keV for the \ce{^{22}Na} and 1332 keV for the \ce{^{60}Co}). The red detector was then included, where the signal was gated by the TSCA for the blue detector. One spectrum was captured for each source, where the window was again centred on the respective photopeaks.
+\par In order to work out which of the gamma rays detected were coincident, the signal from the detectors needs to be gated so that only data that arrives at the same time is counted. This was done using the TSCA and the GDG. When the TSCA receives a pulse from the detector, it outputs a logic pulse to the GDG, which sends a signal to the MCA and tells it to capture the incoming signal from the detector. The TSCA has a window that can be configured so it only sends a logic pulse when the incoming pulse is within a certain voltage range.
+\par Firstly, only the blue detector was used. For both the \ce{^{22}Na} and \ce{^{60}Co} sources, an energy spectrum was captured once with the TSCA window fully open and once with the window centred on a specific gamma energy (511 keV for the \ce{^{22}Na} and 1332 keV for the \ce{^{60}Co}). The red detector was then included, where the signal was gated by the TSCA for the blue detector. One spectrum was captured for each source, where the window was again centred on the respective photopeaks.
 
 \subsection{Angular correlation}
 \par The angular correlation function $P(\theta)$ of two coincident gamma rays is defined as the relative probability of those two rays being emitted at a relative angle $\theta$. To measure this probability, the set-up was modified to count individual events from each detector, as well as coincident events. This was done using the UCO unit and the quad counter/timer. The TSCA unit was also included so that the incoming signals could be restricted to a specific voltage range.
-\par Data was taken using \ce{^{22}Na} for a range of relative angles, where $\theta=0\degree$ is how the detectors were configured before, and $\theta\pm90\degree$ is with the detectors facing perpendicular to each other. 3 runs were performed. For the first run, each detector was placed 15 cm from the source and the TSCA windows were set wide open. With the same distances, the second run had the windows be focused on the 511 keV peaks. Finally the third run had the blue detector placed 30 cm away and both windows set wide open. 
-\par Each of these runs were made with 30 s for each angle increment, and the increment was smaller the closer the angle was to $0\degree$ in order to get a better resolution for the correlation function at that point.
+\par Data was taken using \ce{^{22}Na} for a range of relative angles, where $\theta=\ang{0}$ is how the detectors were configured before, and $\theta\pm\ang{90}$ is with the detectors facing perpendicular to each other. 3 runs were performed. For the first run, each detector was placed 15 cm from the source and the TSCA windows were set wide open. With the same distances, the second run had the windows centred tightly on the 511 keV peaks. Finally the third run had the blue detector placed 30 cm away and both windows set wide open. 
+\par Data was taken for 30 s for each angle increment, and the increment was smaller the closer the angle was to $\ang{0}$ in order to get a better resolution for the correlation function at that point.
 
-\subsection{Absolute efficiency determination}
-\par One thing that can be determined is the absolute efficiency of one of the detectors for detecting a 511 keV photon moving axially through the detector. To do this, the red detector was placed 8 cm from the \ce{^{22}Na} source, and the blue detector placed 24 cm away. Using the UCO unit and quad counter as before, with the TSCA restricting the voltage window, data was taken in three runs.
-\par First both windows were set wide open, then both set tight on the 511 keV photopeak, then tight on the 511 keV photopeak for the blue detector, and wide open for the red. Each of these runs lasted 600 s.
+\subsection{Absolute efficiency}
+\par The absolute efficiency of one of the detectors for detecting a 511 keV photon moving axially through the detector can be determined. To do this, the red detector was placed 8 cm from the \ce{^{22}Na} source, and the blue detector placed 24 cm away. Using the UCO unit and quad counter as before, with the TSCA restricting the voltage window, data was taken in three runs.
+\par First both windows were set wide open, then both centred tight on the 511 keV photopeak, then tight on the 511 keV photopeak for the blue detector, and wide open for the red. Each of these runs lasted 600 s.
 
 \subsection{Activity of the \ce{^{60}Co} source}
-\par Due to the nature of the decay of \ce{^{60}Co}, we know that if a 1332 keV gamma ray is emitted, there must have been a 1173 keV gamma ray emitted at roughly the same time. Since those are the most likely gammas from this decay, and by quite some margin, it's reasonable to assume that all decays result in these two gammas. Assuming that these gammas are emitted isotropically, we can work out the activity of the \ce{^{60}Co} source. 
-\par The details of this calculation will be shown later but the data taken to make the calculation were simply one run of 1200 s with both detectors 15 cm away from the source, using the UCO, counter, and TSCA set-up as before. Both TSCA windows were set wide open as we only expect the two most likely gammas to contribute in any meaningful way, and events were counted for both detectors as well as the coincidence events
+\par Due to the nature of the decay of \ce{^{60}Co}, we know that if a 1332 keV gamma ray is emitted, there must have been a 1173 keV gamma ray emitted at the same time \cite{60CoDecay}. Since those are the most likely gammas from this decay, and by quite some margin, it's reasonable to assume that all decays result in these two gammas. Assuming that these gammas are emitted isotropically, we can work out the activity of the \ce{^{60}Co} source. 
+\par The details of this calculation will be shown later but the data taken to make the calculation were simply one run of 1200 s with both detectors 15 cm away from the source, using the UCO, counter, and TSCA set-up as before. Both TSCA windows were set wide open as we only expect the two most likely gammas to contribute in any meaningful way, and events were counted for both detectors as well as the coincidence events. 
 
-\section{Results}\label{sec:Results}
+\section{Results and Discussion}\label{sec:Results and Discussion}
 \subsection{Coincident gamma spectra}
+\par \Cref{fig:blue_60Co_gated,fig:blue_22Na_gated} show the energy spectra for the gated and effectively ungated signals for both sources. The gated data shows a peak at the expected energy and nothing else. Comparing that to \cref{fig:red_60Co_gated,fig:red_22Na_gated} where the Compton continuum can be seen for both photopeaks, as well as what is likely a double escape peak for the \ce{^{60}Co}, it is clear that a different process is taking place for the two set-ups.\newline
+\par Starting with \cref{fig:red_60Co_gated}, the blue detector is gated on the 1332 keV peak, yet we see the the 1173 keV peak in the spectrum. This makes sense as the 1332 and 1173 keV gamma rays are emitted at the same time since they're part of the same decay chain \cite{60CoDecay}. We also see the Compton continuum for the 1173 keV peak, since not all 1173 keV gammas emitted will be fully detected by the red detector. We don't see much, if any, Compton continuum from the 1332 keV peak as we wouldn't expect 2 1332 keV gammas to be emitted at the same time very often. Clearly it does happen as we see a small peak at the right energy, but it is much smaller than we see in \cref{fig:blue_60Co_gated}. 
+\par Now looking at \cref{fig:red_22Na_gated}, we see the same thing as before, with a well defined photopeak and fairly textbook Compton continuum. The difference is that we see this for the 511 keV peak. This is because the decay results in two 511 keV gammas every time, instead of 2 gammas of different energy. We also see that, with fairly similar run times, the \ce{^{22}Na} has around 20 times the number counts for the main photopeak as \ce{^{60}Co}. This happens because the 511 keV gammas are always emitted in opposite directions, so if one is detected in the blue detector, it's almost 100\% likely that one will be detected in the red, whereas for \ce{^{60}Co}, the directions of the emission of the two gammas are in no way correlated. 
 
 \begin{figure}[H]
     \begin{center}
-       \subimport{Plots}{60Co_Gated.pgf}
-       \caption{caption}
-       \label{label}
+       \subimport{Plots}{blue_60Co_gated.pgf}
+       \caption{The gamma ray energy spectrum for \ce{^{60}Co} from the blue detector. The plot shows the signal when effectively ungated (TSCA window wide open), and when gated (TSCA window centred tightly on the 1332 keV gamma). Note the slight difference in heights of the 1332 keV photopeak due simply to the difference in time spent capturing data: 197 s in the open case, and 157 s in the gated case. The whole captured spectrum isn't shown, only the section with features other than background radiation.}
+       \label{fig:blue_60Co_gated}
     \end{center}
 \end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+       \subimport{Plots}{blue_22Na_gated.pgf}
+       \caption{The gamma ray energy spectrum for \ce{^{22}Na} from the blue detector. The plot shows the signal when effectively ungated (TSCA window wide open), and when gated (TSCA window centred tightly on the 511 keV gamma). Again note the difference in height due to different run times: 2600 s in the open case, and 2092 s in the gated case. The whole captured spectrum isn't shown, only the section with features other than background radiation.}
+       \label{fig:blue_22Na_gated}
+    \end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+       \subimport{Plots}{red_60Co_gated.pgf}
+       \caption{The gamma ray energy spectrum for \ce{^{60}Co} from the red detector, gated by the blue detector. The TSCA window was centred tightly on the 1332 keV gamma. The run time was 6650 s. Note the two peaks at low energy. These might be one double escape peak that is showing up as two, or they are being produced by another process that we are not aware of. The whole captured spectrum isn't shown, only the section with features other than background radiation.}
+       \label{fig:red_60Co_gated}
+    \end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+       \subimport{Plots}{red_22Na_gated.pgf}
+       \caption{The gamma ray energy spectrum for \ce{^{22}Na} from the red detector, gated by the blue detector. The TSCA window was centred tightly on the 511 keV gamma. The run time was 5275 s. The whole captured spectrum isn't shown, only the section with features other than background radiation. }
+       \label{fig:red_22Na_gated}
+    \end{center}
+\end{figure}
+
+\subsection{Angular correlation}
+\par We now examine the angular correlation function of two gamma rays emitted from \ce{^{22}Na}. We expect there to be strong correlation between the 511 keV gammas at $\ang{0}$, and relatively little correlation between any other gammas emitted. \ce{^{22}Na} emits a 1274 keV gamma with 99.94\% intensity \cite{22NaDecay} and this may lead to some background correlations, but as can be seen in \cref{fig:angular_1,,fig:angular_2,,fig:angular_3}, that is negligible compared to the signal from the 511 keV gammas, which are the main contributor in this case. 
+\par Looking now at the line representing the coincident events in \cref{fig:angular_1,,fig:angular_2,,fig:angular_3}, we see that for the two datasets where the detectors are both 15 cm from the source, the data peaks at $\ang{0}$ but doesn't drop to nothing immediately. In fact both decrease somewhat linearly until about $\pm\ang{15}$, where they reach the background level. Doing some basic trigonometry, it's easy to see that the maximum angle at which 511 keV gammas from the same interaction can be incident on both detectors, taking in to account the cross sectional area of the detector faces, is about $\pm\ang{18}$. For the last dataset, where the blue detector was 30 cm from the source, that maximum angle goes down to around $\pm\ang{9}$, and the angle at which the signal drops to zero is about $\pm\ang{6}$. 
+\par One important thing to note is that when the TSCA windows were centred tightly on the 511 keV gammas, the ratio between coincident events and counts on the red detector at $\ang{0}$ actually increased:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c}
+        Figure & $N_{\text{coincident}}/N_{\text{red}}$ \\\hline
+        \ref{fig:angular_1} & \num{0.1907(0.0061)} \\
+        \ref{fig:angular_2} & \num{0.288(0.012)} \\
+        \ref{fig:angular_3} & \num{0.0924(0.0041)} \\
+    \end{tabular}
+    \caption{Ratio between coincident events and counts on the red detector for each angular correlation run at angle $\ang{0}$. These are here just to give an indication of the difference in ratio between set-up, not for any statistical analysis. Uncertainties calculated assuming the counts are Poisson distributed, so their uncertainties are $u(N)=\sqrt{N}$.}
+    \label{tbl:angular ratio}
+\end{table}
+
+\par This difference makes sense as with the TSCA windows tightly centred, it means only gammas of energy 511 keV get through. In terms of properly counting the number of actual coincident events, having both windows centred on 511 keV doesn't do as good a job as possible. As seen in \cref{fig:red_22Na_gated}, if the red detector isn't gated then we would still be able to count those gammas which were 511 keV, but due to the inefficiencies of the detectors, weren't fully absorbed. 
+
+\begin{figure}
+    \begin{center}
+       \scalebox{0.7}{\subimport{Plots}{angular_1.pgf}}
+       \caption{Coincident events as well as individual events from both the blue and red detectors for a range of angles from $\ang{-90}$ to $\ang{90}$, where $\ang{0}$ has both detectors facing each other, with the source in between. The source was \ce{^{22}Na} and data was taken for 30 s for each angle increment. Each detector fed its signal to its TSCA, which had the window wide open, which then sent a signal to the UCO and the counter. Each detector was 15 cm away from the source.}
+       \label{fig:angular_1}
+    \end{center}
+\end{figure}
+
+\begin{figure}
+    \begin{center}
+       \scalebox{0.7}{\subimport{Plots}{angular_2.pgf}}
+       \caption{Coincident events as well as individual events from both the blue and red detectors for a range of angles from $\ang{-90}$ to $\ang{90}$, where $\ang{0}$ has both detectors facing each other, with the source in between. The source was \ce{^{22}Na} and data was taken for 30 s for each angle increment. Each detector fed its signal to its TSCA, which had the window centred tightly on the 511 keV gamma, which then sent a signal to the UCO and the counter. Each detector was 15 cm away from the source. The difference in counts from blue to red in this case could be due to slightly different settings for each TSCA, meaning a wider range of gamma energies were let through for the blue detector.}
+       \label{fig:angular_2}
+    \end{center}
+\end{figure}
+
+\begin{figure}
+    \begin{center}
+       \scalebox{0.7}{\subimport{Plots}{angular_3.pgf}}
+       \caption{Coincident events as well as individual events from both the blue and red detectors for a range of angles from $\ang{-90}$ to $\ang{90}$, where $\ang{0}$ has both detectors facing each other, with the source in between. The source was \ce{^{22}Na} and data was taken for 30 s for each angle increment. Each detector fed its signal to its TSCA, which had the window wide open, which then sent a signal to the UCO and the counter. The red detector was 15 cm away from the source and the blue detector was 30 cm away. Note the decrease in counts from red to blue due to this difference in distance.}
+       \label{fig:angular_3}
+    \end{center}
+\end{figure}
+
+\subsection{Absolute efficiency}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c|c|c}
+        TSCA window settings & $N_{\text{red}}$ & $N_{\text{blue}}$ & $N_{\text{coincident}}$ \\\hline
+        Both wide open & \num{235900(490)} & \num{79100(280)} & \num{12600(110)} \\
+        Both tight on 511 keV & \num{115940(340)} & \num{32440(180)} & \num{7871(89)} \\
+        Blue window tight on 511 keV & \num{258430(510)} & \num{31580(180)} & \num{12240(110)}
+    \end{tabular}
+    \caption{Individual and coincident counts for the red and blue detectors using the \ce{^{22}Na} source. In each run the blue detector was 24 cm from the source while the red detector was 8 cm away and data was taken for 600 s for each. Uncertainties assuming the counts are Poisson distributed: $u(N)=\sqrt{N}$.}
+    \label{tbl:efficiency data}
+\end{table}
+
+\par In order to determine the absolute efficiency of the red detector for detecting a 511 keV gamma moving axially through the detector, we need to know when one \textit{is} moving axially through the detector. The blue detector is three times as far away from the source as the red detector is, so we know that if a 511 keV gamma is detected by the blue detector, then it is highly likely that it was detected by the red detector, since they are emitted in opposite directions as shown above. So if we know that a 511 keV gamma has passed through the blue detector and the set-up detects a coincident event, then we know the red detector detected a 511 keV gamma. Thus the efficiency of the red detector at detecting a 511 keV gamma moving axially through the detector is
+\begin{align}
+    \varepsilon_{\text{red}}(511)&=\frac{N_{\text{coincident}}}{N_{\text{blue}}}\label{eqn:efficiency}\\
+    u(\varepsilon_{\text{red}}(511))&=\varepsilon_{\text{red}}(511)\sqrt{\left(\frac{u(N_{\text{coincident}})}{N_{\text{coincident}}}\right)^2+\left(\frac{u(N_{\text{blue}})}{N_{\text{blue}}}\right)^2}
+    \label{eqn:efficiencyUn}
+\end{align}
+\par The first run in \cref{tbl:efficiency data} is actually not useful to us in this regard. We want to know when a 511 keV gamma is detected in the blue detector and with the TSCA window wide open, there is no way of knowing which gammas are detected. The other two sets are the useful ones, but in different ways. For the second set, with both windows centred tightly on the 511 keV gamma, we are able to find the efficiency of the red detector detecting a 511 keV gamma moving axially through it \textit{and} reporting that gamma as having an energy of 511 keV. This efficiency is $\varepsilon_{\text{red},1}(511)=\num{0.2426(0.0031)}$.
+\par The last set, where only the blue detector is gated and the red reports any gamma incident on it, will give us the efficiency of the red detector detecting a 511 keV gamma moving axially through it, but the energy the detector reports will not necessarily be 511 keV. This is well illustrated in \cref{fig:red_22Na_gated}, where the red detector still detects the gamma, but sometimes it is not fully absorbed due to the inefficiencies of the detector. This efficiency is $\varepsilon_{\text{red},2}(511)=\num{0.3876(0.0041)}$. 
+\par These two efficiencies need to be quoted separately as, in essence, they represent very different things. It comes down to what we accept as the meaning of ``detecting a 511 keV gamma moving through the detector''. We argue that $\varepsilon_{\text{red},2}(511)$ is the correct efficiency as the detector is still detecting the 511 keV gamma, it just doesn't report it as 511 keV, but an argument can be made for the case of $\varepsilon_{\text{red},1}(511)$ so we present both.
+
+\subsection{Activity of the \ce{^{60}Co} source}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c|c|c}
+        TSCA window settings & $N_{\text{red}}$ & $N_{\text{blue}}$ & $N_{\text{coincident}}$ \\\hline
+        Both wide open & \num{231120(480)} & \num{223370(470)} & \num{4582(68)} 
+    \end{tabular}
+    \caption{Individual and coincident counts for the red and blue detectors using the \ce{^{60}Co} source. Each detector was 15 cm from the source and data was taken for 1200 s. Uncertainties assuming the counts are Poisson distributed: $u(N)=\sqrt{N}$.}
+    \label{tbl:activity data}
+\end{table}
+\par \cite{lab manual} gives the activity of the source as $D=\frac{R_1R_2}{R_{\text{co}}}$, so the uncertainty is simply 
+\begin{equation}
+    u(D)=D\sqrt{\left(\frac{u(R_1)}{R_1}\right)^2+\left(\frac{u(R_2)}{R_2}\right)^2+\left(\frac{u(R_{\text{co}})}{R_{\text{co}}}\right)^2}
+\end{equation}
+\par \Cref{tbl:activity data} gives the total counts over 1200 s, so the rate is simply $N/1200$ and the uncertainty is $u(N)/1200$. We find the activity of the \ce{^{60}Co} to be $D=\SI{93.9(1.4)e2}{\becquerel}$. The source is labelled $1\mu$Ci (Jan 2010), which in SI is $\SI{370e2}{\becquerel}$, so the source has reduced in activity by about 3/4 in just under 12 years.
+\par Using the equation $D(t)=D_0e^{-\lambda t}$, where $D(t)$ is the activity after some time t, $D_0$ is the activity at $t=0$, and $\lambda=\frac{\ln(2)}{t_{1/2}}$ is the decay rate, we can find the expected activity of the source after 11 years and 7 months (assuming this data was taken around the start of August). The half-life of \ce{^{60}Co} is \num{1925.28(0.14)} days \cite{60CoDecay}, and using that we find the expected activity to be around $\SI{82.45e2}{\becquerel}$, which is less than the value found above, so the source seems to have decayed less than expected.
+
+\section{Conclusion}\label{sec:Conclusion}
+\par By comparing the energy spectra produced by coincident gammas for two different radionuclide sources, \ce{^{22}Na} and \ce{^{60}Co}, we were able to see the difference in coincident energy spectra when the two gammas are always emitted in opposite directions versus when they are emitted isotropically (\cref{fig:red_22Na_gated,,fig:red_60Co_gated}). We saw an increase of about 20 times in the number of coincident events for the \ce{^{22}Na} source. 
+\par We also found the angular correlation function for coincident gammas from \ce{^{22}Na} to be sharply peaked at $\ang{0}$, which is what we expect given the gammas arise from electron-positron annihilation. 
+\par We determined the efficiency of the red detector for detecting a 511 keV gamma moving axially through the detector and found two values depending on the requirements. If the detector needs to report the gamma as having energy of 511 keV, and not anything lower due to inefficiencies in the detector, then the efficiency is $\varepsilon_{\text{red},1}(511)=\num{0.2426(0.0031)}$. If we include those lower energies then the efficiency is $\varepsilon_{\text{red},2}(511)=\num{0.3876(0.0041)}$.
+\par Lastly we found the activity of the \ce{^{60}Co} source to be $D=\SI{93.9(1.4)e2}{\becquerel}$, which we found to less than expected value given the rated activity on the source in Jan 2010 and the standard decay equation.
+
+
+
+\begin{thebibliography}{9}
+    \bibitem{60CoDecay}
+    E. Browne, J. K. Tuli, Nuclear Data Sheets 114, 1849 (2013)
+    \bibitem{22NaDecay}
+    M. Shamsuzzoha Basunia, Nuclear Data Sheets 127, 69 (2015)
+    \bibitem{lab manual}
+    A. Buffler, UCT Physics, Gamma ray coincidence and angular correlation, (August 2021)
+\end{thebibliography}
 
 
 
