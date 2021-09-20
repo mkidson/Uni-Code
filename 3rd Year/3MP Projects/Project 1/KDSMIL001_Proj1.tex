@@ -1,0 +1,152 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in, top=0.3in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage[separate-uncertainty=true, group-digits=false]{siunitx}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,subfig,caption,import,wrapfig}
+\usepackage[version=4]{mhchem}
+\usepackage[noabbrev]{cleveref}
+\newcommand{\creflastconjunction}{, and\nobreakspace}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\captionsetup{font=small, belowskip=0pt}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+
+\begin{center}
+    {\huge Parametrically Driven Nonlinear Schr\"odinger}\\
+    \vspace{0.2in}
+    \textbf{KDSMIL001 | September 2021}
+
+    \section*{Abstract}\label{sec:Abstract}
+    We attempt to analyse a chain of torsionally coupled pendula driven, parametrically, at the frequency close to double the natural frequency of the pendula. The aim was to find the asymptotic expansion and then simulate the problem in MATLAB and compare the two, but the analysis proved too tough to complete in the time frame and so no results are presented.
+    
+\end{center}
+
+\section{Introduction}\label{sec:Introduction}
+A chain of torsionally coupled pendula driven, parametrically, at the frequency close to double the natural frequency of the pendula is represented by the equation
+\begin{equation}
+    \begin{aligned}
+        \ddot\theta_n+2\lambda\dot\theta_n-&k(\theta_{n+1}-2\theta_n+\theta_{n-1})+\omega^2(t)\sin\theta_n=0\\
+        \omega^2(t)&=1+2\epsilon^2\cos[2(1+\epsilon^2\beta)t]
+    \end{aligned}
+    \label{eqn:chain}
+\end{equation}
+Using the method of multiple scales, we can find an equation for the amplitudes of small amplitude, long wavelength oscillations of this chain. This equation can be analysed using an asymptotic expansion, as well as a numerical scheme in order to compare the two techniques.
+
+\section{Analysis}\label{sec:Analysis}
+We start with \cref{eqn:chain}:
+\begin{align*}
+    \ddot\theta_n+2\lambda\dot\theta_n-&k(\theta_{n+1}-2\theta_n+\theta_{n-1})+\omega^2(t)\sin\theta_n=0\\
+    \omega^2(t)&=1+2\epsilon^2\cos[2(1+\epsilon^2\beta)t]
+\end{align*}
+In order to analyse this, we need it in the form of a continuous PDE in $x$ and $t$. We can start by expanding $\theta{n\pm1}$ in a Taylor series about $\theta_n$, where the spacing between $\theta_n$'s is $h$:
+\begin{align*}
+    \theta_{n+1}&=\theta_n+h\theta_n'+\frac{h^2}{2!}\theta_n''+\dots\\
+    \theta_{n-1}&=\theta_n-h\theta_n'+\frac{h^2}{2!}\theta_n''-\dots\\
+    \implies \theta_{n+1}+\theta_{n-1}&=2\theta_n+h^2\theta_n''+\mathcal{O}(h^4)
+\end{align*}
+So ignoring higher order terms, our equation becomes
+\begin{equation}
+    \ddot\theta(x,t)+2\lambda\dot\theta(x,t)-kh^2\theta''(x,t)+(1+2\epsilon^2\cos[2(1+\epsilon^2\beta)t])\sin(\theta(x,t))=0
+    \label{eqn:continuous PDE}
+\end{equation}
+Let us simplify some things. We define $\tau=(1+\epsilon^2\beta)t$, $\kappa^2=kh^2$, and assuming $\lambda$ is of the order $\epsilon^2$ we say $\lambda=\epsilon^2\gamma$. Putting these into \cref{eqn:continuous PDE} and using the chain rule to get the PDE in terms of $x$ and the new and improved $\tau$ we see
+\begin{align*}
+    &\ddot\theta(x,\tau)+2\epsilon^2\gamma\dot\theta(x,\tau)-\kappa^2\theta''(x,\tau)+(1+2\epsilon^2\cos[2\tau])\sin(\theta(x,\tau))=0\\
+    \implies &\left(\frac{d\tau}{d t}\right)^2\frac{\partial^2}{\partial\tau^2}\theta+2\epsilon^2\gamma\left(\frac{d\tau}{d t}\right)\frac{\partial}{\partial\tau}\theta-\kappa^2\theta''+(1+2\epsilon^2\cos[2\tau])\sin\theta=0\\
+    \implies &\left(1+\epsilon^2\beta\right)^2\frac{\partial^2}{\partial\tau^2}\theta+2\epsilon^2\gamma\left(1+\epsilon^2\beta\right)\frac{\partial}{\partial\tau}\theta-\kappa^2\theta''+(1+2\epsilon^2\cos[2\tau])\sin\theta=0\\
+\end{align*}
+We will use the method of multiple scales to tackle this beast, which requires us to expand $\theta$ in terms of some small quantity, which we will choose to be $\epsilon$. Since we are examining small amplitudes, we assume $\theta$ is small and thus
+\begin{equation}
+    \theta=\epsilon\theta_1+\epsilon^2\theta_3+\epsilon^5\theta_5+\dots
+    \label{eqn:expansion of theta}
+\end{equation}
+We then expand in both the time and space scales, where $\tau$ is the time and $x$ is the space:
+\begin{align*}
+    T_n=\epsilon^n\tau,&\; D_n=\frac{\partial}{\partial T_n}\\
+    \implies\frac{\partial}{\partial\tau}=D_0+\epsilon D_1+\epsilon^2 D_2+\dots,&\; \frac{\partial^2}{\partial\tau^2}=D_0^2+2\epsilon D_0D_1+\epsilon^2(D_1^2+2D_0D_2)+\dots\\
+    X_n=\epsilon^n x,&\; P_n=\frac{\partial}{\partial X_n}\\
+    \implies\frac{\partial}{\partial x}=P_0+\epsilon P_1+\epsilon^2 P_2+\dots,&\; \frac{\partial^2}{\partial x^2}=P_0^2+2\epsilon P_0P_1+\epsilon^2(P_1^2+2P_0P_2)+\dots\\
+\end{align*}
+We can also expand the $\sin\theta$ in its Taylor series:
+\begin{equation*}
+    \sin\theta=\theta-\frac{\theta^3}{3!}+\frac{\theta^5}{5!}+\dots=\epsilon\theta_1+\epsilon^3\theta_3-\frac{\epsilon^3\theta_1^3}{3!}+\mathcal{O}(\epsilon^5)
+\end{equation*}
+All of this leads us to the PDE looking like
+\begin{equation}
+    \begin{aligned}
+        (1+2\epsilon^2\beta+\epsilon^4\beta^2)(D_0^2+2\epsilon D_0D_1+\epsilon^2(D_1^2+2D_0D_2)+\dots)(\epsilon\theta_1+\epsilon^2\theta_3+\dots)\\
+        +2\gamma\epsilon^2(1+\epsilon^2\beta)(D_0+\epsilon D_1+\epsilon^2 D_2+\dots)(\epsilon\theta_1+\epsilon^2\theta_3+\dots)\\
+        -\kappa^2(P_0^2+2\epsilon P_0P_1+\epsilon^2(P_1^2+2P_0P_2)+\dots)(\epsilon\theta_1+\epsilon^2\theta_3+\dots)\\
+        +(1+2\epsilon^2\cos(2\tau))(\epsilon\theta_1+\epsilon^3\theta_3-\frac{\epsilon^3\theta_1^3}{3!}+\mathcal{O}(\epsilon^5))=0
+    \end{aligned}
+    \label{eqn:PDE expanded}
+\end{equation}
+The method of multiple scales requires we set the coefficients of like powers of $\epsilon$ to 0. There are no coefficients with $\epsilon^0$, so we start with $\epsilon^1$:
+\begin{align*}
+    D_0^2\theta_1-\kappa^2P_0^2\theta_1+\theta_1=0
+\end{align*}
+Since we are looking for stationary waves, or at least slow waves, $\theta_1$ does not depend on $X_0$, so $P_0\theta_1=0$. Then
+\begin{align*}
+    D_0^2\theta_1+\theta_1=0
+\end{align*}
+which is just a linear oscillator, with the simple solution
+\begin{align*}
+    \theta_1=Ae^{iT_0}+A^*e^{-iT_0}
+\end{align*}
+where $A$ is some complex function of $T_1,T_2,T_3,\dots$ and $A^*$ is its complex conjugate. 
+\par Now that we have a solution for one of the $\theta$ terms, we can use it going forward. We examine $\epsilon^2$:
+\begin{align*}
+    2D_0D_1\theta_1-2\kappa^2P_0P_1\theta_1&=0
+    \implies 2D_1(Ae^{iT_0}+A^*e^{-iT_0})&=2\kappa^2P_0P_1
+\end{align*}
+In order to avoid resonance, we need to kill the secular terms, that is set $D_1A=0$, and thus $D_1A^*=0$ as a consequence. This means that $P_1\theta_1=0$.
+\par The last term we need to look at are the $\epsilon^3$ terms:
+\begin{align*}
+    D_0^2\theta_3+2\beta D_0^2\theta_1+(D_1^2+2D_0D_2)\theta_1+2\gamma D_0\theta_1\\
+    -\kappa^2[P_0^2\theta_3+(P_1^2+2P_0P_2)\theta_1]-\frac{\theta_1^3}{3!}+2\cos(2\tau)\theta_1=0
+\end{align*}
+Noting that $\theta_n$ does not depend on $X_m$ where $n\neq m$, $P_0^3\theta_3$ and $2P_0P_2\theta_1$ go to zero, and inserting our solution for $\theta_1$ we find
+\begin{align*}
+    D_0^2\theta_3+2\beta (-Ae^{iT_0}-A^*e^{-iT_0})+D_1^2(Ae^{iT_0}+A^*e^{-iT_0})+2D_2(iAe^{iT_0}-iA^*e^{-iT_0})\\
+    +2\gamma(iAe^{iT_0}-iA^*e^{-iT_0})-\kappa^2P_1^2(Ae^{iT_0}+A^*e^{-iT_0})\\
+    -\frac{(Ae^{iT_0}+A^*e^{-iT_0})^3}{3!}+(e^{2iT_0}+e^{-2iT_0})(Ae^{iT_0}+A^*e^{-iT_0})=0
+\end{align*}
+We can deal with this $\frac{(Ae^{iT_0}+A^*e^{-iT_0})^3}{3!}$:
+\begin{align*}
+    \frac{(Ae^{iT_0}+A^*e^{-iT_0})^3}{3!}&=\frac{A^3e^{3iT_0}+A^{*3}e^{-3iT_0}+3|A|^2(Ae^{iT_0}+A^*e^{-iT_0})}{3!}
+\end{align*}
+and insert it back in, but to save space we will now just kill those terms which lead to resonance, leading to 
+\begin{equation}
+    2iD_2A+2i\gamma A-\kappa^2P_1^2A-\frac{1}{2}A|A|^2+A^*-2\beta A=0
+    \label{eqn:nonlinear schrodinger A}
+\end{equation}
+The $A^*$ term arises from the expansion of $\cos(2\tau)$ combining with $\theta_1$. The $A^*$ and nonlinearity in \cref{eqn:nonlinear schrodinger A} is a problem when it comes to finding the dispersion relation. To remedy this we drop the nonlinearity and let $A=u+iv$, so $A^*=u-iv$:
+\begin{align*}
+    2iD_2(u+iv)+2i\gamma (u+iv)-\kappa^2P_1^2(u+iv)+(u-iv)-2\beta (u+iv)&=0\\
+    \implies 2iD_2u-2D_2v+2i\gamma u-2\gamma v-\kappa^2P_1^2u-i\kappa^2P_1^2v+u-iv-2\beta u-2i\beta v&=0
+\end{align*}
+We can split this into a real and imaginary part, both of which must equal zero:
+\begin{align*}
+    -2D_2v-2\gamma v-\kappa^2P_1^2u+u-2\beta u&=0\\
+    2D_2u+2\gamma u-\kappa^2P_1^2v-v-2\beta v&=0
+\end{align*}
+These are two coupled linear Schr\"odinger equations, so we need to find a way to untangle them from each other. Unfortunately, I couldn't manage to do this. After searching online and asking Charlotte, nothing worked and so I have nothing to analyse computationally or with the asymptotic expansion. As far as I'm aware, Tristan and Yola are also as stuck as I am. I'm confident that without this extremely tough analysis to do, I would've done well with the computational side of things, but that was not to be. 
+
+\end{document}
