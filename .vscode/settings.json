@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\miles\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe",
+    "python.pythonPath": "C:\\Python39\\python.exe",
     "files.exclude": {
         "**/.aux": true,
         "**/.classpath": true,

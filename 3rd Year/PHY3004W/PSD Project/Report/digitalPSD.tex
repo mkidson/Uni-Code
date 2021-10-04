@@ -1,0 +1,69 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in, top=0.3in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage[separate-uncertainty=true, group-digits=false]{siunitx}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,subfig,caption,import,wrapfig}
+\usepackage[version=4]{mhchem}
+\usepackage[noabbrev]{cleveref}
+\newcommand{\creflastconjunction}{, and\nobreakspace}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\captionsetup{font=small, belowskip=0pt}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+
+\begin{center}
+    {\huge Digital methods for neutron pulse shape discrimination in EJ301 liquid scintillator detectors}\\
+    \vspace{0.2in}
+    \textbf{KDSMIL001 | 2021}
+
+    \section*{Abstract}\label{sec:Abstract} % rough rn
+    We investigate two digital methods of pulse shape discrimination for neutron and photon events in an EJ301 scintillator detector. Neutron events in these detectors tend to have a longer decay tail to the resulting signal than do photon events. Both methods take advantage of this fact. 
+    
+\end{center}
+
+\section{Introduction}\label{sec:Introduction}
+\par Many areas of research rely on the detection of particles, the details of which form the data that is analysed and investigated in order to corroborate or disprove theory. It is very important, when detecting a particle, that you are certain that the particle is what you think it is. When it comes to detecting neutrons, this is not as simple as it sounds. %Neutrons interact only by physical collisions with the detector material. For electrons, photons, and other particles which interact by the electromagnetic force, however, there are many more mechanisms by which they can be detected, simply due to the nature of their interaction. 
+\par Liquid scintillator detectors are often used in neutron detection due to their flexibility when it comes to the shape and size of the material as well as their fast timing performance, but these detectors are also sensitive to gamma rays. Scintillator detectors work by emitting light at an energy roughly proportional to the energy of the incident ionising particle, but the constant of proportionality changes depending on the type of particle \cite{Knoll}. This light is then detected by the photoelectric effect and the resulting voltage pulse collected by instrumentation. Different types of particles also result in slightly different voltage pulse shapes. It is this difference that is exploited by pulse shape discrimination techniques. 
+\par These techniques were developed at a time where computational power was lacking, as well as expensive, so they were implemented in analogue systems. These systems integrated the voltage over a long and short time window, then took the ratio of the two values. Neutrons interactions result in larger component of the long integral than photon interactions, so this ratio is different for these two types of interaction. Due to the nature of the electronics needed to integrate these pulses, all all that can be gathered at the end of the process is a discrimination parameter. Since computational power is now much more available and affordable, it no longer makes sense to use these systems when the pulses could be captured
+
+integrating each pulse over a long and short time window and taking the ratio between these values. Neutron interactions result in more delayed fluorescence than photon interactions, but roughly the same amount of prompt fluorescence, so this ratio should be different if the event was a neutron or photon interaction. The problem with the analogue method is that the pulse effectively gets destroyed
+
+
+
+
+\par There are not many ways to detect neutrons as, since they are uncharged, they only interact with other matter by collisions. The detectors used in this project work by excitation of the liquid, which then emits light that hits a metal plate and by the photoelectric effect creates a pulse. Both neutrons and photons can excite the liquid, but the mechanism by which they do this is subtly different. This results is a slightly different characteristic decay curve for neutron and photon events. We can use this difference to discriminate between the two.
+
+\section{Theory}\label{sec:Theory}
+\par This section will include details from Knoll about liquid scintillator detectors, including the fact that different types of particles will result in different amounts of delayed fluorescence relative to prompt fluorescence. Neutrons seem to result in more than photons. Neutrons are detected by proton recoil events, while photons are detected by electron recoil events (Compton scattering), and hardly any photoelectric effect, so we only see Compton continuum, not photopeak.
+\par 
+
+\section{Methodology}\label{sec:Methodology}
+
+
+
+
+\begin{thebibliography}{9}
+    \bibitem{Knoll}
+
+    \bibitem{Lang}
+    
+\end{thebibliography}
+
+\end{document}

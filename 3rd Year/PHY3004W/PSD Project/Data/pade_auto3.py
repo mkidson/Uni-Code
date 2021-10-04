@@ -6,7 +6,7 @@ import numpy as np
 #import matplotlib
 #matplotlib.use('tkagg')
 from pylab import *
-set_printoptions(precision=4)
+np.set_printoptions(precision=4)
 
 """ ***Note: Run from terminal window. Won't work in IDE since interactive.
 

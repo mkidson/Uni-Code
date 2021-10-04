@@ -46,7 +46,7 @@ while eventCounter < maxEvents:
         anode -= baseline
         anode *= -1
         # Calculates the RMS of the background after the signal has been transformed. Not sure if I'll use this to do the integral window start. Might use tanya's method below
-        baselineRMS = np.sqrt(np.mean(np.square(anode[:350])))
+        # baselineRMS = np.sqrt(np.mean(np.square(anode[:350])))
         maxIndex = np.where(anode==max(anode))[0][0]
 
         intervalStart = maxIndex - (round(10/sampleToTime))
@@ -63,20 +63,28 @@ def gaussian(x, mu, sigma, A):
     return (A*(1/(sigma*np.sqrt(2*np.pi)))*np.exp(-(1/2)*((x-mu)/sigma)**2))
 
 longs = np.array(longs)
-histData, histBins = np.histogram(longs[longs<2], bins=1000)
-# print(histBins)
-# plt.step(histBins[:-1], histData)
-smooth = scipy.signal.savgol_filter(histData, 51, 5)
+histData, histBins = np.histogram(longs[(longs<0.5)&(longs>0.26)], bins='auto') #[(longs<2)&(longs>0.75)],[(longs<0.8)&(longs>0.4)],[(longs<1.5)&(longs>1.07)]
+plt.step(histBins[:-1], histData)
+# plt.axvline(1.1035574567183923,c='red')
+# smooth = scipy.signal.savgol_filter(histData, 51, 5)
 
-# plt.step(histBins[np.where(histBins>=0.8)[0][0]:np.where(histBins>=1.5)[0][0]], smooth[np.where(histBins>=0.8)[0][0]:np.where(histBins>=1.5)[0][0]])
-# plt.step(histBins[np.where(histBins>=0.8)[0][0]:np.where(histBins>=1.5)[0][0]], np.gradient(smooth[np.where(histBins>=0.8)[0][0]:np.where(histBins>=1.5)[0][0]]))
-plt.show()
+# plt.step(histBins[:-1], smooth)
+# plt.step(histBins[:-1], np.gradient(smooth))
 
-xFit = histBins[np.where(histBins>=0.8)[0][0]:np.where(histBins>=1.5)[0][0]]
-grad = np.gradient(smooth[np.where(histBins>=0.8)[0][0]:np.where(histBins>=1.5)[0][0]])
+xFit = histBins[:-1]
+grad = np.gradient(histData)
+
 popt, pcov = curve_fit(gaussian, xFit, grad, [1,0.5,-1])
+print(popt[0])
 plt.step(xFit, grad)
 plt.plot(xFit, gaussian(xFit, *popt))
 plt.show()
 
-#0.8 - 1.5
+# 22Na 1.274537 MeV compton edge at 1.1035574567183923
+# Energy is 1.0617027983 MeV
+# 22Na 0.511 MeV compton edge at 0.34515502437962947
+# Energy is 0.340666666 MeV
+# 137Cs 0.661657 MeV compton edge at 0.4877006303285822
+# Energy is 0.47733374509 MeV
+# 60Co 1.332492 MeV compton edge at 1.1481204129710332
+# Energy is 1.1181006769 MeV

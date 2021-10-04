@@ -13,7 +13,7 @@ from matplotlib import pyplot as plt, colors
 
 def CCM(pulse, t, short=26):
     """
-    Integrates over "short" and "long" windows for a pulse and returns a discrimination parameter given by PSD_{CCM} = I_{long}/I_{short}. This is the Charge Comparison Method. 
+    Integrates over "short" and "long" windows for a pulse and returns a discrimination parameter given by PSD_{CCM} = I_{short}/I_{long}. This is the Charge Comparison Method. 
 
     Parameters
     ---
@@ -39,16 +39,27 @@ def CCM(pulse, t, short=26):
     longIntegral = np.trapz(pulse[intervalStart:intervalLongEnd], t[intervalStart:intervalLongEnd])
     shortIntegral = np.trapz(pulse[intervalStart:intervalShortEnd], t[intervalStart:intervalShortEnd])
 
-    return shortIntegral/longIntegral, max(pulse), longIntegral
+    return shortIntegral/longIntegral, longIntegral
+
+def FourierTransform(pulse, t):
+    """
+    something here too
+    """
+    sampleToTime = 1.0 / 500e6 * 1e9 # in ns
+    # The index of the peak of the pulse and of the pulse when it has decayed to half the height of the peak
+    maxIndex = np.where(pulse==max(pulse))[0][0]
 
 
-def PadeLaplace(pulse, t, nDecays=2):
+def PadeLaplace(pulse, t):
     """
     something
     """
     sampleToTime = 1.0 / 500e6 * 1e9 # in ns
     # The index of the peak of the pulse and of the pulse when it has decayed to half the height of the peak
     maxIndex = np.where(pulse==max(pulse))[0][0]
+    intervalStart = maxIndex - (round(10/sampleToTime))
+    intervalLongEnd = maxIndex + (round(100/sampleToTime))
+    longIntegral = np.trapz(pulse[intervalStart:intervalLongEnd], t[intervalStart:intervalLongEnd])
     # halfMaxIndex = np.where(pulse <= pulse[maxIndex]/2)
     halfMaxIndices = np.where(pulse<=pulse[maxIndex]/2)[0]
     halfMaxIndicesIndex = np.where(halfMaxIndices > maxIndex)[0][0]
@@ -58,7 +69,7 @@ def PadeLaplace(pulse, t, nDecays=2):
     p0 = 1/((halfMaxIndex-maxIndex)*sampleToTime)
     # print(p0)
     dt = sampleToTime
-    # nDecays = 5
+    nDecays = 2
     # Slices the two arrays so they start at the peak of the pulse, as in this method we are only interested in the shape of the tail.
     pulse = pulse[maxIndex:]
     t = t[:-maxIndex]
@@ -88,47 +99,75 @@ def PadeLaplace(pulse, t, nDecays=2):
     # return transform, p
     # endregion
     finished = False
-    for n in np.arange(1,nDecays+1):
-        # print('n = ',n)
-        ds=zeros(2*n)
 
-        for c in np.arange(0,2*n):
-            ds[c]=(dt * (1/math.factorial(c)) * (0.5*((((-t[0])**c) * np.exp(-p0 * t[0]) * pulse[0]) + (((-t[-1])**c) * np.exp(-p0 * t[-1]) * pulse[-1])) + np.sum(((-t[1:-1])**c) * np.exp(-p0 * t[1:-1]) * pulse[1:-1])))
+    ds=zeros(2*nDecays)
+
+    for c in np.arange(0,4):
+        ds[c]=(dt * (1/math.factorial(c)) * (0.5*((((-t[0])**c) * np.exp(-p0 * t[0]) * pulse[0]) + (((-t[-1])**c) * np.exp(-p0 * t[-1]) * pulse[-1])) + np.sum(((-t[1:-1])**c) * np.exp(-p0 * t[1:-1]) * pulse[1:-1])))
+
+    numerator, denominator = pade(ds, 2, 1)
+    residues, p, k = residue(list(numerator), list(denominator))
+    poles = -(p+p0)
+
+    residues = residues#[::-1]
+    poles = poles#[::-1]
+
+    # print('\nPade Laplace:')
+    # print(f'Decay Constants: {poles}')
+    # print(f'Amplitudes: {residues}')
+    # fit = residues[0]*np.exp(-poles[0]*t) + residues[1]*np.exp(-poles[1]*t)
+
+    # laplacePSD = residues[0]
+
+    return residues, poles, longIntegral
+
+
+
+
+
+    # region
+    # for n in np.arange(1,nDecays+1):
+    #     # print('n = ',n)
+    #     ds=zeros(2*n)
+
+    #     for c in np.arange(0,2*n):
+    #         ds[c]=(dt * (1/math.factorial(c)) * (0.5*((((-t[0])**c) * np.exp(-p0 * t[0]) * pulse[0]) + (((-t[-1])**c) * np.exp(-p0 * t[-1]) * pulse[-1])) + np.sum(((-t[1:-1])**c) * np.exp(-p0 * t[1:-1]) * pulse[1:-1])))
         
-        num, denom = pade(ds, n, n-1)
-        # print('a')
+    #     num, denom = pade(ds, n, n-1)
+    #     # print('a')
         
-        residues, p, k = residue(list(num), list(denom))
-        poles = -(p+p0)
+    #     residues, p, k = residue(list(num), list(denom))
+    #     poles = -(p+p0)
 
-        residues = residues[::-1]
-        poles = poles[::-1]
+    #     residues = residues[::-1]
+    #     poles = poles[::-1]
 
-        # if n==3:
-        for i in residues:
-            if residues.dtype == 'complex128':
-                if np.conjugate(np.around(i,7)) in np.around(residues,7):
-                    finished = True
-            elif residues.dtype == 'float64':
-                pass # needs some check to see if one of the values is smaller than the other by a considerable amount. can't think of one rn
+    #     # if n==3:
+    #     for i in residues:
+    #         if residues.dtype == 'complex128':
+    #             if np.conjugate(np.around(i,7)) in np.around(residues,7):
+    #                 finished = True
+    #         elif residues.dtype == 'float64':
+    #             pass # needs some check to see if one of the values is smaller than the other by a considerable amount. can't think of one rn
 
-        if finished:
-            print(f'total decay constants is: {n-1}')
-            for k in range(len(polesMain[n-2])):
-                print(f'lambda: {polesMain[n-2][k]:12.8} A: {residuesMain[n-2][k]:12.8}')
-            break
+    #     if finished:
+    #         print(f'total decay constants is: {n-1}')
+    #         for k in range(len(polesMain[n-2])):
+    #             print(f'lambda: {polesMain[n-2][k]:12.8} A: {residuesMain[n-2][k]:12.8}')
+    #         break
         
-        polesMain.append(poles)
-        residuesMain.append(residues)
+    #     polesMain.append(poles)
+    #     residuesMain.append(residues)
 
-    fit=zeros(len(t),dtype=complex)         #Create fit from poles and residues
-    for i in np.arange(0,n-1):
-        fit = fit + residuesMain[-1][i]*np.exp(-polesMain[-1][i]*t)
+    # fit=zeros(len(t),dtype=complex)         #Create fit from poles and residues
+    # for i in np.arange(0,n-1):
+    #     fit = fit + residuesMain[-1][i]*np.exp(-polesMain[-1][i]*t)
 
-    # print(polesMain[-1])
-    # print(residuesMain[-1])
-    return residuesMain[-1], polesMain[-1], n-1#, fit, t
+    # # print(polesMain[-1])
+    # # print(residuesMain[-1])
+    # return residuesMain[-1], polesMain[-1], n-1#, fit, t
     # return fit
+    # endregion
 
 def gaussian(x, mu, sigma, A):
     return (A*(1/(sigma*np.sqrt(2*np.pi)))*np.exp(-(1/2)*((x-mu)/sigma)**2))
