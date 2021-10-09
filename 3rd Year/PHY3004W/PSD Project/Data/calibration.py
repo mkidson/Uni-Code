@@ -16,7 +16,7 @@ matplotlib.rcParams.update({
 })
 
 maxEvents = 1000000
-fileName = r'Raw\Na22'
+fileName = r'Raw\Co60'
 
 # conversion factors
 bitsToVolt = 2.0 / 2.0**14 # in V
@@ -50,7 +50,7 @@ while eventCounter < maxEvents:
         maxIndex = np.where(anode==max(anode))[0][0]
 
         intervalStart = maxIndex - (round(10/sampleToTime))
-        intervalLongEnd = maxIndex + (round(100/sampleToTime))
+        intervalLongEnd = maxIndex + (round(250/sampleToTime))
         longIntegral = np.trapz(anode[intervalStart:intervalLongEnd], tArr[intervalStart:intervalLongEnd])
 
         longs.append(longIntegral)
@@ -63,7 +63,7 @@ def gaussian(x, mu, sigma, A):
     return (A*(1/(sigma*np.sqrt(2*np.pi)))*np.exp(-(1/2)*((x-mu)/sigma)**2))
 
 longs = np.array(longs)
-histData, histBins = np.histogram(longs[(longs<0.5)&(longs>0.26)], bins='auto') #[(longs<2)&(longs>0.75)],[(longs<0.8)&(longs>0.4)],[(longs<1.5)&(longs>1.07)]
+histData, histBins = np.histogram(longs[(longs<1.5)&(longs>1.07)], bins='auto') #[(longs<0.5)&(longs>0.26)],[(longs<2)&(longs>0.75)],[(longs<0.8)&(longs>0.4)],[(longs<1.5)&(longs>1.07)]
 plt.step(histBins[:-1], histData)
 # plt.axvline(1.1035574567183923,c='red')
 # smooth = scipy.signal.savgol_filter(histData, 51, 5)
@@ -80,11 +80,11 @@ plt.step(xFit, grad)
 plt.plot(xFit, gaussian(xFit, *popt))
 plt.show()
 
-# 22Na 1.274537 MeV compton edge at 1.1035574567183923
+# 22Na 1.274537 MeV compton edge at 1.1591246830476258
 # Energy is 1.0617027983 MeV
-# 22Na 0.511 MeV compton edge at 0.34515502437962947
+# 22Na 0.511 MeV compton edge at 0.3643005509235264
 # Energy is 0.340666666 MeV
-# 137Cs 0.661657 MeV compton edge at 0.4877006303285822
+# 137Cs 0.661657 MeV compton edge at 0.5139275454596316
 # Energy is 0.47733374509 MeV
-# 60Co 1.332492 MeV compton edge at 1.1481204129710332
+# 60Co 1.332492 MeV compton edge at 1.2037573894699727
 # Energy is 1.1181006769 MeV

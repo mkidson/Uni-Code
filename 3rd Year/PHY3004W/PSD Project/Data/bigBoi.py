@@ -14,6 +14,11 @@ matplotlib.rcParams.update({
     'pgf.rcfonts': False,
     'figure.constrained_layout.use': True,
     'savefig.bbox': 'tight',
+    'axes.labelsize': 18,
+    'legend.fontsize': 18,
+    'xtick.labelsize': 16,
+    'ytick.labelsize': 16,
+    'axes.titlesize': 18
 })
 
 maxEvents = 1000000
@@ -24,8 +29,8 @@ fileName = r"Raw\STNG"
 bitsToVolt = 2.0 / 2.0**14 # in V
 sampleToTime = 1.0 / 500e6 * 1e9 # in ns
 # long integral to MeVee conversion
-m = 0.9603817487213419 
-c = 0.008868546534848159 
+m = 0.9177884481407862
+c = 0.005787603530313204
 
 # print(sampleToTime)
 
@@ -38,12 +43,14 @@ CCM_PSDs = []
 laplace_PSDs = []
 laplace_Res = []
 laplace_Poles = []
+laplace_chisq = []
 voltages = []
 longInts = []
+curve_fit_params = []
 
 # Used for optimisation of short integral window
 # optimiseCCM = []
-# shorts = np.arange(25,27,0.2)
+# shorts = np.arange(20,25,0.2)
 
 t1 = time.time()
 
@@ -64,119 +71,96 @@ while eventCounter < maxEvents:
         anode *= -1
         # Calculates the RMS of the background after the signal has been transformed. Not sure if I'll use this to do the integral window start. Might use tanya's method below
         # baselineRMS = np.sqrt(np.mean(np.square(anode[:350])))
-        # maxIndex = np.where(anode==max(anode))[0][0]
+        maxIndex = np.where(anode==max(anode[365:400]))[0][0]
+        intervalStart = maxIndex - (round(10/sampleToTime))
+        intervalLongEnd = maxIndex + (round(250/sampleToTime))
+        intervalShortEnd = maxIndex + (round(22/sampleToTime))
 
         # more optimising things
         # tempPSD = []
         # for i in shorts:
+        #     CCM_PSD, longInt = analysePulse.CCM(anode, tArr, i)
+        #     # CCM_PSDs.append(CCM_PSD)
         #     tempPSD.append(CCM_PSD)
-
-        # CCM_PSD, longInt = analysePulse.CCM(anode, tArr)
-        # CCM_PSDs.append(CCM_PSD)
         # longInts.append(longInt)
-        # voltages.append(voltage)
         # optimiseCCM.append(tempPSD)
 
-        residues, poles, longInt = analysePulse.PadeLaplace(anode, tArr)
-        laplace_PSDs.append((poles[1])/(poles[0]))
-        laplace_Res.append(residues)
-        laplace_Poles.append(poles)
+        CCM_PSD, longInt = analysePulse.CCM(anode, tArr)
+        CCM_PSDs.append(CCM_PSD)
         longInts.append(longInt)
 
+        # residues, poles, longInt, chiSqDof = analysePulse.PadeLaplace(anode, tArr)
+        # laplace_PSDs.append((poles[1])/(poles[0]))
+        # laplace_Res.append(residues)
+        # laplace_Poles.append(poles)
+        # longInts.append(longInt)
+        # laplace_chisq.append(chiSqDof)
 
 
 
         # region plotting for sanity checking - remove if using large number of events
-        # plt.figure()
-        
-        # plt.title(f'Event {eventCounter}')
-        
-        # plt.plot(tArr, anode, label='anode', alpha=1, color='blue', lw='1')
-        # # plt.plot(tArr, [baselineRMS]*len(anode), color='red', ls='--', lw=0.6)
-        # # plt.plot(tArr, [baselineRMS*3]*len(anode), color='green', ls='--', lw=0.6)
-        # plt.axvline(tArr[intervalStart], linestyle='dashed', color='black', linewidth=1)
-        # plt.axvline(tArr[intervalLongEnd], linestyle='dashed', color='black', linewidth=1)
-        # plt.axvline(tArr[intervalShortEnd], linestyle='dashed', color='black', linewidth=1)
+        # if True:
+        #     plt.figure()
+            
+        #     plt.title(f'Event {eventCounter}')
+            
+        #     plt.plot(tArr, anode, label='anode', alpha=1, color='blue', lw='1')
+        #     plt.axvline(tArr[intervalStart], linestyle='dashed', color='black', linewidth=1)
+        #     plt.axvline(tArr[intervalLongEnd], linestyle='dashed', color='black', linewidth=1)
+        #     plt.axvline(tArr[intervalShortEnd], linestyle='dashed', color='black', linewidth=1)
+
+        #     plt.text(tArr[intervalStart], 0.05, 'Integral window start', rotation='vertical', horizontalalignment='right', size=18)
+        #     plt.text(tArr[intervalShortEnd], 0.05, 'Short integral window', rotation='vertical', horizontalalignment='left', size=18)
+        #     plt.text(tArr[intervalLongEnd], 0.05, 'Long integral window', rotation='vertical', horizontalalignment='right', size=18)
+
+        #     # # plt.plot(tArr[maxIndex:], fit, color='red', lw=1)
 
 
-        # # plt.plot(tArr, anode)
-        # plt.grid(color='#CCCCCC', linestyle=':')
-        
-        # plt.xlabel('Time (ns)')
-        # plt.ylabel('Voltage (V)')
-        
-        # plt.legend()
+        #     # # # plt.plot(tArr, anode)
+        #     plt.grid(color='#CCCCCC', linestyle=':')
+            
+        #     plt.xlabel('Time (ns)')
+        #     plt.ylabel('Voltage (V)')
+            
+        #     plt.legend()
+        #     plt.xlim(725, 1200)
+        #     plt.show()
+            # plt.savefig(r'anode_flipped.pgf')
         # endregion
+
+
 
     except Exception as e: 
         print(f'EOF at {eventCounter}\nError is {e}')
         break
 
-    # region testing out pade laplace
-    nDecays = 5
-    # res, poles, fit, tNew = analysePulse.PadeLaplace(anode, tArr, nDecays)
-    # res, poles, n = analysePulse.PadeLaplace(anode, tArr, nDecays)
-
-    # plt.figure()
-    # plt.plot(tArr[maxIndex:],fit,linewidth=2)
-    # plt.semilogx(); plt.grid(True); plt.legend()
-
-    # print(poles, res)
-
-    # fit = 0
-    # for i in range(nDecays):
-    #     fit += res[i]*np.exp(-poles[i]*tArr[:-maxIndex])
-
-    # plt.plot(tArr[maxIndex:750], movingAves[:750-maxIndex])
-
-    # laplace_PSDs.append(res[1]/res[0])
-    # print(res[0]/res[1])
-    # print(res)
-
-    # transform, p = analysePulse.PadeLaplace(anode, tArr)
-    # plt.plot(p,transform)
-    # print(transform)
-    # endregion
-
-    # region testing out fft to find decay constants
-    # maxIndex = np.where(anode==max(anode))[0][0]
-    # intervalLongEnd = maxIndex + (round(100/sampleToTime))
-    # pulse = anode[maxIndex:intervalLongEnd]
-    # t = tArr[:intervalLongEnd-maxIndex]
-    # transformed = rfft(pulse)
-    # freqs = rfftfreq(len(pulse), sampleToTime)
-    # plt.figure()
-    # plt.plot(freqs, np.abs(transformed), color='blue', lw=1)
-    # plt.figure()
-    # plt.plot(t, pulse, color='blue', lw=1)
-    # plt.show()
-    # endregion
-
 
 # close file stream (important)
 ipf.closeFile()
 longInts = m*np.array(longInts)+c
-# CCM_PSDs = np.array(CCM_PSDs)
-laplace_Res = np.array(laplace_Res)
-laplace_Poles = np.array(laplace_Poles)
+
+CCM_PSDs = np.array(CCM_PSDs)
+# laplace_Res = np.array(laplace_Res)
 # laplace_Poles = np.array(laplace_Poles)
-laplace_PSDs = np.array(laplace_PSDs)
+# laplace_PSDs = np.array(laplace_PSDs)
+# laplace_chisq = np.array(laplace_chisq)
 
 # np.savetxt('residues.txt', laplace_Res)
 # np.savetxt('poles.txt', laplace_Poles)
-# np.save('AmBe_Laplace_Res.npy', laplace_Res)
-# np.save('AmBe_Laplace_Poles.npy', laplace_Poles)
-# np.save('AmBe_Laplace_longInts.npy', longInts)
+# np.save('AmBe_Laplace_Res2.npy', laplace_Res)
+# np.save('AmBe_Laplace_Poles2.npy', laplace_Poles)
+# np.save('AmBe_Laplace_longInts2.npy', longInts)
 
-np.save('STNG_Laplace_Res.npy', laplace_Res)
-np.save('STNG_Laplace_Poles.npy', laplace_Poles)
-np.save('STNG_Laplace_longInts.npy', longInts)
+# np.save('STNG_Laplace_Res2.npy', laplace_Res)
+# np.save('STNG_Laplace_Poles2.npy', laplace_Poles)
+# np.save('STNG_Laplace_longInts2.npy', longInts)
+# np.save('STNG_Laplace_chisq2.npy', laplace_chisq)
 
-# np.save('STNG_CCM_longInts.npy', longInts)
-# np.save('STNG_CCM_PSDs.npy', CCM_PSDs)
+np.save('STNG_CCM_longInts3.npy', longInts)
+np.save('STNG_CCM_PSDs3.npy', CCM_PSDs)
 
-# np.save('AmBe_CCM_longInts.npy', longInts)
-# np.save('AmBe_CCM_PSDs.npy', CCM_PSDs)
+# np.save('AmBe_CCM_longInts3.npy', longInts)
+# np.save('AmBe_CCM_PSDs3.npy', CCM_PSDs)
 
 t2 = time.time()
 print(f'time taken is {t2-t1:.4} seconds')
@@ -188,7 +172,7 @@ print(f'time taken is {t2-t1:.4} seconds')
 # plt.figure()
 # plt.hist2d(voltages, CCM_PSDs, bins=2000, norm=colors.LogNorm())
 # plt.title('Voltage')
-# plt.hist2d(longInts, laplace_PSDs, bins=2000, norm=colors.LogNorm())
+# plt.hist2d(longInts, laplace_Res[:,0], bins=2000, norm=colors.LogNorm())
 # plt.scatter(longInts, laplace_PSDs)
 # plt.figure()
 # plt.hist2d(longInts, CCM_PSDs, bins=2000, norm=colors.LogNorm())
@@ -208,29 +192,47 @@ print(f'time taken is {t2-t1:.4} seconds')
 # optimiseCCM = np.array(optimiseCCM)
 # FoMs = []
 
-# # for p, ps in enumerate(shorts):
-# # CCM_PSDs = np.array(optimiseCCM[:,p])
+# for p, ps in enumerate(shorts):
+#     CCM_PSDs = np.array(optimiseCCM[:,p])
 
-# forFoM = CCM_PSDs[longInts > 2.2]
-# histData, histBins = np.histogram(forFoM, bins=512)
 
-# cutoff = np.where(histBins >= 0.8555)[0][0]
+#     AmBeSortingArr = longInts.argsort()
+#     longIntsSorted = longInts[AmBeSortingArr]
+#     CCM_PSDsSorted = CCM_PSDs[AmBeSortingArr]
 
-# p0N = [histBins[np.where(histData==max(histData[:cutoff]))[0][0]],0.01,1]
-# poptN, pcovN = curve_fit(analysePulse.gaussian, histBins[:cutoff], histData[:cutoff], p0=p0N)
-# xModelN = np.linspace(histBins[0], histBins[cutoff], 1000)
-# # print(p0N)
-# # print(poptN)
+#     cutoff = 0.015*np.log(longIntsSorted-0.05)+0.79
+#     # plt.figure()
+#     # plt.hist2d(longInts[longInts<14], CCM_PSDs[longInts<14], bins=2000, norm=colors.LogNorm())
+#     # plt.plot(longIntsSorted, cutoff)
 
-# p0P = [histBins[np.where(histData==max(histData[cutoff:]))[0][0]],0.01,1]
-# poptP, pcovP = curve_fit(analysePulse.gaussian, histBins[cutoff:-1], histData[cutoff:], p0=p0P, maxfev=5000)
-# xModelP = np.linspace(histBins[cutoff], histBins[-1], 1000)
-# # print(p0P)
-# # print(poptP)
+#     photonsPSDs = CCM_PSDsSorted[CCM_PSDsSorted>cutoff]
+#     neutronsPSDs = CCM_PSDsSorted[CCM_PSDsSorted<cutoff]
 
-# FoM = (poptP[0]-poptP[1])/(poptP[1]*2.35 + poptN[1]*2.35)
-# # FoMs.append(FoM)
-# # print(ps, FoM)
+#     photonsData, photonsBins = np.histogram(photonsPSDs, bins=1000)
+#     neutronsData, neutronsBins = np.histogram(neutronsPSDs, bins=1000)
+
+#     photonsPopt, photonsPcov = curve_fit(analysePulse.Breit_Wigner, photonsBins[:-1], photonsData, p0=[photonsBins[np.where(photonsData==max(photonsData))[0][0]],1,1], sigma=np.where(photonsData!=0,np.sqrt(photonsData), 1), absolute_sigma=True)
+#     neutronsPopt, neutronsPcov = curve_fit(analysePulse.gaussian, neutronsBins[:-1], neutronsData, p0=[neutronsBins[np.where(neutronsData==max(neutronsData))[0][0]],1,1], sigma=np.where(neutronsData!=0,np.sqrt(neutronsData), 1), absolute_sigma=False)
+
+#     FoM = (photonsPopt[0]-neutronsPopt[0])/(2*photonsPopt[1]+2.35*neutronsPopt[1])
+
+#     FoMs.append(FoM)
+#     print(ps, FoM)
+
+# # p0N = [histBins[np.where(histData==max(histData[:cutoff]))[0][0]],0.01,1]
+# # poptN, pcovN = curve_fit(analysePulse.gaussian, histBins[:cutoff], histData[:cutoff], p0=p0N)
+# # xModelN = np.linspace(histBins[0], histBins[cutoff], 1000)
+# # # print(p0N)
+# # # print(poptN)
+
+# # p0P = [histBins[np.where(histData==max(histData[cutoff:]))[0][0]],0.01,1]
+# # poptP, pcovP = curve_fit(analysePulse.gaussian, histBins[cutoff:-1], histData[cutoff:], p0=p0P, maxfev=5000)
+# # xModelP = np.linspace(histBins[cutoff], histBins[-1], 1000)
+# # # print(p0P)
+# # # print(poptP)
+
+# # FoM = (poptP[0]-poptP[1])/(poptP[1]*2.35 + poptN[1]*2.35)
+
 
 # # histData1, histBins1 = np.histogram(CCM_PSDs, bins=1000)
 
@@ -243,6 +245,7 @@ print(f'time taken is {t2-t1:.4} seconds')
 
 # # 0.8555
 
+# plt.figure()
 # plt.step(shorts, FoMs)
 # plt.show()
 # endregion

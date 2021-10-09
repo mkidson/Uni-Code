@@ -44,7 +44,8 @@ err=zeros(n_decays)  # To keep track of closeness of fits.
 
 figure(2)
 plot(t,f,'kx',label='data')  #Plot data. Pade-Laplace fits added below.
-semilogx(); legend()
+# semilogx()
+legend()
 draw()
 
 for n in arange(1,n_decays+1):  
@@ -127,7 +128,8 @@ for n in arange(1,n_decays+1):
 
     figure(2)
     plot(t,fit,label='n = '+str(n),linewidth=2) #Plot each Pade-Laplace fit on data.
-    semilogx(); grid(True); legend()
+    # semilogx()
+    grid(True); legend()
     ylim(-noise,1.1*(a1+a2+a3))
     draw()
     input('Press Enter to continue.')
