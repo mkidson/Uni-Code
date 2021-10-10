@@ -10,7 +10,7 @@ matplotlib.rcParams.update({
     'pgf.rcfonts': False,
 })
 # File reading and initialisation of variables
-file = open(r'2nd Year\PHY2004W Practicals and Reports\CP2\DampedData1.txt', 'r')
+file = open(r'DampedData1.txt', 'r')
 header = file.readline()
 lines = file.readlines()
 i = 0

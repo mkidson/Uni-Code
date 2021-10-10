@@ -36,18 +36,19 @@
 \newlabel{eqn:Neutron scattering fraction}{{2.1}{2}{Detecting Neutrons}{equation.2.1}{}}
 \newlabel{eqn:Neutron scattering fraction@cref}{{[equation][1][2]2.1}{[1][2][]2}}
 \citation{Knoll}
+\citation{Mevee}
 \citation{Kuchnir}
 \newlabel{eqn:Compton Edge}{{2.2}{3}{Detecting Neutrons}{equation.2.2}{}}
 \newlabel{eqn:Compton Edge@cref}{{[equation][2][2]2.2}{[1][3][]3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Pulse Shape Discrimination Methods}{3}{subsection.2.2}\protected@file@percent }
 \newlabel{eqn:CCM parameter}{{2.3}{3}{Pulse Shape Discrimination Methods}{equation.2.3}{}}
 \newlabel{eqn:CCM parameter@cref}{{[equation][3][2]2.3}{[1][3][]3}}
-\newlabel{eqn:linear exponential combination}{{2.4}{3}{Pulse Shape Discrimination Methods}{equation.2.4}{}}
-\newlabel{eqn:linear exponential combination@cref}{{[equation][4][2]2.4}{[1][3][]3}}
 \citation{Yeramian}
 \citation{Hellen-Pade}
 \citation{Hellen-Pade}
 \citation{Hellen-Pade}
+\newlabel{eqn:linear exponential combination}{{2.4}{4}{Pulse Shape Discrimination Methods}{equation.2.4}{}}
+\newlabel{eqn:linear exponential combination@cref}{{[equation][4][2]2.4}{[1][4][]4}}
 \newlabel{eqn:exponential decay sum}{{2.5}{4}{Pulse Shape Discrimination Methods}{equation.2.5}{}}
 \newlabel{eqn:exponential decay sum@cref}{{[equation][5][2]2.5}{[1][4][]4}}
 \newlabel{eqn:laplace transform}{{2.6}{4}{Pulse Shape Discrimination Methods}{equation.2.6}{}}
@@ -72,50 +73,63 @@
 \newlabel{tbl:data taken}{{3.1}{5}{The data taken for this experiment. Acquisition time for each is shown, along with the relevant settings for each source. The last three sources were used for calibration. Data taken by T. Hutton, A. Buffler, and S. Mhlongo on 10 August 2021.\relax }{table.caption.3}{}}
 \newlabel{tbl:data taken@cref}{{[table][1][3]3.1}{[1][5][]5}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Calibration}{5}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Implementation of Discrimination Methods}{5}{subsection.3.3}\protected@file@percent }
+\citation{Hellen-Pade}
+\citation{Hellen-Code}
 \@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Data used to calibrate the detector set-up. A linear least squares fit was made using the long integral values on the x-axis and Compton edge energy on the y-axis. The relationship was found to be $E_\gamma =0.92 I_{\mathrm  {long}} + 0.0058$ \unit {\mevee }. Gamma-ray energies from \cite  {22Na Decay}, \cite  {137Cs Decay}, and \cite  {60Co Decay}. Compton edges calculated with \cref  {eqn:Compton Edge}.\relax }}{6}{table.caption.4}\protected@file@percent }
 \newlabel{tbl:Calibration Sources}{{3.2}{6}{Data used to calibrate the detector set-up. A linear least squares fit was made using the long integral values on the x-axis and Compton edge energy on the y-axis. The relationship was found to be $E_\gamma =0.92 I_{\mathrm {long}} + 0.0058$ \unit {\mevee }. Gamma-ray energies from \cite {22Na Decay}, \cite {137Cs Decay}, and \cite {60Co Decay}. Compton edges calculated with \cref {eqn:Compton Edge}.\relax }{table.caption.4}{}}
 \newlabel{tbl:Calibration Sources@cref}{{[table][2][3]3.2}{[1][5][]6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Implementation of Discrimination Methods}{6}{subsection.3.3}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces An example of the raw data coming from the fast anode with the STNG as a source.\relax }}{6}{figure.caption.5}\protected@file@percent }
 \newlabel{fig:anode_no_flip}{{3.1}{6}{An example of the raw data coming from the fast anode with the STNG as a source.\relax }{figure.caption.5}{}}
-\newlabel{fig:anode_no_flip@cref}{{[figure][1][3]3.1}{[1][6][]6}}
+\newlabel{fig:anode_no_flip@cref}{{[figure][1][3]3.1}{[1][5][]6}}
 \newlabel{eqn:Figure of Merit}{{3.1}{6}{Implementation of Discrimination Methods}{equation.3.1}{}}
 \newlabel{eqn:Figure of Merit@cref}{{[equation][1][3]3.1}{[1][6][]6}}
-\citation{Hellen-Pade}
-\citation{Hellen-Code}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Example of the data used to perform the discrimination methods. The time range has been reduced to better show the details of the pulse. The long and short integral windows are shown, both starting from the same place. \relax }}{7}{figure.caption.6}\protected@file@percent }
-\newlabel{fig:anode_flipped}{{3.2}{7}{Example of the data used to perform the discrimination methods. The time range has been reduced to better show the details of the pulse. The long and short integral windows are shown, both starting from the same place. \relax }{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Example of the data used to perform the discrimination methods. The time range has been reduced to better show the details of the pulse. The long and short integral windows are shown, both starting from the same place. This is the same event shown in \cref  {fig:anode_no_flip}.\relax }}{7}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:anode_flipped}{{3.2}{7}{Example of the data used to perform the discrimination methods. The time range has been reduced to better show the details of the pulse. The long and short integral windows are shown, both starting from the same place. This is the same event shown in \cref {fig:anode_no_flip}.\relax }{figure.caption.6}{}}
 \newlabel{fig:anode_flipped@cref}{{[figure][2][3]3.2}{[1][6][]7}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Results and Analysis}{7}{section.4}\protected@file@percent }
 \newlabel{sec:Results and Analysis}{{4}{7}{Results and Analysis}{section.4}{}}
 \newlabel{sec:Results and Analysis@cref}{{[section][4][]4}{[1][7][]7}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Charge Comparison Method}{7}{subsection.4.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces 2D histogram showing the discrimination parameter $S$ versus the energy $L$ for the AmBe source, analysed using CCM. The plot has been cropped to best show off the relevant parts: the two loci. Above the black line are the gamma-ray events and below the neutron events. The separation was made by trial and error using a log function. Note the defined edge of the gamma-ray locus around \SI {4.2}{\mevee }.\relax }}{8}{figure.caption.7}\protected@file@percent }
-\newlabel{fig:CCM_AmBe_hist2d}{{4.1}{8}{2D histogram showing the discrimination parameter $S$ versus the energy $L$ for the AmBe source, analysed using CCM. The plot has been cropped to best show off the relevant parts: the two loci. Above the black line are the gamma-ray events and below the neutron events. The separation was made by trial and error using a log function. Note the defined edge of the gamma-ray locus around \SI {4.2}{\mevee }.\relax }{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces 2D histogram showing the discrimination parameter $S$ versus the energy $L$ for the AmBe source, analysed using CCM. The plot has been cropped to best show off the relevant parts: the two loci. Above the black line are the gamma-ray events and below, the neutron events. The separation was made by trial and error using a log function. Note the defined edge of the gamma-ray locus around \SI {4.2}{\mevee }.\relax }}{8}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:CCM_AmBe_hist2d}{{4.1}{8}{2D histogram showing the discrimination parameter $S$ versus the energy $L$ for the AmBe source, analysed using CCM. The plot has been cropped to best show off the relevant parts: the two loci. Above the black line are the gamma-ray events and below, the neutron events. The separation was made by trial and error using a log function. Note the defined edge of the gamma-ray locus around \SI {4.2}{\mevee }.\relax }{figure.caption.7}{}}
 \newlabel{fig:CCM_AmBe_hist2d@cref}{{[figure][1][4]4.1}{[1][7][]8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Histograms of the counts per discrimination parameter for the neutron and gamma-ray events from the AmBe source, separated by the black line in \cref  {fig:CCM_AmBe_hist2d}. The counts are assumed to be Poisson distributed, so their uncertainties are simply $u(N)=\sqrt  {N}$, shown above and below the data. The distributions chosen to fit the data were based purely on what they looked most similar to.\relax }}{8}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:CCM_AmBe_separation_hist}{{4.2}{8}{Histograms of the counts per discrimination parameter for the neutron and gamma-ray events from the AmBe source, separated by the black line in \cref {fig:CCM_AmBe_hist2d}. The counts are assumed to be Poisson distributed, so their uncertainties are simply $u(N)=\sqrt {N}$, shown above and below the data. The distributions chosen to fit the data were based purely on what they looked most similar to.\relax }{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Histograms of the counts per discrimination parameter for the neutron and gamma-ray events from the AmBe source, separated by the black line in \cref  {fig:CCM_AmBe_hist2d}. The counts are assumed to be Poisson distributed, so their uncertainties are simply $u(N)=\sqrt  {N}$, shown above and below the data. The distributions chosen to fit the data were based purely on what they looked most similar to, however Gaussians are the expected shape\relax }}{8}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:CCM_AmBe_separation_hist}{{4.2}{8}{Histograms of the counts per discrimination parameter for the neutron and gamma-ray events from the AmBe source, separated by the black line in \cref {fig:CCM_AmBe_hist2d}. The counts are assumed to be Poisson distributed, so their uncertainties are simply $u(N)=\sqrt {N}$, shown above and below the data. The distributions chosen to fit the data were based purely on what they looked most similar to, however Gaussians are the expected shape\relax }{figure.caption.8}{}}
 \newlabel{fig:CCM_AmBe_separation_hist@cref}{{[figure][2][4]4.2}{[1][7][]8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Counts per discrimination parameter for two ranges of $L$. The functions fitted are Gaussians. Uncertainties assumed to be Poissonian.\relax }}{9}{figure.caption.9}\protected@file@percent }
-\newlabel{fig:CCM_AmBe_separation_hist_split}{{4.3}{9}{Counts per discrimination parameter for two ranges of $L$. The functions fitted are Gaussians. Uncertainties assumed to be Poissonian.\relax }{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Counts per discrimination parameter for two ranges of $L$ for the data in \cref  {fig:CCM_AmBe_hist2d}. The functions fitted are Gaussians. Uncertainties assumed to be Poissonian.\relax }}{9}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:CCM_AmBe_separation_hist_split}{{4.3}{9}{Counts per discrimination parameter for two ranges of $L$ for the data in \cref {fig:CCM_AmBe_hist2d}. The functions fitted are Gaussians. Uncertainties assumed to be Poissonian.\relax }{figure.caption.9}{}}
 \newlabel{fig:CCM_AmBe_separation_hist_split@cref}{{[figure][3][4]4.3}{[1][8][]9}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {\centering $L=$\SI {0}{\mevee } to $L=$\SI {2}{\mevee }. $M=1.64$.}}}{9}{subfigure.3.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {\centering $L=$\SI {2}{\mevee } to $L=$\SI {4}{\mevee }. $M=2.62$.}}}{9}{subfigure.3.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces 2D histogram showing the discrimination parameter $S$ versus the energy $L$ for the STNG source, analysed using CCM. The plot has been cropped to best show off the relevant parts: the two loci. Above the black line are the gamma-ray events and below the neutron events. The separation was made by trial and error using a log function. Note the defined edge of the neutron locus around \SI {8}{\mevee }, as well as the two clumps corresponding to deuteron and alpha particle recoils.\relax }}{9}{figure.caption.10}\protected@file@percent }
-\newlabel{fig:CCM_STNG_hist2d}{{4.4}{9}{2D histogram showing the discrimination parameter $S$ versus the energy $L$ for the STNG source, analysed using CCM. The plot has been cropped to best show off the relevant parts: the two loci. Above the black line are the gamma-ray events and below the neutron events. The separation was made by trial and error using a log function. Note the defined edge of the neutron locus around \SI {8}{\mevee }, as well as the two clumps corresponding to deuteron and alpha particle recoils.\relax }{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {\centering $L=$\SI {0}{\mevee } to $L=$\SI {2}{\mevee }. $M=\num {1.50872(0.00057)}$.}}}{9}{subfigure.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {\centering $L=$\SI {2}{\mevee } to $L=$\SI {4}{\mevee }. $M=\num {2.4388(0.0017)}$.}}}{9}{subfigure.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces 2D histogram showing the discrimination parameter $S$ versus the energy $L$ for the STNG source, analysed using CCM. The plot has been cropped to best show off the relevant parts: the two loci. Above the black line are the gamma-ray events and below, the neutron events. The separation was made by trial and error using a log function. Note the defined edge of the neutron locus around \SI {8}{\mevee }, as well as the two clumps corresponding to deuteron and alpha particle recoils.\relax }}{9}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:CCM_STNG_hist2d}{{4.4}{9}{2D histogram showing the discrimination parameter $S$ versus the energy $L$ for the STNG source, analysed using CCM. The plot has been cropped to best show off the relevant parts: the two loci. Above the black line are the gamma-ray events and below, the neutron events. The separation was made by trial and error using a log function. Note the defined edge of the neutron locus around \SI {8}{\mevee }, as well as the two clumps corresponding to deuteron and alpha particle recoils.\relax }{figure.caption.10}{}}
 \newlabel{fig:CCM_STNG_hist2d@cref}{{[figure][4][4]4.4}{[1][9][]9}}
 \citation{Mevee}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Histograms of the counts per discrimination parameter for the neutron and gamma-ray events from the STNG source, separated by the black line in \cref  {fig:CCM_STNG_hist2d} and for energies $L>\SI {1}{\mevee }$. The counts are assumed to be Poisson distributed, so their uncertainties are simply $u(N)=\sqrt  {N}$, shown above and below the data. The neutron fitting was performed on only the data to the right of the maximum. The FoM was found to be $M=\num {2.07852(0.00049)}$.\relax }}{10}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:CCM_STNG_separation_hist}{{4.5}{10}{Histograms of the counts per discrimination parameter for the neutron and gamma-ray events from the STNG source, separated by the black line in \cref {fig:CCM_STNG_hist2d} and for energies $L>\SI {1}{\mevee }$. The counts are assumed to be Poisson distributed, so their uncertainties are simply $u(N)=\sqrt {N}$, shown above and below the data. The neutron fitting was performed on only the data to the right of the maximum. The FoM was found to be $M=\num {2.07852(0.00049)}$.\relax }{figure.caption.11}{}}
+\newlabel{fig:CCM_STNG_separation_hist@cref}{{[figure][5][4]4.5}{[1][9][]10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Pad\'e-Laplace Method}{10}{subsection.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces 2D histogram showing the discrimination parameter $S_{\mathrm  {PL}}$ from \cref  {eqn:PL parameter} versus $L$ for the AmBe source. This has been heavily cropped to try show off the most relevant sections of the data, but there is no real form to this data.\relax }}{11}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:PL_AmBe_hist2d_1}{{4.6}{11}{2D histogram showing the discrimination parameter $S_{\mathrm {PL}}$ from \cref {eqn:PL parameter} versus $L$ for the AmBe source. This has been heavily cropped to try show off the most relevant sections of the data, but there is no real form to this data.\relax }{figure.caption.12}{}}
+\newlabel{fig:PL_AmBe_hist2d_1@cref}{{[figure][6][4]4.6}{[1][10][]11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces 2D histogram showing the discrimination parameter $S_{PL}=A_d/A_p$ versus $L$ for the AmBe source. Note the smaller numbers on the $S$ axis, but still no clear separation. \relax }}{11}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:PL_AmBe_hist2d_2}{{4.7}{11}{2D histogram showing the discrimination parameter $S_{PL}=A_d/A_p$ versus $L$ for the AmBe source. Note the smaller numbers on the $S$ axis, but still no clear separation. \relax }{figure.caption.13}{}}
+\newlabel{fig:PL_AmBe_hist2d_2@cref}{{[figure][7][4]4.7}{[1][11][]11}}
+\citation{Hellen-Pade}
+\citation{Hellen-Code}
+\citation{Hellen-Pade}
 \bibcite{Knoll}{1}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion and Conclusions}{12}{section.5}\protected@file@percent }
+\newlabel{sec:Discussion and Conclusions}{{5}{12}{Discussion and Conclusions}{section.5}{}}
+\newlabel{sec:Discussion and Conclusions@cref}{{[section][5][]5}{[1][12][]12}}
 \bibcite{Lang}{2}
 \bibcite{Kuchnir}{3}
 \bibcite{Yeramian}{4}
 \bibcite{Hellen-Pade}{5}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Histograms of the counts per discrimination parameter for the neutron and gamma-ray events from the STNG source, separated by the black line in \cref  {fig:CCM_STNG_hist2d} and for energies $L>\SI {1}{\mevee }$. The counts are assumed to be Poisson distributed, so their uncertainties are simply $u(N)=\sqrt  {N}$, shown above and below the data. The neutron fitting was performed on only the data to the right of the maximum. The FoM was found to be $M=2.27$.\relax }}{10}{figure.caption.11}\protected@file@percent }
-\newlabel{fig:CCM_STNG_separation_hist}{{4.5}{10}{Histograms of the counts per discrimination parameter for the neutron and gamma-ray events from the STNG source, separated by the black line in \cref {fig:CCM_STNG_hist2d} and for energies $L>\SI {1}{\mevee }$. The counts are assumed to be Poisson distributed, so their uncertainties are simply $u(N)=\sqrt {N}$, shown above and below the data. The neutron fitting was performed on only the data to the right of the maximum. The FoM was found to be $M=2.27$.\relax }{figure.caption.11}{}}
-\newlabel{fig:CCM_STNG_separation_hist@cref}{{[figure][5][4]4.5}{[1][9][]10}}
 \bibcite{Hellen-Code}{6}
 \bibcite{22Na Decay}{7}
 \bibcite{137Cs Decay}{8}
 \bibcite{60Co Decay}{9}
 \bibcite{Mevee}{10}
-\gdef \@abspage@last{11}
+\gdef \@abspage@last{13}

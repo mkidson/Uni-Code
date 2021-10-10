@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  9 OCT 2021 22:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  10 OCT 2021 18:08
 entering extended mode
 **"d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/PSD Project/Report/digitalPSD.tex"
 (d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/PSD Project/Report/digitalPSD.tex
@@ -944,7 +944,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
 pdfTeX warning: pdflatex (file ./Plots/neutronScattering.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Plots/neutronScattering.pdf, id=59, 180.675pt x 103.3461pt>
+<Plots/neutronScattering.pdf, id=67, 180.675pt x 103.3461pt>
 File: Plots/neutronScattering.pdf Graphic file (type pdf)
 <use Plots/neutronScattering.pdf>
 Package pdftex.def Info: Plots/neutronScattering.pdf  used on input line 54.
@@ -964,7 +964,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--71
 
  []
 
-
+[3]
 Overfull \hbox (2.08995pt too wide) in paragraph at lines 90--92
 \OT1/cmr/m/n/10.95 found. This could be done us-ing some non-lin-ear fit-ting pro-gram such as \OT1/cmtt/m/n/10.95 scipy.optimize.curve[]fit
  []
@@ -974,7 +974,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--92
 
  []
 
-[3] [4] [5] (Plots/anode_no_flip.pgf
+[4]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(Plots/anode_no_flip.pgf
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <16> not available
 (Font)              size <17.28> substituted on input line 93.
@@ -1005,74 +1009,108 @@ Overfull \hbox (0.6021pt too wide) in paragraph at lines 159--160
 [][] 
  []
 
-(Plots/anode_flipped.pgf)
-Overfull \hbox (0.6021pt too wide) in paragraph at lines 176--177
+[5] (Plots/anode_flipped.pgf)
+Overfull \hbox (0.6021pt too wide) in paragraph at lines 178--179
 [][] 
  []
 
 [6]
-<Plots/CCM_AmBe_hist2d.png, id=161, 470.4777pt x 354.8457pt>
-File: Plots/CCM_AmBe_hist2d.png Graphic file (type png)
-<use Plots/CCM_AmBe_hist2d.png>
-Package pdftex.def Info: Plots/CCM_AmBe_hist2d.png  used on input line 192.
-(pdftex.def)             Requested size: 352.8574pt x 266.1336pt.
-<Plots/CCM_AmBe_separation_hist.png, id=163, 470.4777pt x 354.8457pt>
-File: Plots/CCM_AmBe_separation_hist.png Graphic file (type png)
-<use Plots/CCM_AmBe_separation_hist.png>
-Package pdftex.def Info: Plots/CCM_AmBe_separation_hist.png  used on input line 199.
-(pdftex.def)             Requested size: 352.8574pt x 266.1336pt.
+<Plots/CCM_AmBe_hist2d.pdf, id=176, 469.95485pt x 355.32701pt>
+File: Plots/CCM_AmBe_hist2d.pdf Graphic file (type pdf)
+<use Plots/CCM_AmBe_hist2d.pdf>
+Package pdftex.def Info: Plots/CCM_AmBe_hist2d.pdf  used on input line 193.
+(pdftex.def)             Requested size: 343.0642pt x 259.38655pt.
+<Plots/CCM_AmBe_separation_hist.pdf, id=177, 470.95901pt x 355.32428pt>
+File: Plots/CCM_AmBe_separation_hist.pdf Graphic file (type pdf)
+<use Plots/CCM_AmBe_separation_hist.pdf>
+Package pdftex.def Info: Plots/CCM_AmBe_separation_hist.pdf  used on input line 200.
+(pdftex.def)             Requested size: 343.79723pt x 259.38457pt.
  [7]
-<Plots/CCM_AmBe_separation_hist_2.png, id=173, 470.4777pt x 354.8457pt>
-File: Plots/CCM_AmBe_separation_hist_2.png Graphic file (type png)
-<use Plots/CCM_AmBe_separation_hist_2.png>
-Package pdftex.def Info: Plots/CCM_AmBe_separation_hist_2.png  used on input line 207.
-(pdftex.def)             Requested size: 470.47655pt x 354.84482pt.
-<Plots/CCM_AmBe_separation_hist_4.png, id=174, 470.4777pt x 354.8457pt>
-File: Plots/CCM_AmBe_separation_hist_4.png Graphic file (type png)
-<use Plots/CCM_AmBe_separation_hist_4.png>
-Package pdftex.def Info: Plots/CCM_AmBe_separation_hist_4.png  used on input line 209.
-(pdftex.def)             Requested size: 470.47655pt x 354.84482pt.
- [8 <./Plots/CCM_AmBe_hist2d.png> <./Plots/CCM_AmBe_separation_hist.png>]
-<Plots/CCM_STNG_hist2d.png, id=182, 470.4777pt x 354.8457pt>
-File: Plots/CCM_STNG_hist2d.png Graphic file (type png)
-<use Plots/CCM_STNG_hist2d.png>
-Package pdftex.def Info: Plots/CCM_STNG_hist2d.png  used on input line 218.
-(pdftex.def)             Requested size: 352.8574pt x 266.1336pt.
-<Plots/CCM_STNG_separation_hist.png, id=183, 470.4777pt x 354.8457pt>
-File: Plots/CCM_STNG_separation_hist.png Graphic file (type png)
-<use Plots/CCM_STNG_separation_hist.png>
-Package pdftex.def Info: Plots/CCM_STNG_separation_hist.png  used on input line 226.
-(pdftex.def)             Requested size: 352.8574pt x 266.1336pt.
- [9 <./Plots/CCM_AmBe_separation_hist_2.png> <./Plots/CCM_AmBe_separation_hist_4.png> <./Plots/CCM_STNG_hist2d.png>] [10 <./Plots/CCM_STNG_separation_hist.png>]
-Underfull \hbox (badness 4084) in paragraph at lines 255--256
+<Plots/CCM_AmBe_separation_hist_2.pdf, id=187, 470.95901pt x 355.32701pt>
+File: Plots/CCM_AmBe_separation_hist_2.pdf Graphic file (type pdf)
+<use Plots/CCM_AmBe_separation_hist_2.pdf>
+Package pdftex.def Info: Plots/CCM_AmBe_separation_hist_2.pdf  used on input line 208.
+(pdftex.def)             Requested size: 470.95787pt x 355.32613pt.
+<Plots/CCM_AmBe_separation_hist_4.pdf, id=188, 470.95901pt x 355.32701pt>
+File: Plots/CCM_AmBe_separation_hist_4.pdf Graphic file (type pdf)
+<use Plots/CCM_AmBe_separation_hist_4.pdf>
+Package pdftex.def Info: Plots/CCM_AmBe_separation_hist_4.pdf  used on input line 210.
+(pdftex.def)             Requested size: 470.95787pt x 355.32613pt.
+ [8 <./Plots/CCM_AmBe_hist2d.pdf> <./Plots/CCM_AmBe_separation_hist.pdf
+
+pdfTeX warning: pdflatex (file ./Plots/CCM_AmBe_separation_hist.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Plots/CCM_STNG_hist2d.pdf, id=237, 469.95485pt x 355.32701pt>
+File: Plots/CCM_STNG_hist2d.pdf Graphic file (type pdf)
+<use Plots/CCM_STNG_hist2d.pdf>
+Package pdftex.def Info: Plots/CCM_STNG_hist2d.pdf  used on input line 218.
+(pdftex.def)             Requested size: 343.0642pt x 259.38655pt.
+<Plots/CCM_STNG_separation_hist.pdf, id=238, 470.95901pt x 355.32661pt>
+File: Plots/CCM_STNG_separation_hist.pdf Graphic file (type pdf)
+<use Plots/CCM_STNG_separation_hist.pdf>
+Package pdftex.def Info: Plots/CCM_STNG_separation_hist.pdf  used on input line 226.
+(pdftex.def)             Requested size: 343.79723pt x 259.38626pt.
+ [9 <./Plots/CCM_AmBe_separation_hist_2.pdf> <./Plots/CCM_AmBe_separation_hist_4.pdf
+
+pdfTeX warning: pdflatex (file ./Plots/CCM_AmBe_separation_hist_4.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Plots/CCM_STNG_hist2d.pdf
+
+pdfTeX warning: pdflatex (file ./Plots/CCM_STNG_hist2d.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Plots/PL_AmBe_hist2d_1.pdf, id=299, 469.9614pt x 355.32701pt>
+File: Plots/PL_AmBe_hist2d_1.pdf Graphic file (type pdf)
+<use Plots/PL_AmBe_hist2d_1.pdf>
+Package pdftex.def Info: Plots/PL_AmBe_hist2d_1.pdf  used on input line 240.
+(pdftex.def)             Requested size: 343.06895pt x 259.38655pt.
+ [10 <./Plots/CCM_STNG_separation_hist.pdf>]
+<Plots/PL_AmBe_hist2d_2.pdf, id=323, 469.95534pt x 355.32701pt>
+File: Plots/PL_AmBe_hist2d_2.pdf Graphic file (type pdf)
+<use Plots/PL_AmBe_hist2d_2.pdf>
+Package pdftex.def Info: Plots/PL_AmBe_hist2d_2.pdf  used on input line 248.
+(pdftex.def)             Requested size: 343.06453pt x 259.38655pt.
+ [11 <./Plots/PL_AmBe_hist2d_1.pdf> <./Plots/PL_AmBe_hist2d_2.pdf
+
+pdfTeX warning: pdflatex (file ./Plots/PL_AmBe_hist2d_2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 260--262
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--265
+
+ []
+
+[12]
+Underfull \hbox (badness 4084) in paragraph at lines 286--287
 []\OT1/cmr/m/n/10.95 E. Hellen, Pade-Laplace code in python2.7 as im-ple-mented in 2005 AJP ar-ti-cle,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
+Underfull \hbox (badness 10000) in paragraph at lines 286--287
 []$\OT1/cmtt/m/n/10.95 https : / / www . researchgate . net / publication / 337032883 _ Pade-[]Laplace _ code _ in _
  []
 
-[11] (digitalPSD.aux)
+[13] (digitalPSD.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
 
 Package rerunfilecheck Info: File `digitalPSD.out' has not changed.
-(rerunfilecheck)             Checksum: 2D7A5ADD6D1F903BF51A5CF380B33E30;1526.
+(rerunfilecheck)             Checksum: C141F6FDC5BDAC125118B4CA1D0BF3F3;1865.
  ) 
 Here is how much of TeX's memory you used:
- 41312 strings out of 479125
- 959487 string characters out of 4612535
- 6411992 words of memory out of 19000000
- 58277 multiletter control sequences out of 15000+600000
+ 41339 strings out of 479125
+ 960354 string characters out of 4612535
+ 6416776 words of memory out of 19000000
+ 58297 multiletter control sequences out of 15000+600000
  420447 words of font info for 94 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,25n,103p,1298b,890s stack positions out of 5000i,500n,10000p,5000000b,80000s
-{D:/Program Files/MikTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on digitalPSD.pdf (11 pages, 563681 bytes).
+ 99i,25n,103p,1424b,890s stack positions out of 5000i,500n,10000p,5000000b,80000s
+{D:/Program Files/MikTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on digitalPSD.pdf (13 pages, 18492403 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
- 59 named destinations out of 1000 (max. 500000)
- 128 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 476 PDF objects out of 1000 (max. 8388607)
+ 65 named destinations out of 1000 (max. 500000)
+ 154 words of extra memory for PDF output out of 10000 (max. 10000000)
 

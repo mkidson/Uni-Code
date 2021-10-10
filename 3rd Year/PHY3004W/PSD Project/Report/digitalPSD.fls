@@ -1240,27 +1240,24 @@ INPUT .\Plots\anode_flipped.pgf
 INPUT Plots\anode_flipped.pgf
 INPUT .\Plots\anode_flipped.pgf
 INPUT Plots\anode_flipped.pgf
-INPUT .\Plots\CCM_AmBe_hist2d.png
-INPUT .\Plots\CCM_AmBe_hist2d.png
-INPUT Plots\CCM_AmBe_hist2d.png
-INPUT .\Plots\CCM_AmBe_hist2d.png
-INPUT .\Plots\CCM_AmBe_hist2d.png
-INPUT .\Plots\CCM_AmBe_hist2d.png
-INPUT .\Plots\CCM_AmBe_hist2d.png
-INPUT .\Plots\CCM_AmBe_separation_hist.png
-INPUT .\Plots\CCM_AmBe_separation_hist.png
-INPUT Plots\CCM_AmBe_separation_hist.png
-INPUT .\Plots\CCM_AmBe_separation_hist.png
-INPUT .\Plots\CCM_AmBe_separation_hist.png
-INPUT .\Plots\CCM_AmBe_separation_hist.png
-INPUT .\Plots\CCM_AmBe_separation_hist.png
-INPUT .\Plots\CCM_AmBe_separation_hist_2.png
-INPUT .\Plots\CCM_AmBe_separation_hist_2.png
-INPUT Plots\CCM_AmBe_separation_hist_2.png
-INPUT .\Plots\CCM_AmBe_separation_hist_2.png
-INPUT .\Plots\CCM_AmBe_separation_hist_2.png
-INPUT .\Plots\CCM_AmBe_separation_hist_2.png
-INPUT .\Plots\CCM_AmBe_separation_hist_2.png
+INPUT .\Plots\CCM_AmBe_hist2d.pdf
+INPUT .\Plots\CCM_AmBe_hist2d.pdf
+INPUT Plots\CCM_AmBe_hist2d.pdf
+INPUT .\Plots\CCM_AmBe_hist2d.pdf
+INPUT .\Plots\CCM_AmBe_hist2d.pdf
+INPUT .\Plots\CCM_AmBe_hist2d.pdf
+INPUT .\Plots\CCM_AmBe_separation_hist.pdf
+INPUT .\Plots\CCM_AmBe_separation_hist.pdf
+INPUT Plots\CCM_AmBe_separation_hist.pdf
+INPUT .\Plots\CCM_AmBe_separation_hist.pdf
+INPUT .\Plots\CCM_AmBe_separation_hist.pdf
+INPUT .\Plots\CCM_AmBe_separation_hist.pdf
+INPUT .\Plots\CCM_AmBe_separation_hist_2.pdf
+INPUT .\Plots\CCM_AmBe_separation_hist_2.pdf
+INPUT Plots\CCM_AmBe_separation_hist_2.pdf
+INPUT .\Plots\CCM_AmBe_separation_hist_2.pdf
+INPUT .\Plots\CCM_AmBe_separation_hist_2.pdf
+INPUT .\Plots\CCM_AmBe_separation_hist_2.pdf
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr9.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmmi9.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmsy9.tfm
@@ -1269,27 +1266,36 @@ INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss9.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt9.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT .\Plots\CCM_AmBe_separation_hist_4.png
-INPUT .\Plots\CCM_AmBe_separation_hist_4.png
-INPUT Plots\CCM_AmBe_separation_hist_4.png
-INPUT .\Plots\CCM_AmBe_separation_hist_4.png
-INPUT .\Plots\CCM_AmBe_separation_hist_4.png
-INPUT .\Plots\CCM_AmBe_separation_hist_4.png
-INPUT .\Plots\CCM_AmBe_separation_hist_4.png
-INPUT .\Plots\CCM_STNG_hist2d.png
-INPUT .\Plots\CCM_STNG_hist2d.png
-INPUT Plots\CCM_STNG_hist2d.png
-INPUT .\Plots\CCM_STNG_hist2d.png
-INPUT .\Plots\CCM_STNG_hist2d.png
-INPUT .\Plots\CCM_STNG_hist2d.png
-INPUT .\Plots\CCM_STNG_hist2d.png
-INPUT .\Plots\CCM_STNG_separation_hist.png
-INPUT .\Plots\CCM_STNG_separation_hist.png
-INPUT Plots\CCM_STNG_separation_hist.png
-INPUT .\Plots\CCM_STNG_separation_hist.png
-INPUT .\Plots\CCM_STNG_separation_hist.png
-INPUT .\Plots\CCM_STNG_separation_hist.png
-INPUT .\Plots\CCM_STNG_separation_hist.png
+INPUT .\Plots\CCM_AmBe_separation_hist_4.pdf
+INPUT .\Plots\CCM_AmBe_separation_hist_4.pdf
+INPUT Plots\CCM_AmBe_separation_hist_4.pdf
+INPUT .\Plots\CCM_AmBe_separation_hist_4.pdf
+INPUT .\Plots\CCM_AmBe_separation_hist_4.pdf
+INPUT .\Plots\CCM_AmBe_separation_hist_4.pdf
+INPUT .\Plots\CCM_STNG_hist2d.pdf
+INPUT .\Plots\CCM_STNG_hist2d.pdf
+INPUT Plots\CCM_STNG_hist2d.pdf
+INPUT .\Plots\CCM_STNG_hist2d.pdf
+INPUT .\Plots\CCM_STNG_hist2d.pdf
+INPUT .\Plots\CCM_STNG_hist2d.pdf
+INPUT .\Plots\CCM_STNG_separation_hist.pdf
+INPUT .\Plots\CCM_STNG_separation_hist.pdf
+INPUT Plots\CCM_STNG_separation_hist.pdf
+INPUT .\Plots\CCM_STNG_separation_hist.pdf
+INPUT .\Plots\CCM_STNG_separation_hist.pdf
+INPUT .\Plots\CCM_STNG_separation_hist.pdf
+INPUT .\Plots\PL_AmBe_hist2d_1.pdf
+INPUT .\Plots\PL_AmBe_hist2d_1.pdf
+INPUT Plots\PL_AmBe_hist2d_1.pdf
+INPUT .\Plots\PL_AmBe_hist2d_1.pdf
+INPUT .\Plots\PL_AmBe_hist2d_1.pdf
+INPUT .\Plots\PL_AmBe_hist2d_1.pdf
+INPUT .\Plots\PL_AmBe_hist2d_2.pdf
+INPUT .\Plots\PL_AmBe_hist2d_2.pdf
+INPUT Plots\PL_AmBe_hist2d_2.pdf
+INPUT .\Plots\PL_AmBe_hist2d_2.pdf
+INPUT .\Plots\PL_AmBe_hist2d_2.pdf
+INPUT .\Plots\PL_AmBe_hist2d_2.pdf
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx10.tfm
 INPUT digitalPSD.aux
@@ -1328,17 +1334,19 @@ INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr9.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr9.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmss12.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmss12.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmss17.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmss17.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy9.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy9.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\cm-super\sfrm1095.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\cm-super\sfrm1095.pfb
