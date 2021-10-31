@@ -1,16 +1,24 @@
-L = 30;
+L = 60;
 N = 5000;
 h = L/N;
-tau = 0.0025;
-tMax = 500;
+tau = h;
+tMax = 2000;
 gamma = 0.25;
 h1 = 0.25;
-A = 1;
-theta = 1;
+theta = asin(gamma/h1)/2;
+A = sqrt(h*cos(2*theta)+1);
+% x1=-20;
+% v1=5;
+% x2=20;
+% v2=-5;
+% A1=1;
+% A2=1;
 
-x = (-L:h:L-h);
+x=(-L/2:h:L/2-h);
 y = linspace(0,tMax*tau,tMax);
-psi = A.*exp(-1i*theta).*sech(A.*x);
+psi = A*exp(-1i*theta).*sech(A.*x);
+% psi = ((A1*sech(A1.*(x-x1)).*exp(1i*v1.*(x-x1)))+(A2*sech(A2.*(x-x2)).*exp(1i*v2.*(x-x2))));
+
 
 figure(1)
 plot(x,abs(psi))
@@ -22,9 +30,16 @@ n = [0:N/2-1 -N/2:-1].^2;
 n = exp(-1i*tau*4*pi^2/L^2*n);
 tic
 for tt = 1:tMax-1
-    psi = psi.*exp(2*abs(psi).^2-1+1i*gamma-h.*conj(psi));
+    psi = psi.*exp(1i*tau*2*abs(psi).^2);
+    y_n = n.*fft(real(psi));
+    z_n = n.*fft(imag(psi));
+    k_n = 2*pi*n/L;
+    omega_n = sqrt((1+k_n.^2).^2 - h1^2);
+    alpha_n = sqrt((1+k_n.^2-h)/(1+k_n.^2+h));
+    A_n = ((y_n-alpha_n.*z_n)/2).*exp(tau.*omega_n) + ((y_n+alpha_n.*z_n)/2).*exp(-tau.*omega_n);
+    B_n = ((z_n-(1/alpha_n).*y_n)/2).*exp(tau.*omega_n) + ((z_n+(1/alpha_n).*y_n)/2).*exp(-tau.*omega_n);
     
-    psi = ifft(n.*fft(psi));
+    psi = ifft(exp(-gamma*tau).*(A_n+1i.*B_n));
     
 %     conserved = trapz(x,abs(psi).^2);
 %     con(tt+1) = conserved;

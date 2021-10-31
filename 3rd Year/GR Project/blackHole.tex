@@ -1,0 +1,260 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in, top=0.3in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage[separate-uncertainty=true, group-digits=false]{siunitx}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,subfig,caption,import,wrapfig,bbm}
+\usepackage[version=4]{mhchem}
+\usepackage[noabbrev]{cleveref}
+\newcommand{\creflastconjunction}{, and\nobreakspace}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\captionsetup{font=small, belowskip=0pt}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+
+\title{Extracting energy from black holes (theoretically)}
+\author{Miles Kidson \\ Department of Mathematics and Applied Mathematics \\ University of Cape Town \\ Rondebosch 7701 \\ Cape Town, South Africa }
+\date{October 2021}
+
+\maketitle
+
+\begin{center}
+    \begin{abstract}
+        In this paper
+    \end{abstract}
+\end{center}
+
+\section{Introduction}\label{sec:Introduction}
+\par The underlying phenomenon that this paper investigates, that of black holes losing energy, is a phenomenon that at first glance doesn't seem to make much sense. We are told that black holes are the great attractor, letting nothing escape their grasp, not even light. Yet it turns out that the mathematics that led us to the concept of black holes, Einstein's general theory of relativity, also leads us towards the idea that, under the right circumstances, black holes can actually lose their energy. 
+\par In order to study this phenomenon, first we must build up the framework of general relativity that describes the specific circumstances where this effect can be seen. 
+
+\section{Building the coordinate system}\label{sec:coordinates}
+\par Since we are dealing with a system that is spherically symmetric, it's convenient for us to use a coordinate system that simplifies things. The simplest choice is spherical polar coordinates, where the transformation from cartesian coordinates is described by 
+\begin{align}
+    x=r\sin\theta\cos\phi\hspace{20pt}y&=r\sin\theta\sin\phi\hspace{20pt}z=r\cos\theta
+    \label{eqn:cartesian to spherical polars}\\
+    r=\sqrt{x^2+y^2+z^2}\hspace{20pt}\theta&=\arctan(\frac{\sqrt{x^2+y^2}}{z})\hspace{20pt}\phi=\arctan(y/x)
+    \label{eqn:spherical polars to cartesian}
+\end{align}
+We can then find the transformation matrix $\Lambda_\beta^{\bar\alpha}$ such that $dx^{\bar\alpha}=\Lambda^{\bar\alpha}_\beta dx^\beta$. We note that for neighbouring points we have 
+\begin{align*}
+    dr&=\frac{\partial r}{\partial x}dx + \frac{\partial r}{\partial y}dy + \frac{\partial r}{\partial z}dz\\
+    d\theta&=\frac{\partial \theta}{\partial x}dx + \frac{\partial \theta}{\partial y}dy + \frac{\partial \theta}{\partial z}dz\\
+    d\phi&=\frac{\partial \phi}{\partial x}dx + \frac{\partial \phi}{\partial y}dy + \frac{\partial \phi}{\partial z}dz\\
+\end{align*}
+The calculation of the derivatives takes a bit of work, but it isn't too hard to see that it simplifies to 
+\begin{align*}
+    dr&=\sin\theta\cos\phi dx + \sin\theta\sin\phi dy + \cos\theta dz\\
+    d\theta&=\frac{\cos\theta\cos\varphi}{r}dx + \frac{\cos\theta\sin\varphi}{r} dy -\frac{\sin\theta}{r}dz\\
+    d\phi&=-\frac{\sin\varphi}{r\sin\theta}dx + \frac{\cos\varphi}{r\sin\theta}dy + 0dz
+\end{align*}
+This gives us our components of the $\Lambda_\beta^{\bar\alpha}$ matrix:
+\begin{equation}
+    \Lambda_\beta^{\bar\alpha}=
+    \begin{pmatrix}
+        \sin\theta\cos\varphi&\sin\theta\sin\varphi&\cos\theta\\
+        \frac{\cos\theta\cos\varphi}{r}&\frac{\cos\theta\sin\varphi}{r}&-\frac{\sin\theta}{r}\\
+        -\frac{\sin\varphi}{r\sin\theta}&\frac{\cos\varphi}{r\sin\theta}&0
+    \end{pmatrix}
+\end{equation}
+We can also define the one-form for an arbitrary scalar field $\varphi$:
+\begin{equation}
+    \tilde{\textbf{d}}\varphi\rightarrow\left(\frac{\partial\varphi}{\partial r},\frac{\partial\varphi}{\partial\theta},\frac{\partial\varphi}{\partial\phi}\right)
+    \label{eqn:scalar one-form}
+\end{equation}
+where we have 
+\begin{align*}
+    \frac{\partial \varphi}{\partial r}&=\frac{\partial\varphi}{\partial x}\frac{\partial x}{\partial r}+\frac{\partial\varphi}{\partial y}\frac{\partial y}{\partial r}+\frac{\partial\varphi}{\partial z}\frac{\partial z}{\partial r}\\
+    &=\sin\theta\cos\phi\frac{\partial\varphi}{\partial x}+\sin\theta\sin\phi\frac{\partial\varphi}{\partial y}+\cos\theta\frac{\partial\varphi}{\partial z}\\
+    \frac{\partial \varphi}{\partial \theta}&=\frac{\partial\varphi}{\partial x}\frac{\partial x}{\partial \theta}+\frac{\partial\varphi}{\partial y}\frac{\partial y}{\partial \theta}+\frac{\partial\varphi}{\partial z}\frac{\partial z}{\partial \theta}\\
+    &=r\cos\theta\cos\phi\frac{\partial\varphi}{\partial x}+r\cos\theta\sin\phi\frac{\partial\varphi}{\partial y}-r\sin\theta\frac{\partial\varphi}{\partial z}\\
+    \frac{\partial \varphi}{\partial \phi}&=\frac{\partial\varphi}{\partial x}\frac{\partial x}{\partial \phi}+\frac{\partial\varphi}{\partial y}\frac{\partial y}{\partial \phi}+\frac{\partial\varphi}{\partial z}\frac{\partial z}{\partial \phi}\\
+    &=-r\sin\theta\sin\phi\frac{\partial\varphi}{\partial x}+r\sin\theta\cos\phi\frac{\partial\varphi}{\partial y}+0{\partial\varphi}{\partial z}
+\end{align*}
+The one-form transforms like 
+\begin{equation*}
+    \frac{\partial\varphi}{\partial x^{\bar\beta}}=\Lambda_{\bar\beta}^\alpha\frac{\partial\varphi}{\partial x^\alpha}
+\end{equation*}
+so we can construct $\Lambda_{\bar\beta}^\alpha$:
+\begin{equation}
+    \Lambda_{\bar\beta}^\alpha=
+    \begin{pmatrix}
+        \sin\theta\cos\varphi&r\cos\theta\cos\varphi&-r\sin\theta\sin\varphi\\
+        \sin\theta\sin\varphi&r\cos\theta\sin\varphi&r\sin\theta\cos\varphi\\
+        \cos\theta&-r\sin\theta&0
+    \end{pmatrix}
+\end{equation}
+We expect these two matrices to be related in the form $\Lambda_\beta^{\bar\alpha}\Lambda_{\bar\beta}^\alpha=\mathbbm{1}$, the identity matrix \cite{dunsby}. We can now also find the metric tensor for this coordinate system:
+\begin{equation}
+    g_{\alpha\beta}=\Lambda^\gamma_{\bar\alpha}\Lambda^\delta_{\bar\beta}g_{\gamma\delta}
+\end{equation}
+In this case, $g_{\gamma\delta}$ is the metric for flat space. Note that we are not yet considering a time coordinate but at this point, with no mass in the system, it is identical to the time coordinate in Minkowski spacetime. We find our metric to be 
+\begin{equation}
+    g_{\bar\alpha\bar\beta}=
+    \begin{pmatrix}
+        1&0&0\\
+        0&r^2&0\\
+        0&0&r^2\sin^2\theta
+    \end{pmatrix}
+    \label{eqn:spherical polars metric}
+\end{equation}
+Since it is diagonal we can simply find the inverse metric by taking the inverse of each component:
+\begin{equation}
+    g^{\bar\alpha\bar\beta}=(g_{\bar\alpha\bar\beta})^{-1}=
+    \begin{pmatrix}
+        1&0&0\\
+        0&\frac{1}{r^2}&0\\
+        0&0&\frac{1}{r^2\sin^2\theta}
+    \end{pmatrix}
+    \label{eqn:spherical polars inverse metric}
+\end{equation}
+
+\section{The wave equation}\label{sec:Wave Equation}
+\par The mechanism by which energy will be extracted from this black hole involves the passing of a scalar wave through a part of space near the black hole. The details of this will be fleshed out later but for now let us investigate the wave equation in these coordinates. In a general reference frame and coordinate system, the wave equation is given by
+\begin{equation}
+    g^{\alpha\beta}\nabla_\alpha\nabla_\beta \varphi=g^{\alpha\beta}\nabla_\alpha\frac{\partial \varphi}{\partial x^\beta}=0
+    \label{eqn:general wave equation}
+\end{equation}
+where we are considering covariant derivatives. $\varphi$ is scalar field, so its first derivative acts like a normal derivative. For convenience, we will define this first derivative as $\frac{\partial \varphi}{\partial x^\beta} = A_\beta$. The second derivative, however, needs to be dealt with properly, using the definition of the covariant derivative, from \cite{dunsby}:
+\begin{equation}
+    V_{\alpha;\beta}=V_{\alpha,\beta}+V_\mu\Gamma^\alpha_{\mu\beta}
+    \label{eqn:covariant derivative}
+\end{equation}
+Our wave equation becomes
+\begin{equation*}
+    g^{\alpha\beta}\left(A_{\beta,\alpha}+A_\mu\Gamma^\alpha_{\mu\beta}\right)=0
+\end{equation*}
+and the problem has been reduced to simply finding the Christoffel symbols $\Gamma^\alpha_{\mu\beta}$. We will show the calculation of one of these for completeness, but the actual calculation was done with symbolic computing, using the \texttt{GRQUICK} module for Mathematica.
+\par The Christoffel symbols are given by 
+\begin{equation}
+    \Gamma^\alpha_{\mu\beta}=\frac{1}{2}g^{\alpha\delta}[g_{\mu\delta,\beta}+g_{\beta\delta,\mu}-g_{\mu\beta,\delta}]
+    \label{eqn:Christoffel symbol}
+\end{equation}
+So, choosing a combination of the indices that we know gives a non-zero result (thanks to Mathematica), we find
+\begin{align*}
+    \Gamma^r_{\phi\phi}&=\frac{1}{2}g^{r\delta}[g_{\phi\delta,\phi}+g_{\phi\delta,\phi}-g_{\phi\phi,\delta}]\\
+    &=\frac{1}{2}g^{rr}[g_{\phi r,\phi}+g_{\phi r,\phi}-g_{\phi\phi,r}]
+\end{align*}
+since the only non-zero component of the inverse metric, in the $r$ row, is the $rr$ component, which is 1. We also notice that in the $\phi$ row of the metric, the only non-zero component is the $\phi\phi$ component, meaning the first two terms in the square bracket are zero.
+\begin{align*}
+    \therefore\Gamma^r_{\phi\phi}&=\frac{1}{2}[0+0-\frac{\partial}{\partial r}(r^2\sin^2\theta)]\\
+    &=\frac{-1}{2}2r\sin^2\theta\\
+    &=-r\sin^2\theta
+\end{align*}
+The other non-zero components were 
+\begin{equation*}
+    \Gamma^\phi_{\theta\phi}=\cot\theta,\;\;\;\Gamma^\phi_{r\phi}=\frac{1}{r},\;\;\;\Gamma^\theta_{\phi\phi}=-\sin\theta\cos\theta,\;\;\;\Gamma^\theta_{r\theta}=\frac{1}{r},\;\;\;\Gamma^r_{\theta\theta}=-r
+\end{equation*}
+Putting all these together, recalling our definition of $A_\beta$, and introducing the time component of the metric, which is simply -1, the wave equation becomes
+\begin{align*}
+    0&=g^{tt}\left(\frac{\partial^2\varphi}{\partial t^2}+\frac{\partial\varphi}{\partial x^\mu}\Gamma^t_{\mu t}\right)+g^{rr}\left(\frac{\partial^2\varphi}{\partial r^2}+\frac{\partial\varphi}{\partial x^\mu}\Gamma^r_{\mu r}\right)+g^{\theta\theta}\left(\frac{\partial^2\varphi}{\partial \theta^2}+\frac{\partial\varphi}{\partial x^\mu}\Gamma^\theta_{\mu \theta}\right)+g^{\phi\phi}\left(\frac{\partial^2\varphi}{\partial \phi^2}+\frac{\partial\varphi}{\partial x^\mu}\Gamma^\phi_{\mu \phi}\right)\\
+    &=-(\varphi_{tt}+0)+(\varphi_{rr}+0)+\frac{1}{r^2}\left(\varphi_{\theta\theta}+\varphi_r\frac{1}{r}\right)+\frac{1}{r^2\sin^2\theta}\left(\varphi_{\phi\phi}+\varphi_r\frac{1}{r}+\varphi_\theta\cot\theta\right)
+\end{align*}
+Note that the metric and its inverse are diagonal, so we only get components from them when the index is the same. Finally we have 
+\begin{equation}
+    -\varphi_{tt}+\varphi_{rr}+\frac{1}{r^2}\left(\varphi_{\theta\theta}+\varphi_r\frac{1}{r}\right)+\frac{1}{r^2\sin^2\theta}\left(\varphi_{\phi\phi}+\varphi_r\frac{1}{r}+\varphi_\theta\cot\theta\right)
+    \label{eqn:wave equation spherical polars}
+\end{equation}
+
+\section{Simplifying the wave equation}\label{sec:simplifying wave equation}
+\par \Cref{eqn:wave equation spherical polars} would work for our purposes, but there are a few things that we can do to simplify this calculation that actually remove the need to compute the Christoffel symbols entirely. We begin by defining the determinant of the metric as $det||g_{\alpha\beta}||=g$. 
+\par Now, for any diagonalisable matrix $A$, \cite{determinant thm} tells us that 
+\begin{equation}
+    \det(e^{A})=e^{\tr(A)}
+    \label{eqn:determinant theorem}
+\end{equation}
+So, letting $B=\ln(A)$, we see
+\begin{align*}
+    \det(B)&=e^{\tr(\ln(B))}\\
+    \implies \ln(\det(B))&=\tr(\ln(B))\\
+    \implies \frac{\partial}{\partial x^\alpha}\ln(\det(B))&=\frac{\partial}{\partial x^\alpha}\tr(\ln(B))\\
+    &=\tr(\frac{\partial}{\partial x^\alpha}\ln(B))\\
+    &=\tr(B^{-1}\frac{partial}{\partial x^\alpha}B)
+\end{align*}
+Then using the fact that $\tr(A\cdot B)=A_{\mu\nu}B_{\mu\nu}$ and $(B_{\mu\nu})^{-1}=B^{\mu\nu}$ we have, substituting the metric in for B, our first identity:
+\begin{equation}
+    \frac{\partial}{\partial x^\alpha}\ln(g)=g^{\mu\nu}g_{\mu\nu,\alpha}
+    \label{eqn:identity 1}
+\end{equation}
+\par Next up, we want to find a simplification of the Christoffel symbols. Recalling the definition of the Christoffel symbols and noting that in the wave equation we always get Christoffel symbols of the form $\Gamma^\alpha_{\alpha\beta}$, we can write
+\begin{equation*}
+    \Gamma^\alpha_{\alpha\beta}=\frac{1}{2}g^{\alpha\delta}[g_{\alpha\delta,\beta}+g_{\beta\delta,\alpha}-g_{\alpha\beta,\delta}]\\
+\end{equation*}
+Now notice that, if our metric is symmetric, all the off-diagonal terms will cancel with each other while the only contributions will come from the diagonal terms. In our case that means we only have non-zero terms where $\alpha=\delta$, so the second two terms end up cancelling, leaving
+\begin{equation*}
+    \Gamma^\alpha_{\alpha\beta}=\frac{1}{2}g^{\alpha\delta}g_{\alpha\delta,\beta}
+\end{equation*}
+Using \cref{eqn:identity 1} we can see that 
+\begin{align*}
+    \frac{1}{2}g^{\alpha\delta}g_{\alpha\delta,\beta}&=\frac{1}{2}\frac{\partial}{\partial x^\alpha}\ln(g)\\
+    &=\frac{\partial}{\partial x^\alpha}\frac{1}{2}\ln(g)\\
+    &=\frac{\partial}{\partial x^\alpha}\ln(g^{1/2})
+\end{align*}
+Combining this we have a second identity:
+\begin{equation}
+    \Gamma^\alpha_{\alpha\beta}=\frac{\partial}{\partial x^\alpha}\ln(\sqrt{|g|})
+    \label{eqn:identity 2}
+\end{equation}
+\par Lastly, bringing it all back to the wave equation, we can write the wave equation as 
+\begin{equation}
+    g^{\alpha\beta}\nabla_\alpha\nabla_\beta \varphi=\nabla_\alpha\nabla^\alpha \varphi=\nabla_\alpha A^\alpha=0
+    \label{eqn:wave equation A}
+\end{equation}
+where, similar to before, we have defined $A^\alpha = \nabla^\alpha \varphi$. The covariant derivative of a vector is given by \cref{eqn:covariant derivative} and switching that $\beta$ to an $\alpha$ we have the wave equation as given in \cref{eqn:wave equation A}:
+\begin{align*}
+    \nabla_\alpha A^\alpha&=A^\alpha_{,\alpha}+A^\mu\Gamma^{\alpha}_{\mu\alpha}\\
+    &=A^\alpha_{,\alpha}+A^\mu\frac{\partial}{\partial x^\alpha}\ln(\sqrt{|g|})\\
+    &=A^\alpha_{,\alpha}+\frac{A^\mu}{\sqrt{|g|}}\frac{\partial}{\partial x^\alpha}\sqrt{|g|}\\
+    &=\frac{1}{\sqrt{|g|}}(\sqrt{|g|}A^\alpha)_{,\alpha}
+\end{align*}
+In the last line we have renamed the $\mu$ to $\alpha$ as it is a dummy index and then used product rule in reverse. Substituting the scalar field $\varphi$ back in, we have a new form of the wave equation:
+\begin{equation}
+    \frac{1}{\sqrt{|g|}}(\sqrt{|g|}\nabla^\alpha\varphi)_{,\alpha}=\frac{1}{\sqrt{|g|}}(\sqrt{|g|}g^{\alpha\beta}\nabla_\beta\varphi)_{,\alpha}=0
+    \label{eqn:wave equation spherical polars final}
+\end{equation}
+This does not require the calculation of endless Christoffel symbols, merely the determinant of the metric, which is fairly easily done. Note that this \cref{eqn:wave equation spherical polars final} was derived using only the fact that the metric is diagonalisable and symmetric, which is a fairly common set of conditions for a variety of metrics.
+
+\section{The Kerr-Newmann metric}\label{sec:Kerr-Newmann}
+\par The class of black hole that we will be studying is a rotating, uncharged black hole. This is described by the Kerr-Newmann metric. We will also be using so-called geometrised units, where $G=c=1$, in order to simplify our calculations. The Kerr-Newmann metric is as follows
+\begin{equation}
+    g_{\alpha\beta}=
+    \begin{pmatrix}
+        (-1+\frac{2mr}{\Sigma}) & 0 & 0 & \frac{-2amr\sin^2\theta}{\Sigma} \\
+        0 & \frac{\Sigma}{\Delta} & 0 & 0 \\
+        0 & 0 & \Sigma & 0 \\
+        \frac{-2amr\sin^2\theta}{\Sigma} & 0 & 0 & \left(r^2+a^2+\frac{2mra^2\sin^2\theta}{\Sigma}\sin^2\theta\right)
+    \end{pmatrix}
+\end{equation}
+
+
+
+
+\section*{Acknowledgements}
+This work was supported by
+
+
+\begin{thebibliography}{9}
+    \bibitem{dunsby}
+    P. K. S. Dunsby, \textit{An Introduction to Tensors and Relativity}, University of Cape Town (2015)
+
+    \bibitem{determinant thm}
+    A Beautiful Theorem Concerning Determinants, Retrieved 30 October 2021, \url{http://applet-magic.com/determinanttheorem.htm} (2021)
+\end{thebibliography}
+    
+\end{document}

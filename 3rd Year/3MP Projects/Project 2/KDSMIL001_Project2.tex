@@ -1,0 +1,113 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in, top=0.3in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage[separate-uncertainty=true, group-digits=false]{siunitx}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,subfig,caption,import,wrapfig}
+\usepackage[version=4]{mhchem}
+\usepackage[noabbrev]{cleveref}
+\newcommand{\creflastconjunction}{, and\nobreakspace}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\captionsetup{font=small, belowskip=0pt}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+
+\begin{center}
+    {\huge Parametrically driven, damped nonlinear Schr\"odinger equation}\\
+    \vspace{0.2in}
+    \textbf{KDSMIL001 | October 2021}
+
+    \section*{Abstract}\label{sec:Abstract}
+    
+    
+\end{center}
+
+\section{Introduction}\label{sec:Introduction}
+\par The equation of interest to us is the following:
+\begin{equation}
+    i\psi_t+\psi_{xx}+2|\psi|^2\psi-\psi=h\psi^*-i\gamma\psi=0
+    \label{eqn:original}
+\end{equation}
+Here $\gamma>0$ is the damping coefficient and $h>0$ is the amplitude of the driving term. 
+
+\section{Finding the dispersion relation}\label{sec:Dispersion}
+\par To begin, since $\psi$ is a complex number, let us express it in terms of its components, letting 
+\begin{equation}
+    \psi = u+iv\;\;\implies\;\; \psi^*=u-iv
+\end{equation}
+where $u$ and $v$ are both real numbers. Doing this, we are able to re-express \cref{eqn:original} in this form, leading to
+\begin{equation}
+    iu_t-v_t+u_{xx}+iv_{xx}+2(u^2+v^2)(u+iv)-u-iv=hu-hiv-i\gamma u+\gamma v=0
+    \label{eqn:expanded original}
+\end{equation}
+\par This has very neatly handled the problem of the complex conjugate, as otherwise that would've been a nasty guy to try and tackle. The other problem we have with this equation is the nonlinear part, stemming from the $2|\psi|^2\psi$ term in \cref{eqn:original}. As we are seeking a dispersion relation and nonlinearity tends to rain on the parade of dispersion relations, we will simply let this term wander off into the night, never to be seen again. This can be done if we are considering small values of $u$ and $v$. (This translates into small amplitude waves when we make the substitution in \cref{eqn:u wave,eqn:v wave}, but let's not get ahead of ourselves.)
+\par Since this \cref{eqn:expanded original} is equal to zero, both its real and imaginary parts must be equal to zero, handily leading us to two separate, but coupled, equations. 
+\begin{align}
+    (\partial_{xx}-1-h)u+(-\partial_t-\gamma)v&=0\\
+    (\partial_t+\gamma)u+(\partial_{xx}-1+h)v&=0
+\end{align}
+\par These are a pair of coupled Schr\"odinger equations and we know what kind of solution Schr\"odinger equations have: travelling waves. Let us guess two waves for $u$ and $v$ and see what happens:
+\begin{align}
+    u&=Ue^{i(\omega t-kx)}\label{eqn:u wave}\\
+    v&=Ve^{i(\omega t-kx)}\label{eqn:v wave}
+\end{align}
+\par Substituting these back into our coupled equations, and noting that space derivatives will yield simply $-ik$ and time derivatives will yield $-\omega$, we find
+\begin{align*}
+    (-k^2-1-h)Ue^{i(\omega t-kx)}+(i\omega-\gamma)Ve^{i(\omega t-kx)}&=0\\
+    (i\omega+\gamma)Ue^{i(\omega t-kx)}+(-k^2-1+h)Ve^{i(\omega t-kx)}&=0
+\end{align*}
+\par Thankfully, we can divide through both equations by the exponential, leaving us with a simple algebraic system of equations with unknowns $U$ and $V$
+\begin{align*}
+    -(k^2+1+h)U-(i\omega+\gamma)V&=0\\
+    (i\omega+\gamma)U-(k^2+1-h)V&=0
+\end{align*}
+which can be re-expressed as a matrix equation:
+\begin{equation}
+    \begin{pmatrix}
+        -(k^2+1+h) & -(i\omega+\gamma)\\
+        (i\omega+\gamma) & -(k^2+1-h)
+    \end{pmatrix}
+    \begin{pmatrix}
+        U\\
+        V
+    \end{pmatrix}
+    =0
+\end{equation}
+\par We know from linear algebra that this system of equations has a nontrivial solution only if the determinant of this matrix is zero. So we have 
+\begin{align*}
+    0&=(k^2+1+h)(k^2+1-h)+(i\omega+\gamma)^2\\
+    &=k^4+k^2-k^2h+k^2+1-h+k^2h+h-h^2-\omega^2+2i\omega\gamma+\gamma^2\\
+    &=\omega^2-2i\gamma\omega-k^4-2k^2+h^2-\gamma^2-1\\
+\end{align*}
+\par We can now solve for $\omega$ with the quadratic formula:
+\begin{align*}
+    \omega&=\frac{2i\gamma\pm\sqrt{(-2i\gamma)^2+4(k^4-2k^2+h^2-\gamma^2-1)}}{2}\\
+    &=i\gamma\pm\sqrt{k^4+2k^2-h^2+1}
+\end{align*}
+where we will label the two branches with $\omega_\pm$.
+\par The first branch we will consider is $\omega_+$, which has a positive real part if $h^2<k^4+2k^2+1$ or no real part if $h^2\geq k^4+2k^2+1$. This means $\omega_+$ is unstable for $h^2<k^4+2k^2+1$ and marginally stable for $h^2\geq k^4+2k^2+1$. $\omega_-$ cannot have a positive real part as the square root term cannot be negative, so it is stable for $h^2<k^4+2k^2+1$ and marginally stable for when there is no real part: $h^2\geq k^4+2k^2+1$. 
+\par Note that for both branches, $\gamma$ only affects the imaginary part of the dispersion relation and so has no influence on the stability of the system; we are free to choose whatever $\gamma$ we like.
+
+
+\begin{thebibliography}{9}
+    \bibitem{Mariana Bondila}
+    M. Bondila, \textit{Numerical study of the parametrically driven damped nonlinear Schr\"odinger equation}, University of Cape Town, (1995)
+    
+\end{thebibliography}
+\end{document}
