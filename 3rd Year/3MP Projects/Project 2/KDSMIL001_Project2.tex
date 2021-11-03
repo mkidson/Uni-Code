@@ -1,5 +1,5 @@
 \documentclass[11pt]{article}
-\usepackage[margin=1in, top=0.3in]{geometry}
+\usepackage[margin=1in, top=1in]{geometry}
 \usepackage[all]{nowidow}
 \usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
 \usepackage[separate-uncertainty=true, group-digits=false]{siunitx}
@@ -33,8 +33,9 @@
     \vspace{0.2in}
     \textbf{KDSMIL001 | October 2021}
 
-    \section*{Abstract}\label{sec:Abstract}
-    
+    \begin{abstract}
+        We find the region of stability for a parametrically driven, damped nonlinear Schr\"odinger equation, find the conditions for an exact soliton solution, and then simulate the equation using the split step Fourier method.
+    \end{abstract}
     
 \end{center}
 
@@ -101,8 +102,103 @@ which can be re-expressed as a matrix equation:
     &=i\gamma\pm\sqrt{k^4+2k^2-h^2+1}
 \end{align*}
 where we will label the two branches with $\omega_\pm$.
-\par The first branch we will consider is $\omega_+$, which has a positive real part if $h^2<k^4+2k^2+1$ or no real part if $h^2\geq k^4+2k^2+1$. This means $\omega_+$ is unstable for $h^2<k^4+2k^2+1$ and marginally stable for $h^2\geq k^4+2k^2+1$. $\omega_-$ cannot have a positive real part as the square root term cannot be negative, so it is stable for $h^2<k^4+2k^2+1$ and marginally stable for when there is no real part: $h^2\geq k^4+2k^2+1$. 
-\par Note that for both branches, $\gamma$ only affects the imaginary part of the dispersion relation and so has no influence on the stability of the system; we are free to choose whatever $\gamma$ we like.
+\begin{equation}
+    \omega_\pm=i\gamma\pm\sqrt{k^4+2k^2-h^2+1}
+    \label{eqn:dispersion relation}
+\end{equation}
+\par The dispersion relation of a differential equation can tell us about the stability of the equation. Our ansatz in \cref{eqn:u wave,eqn:v wave} has an exponential. If this exponential has a positive, real value in the exponent, the solution will simply grow. This is instability. If there is a negative real value in the exponent we see stability, and if there is no real part we will see stable oscillations. The dispersion relation we found is for $\omega$ in terms of $k$, $\gamma$, and $h$, and the exponential in our ansatz has an $i\omega t$ term in the exponent. To find stability we must then consider when $\omega$ has a non-negative imaginary component as the $i^2$ will give us a non-positive real term in the exponent.
+\par Let us begin by examining the square root in \cref{eqn:dispersion relation}. When $h^2\leq k^4+2k^2+1$, the square root term is real. When $h^2>k^4+2k^2+1$, the term is imaginary and positive.
+\par The first branch we will consider is $\omega_+$, which for $h^2\leq k^4+2k^2+1$ has a non-negative imaginary part only when $\gamma\geq0$. For $h^2>k^4+2k^2+1$, the imaginary part is $\gamma+\sqrt{h^2-k^4-2k^2-1}$, which is only non-negative if $\gamma\geq-\sqrt{h^2-k^4-2k^2-1}$. \Cref{fig:stabilityPlus} shows the regions of the $(\gamma, h)$ plane for which \cref{eqn:original} is stable.
+\par For the $\omega_-$ branch, again for $h^2\leq k^4+2k^2+1$ the only imaginary part is $\gamma$ and so we have stability for $\gamma\geq0$. For $h^2>k^4+2k^2+1$, the imaginary part is now $\gamma-\sqrt{h^2-k^4-2k^2-1}$, so we have stability for $\gamma\geq\sqrt{h^2-k^4-2k^2-1}$. \Cref{fig:stabilityMinus} shows the regions on the $(\gamma, h)$ plane for which \cref{eqn:original} is stable.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.5\textwidth]{Plots/stabilityPlus.pdf}
+        \caption{Stability diagram for the $\omega_+$ branch. Red means unstable and green means stable.}
+        \label{fig:stabilityPlus}
+    \end{center}
+\end{figure}
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.5\textwidth]{Plots/stabilityMinus.pdf}
+        \caption{Stability diagram for the $\omega_-$ branch. Red means unstable and green means stable.}
+        \label{fig:stabilityMinus}
+    \end{center}
+\end{figure}
+
+\section{Verifying an exact soliton solution}\label{sec:soliton solution}
+\par We are asked to find the values of $A$ and $\theta$ for which 
+\begin{equation}
+    \psi(x)=Ae^{-i\theta}\sech(Ax)
+    \label{eqn:soliton}
+\end{equation}
+is an exact soliton solution to \cref{eqn:original}. We can do this simply by substituting the solution in. First we notice that this solution has no time dependence, so its derivative with respect to $t$ is zero. Next we can find its derivatives with respect to $x$:
+\begin{align*}
+    \psi'(x)&=Ae^{-i\theta}(-\tanh(Ax)A\sech(Ax))\\
+    \psi''(x)&=-A^2e^{-i\theta}(\tanh(Ax)(-\tanh(Ax)A\sech(Ax))+\sech(Ax)(A\sech^2(Ax)))\\
+    &=A^3e^{-i\theta}\sech(Ax)(\tanh^2(Ax)-\sech^2(Ax))
+\end{align*}
+And we can also easily see
+\begin{equation*}
+    |\psi|^2=A^2\sech^2(Ax)
+\end{equation*}
+Inserting these back into \cref{eqn:original}, we get
+\begin{align*}
+    0=&A^3e^{-i\theta}\sech(Ax)(\tanh^2(Ax)-\sech^2(Ax))+2A^2\sech^2(Ax)Ae^{-i\theta}\sech(Ax)\\ &-Ae^{-i\theta}\sech(Ax)-hAe^{i\theta}\sech(Ax)+i\gamma Ae^{-i\theta}\sech(Ax)\\
+    =&A^3\sec(Ax)\left[\tanh^2(Ax)-\sech^2(Ax)+2\sech^2(Ax)\right]+A\sech(Ax)\left[i\gamma-1-he^{2i\theta}\right]
+\end{align*}
+where in the last line we have divided through by $e^{-i\theta}$ as it is always positive. The bracket in the first term simplifies to $\tanh^2(Ax)+\sech^2(Ax)=1$, so we get
+\begin{align*}
+    0&=A^3\sech(Ax)+A\sech(Ax)\left[i\gamma-1-he^{2i\theta}\right]\\
+    &=A\sech(Ax)\left[A^2+i\gamma-1-he^{2i\theta}\right]
+\end{align*}
+Now $\sech(Ax)$ is never zero so long as $x$ is finite, and $A=0$ is just the trivial solution, so we can simplify this further to have
+\begin{align*}
+    0&=A^2+i\gamma-1-he^{2i\theta}\\
+    &=A^2+i\gamma-1-h(\cos(2\theta)+i\sin(2\theta))\\
+    &=A^2-1-h\cos(2\theta)+i(\gamma-h\sin(2\theta))
+\end{align*}
+Since both the real and imaginary parts of the right hand side must be zero, we can split this into two equations:
+\begin{equation}
+    \begin{aligned}
+        0&=A^2-1-h\cos(2\theta)\\
+        \implies A&=\pm\sqrt{h\cos(2\theta)+1}
+    \end{aligned}
+    \qquad\textrm{and}\qquad
+    \begin{aligned}
+        0&=\gamma-h\sin(2\theta)\\
+        \implies \theta&=\frac{\arcsin(\gamma/2)}{2}
+    \end{aligned}
+    \label{eqn:A theta}
+\end{equation}
+\par Under these conditions of $A$ and $\theta$, \cref{eqn:soliton} is an exact soliton solution of \cref{eqn:original}. 
+
+\section{Simulation}\label{sec:simulation}
+\par The numerical method we chose to use was the split step Fourier method as it works very well for nonlinear Schr\"odinger equations. In our case, the complex conjugate term tripped us up a bit, but \cite{Mariana Bondila} studies precisely the same equation and they use the split step method to simulate the equation, so we have stood firmly on the shoulders of those specific giants in order to investigate \cref{eqn:original} numerically. The details of how to implement this method is outlined on pages 32-40.
+\par We implemented the steps outlined by \cite{Mariana Bondila}, considering the stability condition mentioned on page 39, and found \cref{eqn:soliton} to be a stationary soliton for the $A$ and $\theta$ found in \cref{eqn:A theta}.
+
+\begin{figure}[h]
+    \begin{center}   
+        \includegraphics[scale=0.6]{Plots/initialCondition.eps}
+        \caption{The initial condition used in the simulation: $\psi=Ae^{-i\theta}\sech(Ax)$, with $A$ and $\theta$ determined from \cref{eqn:A theta}. $\gamma=h=0.25$.}
+        \label{fig:initialCondition}
+    \end{center}
+\end{figure}
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[scale=0.6]{Plots/timeEvolution.eps}
+        \caption{Time evolution of \cref{eqn:original}, simulated using split step fourier method. Initial conditions the same as \cref{fig:initialCondition}. Simulation ran for 1000 time steps.}
+        \label{fig:timeEvolution}
+    \end{center}
+\end{figure}
+\par \Cref{fig:initialCondition} shows an example of the initial condition used in the following simulations. We kept $\gamma$ fixed at 0.25 and tried various values of $h\in[0.25,1]$ and found there to be no difference in evolution of the state, aside from a difference in height of the soliton, due to the dependence of $A$ and $\theta$ on $h$. In fact we found that the soliton was completely stationary for all time, as can be seen in \cref{fig:timeEvolution}.
+
+
+\par It makes sense that the soliton is stationary as the initial condition, \cref{eqn:soliton}, has no time dependence. It also makes sense that it remains constant as, given that it's a solution to \cref{eqn:original}, it will always remain a solution.
+
+\section{Conclusion}\label{sec:Conclusion}
+\par We found the dispersion relation for \cref{eqn:original}, shown in \cref{eqn:dispersion relation}. From there we were able to find the regions on the $(\gamma,h)$ plane for which the differential equation is stable. This was split into two branches, $\omega_+$ and $\omega_-$. We then found the $A$ and $\theta$ for which \cref{eqn:soliton} is an exact soliton solution to \cref{eqn:original}, which is given in \cref{eqn:A theta}. We simulated \cref{eqn:original} using \cref{eqn:soliton} as an initial condition and found it to be a stationary soliton.
+
 
 
 \begin{thebibliography}{9}

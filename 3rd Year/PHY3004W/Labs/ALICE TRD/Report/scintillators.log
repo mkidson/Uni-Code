@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  31 OCT 2021 14:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  3 NOV 2021 10:03
 entering extended mode
 **"d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/ALICE TRD/Report/scintillators.tex"
 (d:/Git Repositories/Uni-Code/3rd Year/PHY3004W/Labs/ALICE TRD/Report/scintillators.tex
@@ -824,29 +824,31 @@ LaTeX Info: Redefining \labelcpageref on input line 2370.
 Package cleveref Info: `listings' support loaded on input line 3131.
 Package cleveref Info: `subfig' support loaded on input line 3164.
 Package cleveref Info: no abbreviation of names on input line 7852.
+) (D:\Program Files\MikTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 29.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 32.
  (scintillators.aux)
 \openout1 = `scintillators.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -882,7 +884,7 @@ LaTeX Font Info:    ... okay on input line 29.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 29.
+Package hyperref Info: Link coloring OFF on input line 32.
 (D:\Program Files\MikTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (D:\Program Files\MikTeX\tex/latex/refcount\refcount.sty
@@ -892,9 +894,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count346
 )
-LaTeX Info: Redefining \ref on input line 29.
-LaTeX Info: Redefining \pageref on input line 29.
-LaTeX Info: Redefining \nameref on input line 29.
+LaTeX Info: Redefining \ref on input line 32.
+LaTeX Info: Redefining \pageref on input line 32.
+LaTeX Info: Redefining \nameref on input line 32.
  (scintillators.out) (scintillators.out)
 \@outlinefile=\write6
 \openout6 = `scintillators.out'.
@@ -902,7 +904,7 @@ LaTeX Info: Redefining \nameref on input line 29.
  (D:\Program Files\MikTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 29.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 32.
  (D:\Program Files\MikTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count347
@@ -930,49 +932,63 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-Package chemgreek Info: Activating mapping `default' on line 29.
+Package chemgreek Info: Activating mapping `default' on line 32.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
 (D:\Program Files\MikTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
  (D:\Program Files\MikTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
+Underfull \hbox (badness 10000) in paragraph at lines 44--46
 
  []
 
 
 
 pdfTeX warning: pdflatex (file ./Plots/setup.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Plots/setup.pdf, id=19, 385.44pt x 263.06279pt>
+<Plots/setup.pdf, id=40, 377.49028pt x 263.06279pt>
 File: Plots/setup.pdf Graphic file (type pdf)
 <use Plots/setup.pdf>
-Package pdftex.def Info: Plots/setup.pdf  used on input line 48.
-(pdftex.def)             Requested size: 385.43906pt x 263.06213pt.
+Package pdftex.def Info: Plots/setup.pdf  used on input line 54.
+(pdftex.def)             Requested size: 377.48935pt x 263.06213pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [1
 
-{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2 <./Plots/setup.pdf>] (scintillators.aux)
+{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 68.
+ (D:\Program Files\MikTeX\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+Underfull \hbox (badness 10000) in paragraph at lines 68--70
+
+ []
+
+[2 <./Plots/setup.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 79--81
+
+ []
+
+[3] [4] (scintillators.aux)
 Package rerunfilecheck Info: File `scintillators.out' has not changed.
-(rerunfilecheck)             Checksum: 864B3E6DFF869653ED81FF4BF884B52F;556.
+(rerunfilecheck)             Checksum: C9C13A242891C6C6C789811FE66097AC;1240.
  ) 
 Here is how much of TeX's memory you used:
- 41024 strings out of 479125
- 953487 string characters out of 4612535
+ 41244 strings out of 479125
+ 955994 string characters out of 4612535
  6323103 words of memory out of 19000000
- 58069 multiletter control sequences out of 15000+600000
- 411043 words of font info for 56 fonts, out of 5000000 for 9000
+ 58268 multiletter control sequences out of 15000+600000
+ 416589 words of font info for 61 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,6n,103p,839b,724s stack positions out of 5000i,500n,10000p,5000000b,80000s
-<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on scintillators.pdf (2 pages, 92175 bytes).
+ 99i,6n,103p,1394b,863s stack positions out of 5000i,500n,10000p,5000000b,80000s
+{D:/Program Files/MikTeX/fonts/enc/dvips/cm-super/cm-super-t1.enc}<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sfbi1095.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sfbx1095.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sfbx1200.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sfbx1440.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sfrm1000.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sfrm1095.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sfti1095.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on scintillators.pdf (4 pages, 240120 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 12 named destinations out of 1000 (max. 500000)
- 34 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 141 PDF objects out of 1000 (max. 8388607)
+ 20 named destinations out of 1000 (max. 500000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1212,10 +1212,17 @@ INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss12.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt12.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT .\Plots\UCT.jpg
+INPUT .\Plots\UCT.jpg
+INPUT Plots\UCT.jpg
+INPUT .\Plots\UCT.jpg
+INPUT .\Plots\UCT.jpg
+INPUT .\Plots\UCT.jpg
+INPUT .\Plots\UCT.jpg
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx10.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx8.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx6.tfm
@@ -1264,3 +1271,5 @@ INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb

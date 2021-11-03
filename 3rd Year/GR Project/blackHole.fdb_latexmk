@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1635621819 "d:/Git Repositories/Uni-Code/3rd Year/GR Project/blackHole.tex" "blackHole.pdf" "blackHole" 1635621824
+["pdflatex"] 1635801823 "d:/Git Repositories/Uni-Code/3rd Year/GR Project/blackHole.tex" "blackHole.pdf" "blackHole" 1635801827
   "C:/Users/miles/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/public/bbm/dpi657/bbm10.pk" 1635604425 7832 c1d2d78fd3b54464dba519bc6d699fb1 ""
   "C:/Users/miles/AppData/Local/MiKTeX/2.9/fonts/tfm/public/bbm/bbm10.tfm" 1635604419 560 39fd35b5e4a6aca3672660cc548ba860 ""
   "C:/Users/miles/AppData/Local/MiKTeX/2.9/fonts/tfm/public/bbm/bbm6.tfm" 1635604423 560 4c5ff0e6c23877f3f630ae9d8ef92c6e ""
@@ -52,6 +52,7 @@
   "D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1247596667 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1247596667 31099 342ef5a582aacbd3346f3cf4579679fa ""
   "D:/Program Files/MikTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1247596673 31764 459c573c03a4949a528c2cc7f557e217 ""
+  "D:/Program Files/MikTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1247596673 34694 870c211f62cb72718a00e353f14f254d ""
   "D:/Program Files/MikTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "D:/Program Files/MikTeX/tex/generic/atbegshi/atbegshi.sty" 1575571100 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "D:/Program Files/MikTeX/tex/generic/bigintcalc/bigintcalc.sty" 1576433602 40635 c40361e206be584d448876bba8a64a3b ""
@@ -246,12 +247,13 @@
   "D:/Program Files/MikTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "D:/Program Files/MikTeX/tex/latex/wrapfig/wrapfig.sty" 1044403200 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "D:/Program Files/MikTeX/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
-  "blackHole.aux" 1635621824 4462 056fe184dc758d904e9ad3972e02af87 "pdflatex"
-  "blackHole.out" 1635621824 800 378d63dbe1494de0f42f437065990ab0 "pdflatex"
-  "blackHole.tex" 1635621818 17453 134f68456e3df6e8f3fb873751945aff ""
-  "d:/Git Repositories/Uni-Code/3rd Year/GR Project/blackHole.tex" 1635621818 17453 134f68456e3df6e8f3fb873751945aff ""
+  "Plots/UCT.jpg" 1635791634 113555 f14a91c680a9eb8269f9a1e5eeac421a ""
+  "blackHole.aux" 1635801827 6073 27548acb7534df6d7f56734b095c2071 "pdflatex"
+  "blackHole.out" 1635801827 1263 79de97ae3a786ebb72a21aa77b92a4ff "pdflatex"
+  "blackHole.tex" 1635801821 29466 ffaabf2a7a6ca0d1d774e9cc540c3243 ""
+  "d:/Git Repositories/Uni-Code/3rd Year/GR Project/blackHole.tex" 1635801821 29466 ffaabf2a7a6ca0d1d774e9cc540c3243 ""
   (generated)
+  "blackHole.pdf"
+  "blackHole.aux"
   "blackHole.out"
   "blackHole.log"
-  "blackHole.aux"
-  "blackHole.pdf"

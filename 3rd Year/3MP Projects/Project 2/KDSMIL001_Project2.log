@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  31 OCT 2021 15:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  3 NOV 2021 18:22
 entering extended mode
 **"d:/Git Repositories/Uni-Code/3rd Year/3MP Projects/Project 2/KDSMIL001_Project2.tex"
 (d:/Git Repositories/Uni-Code/3rd Year/3MP Projects/Project 2/KDSMIL001_Project2.tex
@@ -857,14 +857,14 @@ LaTeX Font Info:    ... okay on input line 29.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
-* v-part:(T,H,B)=(21.68121pt, 701.01878pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
 * \textwidth=469.75502pt
-* \textheight=701.01878pt
+* \textheight=650.43001pt
 * \oddsidemargin=0.0pt
 * \evensidemargin=0.0pt
-* \topmargin=-87.58878pt
+* \topmargin=-37.0pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=11.0pt
@@ -940,28 +940,80 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
  (D:\Program Files\MikTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (0.51466pt too wide) in paragraph at lines 65--66
+Overfull \hbox (0.51466pt too wide) in paragraph at lines 66--67
 []\OT1/cmr/m/n/10.95 These are a pair of cou-pled Schrodinger equa-tions and we know what kind of so-lu-tion Schrodinger
  []
 
 [1
 
-{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] (KDSMIL001_Project2.aux)
+{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+
+pdfTeX warning: pdflatex (file ./Plots/stabilityPlus.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/stabilityPlus.pdf, id=59, 259.93109pt x 245.9589pt>
+File: Plots/stabilityPlus.pdf Graphic file (type pdf)
+<use Plots/stabilityPlus.pdf>
+Package pdftex.def Info: Plots/stabilityPlus.pdf  used on input line 116.
+(pdftex.def)             Requested size: 234.8775pt x 222.25792pt.
+
+
+pdfTeX warning: pdflatex (file ./Plots/stabilityMinus.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/stabilityMinus.pdf, id=60, 259.93109pt x 245.9589pt>
+File: Plots/stabilityMinus.pdf Graphic file (type pdf)
+<use Plots/stabilityMinus.pdf>
+Package pdftex.def Info: Plots/stabilityMinus.pdf  used on input line 123.
+(pdftex.def)             Requested size: 234.8775pt x 222.25792pt.
+[2] [3 <./Plots/stabilityPlus.pdf> <./Plots/stabilityMinus.pdf>]
+Package epstopdf Info: Source file: <Plots/initialCondition.eps>
+(epstopdf)                    date: 2021-11-03 14:03:36
+(epstopdf)                    size: 96961 bytes
+(epstopdf)             Output file: <Plots/initialCondition-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-11-03 14:03:52
+(epstopdf)                    size: 24066 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/initialCondition-eps-converted-to.pdf Plots/initialCondition.eps>
+(epstopdf)             \includegraphics on input line 182.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Plots/initialCondition-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/initialCondition-eps-converted-to.pdf, id=109, 421.575pt x 316.18124pt>
+File: Plots/initialCondition-eps-converted-to.pdf Graphic file (type pdf)
+<use Plots/initialCondition-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/initialCondition-eps-converted-to.pdf  used on input line 182.
+(pdftex.def)             Requested size: 252.94695pt x 189.7102pt.
+[4]
+Package epstopdf Info: Source file: <Plots/timeEvolution.eps>
+(epstopdf)                    date: 2021-11-03 17:52:27
+(epstopdf)                    size: 81933 bytes
+(epstopdf)             Output file: <Plots/timeEvolution-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-11-03 17:54:44
+(epstopdf)                    size: 72550 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=Plots/timeEvolution-eps-converted-to.pdf Plots/timeEvolution.eps>
+(epstopdf)             \includegraphics on input line 189.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Plots/timeEvolution-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/timeEvolution-eps-converted-to.pdf, id=118, 421.575pt x 316.18124pt>
+File: Plots/timeEvolution-eps-converted-to.pdf Graphic file (type pdf)
+<use Plots/timeEvolution-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/timeEvolution-eps-converted-to.pdf  used on input line 189.
+(pdftex.def)             Requested size: 252.94695pt x 189.7102pt.
+[5 <./Plots/initialCondition-eps-converted-to.pdf> <./Plots/timeEvolution-eps-converted-to.pdf>] [6] (KDSMIL001_Project2.aux)
 Package rerunfilecheck Info: File `KDSMIL001_Project2.out' has not changed.
-(rerunfilecheck)             Checksum: A9B0378B0C5D847574E1C7D556D286A8;310.
+(rerunfilecheck)             Checksum: DB4DDBDE8322768117C03BD0609D4228;726.
  ) 
 Here is how much of TeX's memory you used:
- 41022 strings out of 479125
- 953319 string characters out of 4612535
- 6323113 words of memory out of 19000000
- 58062 multiletter control sequences out of 15000+600000
- 411045 words of font info for 56 fonts, out of 5000000 for 9000
+ 41113 strings out of 479125
+ 955252 string characters out of 4612535
+ 6323111 words of memory out of 19000000
+ 58132 multiletter control sequences out of 15000+600000
+ 414461 words of font info for 71 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,9n,103p,836b,768s stack positions out of 5000i,500n,10000p,5000000b,80000s
-<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on KDSMIL001_Project2.pdf (2 pages, 136026 bytes).
+ 99i,9n,103p,850b,769s stack positions out of 5000i,500n,10000p,5000000b,80000s
+<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on KDSMIL001_Project2.pdf (6 pages, 305330 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 16 named destinations out of 1000 (max. 500000)
- 29 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 210 PDF objects out of 1000 (max. 8388607)
+ 29 named destinations out of 1000 (max. 500000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
