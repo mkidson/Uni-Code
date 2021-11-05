@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  1 NOV 2021 23:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  5 NOV 2021 13:30
 entering extended mode
 **"d:/Git Repositories/Uni-Code/3rd Year/GR Project/blackHole.tex"
 (d:/Git Repositories/Uni-Code/3rd Year/GR Project/blackHole.tex
@@ -946,43 +946,47 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
  (D:\Program Files\MikTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<Plots/UCT.jpg, id=34, 144.54pt x 144.54pt>
+<Plots/UCT.jpg, id=42, 144.54pt x 144.54pt>
 File: Plots/UCT.jpg Graphic file (type jpg)
 <use Plots/UCT.jpg>
 Package pdftex.def Info: Plots/UCT.jpg  used on input line 39.
 (pdftex.def)             Requested size: 144.53963pt x 144.53963pt.
  [1
 
-{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Plots/UCT.jpg>] [2]
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 111.
+{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Plots/UCT.jpg>]
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 92.
  (D:\Program Files\MikTeX\tex/latex/bbm\ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-) [3]
-Overfull \hbox (4.97769pt too wide) detected at line 176
+) [2] [3]
+Overfull \hbox (4.97769pt too wide) detected at line 157
 []
  []
 
 [4] [5] [6] [7] [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 386--387
-[]\OT1/cmr/m/n/10.95 A Beau-ti-ful The-o-rem Con-cern-ing De-ter-mi-nants, []$\OT1/cmtt/m/n/10.95 http : / / applet-[]magic . com /
+LaTeX Font Info:    Trying to load font information for U+euf on input line 373.
+ (D:\Program Files\MikTeX\tex/latex/amsfonts\ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [10]
+Underfull \hbox (badness 5711) in paragraph at lines 415--416
+[]\OT1/cmr/m/n/10.95 A Beau-ti-ful The-o-rem Con-cern-ing De-ter-mi-nants. (2021). []$\OT1/cmtt/m/n/10.95 http : / / applet-[]magic . com /
  []
 
-[10] (blackHole.aux)
+[11] (blackHole.aux)
 Package rerunfilecheck Info: File `blackHole.out' has not changed.
-(rerunfilecheck)             Checksum: 79DE97AE3A786EBB72A21AA77B92A4FF;1263.
+(rerunfilecheck)             Checksum: B00E16B38A3897F4CD5A82F232467EB2;1499.
  ) 
 Here is how much of TeX's memory you used:
- 41169 strings out of 479125
- 956003 string characters out of 4612535
+ 41215 strings out of 479125
+ 956809 string characters out of 4612535
  6323252 words of memory out of 19000000
- 58161 multiletter control sequences out of 15000+600000
- 414391 words of font info for 70 fonts, out of 5000000 for 9000
+ 58189 multiletter control sequences out of 15000+600000
+ 415099 words of font info for 73 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,16n,103p,819b,865s stack positions out of 5000i,500n,10000p,5000000b,80000s
- <C:\Users\miles\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/bbm/dpi657\bbm10.pk><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on blackHole.pdf (10 pages, 353884 bytes).
+ 99i,13n,103p,819b,769s stack positions out of 5000i,500n,10000p,5000000b,80000s
+ <C:\Users\miles\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/bbm/dpi657\bbm10.pk><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on blackHole.pdf (11 pages, 382160 bytes).
 PDF statistics:
- 208 PDF objects out of 1000 (max. 8388607)
- 46 named destinations out of 1000 (max. 500000)
- 74 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 257 PDF objects out of 1000 (max. 8388607)
+ 59 named destinations out of 1000 (max. 500000)
+ 90 words of extra memory for PDF output out of 10000 (max. 10000000)
 
