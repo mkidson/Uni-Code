@@ -2,10 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"name": "ALICE_LAB_2021",
-			"path": "..\\ALICE_LAB_2021"
 		}
 	],
 	"settings": {
