@@ -1,0 +1,246 @@
+PWD d:\Git Repositories\Uni-Code\TestTex\Gown Hire
+INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
+INPUT d:\Git Repositories\Uni-Code\TestTex\Gown Hire\signed.tex
+OUTPUT signed.log
+INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
+INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
+INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
+INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
+INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
+INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
+INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
+INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
+INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
+INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
+INPUT D:\Program Files\MikTeX\tex\latex\base\article.cls
+INPUT D:\Program Files\MikTeX\tex\latex\base\size11.clo
+INPUT D:\Program Files\MikTeX\tex\latex\base\size11.clo
+INPUT D:\Program Files\MikTeX\tex\latex\base\size11.clo
+INPUT D:\Program Files\MikTeX\tex\latex\base\size11.clo
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr10.tfm
+INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pdfpages.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
+INPUT D:\Program Files\MikTeX\tex\latex\base\ifthen.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
+INPUT D:\Program Files\MikTeX\tex\latex\latex-tools\calc.sty
+INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
+INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
+INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
+INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
+INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
+INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
+INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
+INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
+INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
+INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
+INPUT D:\Program Files\MikTeX\tex\latex\eso-pic\eso-pic.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\keyval.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\keyval.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\keyval.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\keyval.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\keyval.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\keyval.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\keyval.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\keyval.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\keyval.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\keyval.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\keyval.sty
+INPUT D:\Program Files\MikTeX\tex\latex\xcolor\xcolor.sty
+INPUT D:\Program Files\MikTeX\tex\latex\xcolor\xcolor.sty
+INPUT D:\Program Files\MikTeX\tex\latex\xcolor\xcolor.sty
+INPUT D:\Program Files\MikTeX\tex\latex\xcolor\xcolor.sty
+INPUT D:\Program Files\MikTeX\tex\latex\xcolor\xcolor.sty
+INPUT D:\Program Files\MikTeX\tex\latex\xcolor\xcolor.sty
+INPUT D:\Program Files\MikTeX\tex\latex\xcolor\xcolor.sty
+INPUT D:\Program Files\MikTeX\tex\latex\xcolor\xcolor.sty
+INPUT D:\Program Files\MikTeX\tex\latex\xcolor\xcolor.sty
+INPUT D:\Program Files\MikTeX\tex\latex\xcolor\xcolor.sty
+INPUT D:\Program Files\MikTeX\tex\latex\xcolor\xcolor.sty
+INPUT D:\Program Files\MikTeX\tex\latex\xcolor\xcolor.sty
+INPUT D:\Program Files\MikTeX\tex\latex\xcolor\xcolor.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics-cfg\color.cfg
+INPUT D:\Program Files\MikTeX\tex\latex\graphics-cfg\color.cfg
+INPUT D:\Program Files\MikTeX\tex\latex\graphics-cfg\color.cfg
+INPUT D:\Program Files\MikTeX\tex\latex\graphics-cfg\color.cfg
+INPUT D:\Program Files\MikTeX\tex\latex\graphics-def\pdftex.def
+INPUT D:\Program Files\MikTeX\tex\latex\graphics-def\pdftex.def
+INPUT D:\Program Files\MikTeX\tex\latex\graphics-def\pdftex.def
+INPUT D:\Program Files\MikTeX\tex\latex\graphics-def\pdftex.def
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphicx.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphicx.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphicx.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphicx.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphicx.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphicx.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphicx.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphicx.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphicx.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphicx.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphicx.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\keyval.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphics.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphics.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphics.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphics.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphics.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphics.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphics.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphics.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphics.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphics.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphics.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\trig.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\trig.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\trig.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\trig.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\trig.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\trig.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\trig.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\trig.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\trig.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\trig.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\trig.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT D:\Program Files\MikTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT D:\Program Files\MikTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT D:\Program Files\MikTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pppdftex.def
+INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pppdftex.def
+INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pppdftex.def
+INPUT D:\Program Files\MikTeX\tex\latex\pdfpages\pppdftex.def
+INPUT D:\Program Files\MikTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT D:\Program Files\MikTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT D:\Program Files\MikTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT D:\Program Files\MikTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT D:\Program Files\MikTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT D:\Program Files\MikTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT D:\Program Files\MikTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT D:\Program Files\MikTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT D:\Program Files\MikTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT D:\Program Files\MikTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT D:\Program Files\MikTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT .\signed.aux
+INPUT signed.aux
+INPUT signed.aux
+OUTPUT signed.aux
+INPUT D:\Program Files\MikTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT D:\Program Files\MikTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT D:\Program Files\MikTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT D:\Program Files\MikTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT D:\Program Files\MikTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT D:\Program Files\MikTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT D:\Program Files\MikTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT D:\Program Files\MikTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT D:\Program Files\MikTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\pdflscape\pdflscape.sty
+INPUT D:\Program Files\MikTeX\tex\generic\iftex\iftex.sty
+INPUT D:\Program Files\MikTeX\tex\generic\iftex\iftex.sty
+INPUT D:\Program Files\MikTeX\tex\generic\iftex\iftex.sty
+INPUT D:\Program Files\MikTeX\tex\generic\iftex\iftex.sty
+INPUT D:\Program Files\MikTeX\tex\generic\iftex\iftex.sty
+INPUT D:\Program Files\MikTeX\tex\generic\iftex\iftex.sty
+INPUT D:\Program Files\MikTeX\tex\generic\iftex\iftex.sty
+INPUT D:\Program Files\MikTeX\tex\generic\iftex\iftex.sty
+INPUT D:\Program Files\MikTeX\tex\generic\iftex\iftex.sty
+INPUT D:\Program Files\MikTeX\tex\generic\iftex\iftex.sty
+INPUT D:\Program Files\MikTeX\tex\generic\iftex\iftex.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\lscape.sty
+INPUT D:\Program Files\MikTeX\tex\latex\graphics\graphics.sty
+INPUT .\form.pdf
+INPUT form.pdf
+INPUT .\form.pdf
+INPUT .\form.pdf
+INPUT form.pdf
+INPUT .\form.pdf
+OUTPUT signed.pdf
+INPUT .\form.pdf
+INPUT .\form.pdf
+INPUT .\form.pdf
+INPUT .\form.pdf
+INPUT .\form.pdf
+INPUT .\form.pdf
+INPUT form.pdf
+INPUT .\form.pdf
+INPUT .\form.pdf
+INPUT .\form.pdf
+INPUT .\form.pdf
+INPUT .\form.pdf
+INPUT form.pdf
+INPUT .\form.pdf
+INPUT .\form.pdf
+INPUT .\form.pdf
+INPUT .\form.pdf
+INPUT .\form.pdf
+INPUT form.pdf
+INPUT .\form.pdf
+INPUT .\form.pdf
+INPUT .\form.pdf
+INPUT form.pdf
+INPUT .\form.pdf
+INPUT .\form.pdf
+INPUT .\form.pdf
+INPUT form.pdf
+INPUT .\form.pdf
+INPUT .\form.pdf
+INPUT .\form.pdf
+INPUT form.pdf
+INPUT .\form.pdf
+INPUT signed.aux
