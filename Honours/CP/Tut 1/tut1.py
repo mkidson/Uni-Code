@@ -6,6 +6,8 @@ import math as m
 import numpy as np
 from matplotlib import pyplot as plt
 from scipy.special import factorial
+from scipy.integrate import quad
+import time
 
 
 def radioactiveDecay(N0, Lambda, T, numRuns):
@@ -60,19 +62,24 @@ def gaussian(x, mu, sigma, A):
     return (A*(1/(sigma*np.sqrt(2*np.pi)))*np.exp(-(1/2)*((x-mu)/sigma)**2))
 
 def q1b():
-    decaysPerRun1, timesBetweenDecays1 = radioactiveDecay(100, 1.2, 10, 1000)
+    Lambda = 1.2
+    T = 1
+
+    decaysPerRun1, timesBetweenDecays1 = radioactiveDecay(100, Lambda, T, 100)
     xs = np.arange(min(decaysPerRun1), max(decaysPerRun1), 0.1)
     plt.figure()
     plt.hist(decaysPerRun1, max(decaysPerRun1)-min(decaysPerRun1), density=True)
 
-    plt.plot(xs, poisson(xs, np.mean(decaysPerRun1)), label='poisson')
-    plt.plot(xs, gaussian(xs, np.mean(decaysPerRun1), np.std(decaysPerRun1), 1), label='gaussian')
+    meanDecays = np.mean(decaysPerRun1)
+    plt.plot(xs, poisson(xs, T/Lambda), label='poisson')
+    plt.plot(xs, gaussian(xs, T/Lambda, np.std(decaysPerRun1), 1), label='gaussian')
     
+    print(f'mean: {meanDecays}')
     plt.legend()
     plt.show()
 
 def q1c():
-    decaysPerRun2, timesBetweenDecays2 = radioactiveDecay(1000, 1.2, 1, 1000)
+    decaysPerRun2, timesBetweenDecays2 = radioactiveDecay(1000, 1.2, 1, 100)
     plt.figure()
     plt.hist(timesBetweenDecays2)
     print(np.mean(timesBetweenDecays2))
@@ -117,9 +124,82 @@ def q2b(N):
     acceptedY = yRand[zRand<=np.cos(2*yRand)]
 
     plt.figure()
-    plt.hist(acceptedY, yRange)
+    plt.hist(acceptedY, 25, density=True)
+    plt.plot(yRange, np.cos(2*yRange))
     plt.show()
     # return acceptedY
+
+def q3eqn(y):
+    return (1 / 4.6997309) * (np.sin(y)**2 + 1) / (y**(4/3))
+
+def rejectionMethod(N, func, yMin=0.0, yMax=1.0):
+    """
+    Parameters
+    -----------
+    N : (int) Number of numbers to be generated 
+
+    func : (function) The function describing the probability distribution
+
+    yMin : (float) Minimum of the range of ys to be considered
+
+    yMax : (float) Maximum of the range of ys to be considered
+
+    Returns
+    -------
+    ys : (array)(float) Array of N accepted values, i.e. randomly generated values distributed according to func in the range [yMin, yMax]
+    """
+    yRange = np.arange(yMin, yMax, 0.01)
+    zMin = np.min(func(yRange))
+    zMax = np.max(func(yRange))
+    pHit = 1/(np.max(func(yRange))*(yMax-yMin))
+    print(f'pHit {pHit}')
+
+    zRand = (np.random.rand(int(np.ceil(1.5 * N / pHit))) * (zMax - zMin) + zMin)
+    yRand = (np.random.rand(int(np.ceil(1.5 * N / pHit))) * (yMax - yMin) + yMin)
+
+    ys = yRand[zRand <= func(yRand)]
+    
+    return ys[:N]
+
+def q3eqn2(x):
+    return 1/((1 - x)**(3))
+
+def q3eqn3(y):
+    return (6 / 4.6997309) * 1 / (3 * y**(4 / 3))
+
+def combinationRejection(N, prob, approx, approxInverse, yMin=0, yMax=1):
+
+    rejectionRate = quad(prob, yMin, yMax)[0] / quad(approx, yMin, yMax)[0]
+    print(f'rejectionRate {rejectionRate}')
+
+    initialY = approxInverse(np.random.rand(int(np.ceil(2 * N / rejectionRate))))
+
+    zs = np.random.rand(int(np.ceil(2 * N / rejectionRate))) * initialY
+
+    ys = initialY[zs <= prob(initialY)]
+
+    return ys[:N], initialY
+
+def q3():
+    rejectionYs = rejectionMethod(1000000, q3eqn, 1, 100)
+
+    plt.figure()
+    plt.hist(rejectionYs, 200, density=True, label='rejection')
+    # plt.title('Rejection Method')
+
+    comboRejectionYs, initials = combinationRejection(1000000, q3eqn, q3eqn3, q3eqn2, 1.0, 100.0)
+
+    # plt.figure()
+    plt.hist(comboRejectionYs, 200, range=(1,100), density=True, label='combo')
+    plt.hist(initials, 200, (1,100), density=True, label='initials')
+    # plt.title('Combination Rejection Method')
+    plt.legend()
+    plt.show()
+
+
+
+
+
 
 if __name__ == "__main__":
     # q1b()
@@ -128,7 +208,11 @@ if __name__ == "__main__":
 
     # q2a(3)
 
-    q2b(500000)
+    # q2b(500000)
+
+    q3()
+
+
 
 
 
