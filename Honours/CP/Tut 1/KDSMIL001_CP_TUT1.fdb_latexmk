@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1650843873 "d:/Git Repositories/Uni-Code/Honours/CP/Tut 1/KDSMIL001_CP_TUT1.tex" "KDSMIL001_CP_TUT1.pdf" "KDSMIL001_CP_TUT1" 1650843879
+["pdflatex"] 1650879730 "d:/Git Repositories/Uni-Code/Honours/CP/Tut 1/KDSMIL001_CP_TUT1.tex" "KDSMIL001_CP_TUT1.pdf" "KDSMIL001_CP_TUT1" 1650879737
   "C:/Users/miles/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1622159364 10261458 96b628fbe04cd2bda6c832da7db40e7a ""
   "C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1631543348 4735360 eccb59d2b35948648078db10d1edeb16 ""
   "D:/Program Files/MikTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -240,9 +240,9 @@
   "D:/Program Files/MikTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "D:/Program Files/MikTeX/tex/latex/wrapfig/wrapfig.sty" 1044403200 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "D:/Program Files/MikTeX/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
-  "KDSMIL001_CP_TUT1.aux" 1650843878 7130 d942009545f5f658fe17f84977e91c91 "pdflatex"
-  "KDSMIL001_CP_TUT1.out" 1650843878 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "KDSMIL001_CP_TUT1.tex" 1650843865 11450 b24587e2cb714acf543c54ebeb7ce18a ""
+  "KDSMIL001_CP_TUT1.aux" 1650879736 11994 e6d873d9ccec84ceeeb23f204cc80327 "pdflatex"
+  "KDSMIL001_CP_TUT1.out" 1650879735 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "KDSMIL001_CP_TUT1.tex" 1650879722 19451 31c4e19aee3b83c951ba98d8ffce0030 ""
   "Plots/q1ai.pdf" 1650838048 16607 681f98a8f8e075d04cd41907fdbdf5e7 ""
   "Plots/q1aii.pdf" 1650838188 17369 e62bd1e5d5a13fcf33dc885ebff62bcf ""
   "Plots/q1c.pdf" 1650840840 17541 a9ec0fed44d3ddc04407082e2913d1c5 ""
@@ -253,7 +253,12 @@
   "Plots/q2aix.pdf" 1650824151 11761 54202796cf15f160d2c617cd2f27bb72 ""
   "Plots/q2aiy.pdf" 1650824151 15422 8a400580d775156533041cf4fb6b9dae ""
   "Plots/q2b.pdf" 1650825761 15761 5715db5ca3cf006161b05655cf95d2d1 ""
-  "d:/Git Repositories/Uni-Code/Honours/CP/Tut 1/KDSMIL001_CP_TUT1.tex" 1650843865 11450 b24587e2cb714acf543c54ebeb7ce18a ""
+  "Plots/q3combo.pdf" 1650826522 18178 03b32f8b1d443b2873b42f63c0a0407c ""
+  "Plots/q3comparison.pdf" 1650872065 21130 0e1da3e32898d542017e35afa240b3c6 ""
+  "Plots/q3rejection.pdf" 1650826521 18777 15a8d10b11e52158212355586f1ebc79 ""
+  "Plots/q4b.pdf" 1650877436 18073 84dfbd0f70e74f62f96c5db176fbee52 ""
+  "Plots/q4c.pdf" 1650879517 14431 f0fc3ecca63095fde1ce87a11586107d ""
+  "d:/Git Repositories/Uni-Code/Honours/CP/Tut 1/KDSMIL001_CP_TUT1.tex" 1650879722 19451 31c4e19aee3b83c951ba98d8ffce0030 ""
   (generated)
   "KDSMIL001_CP_TUT1.log"
   "KDSMIL001_CP_TUT1.out"

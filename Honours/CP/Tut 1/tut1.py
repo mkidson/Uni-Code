@@ -140,29 +140,37 @@ def metropolisMethod(N, probDist, xMin, xMax, Delta=1, sepConstant=1, ignoreInit
     acceptedXs = []
     x0 = np.max(probDist(np.linspace(xMin, xMax, 1000)))
     xi = x0
-    numIterations = 0
+    numAccepted = 0
 
     while len(acceptedXs) < (N*sepConstant)-ignoreInitial/sepConstant:
         deltaI = random.uniform(-Delta, Delta)
         xTrial = xi + deltaI
         w = probDist(xTrial)/probDist(xi)
-        numIterations += 1
+        acceptedXs.append(xi)
+
+        # dataSquareMean = np.mean(np.array(acceptedXs)**2)
+        # sigmaSquare = 1
+        # if np.abs(dataSquareMean - sigmaSquare) <= 1e-4:
+        #     break
 
         if w >= 1:
-            acceptedXs.append(xi)
             xi = xTrial
+            numAccepted += 1
             continue
         else:
             r = random.random()
 
             if r <= w:
-                acceptedXs.append(xi)
                 xi = xTrial
+                numAccepted += 1
                 continue
             else:
                 continue
 
-    return acceptedXs[sepConstant*ignoreInitial::sepConstant]
+    return acceptedXs[sepConstant*ignoreInitial::sepConstant], numAccepted
+
+def autocorrelation(x, j):
+    return (np.mean(x[:-j]*x[j:])-np.mean(x[:-j])**2)/(np.mean(x[:-j]**2)-np.mean(x[:-j])**2)
 
 # A few functions that I found useful to define here
 def poisson(n, mu):
@@ -205,6 +213,8 @@ def q3eqn2(x):
 def q3eqn3(y):
     return (6 / 4.6997309) * 1 / (3 * y**(4 / 3))
 
+def q4gaussian(x):
+    return (1/(np.sqrt(2*np.pi)))*np.exp((-x**2)/(2))
 
 # Code used for specific questions
 def q1b(numNuclei, Lambda, T, numRuns): # This snippet is for q1a and q1b, as they kind of mushed together in terms of their output. Takes in the same arguments as the radioactiveDecay function
@@ -298,9 +308,9 @@ def q3():
     tRejection = t2 - t1
 
     plt.figure()
-    plt.hist(rejectionYs, 200, density=True, alpha=0.8, fc='C0', label='Rejection')
-    plt.title('Distribution Generated Using Rejection Method')
-    plt.legend(title=f'Time Taken: {tRejection:.5} s')
+    plt.hist(rejectionYs, 200, density=False, alpha=0.5, fc='C0', label='Rejection')
+    # plt.title('Distribution Generated Using Rejection Method')
+    # plt.legend(title=f'Time Taken: {tRejection:.5} s')
 
     # Timing the combo method
     t3 = time.time()
@@ -315,14 +325,49 @@ def q3():
     print(f'Time taken for Combination Method: {tCombo}')
 
 
-    plt.figure()
-    plt.hist(comboRejectionYs, 200, (1,100), density=True, alpha=0.8, fc='#ff7f0e', label='Combination')
+    # plt.figure()
+    plt.hist(comboRejectionYs, 200, (1,100), density=False, alpha=0.5, fc='#ff7f0e', label='Combination')
+    plt.title('Comparison of Rejection and Combination Methods')
+    plt.legend()
 
-    plt.title('Distribution Generated Using Combination Method')
-    plt.legend(title=f'Time Taken: {tCombo:.5} s')
+    # plt.title('Distribution Generated Using Combination Method')
+    # plt.legend(title=f'Time Taken: {tCombo:.5} s')
 
 def q4a():
-    pass
+
+    acceptedX, numAccepted = metropolisMethod(100000, q4gaussian, -5, 5, 4)
+
+    print(f'Acceptance Ratio: {numAccepted/len(acceptedX)}')
+    print(f'Number of Iterations: {len(acceptedX)}')
+    print(f'Number of Accepted: {numAccepted}')
+    print(f'Mean: {np.mean(acceptedX)}')
+    print(f'stddev: {np.std(acceptedX)}')
+
+    plt.hist(acceptedX, 50, density=True, alpha=0.8, fc='C0', ec='blue')
+    xRange = np.linspace(-5, 5, 1000)
+    plt.plot(xRange, q4gaussian(xRange), color='red', label='Gaussian\n$\langle x \\rangle=0$\n$\sigma=1$')
+    plt.legend()
+    plt.title('Gaussian Distribution using Metropolis Method')
+    plt.xlabel('x')
+    plt.ylabel('Probability')
+
+def q4c():
+
+    acceptedX, numAccepted = metropolisMethod(100000, q4gaussian, -5, 5, 4)
+
+    autoCors = []
+    for i in np.arange(1,100):
+        autoCor = autocorrelation(np.array(acceptedX), i)
+        autoCors.append(autoCor)
+        if np.abs(autoCor) <= 1e-3:
+            print(f'C(j={i}) = 0')
+    
+    plt.plot(np.arange(1,100), autoCors)
+    plt.title('Autocorrelation Function for Metropolis Method Gaussian')
+    plt.xlabel('j')
+    plt.ylabel('C(j)')
+
+
 
 if __name__ == "__main__":
     # q1b(100, 1.2, 10, 1000)
@@ -335,8 +380,12 @@ if __name__ == "__main__":
 
     # q3()
 
+    # q4a()
+
+    q4c()
+
     plt.show()
-    # plt.savefig('.\Plots\q1c.pdf')
+    # plt.savefig('.\Plots\q4c.pdf')
 
 
 

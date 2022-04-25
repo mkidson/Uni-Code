@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  25 APR 2022 01:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  25 APR 2022 11:42
 entering extended mode
 **"d:/Git Repositories/Uni-Code/Honours/CP/Tut 1/KDSMIL001_CP_TUT1.tex"
 (d:/Git Repositories/Uni-Code/Honours/CP/Tut 1/KDSMIL001_CP_TUT1.tex
@@ -975,12 +975,12 @@ Package pdftex.def Info: Plots/q1c.pdf  used on input line 64.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2 <./Plots/q1aii.pdf>]
-<Plots/q2aix.pdf, id=139, 462.52798pt x 346.89601pt>
+<Plots/q2aix.pdf, id=140, 462.52798pt x 346.89601pt>
 File: Plots/q2aix.pdf Graphic file (type pdf)
 <use Plots/q2aix.pdf>
 Package pdftex.def Info: Plots/q2aix.pdf  used on input line 99.
 (pdftex.def)             Requested size: 211.38832pt x 158.54192pt.
-<Plots/q2aiy.pdf, id=140, 462.52798pt x 346.89601pt>
+<Plots/q2aiy.pdf, id=141, 462.52798pt x 346.89601pt>
 File: Plots/q2aiy.pdf Graphic file (type pdf)
 <use Plots/q2aiy.pdf>
 Package pdftex.def Info: Plots/q2aiy.pdf  used on input line 101.
@@ -1028,22 +1028,69 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [5 <./Plots/q2aiiix.pdf> <./Plots/q2aiiiy.pdf
 
 pdfTeX warning: pdflatex (file ./Plots/q2aiiiy.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [6 <./Plots/q2b.pdf>] (KDSMIL001_CP_TUT1.aux)
+>]
+<Plots/q3rejection.pdf, id=445, 462.52798pt x 346.89601pt>
+File: Plots/q3rejection.pdf Graphic file (type pdf)
+<use Plots/q3rejection.pdf>
+Package pdftex.def Info: Plots/q3rejection.pdf  used on input line 158.
+(pdftex.def)             Requested size: 281.85587pt x 211.39981pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Plots/q3combo.pdf, id=451, 462.52798pt x 346.89601pt>
+File: Plots/q3combo.pdf Graphic file (type pdf)
+<use Plots/q3combo.pdf>
+Package pdftex.def Info: Plots/q3combo.pdf  used on input line 182.
+(pdftex.def)             Requested size: 281.85587pt x 211.39981pt.
+[6 <./Plots/q2b.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Plots/q3comparison.pdf, id=508, 462.52798pt x 346.89601pt>
+File: Plots/q3comparison.pdf Graphic file (type pdf)
+<use Plots/q3comparison.pdf>
+Package pdftex.def Info: Plots/q3comparison.pdf  used on input line 193.
+(pdftex.def)             Requested size: 281.85587pt x 211.39981pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Plots/q4b.pdf, id=510, 462.52798pt x 346.89601pt>
+File: Plots/q4b.pdf Graphic file (type pdf)
+<use Plots/q4b.pdf>
+Package pdftex.def Info: Plots/q4b.pdf  used on input line 211.
+(pdftex.def)             Requested size: 281.85587pt x 211.39981pt.
+[7 <./Plots/q3rejection.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Plots/q4c.pdf, id=566, 462.52798pt x 346.89601pt>
+File: Plots/q4c.pdf Graphic file (type pdf)
+<use Plots/q4c.pdf>
+Package pdftex.def Info: Plots/q4c.pdf  used on input line 224.
+(pdftex.def)             Requested size: 281.85587pt x 211.39981pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8 <./Plots/q3combo.pdf>] [9 <./Plots/q3comparison.pdf> <./Plots/q4b.pdf
+
+pdfTeX warning: pdflatex (file ./Plots/q4b.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [10 <./Plots/q4c.pdf>] (KDSMIL001_CP_TUT1.aux)
 Package rerunfilecheck Info: File `KDSMIL001_CP_TUT1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 41454 strings out of 479125
- 960537 string characters out of 4612535
- 6330422 words of memory out of 19000000
- 58459 multiletter control sequences out of 15000+600000
+ 41533 strings out of 479125
+ 961927 string characters out of 4612535
+ 6330423 words of memory out of 19000000
+ 58511 multiletter control sequences out of 15000+600000
  414921 words of font info for 74 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,10n,103p,829b,1180s stack positions out of 5000i,500n,10000p,5000000b,80000s
 <D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on KDSMIL001_CP_TUT1.pdf (6 pages, 317970 bytes).
+Output written on KDSMIL001_CP_TUT1.pdf (10 pages, 424805 bytes).
 PDF statistics:
- 546 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
- 63 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 803 PDF objects out of 1000 (max. 8388607)
+ 54 named destinations out of 1000 (max. 500000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
