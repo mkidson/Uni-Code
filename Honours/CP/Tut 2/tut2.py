@@ -34,7 +34,7 @@ def lagrangePolynomial(x, i, xs, N=None):
     for j in range(N):
         if j == i:      # Skips j=i term
             continue
-        p *= (x - xs[j]) / (x[i] - x[j])
+        p *= (x - xs[j]) / (xs[i] - xs[j])
 
     return p
 
@@ -68,7 +68,11 @@ def q1():
     xData = np.arange(1, 2.1, 0.1)
     yData = q1eqn(xData)
 
+    xEval = np.linspace(1, 2, 100)
+    yInterp = lagrangeInterpolation(xEval, xData, yData)
+
     plt.plot(xData, yData, 'o')
+    plt.plot(xEval, yInterp, 's')
     plt.grid(color='#CCCCCC', linestyle=':')
     plt.show()
 
@@ -138,10 +142,11 @@ def q2(xMin, xMax, hs):
     # plt.plot(xData, yInterp, 's')
 
     plt.legend()
-    plt.show()
-    
+    # plt.show()
 
 if __name__ == "__main__":
-    # q1()
+    q1()
 
-    q2(-8, 8, [0.05, 0.1, 0.2, 0.4, 1])
+    # q2(-8, 8, [0.05, 0.1, 0.2, 0.4, 1])
+
+    pass
