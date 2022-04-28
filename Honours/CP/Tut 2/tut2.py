@@ -95,25 +95,26 @@ def regulaFalsiInterp(x1, x2, func, xs, ys, tol=0.01):
     y1 = func(x1, xs, ys)
     y2 = func(x2, xs, ys)
     
-    x0 = x1 - y1 * ((x2 - x1) / (y2 - y1))
+    x0 = x1 - y1 * ((x2 - x1) / (y2 - y1))      # Using the formula for linear interpolation with y(x) = 0 to find x
     y0 = func(x0, xs, ys)
     
     while np.abs(y0) >= tol:
-        if y0 * y1 < 0:
+        if y0 * y1 < 0:     # Checking if y0 and y1 are on opposite sides of the root, and if so setting y2 to y0
             y2 = y0
             x2 = x0
-        elif y0 * y2 < 0:
+        elif y0 * y2 < 0:   # Same here
             y1 = y0
             x1 = x0
             
-        x0 = x1 - y1 * ((x2 - x1) / (y2 - y1))
+        x0 = x1 - y1 * ((x2 - x1) / (y2 - y1))      # Sets new x0 value as above
         y0 = func(x0, xs, ys)
         
-        print(y0)
+        print(y0)       # Debugging
     
     return x0
 
 def bisectionInterp(x1, x2, func, xs, ys, tol=0.01):
+    # I don't care enough about this method to comment it.
     y1 = func(x1, xs, ys)
     y2 = func(x2, xs, ys)
     
@@ -250,7 +251,7 @@ def q2(xMin, xMax, hs):
     plt.show()
 
 if __name__ == "__main__":
-    q1()
+    # q1()
 
     # q2(-5, 5, [0.05, 0.1, 0.2, 0.4, 1])
 
