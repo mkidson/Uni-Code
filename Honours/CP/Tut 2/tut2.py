@@ -161,8 +161,8 @@ def gaussianKernel(x, xPrime, h):
 def gaussianKernelPrime(x, xPrime, h):
     return -((2 * (x - xPrime)) / (h**3 * np.sqrt(np.pi))) * np.exp(-((x - xPrime) / h)**2)
 
-def gaussianKernalPrimePrime(x, xPrime, h):
-    return -((2 * (x - xPrime)) / (h**3 * np.sqrt(np.pi))) * np.exp(-((x - xPrime) / h)**2) + ((4 * (x - xPrime)**2) / (h**5 * np.sqrt(np.pi))) * np.exp(-((x - xPrime) / h)**2)
+def gaussianKernelPrimePrime(x, xPrime, h):
+    return -((2) / (h**3 * np.sqrt(np.pi))) * np.exp(-((x - xPrime) / h)**2) + ((4 * (x - xPrime)**2) / (h**5 * np.sqrt(np.pi))) * np.exp(-((x - xPrime) / h)**2)
 
 def smoothParticleInterpolation(x, xs, ys, h, kernel):
     """Returns the value at `x` of the interpolated function, using Smooth Particle Interpolation, over the data pairs `(xs[i], ys[i])`. A range of evaluation can be specified, but defaults to `[min(xs), max(xs)]`.
@@ -233,14 +233,25 @@ def q2(xMin, xMax, hs):
 
     for i in hs:      # Trying out a range of h values 
         yInterp = []
+        yInterpPrime = []
+        yInterpPrimePrime = []
         for x in xEval:
             yInterp.append(smoothParticleInterpolation(x, xData, yData, i, gaussianKernel))
+            yInterpPrime.append(-smoothParticleInterpolation(x, xData, yData, i, gaussianKernelPrime))
+            yInterpPrimePrime.append(smoothParticleInterpolation(x, xData, yData, i, gaussianKernelPrimePrime))
 
         # plt.plot(xEval, np.abs(yInterp-yExact), lw=2, label=f'h = {i}')
         plt.figure()
-        plt.plot(xDataPlot, yDataPlot, 's', ms=3, label='Data')
+        # plt.plot(xDataPlot, yDataPlot, 's', ms=3, label='Data')
         plt.plot(xEval, yInterp, lw=2, label='Interpolated')
+        plt.plot(xEval, yInterpPrime, lw=2, label='First Deriv')
+        plt.plot(xEval, yInterpPrimePrime, lw=2, label='Second Deriv')
+        plt.legend()
+
+        plt.figure()
         plt.plot(xEval, yExact, lw=2, ls='--', label='Exact')
+        plt.plot(xEval, q2eqnPrime(xEval), lw=2, ls='--', label='First Deriv')
+        plt.plot(xEval, q2eqnPrimePrime(xEval), lw=2, ls='--', label='Second Deriv')
         plt.legend()
         plt.title(f'h = {i}')
 
@@ -254,5 +265,7 @@ if __name__ == "__main__":
     # q1()
 
     # q2(-5, 5, [0.05, 0.1, 0.2, 0.4, 1])
+
+    q2(-5, 5, [0.4])
 
     pass
