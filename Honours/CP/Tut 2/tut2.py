@@ -153,7 +153,7 @@ def q1():
     # plt.plot(xData, yData, 'o')
     # plt.plot(xEval, yInterp, 's')
     # plt.grid(color='#CCCCCC', linestyle=':')
-    # plt.show()
+    plt.show()
 
 def gaussianKernel(x, xPrime, h):
     return (1 / (h * np.sqrt(np.pi))) * np.exp(-((x - xPrime) / h)**2)
@@ -228,7 +228,7 @@ def q2(xMin, xMax, xEvalMin, xEvalMax, nParticle, avgParticleSpacing=None, hs=No
         nParticle = int((xMax - xMin) / avgParticleSpacing)
 
     if hs == None:
-        hs = np.linspace(0.5, 10) * avgParticleSpacing
+        hs = np.linspace(0.5, 4) * avgParticleSpacing
 
     # Making the data from the given eqn
     xData = np.linspace(xMin, xMax, nParticle)
@@ -282,11 +282,33 @@ def q2(xMin, xMax, xEvalMin, xEvalMax, nParticle, avgParticleSpacing=None, hs=No
 
     plt.show()
 
+def q3eqn(u, mu, T):
+    return ((u**2) / (1 - np.exp(mu / T) * np.exp(-u)))
+
+def gaussLaguerreIntegration(numPoints, func, *funcArgs):
+
+    points, weights = np.polynomial.laguerre.laggauss(numPoints)
+
+    int = np.sum(func(points, *funcArgs) * weights)
+
+    return int
+
+def q3(r, mu, T):
+    V = np.pi * r**2 * 4 / 3
+
+    const = (V / (2 * np.pi**2)) * ((np.exp(mu / T)) * T**3)
+
+    lagGaussInt = const * gaussLaguerreIntegration(3, q3eqn, mu, T)
+
+    print(lagGaussInt)
+
+
+
 if __name__ == "__main__":
     # q1()
 
-    # q2(-5, 5, [0.05, 0.1, 0.2, 0.4, 1])
+    # q2(-10, 10, -5, 5, 40, 0.1)
 
-    q2(-10, 10, -5, 5, 40, 0.1)
+    q3(6, 1, 0.16)
 
     pass
