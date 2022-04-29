@@ -220,44 +220,65 @@ def q2eqnPrime(x):
 def q2eqnPrimePrime(x):
     return 36 * x**2 - 6
 
-def q2(xMin, xMax, hs):
+def q2(xMin, xMax, xEvalMin, xEvalMax, nParticle, avgParticleSpacing=None, hs=None):
+
+    if avgParticleSpacing == None:
+        avgParticleSpacing = (xMax - xMin) / nParticle
+    elif avgParticleSpacing != None:
+        nParticle = int((xMax - xMin) / avgParticleSpacing)
+
+    if hs == None:
+        hs = np.linspace(0.5, 10) * avgParticleSpacing
+
     # Making the data from the given eqn
-    xData = np.arange(-10, 10.1, 0.1)
+    xData = np.linspace(xMin, xMax, nParticle)
     yData = q2eqn(xData)
 
-    xDataPlot = xData[np.logical_and(xData >= xMin, xData <= xMax)]
-    yDataPlot = yData[np.logical_and(xData >= xMin, xData <= xMax)]
+
+    xDataPlot = xData[np.logical_and(xData >= xEvalMin, xData <= xEvalMax)]
+    yDataPlot = yData[np.logical_and(xData >= xEvalMin, xData <= xEvalMax)]
     
-    xEval = np.linspace(xMin, xMax, 1000)       # Making the array of points on which to evaluate the interpolation
+    xEval = np.linspace(xEvalMin, xEvalMax, 1000)       # Making the array of points on which to evaluate the interpolation
     yExact = q2eqn(xEval)       # Finding the exact value of the function for the points we're going to interpolate for
 
-    for i in hs:      # Trying out a range of h values 
-        yInterp = []
-        yInterpPrime = []
-        yInterpPrimePrime = []
+    yInterp = []
+    yInterpPrime = []
+    yInterpPrimePrime = []
+    chiSqaures = []
+
+    for i, h in enumerate(hs):      # Trying out a range of h values 
+        yInterp.append([])
+        yInterpPrime.append([])
+        yInterpPrimePrime.append([])
         for x in xEval:
-            yInterp.append(smoothParticleInterpolation(x, xData, yData, i, gaussianKernel))
-            yInterpPrime.append(-smoothParticleInterpolation(x, xData, yData, i, gaussianKernelPrime))
-            yInterpPrimePrime.append(smoothParticleInterpolation(x, xData, yData, i, gaussianKernelPrimePrime))
+            yInterp[i].append(smoothParticleInterpolation(x, xData, yData, h, gaussianKernel))
+            yInterpPrime[i].append(-smoothParticleInterpolation(x, xData, yData, h, gaussianKernelPrime))
+            yInterpPrimePrime[i].append(smoothParticleInterpolation(x, xData, yData, h, gaussianKernelPrimePrime))
 
+        yInterpArr = np.array(yInterp[i])
+        print(np.sum((yInterpArr - yExact)**2 / yExact))
+        chiSqaures.append(np.sum((yInterpArr - yExact)**2 / yExact))
         # plt.plot(xEval, np.abs(yInterp-yExact), lw=2, label=f'h = {i}')
-        plt.figure()
-        # plt.plot(xDataPlot, yDataPlot, 's', ms=3, label='Data')
-        plt.plot(xEval, yInterp, lw=2, label='Interpolated')
-        plt.plot(xEval, yInterpPrime, lw=2, label='First Deriv')
-        plt.plot(xEval, yInterpPrimePrime, lw=2, label='Second Deriv')
-        plt.legend()
+        # plt.figure()
+        # # plt.plot(xDataPlot, yDataPlot, 's', ms=3, label='Data')
+        # plt.plot(xEval, yInterp[i], lw=2, label='Interpolated')
+        # plt.plot(xEval, yInterpPrime[i], lw=2, label='First Deriv')
+        # plt.plot(xEval, yInterpPrimePrime[i], lw=2, label='Second Deriv')
+        # plt.legend()
 
-        plt.figure()
-        plt.plot(xEval, yExact, lw=2, ls='--', label='Exact')
-        plt.plot(xEval, q2eqnPrime(xEval), lw=2, ls='--', label='First Deriv')
-        plt.plot(xEval, q2eqnPrimePrime(xEval), lw=2, ls='--', label='Second Deriv')
-        plt.legend()
-        plt.title(f'h = {i}')
+        # plt.figure()
+        # plt.plot(xEval, yExact, lw=2, ls='--', label='Exact')
+        # plt.plot(xEval, q2eqnPrime(xEval), lw=2, ls='--', label='First Deriv')
+        # plt.plot(xEval, q2eqnPrimePrime(xEval), lw=2, ls='--', label='Second Deriv')
+        # plt.legend()
+        # plt.title(f'h = {h}')
 
 
     # plt.plot(xData, yData, 'o')
     # plt.plot(xData, yInterp, 's')
+
+    plt.plot(hs, chiSqaures)
+
 
     plt.show()
 
@@ -266,6 +287,6 @@ if __name__ == "__main__":
 
     # q2(-5, 5, [0.05, 0.1, 0.2, 0.4, 1])
 
-    q2(-5, 5, [0.4])
+    q2(-10, 10, -5, 5, 40, 0.1)
 
     pass
