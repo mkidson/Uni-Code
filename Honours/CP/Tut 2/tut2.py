@@ -3,10 +3,6 @@
 
 from matplotlib import pyplot as plt
 import numpy as np
-import scipy as sp
-import matplotlib
-from scipy.special import factorial
-import time, random
 
 # Functions written generally for later use. lagrangePolynomial should probably be in lagrangeInterpolation but i'm not sure
 def lagrangePolynomial(x, i, xs, N=None):
@@ -70,7 +66,7 @@ def lagrangeInterpolation(x, xs, ys):
 
     return y
     
-def regulaFalsiInterp(x1, x2, func, xs, ys, tol=0.01, printIntermediate=True):
+def regulaFalsiInterp(x1, x2, func, xs, ys, rootVal=0.0, tol=0.01, printIntermediate=True):
     """Returns the root of the function `func`, which is interpolated from the points `xs` and `ys`. `x1` and `x2` are the bracketing first guesses.
     
         Args
@@ -89,12 +85,15 @@ def regulaFalsiInterp(x1, x2, func, xs, ys, tol=0.01, printIntermediate=True):
     
             ys (array, float):
         Array of data points y_i corresponding to x_i. Must be the same length as `xs`
-    
-            tol (float):
-        The tolerance to which the root-finding method must reach before exiting and outputting the x-value at the root. Should be less than 1
 
-            printIntermediate (bool):
-        Tells the function whether it should print out the step number, x-value, and y-value at each step
+            rootVal (float, optional): 
+        Value of the function f(x) for which to find the corresponding x. Defaults to 0.
+    
+            tol (float, optional):
+        The tolerance to which the root-finding method must reach before exiting and outputting the x-value at the root. Should be less than 1. Defaults to `0.01`
+
+            printIntermediate (bool, optional):
+        Tells the function whether it should print out the step number, x-value, and y-value at each step. Defaults to `True`
 
         Returns
         -------
@@ -104,7 +103,7 @@ def regulaFalsiInterp(x1, x2, func, xs, ys, tol=0.01, printIntermediate=True):
     y1 = func(x1, xs, ys)
     y2 = func(x2, xs, ys)
     
-    x0 = x1 - y1 * ((x2 - x1) / (y2 - y1))      # Using the formula for linear interpolation with y(x) = 0 to find x
+    x0 = x1 + (rootVal - y1) * ((x2 - x1) / (y2 - y1))      # Using the formula for linear interpolation with y(x) = 0 to find x
     y0 = func(x0, xs, ys)
     
     i = 0
@@ -117,7 +116,7 @@ def regulaFalsiInterp(x1, x2, func, xs, ys, tol=0.01, printIntermediate=True):
             y1 = y0
             x1 = x0
             
-        x0 = x1 - y1 * ((x2 - x1) / (y2 - y1))      # Sets new x0 value as above
+        x0 = x1 + (rootVal - y1) * ((x2 - x1) / (y2 - y1))      # Sets new x0 value as above
         y0 = func(x0, xs, ys)
         
         if printIntermediate:
@@ -180,7 +179,7 @@ def smoothParticleInterpolation(x, xs, ys, h, kernel):
 
     return y
 
-def gaussLaguerreIntegration(numRoots, func, *funcArgs):
+def gaussLaguerreIntegration(numRoots, func, const, *funcArgs):
     """Blindingly simple implementation of Gauss-Laguerre quadrature integration. 
     
         Args
@@ -190,6 +189,9 @@ def gaussLaguerreIntegration(numRoots, func, *funcArgs):
     
             func (function):
         Name of the function q(t) in the integrand of the integral, where the entire integrand is q(t) e^-t
+
+            const (float):
+        Constant to multiply the integral by
 
             *funcArgs (optional):
         Arguments of `func` if any are needed. Obviously need to be fed in the order that they appear in `func`
@@ -203,7 +205,7 @@ def gaussLaguerreIntegration(numRoots, func, *funcArgs):
 
     int = np.sum(func(points, *funcArgs) * weights)
 
-    return int
+    return const * int
 
 # A collection of equations needed for specific questions, vaguely labelled in a logical way
 def q1eqn(x):
@@ -331,7 +333,7 @@ def q2a():
     plt.show()
 
 def q2b():
-    # Defining bounts
+    # Defining bounds
     xMin = -10
     xMax = 10
     xEvalMin = -5
@@ -369,32 +371,68 @@ def q2b():
     plt.colorbar(label='error')
     plt.xlabel('h')
     plt.ylabel('N')
-    plt.title('Absolute Error of Interpolated vs Exact')
-    plt.show()
+    plt.title('Overall Error of Interpolated vs Exact')
     # plt.savefig('.\Plots\q2b.pdf')
+    plt.show()
 
-def q3(r, mu, T):
-    reV = (r * 1e-15) / (1.97327e-7)
+def q3():
+    # Defining constants
+    reV = (6e-15) / (1.97327e-7)    # Converting to 1/eV
     V = np.pi * reV**3 * 4 / 3
-    T = T * 1e9
+    T = 0.16e9
+
     ints = []
-    Ts = np.linspace(0.06, 0.18, 50) * 1e9
-    mus = np.linspace(-0.2, 0.2, 50) * 1e9
+    roots = 20      # Order of the Laguerre polynomial to use
+    rootVal = 320   # Value of N to find the corresponding mu for
+    mus = np.linspace(0.2, 0.25, 50) * 1e9      # Range of mus mainly for plotting, also to define the edges of the root finding
 
-    for t, ts in enumerate(Ts):
-        ints.append([])
-        for m in mus:
-            const = (V / (2 * np.pi**2)) * ((np.exp(m / ts)) * ts**3)
-            ints[t].append(const * gaussLaguerreIntegration(5, q3eqn, m, ts))
+    # Regula Falsi to find the mu value. This is a mess, I know, but I coded the other functions in ways that made this really hard to implement in a modular way
+    x1 = np.min(mus)
+    x2 = np.max(mus)
+    const1 = (V / (2 * np.pi**2)) * ((np.exp(x1 / T)) * T**3)
+    const2 = (V / (2 * np.pi**2)) * ((np.exp(x2 / T)) * T**3)
+    y1 = gaussLaguerreIntegration(roots, q3eqn, const1, x1, T)
+    y2 = gaussLaguerreIntegration(roots, q3eqn, const2, x2, T)
+    
+    x0 = x1 + (rootVal -y1) * ((x2 - x1) / (y2 - y1))      # Using the formula for linear interpolation with y(x) = 0 to find x
+    const0 = (V / (2 * np.pi**2)) * ((np.exp(x0 / T)) * T**3)
+    y0 = gaussLaguerreIntegration(roots, q3eqn, const0, x0, T)
+    
+    i = 0
+    while np.abs(y0 - rootVal) >= 1e-5:
+        i += 1
+        if (y0 - rootVal) * (y1 - rootVal) < 0:     # Checking if y0 and y1 are on opposite sides of the root, and if so setting y2 to y0
+            y2 = y0
+            x2 = x0
+        elif (y0 - rootVal) * (y2 - rootVal) < 0:
+            y1 = y0
+            x1 = x0
+            
+        x0 = x1 + (rootVal -y1) * ((x2 - x1) / (y2 - y1))      # Sets new x0 value as above
+        const0 = (V / (2 * np.pi**2)) * ((np.exp(x0 / T)) * T**3)
+        y0 = gaussLaguerreIntegration(roots, q3eqn, const0, x0, T)
+        
+        print(f'step {i}')
+        print(f'mu: {x0:.5}')
+        print(f'N: {y0}')
+        print('---')
 
-    # print(lagGaussInt)
+    print(f'{x0:.5e}')
 
-    plt.contourf(mus, Ts, ints)
-    # plt.plot(mus, ints[0])
-    plt.xlabel('mu (GeV)')
-    plt.ylabel('T (GeV)')
-    # plt.ylabel('N')
-    # plt.title('')
+    # Finding mus in the given range in order to plot
+    for m in mus:
+        const = (V / (2 * np.pi**2)) * ((np.exp(m / T)) * T**3)
+        ints.append(gaussLaguerreIntegration(roots, q3eqn, const, m, T))
+    
+    plt.plot(mus, ints, label='N($\mu$)')
+    # plt.axhline(320, color='green', lw=1, label=f'N={320}')
+    plt.axvline(x0, color='green', lw=1, label=f'$\mu_0={x0:.5e}$ eV')
+    plt.grid(color='#CCCCCC', linestyle=':')
+    plt.xlabel('$\mu$ (eV)')
+    plt.ylabel('N')
+    plt.title('Number of pions produced as a function of $\mu$')
+    plt.legend()
+    # plt.savefig('.\Plots\q3b.pdf')
     plt.show()
 
 
@@ -406,6 +444,6 @@ if __name__ == "__main__":
 
     # q2b()
 
-    # q3(6, 1, 0.16)
+    # q3()
 
     pass

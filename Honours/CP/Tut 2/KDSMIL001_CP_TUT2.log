@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  1 MAY 2022 12:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  2 MAY 2022 13:35
 entering extended mode
 **"d:/Git Repositories/Uni-Code/Honours/CP/Tut 2/KDSMIL001_CP_TUT2.tex"
 (d:/Git Repositories/Uni-Code/Honours/CP/Tut 2/KDSMIL001_CP_TUT2.tex
@@ -956,66 +956,92 @@ Package pdftex.def Info: Plots/q1.pdf  used on input line 43.
  [1
 
 {C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Plots/q1.pdf>]
-<Plots/q2afunc.pdf, id=72, 462.52798pt x 346.89601pt>
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
+
+ []
+
+<Plots/q2afunc.pdf, id=74, 462.52798pt x 346.89601pt>
 File: Plots/q2afunc.pdf Graphic file (type pdf)
 <use Plots/q2afunc.pdf>
-Package pdftex.def Info: Plots/q2afunc.pdf  used on input line 67.
+Package pdftex.def Info: Plots/q2afunc.pdf  used on input line 71.
 (pdftex.def)             Requested size: 281.85587pt x 211.39981pt.
-<Plots/q2aexact.pdf, id=73, 462.52798pt x 346.89601pt>
+[2]
+<Plots/q2aexact.pdf, id=90, 462.52798pt x 346.89601pt>
 File: Plots/q2aexact.pdf Graphic file (type pdf)
 <use Plots/q2aexact.pdf>
-Package pdftex.def Info: Plots/q2aexact.pdf  used on input line 75.
+Package pdftex.def Info: Plots/q2aexact.pdf  used on input line 79.
 (pdftex.def)             Requested size: 281.85587pt x 211.39981pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Plots/q2a1.pdf, id=74, 462.52798pt x 346.89601pt>
+<Plots/q2a1.pdf, id=91, 462.52798pt x 346.89601pt>
 File: Plots/q2a1.pdf Graphic file (type pdf)
 <use Plots/q2a1.pdf>
-Package pdftex.def Info: Plots/q2a1.pdf  used on input line 85.
+Package pdftex.def Info: Plots/q2a1.pdf  used on input line 87.
 (pdftex.def)             Requested size: 281.85587pt x 211.39981pt.
+ [3 <./Plots/q2afunc.pdf> <./Plots/q2aexact.pdf
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Plots/q2a2.pdf, id=75, 462.52798pt x 346.89601pt>
+pdfTeX warning: pdflatex (file ./Plots/q2aexact.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Plots/q2a2.pdf, id=147, 462.52798pt x 346.89601pt>
 File: Plots/q2a2.pdf Graphic file (type pdf)
 <use Plots/q2a2.pdf>
-Package pdftex.def Info: Plots/q2a2.pdf  used on input line 93.
+Package pdftex.def Info: Plots/q2a2.pdf  used on input line 95.
 (pdftex.def)             Requested size: 281.85587pt x 211.39981pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Plots/q2a3.pdf, id=76, 462.52798pt x 346.89601pt>
+<Plots/q2a3.pdf, id=148, 462.52798pt x 346.89601pt>
 File: Plots/q2a3.pdf Graphic file (type pdf)
 <use Plots/q2a3.pdf>
-Package pdftex.def Info: Plots/q2a3.pdf  used on input line 101.
+Package pdftex.def Info: Plots/q2a3.pdf  used on input line 103.
+(pdftex.def)             Requested size: 281.85587pt x 211.39981pt.
+ [4 <./Plots/q2a1.pdf> <./Plots/q2a2.pdf
+
+pdfTeX warning: pdflatex (file ./Plots/q2a2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<Plots/q2b.pdf, id=207, 462.52798pt x 346.89601pt>
+File: Plots/q2b.pdf Graphic file (type pdf)
+<use Plots/q2b.pdf>
+Package pdftex.def Info: Plots/q2b.pdf  used on input line 114.
+(pdftex.def)             Requested size: 281.85587pt x 211.39981pt.
+ [5 <./Plots/q2a3.pdf> <./Plots/q2b.pdf
+
+pdfTeX warning: pdflatex (file ./Plots/q2b.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 130--135
+
+ []
+
+<Plots/q3a.pdf, id=280, 462.52798pt x 346.89601pt>
+File: Plots/q3a.pdf Graphic file (type pdf)
+<use Plots/q3a.pdf>
+Package pdftex.def Info: Plots/q3a.pdf  used on input line 140.
 (pdftex.def)             Requested size: 281.85587pt x 211.39981pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[2 <./Plots/q2afunc.pdf>] [3 <./Plots/q2aexact.pdf> <./Plots/q2a1.pdf
+<Plots/q3b.pdf, id=281, 462.52798pt x 346.89601pt>
+File: Plots/q3b.pdf Graphic file (type pdf)
+<use Plots/q3b.pdf>
+Package pdftex.def Info: Plots/q3b.pdf  used on input line 148.
+(pdftex.def)             Requested size: 281.85587pt x 211.39981pt.
 
-pdfTeX warning: pdflatex (file ./Plots/q2a1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [4 <./Plots/q2a2.pdf> <./Plots/q2a3.pdf
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-pdfTeX warning: pdflatex (file ./Plots/q2a3.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+[6] [7 <./Plots/q3a.pdf> <./Plots/q3b.pdf
+
+pdfTeX warning: pdflatex (file ./Plots/q3b.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >] (KDSMIL001_CP_TUT2.aux)
 Package rerunfilecheck Info: File `KDSMIL001_CP_TUT2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 41405 strings out of 479125
- 959823 string characters out of 4612535
+ 41443 strings out of 479125
+ 960441 string characters out of 4612535
  6330423 words of memory out of 19000000
- 58433 multiletter control sequences out of 15000+600000
+ 58460 multiletter control sequences out of 15000+600000
  412903 words of font info for 66 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,11n,103p,829b,870s stack positions out of 5000i,500n,10000p,5000000b,80000s
-<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on KDSMIL001_CP_TUT2.pdf (4 pages, 200496 bytes).
+ 99i,11n,103p,829b,1024s stack positions out of 5000i,500n,10000p,5000000b,80000s
+<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on KDSMIL001_CP_TUT2.pdf (7 pages, 299105 bytes).
 PDF statistics:
- 276 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 437 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
 
