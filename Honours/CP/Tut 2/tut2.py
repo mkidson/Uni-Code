@@ -384,7 +384,7 @@ def q3():
     ints = []
     roots = 20      # Order of the Laguerre polynomial to use
     rootVal = 320   # Value of N to find the corresponding mu for
-    mus = np.linspace(0.2, 0.25, 50) * 1e9      # Range of mus mainly for plotting, also to define the edges of the root finding
+    mus = np.linspace(0.2, 0.25, 1000) * 1e9      # Range of mus mainly for plotting, also to define the edges of the root finding
 
     # Regula Falsi to find the mu value. This is a mess, I know, but I coded the other functions in ways that made this really hard to implement in a modular way
     x1 = np.min(mus)
@@ -425,7 +425,7 @@ def q3():
         ints.append(gaussLaguerreIntegration(roots, q3eqn, const, m, T))
     
     plt.plot(mus, ints, label='N($\mu$)')
-    # plt.axhline(320, color='green', lw=1, label=f'N={320}')
+    plt.axhline(320, color='green', lw=1, label=f'N={320}')
     plt.axvline(x0, color='green', lw=1, label=f'$\mu_0={x0:.5e}$ eV')
     plt.grid(color='#CCCCCC', linestyle=':')
     plt.xlabel('$\mu$ (eV)')
