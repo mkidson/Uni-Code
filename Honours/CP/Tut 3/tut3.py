@@ -4,25 +4,28 @@
 from matplotlib import pyplot as plt
 import numpy as np
 import random
+from scipy.integrate import nquad
 
 def xInverse(u):
     return -3 * np.log(-u / 3 + np.exp(1 / 3))
 
-def X(u):
-    return (1 / (-3 * (np.exp(-2) - np.exp(1/3)))) * np.exp(-u / 3)
+def X(ux, uy, uz):
+    return np.exp(-ux / 3)
 
 def q1eqn(x, y, z):
     return np.exp(-x / 3) * (1 + 0.1 * np.log(np.sqrt(x**2 + y**2 + z**2 + 1)))
 
 def q1():
-    N = 100000
+    N = 1000000
 
     ux = np.random.rand(N)
     xs = xInverse(ux)
     ys = np.random.uniform(0, 5, N)
     zs = np.random.uniform(0, 5, N)
 
-    I = (1 / N) * np.sum(q1eqn(xs, ys, zs) / X(xs))
+    normConst = -3 * (np.exp(-2) - np.exp(1/3)) * 25
+
+    I = (normConst / N) * np.sum(q1eqn(xs, ys, zs) / X(xs, ys, zs))
 
     print(I)
 
@@ -116,10 +119,11 @@ def q2():
 
 if __name__ == "__main__":
     
-    # q1()
+    q1()
     
-    q2()
+    # q2()
     
-    
+    I = nquad(q1eqn, [[-1, 6], [0, 5], [0, 5]])
+    print(I)
     
     pass
