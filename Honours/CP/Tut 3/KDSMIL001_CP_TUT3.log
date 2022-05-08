@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  7 MAY 2022 22:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  8 MAY 2022 16:01
 entering extended mode
 **"d:/Git Repositories/Uni-Code/Honours/CP/Tut 3/KDSMIL001_CP_TUT3.tex"
 (d:/Git Repositories/Uni-Code/Honours/CP/Tut 3/KDSMIL001_CP_TUT3.tex
@@ -208,10 +208,10 @@ Package siunitx Info: Option "separate-uncertainty" has been deprecated in
 (siunitx)             Use "uncertainty-mode = separate" as a replacement.
 
 
-Package siunitx Info: Option "group-digits = false" has been deprecated in
-(siunitx)             this release.
+Package siunitx Info: Option "group-digits = true" has been deprecated in this
+(siunitx)             release.
 (siunitx)             
-(siunitx)             Use "group-digits = none" as a replacement.
+(siunitx)             Use "group-digits = all" as a replacement.
 
 
 LaTeX3 Info: Defining command \DeclareBinaryPrefix with sig. '+mmm' on line
@@ -949,22 +949,22 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (KDSMIL001_CP_TUT3.aux)
+{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] (KDSMIL001_CP_TUT3.aux)
 Package rerunfilecheck Info: File `KDSMIL001_CP_TUT3.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 41301 strings out of 479125
- 958002 string characters out of 4612535
- 6330423 words of memory out of 19000000
- 58352 multiletter control sequences out of 15000+600000
+ 41312 strings out of 479125
+ 958120 string characters out of 4612535
+ 6330422 words of memory out of 19000000
+ 58357 multiletter control sequences out of 15000+600000
  409795 words of font info for 52 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,9n,103p,829b,723s stack positions out of 5000i,500n,10000p,5000000b,80000s
+ 99i,9n,103p,829b,944s stack positions out of 5000i,500n,10000p,5000000b,80000s
 <D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on KDSMIL001_CP_TUT3.pdf (1 page, 102404 bytes).
+Output written on KDSMIL001_CP_TUT3.pdf (2 pages, 110961 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
- 5 named destinations out of 1000 (max. 500000)
+ 69 PDF objects out of 1000 (max. 8388607)
+ 11 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

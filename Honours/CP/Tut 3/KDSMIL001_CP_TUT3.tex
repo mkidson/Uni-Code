@@ -2,7 +2,7 @@
 \usepackage[margin=1in, top=1in]{geometry}
 \usepackage[all]{nowidow}
 \usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
-\usepackage[separate-uncertainty=true, group-digits=false]{siunitx}
+\usepackage[separate-uncertainty=true, group-digits=true]{siunitx}
 \usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
 \usepackage{listings,xcolor,subfig,caption,import,wrapfig,enumitem}
 \usepackage[version=4]{mhchem}
@@ -48,7 +48,29 @@
         \label{eqn:q1Int}
     \end{equation}
     In this case $f(x,y,z)$ is the original integrand. $w(x,y,z)$ needs to be normalised, so can't just be $e^{-x/3}$, it needs to be divided by the product of the integral of it over the integration interval, including the $y$ and $z$ intervals, which turns out to be $-3(e^{-2}-e^{1/3})\times 25$.\\
-    Generating $x_i$ values using the inverse transform method, and $y_i$ and $z_i$ uniformly, we used \cref{eqn:q1Int} and generated \num[]{1000000} points per coordinate, finding $I=107.11640605103929$.
+    Generating $x_i$ values using the inverse transform method, and $y_i$ and $z_i$ uniformly, we used \cref{eqn:q1Int} and generated \num[]{1000000} points per coordinate. Doing this 100 times and taking the mean, we found
+    \begin{equation}
+        I=\num[]{107.12026 \pm 0.00035}
+    \end{equation}
+    where the uncertainty is simply the standard deviation divided by $\sqrt{\mathrm{numRuns}}=10$.
+
+    \item In order to estimate the integral
+    \begin{equation}
+        \langle x \rangle =\frac{\int_0^\infty x e^{-x}dx}{\int_0^\infty e^{-x}dx}
+    \end{equation}
+    using the Metropolis method, we chose to generate $x_i$ values according to $e^{-x}$ over the interval $[0,\infty)$. This need not be normalised as we are dividing by the integral of it anyway.\\
+    We generated around \num[]{1000000} points using this method. After skipping the first 100 to avoid the transient stage, and taking every 58 points to avoid correlation, we had around \num[]{30000} points. The number of initial values to skip was chosen somewhat arbitrarily, as we could not find a way to determine the equilibration of the method. The number to skip between points was chosen as a result of the application of the autocorrelation function. $\Delta=2$ was chosen as it gave us an acceptance ratio of around 43\%, and the starting point was chosen to be $x=0$, as $e^{-x}$ has its maximum there over the interval.\\
+    The integral could then be found using 
+    \begin{equation}
+        I=\frac{\sum_{i=1}^N x_i}{N}
+        \label{eqn:q2Int}
+    \end{equation}
+    where $N$ is the number of points generated.\\
+    Performing this method 100 times and taking the mean, we found
+    \begin{equation}
+        I=\num[]{1.00116 \pm 0.00050}
+    \end{equation}
+    where the uncertainty is simply the standard deviation divided by $\sqrt{\mathrm{numRuns}}=10$.
 \end{enumerate}
 
 \end{document}
