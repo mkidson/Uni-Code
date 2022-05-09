@@ -80,7 +80,7 @@ def autocorrelation(x, j):
     return (np.mean(x[:-j]*x[j:])-np.mean(x[:-j])**2)/(np.mean(x[:-j]**2)-np.mean(x[:-j])**2)
 
 def xInverse(u):
-    return -3 * np.log(-u / 3 + np.exp(1 / 3))
+    return -3 * np.log(-u * (-3 * (np.exp(-2) - np.exp(1/3))) / 3 + np.exp(1 / 3))
 
 def X(ux, uy, uz):
     return np.exp(-ux / 3)
@@ -96,6 +96,7 @@ def q1():
 
     numRuns = 100   # Number of runs to do
     ints = []       # Array for integral values
+    ints2 = []
 
     for i in range(numRuns):
         ux = np.random.rand(N)
@@ -148,8 +149,8 @@ def q2():
 
 if __name__ == "__main__":
     
-    # q1()
+    q1()
 
-    q2()
+    # q2()
 
     pass
