@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  14 MAY 2022 19:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  14 MAY 2022 20:59
 entering extended mode
 **"d:/Git Repositories/Uni-Code/Honours/CP/Test/KDSMIL001_CP_Test.tex"
 (d:/Git Repositories/Uni-Code/Honours/CP/Test/KDSMIL001_CP_Test.tex
@@ -833,28 +833,28 @@ Package cleveref Info: `listings' support loaded on input line 3131.
 Package cleveref Info: `subfig' support loaded on input line 3164.
 Package cleveref Info: no abbreviation of names on input line 7852.
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 26.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 27.
  (KDSMIL001_CP_Test.aux)
 \openout1 = `KDSMIL001_CP_Test.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -890,7 +890,7 @@ LaTeX Font Info:    ... okay on input line 26.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 26.
+Package hyperref Info: Link coloring OFF on input line 27.
 (D:\Program Files\MikTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (D:\Program Files\MikTeX\tex/latex/refcount\refcount.sty
@@ -900,9 +900,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count348
 )
-LaTeX Info: Redefining \ref on input line 26.
-LaTeX Info: Redefining \pageref on input line 26.
-LaTeX Info: Redefining \nameref on input line 26.
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
  (KDSMIL001_CP_Test.out) (KDSMIL001_CP_Test.out)
 \@outlinefile=\write6
 \openout6 = `KDSMIL001_CP_Test.out'.
@@ -910,7 +910,7 @@ LaTeX Info: Redefining \nameref on input line 26.
  (D:\Program Files\MikTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 26.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 27.
  (D:\Program Files\MikTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count349
@@ -938,54 +938,60 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-Package chemgreek Info: Activating mapping `default' on line 26.
+Package chemgreek Info: Activating mapping `default' on line 27.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
 (D:\Program Files\MikTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
  (D:\Program Files\MikTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<Plots/correlation.pdf, id=31, 462.52798pt x 346.89601pt>
+<Plots/correlation.pdf, id=32, 462.52798pt x 346.89601pt>
 File: Plots/correlation.pdf Graphic file (type pdf)
 <use Plots/correlation.pdf>
-Package pdftex.def Info: Plots/correlation.pdf  used on input line 99.
-(pdftex.def)             Requested size: 352.31625pt x 264.25241pt.
-<Plots/equilibrium.png, id=32, 462.528pt x 346.896pt>
-File: Plots/equilibrium.png Graphic file (type png)
-<use Plots/equilibrium.png>
-Package pdftex.def Info: Plots/equilibrium.png  used on input line 109.
+Package pdftex.def Info: Plots/correlation.pdf  used on input line 100.
 (pdftex.def)             Requested size: 352.31625pt x 264.25241pt.
  [2 <./Plots/correlation.pdf>]
-<Plots/histogram.pdf, id=82, 462.52798pt x 346.89601pt>
+<Plots/equilibrium.png, id=82, 462.528pt x 346.896pt>
+File: Plots/equilibrium.png Graphic file (type png)
+<use Plots/equilibrium.png>
+Package pdftex.def Info: Plots/equilibrium.png  used on input line 110.
+(pdftex.def)             Requested size: 352.31625pt x 264.25241pt.
+<Plots/histogram.pdf, id=85, 462.52798pt x 346.89601pt>
 File: Plots/histogram.pdf Graphic file (type pdf)
 <use Plots/histogram.pdf>
-Package pdftex.def Info: Plots/histogram.pdf  used on input line 119.
+Package pdftex.def Info: Plots/histogram.pdf  used on input line 120.
 (pdftex.def)             Requested size: 281.85587pt x 211.39981pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3 <./Plots/equilibrium.png>] [4 <./Plots/histogram.pdf>] (KDSMIL001_CP_Test.aux)
+[3 <./Plots/equilibrium.png>]
+<Plots/laplaceFD.pdf, id=104, 462.52798pt x 346.89601pt>
+File: Plots/laplaceFD.pdf Graphic file (type pdf)
+<use Plots/laplaceFD.pdf>
+Package pdftex.def Info: Plots/laplaceFD.pdf  used on input line 185.
+(pdftex.def)             Requested size: 352.31625pt x 264.25241pt.
+ [4 <./Plots/histogram.pdf>] [5 <./Plots/laplaceFD.pdf>] (KDSMIL001_CP_Test.aux)
 Package rerunfilecheck Info: File `KDSMIL001_CP_Test.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 41393 strings out of 479125
- 959632 string characters out of 4612535
+ 41428 strings out of 479125
+ 960192 string characters out of 4612535
  6330422 words of memory out of 19000000
- 58420 multiletter control sequences out of 15000+600000
- 412903 words of font info for 66 fonts, out of 5000000 for 9000
+ 58442 multiletter control sequences out of 15000+600000
+ 414451 words of font info for 71 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,10n,103p,828b,1017s stack positions out of 5000i,500n,10000p,5000000b,80000s
+ 99i,16n,103p,828b,1032s stack positions out of 5000i,500n,10000p,5000000b,80000s
 <D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on KDSMIL001_CP_Test.pdf (4 pages, 177867 bytes).
+Output written on KDSMIL001_CP_Test.pdf (5 pages, 209188 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 247 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

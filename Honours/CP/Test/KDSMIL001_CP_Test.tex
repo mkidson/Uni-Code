@@ -8,6 +8,7 @@
 \usepackage[version=4]{mhchem}
 \usepackage[noabbrev]{cleveref}
 \newcommand{\creflastconjunction}{, and\nobreakspace}
+\newcommand{\mb}[1]{\mathbf{#1}}
 \definecolor{stringcolor}{HTML}{C792EA}
 \definecolor{codeblue}{HTML}{2162DB}
 \definecolor{commentcolor}{HTML}{4A6E46}
@@ -87,7 +88,7 @@
             \label{eqn:q1iiProbDist}
         \end{equation}
         Using the Metropolis method allows us to not have to normalise this $p(x)$, which is nice as the integral of it is a bit ugly.\\
-        To begin with, we generate $N_0=\num[]{500000}$ points $x_i$, according to $p(x)$ using the Metropolis random walk/Markov chain method. In order to avoid correlation between points we compute the autocorrelation function 
+        To begin with, we generate $N_0=\num[]{500000}$ points $x_i$, according to $p(x)$ using the Metropolis random walk/Markov chain method, with $\Delta=2$ for an acceptance rate of about 45\%. In order to avoid correlation between points we compute the autocorrelation function 
         \begin{equation}
             C(j) = \frac{\langle x_{i+j}x_i\rangle - \langle x_i \rangle^2}{\langle x_i^2 \rangle - \langle x_i \rangle^2}
             \label{eqn:Autocorrelation}
@@ -125,14 +126,72 @@
         With these randomly generated numbers $x_i$, we can finally compute $I$ in \cref{eqn:Q1Integral} using
         \begin{equation}
             I \approx \frac{1}{N}\sum_{i=1}^N f(x_i)
-            \label{eqn:}
+            \label{eqn:MetropolisIntegration}
         \end{equation}
-        
+        where $N\sim\num[]{28000}$. We find $I\approx \num[]{10.48 \pm 0.29}$. This uncertainty is calculated using 
+        \begin{equation}
+            u(I) = \frac{\sigma}{\sqrt N} = \frac{\sqrt{\langle f^2 \rangle - \langle f \rangle^2}}{\sqrt N}.
+            \label{eqn:uncertainty}
+        \end{equation}
+
+        \item Performing the integral $I$ in \cref{eqn:Q1Integral} in Mathematica, we find the exact result to be $\frac{41}{4}=10.25$. We see that Gauss-Laguerre worked very well, producing the result to an accuracy that could likely be waved away with computer precision. We also see that the Monte Carlo method result agrees with the exact and Gauss-Laguerre results.
 
     \end{enumerate}
+
+    \item We aim to solve the boundary value problem
+    \begin{equation}
+        \frac{d^2V}{dr^2}+\frac{2}{r}\frac{dV}{dr}=0
+        \label{eqn:Laplace}
+    \end{equation}
+    with BCs $V(r=\SI{1}{\metre})=\SI{20}{\volt}$ and $V(r=\SI{3}{\metre})=\SI{55}{\volt}$. Since this is a linear, second order ODE, we can simply use the linear finite difference scheme to solve it. To do this, we first approximate the derivatives as finite differences. Using the notation $V_i=V(r_i)$, and constructing a grid with spacing $\Delta r$, we have
+    \begin{align*}
+        0 &= \frac{V_{i-1} - 2V_i + v_{i+1}}{\Delta r^2} + \frac{2}{r_i}\frac{V_{i+1} - V_{i-1}}{2\Delta r} \\
+        &= V_{i-1}\underbrace{\left(1-\frac{\Delta r}{r_i}\right)}_\alpha -2V_i+V_{i+1}\underbrace{\left(1+\frac{\Delta r}{r_i}\right)}_\beta \\
+        &= \alpha V_{i-1} -2V_i +\beta V_{i+1}
+    \end{align*}
+    We can now consider this problem to be a matrix equation $A \mb{V}=\mb{w}$ where $A$ is a band matrix, $\mb{V}$ is the $V_i$'s that make up the solution to \cref{eqn:Laplace}, and $\mb{w}$ is effectively the RHS of the ODE. \\
+    If we split our interval into $N+2$ points, going from $i=0$ to $i=N+1$, we can construct our matrix equation:
+
+    \begin{equation}
+        \begin{pmatrix}
+            -2 & \beta & 0 & \cdots & 0 \\
+            \alpha & -2 & \beta & \cdots & 0 \\
+            0 & \ddots & \ddots & \ddots & \vdots \\
+            \vdots & \cdots & \alpha & -2 & \beta \\
+            0 & \cdots & \cdots & \alpha & -2 
+        \end{pmatrix}
+        \begin{pmatrix}
+            V_1 \\
+            V_2 \\
+            \vdots \\
+            V_{N-1} \\
+            V_N
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            -\alpha V_0 \\
+            0 \\
+            \vdots \\
+            0 \\
+            -\beta V_{N+1}
+        \end{pmatrix}
+        \label{eqn:matrixEqn}
+    \end{equation}
+
+    What is important to note here is the appearance of our BCs in $\mb{w}$, on the RHS. This is due to a quirk in how the matrix gets constructed, but allows us to solve this system exactly, in one step, as we know all of $A$ and $\mb{w}$ explicitly, so we can just invert $A$. Doing this with \texttt{np.linalg.solve} and tacking on the two BCs, as this method does not return them in $\mb{V}$, we find the plot in \cref{fig:LaplaceFD}.
+
+    \begin{figure}[h]
+        \begin{center}
+            \includegraphics[width=.75\textwidth]{Plots/laplaceFD.pdf}
+            \caption{Plot of the solution to \cref{eqn:Laplace} using the linear finite difference method, with $V(r=\SI{1}{\metre})=\SI{20}{\volt}$ and $V(r=\SI{3}{\metre})=\SI{55}{\volt}$. A step of $\Delta r=0.001$ was used. }
+            \label{fig:LaplaceFD}
+        \end{center}
+    \end{figure}
+
+    
     
 
 
 \end{enumerate}
-% I = 10.479278962481828 +/- 0.29186577473165193
+
 \end{document}

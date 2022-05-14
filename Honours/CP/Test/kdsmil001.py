@@ -237,19 +237,18 @@ def q1ii():
     print(f'Metropolis integration gives:\nI = {I} +/- {stdDev / np.sqrt(len(finalXs))}')
     print('---------------------------')
 
-
 def q2():
 
     rMin = 1
     rMax = 3
     V0 = 20
     VNp1 = 55
-    deltaR = 0.0001
+    deltaR = 0.001
     numPoints = int((rMax - rMin) / deltaR)
     print(numPoints)
     rs = np.linspace(rMin, rMax, numPoints)
-    alpha = (1 + deltaR / rs)
-    beta = (1 - deltaR / rs)
+    alpha = (1 - deltaR / rs)
+    beta = (1 + deltaR / rs)
 
     A = np.diag(alpha[2:-1], -1) + np.diag([-2] * (numPoints - 2), 0) + np.diag(beta[1:-2], 1)
 
@@ -261,7 +260,12 @@ def q2():
     V = np.insert(V, 0, V0)
     V = np.append(V, VNp1)
 
-    plt.plot(rs, V)
+    plt.plot(rs, V, label='Finite Difference solution')
+    plt.xlabel('$r$ (m)')
+    plt.ylabel('$V(r)$ (V)')
+    plt.legend()
+    plt.title('Solution to Laplace\'s equation in a spherically symmetric region')
+    plt.grid(color='#CCCCCC', linestyle=':')
     plt.show()
 
 
@@ -271,8 +275,8 @@ if __name__ == '__main__':
 
     # q1i()
 
-    q1ii()
+    # q1ii()
 
-    # q2()
+    q2()
 
     pass
