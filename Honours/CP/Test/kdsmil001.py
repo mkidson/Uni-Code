@@ -6,6 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import random
 
+# Generic functions I used here
 def gaussLaguerreIntegration(numRoots, func, const=1, *funcArgs):
     """Blindingly simple implementation of Gauss-Laguerre quadrature integration. 
     
@@ -33,27 +34,6 @@ def gaussLaguerreIntegration(numRoots, func, const=1, *funcArgs):
     int = np.sum(func(points, *funcArgs) * weights)
 
     return const * int
-
-def q1iNumerator(x):
-    # f(x_i) for the integral in the numerator, for gauss-laguerre integration
-    return ( (x + 1) / 4) * ( ( (x**2 + 2 * x) / 4 )**2 + 1 ) * np.exp(-1)
-
-def q1iDenominator(x):
-    # f(x_i) for the integral in the denominator, for gauss-laguerre integration
-    return ( (x + 1) / 4) * np.exp(-1)
-
-def q1i():
-    roots = 16
-
-    # Using gauss-laguerre to find the numerator and denominator integrals
-    numeratorI = gaussLaguerreIntegration(roots, q1iNumerator)
-    denominatorI = gaussLaguerreIntegration(roots, q1iDenominator)
-
-    totI = numeratorI / denominatorI
-
-    print()
-    print(f'Gauss-Laguerre integration gives:\nI = {totI}')
-    print('---------------------------')
 
 def metropolisMethod(N, probDist, xMin, xMax, x0, Delta=1):
     """Metropolis Method
@@ -126,17 +106,6 @@ def metropolisMethod(N, probDist, xMin, xMax, x0, Delta=1):
 def autocorrelation(x, j):
     return (np.mean(x[:-j]*x[j:])-np.mean(x[:-j])**2)/(np.mean(x[:-j]**2)-np.mean(x[:-j])**2)
 
-def movingAvg(xArr):
-    # Returns the moving average for some array `xArr`
-
-    xArrCumsum = np.cumsum(xArr)
-    xArrMovingAvg = []
-
-    for i in range(len(xArr)):
-        xArrMovingAvg.append(xArrCumsum[i] / (i + 1))
-    
-    return np.array(xArrMovingAvg)
-
 def correlationAndEquilibration(chain):
     """Finds the autocorrelation function for a Markov chain and returns the first `j` for which `C(j) <= 0.01`. Plots the autocorrelation function, as well as the moving average of the chain, then asks the user to input a number of steps after which it looks like equilibrium has been reached
     
@@ -153,18 +122,20 @@ def correlationAndEquilibration(chain):
             equilibrationSkip (int):
         Number of entries in `chain` to skip before starting to sample from it
     """
+    # Computing the autocorrelation for a range of gap sizes
     autoCorrs = []
     for i in np.arange(1,50):
         autoCorr = autocorrelation(np.array(chain), i)
         autoCorrs.append(autoCorr)
 
-    
+    # Finds the first time the autocorrelation goes below 0.01, assigns the associated gap value, and breaks 
     for c in autoCorrs:
         if np.abs(c) <= 1e-2:
             print(f'C(j={autoCorrs.index(c)}) = 0\n')
             autoCorrSkip = autoCorrs.index(c)
             break
-
+    
+    # Plotting autocorrelation function
     plt.figure()
     plt.plot(np.arange(1,50), autoCorrs, 'rs', ms=3)
     plt.axvline(autoCorrSkip, label=f'First C(j) < 0.01\nj = {autoCorrSkip}')
@@ -173,9 +144,10 @@ def correlationAndEquilibration(chain):
     plt.xlabel('j')
     plt.ylabel('C(j)')
 
-    finalAvg = np.mean(chain)
-    xMovingAverage = movingAvg(chain)
+    finalAvg = np.mean(chain)       # Finds final average to compare the moving average to
+    xMovingAverage = movingAvg(chain)   # Computes array of moving averages
 
+    # Plotting the moving average for inspection
     plt.figure()
     plt.plot(xMovingAverage, 'rs', ms=3, label='Moving average')
     plt.axhline(finalAvg, label='Final average')
@@ -186,32 +158,69 @@ def correlationAndEquilibration(chain):
 
     plt.show()
 
-    equilibriumPosition = int(input('Input equilibrium position: '))
-    # equilibriumPosition = 30000
+    equilibriumPosition = int(input('Input equilibrium position: '))        # Takes input of an equilibrium position
 
     return autoCorrSkip, equilibriumPosition
+
+def movingAvg(xArr):
+    """Returns a list of moving averages for some array `xArr`
+    """
+
+    xArrCumsum = np.cumsum(xArr)
+    xArrMovingAvg = []
+
+    for i in range(len(xArr)):
+        xArrMovingAvg.append(xArrCumsum[i] / (i + 1))
+    
+    return np.array(xArrMovingAvg)
+
+# A number of functions needed for each question, distributions etc
+def q1iNumerator(x):
+    # f(x_i) for the integral in the numerator, for gauss-laguerre integration
+    return ( (x + 1) / 4) * ( ( (x**2 + 2 * x) / 4 )**2 + 1 ) * np.exp(-1)
+
+def q1iDenominator(x):
+    # f(x_i) for the integral in the denominator, for gauss-laguerre integration
+    return ( (x + 1) / 4) * np.exp(-1)
 
 def q1iiDistribution(x):
     # The distribution we will generate according to, using Metropolis method
     return x * np.exp( -np.sqrt( 4 * x**2 + 1) )
 
 def q1iiIntegrand(x):
+    # Integrand to use in Metropolis integration method
     return x**4 + 1
+
+# Code for each question, run separately below
+def q1i():
+    roots = 16
+
+    # Using gauss-laguerre to find the numerator and denominator integrals
+    numeratorI = gaussLaguerreIntegration(roots, q1iNumerator)
+    denominatorI = gaussLaguerreIntegration(roots, q1iDenominator)
+
+    totI = numeratorI / denominatorI
+
+    print()
+    print(f'Gauss-Laguerre integration gives:\nI = {totI}')
+    print('---------------------------')
 
 def q1ii():
     
-    numPoints = 500000
+    numPoints = 500000      # Number of points to generate before cutting down
     genXs, acceptanceRatio = metropolisMethod(numPoints, q1iiDistribution, 0, np.inf, 0.636, 2)
 
     print()
     print(f'Acceptance ratio: {acceptanceRatio:.5}\n')
 
+    # Gets the skip amount and number to chop off the front
     autoCorrSkip, equiPos = correlationAndEquilibration(genXs)
 
-    finalXs = genXs[equiPos::autoCorrSkip]
-    plotRange = np.linspace(0, np.max(finalXs), 1000)
-    distPlot = 2 * np.exp(1) * q1iiDistribution(plotRange)
+    finalXs = genXs[equiPos::autoCorrSkip]      # Chops off the front and then skips to avoid correlation
+    plotRange = np.linspace(0, np.max(finalXs), 1000)       # A range for plotting the expected distribution
+    distPlot = 2 * np.exp(1) * q1iiDistribution(plotRange)      # Expected distribution, normalised over [0,inf)
 
+    # Plotting the histogram
     plt.figure()
     plt.hist(finalXs, 200, density=True, label='Random values, histogrammed')
     plt.plot(plotRange, distPlot, label='Exact distribution, normalised')
@@ -220,6 +229,7 @@ def q1ii():
     plt.xlabel('x')
     plt.show()
 
+    # Plotting the randomness
     plt.figure()
     plt.scatter(finalXs[:-1:2], finalXs[1::2], s=0.3, color='green', marker='.')
     plt.xlim(0,4)
@@ -229,37 +239,39 @@ def q1ii():
     plt.ylabel('$x_{2i+1}$')
     plt.show()
 
-    I = np.sum(q1iiIntegrand(np.array(finalXs))) / len(finalXs)
+    I = np.sum(q1iiIntegrand(np.array(finalXs))) / len(finalXs)     # Compute the integral, finally
 
-    stdDev = np.sqrt( np.mean(q1iiIntegrand(np.array(finalXs))**2) - np.mean(q1iiIntegrand(np.array(finalXs)))**2 )
+    stdDev = np.sqrt( np.mean(q1iiIntegrand(np.array(finalXs))**2) - np.mean(q1iiIntegrand(np.array(finalXs)))**2 )     # standard deviation of the integrand f(x)
 
     print()
     print(f'Metropolis integration gives:\nI = {I} +/- {stdDev / np.sqrt(len(finalXs))}')
     print('---------------------------')
 
 def q2():
+    # This didn't use any external functions, it's all pretty custom
 
-    rMin = 1
-    rMax = 3
-    V0 = 20
-    VNp1 = 55
-    deltaR = 0.001
-    numPoints = int((rMax - rMin) / deltaR)
-    print(numPoints)
-    rs = np.linspace(rMin, rMax, numPoints)
-    alpha = (1 - deltaR / rs)
+    rMin = 1        # left BC r value
+    rMax = 3        # Right BC r value
+    V0 = 20         # Left BC V value
+    VNp1 = 55       # Right BC V value
+    deltaR = 0.001      # grid spacing
+    numPoints = int((rMax - rMin) / deltaR)     # Number of points in the grid
+
+    rs = np.linspace(rMin, rMax, numPoints)     # Array of r values 
+    alpha = (1 - deltaR / rs)       # Constants from derivation
     beta = (1 + deltaR / rs)
 
+    # Tridiagonal matrix. Weird indexing going on here but it works
     A = np.diag(alpha[2:-1], -1) + np.diag([-2] * (numPoints - 2), 0) + np.diag(beta[1:-2], 1)
-
-    w = np.zeros(numPoints - 2)
-    w[0] = -alpha[0] * V0
+    w = np.zeros(numPoints - 2)     # RHS of the matrix eqn
+    w[0] = -alpha[0] * V0       # Adding in the ends of w, from derivation
     w[-1] = -beta[0] * VNp1
 
-    V = np.linalg.solve(A, w)
-    V = np.insert(V, 0, V0)
+    V = np.linalg.solve(A, w)       # Solving the matrix eqn
+    V = np.insert(V, 0, V0)         # Adding in the BCs
     V = np.append(V, VNp1)
 
+    # Plotting the solution
     plt.plot(rs, V, label='Finite Difference solution')
     plt.xlabel('$r$ (m)')
     plt.ylabel('$V(r)$ (V)')
@@ -272,11 +284,12 @@ def q2():
 
 
 if __name__ == '__main__':
+    # Uncomment these to run each one separately. Or together. I can't tell you how to live your life
 
     # q1i()
 
     # q1ii()
 
-    q2()
+    # q2()
 
     pass
