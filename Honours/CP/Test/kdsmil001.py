@@ -260,7 +260,7 @@ def q2():
     A = np.diag(alpha[2:-1], -1) + np.diag([-2] * (numPoints - 2), 0) + np.diag(beta[1:-2], 1)
     w = np.zeros(numPoints - 2)     # RHS of the matrix eqn
     w[0] = -alpha[0] * V0       # Adding in the ends of w, from derivation
-    w[-1] = -beta[0] * VNp1
+    w[-1] = -beta[-1] * VNp1
 
     V = np.linalg.solve(A, w)       # Solving the matrix eqn
     V = np.insert(V, 0, V0)         # Adding in the BCs
