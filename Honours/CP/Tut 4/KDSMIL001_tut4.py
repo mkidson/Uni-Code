@@ -140,20 +140,6 @@ def correlationAndEquilibration(chain):
 
     return autoCorrSkip, equilibriumPosition
 
-def calcEnergy(grid, J):
-    initEnergy = 0
-    for i, row in enumerate(grid):
-        for c, val in enumerate(row):
-            E_c = 0
-            # Using modulus here in order to never run out of bounds, since some of these indices will end up above 10. could be mod some variable but i don't feel like it
-            E_c += -J * val * grid[i%10, (c-1)%10]
-            E_c += -J * val * grid[i%10, (c+1)%10]
-            E_c += -J * val * grid[(i-1)%10, c%10]
-            E_c += -J * val * grid[(i+1)%10, c%10]
-
-            initEnergy += E_c
-    return initEnergy
-
 def q1b():
 
     xMin = 0        # left BC x value
@@ -231,35 +217,35 @@ def q1d():
     u0 = 2          # Left BC u value
     uNp1 = 1        # Right BC u value
     deltaX = 0.01      # grid spacing for x
-    deltaT = 0.00001       # grid spacing for t
+    deltaT = 0.00001       # grid spacing for t, need to be chosen carefully to avoid instability
     eps = 0.1       # Constant in diff eq
     numPoints = int((xMax - xMin) / deltaX)     # Number of points in the grid
 
     xs = np.linspace(xMin, xMax, numPoints)     # Array of x values 
+    # Constants derived for this scheme
     alpha = np.full(numPoints, (( eps / deltaX**2 ) + ( 1 / ( 2 * deltaX ) )) * deltaT)
     beta = np.full(numPoints, (( eps / deltaX**2 ) - ( 1 / ( 2 * deltaX ) )) * deltaT)
     gamma = np.full(numPoints, (( -2 * eps / deltaX**2 ) * deltaT ) + 1)
 
-    IC = - xs + 2
+    IC = - xs + 2       # Choosing some initial condition that suits the BCs, this was simplest
 
-    A = np.diag(alpha[2:-1], -1) + np.diag(gamma[1:-1], 0) + np.diag(beta[1:-2], 1)
+    A = np.diag(alpha[2:-1], -1) + np.diag(gamma[1:-1], 0) + np.diag(beta[1:-2], 1)     # Matrix update equation, effectively
 
-    spatialSolns = []
-    dudts = []
+    dudts = []      # Array of du/dt, which will be a sum over the whole solution
     oldSoln = IC
     plt.plot(xs, oldSoln, label='Initial Condition')
 
-    dudt = 1
+    dudt = 1        # Setting it 1 here just to get things going
 
     numSteps = 0
-    while dudt > 0.001:
+    while dudt > 0.001:     # Fairly arbitrary condition but it seemed to give good results
         newSoln = np.matmul(A, oldSoln[1:-1])
-        newSoln[0] += alpha[0] * u0
-        newSoln[-1] += beta[-1] * uNp1
-        newSoln = np.insert(newSoln, 0, u0)
+        newSoln[0] += alpha[0] * u0     # Need to be added, comes from the derivation
+        newSoln[-1] += beta[-1] * uNp1  # Same here
+        newSoln = np.insert(newSoln, 0, u0)     # Adding in the ends, as in the method before
         newSoln = np.append(newSoln, uNp1)
 
-        dudt = np.sum((newSoln - oldSoln) / deltaT)
+        dudt = np.sum((newSoln - oldSoln) / deltaT)     # Measures difference in solution from one step to the next
         dudts.append(dudt)
 
         oldSoln = newSoln
@@ -274,78 +260,62 @@ def q1d():
     plt.grid(color='#CCCCCC', linestyle=':')
     plt.show()
 
-def q2():
+def isingModel(T):
+    # Outputs a magentisation for a given T
+    # Could be made more general but I don't really feel like doing it if I'm honest
+
     J = 1       # Ferromagnetic exchange constant
-    kB = 1.380649
-    T = 1
+    # kB = 1.380649e-34
+    kB = 1
 
     # Create the random grid
     grid = np.zeros((10, 10))
     for row in grid:
         for i in range(len(row)):
+            # Needed a little logic to decide whether to make it spin up or down
             randNum = random.random()
             if randNum < 0.5:
                 row[i] = -1
             elif randNum >= 0.5:
                 row[i] = 1
 
-    initGrid = grid
-    # initEnergy = 0
-    # for i, row in enumerate(grid):
-    #     for c, val in enumerate(row):
-    #         E_c = 0
-    #         # Using modulus here in order to never run out of bounds, since some of these indices will end up above 10. could be mod some variable but i don't feel like it
-    #         E_c += -J * val * grid[i%10, (c-1)%10]
-    #         E_c += -J * val * grid[i%10, (c+1)%10]
-    #         E_c += -J * val * grid[(i-1)%10, c%10]
-    #         E_c += -J * val * grid[(i+1)%10, c%10]
+    # Now the loop
+    for i in range(30000):
+        ranRow, ranCol = np.random.randint(0, 10, 2)    # Getting random position in grid
+        flipVal = grid[ranRow, ranCol] * -1     # Gets the value of that position, flipped
 
-    #         initEnergy += E_c
-
-    initEnergy = calcEnergy(grid, J)
-
-    print(initEnergy)
-    print(np.sum(initGrid))
-    energy = initEnergy
-
-    # Now the loop 
-
-    for i in range(10):
-        testEnergy = 0
-        ranRow, ranCol = np.random.randint(0, 10, 2)
-        flipVal = grid[ranRow, ranCol] * -1
-
+        # Calculates the energy change for the one position
         deltaE = 0
+        # Using modulus here in order to never run out of bounds, since some of these indices will end up above 10. could be mod some variable but i don't wanna
         deltaE += -2 * J * flipVal * grid[ranRow%10, (ranCol-1)%10]
         deltaE += -2 * J * flipVal * grid[ranRow%10, (ranCol+1)%10]
         deltaE += -2 * J * flipVal * grid[(ranRow-1)%10, ranCol%10]
         deltaE += -2 * J * flipVal * grid[(ranRow+1)%10, ranCol%10]
 
-        print(deltaE)
+        # Accepts the flip if the energy change is negative
         if deltaE <= 0:
             grid[ranRow, ranCol] = flipVal
-            energy += deltaE
-            # testEnergy = calcEnergy(grid, J)
-        
+        # If it's not negative, it accepts with probability p
         elif deltaE > 0:
             r = random.random()
             p = np.exp(-deltaE / (kB * T))
             if r <= p:
                 grid[ranRow, ranCol] = flipVal
-                energy += deltaE
+    
+    magnetisation = np.mean(grid)       # Magnetisation as a ratio to fully magnetised, i.e. all pointing up or down.
+    print(magnetisation)
 
-        testEnergy = calcEnergy(grid, J)
+    return magnetisation
 
-        print(energy)
-        print(testEnergy)
-        print('-----------------------------')
-        
-        
+def q2():
+    mags = []
+    ts = np.linspace(0,8,20)
 
-
-
-
-
+    for i in ts:
+        mags.append(np.abs(isingModel(i)))      # Using absolute value here so that we get something that is more easily interpreted
+    
+    plt.plot(ts, mags, 'o')
+    plt.show()
 
 if __name__ == "__main__":
 
@@ -355,9 +325,9 @@ if __name__ == "__main__":
 
     # q1d()
 
+    # isingModel(1)
+
     q2()
-
-
 
 
 
