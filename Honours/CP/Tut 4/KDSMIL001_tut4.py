@@ -268,16 +268,18 @@ def isingModel(T):
     # kB = 1.380649e-34
     kB = 1
 
-    # Create the random grid
-    grid = np.zeros((10, 10))
-    for row in grid:
-        for i in range(len(row)):
-            # Needed a little logic to decide whether to make it spin up or down
-            randNum = random.random()
-            if randNum < 0.5:
-                row[i] = -1
-            elif randNum >= 0.5:
-                row[i] = 1
+    # # Create the random grid
+    # grid = np.zeros((10, 10))
+    # for row in grid:
+    #     for i in range(len(row)):
+    #         # Needed a little logic to decide whether to make it spin up or down
+    #         randNum = random.random()
+    #         if randNum < 0.5:
+    #             row[i] = -1
+    #         elif randNum >= 0.5:
+    #             row[i] = 1
+
+    grid = np.ones((10, 10))
 
     # Now the loop
     for i in range(30000):
@@ -309,10 +311,10 @@ def isingModel(T):
 
 def q2():
     mags = []
-    ts = np.linspace(0,8,20)
+    ts = np.linspace(0,8,40)
 
     for i in ts:
-        mags.append(np.abs(isingModel(i)))      # Using absolute value here so that we get something that is more easily interpreted
+        mags.append(isingModel(i))
     
     plt.plot(ts, mags, 'o')
     plt.show()
