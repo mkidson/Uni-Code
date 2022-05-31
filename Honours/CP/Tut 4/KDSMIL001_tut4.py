@@ -140,6 +140,68 @@ def correlationAndEquilibration(chain):
 
     return autoCorrSkip, equilibriumPosition
 
+def smoothParticleInterpolation(x, xs, ys, h, kernel):
+    """Returns the value at `x` of the interpolated function, using Smooth Particle Interpolation, over the data pairs `(xs[i], ys[i])`. A range of evaluation can be specified, but defaults to `[min(xs), max(xs)]`. If x is an array of values, it returns an array of y values, and if it's a float it returns a float.
+    
+        Args
+        ----
+            x (float) or (array, float):
+        Position at which to evaluate the interpolated function. Should be within `xEvalRange`. Could also be array of floats within `xEvalRange`
+    
+            xs (array, float):
+        Array of data points x_i over which to interpolate
+    
+            ys (array, float):
+        Array of data points y_i corresponding to x_i. Must be the same length as `xs`
+    
+            h (float):
+        The so-called "smoothing length" for the kernel function
+    
+            kernel (function):
+        The kernel with which to perform the smoothing approximation. Needs to be a function of the place to evaluate, `x`, the values to iterate over, `xPrime`, and smoothing parameter `h`
+    
+        Returns
+        -------
+            y (float) or (array, float):
+        Value of the the interpolated function at `x`. Note that for `x = xs[i]`, this may not necessarily return `ys[i]`. Could return array of interpolated values if `x` is an array.
+    """
+    # Making them numpy arrays because they're just better to work with
+    xs = np.array(xs)
+    ys = np.array(ys)
+
+    xSpacing = []
+    for i in range(len(xs)):
+        # Finds the spacing between "particles" by finding the distance between the midpoint of x[i] and x[i+1] and the midpoint of x[i-1] and x[i]. For the first and last points it just takes the distance between it and the point above or below it.
+        if i == 0:
+            xSpacing.append((xs[i+1] - xs[i]))
+
+        elif i == len(xs)-1:
+            xSpacing.append((xs[i] - xs[i-1]))
+
+        else:
+            xSpacing.append((xs[i+1] - xs[i]) / 2 + (xs[i] - xs[i-1]) / 2)
+
+    # My fix for being able to accept both arrays and floats to interpolate for. Could use some work/nifty numpy methods
+    if (type(x) == np.ndarray) or (type(x) == list):
+        y = []
+        for i in x:
+            y.append(np.sum(xSpacing*ys*kernel(i, xs, h)))
+        y = np.array(y)
+    elif (type(x) == float) or (type(x) == int):
+        y = np.sum(xSpacing*ys*kernel(x, xs, h))
+
+    return y
+
+def gaussianKernelPrime(x, xPrime, h):
+    return -((2 * (xPrime - x)) / (h**3 * np.sqrt(np.pi))) * np.exp(-((xPrime - x) / h)**2)
+
+def gaussianKernelPrimePrime(x, xPrime, h):
+    return -((2) / (h**3 * np.sqrt(np.pi))) * np.exp(-((xPrime - x) / h)**2) + ((4 * (xPrime - x)**2) / (h**5 * np.sqrt(np.pi))) * np.exp(-((xPrime - x) / h)**2)
+
+def gaussianKernel(x, xPrime, h):
+    return (1 / (h * np.sqrt(np.pi))) * np.exp(-((xPrime - x) / h)**2)
+
+
 def q1b():
 
     xMin = 0        # left BC x value
@@ -211,7 +273,7 @@ def q1c():
     plt.grid(color='#CCCCCC', linestyle=':')
     plt.show()
 
-def q1d():
+def q1da():
     xMin = 0        # left BC x value
     xMax = 1        # Right BC x value
     u0 = 2          # Left BC u value
@@ -260,13 +322,50 @@ def q1d():
     plt.grid(color='#CCCCCC', linestyle=':')
     plt.show()
 
-def isingModel(T):
+
+def q1d():
+    xMin = 0        # left BC x value
+    xMax = 1        # Right BC x value
+    u0 = 2          # Left BC u value
+    uNp1 = 1        # Right BC u value
+    deltaX = 0.01      # grid spacing for x
+    deltaT = 0.1       # grid spacing for t
+    h = 2
+
+    eps = 0.1       # Constant in diff eq
+    numPoints = int((xMax - xMin) / deltaX)     # Number of points in the grid
+
+    xs = np.linspace(xMin, xMax, numPoints)     # Array of x values 
+
+    IC = - xs + 2       # Choosing some initial condition that suits the BCs, this was simplest
+    yData = IC
+
+    t = 0
+
+    while t < 0.1:
+        u = smoothParticleInterpolation(xs, xs, yData, h, gaussianKernel)
+        uPrime = smoothParticleInterpolation(xs, xs, yData, h, gaussianKernelPrime)
+        uPrimePrime = smoothParticleInterpolation(xs, xs, yData, h, gaussianKernelPrimePrime)
+
+        ujp1 = deltaT * ( eps * uPrimePrime - uPrime ) + u
+        yData = ujp1
+
+        t += deltaT
+        print(t)
+    
+        plt.plot(xs, yData)
+    plt.plot(xs, IC, label='Initial Condition')
+    plt.show()
+
+def isingModel(T, numSteps):
     # Outputs a magentisation for a given T
     # Could be made more general but I don't really feel like doing it if I'm honest
 
     J = 1       # Ferromagnetic exchange constant
     # kB = 1.380649e-34
     kB = 1
+
+    mags = []
 
     # # Create the random grid
     # grid = np.zeros((10, 10))
@@ -282,7 +381,7 @@ def isingModel(T):
     grid = np.ones((10, 10))
 
     # Now the loop
-    for i in range(30000):
+    for i in range(numSteps):
         ranRow, ranCol = np.random.randint(0, 10, 2)    # Getting random position in grid
         flipVal = grid[ranRow, ranCol] * -1     # Gets the value of that position, flipped
 
@@ -304,19 +403,26 @@ def isingModel(T):
             if r <= p:
                 grid[ranRow, ranCol] = flipVal
     
-    magnetisation = np.mean(grid)       # Magnetisation as a ratio to fully magnetised, i.e. all pointing up or down.
+        magnetisation = np.mean(grid)       # Magnetisation as a ratio to fully magnetised, i.e. all pointing up or down.
+        mags.append(magnetisation)
     print(magnetisation)
 
-    return magnetisation
+    return mags
 
 def q2():
     mags = []
     ts = np.linspace(0,8,40)
 
     for i in ts:
-        mags.append(isingModel(i))
+        mags.append(isingModel(i, 10000)[-1])
     
     plt.plot(ts, mags, 'o')
+    plt.show()
+
+def q2Test():
+    n = 100000
+    mags = isingModel(100, n)
+    plt.plot(range(n), mags)
     plt.show()
 
 if __name__ == "__main__":
@@ -325,11 +431,13 @@ if __name__ == "__main__":
 
     # q1c()
 
-    # q1d()
+    q1d()
 
     # isingModel(1)
 
-    q2()
+    # q2()
+
+    # q2Test()
 
 
 
