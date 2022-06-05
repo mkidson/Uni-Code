@@ -209,7 +209,7 @@ def q1b():
     u0 = 2          # Left BC u value
     uNp1 = 1        # Right BC u value
     deltaX = 0.001      # grid spacing
-    eps = 0.0001       # Constant in diff eq
+    eps = 0.1       # Constant in diff eq
     numPoints = int((xMax - xMin) / deltaX)     # Number of points in the grid
 
     xs = np.linspace(xMin, xMax, numPoints)     # Array of x values 
@@ -229,12 +229,13 @@ def q1b():
     u = np.append(u, uNp1)
 
     # Plotting the solution
-    plt.plot(xs, u, label='Finite Difference solution')
+    plt.plot(xs, u, '--', label='Finite Difference solution')
     plt.xlabel('$x$')
     plt.ylabel('$u(x)$')
     plt.legend()
     plt.title('Solution to one-dimensional advection-diffusion equation, $\epsilon=0.1$')
     plt.grid(color='#CCCCCC', linestyle=':')
+    # plt.savefig(r'.\Plots\q1b.pdf')
     plt.show()
 
 def q1c():
@@ -271,9 +272,10 @@ def q1c():
     plt.legend()
     plt.title('Solution to one-dimensional advection-diffusion equation, $\epsilon=0.0001$')
     plt.grid(color='#CCCCCC', linestyle=':')
+    # plt.savefig(r'.\Plots\q1c.pdf')
     plt.show()
 
-def q1da():
+def q1d():
     xMin = 0        # left BC x value
     xMax = 1        # Right BC x value
     u0 = 2          # Left BC u value
@@ -297,10 +299,10 @@ def q1da():
     oldSoln = IC
     plt.plot(xs, oldSoln, label='Initial Condition')
 
-    dudt = 1        # Setting it 1 here just to get things going
+    dudt = 2        # Setting it 2 here just to get things going
 
     numSteps = 0
-    while dudt > 0.001:     # Fairly arbitrary condition but it seemed to give good results
+    while dudt > 1:     # Fairly arbitrary condition but it seemed to give good but not perfect results, to show some variation to the exact from 1b
         newSoln = np.matmul(A, oldSoln[1:-1])
         newSoln[0] += alpha[0] * u0     # Need to be added, comes from the derivation
         newSoln[-1] += beta[-1] * uNp1  # Same here
@@ -313,70 +315,28 @@ def q1da():
         oldSoln = newSoln
         numSteps += 1
 
-    plt.plot(xs, newSoln, label=f'Soln after {numSteps} steps')
+    plt.plot(xs, newSoln, ':', label=f'Soln after {numSteps} steps')
+    # q1b()
 
     plt.xlabel('$x$')
     plt.ylabel('$u(x)$')
     plt.legend()
     plt.title('Solution to one-dimensional advection-diffusion equation, $\epsilon=0.1$')
     plt.grid(color='#CCCCCC', linestyle=':')
+
+
     plt.show()
 
-
-def q1d():
-    xMin = 0        # left BC x value
-    xMax = 1        # Right BC x value
-    u0 = 2          # Left BC u value
-    uNp1 = 1        # Right BC u value
-    deltaX = 0.01      # grid spacing for x
-    deltaT = 0.1       # grid spacing for t
-    h = 2
-
-    eps = 0.1       # Constant in diff eq
-    numPoints = int((xMax - xMin) / deltaX)     # Number of points in the grid
-
-    xs = np.linspace(xMin, xMax, numPoints)     # Array of x values 
-
-    IC = - xs + 2       # Choosing some initial condition that suits the BCs, this was simplest
-    yData = IC
-
-    t = 0
-
-    while t < 0.1:
-        u = smoothParticleInterpolation(xs, xs, yData, h, gaussianKernel)
-        uPrime = smoothParticleInterpolation(xs, xs, yData, h, gaussianKernelPrime)
-        uPrimePrime = smoothParticleInterpolation(xs, xs, yData, h, gaussianKernelPrimePrime)
-
-        ujp1 = deltaT * ( eps * uPrimePrime - uPrime ) + u
-        yData = ujp1
-
-        t += deltaT
-        print(t)
-    
-        plt.plot(xs, yData)
-    plt.plot(xs, IC, label='Initial Condition')
-    plt.show()
 
 def isingModel(T, numSteps):
     # Outputs a magentisation for a given T
     # Could be made more general but I don't really feel like doing it if I'm honest
 
     J = 1       # Ferromagnetic exchange constant
-    # kB = 1.380649e-34
-    kB = 1
+    kB = 1.380649e-34
+    # kB = 1
 
     mags = []
-
-    # # Create the random grid
-    # grid = np.zeros((10, 10))
-    # for row in grid:
-    #     for i in range(len(row)):
-    #         # Needed a little logic to decide whether to make it spin up or down
-    #         randNum = random.random()
-    #         if randNum < 0.5:
-    #             row[i] = -1
-    #         elif randNum >= 0.5:
-    #             row[i] = 1
 
     grid = np.ones((10, 10))
 
@@ -410,20 +370,21 @@ def isingModel(T, numSteps):
     return mags
 
 def q2():
-    mags = []
-    ts = np.linspace(0,8,40)
+    mags = []       # Array of magnetisations for plotting
+    ts = np.linspace(0,8,40)        # Array of temperatures, chosen fairly arbitrarily to show some nice plots
 
-    for i in ts:
-        mags.append(isingModel(i, 10000)[-1])
+    for i in ts:    # Looping over temperatures
+        mags.append(np.mean(isingModel(i, 10000)[-3000::500]))      # Finds the mean of the last 7000 mags, skipping 500 each time
     
+    # Plotting
     plt.plot(ts, mags, 'o')
+    plt.grid(color='#CCCCCC', linestyle=':')
+    plt.xlabel('Temperature $T$')
+    plt.ylabel('Magnetisation $M$')
+    plt.title('Average magnetisation of a 10x10 Ising model')
+    # plt.savefig(r'Plots\q2.pdf')
     plt.show()
 
-def q2Test():
-    n = 100000
-    mags = isingModel(100, n)
-    plt.plot(range(n), mags)
-    plt.show()
 
 if __name__ == "__main__":
 
@@ -431,13 +392,10 @@ if __name__ == "__main__":
 
     # q1c()
 
-    q1d()
+    # q1d()
 
-    # isingModel(1)
+    q2()
 
-    # q2()
-
-    # q2Test()
 
 
 
