@@ -1,6 +1,7 @@
 # KDSMIL001
 # 10-06-2022
 
+import wave
 import numpy as np
 import random
 import matplotlib.pyplot as plt
@@ -57,6 +58,61 @@ def thetaDist(x):
 
 def phiDist(x):
     return 2 * np.pi * ( x - 0.5 )
+
+def regulaFalsi(x1, x2, func, rootVal=0.0, tol=0.01, printIntermediate=True):
+    """Returns the root of the function `func` that lies between `x1` and `x2`
+    
+        Args
+        ----
+            x1 (float):
+        Leftmost inital guess
+    
+            x2 (float):
+        Rightmost inital guess
+    
+            func (function):
+        The function which calls the method to interpolate the data in `xs` and `ys`, at some point `x`. Needs to be of the form `func(x, xs, ys)`
+
+            rootVal (float, optional): 
+        Value of the function f(x) for which to find the corresponding x. Defaults to 0.
+    
+            tol (float, optional):
+        The tolerance to which the root-finding method must reach before exiting and outputting the x-value at the root. Should be less than 1. Defaults to `0.01`
+
+            printIntermediate (bool, optional):
+        Tells the function whether it should print out the step number, x-value, and y-value at each step. Defaults to `True`
+
+        Returns
+        -------
+            x0 (float):
+        The x-value for the root of the function `func` in the interval [`x1`, `x2`]
+    """
+    y1 = func(x1)
+    y2 = func(x2)
+    
+    x0 = x1 + (rootVal - y1) * ((x2 - x1) / (y2 - y1))      # Using the formula for linear interpolation with y(x) = 0 to find x
+    y0 = func(x0)
+    
+    i = 0
+    while np.abs(y0) >= tol:
+        i += 1
+        if y0 * y1 < 0:     # Checking if y0 and y1 are on opposite sides of the root, and if so setting y2 to y0
+            y2 = y0
+            x2 = x0
+        elif y0 * y2 < 0:   # Same here
+            y1 = y0
+            x1 = x0
+            
+        x0 = x1 + (rootVal - y1) * ((x2 - x1) / (y2 - y1))      # Sets new x0 value as above
+        y0 = func(x0)
+        
+        if printIntermediate:
+            print(f'step {i}')
+            print(f'x: {x0:.5}')
+            print(f'y: {y0:.5}')
+            print('---')
+    
+    return x0
 
 
 
@@ -134,9 +190,19 @@ def q1cf():
     plt.show()
 
 
-def q2a(E0):
-    # E0 = 0.093981642051     # eV
-    # E0 = 0.5
+def numerovDE0(E0):
+    """Returns `dE0`, which is a measure of how well the solutions from the right and left match at the classical turning point, for the Numerov method on a quantum harmonic oscillator
+    
+        Args
+        ----
+            E0 (float):
+        Energy for which to calculate `dE0`
+
+        Returns
+        -------
+            dE0 (float):
+        Difference in first derivatives at the classical turning point
+    """
     mc2 = 5.11e5            # eV
     hc = 197.3              # eV nm
     hOmega = 1              # eV
@@ -161,6 +227,49 @@ def q2a(E0):
 
     meetPointX = np.where(potential <= E0)[0][-1]
 
+    f = 2 * ( mc2 / hc**2 ) * ( E0 - potential )
+
+    for xl in xRange[1:meetPointX]:
+        i = np.where(xRange == xl)[0][0]
+        psi_l_new = ( ( 2 - (5/6) * deltaX**2 * f[i] ) * psi_left[i] - ( 1 + (deltaX**2 / 12) * f[i-1] ) * psi_left[i-1] ) / ( 1 + (deltaX**2 / 12) * f[i+1])
+        psi_left.append(psi_l_new)
+    
+    for xr in xRange[meetPointX:-1][::-1]:
+        c = np.where(xRange == xr)[0][0]
+        # The indexing in this bit is really weird because I'm trying to do it right to left and make it also be in that direction in the array, so the psi_right values we want are always the the first and second ones
+        psi_r_new = ( ( 2 - (5/6) * deltaX**2 * f[c] ) * psi_right[0] - ( 1 + (deltaX**2 / 12) * f[c+1] ) * psi_right[1] ) / ( 1 + (deltaX**2 / 12) * f[c-1])
+        psi_right.insert(0, psi_r_new)
+
+    psi_left = np.array(psi_left) * ( psi_right[1] / psi_left[-2] )
+
+    dE0 = ( ( psi_left[-1] - psi_left[-3] ) - ( psi_right[2] - psi_right[0] ) ) / ( 2 * deltaX * psi_right[1])
+
+    return dE0
+
+def numerovWavefn(E0):
+    mc2 = 5.11e5            # eV
+    hc = 197.3              # eV nm
+    hOmega = 1              # eV
+    
+    # Using symmetric guesses to start off with, just makes things easier
+    psi_0 = 0
+    psi_1 = 0.0001       # A complete guess as to what is reasonable
+
+    psi_left = []
+    psi_left.append(psi_0)
+    psi_left.append(psi_1)
+
+    psi_right = []
+    psi_right.append(psi_1)
+    psi_right.append(psi_0)
+
+    # Will be going from -1 to 1 nm
+    xRange = np.linspace(-1, 1, 1000)
+    deltaX = xRange[1] - xRange[0]
+
+    potential = 0.5 * ( mc2 / hc**2 ) * hOmega**2 * xRange**2
+
+    meetPointX = np.where(potential <= E0)[0][-1]
 
     f = 2 * ( mc2 / hc**2 ) * ( E0 - potential )
 
@@ -174,24 +283,47 @@ def q2a(E0):
         # The indexing in this bit is really weird because I'm trying to do it right to left and make it also be in that direction in the array, so the psi_right values we want are always the the first and second ones
         psi_r_new = ( ( 2 - (5/6) * deltaX**2 * f[c] ) * psi_right[0] - ( 1 + (deltaX**2 / 12) * f[c+1] ) * psi_right[1] ) / ( 1 + (deltaX**2 / 12) * f[c-1])
         psi_right.insert(0, psi_r_new)
-    
 
     psi_left = np.array(psi_left) * ( psi_right[1] / psi_left[-2] )
 
-    dE0 = ( ( psi_left[-1] - psi_left[-3] ) - ( psi_right[0] - psi_right[2] ) ) / ( 2 * deltaX )
+    # plt.plot(xRange[:meetPointX-1], psi_left[:-2])
+    # plt.plot(xRange[meetPointX-1:], psi_right)
+    # plt.show()
 
-    print(dE0)
+    wavefunc = np.concatenate((psi_left[:-2], psi_right[1:]))
 
-    print(meetPointX)
-    print(psi_left[-2])
-    print(psi_right[1])
-    plt.plot(xRange, potential)
-    plt.plot(xRange[:meetPointX+1], psi_left)
-    plt.plot(xRange[meetPointX-1:], psi_right)
-    # plt.axvline(xRange[meetPointX])
+    return wavefunc
+
+
+def q2a():
+    ERanges = [(0.1, 0.62), (1.3, 1.6), (2.35, 2.6)]
+
+    E_0 = regulaFalsi(ERanges[0][0], ERanges[0][1], numerovDE0, tol=1e-4, printIntermediate=False)
+    E_1 = regulaFalsi(ERanges[1][0], ERanges[1][1], numerovDE0, tol=1e-4, printIntermediate=False)
+    E_2 = regulaFalsi(ERanges[2][0], ERanges[2][1], numerovDE0, tol=1e-4, printIntermediate=False)
+
+    print(f'First three energies are: {E_0:.5} eV, {E_1:.5} eV, and {E_2:.5} eV')
+
+
+def q2b():
+    Es = [0.5007712065928163, 1.5010174165369703, 2.502924361232347]
+
+    xRange = np.linspace(-1, 1, 1000)
+
+    for E in Es:
+        wavefunc = numerovWavefn(E)
+        normalisation = np.sum(wavefunc**2)
+
+        wavefuncNormed = wavefunc / normalisation
+
+        plt.plot(xRange[:-1], wavefuncNormed, label=f'$\psi_{Es.index(E)}$')
+    
+    plt.xlabel('x')
+    plt.ylabel('$\psi(x)$')
+    plt.legend()
+    plt.title('First three normalised stationary state wavefunctions')
     plt.show()
 
-    # return dE0
 
 ##############################################################
 
@@ -201,14 +333,6 @@ def q2a(E0):
 
 # q1cf()
 
-# E = 0.093981642051
-# eps = q2a(E)
+# q2a()
 
-# while np.abs(eps) > 1e-4:
-#     E += 1e-3
-#     # print(E)
-#     eps = q2a(E)
-
-# print(E)
-
-q2a(0.093981642051)
+q2b()
