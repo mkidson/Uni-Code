@@ -134,10 +134,64 @@ def q1cf():
     plt.show()
 
 
-def q2a():
-    pass
+def q2a(E0):
+    # E0 = 0.093981642051     # eV
+    # E0 = 0.5
+    mc2 = 5.11e5            # eV
+    hc = 197.3              # eV nm
+    hOmega = 1              # eV
+    
+    # Using symmetric guesses to start off with, just makes things easier
+    psi_0 = 0
+    psi_1 = 0.0001       # A complete guess as to what is reasonable
+
+    psi_left = []
+    psi_left.append(psi_0)
+    psi_left.append(psi_1)
+
+    psi_right = []
+    psi_right.append(psi_1)
+    psi_right.append(psi_0)
+
+    # Will be going from -1 to 1 nm
+    xRange = np.linspace(-1, 1, 1000)
+    deltaX = xRange[1] - xRange[0]
+
+    potential = 0.5 * ( mc2 / hc**2 ) * hOmega**2 * xRange**2
+
+    meetPointX = np.where(potential <= E0)[0][-1]
 
 
+    f = 2 * ( mc2 / hc**2 ) * ( E0 - potential )
+
+    for xl in xRange[1:meetPointX]:
+        i = np.where(xRange == xl)[0][0]
+        psi_l_new = ( ( 2 - (5/6) * deltaX**2 * f[i] ) * psi_left[i] - ( 1 + (deltaX**2 / 12) * f[i-1] ) * psi_left[i-1] ) / ( 1 + (deltaX**2 / 12) * f[i+1])
+        psi_left.append(psi_l_new)
+    
+    for xr in xRange[meetPointX:-1][::-1]:
+        c = np.where(xRange == xr)[0][0]
+        # The indexing in this bit is really weird because I'm trying to do it right to left and make it also be in that direction in the array, so the psi_right values we want are always the the first and second ones
+        psi_r_new = ( ( 2 - (5/6) * deltaX**2 * f[c] ) * psi_right[0] - ( 1 + (deltaX**2 / 12) * f[c+1] ) * psi_right[1] ) / ( 1 + (deltaX**2 / 12) * f[c-1])
+        psi_right.insert(0, psi_r_new)
+    
+
+    psi_left = np.array(psi_left) * ( psi_right[1] / psi_left[-2] )
+
+    dE0 = ( ( psi_left[-1] - psi_left[-3] ) - ( psi_right[0] - psi_right[2] ) ) / ( 2 * deltaX )
+
+    print(dE0)
+
+    print(meetPointX)
+    print(psi_left[-2])
+    print(psi_right[1])
+    plt.plot(xRange, potential)
+    plt.plot(xRange[:meetPointX+1], psi_left)
+    plt.plot(xRange[meetPointX-1:], psi_right)
+    # plt.axvline(xRange[meetPointX])
+    plt.show()
+
+    # return dE0
 
 ##############################################################
 
@@ -147,3 +201,14 @@ def q2a():
 
 # q1cf()
 
+# E = 0.093981642051
+# eps = q2a(E)
+
+# while np.abs(eps) > 1e-4:
+#     E += 1e-3
+#     # print(E)
+#     eps = q2a(E)
+
+# print(E)
+
+q2a(0.093981642051)
