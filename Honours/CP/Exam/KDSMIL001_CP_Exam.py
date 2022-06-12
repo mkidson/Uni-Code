@@ -342,14 +342,33 @@ def q2b():
     plt.show()
 
 
+def q2extra():
+    # Finding the ranges on which to look for d(E_0)=0
+
+    Es = np.linspace(0.1, 3, 100)
+    dE0s = []
+    for E in Es:
+        dE0 = numerovDE0(E)
+        dE0s.append(dE0)
+    
+    plt.plot(Es, dE0s)
+    plt.xlabel('Energy (eV)')
+    plt.ylabel('$d(E_0)$')
+    plt.grid(color='#CCCCCC', linestyle=':')
+    plt.show()
+
+
+
 ##############################################################
 
 # q1a()
 
 # q1b()
 
-q1cf()
+# q1cf()
 
 # q2a()
 
-# q2b()
+q2b()
+
+# q2extra()

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  12 JUN 2022 16:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  12 JUN 2022 23:04
 entering extended mode
 **"d:/Git Repositories/Uni-Code/Honours/CP/Exam/KDSMIL001_CP_Exam.tex"
 (d:/Git Repositories/Uni-Code/Honours/CP/Exam/KDSMIL001_CP_Exam.tex
@@ -982,32 +982,51 @@ pdfTeX warning: pdflatex (file ./Plots/q1b_normalised.pdf): PDF inclusion: multi
 <Plots/q1f_theta.pdf, id=226, 462.52798pt x 346.89601pt>
 File: Plots/q1f_theta.pdf Graphic file (type pdf)
 <use Plots/q1f_theta.pdf>
-Package pdftex.def Info: Plots/q1f_theta.pdf  used on input line 135.
+Package pdftex.def Info: Plots/q1f_theta.pdf  used on input line 148.
 (pdftex.def)             Requested size: 281.85587pt x 211.39981pt.
 <Plots/q1f_phi.pdf, id=227, 462.52798pt x 346.89601pt>
 File: Plots/q1f_phi.pdf Graphic file (type pdf)
 <use Plots/q1f_phi.pdf>
-Package pdftex.def Info: Plots/q1f_phi.pdf  used on input line 143.
+Package pdftex.def Info: Plots/q1f_phi.pdf  used on input line 156.
 (pdftex.def)             Requested size: 281.85587pt x 211.39981pt.
- [4 <./Plots/q1f_theta.pdf> <./Plots/q1f_phi.pdf
 
-pdfTeX warning: pdflatex (file ./Plots/q1f_phi.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] (KDSMIL001_CP_Exam.aux)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <./Plots/q1f_theta.pdf>] [5 <./Plots/q1f_phi.pdf>]
+<Plots/q2extra.pdf, id=320, 462.52798pt x 346.89601pt>
+File: Plots/q2extra.pdf Graphic file (type pdf)
+<use Plots/q2extra.pdf>
+Package pdftex.def Info: Plots/q2extra.pdf  used on input line 202.
+(pdftex.def)             Requested size: 281.85587pt x 211.39981pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Plots/q2b.pdf, id=322, 462.52798pt x 346.89601pt>
+File: Plots/q2b.pdf Graphic file (type pdf)
+<use Plots/q2b.pdf>
+Package pdftex.def Info: Plots/q2b.pdf  used on input line 220.
+(pdftex.def)             Requested size: 281.85587pt x 211.39981pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6] [7 <./Plots/q2extra.pdf>] [8 <./Plots/q2b.pdf>] (KDSMIL001_CP_Exam.aux)
 Package rerunfilecheck Info: File `KDSMIL001_CP_Exam.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 41413 strings out of 479125
- 960028 string characters out of 4612535
+ 41457 strings out of 479125
+ 960807 string characters out of 4612535
  6330422 words of memory out of 19000000
- 58431 multiletter control sequences out of 15000+600000
+ 58458 multiletter control sequences out of 15000+600000
  412903 words of font info for 66 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,9n,103p,828b,1196s stack positions out of 5000i,500n,10000p,5000000b,80000s
-<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on KDSMIL001_CP_Exam.pdf (4 pages, 199967 bytes).
+ 99i,10n,103p,828b,1196s stack positions out of 5000i,500n,10000p,5000000b,80000s
+<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on KDSMIL001_CP_Exam.pdf (8 pages, 268939 bytes).
 PDF statistics:
- 342 PDF objects out of 1000 (max. 8388607)
- 29 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 469 PDF objects out of 1000 (max. 8388607)
+ 44 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
