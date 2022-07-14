@@ -1,0 +1,137 @@
+\documentclass[border=3pt,tikz]{standalone}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{xcolor}
+\usepackage[outline]{contour} % glow around text
+\contourlength{0.9pt}
+\usetikzlibrary{bending} % for arrow head angle
+
+\colorlet{veccol}{green!50!black}
+\colorlet{myred}{red!70!black}
+\colorlet{myblue}{blue!70!black}
+\colorlet{mydarkred}{red!40!black}
+\colorlet{mydarkblue}{blue!30!black}
+\colorlet{CMScol}{red!80!black}
+\colorlet{ATLAScol}{blue!80!black}
+\tikzset{>=latex} % for LaTeX arrow head
+\tikzstyle{axis}=[->,thick,line cap=round]
+\tikzstyle{detector}=[thick,draw=mydarkred,rotate around z=\ang]
+\tikzstyle{beam pipe}=[draw=blue!20!black!50,fill=blue!20!black!10,rotate around z=\ang]
+\tikzstyle{detector surface}=[red!60!black!60,opacity=0.06,rotate around z=\ang]
+\usetikzlibrary{angles,quotes} % for pic (angle labels)
+\newcommand*{\vv}[1]{\vec{\mkern0mu#1}} % aligned vector arrow
+
+
+% CMS detector - right perspective
+\tdplotsetmaincoords{70}{125} % to reset previous setting
+\begin{tikzpicture}[scale=2.8,tdplot_main_coords,rotate around x=90]
+  
+  % VARIABLES
+  \def\rvec{\L/2/cos(\thetavec)}
+  \def\thetavec{17}
+  \def\phivec{60}
+  \def\L{3.1}     % detector length
+  \def\R{0.75}    % detector cylinder radius
+  \def\l{4.1}     % beam pipe length
+  \def\r{0.04}    % beam pipe radius
+  \def\rt{0.042}  % beam pipe radius + line thickness
+  \def\xmax{1}    % maximum x axis
+  \def\ymax{1.05} % maximum y axis
+  \def\zmin{-\l/2-0.2} % minimum z axis
+  \def\zmax{\l/2+0.3}  % maximum z axis
+  \def\w{0.3}
+  \coordinate (O) at (0,0,0);
+  \coordinate (Z) at (0,0,\L/2);
+  \tdplotsetcoord{O'}{0.8*\rvec}{\thetavec}{\phivec} % shifted origin
+  \tdplotsetcoord{O''}{0.018}{90}{\phivec} % shifted origin
+  \tdplotsetcoord{P}{\rvec}{\thetavec}{\phivec}
+  
+  % CYLINDER behind
+  \def\ang{20} % rotate lines to simulate cylinder
+  \fill[top color=red!50!black!4,bottom color=red!60!black!2,rotate around z=\ang]
+    (0,\R,\L/2) --++ (0,0,-\L) arc(90:270:\R) --++ (0,0,\L) arc(270:90:\R) -- cycle;
+  \fill[detector surface] % transverse plane at z=L/2
+    (0,0,\L/2) --++ (0,\R,0) arc(90:270:\R) -- cycle;
+  \fill[detector surface] % transverse plane at z=-L/2
+    (0,0,-\L/2) --++ (0,\R,0) arc(90:270:\R) -- cycle;
+  \tdplotdrawarc[detector,thin]{(0,0,\L/2)}{\R}{0}{360}{}{} % transverse plane at z=L/2
+  \tdplotdrawarc[detector]{(0,0,-\L/2)}{\R}{0}{360}{}{} % transverse plane at z=-L/2
+  \draw[detector,thin] % transverse plane at z=0
+    (90-\ang:\R) arc (90-\ang:270:\R);
+  \draw[detector] (0,0,-\L/2)++(90:\R) --++ (0,0,\L); % top horizontal
+  \draw[detector] (0,0,-\L/2)++(-90:\R) --++ (0,0,\L); % bottom horizontal
+  
+  % BEAM PIPE
+  \tdplotdrawarc[beam pipe]{(0,0,-\l/2)}{\r}{0}{360}{}{}
+  \draw[beam pipe] % beam pipe, thinner in middle
+    (0,\r,-\l/2) -- (0,\r,-0.2*\l) -- (90:0.5*\r)
+    -- (0,\r,0.2*\l) -- (0,\r,0.5*\l) arc(90:-90:\r)
+    -- (0,-\r,0.2*\l) -- (-90:0.5*\r) --
+    (0,-\r,-0.2*\l) -- (0,-\r,-\l/2) arc(-90:90:\r);
+  \draw[beam pipe] (0,0,\l/2) circle(\r);
+  
+  % AXES
+  \draw[axis] (0,0,0) -- (0,0,\zmax) node[right=3,below=2]{$z$}; % long
+  \draw[->,red] (O) -- (P) node[above left=-4] {$\vv{p}$};
+  \fill[CMScol] (O) circle(0.5pt) node[right=1,below=1] {IP};
+  \draw[axis,-] (0,0,\zmin) -- (0,0,-0.020); % long
+  \draw[axis] (0,0.019,0) -- (0,\ymax,0) node[below left]{$y$};
+  \draw[axis] (0.022,0,0) -- (\xmax,0,0) node[below=1,left=-2]{$x$};
+  
+  % LABELS
+  \node[mydarkred,above] at (0,\ymax,0) {$\eta=0$};
+  \node[mydarkred,above=6] at (0,\R,0.23*\L) {$\eta>0$};
+  \node[mydarkred,above=6] at (0,\R,-0.3*\L) {$\eta<0$};
+  \node[mydarkred,above=1,left] at (0,0,\zmax) {$\eta=\infty$};
+  \node[mydarkred,below=1,right] at (0,0,\zmin) {$\eta=-\infty$};
+  
+  % VECTORS
+  %\fill[radius=0.4,red] (P) circle;
+  \draw[dashed,myred] (O'')  -- (Pxy);
+  \draw[dashed,myred] (P)  -- (Pxy);
+  \draw[dashed,myred] (Py) -- (Pxy);
+  \draw[dashed,myred] (P) -- (Pz);
+  \draw[->,red] (O') -- (P);
+  
+  % CYLINDER front
+  \draw[beam pipe,fill=none] (0,\r,-\l/2) arc(90:-90:\r);
+  \fill[detector surface] % transverse plane at z=L/2
+    (0,\rt,\L/2) --++ (0,\R-\rt,0) arc(90:-90:\R) --++ (0,\R-\rt,0) arc(-90:90:\rt);
+  \fill[detector surface] % transverse plane at z=-L/2
+    (0,\rt,-\L/2) --++ (0,\R-\rt,0) arc(90:-90:\R) --++ (0,\R-\rt,0) arc(-90:90:\rt);
+  \tdplotdrawarc[detector]{(0,0,\L/2)}{\R}{-90}{90}{}{}
+  \tdplotdrawarc[detector]{(0,0,-\L/2)}{\R}{-90}{90}{}{}
+  \draw[beam pipe,fill=none] (0,\r,\l/2) arc(90:-90:\r);
+  \draw[detector,very thin] % transverse plane at z=0
+    (90-\ang:\R) arc (90-\ang:-90:\R);
+  
+  % ANGLES
+  \tdplotdrawarc[thick,red!57!black!3]{(O)}{0.2}{4}{0.7*\phivec}{}{} % contour
+  \tdplotdrawarc[draw=none,opacity=0.8]{(O)}{0.2}{0}{\phivec} % transparant contour
+    {below=4,left=-1,anchor=mid east}{\contour{red!55!black!3}{$\varphi$}}
+  \tdplotdrawarc[->]{(O)}{0.2}{0}{\phivec}
+    {below=4,left=-1,anchor=mid east}{$\varphi$}
+  \tdplotdrawarc[->,rotate around z=\phivec-90,rotate around y=-90]
+    {(O)}{1.05}{0}{\thetavec}{above=2,anchor=mid east}{$\theta$}
+  \tdplotdrawarc[-{>[bend=1]},rotate around z=\phivec-90,rotate around y=-90,line cap=round]
+    {(O)}{0.3}{90}{\thetavec}{above=4,right=2,anchor=mid east}{$\eta$}
+  \draw[mydarkred,line cap=round] (0.004,0,\L/2) --++ (\R,0,0);
+  \tdplotdrawarc[thick,red!60!black!4]{(Z)}{0.2}{4}{0.7*\phivec}{}{} % contour
+  \tdplotdrawarc[draw=none]{(Z)}{0.2}{0}{\phivec} % transparant contour
+    {below=4,left=-1,anchor=mid east,opacity=0.8}{\contour{red!60!black!4}{$\varphi$}}
+  \tdplotdrawarc[->]{(Z)}{0.2}{0}{\phivec}
+    {below=4,left=-1,anchor=mid east}{$\varphi$}
+  
+  % COMPASS - CMS-ATLAS axis has a ~12° declination (http://googlecompass.com)
+%   \begin{scope}[shift={(1.3*\R,-\R,0.45*\L)},rotate around y=12]
+%     \draw[<->,black!50] (-\w,0,0) -- (\w,0,0);
+%     \draw[<->,black!50] (0,0,-\w) -- (0,0,\w);
+%     \node[right=4,above,black!50,scale=0.6] at (-\w,0,0) {N};
+%     \node[above=1,left=-1,green!20!black!50,scale=0.6] at (0,0,\w) {Jura};
+%     \node[left=2,below=1,blue!30!black!50,scale=0.6] at (\w,0,0) {ATLAS};
+%   \end{scope}
+  \draw[->,thick,orange!30!black] (1.4*\w,-\R,0.1*\L) --++ (2*\w,0,0)
+    node[below=1,left,scale=0.8,align=center] {center of\\[-1pt]the LHC};
+
+\end{tikzpicture}
