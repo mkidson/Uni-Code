@@ -5,7 +5,7 @@
 \usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
 \usepackage[separate-uncertainty=true, group-digits=false]{siunitx}
 \usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
-\usepackage{listings,xcolor,subfig,caption,import,wrapfig,lipsum,tikz}
+\usepackage{listings,xcolor,subfig,caption,import,wrapfig,lipsum,tikz,biblatex}
 \usepackage[version=4]{mhchem}
 \usepackage[noabbrev]{cleveref}
 \newcommand{\creflastconjunction}{, and\nobreakspace}
@@ -27,6 +27,7 @@
     captionpos=b,language=Python}
 \renewcommand{\lstlistingname}{Appendix}
 \pgfplotsset{compat=1.17}
+\addbibresource{bibliography.bib}
 
 \title{{\Huge A Look-See at muon data}}
 \author{{\Large Miles Kidson}\\ \\
@@ -60,8 +61,8 @@ Assisted By: Dr. B Naik (Postdoctoral fellow)}
 \input{Sections/Background.tex}
 
 
-\bibliographystyle{plain}
-\bibliography{bibliography}
+\printbibliography
+
 \end{document}
 
 

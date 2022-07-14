@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1631544400 "d:/Git Repositories/Uni-Code/TestTex/test.tex" "test.pdf" "test" 1631544411
+["pdflatex"] 1631544400 "d:/Git Repositories/Uni-Code/TestTex/test.tex" "test.pdf" "test" 1657830155
   "C:/Users/miles/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/public/simpsons/dpi900/simpsons.pk" 1631543364 27748 e8d68c7599ccdb3dc6ea061058b546e0 ""
   "C:/Users/miles/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs10.tfm" 1631544407 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/miles/AppData/Local/MiKTeX/2.9/fonts/tfm/public/rsfs/rsfs5.tfm" 1631544410 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -225,7 +225,7 @@
   "test.out" 1631544405 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "test.tex" 1631544399 1494 1c9c9a5bf6bb163725bacfbaf3f41531 ""
   (generated)
-  "test.log"
   "test.aux"
-  "test.out"
+  "test.log"
   "test.pdf"
+  "test.out"

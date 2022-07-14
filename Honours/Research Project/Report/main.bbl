@@ -1,0 +1,80 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{ALICE_LOI}{report}{}
+      \list{institution}{1}{%
+        {CERN}%
+      }
+      \list{location}{1}{%
+        {Geneva}%
+      }
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeltitlesource}{title}
+      \field{title}{{Letter of Intent for A Large Ion Collider Experiment [ALICE]}}
+      \field{type}{techreport}
+      \field{year}{1993}
+      \verb{urlraw}
+      \verb https://cds.cern.ch/record/290825
+      \endverb
+      \verb{url}
+      \verb https://cds.cern.ch/record/290825
+      \endverb
+    \endentry
+    \entry{coords}{online}{}
+      \name{author}{1}{}{%
+        {{hash=5633d6d7b9e8ceec9e0bbcb816c46dbb}{%
+           family={Neutelings},
+           familyi={N\bibinitperiod},
+           given={Izaak},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5633d6d7b9e8ceec9e0bbcb816c46dbb}
+      \strng{fullhash}{5633d6d7b9e8ceec9e0bbcb816c46dbb}
+      \strng{bibnamehash}{5633d6d7b9e8ceec9e0bbcb816c46dbb}
+      \strng{authorbibnamehash}{5633d6d7b9e8ceec9e0bbcb816c46dbb}
+      \strng{authornamehash}{5633d6d7b9e8ceec9e0bbcb816c46dbb}
+      \strng{authorfullhash}{5633d6d7b9e8ceec9e0bbcb816c46dbb}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The conventional 3D coordinate system at the {CMS} detector with definition of the azimuthal angle φ. It is officially described in this paper. For more coordinate systems, please see the "coordinates" tag. For the definition of pseudorapidity, please see here. For more related figures, please see the Particle Physics category. Minimal {CMS} coordinate system: The…}
+      \field{langid}{american}
+      \field{title}{{CMS} coordinate system}
+      \field{urlday}{14}
+      \field{urlmonth}{7}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\miles\\Zotero\\storage\\YFYY3WN3\\axis3d_cms.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://tikz.net/axis3d_cms/
+      \endverb
+      \verb{url}
+      \verb https://tikz.net/axis3d_cms/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
