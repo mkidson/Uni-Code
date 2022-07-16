@@ -6,6 +6,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1}The ALICE Detector}{3}{subsection.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Run 3 Specifics}{3}{subsection.2.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3}Muon Forward Tracker}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.2}Muon Forward Tracker}{4}{subsection.2.2}%

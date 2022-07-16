@@ -2347,6 +2347,10 @@
     <bcf:citekey order="1">ALICE_LOI</bcf:citekey>
     <bcf:citekey order="2">coords</bcf:citekey>
     <bcf:citekey order="3">coords</bcf:citekey>
+    <bcf:citekey order="4">coords</bcf:citekey>
+    <bcf:citekey order="5">kar_exp_phys</bcf:citekey>
+    <bcf:citekey order="6">kar_exp_phys</bcf:citekey>
+    <bcf:citekey order="7">ALICE_Upgrade_LOI</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
