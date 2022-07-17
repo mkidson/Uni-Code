@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber bkg"] 1658065671 "bkg.bcf" "bkg.bbl" "bkg" 1658065954
-  "bibliography.bib" 1658000953 26171 a017cfdc2b0bf73bff660d003de4620e ""
-  "bkg.bcf" 1658065953 107234 9940e3e09d74b208eb7db57f45719cfd "pdflatex"
+["biber bkg"] 1658074127 "bkg.bcf" "bkg.bbl" "bkg" 1658075385
+  "bibliography.bib" 1658074094 26880 b87a13c61d59c847ed014fe7a4a442ab ""
+  "bkg.bcf" 1658075384 107468 423dcedeb8df34fdad382d5caa131231 "pdflatex"
   (generated)
   "bkg.bbl"
   "bkg.blg"
-["pdflatex"] 1658065942 "d:/Git Repositories/Uni-Code/Honours/Research Project/Background Report/bkg.tex" "bkg.pdf" "bkg" 1658065954
+["pdflatex"] 1658075376 "d:/Git Repositories/Uni-Code/Honours/Research Project/Background Report/bkg.tex" "bkg.pdf" "bkg" 1658075385
   "C:/Users/miles/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1622159364 10261458 96b628fbe04cd2bda6c832da7db40e7a ""
   "C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1657830257 4735360 eccb59d2b35948648078db10d1edeb16 ""
   "D:/Program Files/MikTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -253,17 +253,18 @@
   "D:/Program Files/MikTeX/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
   "Figs/ALICE_RUN3_schematic.png" 1652006818 3017533 7e0395270df699f9b504629ad1ed6675 ""
   "Figs/MCH_schematic.png" 1658065892 59788 92020672e7a1ca8d7e214639c4f4e0a6 ""
+  "Figs/MFT_schematic.jpg" 1652007484 3860159 b05cc8f1141b5d7fdd76f85e987998d0 ""
   "Figs/coords.pdf" 1657830275 36135 bfdb9b6974300fd1630ab992a1e2b51c ""
-  "bkg.aux" 1658065953 4790 c9fba1c26960cd4621f0f7858fd19e19 "pdflatex"
-  "bkg.bbl" 1658065681 207629 93291ebdbac4157f3b15a4690cb4856d "biber bkg"
-  "bkg.out" 1658065953 1153 c40000bfa7a62aa404fa389b5c657c1b "pdflatex"
-  "bkg.run.xml" 1658065953 2300 ce31e612a305f7708af14db74feff083 "pdflatex"
-  "bkg.tex" 1658065914 8188 053cf4720736c01ba0df23974ff5a479 ""
-  "d:/Git Repositories/Uni-Code/Honours/Research Project/Background Report/bkg.tex" 1658065914 8188 053cf4720736c01ba0df23974ff5a479 ""
+  "bkg.aux" 1658075384 5855 8e3855d79e10c4175d7c9fbfdcb7c912 "pdflatex"
+  "bkg.bbl" 1658074137 209931 416fba5d490915ea3dd38cf4778ff0e9 "biber bkg"
+  "bkg.out" 1658075384 1256 ed971969fabb164af548eb308770f263 "pdflatex"
+  "bkg.run.xml" 1658075384 2300 ce31e612a305f7708af14db74feff083 "pdflatex"
+  "bkg.tex" 1658075374 9271 136a5696dc3476f01b5f172bfa681114 ""
+  "d:/Git Repositories/Uni-Code/Honours/Research Project/Background Report/bkg.tex" 1658075374 9271 136a5696dc3476f01b5f172bfa681114 ""
   (generated)
   "bkg.log"
-  "bkg.run.xml"
   "bkg.bcf"
+  "bkg.out"
+  "bkg.run.xml"
   "bkg.aux"
   "bkg.pdf"
-  "bkg.out"

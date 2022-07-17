@@ -30,7 +30,10 @@
 \addbibresource{bibliography.bib}
 
 \begin{document}
-    
+
+\section{Introduction}
+The Muon Forward Tracker (MFT) is a new detector added to ALICE at CERN for Run 3. Its primary use is to add vertexing capabilities to the Muon Spectrometer in the forward region of ALICE. With Run 3 comes a new analysis framework, called Online-Offline (O2), which is better suited to the new ways in which data will be taken for Run 3. This report aims to use O2 to have a ``look-see'' at data coming from the MFT to see if everything is behaving properly. The data used in this investigation is from two proton-proton collision runs performed in October 2021, at a centre-of-mass energy of \SI{900}{\giga\electronvolt}. This is a non-nominal energy --- Run 3 is designed to run at \SI{13.6}{\tera\electronvolt} --- but is good enough for our purposes.
+
 
 \section{Background}
 The ALICE detector (A Large Ion Collider Experiment) is a detector experiment at the Large Hadron Collider (LHC) at CERN. Its primary goal is the investigation of ``strongly interacting matter at extreme energy densities, where a formation of a new phase of matter, the quark-gluon plasma, is expected'' \cite{ALICE_LOI}. It achieves this goal by studying the products of head-on collisions of heavy ions such as lead, called Pb-Pb collisions for short. It also studies proton-lead (p-Pb) and proton-proton (p-p) collisions.  
@@ -85,27 +88,26 @@ The readout electronics for many detectors were also upgraded to allow for conti
 \subsection{The Muon Spectrometer}
 The Muon Spectrometer (\textit{\textbf{MCH or MUON, not sure}}) sits in the forward region of ALICE, as seen in \cref{fig:ALICE_Schematic}. It is designed to study heavy quark resonances through their single- and di-muon decay channels
 
-As is shown in \cref{fig:Muon Spectrometer}, it is composed of an absorber, tracking chambers, a dipole magnet, and finally the trigger chambers, often called the Muon Identifying Detector (MID) [maybe]. The MFT is also considered part of the MCH but is not shown in \cref{fig:Muon Spectrometer}. The absorber serves to filter out all particles travelling towards the MCH that are not muons as muons interact very rarely with matter. The 5 tracking chambers track the path of the muons before, during, and after they are bent by the dipole magnet. These tracking chambers used to do the job of the MFT in Run 1 and Run 2, but with the increase in luminosity and energy of the LHC in Run 3, the MFT needed to be added in order to vastly improve the vertexing capabilities. Lastly, the trigger system is made of two large gas chamber detectors. 
+As is shown in \cref{fig:Muon Spectrometer}, it is composed of an absorber, tracking chambers, a dipole magnet, and finally the trigger chambers, often called the Muon Identifying Detector (MID) [maybe]. The MFT is also considered part of the MCH but is not shown in \cref{fig:Muon Spectrometer}. The absorber serves to filter out all particles travelling towards the MCH that are not muons as muons interact very rarely with matter. The 5 tracking chambers track the path of the muons before, during, and after they are bent by the dipole magnet. These tracking chambers used to do the job of the MFT in Run 1 and Run 2, but with the increase in luminosity and energy of the LHC in Run 3, the MFT needed to be added in order to vastly improve the vertexing capabilities. Lastly, the trigger system consists of two large gas chamber detectors which trigger only when a muon is detected.
 
 \begin{figure}[h]
     \begin{center}
-        \includegraphics[width=.8\textwidth]{Figs/MCH_schematic.png}
-        \caption{Muon Spectrometer Diagram}
+        \includegraphics[width=\textwidth]{Figs/MCH_schematic.png}
+        \caption{Muon Spectrometer Diagram \cite{Muon_Spec_Schematic}}
         \label{fig:Muon Spectrometer}
     \end{center}
 \end{figure}
 
-
-
-
-
-
-
-
 \subsection{The Muon Forward Tracker}
 The MFT is a brand new detector added to ALICE for Run 3. It serves as a tracking detector for the Muon Spectrometer (\textit{\textbf{MCH or MUON, not sure}}), which sits in the forward region ($-4<\eta<-2.5$). The MFT was made in conjunction with the ITS and uses precisely the same silicon CMOS sensors but in a different configuration to better suit the geometry of the problem. At its closest point, the MFT is only \SI{46.0}{\milli\metre} from the IP, and \SI{76.8}{\centi\metre} at its furthest. 
 
-
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[width=.8\textwidth]{Figs/MFT_schematic.jpg}
+        \caption{Muon Forward Tracker schematic \cite{MFT_Schematic}}
+        \label{fig:MFT Schematic}
+    \end{center}
+\end{figure}
 
 \subsection{The Inner Tracking System}
 
@@ -113,6 +115,9 @@ The MFT is a brand new detector added to ALICE for Run 3. It serves as a trackin
 
 
 \subsection{The Online-Offline Analysis Framework (O2)}
+
+
+
 
 \printbibliography
 

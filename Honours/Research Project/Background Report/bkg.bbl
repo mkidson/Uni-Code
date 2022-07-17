@@ -5189,6 +5189,46 @@
       \verb https://cds.cern.ch/record/1475243
       \endverb
     \endentry
+    \entry{MFT_Schematic}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8d3fd8268b14d23cddb6d4f5843b4853}{%
+           family={{ALICE}},
+           familyi={A\bibinitperiod},
+           given={{MFT}\bibnamedelima Collaboration},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d3fd8268b14d23cddb6d4f5843b4853}
+      \strng{fullhash}{8d3fd8268b14d23cddb6d4f5843b4853}
+      \strng{bibnamehash}{8d3fd8268b14d23cddb6d4f5843b4853}
+      \strng{authorbibnamehash}{8d3fd8268b14d23cddb6d4f5843b4853}
+      \strng{authornamehash}{8d3fd8268b14d23cddb6d4f5843b4853}
+      \strng{authorfullhash}{8d3fd8268b14d23cddb6d4f5843b4853}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{25}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{note}{Number: {OPEN}-{PHO}-{EXP}-2020-004}
+      \field{title}{{ALICE} Muon Forward Tracker ({MFT})}
+      \field{titleaddon}{{CERN} Bulletin}
+      \field{urlday}{17}
+      \field{urlmonth}{7}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:C\:\\Users\\miles\\Zotero\\storage\\2SVXYDBU\\2748310.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://cds.cern.ch/record/2748310
+      \endverb
+      \verb{url}
+      \verb https://cds.cern.ch/record/2748310
+      \endverb
+    \endentry
     \entry{ALICE_LOI}{report}{}
       \list{institution}{1}{%
         {CERN}%
@@ -5244,6 +5284,25 @@
       \endverb
       \verb{url}
       \verb https://dx.doi.org/10.1088/2053-2563/ab1be6
+      \endverb
+    \endentry
+    \entry{Muon_Spec_Schematic}{online}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeltitlesource}{title}
+      \field{title}{Muon Spectrometer - {ALICE} Collaboration}
+      \field{urlday}{17}
+      \field{urlmonth}{7}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb ALICE Collaboration:C\:\\Users\\miles\\Zotero\\storage\\9ASBP8FU\\Muon-Spect.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://alice-collaboration.web.cern.ch/menu_proj_items/Muon-Spect
+      \endverb
+      \verb{url}
+      \verb https://alice-collaboration.web.cern.ch/menu_proj_items/Muon-Spect
       \endverb
     \endentry
     \entry{coords}{online}{}

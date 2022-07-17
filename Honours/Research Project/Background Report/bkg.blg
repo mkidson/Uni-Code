@@ -1,17 +1,17 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'bkg.blg'
-[170] biber-MSWIN64:340> INFO - === 
-[231] Biber.pm:415> INFO - Reading 'bkg.bcf'
-[412] Biber.pm:952> INFO - Found 4 citekeys in bib section 0
-[431] Biber.pm:4340> INFO - Processing section 0
-[448] Biber.pm:4531> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
-[534] bibtex.pm:1689> INFO - LaTeX decoding ...
-[550] bibtex.pm:1494> INFO - Found BibTeX data source 'bibliography.bib'
-[1868] Utils.pm:395> WARN - legacy month field 'Aug' in entry 'ALICE_Upgrade_LOI' is not an integer - this will probably not sort properly.
-[1944] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1945] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1945] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[1945] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[2001] bbl.pm:654> INFO - Writing 'bkg.bbl' with encoding 'UTF-8'
-[6827] bbl.pm:757> INFO - Output to bkg.bbl
-[6841] Biber.pm:128> INFO - WARNINGS: 1
+[159] biber-MSWIN64:340> INFO - === 
+[209] Biber.pm:415> INFO - Reading 'bkg.bcf'
+[377] Biber.pm:952> INFO - Found 6 citekeys in bib section 0
+[403] Biber.pm:4340> INFO - Processing section 0
+[420] Biber.pm:4531> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[493] bibtex.pm:1689> INFO - LaTeX decoding ...
+[511] bibtex.pm:1494> INFO - Found BibTeX data source 'bibliography.bib'
+[1919] Utils.pm:395> WARN - legacy month field 'Aug' in entry 'ALICE_Upgrade_LOI' is not an integer - this will probably not sort properly.
+[2007] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2007] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2007] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[2008] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[2080] bbl.pm:654> INFO - Writing 'bkg.bbl' with encoding 'UTF-8'
+[7151] bbl.pm:757> INFO - Output to bkg.bbl
+[7151] Biber.pm:128> INFO - WARNINGS: 1
