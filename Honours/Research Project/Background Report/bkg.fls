@@ -1318,6 +1318,16 @@ INPUT .\Figs\ALICE_RUN3_schematic.png
 INPUT .\Figs\ALICE_RUN3_schematic.png
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbxti10.tfm
+INPUT .\Figs\ITS_Schematic.png
+INPUT .\Figs\ITS_Schematic.png
+INPUT Figs\ITS_Schematic.png
+INPUT .\Figs\ITS_Schematic.png
+INPUT .\Figs\ITS_Schematic.png
+INPUT .\Figs\ITS_Schematic.png
+INPUT .\Figs\ITS_Schematic.png
+INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm0800.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm0600.tfm
 INPUT .\Figs\MCH_schematic.png
 INPUT .\Figs\MCH_schematic.png
 INPUT Figs\MCH_schematic.png
@@ -1338,6 +1348,7 @@ INPUT .\bkg.out
 INPUT .\bkg.out
 INPUT bkg.run.xml
 OUTPUT bkg.run.xml
+INPUT D:\Program Files\MikTeX\fonts\enc\dvips\cm-super\cm-super-ts1.enc
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
@@ -1360,3 +1371,5 @@ INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\cm-super\sfrm1095.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\cm-super\sfrm1095.pfb

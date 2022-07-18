@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  17 JUL 2022 18:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  18 JUL 2022 14:40
 entering extended mode
 **"d:/Git Repositories/Uni-Code/Honours/Research Project/Background Report/bkg.tex"
 (d:/Git Repositories/Uni-Code/Honours/Research Project/Background Report/bkg.tex
@@ -1193,39 +1193,45 @@ File: Figs/ALICE_RUN3_schematic.png Graphic file (type png)
 Package pdftex.def Info: Figs/ALICE_RUN3_schematic.png  used on input line 78.
 (pdftex.def)             Requested size: 375.80544pt x 170.08311pt.
  [2 <./Figs/ALICE_RUN3_schematic.png>]
-<Figs/MCH_schematic.png, id=96, 670.00313pt x 292.09125pt>
+<Figs/ITS_Schematic.png, id=96, 860.46469pt x 490.83376pt>
+File: Figs/ITS_Schematic.png Graphic file (type png)
+<use Figs/ITS_Schematic.png>
+Package pdftex.def Info: Figs/ITS_Schematic.png  used on input line 95.
+(pdftex.def)             Requested size: 375.80544pt x 214.37225pt.
+ [3 <./Figs/ITS_Schematic.png>]
+<Figs/MCH_schematic.png, id=112, 670.00313pt x 292.09125pt>
 File: Figs/MCH_schematic.png Graphic file (type png)
 <use Figs/MCH_schematic.png>
-Package pdftex.def Info: Figs/MCH_schematic.png  used on input line 95.
+Package pdftex.def Info: Figs/MCH_schematic.png  used on input line 112.
 (pdftex.def)             Requested size: 469.75502pt x 204.79228pt.
-<Figs/MFT_schematic.jpg, id=100, 3975.60281pt x 2852.40656pt>
+<Figs/MFT_schematic.jpg, id=115, 3975.60281pt x 2852.40656pt>
 File: Figs/MFT_schematic.jpg Graphic file (type jpg)
 <use Figs/MFT_schematic.jpg>
-Package pdftex.def Info: Figs/MFT_schematic.jpg  used on input line 106.
+Package pdftex.def Info: Figs/MFT_schematic.jpg  used on input line 123.
 (pdftex.def)             Requested size: 375.80544pt x 269.63219pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3 <./Figs/MCH_schematic.png>] [4 <./Figs/MFT_schematic.jpg>] (bkg.aux)
+[4 <./Figs/MCH_schematic.png>] [5 <./Figs/MFT_schematic.jpg>] (bkg.aux)
 Package rerunfilecheck Info: File `bkg.out' has not changed.
-(rerunfilecheck)             Checksum: ED971969FABB164AF548EB308770F263;1256.
+(rerunfilecheck)             Checksum: 25B38CBBB2C035B988CA98E079589E7D;1256.
 Package logreq Info: Writing requests to 'bkg.run.xml'.
 \openout1 = `bkg.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48177 strings out of 479125
- 1097359 string characters out of 4612535
- 7133017 words of memory out of 19000000
- 65141 multiletter control sequences out of 15000+600000
- 411703 words of font info for 58 fonts, out of 5000000 for 9000
+ 48205 strings out of 479125
+ 1097996 string characters out of 4612535
+ 7235590 words of memory out of 19000000
+ 65160 multiletter control sequences out of 15000+600000
+ 412721 words of font info for 61 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,6n,103p,1017b,1769s stack positions out of 5000i,500n,10000p,5000000b,80000s
-<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on bkg.pdf (4 pages, 7265292 bytes).
+ 99i,6n,103p,1017b,1771s stack positions out of 5000i,500n,10000p,5000000b,80000s
+{D:/Program Files/MikTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on bkg.pdf (5 pages, 7932033 bytes).
 PDF statistics:
- 171 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
- 97 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 197 PDF objects out of 1000 (max. 8388607)
+ 32 named destinations out of 1000 (max. 500000)
+ 102 words of extra memory for PDF output out of 10000 (max. 10000000)
 

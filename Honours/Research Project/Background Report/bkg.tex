@@ -85,10 +85,27 @@ Part of the upgrades for Run 3, the details of which can be found in \cite{ALICE
 
 The readout electronics for many detectors were also upgraded to allow for continuous readout as opposed to triggered readout. The MFT, however, will still work on a triggered readout system as \textit{\textbf{I THINK BECAUSE EVENTS ARE LESS COMMON DUE TO THE ABSORBER BUT IDK FOR SURE}}.
 
-\subsection{The Muon Spectrometer}
-The Muon Spectrometer (\textit{\textbf{MCH or MUON, not sure}}) sits in the forward region of ALICE, as seen in \cref{fig:ALICE_Schematic}. It is designed to study heavy quark resonances through their single- and di-muon decay channels
+\subsection{The Inner Tracking System}
+The Inner Tracking System (ITS) sits in the main barrel of ALICE, as seen in \cref{fig:ALICE_Schematic}, and covers the range $|\eta|<X$. For Run 3 it has been upgraded significantly by replacing the old detector with a new layout and new detection technology, leading to an improvement in track position resolution at the primary vertex of a factor of 3 or greater \cite{ITS_Upgrade_TDR}. The ITS's main purpose is to track the particles resulting from the collisions and determine the position of the primary vertex of collisions. It also serves to ``reconstruct secondary vertices, track and identify particles with low momentum, and improve the momentum and angle resolution for particles reconstructed by the Time Projection Chamber (TPC)'' \cite{ITS_Info}.
 
-As is shown in \cref{fig:Muon Spectrometer}, it is composed of an absorber, tracking chambers, a dipole magnet, and finally the trigger chambers, often called the Muon Identifying Detector (MID) [maybe]. The MFT is also considered part of the MCH but is not shown in \cref{fig:Muon Spectrometer}. The absorber serves to filter out all particles travelling towards the MCH that are not muons as muons interact very rarely with matter. The 5 tracking chambers track the path of the muons before, during, and after they are bent by the dipole magnet. These tracking chambers used to do the job of the MFT in Run 1 and Run 2, but with the increase in luminosity and energy of the LHC in Run 3, the MFT needed to be added in order to vastly improve the vertexing capabilities. Lastly, the trigger system consists of two large gas chamber detectors which trigger only when a muon is detected.
+The new ITS consists of 7 layers of pixel detectors; 3 in the ``Inner Barrel'' and 4 in the ``Outer Barrel''. The innermost layer sits only \SI{22.4}{\milli\metre} from the IP thanks to a reduction in beam pipe radius for Run 3 and the outermost layer sits at \SI{391.8}{\milli\metre} from the IP. 
+
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[width=.8\textwidth]{Figs/ITS_Schematic.png}
+        \caption{ITS Schematic}
+        \label{fig:ITS_Schematic}
+    \end{center}
+\end{figure}
+
+The pixel sensors used in the ITS are \SI{0.18}{\micro\metre} CMOS chips from TowerJazz. They have a 
+
+
+
+\subsection{The Muon Spectrometer}
+The Muon Spectrometer (\textit{\textbf{MCH or MUON, not sure}}) sits in the forward region ($-4<\eta<-2.5$) of ALICE, as seen in \cref{fig:ALICE_Schematic}. It is designed to study heavy quark resonances through their single- and di-muon decay channels.
+
+As is shown in \cref{fig:Muon Spectrometer}, it is composed of a hadronic absorber, tracking chambers, a dipole magnet, and finally the trigger chambers, often called the Muon Identifying Detector (MID) [maybe]. The MFT is also considered part of the MCH but is not shown in \cref{fig:Muon Spectrometer}. The absorber serves to filter out all particles travelling towards the MCH that are not muons as muons interact very rarely with matter. The 5 tracking chambers track the path of the muons before, during, and after they are bent by the dipole magnet. These tracking chambers used to do the job of the MFT in Run 1 and Run 2, but with the increase in luminosity and energy of the LHC in Run 3, the MFT needed to be added in order to vastly improve the vertexing capabilities. Lastly, the trigger system consists of two large gas chamber detectors which trigger only when a muon is detected.
 
 \begin{figure}[h]
     \begin{center}
@@ -99,7 +116,7 @@ As is shown in \cref{fig:Muon Spectrometer}, it is composed of an absorber, trac
 \end{figure}
 
 \subsection{The Muon Forward Tracker}
-The MFT is a brand new detector added to ALICE for Run 3. It serves as a tracking detector for the Muon Spectrometer (\textit{\textbf{MCH or MUON, not sure}}), which sits in the forward region ($-4<\eta<-2.5$). The MFT was made in conjunction with the ITS and uses precisely the same silicon CMOS sensors but in a different configuration to better suit the geometry of the problem. At its closest point, the MFT is only \SI{46.0}{\milli\metre} from the IP, and \SI{76.8}{\centi\metre} at its furthest. 
+The MFT is a brand new detector added to ALICE for Run 3. It serves as a tracking detector for the Muon Spectrometer (\textit{\textbf{MCH or MUON, not sure}}) and covers the range $-3.6<\eta<-2.45$. The MFT was made in conjunction with the ITS and uses precisely the same silicon CMOS sensors but in a conical configuration to better suit the geometry of the problem. Due to the MFT being placed in front of the absorber, it detects a lot more particles than make it through to the MCH, allowing it to be much better at finding the primary vertex of collisions.
 
 \begin{figure}[h]
     \begin{center}
@@ -109,7 +126,11 @@ The MFT is a brand new detector added to ALICE for Run 3. It serves as a trackin
     \end{center}
 \end{figure}
 
-\subsection{The Inner Tracking System}
+The MFT Technical Design Report \cite{MFT_TDR} gives vast amount of detail on the construction and implementation of the MFT, but the points relevant to this report will be discussed here.
+
+The MFT is made up of 5 disks, each made of 2 half-disks. Each half disk has two planes of detectors, one on the front and one on the back. The disks sit at $z$-positions -46.0, -49.3, -53.1, -68.7, and -76.8 \si{\centi\metre} respectively and each disk is \textit{\textbf{I THINK LIKE 1 CM BUT IDK}} thick, leading to detector planes at $\pm X$ from each of those positions. 
+
+
 
 
 
