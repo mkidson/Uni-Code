@@ -32,11 +32,11 @@
 \begin{document}
 
 \section{Introduction}
-The Muon Forward Tracker (MFT) is a new detector added to ALICE at CERN for Run 3. Its primary use is to add vertexing capabilities to the Muon Spectrometer in the forward region of ALICE. With Run 3 comes a new analysis framework, called Online-Offline (O2), which is better suited to the new ways in which data will be taken for Run 3. This report aims to use O2 to have a ``look-see'' at data coming from the MFT to see if everything is behaving properly. The data used in this investigation is from two proton-proton collision runs performed in October 2021, at a centre-of-mass energy of \SI{900}{\giga\electronvolt}. This is a non-nominal energy --- Run 3 is designed to run at \SI{13.6}{\tera\electronvolt} --- but is good enough for our purposes.
+The Muon Forward Tracker (MFT) is a new detector added to ALICE at CERN for Run 3. Its primary use is to add vertexing capabilities to the Muon Spectrometer in the forward region of ALICE. With Run 3 comes a new analysis framework, called Online-Offline (O2), which is better suited to the new ways in which data will be taken for Run 3. This report aims to use O2 to have a ``look-see'' at data coming from the MFT to see if everything is behaving as expected. The data used in this investigation is from two proton-proton collision runs performed in October 2021, at a centre-of-mass energy of \SI{900}{\giga\electronvolt}. This is a non-nominal energy---Run 3 is designed to reach $\sqrt{s}=\SI{13.6}{\tera\electronvolt}$---but is good enough for our purposes.
 
 
 \section{Background}
-The ALICE detector (A Large Ion Collider Experiment) is a detector experiment at the Large Hadron Collider (LHC) at CERN. Its primary goal is the investigation of ``strongly interacting matter at extreme energy densities, where a formation of a new phase of matter, the quark-gluon plasma, is expected'' \cite{ALICE_LOI}. It achieves this goal by studying the products of head-on collisions of heavy ions such as lead, called Pb-Pb collisions for short. It also studies proton-lead (p-Pb) and proton-proton (p-p) collisions.  
+The ALICE (A Large Ion Collider Experiment) detector is a detector experiment at the Large Hadron Collider (LHC) at CERN. Its primary goal is the investigation of ``strongly interacting matter at extreme energy densities, where a formation of a new phase of matter, the quark-gluon plasma, is expected''~\cite{ALICE_LOI}. It achieves this goal by studying the products of head-on collisions of heavy ions such as lead, called Pb-Pb collisions for short. It also studies proton-lead (p-Pb) and proton-proton (p-p) collisions.  
 
 % ALICE is situated at 
 
@@ -48,12 +48,12 @@ The coordinate system used at ALICE needs to be discussed in order to fully expl
 \begin{figure}[h]
     \begin{center}
         \includegraphics[width=.8\textwidth]{Figs/coords.pdf}
-        \caption{Modified cylindrical coordinate system used at the LHC \cite{coords}}
+        \caption{Modified cylindrical coordinate system used at the LHC~\cite{coords}.}
         \label{fig:coords}
     \end{center}
 \end{figure}
 
-We place the $z$-axis along the beamline with its origin at the interaction point (IP). The IP is the point at which collisions happen, right in the center of the detector. The angle around the $z$-axis is called the azimuthal angle, denoted by $\varphi$. Sometimes $\phi$ ranges from 0 to $2\pi$, and sometimes it ranges from $-\pi$ to $\pi$. We will try stay consistent and use the latter in this report, but we may need use the other convention at times. The angle from the $z$-axis to the $x-y$ plane is called the polar angle, denoted by $\theta$. $\theta$ runs from 0 to $\pi$. We are interested in the standard 3-momentum of particles that we track in the detector, which we call $\vec{p}=(p_x,p_y,p_z)$, but we also define the transverse momentum as 
+We place the $z$-axis along the beamline with its origin at the interaction point (IP). The IP is the point at which collisions happen, right in the center of the detector. The angle around the $z$-axis is called the azimuthal angle, denoted by $\varphi$. Sometimes in the literature $\varphi$ ranges from 0 to $2\pi$ and sometimes it ranges from $-\pi$ to $\pi$. We will try stay consistent and use the latter in this report, but we may need use the other convention at times. The angle from the $z$-axis to the $x$-$y$ plane is called the polar angle, denoted by $\theta$, and runs from 0 to $\pi$. We are interested in the standard 3-momentum of particles that we track in the detector, which we call $\vec{p}=(p_x,p_y,p_z)$, but we also define the transverse momentum as 
 \begin{equation}
     p_{\mathrm{T}}=\sqrt{p_x^2 + p_y^2}.
     \label{eqn:transverse momentum}
@@ -63,7 +63,7 @@ We define the rapidity, often denoted as $y$, as
     y=\frac 12 \ln\left(\frac{E+p_z}{E-p_z}\right)
     \label{eqn:rapidity}
 \end{equation}
-where $E$ is the total energy of the particle being considered and $p_z$ is the momentum in the $z$ direction \cite{kar_exp_phys}. This quantity is useful as differences in rapidity are Lorentz invariant for boosts along the $z$-axis. One issue, however, is that the energy of a particle is hard to measure, so we instead use pseudorapidity, denoted as $\eta$. Rapidity and pseudorapidity are equivalent for massless particles, and near equivalent for particles with total 3-momentum magnitude $p$ much greater than their mass $m$. Pseudorapidity is much easier to measure as it is defined as \cite{kar_exp_phys}
+where $E$ is the total energy of the particle being considered and $p_z$ is the momentum in the $z$ direction~\cite{kar_exp_phys}. This quantity is useful as differences in rapidity are Lorentz invariant for boosts along the $z$-axis. One issue, however, is that the energy of a particle is hard to measure, so we instead use pseudorapidity, denoted as $\eta$. Rapidity and pseudorapidity are equivalent for massless particles, and near equivalent for particles with total 3-momentum magnitude $p$ much greater than their mass $m$. Pseudorapidity is much easier to measure as it is defined as~\cite{kar_exp_phys}
 \begin{equation}
     \eta=-\ln\tan\frac{\theta}{2}.
     \label{eqn:pseudorapidity}
@@ -71,7 +71,7 @@ where $E$ is the total energy of the particle being considered and $p_z$ is the 
 From \cref{fig:coords} we see that for $z$ positive, $\eta$ is also positive, and similarly for $z$ negative. Confusingly, we define the ``forward region'' of the ALICE detector as the region for which $z$, and thus $\eta$, are negative. 
 
 \subsection{ALICE Run 3}
-In 2018, the LHC shut down for what was called Long Shutdown 2 (LS2). During this time, the ALICE experiment was being prepared for what is called Run 3, where it will be taking data at much higher rates and much higher energies than before \cite{ALICE_Upgrade_LOI}. \Cref{fig:ALICE_Schematic} shows the detector configuration for Run 3. The intent of these upgrades was in large part to prepare ALICE for higher frequency collisions in both Pb-Pb and p-p cases. 
+In 2018, the LHC shut down for what was called Long Shutdown 2 (LS2). During this time, the ALICE experiment was being prepared for Run 3, where it will be taking data at much higher rates and much higher energies than before, from 2022 until 2025~\cite{ALICE_Upgrade_LOI}. \Cref{fig:ALICE_Schematic} shows the detector configuration for Run 3. The intent of these upgrades was in large part to prepare ALICE for higher frequency collisions in both Pb-Pb and p-p cases. 
 
 \begin{figure}[h]
     \begin{center}
@@ -81,14 +81,14 @@ In 2018, the LHC shut down for what was called Long Shutdown 2 (LS2). During thi
     \end{center}
 \end{figure}
 
-Part of the upgrades for Run 3, the details of which can be found in \cite{ALICE_Upgrade_LOI}, were a whole new Inner Tracking System (ITS) and a brand new detector called the Muon Forward Tracker (MFT). These detectors are both silicon-based and their primary purpose is tracking particles. 
+Part of the upgrades for Run 3, the details of which can be found in \citeauthor{ALICE_Upgrade_LOI}, were a whole new Inner Tracking System (ITS) and a brand new detector called the Muon Forward Tracker (MFT). These detectors are both silicon-based and their primary purpose is tracking particles and determining the collision vertex, which is the best estimation of where the collision that resulted in these particles happened. 
 
-The readout electronics for many detectors were also upgraded to allow for continuous readout as opposed to triggered readout. The MFT, however, will still work on a triggered readout system as \textit{\textbf{I THINK BECAUSE EVENTS ARE LESS COMMON DUE TO THE ABSORBER BUT IDK FOR SURE}}.
+The readout electronics for many detectors were also upgraded to allow for continuous readout as opposed to triggered readout. The MCH had its readout and front-end electronics upgraded too but will still work on a triggered readout system.
 
 \subsection{The Inner Tracking System}
-The Inner Tracking System (ITS) sits in the main barrel of ALICE, as seen in \cref{fig:ALICE_Schematic}, and covers the range $|\eta|<X$. For Run 3 it has been upgraded significantly by replacing the old detector with a new layout and new detection technology, leading to an improvement in track position resolution at the primary vertex of a factor of 3 or greater \cite{ITS_Upgrade_TDR}. The ITS's main purpose is to track the particles resulting from the collisions and determine the position of the primary vertex of collisions. It also serves to ``reconstruct secondary vertices, track and identify particles with low momentum, and improve the momentum and angle resolution for particles reconstructed by the Time Projection Chamber (TPC)'' \cite{ITS_Info}.
+The Inner Tracking System (ITS) sits in the main barrel of ALICE, as seen in \cref{fig:ALICE_Schematic}, and covers the range $|\eta|<1.22$. For Run 3 it has been upgraded significantly by replacing the old detector with a new layout and new detection technology, leading to an improvement in track position resolution at the primary vertex of a factor of 3 or greater~\cite{ITS_Upgrade_TDR}. The ITS's main purpose is to track the particles resulting from the collisions and determine the position of the primary vertex of collisions. It also serves to ``reconstruct secondary vertices, track and identify particles with low momentum, and improve the momentum and angle resolution for particles reconstructed by the Time Projection Chamber (TPC)''~\cite{ITS_Info}.
 
-The new ITS consists of 7 layers of pixel detectors; 3 in the ``Inner Barrel'' and 4 in the ``Outer Barrel''. The innermost layer sits only \SI{22.4}{\milli\metre} from the IP thanks to a reduction in beam pipe radius for Run 3 and the outermost layer sits at \SI{391.8}{\milli\metre} from the IP. 
+The new ITS consists of 7 layers of pixel detectors; 3 in the ``Inner Barrel'' and 4 in the ``Outer Barrel''. The innermost layer sits at a radius of only \SI{22.4}{\milli\metre} from the IP thanks to a reduction in beam pipe radius for Run 3 and the outermost layer sits at a radius of \SI{391.8}{\milli\metre} from the IP. The pixel sensors used in the ITS are \SI{0.18}{\micro\metre} CMOS chips from TowerJazz.
 
 \begin{figure}[h]
     \begin{center}
@@ -98,44 +98,40 @@ The new ITS consists of 7 layers of pixel detectors; 3 in the ``Inner Barrel'' a
     \end{center}
 \end{figure}
 
-The pixel sensors used in the ITS are \SI{0.18}{\micro\metre} CMOS chips from TowerJazz. They have a 
-
-
-
 \subsection{The Muon Spectrometer}
-The Muon Spectrometer (\textit{\textbf{MCH or MUON, not sure}}) sits in the forward region ($-4<\eta<-2.5$) of ALICE, as seen in \cref{fig:ALICE_Schematic}. It is designed to study heavy quark resonances through their single- and di-muon decay channels.
+The Muon Spectrometer (MCH) sits in the forward region of ALICE, as seen in \cref{fig:ALICE_Schematic}, and covers $-4<\eta<-2.5$. It is designed to study heavy quark resonances through their single- and di-muon decay channels.
 
-As is shown in \cref{fig:Muon Spectrometer}, it is composed of a hadronic absorber, tracking chambers, a dipole magnet, and finally the trigger chambers, often called the Muon Identifying Detector (MID) [maybe]. The MFT is also considered part of the MCH but is not shown in \cref{fig:Muon Spectrometer}. The absorber serves to filter out all particles travelling towards the MCH that are not muons as muons interact very rarely with matter. The 5 tracking chambers track the path of the muons before, during, and after they are bent by the dipole magnet. These tracking chambers used to do the job of the MFT in Run 1 and Run 2, but with the increase in luminosity and energy of the LHC in Run 3, the MFT needed to be added in order to vastly improve the vertexing capabilities. Lastly, the trigger system consists of two large gas chamber detectors which trigger only when a muon is detected.
+As is shown in \cref{fig:Muon Spectrometer}, it is composed of a hadronic absorber, tracking chambers, a dipole magnet, and finally the trigger chambers. The MFT is also considered part of the MCH but is not shown in \cref{fig:Muon Spectrometer}. The absorber serves to filter out all particles travelling towards the MCH that are not muons as muons interact very rarely with matter. The 5 tracking chambers track the path of the muons before, during, and after they are bent by the dipole magnet. These tracking chambers used to do the job of the MFT in Run 1 and Run 2, but with the increase in luminosity and energy of the LHC in Run 3, the MFT needed to be added in order to improve the vertexing capabilities. Lastly, the trigger system consists of two large gas chamber detectors which trigger the MCH to take data only when a muon is detected.
 
 \begin{figure}[h]
     \begin{center}
         \includegraphics[width=\textwidth]{Figs/MCH_schematic.png}
-        \caption{Muon Spectrometer Diagram \cite{Muon_Spec_Schematic}}
+        \caption{Muon Spectrometer Diagram~\cite{Muon_Spec_Schematic}}
         \label{fig:Muon Spectrometer}
     \end{center}
 \end{figure}
 
 \subsection{The Muon Forward Tracker}
-The MFT is a brand new detector added to ALICE for Run 3. It serves as a tracking detector for the Muon Spectrometer (\textit{\textbf{MCH or MUON, not sure}}) and covers the range $-3.6<\eta<-2.45$. The MFT was made in conjunction with the ITS and uses precisely the same silicon CMOS sensors but in a conical configuration to better suit the geometry of the problem. Due to the MFT being placed in front of the absorber, it detects a lot more particles than make it through to the MCH, allowing it to be much better at finding the primary vertex of collisions.
+The MFT is a brand new detector added to ALICE for Run 3. It serves as a tracking detector for the MCH and covers the range $-3.6<\eta<-2.45$. The MFT was made in conjunction with the ITS and uses precisely the same CMOS pixel sensors but in a conical configuration to better suit the geometry of the problem. Due to the MFT being placed in front of the absorber, it detects a lot more particles than make it through to the MCH, allowing it to be much better at finding the primary vertex of collisions.
 
 \begin{figure}[h]
     \begin{center}
         \includegraphics[width=.8\textwidth]{Figs/MFT_schematic.jpg}
-        \caption{Muon Forward Tracker schematic \cite{MFT_Schematic}}
+        \caption{Muon Forward Tracker schematic~\cite{MFT_Schematic}}
         \label{fig:MFT Schematic}
     \end{center}
 \end{figure}
 
-The MFT Technical Design Report \cite{MFT_TDR} gives vast amount of detail on the construction and implementation of the MFT, but the points relevant to this report will be discussed here.
+The MFT Technical Design Report \cite{MFT_TDR} gives all the details on the construction and implementation of the MFT, but the points relevant to this report will be discussed here.
 
-The MFT is made up of 5 disks, each made of 2 half-disks. Each half disk has two planes of detectors, one on the front and one on the back. The disks sit at $z$-positions -46.0, -49.3, -53.1, -68.7, and -76.8 \si{\centi\metre} respectively and each disk is \textit{\textbf{I THINK LIKE 1 CM BUT IDK}} thick, leading to detector planes at $\pm X$ from each of those positions. 
-
-
+The MFT is made up of 5 disks, each made of 2 half-disks. Each half disk has two planes of detectors, one on the front and one on the back. The disks sit at $z$-positions -46.0, -49.3, -53.1, -68.7, and -76.8 \si{\centi\metre} respectively and each disk is \SI{1.4}{\centi\metre} thick, leading to detector planes at $\pm \SI{0.7}{\centi\metre}$ from each of those positions. 
 
 
+\subsection{The Online-Offline Analysis Framework}
+With the increased interaction rate expected for Run 3, a new system for real-time processing, as well as offline analysis, needed to be constructed \cite{ALICE_Upgrade_LOI}. The Online-Offline (O2) framework was developed for this purpose. The ``Online'' portion of the framework is the real-time processing, where continuously captured data from ALICE is split into \SI{10}{\milli\second} chunks, called timeframes. These timeframes are then later processed, or ``reconstructed'' into Analysis Object Data (AOD) files---this is the ``Offline'' part--- which contain only the data of interest. Different passes of reconstruction can be done for purposes. These AOD files can then be analysed, also Offline, through an ``Analysis Task'', written in C++ and ROOT. 
 
+The focus of the upgraded analysis framework was to reduce disk space usage when processing and analysing, as well as making sure all analysis takes advantage of all processing power available to it at all times. 
 
-\subsection{The Online-Offline Analysis Framework (O2)}
 
 
 

@@ -1316,8 +1316,9 @@ INPUT .\Figs\ALICE_RUN3_schematic.png
 INPUT .\Figs\ALICE_RUN3_schematic.png
 INPUT .\Figs\ALICE_RUN3_schematic.png
 INPUT .\Figs\ALICE_RUN3_schematic.png
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmti10.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbxti10.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm0800.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm0600.tfm
 INPUT .\Figs\ITS_Schematic.png
 INPUT .\Figs\ITS_Schematic.png
 INPUT Figs\ITS_Schematic.png
@@ -1325,9 +1326,6 @@ INPUT .\Figs\ITS_Schematic.png
 INPUT .\Figs\ITS_Schematic.png
 INPUT .\Figs\ITS_Schematic.png
 INPUT .\Figs\ITS_Schematic.png
-INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm0800.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm0600.tfm
 INPUT .\Figs\MCH_schematic.png
 INPUT .\Figs\MCH_schematic.png
 INPUT Figs\MCH_schematic.png
@@ -1342,6 +1340,7 @@ INPUT .\Figs\MFT_schematic.jpg
 INPUT .\Figs\MFT_schematic.jpg
 INPUT .\Figs\MFT_schematic.jpg
 INPUT .\Figs\MFT_schematic.jpg
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmcsc10.tfm
 INPUT bkg.aux
 INPUT .\bkg.out
@@ -1351,8 +1350,6 @@ OUTPUT bkg.run.xml
 INPUT D:\Program Files\MikTeX\fonts\enc\dvips\cm-super\cm-super-ts1.enc
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
-INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmcsc10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmcsc10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb

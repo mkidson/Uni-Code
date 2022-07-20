@@ -2358,6 +2358,7 @@
     <bcf:citekey order="12">MFT_Schematic</bcf:citekey>
     <bcf:citekey order="13">MFT_Schematic</bcf:citekey>
     <bcf:citekey order="14">MFT_TDR</bcf:citekey>
+    <bcf:citekey order="15">ALICE_Upgrade_LOI</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
