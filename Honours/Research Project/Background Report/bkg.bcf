@@ -2353,12 +2353,17 @@
     <bcf:citekey order="7">ALICE_Upgrade_LOI</bcf:citekey>
     <bcf:citekey order="8">ITS_Upgrade_TDR</bcf:citekey>
     <bcf:citekey order="9">ITS_Info</bcf:citekey>
-    <bcf:citekey order="10">Muon_Spec_Schematic</bcf:citekey>
-    <bcf:citekey order="11">Muon_Spec_Schematic</bcf:citekey>
-    <bcf:citekey order="12">MFT_Schematic</bcf:citekey>
-    <bcf:citekey order="13">MFT_Schematic</bcf:citekey>
-    <bcf:citekey order="14">MFT_TDR</bcf:citekey>
-    <bcf:citekey order="15">ALICE_Upgrade_LOI</bcf:citekey>
+    <bcf:citekey order="10">ITS_Upgrade_TDR</bcf:citekey>
+    <bcf:citekey order="11">ITS_Upgrade_TDR</bcf:citekey>
+    <bcf:citekey order="12">ITS_Upgrade_TDR</bcf:citekey>
+    <bcf:citekey order="13">Muon_Spec_Schematic</bcf:citekey>
+    <bcf:citekey order="14">Muon_Spec_Schematic</bcf:citekey>
+    <bcf:citekey order="15">MFT_Schematic</bcf:citekey>
+    <bcf:citekey order="16">MFT_Schematic</bcf:citekey>
+    <bcf:citekey order="17">MFT_TDR</bcf:citekey>
+    <bcf:citekey order="18">ALICE_Upgrade_LOI</bcf:citekey>
+    <bcf:citekey order="19">O2_Upgrade_TDR</bcf:citekey>
+    <bcf:citekey order="20">O2_Upgrade_TDR</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

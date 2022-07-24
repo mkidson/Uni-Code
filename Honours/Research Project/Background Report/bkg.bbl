@@ -10420,6 +10420,45 @@
       \verb https://cds.cern.ch/record/290825
       \endverb
     \endentry
+    \entry{O2_Upgrade_TDR}{report}{}
+      \name{author}{3}{}{%
+        {{hash=efffa717a1a908f4a1d1962c9bc69698}{%
+           family={Buncic},
+           familyi={B\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{hash=ff9cae6709c21174a751f50ee9cfb95f}{%
+           family={Krzewicki},
+           familyi={K\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fff15caab414e441369d2666b469c608}{%
+           family={Vande\bibnamedelima Vyvre},
+           familyi={V\bibinitperiod\bibinitdelim V\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{b545a032139de337c4bde77f45ac7f7d}
+      \strng{fullhash}{b545a032139de337c4bde77f45ac7f7d}
+      \strng{bibnamehash}{b545a032139de337c4bde77f45ac7f7d}
+      \strng{authorbibnamehash}{b545a032139de337c4bde77f45ac7f7d}
+      \strng{authornamehash}{b545a032139de337c4bde77f45ac7f7d}
+      \strng{authorfullhash}{b545a032139de337c4bde77f45ac7f7d}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{title}{{Technical Design Report for the Upgrade of the Online-Offline Computing System}}
+      \field{type}{techreport}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://cds.cern.ch/record/2011297
+      \endverb
+      \verb{url}
+      \verb https://cds.cern.ch/record/2011297
+      \endverb
+    \endentry
     \entry{ITS_Info}{online}{}
       \field{sortinit}{I}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}

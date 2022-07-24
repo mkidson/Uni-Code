@@ -32,7 +32,7 @@
 \begin{document}
 
 \section{Introduction}
-The Muon Forward Tracker (MFT) is a new detector added to ALICE at CERN for Run 3. Its primary use is to add vertexing capabilities to the Muon Spectrometer in the forward region of ALICE. With Run 3 comes a new analysis framework, called Online-Offline (O2), which is better suited to the new ways in which data will be taken for Run 3. This report aims to use O2 to have a ``look-see'' at data coming from the MFT to see if everything is behaving as expected. The data used in this investigation is from two proton-proton collision runs performed in October 2021, at a centre-of-mass energy of \SI{900}{\giga\electronvolt}. This is a non-nominal energy---Run 3 is designed to reach $\sqrt{s}=\SI{13.6}{\tera\electronvolt}$---but is good enough for our purposes.
+The Muon Forward Tracker (MFT) is a new detector added to ALICE at CERN for Run 3. Its primary use is to add vertexing capabilities to the Muon Spectrometer in the forward region of ALICE. With Run 3 comes a new analysis framework, called Online-Offline (O2), which is better suited to the new ways in which data will be taken for Run 3. This report aims to use O2 to have a ``look-see'' at data coming from the MFT to see if detector and analysis tools are working correctly. The data used in this investigation is from two proton-proton collision runs performed in October 2021, at a centre-of-mass energy of \SI{900}{\giga\electronvolt}. This is not an energy we expect to use for physics data analysis---Run 3 is designed to reach $\sqrt{s}=\SI{13.6}{\tera\electronvolt}$---but is good enough for this purpose.
 
 
 \section{Background}
@@ -76,7 +76,7 @@ In 2018, the LHC shut down for what was called Long Shutdown 2 (LS2). During thi
 \begin{figure}[h]
     \begin{center}
         \includegraphics[width=.8\textwidth]{Figs/ALICE_RUN3_schematic.png}
-        \caption{ALICE Run 3 schematic}
+        \caption{Schematic view of the ALICE detector setup for Run 3 of the LHC. }
         \label{fig:ALICE_Schematic}
     \end{center}
 \end{figure}
@@ -88,12 +88,14 @@ The readout electronics for many detectors were also upgraded to allow for conti
 \subsection{The Inner Tracking System}
 The Inner Tracking System (ITS) sits in the main barrel of ALICE, as seen in \cref{fig:ALICE_Schematic}, and covers the range $|\eta|<1.22$. For Run 3 it has been upgraded significantly by replacing the old detector with a new layout and new detection technology, leading to an improvement in track position resolution at the primary vertex of a factor of 3 or greater~\cite{ITS_Upgrade_TDR}. The ITS's main purpose is to track the particles resulting from the collisions and determine the position of the primary vertex of collisions. It also serves to ``reconstruct secondary vertices, track and identify particles with low momentum, and improve the momentum and angle resolution for particles reconstructed by the Time Projection Chamber (TPC)''~\cite{ITS_Info}.
 
-The new ITS consists of 7 layers of pixel detectors; 3 in the ``Inner Barrel'' and 4 in the ``Outer Barrel''. The innermost layer sits at a radius of only \SI{22.4}{\milli\metre} from the IP thanks to a reduction in beam pipe radius for Run 3 and the outermost layer sits at a radius of \SI{391.8}{\milli\metre} from the IP. The pixel sensors used in the ITS are \SI{0.18}{\micro\metre} CMOS chips from TowerJazz.
+The new ITS consists of 7 layers of pixel detectors; 3 in the ``Inner Barrel'' and 4 in the ``Outer Barrel''. The pixel detectors used are \SI{0.18}{\micro\metre} CMOS chips from TowerJazz. When a charged particle passes through the silicon in the active volume, it liberates the charge carriers in the material, which then collect on electrodes connected to the silicon, telling the detector that a particle has been detected. The fine segmentation of the detectors also allows the detector to determine the point at which the particle hit the detector, up to a resolution of \SI{4}{\micro\metre} in both the $r\varphi$ and $z$ directions~\cite{ITS_Upgrade_TDR}.
+
+The innermost layer sits at a radius of only \SI{22.4}{\milli\metre} from the IP thanks to a reduction in beam pipe radius for Run 3 and the outermost layer sits at a radius of \SI{391.8}{\milli\metre} from the IP. \Cref{fig:ITS_Schematic} shows the layout more clearly. 
 
 \begin{figure}[h]
     \begin{center}
         \includegraphics[width=.8\textwidth]{Figs/ITS_Schematic.png}
-        \caption{ITS Schematic}
+        \caption{Schematic view of the Inner Tracking System~\cite{ITS_Upgrade_TDR}. Note the thinner beam pipe and extremely close Inner Barrel.}
         \label{fig:ITS_Schematic}
     \end{center}
 \end{figure}
@@ -106,7 +108,7 @@ As is shown in \cref{fig:Muon Spectrometer}, it is composed of a hadronic absorb
 \begin{figure}[h]
     \begin{center}
         \includegraphics[width=\textwidth]{Figs/MCH_schematic.png}
-        \caption{Muon Spectrometer Diagram~\cite{Muon_Spec_Schematic}}
+        \caption{Diagram of the layout of the Muon Spectrometer~\cite{Muon_Spec_Schematic}. Shown in red is an example of the paths of two muons created in a di-muon event.}
         \label{fig:Muon Spectrometer}
     \end{center}
 \end{figure}
@@ -117,7 +119,7 @@ The MFT is a brand new detector added to ALICE for Run 3. It serves as a trackin
 \begin{figure}[h]
     \begin{center}
         \includegraphics[width=.8\textwidth]{Figs/MFT_schematic.jpg}
-        \caption{Muon Forward Tracker schematic~\cite{MFT_Schematic}}
+        \caption{Schematic view of the Muon Forward Tracker~\cite{MFT_Schematic}. The small cone on the left shows the IP.}
         \label{fig:MFT Schematic}
     \end{center}
 \end{figure}
@@ -128,9 +130,19 @@ The MFT is made up of 5 disks, each made of 2 half-disks. Each half disk has two
 
 
 \subsection{The Online-Offline Analysis Framework}
-With the increased interaction rate expected for Run 3, a new system for real-time processing, as well as offline analysis, needed to be constructed \cite{ALICE_Upgrade_LOI}. The Online-Offline (O2) framework was developed for this purpose. The ``Online'' portion of the framework is the real-time processing, where continuously captured data from ALICE is split into \SI{10}{\milli\second} chunks, called timeframes. These timeframes are then later processed, or ``reconstructed'' into Analysis Object Data (AOD) files---this is the ``Offline'' part--- which contain only the data of interest. Different passes of reconstruction can be done for purposes. These AOD files can then be analysed, also Offline, through an ``Analysis Task'', written in C++ and ROOT. 
+With the increased interaction rate expected for Run 3, a new system for real-time processing, as well as offline analysis, needed to be constructed \cite{ALICE_Upgrade_LOI}. The Online-Offline (O2) framework was developed for this purpose. The ``Online'' portion of the framework is the real-time processing, where continuously captured data from ALICE is split into \SI{10}{\milli\second} chunks, called timeframes. These timeframes are then later processed, or ``reconstructed'' into Analysis Object Data (AOD) files---this is the ``Offline'' part--- which contain only the data of interest. Different passes of reconstruction can be done for purposes. These AOD files can then be analysed, also Offline, through an ``Analysis Task'', written in C\texttt{++} and ROOT. 
 
-The focus of the upgraded analysis framework was to reduce disk space usage when processing and analysing, as well as making sure all analysis takes advantage of all processing power available to it at all times. 
+We distinguish between data taken in Run 3 and data taken in Run 1 and 2 by calling Run 3 AOD's ``AO2D'' files, and Run 1 and 2 just ``AOD'' files. The data is stored on the \texttt{alimonitor} system, requiring a certificate to access, which is obtained by joining the ALICE collaboration. Access to all data and most analysis tools used in this report is restricted behind this wall. 
+
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[width=.6\textwidth]{Figs/O2_flow.png}
+        \caption{Functional flow of the O2 framework~\cite{O2_Upgrade_TDR}.}
+        \label{fig:O2_flow}
+    \end{center}
+\end{figure}
+
+The focus of the upgraded analysis framework was to reduce disk space usage when processing and analysing, as well as making sure all analysis takes advantage of all processing power available to it at all times. \Cref{fig:O2_flow} shows the general flow of data in the O2 processing pipeline.
 
 
 
