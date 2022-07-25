@@ -19,6 +19,25 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{ALICE_schematic_labels}{online}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{3D {ALICE} Schematic {RUN}3 - with Description {|} {ALICE} Figure}
+      \field{urlday}{15}
+      \field{urlmonth}{7}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb 3D ALICE Schematic RUN3 - with Description | ALICE Figure:C\:\\Users\\miles\\Zotero\\storage\\LS4B27ZW\\11220.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://alice-figure.web.cern.ch/node/11220
+      \endverb
+      \verb{url}
+      \verb https://alice-figure.web.cern.ch/node/11220
+      \endverb
+    \endentry
     \entry{ITS_Upgrade_TDR}{report}{}
       \name{author}{1026}{}{%
         {{hash=decf4be8042dc941696088f75962f200}{%

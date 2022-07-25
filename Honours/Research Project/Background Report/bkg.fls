@@ -1316,9 +1316,6 @@ INPUT .\Figs\ALICE_RUN3_schematic.png
 INPUT .\Figs\ALICE_RUN3_schematic.png
 INPUT .\Figs\ALICE_RUN3_schematic.png
 INPUT .\Figs\ALICE_RUN3_schematic.png
-INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm0800.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm0600.tfm
 INPUT .\Figs\ITS_Schematic.png
 INPUT .\Figs\ITS_Schematic.png
 INPUT Figs\ITS_Schematic.png
@@ -1326,6 +1323,9 @@ INPUT .\Figs\ITS_Schematic.png
 INPUT .\Figs\ITS_Schematic.png
 INPUT .\Figs\ITS_Schematic.png
 INPUT .\Figs\ITS_Schematic.png
+INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm0800.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\jknappen\ec\tcrm0600.tfm
 INPUT .\Figs\MCH_schematic.png
 INPUT .\Figs\MCH_schematic.png
 INPUT Figs\MCH_schematic.png

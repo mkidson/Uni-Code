@@ -32,7 +32,7 @@
 \begin{document}
 
 \section{Introduction}
-The Muon Forward Tracker (MFT) is a new detector added to ALICE at CERN for Run 3. Its primary use is to add vertexing capabilities to the Muon Spectrometer in the forward region of ALICE. With Run 3 comes a new analysis framework, called Online-Offline (O2), which is better suited to the new ways in which data will be taken for Run 3. This report aims to use O2 to have a ``look-see'' at data coming from the MFT to see if detector and analysis tools are working correctly. The data used in this investigation is from two proton-proton collision runs performed in October 2021, at a centre-of-mass energy of \SI{900}{\giga\electronvolt}. This is not an energy we expect to use for physics data analysis---Run 3 is designed to reach $\sqrt{s}=\SI{13.6}{\tera\electronvolt}$---but is good enough for this purpose.
+The Muon Forward Tracker (MFT) is a new detector added to ALICE at CERN for Run 3. Its primary use is to add vertexing capabilities to the Muon Spectrometer (MCH) in the forward region of ALICE. With Run 3 comes a new analysis framework, called Online-Offline (O2), which is better suited to the new ways in which data will be taken for Run 3 due to the increased energy and luminosity. This report aims to use O2 to have a ``look-see'' at data coming from the MFT to see if the detector and analysis tools are working correctly. The data used in this investigation is from two proton-proton collision runs performed in October 2021, at a centre-of-mass energy of \SI{900}{\giga\electronvolt}. This is not an energy we expect to use for physics data analysis---Run 3 is designed to reach $\sqrt{s}=\SI{13.6}{\tera\electronvolt}$---but is good enough for this purpose.
 
 
 \section{Background}
@@ -63,36 +63,32 @@ We define the rapidity, often denoted as $y$, as
     y=\frac 12 \ln\left(\frac{E+p_z}{E-p_z}\right)
     \label{eqn:rapidity}
 \end{equation}
-where $E$ is the total energy of the particle being considered and $p_z$ is the momentum in the $z$ direction~\cite{kar_exp_phys}. This quantity is useful as differences in rapidity are Lorentz invariant for boosts along the $z$-axis. One issue, however, is that the energy of a particle is hard to measure, so we instead use pseudorapidity, denoted as $\eta$. Rapidity and pseudorapidity are equivalent for massless particles, and near equivalent for particles with total 3-momentum magnitude $p$ much greater than their mass $m$. Pseudorapidity is much easier to measure as it is defined as~\cite{kar_exp_phys}
+where $E$ is the total energy of the particle being considered and $p_z$ is the momentum in the $z$ direction~\cite{kar_exp_phys}. This quantity is useful as differences in rapidity are Lorentz invariant for boosts along the $z$-axis. One issue, however, is that the energy of a particle is hard to measure, so we instead use pseudorapidity, denoted as $\eta$. Rapidity and pseudorapidity are equivalent for massless particles, and near equivalent for particles with total 3-momentum magnitude $p$ much greater than their mass $m$. Pseudorapidity is much easier to measure as it is defined in \cite{kar_exp_phys} as
 \begin{equation}
     \eta=-\ln\tan\frac{\theta}{2}.
     \label{eqn:pseudorapidity}
 \end{equation}
-From \cref{fig:coords} we see that for $z$ positive, $\eta$ is also positive, and similarly for $z$ negative. Confusingly, we define the ``forward region'' of the ALICE detector as the region for which $z$, and thus $\eta$, are negative. 
+From \cref{fig:coords} we see that for $z$ positive, $\eta$ is also positive, and similarly for $z$ negative. Confusingly, we define the ``forward region'' of the ALICE detector as the region for which $z$, and thus $\eta$, are negative. The forward region is where our interest lies.
 
 \subsection{ALICE Run 3}
-In 2018, the LHC shut down for what was called Long Shutdown 2 (LS2). During this time, the ALICE experiment was being prepared for Run 3, where it will be taking data at much higher rates and much higher energies than before, from 2022 until 2025~\cite{ALICE_Upgrade_LOI}. \Cref{fig:ALICE_Schematic} shows the detector configuration for Run 3. The intent of these upgrades was in large part to prepare ALICE for higher frequency collisions in both Pb-Pb and p-p cases. 
+In 2018, the LHC shut down for what was called Long Shutdown 2 (LS2). During this time, the ALICE experiment was being prepared for Run 3, where it will be taking data at much higher rates and much higher energies than before, from 2022 until 2025~\cite{ALICE_Upgrade_LOI}. \Cref{fig:ALICE_Schematic} shows the detector configuration for Run 3. The intent of these upgrades was in large part to prepare ALICE for a higher frequency of collisions in both Pb-Pb and p-p cases. 
 
-\begin{figure}[h]
+Part of the upgrades for Run 3, the details of which can be found in \cite{ALICE_Upgrade_LOI}, were a whole new Inner Tracking System and a brand new detector called the Muon Forward Tracker. These detectors are both silicon-based and their primary purpose is tracking particles and determining the collision vertex, which is the best estimation of where the collision that resulted in these particles happened. 
+
+The readout electronics for many detectors were also upgraded to allow for continuous readout as opposed to triggered readout. The MCH also had its readout and front-end electronics upgraded but will still work on a triggered readout system.
+
+\subsection{The Inner Tracking System}
+The Inner Tracking System (ITS) sits in the main barrel of ALICE, as seen in \cref{fig:ALICE_Schematic}, and covers the range $|\eta|<1.22$~\cite{ITS_Upgrade_TDR}. For Run 3 it has been upgraded significantly by replacing the old detector with a new layout and new detection technology, leading to an improvement in track position resolution at the primary vertex of a factor of 3 or greater~\cite{ITS_Upgrade_TDR}. The ITS's main purpose is to track the particles resulting from the collisions and determine the position of the primary vertex of collisions. It also serves to ``reconstruct secondary vertices, track and identify particles with low momentum, and improve the momentum and angle resolution for particles reconstructed by the Time Projection Chamber (TPC)''~\cite{ITS_Info}.
+
+\begin{figure}[H]
     \begin{center}
-        \includegraphics[width=.8\textwidth]{Figs/ALICE_RUN3_schematic.png}
-        \caption{Schematic view of the ALICE detector setup for Run 3 of the LHC. }
+        \includegraphics[width=\textwidth]{Figs/ALICE_RUN3_schematic.png}
+        \caption{Schematic view of the ALICE detector setup for Run 3 of the LHC~\cite{ALICE_schematic_labels}. Note here that the MCH is shown separate from the MID, which act as the triggering mechanism for the MCH. For the purposes of this report, the MID will be considered part of the MCH.}
         \label{fig:ALICE_Schematic}
     \end{center}
 \end{figure}
 
-Part of the upgrades for Run 3, the details of which can be found in \citeauthor{ALICE_Upgrade_LOI}, were a whole new Inner Tracking System (ITS) and a brand new detector called the Muon Forward Tracker (MFT). These detectors are both silicon-based and their primary purpose is tracking particles and determining the collision vertex, which is the best estimation of where the collision that resulted in these particles happened. 
-
-The readout electronics for many detectors were also upgraded to allow for continuous readout as opposed to triggered readout. The MCH had its readout and front-end electronics upgraded too but will still work on a triggered readout system.
-
-\subsection{The Inner Tracking System}
-The Inner Tracking System (ITS) sits in the main barrel of ALICE, as seen in \cref{fig:ALICE_Schematic}, and covers the range $|\eta|<1.22$. For Run 3 it has been upgraded significantly by replacing the old detector with a new layout and new detection technology, leading to an improvement in track position resolution at the primary vertex of a factor of 3 or greater~\cite{ITS_Upgrade_TDR}. The ITS's main purpose is to track the particles resulting from the collisions and determine the position of the primary vertex of collisions. It also serves to ``reconstruct secondary vertices, track and identify particles with low momentum, and improve the momentum and angle resolution for particles reconstructed by the Time Projection Chamber (TPC)''~\cite{ITS_Info}.
-
-The new ITS consists of 7 layers of pixel detectors; 3 in the ``Inner Barrel'' and 4 in the ``Outer Barrel''. The pixel detectors used are \SI{0.18}{\micro\metre} CMOS chips from TowerJazz. When a charged particle passes through the silicon in the active volume, it liberates the charge carriers in the material, which then collect on electrodes connected to the silicon, telling the detector that a particle has been detected. The fine segmentation of the detectors also allows the detector to determine the point at which the particle hit the detector, up to a resolution of \SI{4}{\micro\metre} in both the $r\varphi$ and $z$ directions~\cite{ITS_Upgrade_TDR}.
-
-The innermost layer sits at a radius of only \SI{22.4}{\milli\metre} from the IP thanks to a reduction in beam pipe radius for Run 3 and the outermost layer sits at a radius of \SI{391.8}{\milli\metre} from the IP. \Cref{fig:ITS_Schematic} shows the layout more clearly. 
-
-\begin{figure}[h]
+\begin{figure}[H]
     \begin{center}
         \includegraphics[width=.8\textwidth]{Figs/ITS_Schematic.png}
         \caption{Schematic view of the Inner Tracking System~\cite{ITS_Upgrade_TDR}. Note the thinner beam pipe and extremely close Inner Barrel.}
@@ -100,10 +96,14 @@ The innermost layer sits at a radius of only \SI{22.4}{\milli\metre} from the IP
     \end{center}
 \end{figure}
 
-\subsection{The Muon Spectrometer}
-The Muon Spectrometer (MCH) sits in the forward region of ALICE, as seen in \cref{fig:ALICE_Schematic}, and covers $-4<\eta<-2.5$. It is designed to study heavy quark resonances through their single- and di-muon decay channels.
+The new ITS consists of 7 layers of pixel detectors; 3 in the ``Inner Barrel'' and 4 in the ``Outer Barrel''. The pixel detectors used are \SI{0.18}{\micro\metre} CMOS chips from TowerJazz. When a charged particle passes through the silicon in the active volume, it liberates the charge carriers in the material, which then collect on electrodes connected to the silicon, telling the detector that a particle has been detected. The fine segmentation of the detectors also allows the detector to determine the point at which the particle hit the detector, up to a resolution of \SI{4}{\micro\metre} in both the $r\varphi$ and $z$ directions~\cite{ITS_Upgrade_TDR}.
 
-As is shown in \cref{fig:Muon Spectrometer}, it is composed of a hadronic absorber, tracking chambers, a dipole magnet, and finally the trigger chambers. The MFT is also considered part of the MCH but is not shown in \cref{fig:Muon Spectrometer}. The absorber serves to filter out all particles travelling towards the MCH that are not muons as muons interact very rarely with matter. The 5 tracking chambers track the path of the muons before, during, and after they are bent by the dipole magnet. These tracking chambers used to do the job of the MFT in Run 1 and Run 2, but with the increase in luminosity and energy of the LHC in Run 3, the MFT needed to be added in order to improve the vertexing capabilities. Lastly, the trigger system consists of two large gas chamber detectors which trigger the MCH to take data only when a muon is detected.
+The innermost layer sits at a radius of only \SI{22.4}{\milli\metre} from the IP thanks to a reduction in beam pipe radius for Run 3 and the outermost layer sits at a radius of \SI{391.8}{\milli\metre} from the IP. \Cref{fig:ITS_Schematic} shows the layout more clearly. 
+
+\subsection{The Muon Spectrometer}
+The MCH sits in the forward region of ALICE, as seen in \cref{fig:ALICE_Schematic}, and covers $-4<\eta<-2.5$. It is designed to study heavy quark resonances through their single- and di-muon decay channels.
+
+As is shown in \cref{fig:Muon Spectrometer}, it is composed of a hadronic absorber, tracking chambers, a dipole magnet, and finally the trigger chambers. The MFT is often also considered part of the MCH but is not shown in \cref{fig:Muon Spectrometer}. The absorber, made of carbon and concrete, serves to filter out all particles travelling towards the MCH that are not muons as muons interact very rarely with matter. The 5 tracking chambers track the path of the muons before, during, and after they are bent by the dipole magnet. These tracking chambers used to also do the job of the MFT in Run 1 and Run 2, but with the increase in luminosity and energy of the LHC in Run 3, the MFT needed to be added in order to improve the vertexing capabilities. Lastly, the trigger system consists of two large gas chamber detectors which trigger the MCH to take data only when a muon is detected.
 
 \begin{figure}[h]
     \begin{center}
@@ -147,7 +147,7 @@ The focus of the upgraded analysis framework was to reduce disk space usage when
 
 
 
-
+\newpage
 \printbibliography
 
 \end{document}
