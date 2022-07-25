@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  25 JUL 2022 10:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.28)  25 JUL 2022 10:59
 entering extended mode
 **"d:/Git Repositories/Uni-Code/Honours/Research Project/Background Report/bkg.tex"
 (d:/Git Repositories/Uni-Code/Honours/Research Project/Background Report/bkg.tex
@@ -1039,30 +1039,30 @@ Package cleveref Info: `listings' support loaded on input line 3131.
 Package cleveref Info: `subfig' support loaded on input line 3164.
 Package cleveref Info: no abbreviation of names on input line 7852.
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 32.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 38.
 \@quotelevel=\count471
 \@quotereset=\count472
  (bkg.aux)
 \openout1 = `bkg.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1098,7 +1098,7 @@ LaTeX Font Info:    ... okay on input line 32.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 32.
+Package hyperref Info: Link coloring OFF on input line 38.
 (D:\Program Files\MikTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (D:\Program Files\MikTeX\tex/latex/refcount\refcount.sty
@@ -1108,9 +1108,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count473
 )
-LaTeX Info: Redefining \ref on input line 32.
-LaTeX Info: Redefining \pageref on input line 32.
-LaTeX Info: Redefining \nameref on input line 32.
+LaTeX Info: Redefining \ref on input line 38.
+LaTeX Info: Redefining \pageref on input line 38.
+LaTeX Info: Redefining \nameref on input line 38.
  (bkg.out) (bkg.out)
 \@outlinefile=\write7
 \openout7 = `bkg.out'.
@@ -1118,7 +1118,7 @@ LaTeX Info: Redefining \nameref on input line 32.
  (D:\Program Files\MikTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 32.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 38.
  (D:\Program Files\MikTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count474
@@ -1166,64 +1166,70 @@ Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'bkg.bbl' found.
  (bkg.bbl)
-Package biblatex Info: Reference section=0 on input line 32.
-Package biblatex Info: Reference segment=0 on input line 32.
+Package biblatex Info: Reference section=0 on input line 38.
+Package biblatex Info: Reference segment=0 on input line 38.
 
-Package chemgreek Info: Activating mapping `default' on line 32.
+Package chemgreek Info: Activating mapping `default' on line 38.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
  (D:\Program Files\MikTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
  (D:\Program Files\MikTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<Figs/coords.pdf, id=40, 385.02144pt x 184.89075pt>
-File: Figs/coords.pdf Graphic file (type pdf)
-<use Figs/coords.pdf>
-Package pdftex.def Info: Figs/coords.pdf  used on input line 50.
-(pdftex.def)             Requested size: 375.80544pt x 180.47226pt.
+<Figs/UCT.jpg, id=38, 144.54pt x 144.54pt>
+File: Figs/UCT.jpg Graphic file (type jpg)
+<use Figs/UCT.jpg>
+Package pdftex.def Info: Figs/UCT.jpg  used on input line 44.
+(pdftex.def)             Requested size: 144.53963pt x 144.53963pt.
  [1
 
-{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Figs/coords.pdf>]
-<Figs/ALICE_RUN3_schematic.png, id=83, 1927.2pt x 872.25874pt>
+{C:/Users/miles/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Figs/UCT.jpg>]
+<Figs/coords.pdf, id=52, 385.02144pt x 184.89075pt>
+File: Figs/coords.pdf Graphic file (type pdf)
+<use Figs/coords.pdf>
+Package pdftex.def Info: Figs/coords.pdf  used on input line 72.
+(pdftex.def)             Requested size: 375.80544pt x 180.47226pt.
+ [2 <./Figs/coords.pdf>]
+<Figs/ALICE_RUN3_schematic.png, id=92, 1927.2pt x 872.25874pt>
 File: Figs/ALICE_RUN3_schematic.png Graphic file (type png)
 <use Figs/ALICE_RUN3_schematic.png>
-Package pdftex.def Info: Figs/ALICE_RUN3_schematic.png  used on input line 85.
+Package pdftex.def Info: Figs/ALICE_RUN3_schematic.png  used on input line 107.
 (pdftex.def)             Requested size: 469.75502pt x 212.60722pt.
- [2]
-<Figs/ITS_Schematic.png, id=101, 860.46469pt x 490.83376pt>
+ [3]
+<Figs/ITS_Schematic.png, id=110, 860.46469pt x 490.83376pt>
 File: Figs/ITS_Schematic.png Graphic file (type png)
 <use Figs/ITS_Schematic.png>
-Package pdftex.def Info: Figs/ITS_Schematic.png  used on input line 93.
+Package pdftex.def Info: Figs/ITS_Schematic.png  used on input line 115.
 (pdftex.def)             Requested size: 375.80544pt x 214.37225pt.
- [3 <./Figs/ALICE_RUN3_schematic.png> <./Figs/ITS_Schematic.png>]
-<Figs/MCH_schematic.png, id=118, 670.00313pt x 292.09125pt>
+ [4 <./Figs/ALICE_RUN3_schematic.png> <./Figs/ITS_Schematic.png>]
+<Figs/MCH_schematic.png, id=127, 670.00313pt x 292.09125pt>
 File: Figs/MCH_schematic.png Graphic file (type png)
 <use Figs/MCH_schematic.png>
-Package pdftex.def Info: Figs/MCH_schematic.png  used on input line 110.
+Package pdftex.def Info: Figs/MCH_schematic.png  used on input line 132.
 (pdftex.def)             Requested size: 469.75502pt x 204.79228pt.
-<Figs/MFT_schematic.jpg, id=121, 3975.60281pt x 2852.40656pt>
+<Figs/MFT_schematic.jpg, id=130, 3975.60281pt x 2852.40656pt>
 File: Figs/MFT_schematic.jpg Graphic file (type jpg)
 <use Figs/MFT_schematic.jpg>
-Package pdftex.def Info: Figs/MFT_schematic.jpg  used on input line 121.
+Package pdftex.def Info: Figs/MFT_schematic.jpg  used on input line 143.
 (pdftex.def)             Requested size: 375.80544pt x 269.63219pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4 <./Figs/MCH_schematic.png>]
-<Figs/O2_flow.png, id=133, 526.21594pt x 584.93532pt>
+[5 <./Figs/MCH_schematic.png>]
+<Figs/O2_flow.png, id=142, 526.21594pt x 584.93532pt>
 File: Figs/O2_flow.png Graphic file (type png)
 <use Figs/O2_flow.png>
-Package pdftex.def Info: Figs/O2_flow.png  used on input line 139.
+Package pdftex.def Info: Figs/O2_flow.png  used on input line 161.
 (pdftex.def)             Requested size: 281.85587pt x 313.31664pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5 <./Figs/MFT_schematic.jpg>] [6 <./Figs/O2_flow.png>] [7] (bkg.aux)
+[6 <./Figs/MFT_schematic.jpg>] [7 <./Figs/O2_flow.png>] [8] (bkg.aux)
 Package rerunfilecheck Info: File `bkg.out' has not changed.
 (rerunfilecheck)             Checksum: F31BC1659A4372DDBCAD9502FAD6A19A;1222.
 Package logreq Info: Writing requests to 'bkg.run.xml'.
@@ -1231,17 +1237,17 @@ Package logreq Info: Writing requests to 'bkg.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48222 strings out of 479125
- 1098428 string characters out of 4612535
- 7235556 words of memory out of 19000000
- 65172 multiletter control sequences out of 15000+600000
- 412362 words of font info for 60 fonts, out of 5000000 for 9000
+ 48246 strings out of 479125
+ 1098737 string characters out of 4612535
+ 7235449 words of memory out of 19000000
+ 65188 multiletter control sequences out of 15000+600000
+ 414991 words of font info for 70 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,6n,103p,1017b,1752s stack positions out of 5000i,500n,10000p,5000000b,80000s
-{D:/Program Files/MikTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on bkg.pdf (7 pages, 8002646 bytes).
+ 99i,7n,103p,1017b,1752s stack positions out of 5000i,500n,10000p,5000000b,80000s
+{D:/Program Files/MikTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Program Files/MikTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><D:/Program Files/MikTeX/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on bkg.pdf (8 pages, 8155931 bytes).
 PDF statistics:
- 227 PDF objects out of 1000 (max. 8388607)
- 37 named destinations out of 1000 (max. 500000)
- 107 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 245 PDF objects out of 1000 (max. 8388607)
+ 39 named destinations out of 1000 (max. 500000)
+ 112 words of extra memory for PDF output out of 10000 (max. 10000000)
 

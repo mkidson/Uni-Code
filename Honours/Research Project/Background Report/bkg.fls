@@ -1298,9 +1298,27 @@ INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss8.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt10.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt8.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt8.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr17.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr17.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmss12.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmtt12.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT .\Figs\UCT.jpg
+INPUT .\Figs\UCT.jpg
+INPUT Figs\UCT.jpg
+INPUT .\Figs\UCT.jpg
+INPUT .\Figs\UCT.jpg
+INPUT .\Figs\UCT.jpg
+INPUT .\Figs\UCT.jpg
+INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT D:\Program Files\MikTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT .\Figs\coords.pdf
 INPUT .\Figs\coords.pdf
@@ -1308,7 +1326,6 @@ INPUT Figs\coords.pdf
 INPUT .\Figs\coords.pdf
 INPUT .\Figs\coords.pdf
 INPUT .\Figs\coords.pdf
-INPUT C:\Users\miles\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT .\Figs\ALICE_RUN3_schematic.png
 INPUT .\Figs\ALICE_RUN3_schematic.png
 INPUT Figs\ALICE_RUN3_schematic.png
@@ -1355,6 +1372,8 @@ INPUT .\bkg.out
 INPUT bkg.run.xml
 OUTPUT bkg.run.xml
 INPUT D:\Program Files\MikTeX\fonts\enc\dvips\cm-super\cm-super-ts1.enc
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmcsc10.pfb
@@ -1367,6 +1386,10 @@ INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
+INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT D:\Program Files\MikTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
