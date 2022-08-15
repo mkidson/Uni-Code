@@ -1,0 +1,50 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in, top=1in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage[separate-uncertainty=true, group-digits=false]{siunitx}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,subfig,caption,import,wrapfig}
+\usepackage[version=4]{mhchem}
+\usepackage[noabbrev]{cleveref}
+\newcommand{\creflastconjunction}{, and\nobreakspace}
+\newcommand{\mb}[1]{\mathbf{#1}}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\captionsetup{font=small, belowskip=0pt}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+\addbibresource{bibliography.bib}
+
+\begin{document}
+
+\begin{center}
+    {\huge Investigating the first positron detection}\\
+    \vspace{0.2in}
+    \textbf{KDSMIL001 | August 2022}
+    
+\end{center}
+
+\section{Introduction}\label{sec:Introduction}
+The discovery of the electron is credited to J.J. Thomson in 1897, showing that the atom was not the homogeneous, indivisible thing that it had previously been believed to be. By convention of electrical circuits, its charge was given as $-e\approx-\SI{1.602e-19}{\coulomb}$, where we call $e$ the ``fundamental charge''. In 1933, Carl Anderson published a paper called `The Positive Electron'~\cite{Pos_Electron}, in which he showed images of tracks of particles coming from cosmic rays. He claimed that due to their charge to mass ratio as well as their energy-loss, the only option was for them to be a particle of the same mass as an electron, but with opposite charge. He called this the ``positron''. 
+
+This report will recreate the analysis performed by Anderson, acting as if the data taken was our own.
+
+\section{Background}\label{sec:Background}
+In order to detect a charged particle
+
+
+
+\end{document}
