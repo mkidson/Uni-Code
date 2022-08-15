@@ -1,0 +1,64 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Pos_Electron}{article}{}
+      \name{author}{1}{}{%
+        {{hash=01471763ea8c61cfb768435c5ea8356d}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={Carl\bibnamedelima D.},
+           giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{01471763ea8c61cfb768435c5ea8356d}
+      \strng{fullhash}{01471763ea8c61cfb768435c5ea8356d}
+      \strng{bibnamehash}{01471763ea8c61cfb768435c5ea8356d}
+      \strng{authorbibnamehash}{01471763ea8c61cfb768435c5ea8356d}
+      \strng{authornamehash}{01471763ea8c61cfb768435c5ea8356d}
+      \strng{authorfullhash}{01471763ea8c61cfb768435c5ea8356d}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{6}
+      \field{journaltitle}{Phys. Rev.}
+      \field{month}{3}
+      \field{title}{The Positive Electron}
+      \field{volume}{43}
+      \field{year}{1933}
+      \field{pages}{491\bibrangedash 494}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1103/PhysRev.43.491
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.43.491
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.43.491
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
