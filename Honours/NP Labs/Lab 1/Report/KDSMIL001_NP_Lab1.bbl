@@ -58,6 +58,25 @@
       \verb https://link.aps.org/doi/10.1103/PhysRev.43.491
       \endverb
     \endentry
+    \entry{NIST_ESTAR}{online}{}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labeltitlesource}{title}
+      \field{title}{{NIST} {ESTAR} database}
+      \field{urlday}{18}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb https\://physics.nist.gov/PhysRefData/Star/Text/ESTAR.html:C\:\\Users\\miles\\Zotero\\storage\\LLIVTXF2\\ESTAR.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://physics.nist.gov/PhysRefData/Star/Text/ESTAR.html
+      \endverb
+      \verb{url}
+      \verb https://physics.nist.gov/PhysRefData/Star/Text/ESTAR.html
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

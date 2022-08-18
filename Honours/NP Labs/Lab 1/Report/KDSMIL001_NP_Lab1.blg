@@ -1,17 +1,17 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'KDSMIL001_NP_Lab1.blg'
-[208] biber-MSWIN64:340> INFO - === 
-[260] Biber.pm:415> INFO - Reading 'KDSMIL001_NP_Lab1.bcf'
-[422] Biber.pm:952> INFO - Found 1 citekeys in bib section 0
-[441] Biber.pm:4340> INFO - Processing section 0
-[457] Biber.pm:4531> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
-[534] bibtex.pm:1689> INFO - LaTeX decoding ...
-[547] bibtex.pm:1494> INFO - Found BibTeX data source 'bibliography.bib'
-[593] Utils.pm:395> WARN - legacy month field 'Mar' in entry 'Pos_Electron' is not an integer - this will probably not sort properly.
-[610] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[646] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[647] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[647] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[656] bbl.pm:654> INFO - Writing 'KDSMIL001_NP_Lab1.bbl' with encoding 'UTF-8'
-[657] bbl.pm:757> INFO - Output to KDSMIL001_NP_Lab1.bbl
-[657] Biber.pm:128> INFO - WARNINGS: 1
+[165] biber-MSWIN64:340> INFO - === 
+[222] Biber.pm:415> INFO - Reading 'KDSMIL001_NP_Lab1.bcf'
+[391] Biber.pm:952> INFO - Found 2 citekeys in bib section 0
+[411] Biber.pm:4340> INFO - Processing section 0
+[426] Biber.pm:4531> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[505] bibtex.pm:1689> INFO - LaTeX decoding ...
+[515] bibtex.pm:1494> INFO - Found BibTeX data source 'bibliography.bib'
+[552] Utils.pm:395> WARN - legacy month field 'Mar' in entry 'Pos_Electron' is not an integer - this will probably not sort properly.
+[571] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[571] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[571] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[571] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[580] bbl.pm:654> INFO - Writing 'KDSMIL001_NP_Lab1.bbl' with encoding 'UTF-8'
+[581] bbl.pm:757> INFO - Output to KDSMIL001_NP_Lab1.bbl
+[581] Biber.pm:128> INFO - WARNINGS: 1

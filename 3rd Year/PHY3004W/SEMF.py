@@ -23,3 +23,5 @@ def M(A,Z):
     return Z*m_p + (A-Z)*m_n + Z*m_e - a_v*A + a_s*(A**(2/3)) + a_c*((Z**2)/(A**(1/3))) + a_AS*(((A-2*Z)**2)/A) + delta(A,Z)
 
 print(f'M({A},{Z}) = {M(A,Z)} u')
+
+print(Z*(m_e+m_p)+(A-Z)*m_n)
