@@ -77,6 +77,25 @@
       \verb https://physics.nist.gov/PhysRefData/Star/Text/ESTAR.html
       \endverb
     \endentry
+    \entry{radius_calculator}{online}{}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labeltitlesource}{title}
+      \field{title}{{SAG} Calculator}
+      \field{urlday}{16}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb SAG Calculator:C\:\\Users\\miles\\Zotero\\storage\\ZKE3L5FB\\sag-calculator.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.gophotonics.com/calculators/sag-calculator
+      \endverb
+      \verb{url}
+      \verb https://www.gophotonics.com/calculators/sag-calculator
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

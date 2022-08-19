@@ -2346,11 +2346,14 @@
   <bcf:section number="0">
     <bcf:citekey order="1">Pos_Electron</bcf:citekey>
     <bcf:citekey order="2">Pos_Electron</bcf:citekey>
-    <bcf:citekey order="3">Pos_Electron</bcf:citekey>
-    <bcf:citekey order="4">Pos_Electron</bcf:citekey>
+    <bcf:citekey order="3">radius_calculator</bcf:citekey>
+    <bcf:citekey order="4">radius_calculator</bcf:citekey>
     <bcf:citekey order="5">Pos_Electron</bcf:citekey>
     <bcf:citekey order="6">Pos_Electron</bcf:citekey>
-    <bcf:citekey order="7">NIST_ESTAR</bcf:citekey>
+    <bcf:citekey order="7">Pos_Electron</bcf:citekey>
+    <bcf:citekey order="8">Pos_Electron</bcf:citekey>
+    <bcf:citekey order="9">NIST_ESTAR</bcf:citekey>
+    <bcf:citekey order="10">Pos_Electron</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
