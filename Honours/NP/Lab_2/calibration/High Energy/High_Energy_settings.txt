@@ -1,0 +1,4 @@
+HV: 700 keV
+Amp: Coarse: 50, Gain: 3.25
+Pre-amp: 200
+4096 channels
