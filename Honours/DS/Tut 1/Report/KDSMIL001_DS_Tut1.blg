@@ -1,9 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'KDSMIL001_DS_Tut1.blg'
-[60] biber:340> INFO - === Fri Sep  2, 2022, 12:30:39
-[73] Biber.pm:418> INFO - Reading 'KDSMIL001_DS_Tut1.bcf'
-[123] Biber.pm:972> INFO - Found 0 citekeys in bib section 0
-[133] bbl.pm:654> INFO - Writing 'KDSMIL001_DS_Tut1.bbl' with encoding 'UTF-8'
-[133] bbl.pm:757> INFO - Output to KDSMIL001_DS_Tut1.bbl
-[133] Biber.pm:130> WARN - The file 'KDSMIL001_DS_Tut1.bcf' does not contain any citations!
-[133] Biber.pm:132> INFO - WARNINGS: 1
+[63] biber:340> INFO - === Sat Sep  3, 2022, 21:56:19
+[76] Biber.pm:418> INFO - Reading 'KDSMIL001_DS_Tut1.bcf'
+[133] Biber.pm:972> INFO - Found 1 citekeys in bib section 0
+[143] Biber.pm:4383> INFO - Processing section 0
+[152] Biber.pm:4574> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[152] bibtex.pm:1713> INFO - LaTeX decoding ...
+[155] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliography.bib'
+[186] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[186] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[186] Biber.pm:4203> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[186] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[188] bbl.pm:654> INFO - Writing 'KDSMIL001_DS_Tut1.bbl' with encoding 'UTF-8'
+[188] bbl.pm:757> INFO - Output to KDSMIL001_DS_Tut1.bbl

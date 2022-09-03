@@ -16,5 +16,40 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{XRay_energy_spectra}{article}{}
+      \name{author}{1}{}{%
+        {{hash=161e06776be799449f82cb9d9418501a}{%
+           family={{Avni}},
+           familyi={A\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{161e06776be799449f82cb9d9418501a}
+      \strng{fullhash}{161e06776be799449f82cb9d9418501a}
+      \strng{bibnamehash}{161e06776be799449f82cb9d9418501a}
+      \strng{authorbibnamehash}{161e06776be799449f82cb9d9418501a}
+      \strng{authornamehash}{161e06776be799449f82cb9d9418501a}
+      \strng{authorfullhash}{161e06776be799449f82cb9d9418501a}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Astrophysical Journal}
+      \field{month}{12}
+      \field{title}{{Energy spectra of X-ray clusters of galaxies.}}
+      \field{volume}{210}
+      \field{year}{1976}
+      \field{pages}{642\bibrangedash 646}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1086/154870
+      \endverb
+      \keyw{Energy Spectra,Galactic Clusters,Statistical Analysis,X Ray Sources,X Ray Spectra,Computerized Simulation,Monte Carlo Method,Range (Extremes),Spectral Energy Distribution,Spectrum Analysis,Astrophysics}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
