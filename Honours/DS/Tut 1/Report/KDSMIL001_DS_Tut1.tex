@@ -4,7 +4,7 @@
 \usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
 \usepackage[separate-uncertainty=true, group-digits=false]{siunitx}
 \usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
-\usepackage{listings,xcolor,caption,import,wrapfig,biblatex,subcaption}
+\usepackage{listings,xcolor,caption,import,wrapfig,biblatex,subcaption,pdfpages}
 \usepackage[version=4]{mhchem}
 \usepackage[noabbrev]{cleveref}
 \newcommand{\creflastconjunction}{, and\nobreakspace}
@@ -121,5 +121,11 @@ Secondly, we made what we believe to be an incorrect assumption about the distri
 
 \newpage
 \printbibliography
+
+% \newpage
+% \appendix
+% \section{Code}
+% % \setcounter{figure}{0} \renewcommand{\thefigure}{A.\arabic{figure}}
+% \includepdf[pages=-]{code.pdf}
 
 \end{document}
