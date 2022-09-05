@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  4 SEP 2022 23:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  5 SEP 2022 11:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1040,7 +1040,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<Plots/no_fit_hist.pdf, id=48, 462.52798pt x 346.89601pt>
+<Plots/no_fit_hist.pdf, id=44, 462.52798pt x 346.89601pt>
 File: Plots/no_fit_hist.pdf Graphic file (type pdf)
 <use Plots/no_fit_hist.pdf>
 Package pdftex.def Info: Plots/no_fit_hist.pdf  used on input line 58.
@@ -1048,12 +1048,12 @@ Package pdftex.def Info: Plots/no_fit_hist.pdf  used on input line 58.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Plots/no_fit_hist.pdf>]
-<Plots/two_fit_contour.pdf, id=113, 433.62pt x 433.62pt>
+<Plots/two_fit_contour.pdf, id=109, 433.62pt x 433.62pt>
 File: Plots/two_fit_contour.pdf Graphic file (type pdf)
 <use Plots/two_fit_contour.pdf>
 Package pdftex.def Info: Plots/two_fit_contour.pdf  used on input line 77.
 (pdftex.def)             Requested size: 251.42644pt x 251.42699pt.
-<Plots/two_fit_hist.pdf, id=114, 462.52798pt x 346.89601pt>
+<Plots/two_fit_hist.pdf, id=110, 462.52798pt x 346.89601pt>
 File: Plots/two_fit_hist.pdf Graphic file (type pdf)
 <use Plots/two_fit_hist.pdf>
 Package pdftex.def Info: Plots/two_fit_hist.pdf  used on input line 83.
@@ -1064,7 +1064,7 @@ Overfull \hbox (3.04074pt too wide) in paragraph at lines 75--87
  []
 
 [2 <./Plots/two_fit_contour.pdf> <./Plots/two_fit_hist.pdf>]
-<Plots/d_f.pdf, id=214, 462.52798pt x 346.89601pt>
+<Plots/d_f.pdf, id=210, 462.52798pt x 346.89601pt>
 File: Plots/d_f.pdf Graphic file (type pdf)
 <use Plots/d_f.pdf>
 Package pdftex.def Info: Plots/d_f.pdf  used on input line 106.
@@ -1073,226 +1073,26 @@ Package pdftex.def Info: Plots/d_f.pdf  used on input line 106.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3] [4 <./Plots/d_f.pdf>] [5]
-<code.pdf, id=257, 597.19106pt x 845.07718pt>
-File: code.pdf Graphic file (type pdf)
-<use code.pdf>
-Package pdftex.def Info: code.pdf  used on input line 129.
-(pdftex.def)             Requested size: 597.1896pt x 845.07512pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf>
-Package pdftex.def Info: code.pdf  used on input line 129.
-(pdftex.def)             Requested size: 597.1896pt x 845.07512pt.
-<code.pdf, id=260, page=1, 597.19106pt x 845.07718pt>
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 1>
-Package pdftex.def Info: code.pdf , page1 used on input line 129.
-(pdftex.def)             Requested size: 597.1896pt x 845.07512pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 1>
-Package pdftex.def Info: code.pdf , page1 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
- [6]
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 1>
-Package pdftex.def Info: code.pdf , page1 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 1>
-Package pdftex.def Info: code.pdf , page1 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 1>
-Package pdftex.def Info: code.pdf , page1 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
- [7 <./code.pdf>]
-<code.pdf, id=294, page=2, 597.19106pt x 845.07718pt>
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 2>
-Package pdftex.def Info: code.pdf , page2 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 2>
-Package pdftex.def Info: code.pdf , page2 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 2>
-Package pdftex.def Info: code.pdf , page2 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
- [8 <./code.pdf>]
-<code.pdf, id=299, page=3, 597.19106pt x 845.07718pt>
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 3>
-Package pdftex.def Info: code.pdf , page3 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 3>
-Package pdftex.def Info: code.pdf , page3 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 3>
-Package pdftex.def Info: code.pdf , page3 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
- [9 <./code.pdf>]
-<code.pdf, id=304, page=4, 597.19106pt x 845.07718pt>
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 4>
-Package pdftex.def Info: code.pdf , page4 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 4>
-Package pdftex.def Info: code.pdf , page4 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 4>
-Package pdftex.def Info: code.pdf , page4 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
- [10 <./code.pdf>]
-<code.pdf, id=310, page=5, 597.19106pt x 845.07718pt>
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 5>
-Package pdftex.def Info: code.pdf , page5 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 5>
-Package pdftex.def Info: code.pdf , page5 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 5>
-Package pdftex.def Info: code.pdf , page5 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
- [11 <./code.pdf>]
-<code.pdf, id=320, page=6, 597.19106pt x 845.07718pt>
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 6>
-Package pdftex.def Info: code.pdf , page6 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 6>
-Package pdftex.def Info: code.pdf , page6 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 6>
-Package pdftex.def Info: code.pdf , page6 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
- [12 <./code.pdf>]
-<code.pdf, id=325, page=7, 597.19106pt x 845.07718pt>
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 7>
-Package pdftex.def Info: code.pdf , page7 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 7>
-Package pdftex.def Info: code.pdf , page7 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 7>
-Package pdftex.def Info: code.pdf , page7 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
- [13 <./code.pdf>]
-<code.pdf, id=331, page=8, 597.19106pt x 845.07718pt>
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 8>
-Package pdftex.def Info: code.pdf , page8 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 8>
-Package pdftex.def Info: code.pdf , page8 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 8>
-Package pdftex.def Info: code.pdf , page8 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
- [14 <./code.pdf>]
-<code.pdf, id=337, page=9, 597.19106pt x 845.07718pt>
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 9>
-Package pdftex.def Info: code.pdf , page9 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 9>
-Package pdftex.def Info: code.pdf , page9 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 9>
-Package pdftex.def Info: code.pdf , page9 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
- [15 <./code.pdf>]
-<code.pdf, id=343, page=10, 597.19106pt x 845.07718pt>
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 10>
-Package pdftex.def Info: code.pdf , page10 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 10>
-Package pdftex.def Info: code.pdf , page10 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 10>
-Package pdftex.def Info: code.pdf , page10 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
- [16 <./code.pdf>]
-<code.pdf, id=349, page=11, 597.19106pt x 845.07718pt>
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 11>
-Package pdftex.def Info: code.pdf , page11 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 11>
-Package pdftex.def Info: code.pdf , page11 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 11>
-Package pdftex.def Info: code.pdf , page11 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
- [17 <./code.pdf>]
-<code.pdf, id=355, page=12, 597.19106pt x 845.07718pt>
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 12>
-Package pdftex.def Info: code.pdf , page12 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 12>
-Package pdftex.def Info: code.pdf , page12 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 12>
-Package pdftex.def Info: code.pdf , page12 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
- [18 <./code.pdf>]
-<code.pdf, id=360, page=13, 597.19106pt x 845.07718pt>
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 13>
-Package pdftex.def Info: code.pdf , page13 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 13>
-Package pdftex.def Info: code.pdf , page13 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
-File: code.pdf Graphic file (type pdf)
-<use code.pdf, page 13>
-Package pdftex.def Info: code.pdf , page13 used on input line 129.
-(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
- [19 <./code.pdf>] (./KDSMIL001_DS_Tut1.aux)
+[3] [4 <./Plots/d_f.pdf>] [5] (./KDSMIL001_DS_Tut1.aux)
 Package rerunfilecheck Info: File `KDSMIL001_DS_Tut1.out' has not changed.
-(rerunfilecheck)             Checksum: 771163DCD2D87B6F0AF0671F37879159;1560.
+(rerunfilecheck)             Checksum: 0544F5F9811495ED1E30E0A953784421;1495.
 Package logreq Info: Writing requests to 'KDSMIL001_DS_Tut1.run.xml'.
 \openout1 = `KDSMIL001_DS_Tut1.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49774 strings out of 478287
- 1143454 string characters out of 5849289
- 1886957 words of memory out of 5000000
- 67287 multiletter control sequences out of 15000+600000
+ 49709 strings out of 478287
+ 1142183 string characters out of 5849289
+ 1886955 words of memory out of 5000000
+ 67239 multiletter control sequences out of 15000+600000
  479783 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,17n,103p,1061b,1305s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,8n,103p,1167b,1709s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on KDSMIL001_DS_Tut1.pdf (19 pages, 484888 bytes).
+Output written on KDSMIL001_DS_Tut1.pdf (5 pages, 266186 bytes).
 PDF statistics:
- 452 PDF objects out of 1000 (max. 8388607)
- 228 compressed objects within 3 object streams
- 35 named destinations out of 1000 (max. 500000)
- 193 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 335 PDF objects out of 1000 (max. 8388607)
+ 157 compressed objects within 2 object streams
+ 20 named destinations out of 1000 (max. 500000)
+ 105 words of extra memory for PDF output out of 10000 (max. 10000000)
 
