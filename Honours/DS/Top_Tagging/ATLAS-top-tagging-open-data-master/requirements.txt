@@ -1,0 +1,8 @@
+h5py
+numpy
+# Note the correct version of tensorflow will depend on the CUDA version
+# See https://www.tensorflow.org/install/source#gpu
+tensorflow > 2
+energyflow
+sklearn
+matplotlib
