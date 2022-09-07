@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1662485016 "/home/mkidson/gitRepos/Uni-Code/Honours/Research Project/September_Presentation/kdsmil001_sep_pres.tex" "kdsmil001_sep_pres.pdf" "kdsmil001_sep_pres" 1662485020
+["pdflatex"] 1662574489 "/home/mkidson/gitRepos/Uni-Code/Honours/Research Project/September_Presentation/kdsmil001_sep_pres.tex" "kdsmil001_sep_pres.pdf" "kdsmil001_sep_pres" 1662574495
   "/etc/texmf/web2c/texmf.cnf" 1661508839 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/mkidson/gitRepos/Uni-Code/Honours/Research Project/September_Presentation/kdsmil001_sep_pres.tex" 1662485015 6449 a39b3108127d9690846d9f7420506977 ""
+  "/home/mkidson/gitRepos/Uni-Code/Honours/Research Project/September_Presentation/kdsmil001_sep_pres.tex" 1662574488 7775 b91d076e279bac92198b49e8313dbb0b ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/opensans/a_iz27ck.enc" 1561498186 2880 c07f4a1ce14a88d4ebe18f1c7b4592c1 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/opensans/a_n3lhbv.enc" 1561498186 2876 59df564f2929ccd7d2b24aa7d14cad04 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/opensans/a_nvvucy.enc" 1561498186 3364 7c78cdd102714be824555fc722b51d02 ""
@@ -239,10 +239,14 @@
   "Figs/MCH_schematic.png" 1662478079 59788 094d257b6b2371a37b8b135859f7833c ""
   "Figs/MFT_schematic_cropped.png" 1662479741 11616338 198fdff2afcca9aef8ac101b307145d1 ""
   "Figs/coords.pdf" 1662476060 36135 007c176c80612975ef32bf71216e87a2 ""
-  "kdsmil001_sep_pres.aux" 1662485020 1739 a9aa50eea3094bdc9066518ee957090a "pdflatex"
-  "kdsmil001_sep_pres.nav" 1662485020 747 0e276c0940a342ad38699132b0e9aa8d "pdflatex"
-  "kdsmil001_sep_pres.out" 1662485016 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "kdsmil001_sep_pres.tex" 1662485015 6449 a39b3108127d9690846d9f7420506977 ""
+  "Plots/MFT_pass3/Z_MFT.png" 1662573378 19336 74b90f599d143557097c24fc5634237a ""
+  "Plots/MFT_pass3/eta-phi.png" 1662573378 42836 03a26e0cf437c7ff766e7ae9e4b63b76 ""
+  "Plots/MFT_pass3/eta.png" 1662573378 20807 11eddfa49683dc4b01339f25aa151967 ""
+  "Plots/MFT_pass3/phi.png" 1662573378 19211 ec59b37fb663ddfd90da8eacab3b8966 ""
+  "kdsmil001_sep_pres.aux" 1662574494 1987 66bb3b50821105bafe7945f061e9813c "pdflatex"
+  "kdsmil001_sep_pres.nav" 1662574494 923 02772eacdfe77d67b79e45a640fd18ab "pdflatex"
+  "kdsmil001_sep_pres.out" 1662574490 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "kdsmil001_sep_pres.tex" 1662574488 7775 b91d076e279bac92198b49e8313dbb0b ""
   (generated)
   "kdsmil001_sep_pres.aux"
   "kdsmil001_sep_pres.log"
