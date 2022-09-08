@@ -5,6 +5,7 @@
 \usefonttheme{default}
 \useinnertheme{circles}
 \sisetup{detect-all}
+\setbeamertemplate{navigation symbols}{} % Uncomment this line to remove the navigation symbols from the bottom of all slides
 
 \title[ALICE Run 3 Look-see]{Look-see at pilot data for Run 3 at ALICE} % The short title in the optional parameter appears at the bottom of every slide, the full title in the main parameter is only on the title page
 
@@ -19,9 +20,22 @@
 \titlegraphic{\includegraphics[width=35pt]{Figs/ALICE_logo.png}}
 \logo{\includegraphics[width=20pt]{Figs/ALICE_logo_transparent.png}}
 
+% \useoutertheme{default}
+% \useoutertheme{infolines}
+\useoutertheme[subsection=false]{miniframes}
+% \useoutertheme{smoothbars}
+% \useoutertheme{sidebar}
+% \useoutertheme{split}
+% \useoutertheme{shadow}
+% \useoutertheme{tree}
+% \useoutertheme{smoothtree}
+
 \begin{document}
 
+
 \frame[plain]{\titlepage}
+
+\section{Background}
 
 \begin{frame}
     \frametitle{ALICE Run 3 Detector Array}
@@ -46,10 +60,11 @@
 
 \end{frame}
 
+
 \begin{frame}
     \frametitle{Coordinate System}
 
-    \begin{columns}[c]
+    \begin{columns}[t]
         \begin{column}{0.6\textwidth}
             \begin{itemize}
                 \item $\varphi$: Azimuthal angle around beam axis
@@ -83,6 +98,8 @@
 
 \end{frame}
 
+\section{Detectors \& Analysis Framework}
+
 \begin{frame}
     \frametitle{Inner Tracking System (ITS)}
 
@@ -109,7 +126,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Muon Spectrometer}
+    \frametitle{Muon Spectrometer (MCH)}
 
     \begin{columns}[c]
         \begin{column}{0.6\textwidth}
@@ -159,7 +176,33 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Data}
+    \frametitle{Online-Offline Analysis Framework (O2)}
+
+    \begin{columns}[c]
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Created for Run 3 to deal with untriggered data capture, splitting it into \SI{10}{\milli\second} ``timeframes''
+                \item Raw data converted to usable data with ``reconstruction passes''
+                \item Then analysed with C\texttt{++} and ROOT for efficient memory and CPU usage
+                \item Don't talk to me about O2
+            \end{itemize}
+        \end{column}
+
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{Figs/O2_flow.png}
+                \end{center}
+            \end{figure}
+        \end{column}
+    \end{columns}
+
+\end{frame}
+
+\section{Data}
+
+\begin{frame}
+    \frametitle{What data are we using?}
 
     \begin{itemize}
         \item Using pilot beam data from October 2021
@@ -171,7 +214,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{MFT Kinematics}
+    \frametitle{MFT Kinematics (pass3)}
 
     \begin{columns}[c]
         \begin{column}{0.5\textwidth}
@@ -202,6 +245,116 @@
 
 \end{frame}
 
+\begin{frame}
+    \frametitle{MFT x-y plots}
+
+    \begin{columns}[c]
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{Plots/MFT_pass3/x_y_1.png}
+                \end{center}
+            \end{figure}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{Plots/MFT_pass3/x_y_2.png}
+                \end{center}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{Plots/MFT_pass3/x_y_3.png}
+                \end{center}
+            \end{figure}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{Plots/MFT_pass3/x_y_4.png}
+                \end{center}
+            \end{figure}
+        \end{column}
+    \end{columns}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{MFT Kinematics pass3 vs. pass4}
+
+    \begin{columns}[c]
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{Plots/MFT_pass3/eta.png}
+                \end{center}
+            \end{figure}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{Plots/MFT_pass3/eta-phi.png}
+                \end{center}
+            \end{figure}
+        \end{column}
+
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{Plots/MFT_pass4/eta.png}
+                \end{center}
+            \end{figure}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{Plots/MFT_pass4/eta-phi.png}
+                \end{center}
+            \end{figure}
+        \end{column}
+    \end{columns}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{ITS Kinematics}
+
+    \begin{columns}[c]
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{Plots/ITS/eta.png}
+                \end{center}
+            \end{figure}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{Plots/ITS/eta-phi.png}
+                \end{center}
+            \end{figure}
+        \end{column}
+
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{Plots/ITS/phi.png}
+                \end{center}
+            \end{figure}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{Plots/ITS/Z.png}
+                \end{center}
+            \end{figure}
+        \end{column}
+    \end{columns}
+
+\end{frame}
+
+\section{Conclusion}
+
+\begin{frame}
+    \frametitle{Next Steps}
+
+    \begin{itemize}
+        \item Investigate pass4 increase in statistics
+        \item Investigate ITS $\varphi$ gap
+        \item Write my silly little report
+    \end{itemize}
+
+\end{frame}
 
 
 \end{document}
