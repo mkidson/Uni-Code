@@ -20,18 +20,9 @@
 \titlegraphic{\includegraphics[width=35pt]{Figs/ALICE_logo.png}}
 \logo{\includegraphics[width=20pt]{Figs/ALICE_logo_transparent.png}}
 
-% \useoutertheme{default}
-% \useoutertheme{infolines}
 \useoutertheme[subsection=false]{miniframes}
-% \useoutertheme{smoothbars}
-% \useoutertheme{sidebar}
-% \useoutertheme{split}
-% \useoutertheme{shadow}
-% \useoutertheme{tree}
-% \useoutertheme{smoothtree}
 
 \begin{document}
-
 
 \frame[plain]{\titlepage}
 
@@ -41,7 +32,7 @@
     \frametitle{ALICE Run 3 Detector Array}
 
     \begin{columns}[c]
-        \begin{column}{0.6\textwidth}
+        \begin{column}{0.5\textwidth}
             \begin{figure}[h]
                 \begin{center}
                     \includegraphics[width=\textwidth]{Figs/ALICE_RUN3_schematic_cropped.png}
@@ -49,11 +40,11 @@
             \end{figure}
         \end{column}
 
-        \begin{column}{0.4\textwidth}
+        \begin{column}{0.5\textwidth}
             \begin{itemize}
-                \item Configuration of the detector used for \\Run 3. 
-                \item Run 3 added the MFT and upgraded the ITS, as well us upgrading the readout electronics for many detectors. 
-                \item The MFT (9), ITS (6, 7), and Muon Spectrometer (8) are of interest to us.
+                \item Run 3 added the MFT and upgraded the ITS, as well us upgrading the readout electronics for many detectors 
+                \item The analysis framework was upgraded to handle increased energy, luminosity, and continuous data capture
+                \item The MFT (9), ITS (6, 7), and Muon Spectrometer (8) are of interest to us
             \end{itemize}
         \end{column}
     \end{columns}
@@ -143,7 +134,7 @@
         \begin{column}{0.4\textwidth}
             \begin{itemize}
                 \item Covers $-4\leq\eta\leq -2.5$
-                \item Outside the range og the ITS so in Run 2 had to perform its own tracking and vertexing
+                \item Outside the range of the ITS so in Run 2 had to perform its own tracking and vertexing
                 \item Run 3 added the MFT before the absorber to fill this role
             \end{itemize}
         \end{column}
@@ -184,7 +175,7 @@
                 \item Created for Run 3 to deal with untriggered data capture, splitting it into \SI{10}{\milli\second} ``timeframes''
                 \item Raw data converted to usable data with ``reconstruction passes''
                 \item Then analysed with C\texttt{++} and ROOT for efficient memory and CPU usage
-                \item Don't talk to me about O2
+                \item Don't breathe near O2, or it might break
             \end{itemize}
         \end{column}
 
@@ -349,8 +340,9 @@
     \frametitle{Next Steps}
 
     \begin{itemize}
-        \item Investigate pass4 increase in statistics
-        \item Investigate ITS $\varphi$ gap
+        \item Why does $Z_{MFT}$ only show the first two disks?
+        \item What is different about pass4?
+        \item Was ITS working properly/what is that gap in the data?
         \item Write my silly little report
     \end{itemize}
 
