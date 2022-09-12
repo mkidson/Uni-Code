@@ -7,7 +7,7 @@
 \sisetup{detect-all}
 \setbeamertemplate{navigation symbols}{} % Uncomment this line to remove the navigation symbols from the bottom of all slides
 
-\title[ALICE Run 3 Look-see]{Look-see at pilot data for Run 3 at ALICE} % The short title in the optional parameter appears at the bottom of every slide, the full title in the main parameter is only on the title page
+\title[ALICE Run 3 Look-see]{``Look-see'' at pilot beam data for Run 3 at ALICE} % The short title in the optional parameter appears at the bottom of every slide, the full title in the main parameter is only on the title page
 
 % \subtitle{Optional Subtitle} % Presentation subtitle, remove this command if a subtitle isn't required
 
@@ -29,7 +29,7 @@
 \section{Background}
 
 \begin{frame}
-    \frametitle{ALICE Run 3 Detector Array}
+    \frametitle{ALICE Run 3}
 
     \begin{columns}[c]
         \begin{column}{0.5\textwidth}
@@ -42,9 +42,10 @@
 
         \begin{column}{0.5\textwidth}
             \begin{itemize}
-                \item Run 3 added the MFT and upgraded the ITS, as well us upgrading the readout electronics for many detectors 
-                \item The analysis framework was upgraded to handle increased energy, luminosity, and continuous data capture
-                \item The MFT (9), ITS (6, 7), and Muon Spectrometer (8) are of interest to us
+                \item LHC Run 3 aims to increase $\sqrt{s}$ and luminosity of collisions
+                \item At ALICE, the MFT (9) was added and ITS (6, 7) was upgraded
+                \item Readout electronics for many detectors were also upgraded
+                \item To manage Run 3 and ALICE's new untriggered data capture, the analysis framework was overhauled entirely
             \end{itemize}
         \end{column}
     \end{columns}
@@ -58,8 +59,8 @@
     \begin{columns}[t]
         \begin{column}{0.6\textwidth}
             \begin{itemize}
-                \item $\varphi$: Azimuthal angle around beam axis
                 \item $Z$: Distance along $Z$-axis (\unit{\centi\metre})
+                \item $\varphi$: Azimuthal angle around beam axis
                 \item $\theta$: Polar angle
             \end{itemize}
             \begin{figure}[h]
@@ -97,9 +98,8 @@
     \begin{columns}[c]
         \begin{column}{0.4\textwidth}
             \begin{itemize}
-                \item Upgraded for Run 3
-                \item Innermost layer half the distance from the IP compared to previous ITS
-                \item Si-based tracking detector. Determines primary vertex for an interaction
+                \item Fully revamped for Run 3 with new pixel detectors
+                \item Used to determine position of the primary vertex and help with particle tracking
                 \item \SI{22.4}{\milli\metre} to \SI{391.8}{\milli\metre} radial extension from IP
                 \item Covers $|\eta| < 1.22$
             \end{itemize}
@@ -119,7 +119,7 @@
 \begin{frame}
     \frametitle{Muon Spectrometer (MCH)}
 
-    \begin{columns}[c]
+    \begin{columns}[t]
         \begin{column}{0.6\textwidth}
             \begin{itemize}
                 \item Used to study heavy quarkonia ($J/\Psi,\Psi',\Upsilon,\Upsilon',\Upsilon''$) via their $\mu^+\mu^-$ decay channel, Z$^0$ bosons via high $p_\mathrm{T}$ dimuon decays, and single muon decays from quarks and W$^+$ bosons
@@ -134,8 +134,8 @@
         \begin{column}{0.4\textwidth}
             \begin{itemize}
                 \item Covers $-4\leq\eta\leq -2.5$
-                \item Outside the range of the ITS so in Run 2 had to perform its own tracking and vertexing
-                \item Run 3 added the MFT before the absorber to fill this role
+                \item Outside the range of the ITS so previously had to perform its own tracking and vertexing
+                \item Run 3 added the Muon Forward Tracker before the absorber to fill this role
             \end{itemize}
         \end{column}
     \end{columns}
@@ -148,9 +148,9 @@
     \begin{columns}[c]
         \begin{column}{0.5\textwidth}
             \begin{itemize}
-                \item High resolution Si-based tracking detector added for Run 3
                 \item Uses the same pixel detector technology as the ITS in a better-suited geometry
-                \item Sits before the hadronic absorber, with 5 double-sided layers between \SI{-46}{\centi\metre} and \SI{-76.8}{\centi\metre}
+                \item Sits in front of the hadronic absorber, with 5 double-sided disks between \SI{-46}{\centi\metre} and \SI{-76.8}{\centi\metre}
+                \item Each disk is \SI{1.4}{\centi\metre} thick
                 \item Covers $-3.6\leq\eta\leq -2.45$
             \end{itemize}
         \end{column}
@@ -196,9 +196,8 @@
     \frametitle{What data are we using?}
 
     \begin{itemize}
-        \item Using pilot beam data from October 2021
+        \item Pilot beam runs 505548 and 505645 from October 2021
         \item Non-nominal centre of mass energy $\sqrt{s}=\SI{900}{\giga\electronvolt}$
-        \item Runs 505548 and 505645
         \item Detectors running: ITS, MCH, MFT, MID, TOF, TPC, TRD
     \end{itemize}
 
@@ -248,14 +247,14 @@
             \end{figure}
             \begin{figure}
                 \begin{center}
-                    \includegraphics[width=\textwidth]{Plots/MFT_pass3/x_y_2.png}
+                    \includegraphics[width=\textwidth]{Plots/MFT_pass3/x_y_3.png}
                 \end{center}
             \end{figure}
         \end{column}
         \begin{column}{0.5\textwidth}
             \begin{figure}
                 \begin{center}
-                    \includegraphics[width=\textwidth]{Plots/MFT_pass3/x_y_3.png}
+                    \includegraphics[width=\textwidth]{Plots/MFT_pass3/x_y_2.png}
                 \end{center}
             \end{figure}
             \begin{figure}
@@ -313,7 +312,7 @@
             \end{figure}
             \begin{figure}
                 \begin{center}
-                    \includegraphics[width=\textwidth]{Plots/ITS/eta-phi.png}
+                    \includegraphics[width=\textwidth]{Plots/ITS/Z.png}
                 \end{center}
             \end{figure}
         \end{column}
@@ -326,7 +325,7 @@
             \end{figure}
             \begin{figure}
                 \begin{center}
-                    \includegraphics[width=\textwidth]{Plots/ITS/Z.png}
+                    \includegraphics[width=\textwidth]{Plots/ITS/eta-phi.png}
                 \end{center}
             \end{figure}
         \end{column}
@@ -343,8 +342,15 @@
         \item Why does $Z_{MFT}$ only show the first two disks?
         \item What is different about pass4?
         \item Was ITS working properly/what is that gap in the data?
-        \item Write my silly little report
+        \item James mentioned a report but it's probably not that important
     \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \begin{center}
+        {\Huge Thank you!}
+    \end{center}
 
 \end{frame}
 

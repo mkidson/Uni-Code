@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  9 SEP 2022 15:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  11 SEP 2022 22:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -797,7 +797,7 @@ LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 27.
 LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/it' will be
 (Font)              scaled to size 8.0pt on input line 27.
-<Figs/ALICE_logo.png, id=58, 345.4506pt x 467.1051pt>
+<Figs/ALICE_logo.png, id=59, 345.4506pt x 467.1051pt>
 File: Figs/ALICE_logo.png Graphic file (type png)
 <use Figs/ALICE_logo.png>
 Package pdftex.def Info: Figs/ALICE_logo.png  used on input line 27.
@@ -805,46 +805,46 @@ Package pdftex.def Info: Figs/ALICE_logo.png  used on input line 27.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Figs/ALICE_logo.png>]
-<Figs/ALICE_RUN3_schematic_cropped.png, id=69, 331.4784pt x 209.3421pt>
+<Figs/ALICE_RUN3_schematic_cropped.png, id=70, 331.4784pt x 209.3421pt>
 File: Figs/ALICE_RUN3_schematic_cropped.png Graphic file (type png)
 <use Figs/ALICE_RUN3_schematic_cropped.png>
-Package pdftex.def Info: Figs/ALICE_RUN3_schematic_cropped.png  used on input line 52.
+Package pdftex.def Info: Figs/ALICE_RUN3_schematic_cropped.png  used on input line 53.
 (pdftex.def)             Requested size: 171.14764pt x 108.08868pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 53.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 53.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 52.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 53.
  (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 )
 LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
-(Font)              scaled to size 4.0pt on input line 52.
-<Figs/ALICE_logo_transparent.png, id=70, 345.4506pt x 467.1051pt>
+(Font)              scaled to size 4.0pt on input line 53.
+<Figs/ALICE_logo_transparent.png, id=71, 345.4506pt x 467.1051pt>
 File: Figs/ALICE_logo_transparent.png Graphic file (type png)
 <use Figs/ALICE_logo_transparent.png>
-Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 52.
+Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 53.
 (pdftex.def)             Requested size: 20.0pt x 27.0415pt.
  [2
 
  <./Figs/ALICE_logo_transparent.png> <./Figs/ALICE_RUN3_schematic_cropped.png>]
-<Figs/coords.pdf, id=107, 385.02144pt x 184.89075pt>
+<Figs/coords.pdf, id=111, 385.02144pt x 184.89075pt>
 File: Figs/coords.pdf Graphic file (type pdf)
 <use Figs/coords.pdf>
-Package pdftex.def Info: Figs/coords.pdf  used on input line 90.
+Package pdftex.def Info: Figs/coords.pdf  used on input line 91.
 (pdftex.def)             Requested size: 205.37926pt x 98.62357pt.
 File: Figs/ALICE_logo_transparent.png Graphic file (type png)
 <use Figs/ALICE_logo_transparent.png>
-Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 90.
+Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 91.
 (pdftex.def)             Requested size: 20.0pt x 27.0415pt.
  [3
 
  <./Figs/coords.pdf>]
-<Figs/ITS_Schematic.png, id=154, 860.46469pt x 490.83376pt>
+<Figs/ITS_Schematic.png, id=158, 860.46469pt x 490.83376pt>
 File: Figs/ITS_Schematic.png Graphic file (type png)
 <use Figs/ITS_Schematic.png>
 Package pdftex.def Info: Figs/ITS_Schematic.png  used on input line 117.
@@ -856,7 +856,7 @@ Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 117
  [4
 
  <./Figs/ITS_Schematic.png>]
-<Figs/MCH_schematic.png, id=177, 670.00313pt x 292.09125pt>
+<Figs/MCH_schematic.png, id=182, 670.00313pt x 292.09125pt>
 File: Figs/MCH_schematic.png Graphic file (type png)
 <use Figs/MCH_schematic.png>
 Package pdftex.def Info: Figs/MCH_schematic.png  used on input line 143.
@@ -874,7 +874,7 @@ File: TS1opensans-TLF.fd 2019/06/24 Font definitions for TS1/opensans-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/opensans-TLF/m/n' will be
 (Font)              scaled to size 10.95pt on input line 167.
-<Figs/MFT_schematic_cropped.png, id=202, 2410.50563pt x 2852.40656pt>
+<Figs/MFT_schematic_cropped.png, id=208, 2410.50563pt x 2852.40656pt>
 File: Figs/MFT_schematic_cropped.png Graphic file (type png)
 <use Figs/MFT_schematic_cropped.png>
 Package pdftex.def Info: Figs/MFT_schematic_cropped.png  used on input line 167.
@@ -886,7 +886,7 @@ Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 167
  [6
 
  <./Figs/MFT_schematic_cropped.png>]
-<Figs/O2_flow.png, id=226, 526.21594pt x 584.93532pt>
+<Figs/O2_flow.png, id=233, 526.21594pt x 584.93532pt>
 File: Figs/O2_flow.png Graphic file (type png)
 <use Figs/O2_flow.png>
 Package pdftex.def Info: Figs/O2_flow.png  used on input line 191.
@@ -900,122 +900,131 @@ Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 191
  <./Figs/O2_flow.png>]
 File: Figs/ALICE_logo_transparent.png Graphic file (type png)
 <use Figs/ALICE_logo_transparent.png>
-Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 205.
+Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 204.
 (pdftex.def)             Requested size: 20.0pt x 27.0415pt.
  [8
 
 ]
-<Plots/MFT_pass3/eta.png, id=273, 1662.21pt x 849.1725pt>
+<Plots/MFT_pass3/eta.png, id=282, 1662.21pt x 849.1725pt>
 File: Plots/MFT_pass3/eta.png Graphic file (type png)
 <use Plots/MFT_pass3/eta.png>
-Package pdftex.def Info: Plots/MFT_pass3/eta.png  used on input line 237.
+Package pdftex.def Info: Plots/MFT_pass3/eta.png  used on input line 236.
 (pdftex.def)             Requested size: 171.14764pt x 87.42297pt.
-<Plots/MFT_pass3/eta-phi.png, id=274, 1662.21pt x 849.1725pt>
+<Plots/MFT_pass3/eta-phi.png, id=283, 1662.21pt x 849.1725pt>
 File: Plots/MFT_pass3/eta-phi.png Graphic file (type png)
 <use Plots/MFT_pass3/eta-phi.png>
-Package pdftex.def Info: Plots/MFT_pass3/eta-phi.png  used on input line 237.
+Package pdftex.def Info: Plots/MFT_pass3/eta-phi.png  used on input line 236.
 (pdftex.def)             Requested size: 171.14764pt x 87.42297pt.
-<Plots/MFT_pass3/phi.png, id=275, 1662.21pt x 849.1725pt>
+<Plots/MFT_pass3/phi.png, id=284, 1662.21pt x 849.1725pt>
 File: Plots/MFT_pass3/phi.png Graphic file (type png)
 <use Plots/MFT_pass3/phi.png>
-Package pdftex.def Info: Plots/MFT_pass3/phi.png  used on input line 237.
+Package pdftex.def Info: Plots/MFT_pass3/phi.png  used on input line 236.
 (pdftex.def)             Requested size: 171.14764pt x 87.42297pt.
-<Plots/MFT_pass3/Z_MFT.png, id=276, 1662.21pt x 849.1725pt>
+<Plots/MFT_pass3/Z_MFT.png, id=285, 1662.21pt x 849.1725pt>
 File: Plots/MFT_pass3/Z_MFT.png Graphic file (type png)
 <use Plots/MFT_pass3/Z_MFT.png>
-Package pdftex.def Info: Plots/MFT_pass3/Z_MFT.png  used on input line 237.
+Package pdftex.def Info: Plots/MFT_pass3/Z_MFT.png  used on input line 236.
 (pdftex.def)             Requested size: 171.14764pt x 87.42297pt.
 File: Figs/ALICE_logo_transparent.png Graphic file (type png)
 <use Figs/ALICE_logo_transparent.png>
-Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 237.
+Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 236.
 (pdftex.def)             Requested size: 20.0pt x 27.0415pt.
  [9
 
  <./Plots/MFT_pass3/eta.png> <./Plots/MFT_pass3/eta-phi.png> <./Plots/MFT_pass3/phi.png> <./Plots/MFT_pass3/Z_MFT.png>]
-<Plots/MFT_pass3/x_y_1.png, id=299, 1662.21pt x 849.1725pt>
+<Plots/MFT_pass3/x_y_1.png, id=309, 1662.21pt x 849.1725pt>
 File: Plots/MFT_pass3/x_y_1.png Graphic file (type png)
 <use Plots/MFT_pass3/x_y_1.png>
-Package pdftex.def Info: Plots/MFT_pass3/x_y_1.png  used on input line 269.
+Package pdftex.def Info: Plots/MFT_pass3/x_y_1.png  used on input line 268.
 (pdftex.def)             Requested size: 171.14764pt x 87.42297pt.
-<Plots/MFT_pass3/x_y_2.png, id=300, 1662.21pt x 849.1725pt>
-File: Plots/MFT_pass3/x_y_2.png Graphic file (type png)
-<use Plots/MFT_pass3/x_y_2.png>
-Package pdftex.def Info: Plots/MFT_pass3/x_y_2.png  used on input line 269.
-(pdftex.def)             Requested size: 171.14764pt x 87.42297pt.
-<Plots/MFT_pass3/x_y_3.png, id=301, 1662.21pt x 849.1725pt>
+<Plots/MFT_pass3/x_y_3.png, id=310, 1662.21pt x 849.1725pt>
 File: Plots/MFT_pass3/x_y_3.png Graphic file (type png)
 <use Plots/MFT_pass3/x_y_3.png>
-Package pdftex.def Info: Plots/MFT_pass3/x_y_3.png  used on input line 269.
+Package pdftex.def Info: Plots/MFT_pass3/x_y_3.png  used on input line 268.
 (pdftex.def)             Requested size: 171.14764pt x 87.42297pt.
-<Plots/MFT_pass3/x_y_4.png, id=302, 1662.21pt x 849.1725pt>
+<Plots/MFT_pass3/x_y_2.png, id=311, 1662.21pt x 849.1725pt>
+File: Plots/MFT_pass3/x_y_2.png Graphic file (type png)
+<use Plots/MFT_pass3/x_y_2.png>
+Package pdftex.def Info: Plots/MFT_pass3/x_y_2.png  used on input line 268.
+(pdftex.def)             Requested size: 171.14764pt x 87.42297pt.
+<Plots/MFT_pass3/x_y_4.png, id=312, 1662.21pt x 849.1725pt>
 File: Plots/MFT_pass3/x_y_4.png Graphic file (type png)
 <use Plots/MFT_pass3/x_y_4.png>
-Package pdftex.def Info: Plots/MFT_pass3/x_y_4.png  used on input line 269.
+Package pdftex.def Info: Plots/MFT_pass3/x_y_4.png  used on input line 268.
 (pdftex.def)             Requested size: 171.14764pt x 87.42297pt.
 File: Figs/ALICE_logo_transparent.png Graphic file (type png)
 <use Figs/ALICE_logo_transparent.png>
-Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 269.
+Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 268.
 (pdftex.def)             Requested size: 20.0pt x 27.0415pt.
  [10
 
- <./Plots/MFT_pass3/x_y_1.png> <./Plots/MFT_pass3/x_y_2.png> <./Plots/MFT_pass3/x_y_3.png> <./Plots/MFT_pass3/x_y_4.png>]
+ <./Plots/MFT_pass3/x_y_1.png> <./Plots/MFT_pass3/x_y_3.png> <./Plots/MFT_pass3/x_y_2.png> <./Plots/MFT_pass3/x_y_4.png>]
 File: Plots/MFT_pass3/eta.png Graphic file (type png)
 <use Plots/MFT_pass3/eta.png>
-Package pdftex.def Info: Plots/MFT_pass3/eta.png  used on input line 302.
+Package pdftex.def Info: Plots/MFT_pass3/eta.png  used on input line 301.
 (pdftex.def)             Requested size: 171.14764pt x 87.42297pt.
 File: Plots/MFT_pass3/eta-phi.png Graphic file (type png)
 <use Plots/MFT_pass3/eta-phi.png>
-Package pdftex.def Info: Plots/MFT_pass3/eta-phi.png  used on input line 302.
+Package pdftex.def Info: Plots/MFT_pass3/eta-phi.png  used on input line 301.
 (pdftex.def)             Requested size: 171.14764pt x 87.42297pt.
-<Plots/MFT_pass4/eta.png, id=324, 1662.21pt x 849.1725pt>
+<Plots/MFT_pass4/eta.png, id=335, 1662.21pt x 849.1725pt>
 File: Plots/MFT_pass4/eta.png Graphic file (type png)
 <use Plots/MFT_pass4/eta.png>
-Package pdftex.def Info: Plots/MFT_pass4/eta.png  used on input line 302.
+Package pdftex.def Info: Plots/MFT_pass4/eta.png  used on input line 301.
 (pdftex.def)             Requested size: 171.14764pt x 87.42297pt.
-<Plots/MFT_pass4/eta-phi.png, id=325, 1662.21pt x 849.1725pt>
+<Plots/MFT_pass4/eta-phi.png, id=336, 1662.21pt x 849.1725pt>
 File: Plots/MFT_pass4/eta-phi.png Graphic file (type png)
 <use Plots/MFT_pass4/eta-phi.png>
-Package pdftex.def Info: Plots/MFT_pass4/eta-phi.png  used on input line 302.
+Package pdftex.def Info: Plots/MFT_pass4/eta-phi.png  used on input line 301.
 (pdftex.def)             Requested size: 171.14764pt x 87.42297pt.
 File: Figs/ALICE_logo_transparent.png Graphic file (type png)
 <use Figs/ALICE_logo_transparent.png>
-Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 302.
+Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 301.
 (pdftex.def)             Requested size: 20.0pt x 27.0415pt.
  [11
 
  <./Plots/MFT_pass4/eta.png> <./Plots/MFT_pass4/eta-phi.png>]
-<Plots/ITS/eta.png, id=347, 1662.21pt x 849.1725pt>
+<Plots/ITS/eta.png, id=359, 1662.21pt x 849.1725pt>
 File: Plots/ITS/eta.png Graphic file (type png)
 <use Plots/ITS/eta.png>
-Package pdftex.def Info: Plots/ITS/eta.png  used on input line 335.
+Package pdftex.def Info: Plots/ITS/eta.png  used on input line 334.
 (pdftex.def)             Requested size: 171.14764pt x 87.42297pt.
-<Plots/ITS/eta-phi.png, id=348, 1662.21pt x 849.1725pt>
-File: Plots/ITS/eta-phi.png Graphic file (type png)
-<use Plots/ITS/eta-phi.png>
-Package pdftex.def Info: Plots/ITS/eta-phi.png  used on input line 335.
-(pdftex.def)             Requested size: 171.14764pt x 87.42297pt.
-<Plots/ITS/phi.png, id=349, 1662.21pt x 849.1725pt>
-File: Plots/ITS/phi.png Graphic file (type png)
-<use Plots/ITS/phi.png>
-Package pdftex.def Info: Plots/ITS/phi.png  used on input line 335.
-(pdftex.def)             Requested size: 171.14764pt x 87.42297pt.
-<Plots/ITS/Z.png, id=350, 1662.21pt x 849.1725pt>
+<Plots/ITS/Z.png, id=360, 1662.21pt x 849.1725pt>
 File: Plots/ITS/Z.png Graphic file (type png)
 <use Plots/ITS/Z.png>
-Package pdftex.def Info: Plots/ITS/Z.png  used on input line 335.
+Package pdftex.def Info: Plots/ITS/Z.png  used on input line 334.
+(pdftex.def)             Requested size: 171.14764pt x 87.42297pt.
+<Plots/ITS/phi.png, id=361, 1662.21pt x 849.1725pt>
+File: Plots/ITS/phi.png Graphic file (type png)
+<use Plots/ITS/phi.png>
+Package pdftex.def Info: Plots/ITS/phi.png  used on input line 334.
+(pdftex.def)             Requested size: 171.14764pt x 87.42297pt.
+<Plots/ITS/eta-phi.png, id=362, 1662.21pt x 849.1725pt>
+File: Plots/ITS/eta-phi.png Graphic file (type png)
+<use Plots/ITS/eta-phi.png>
+Package pdftex.def Info: Plots/ITS/eta-phi.png  used on input line 334.
 (pdftex.def)             Requested size: 171.14764pt x 87.42297pt.
 File: Figs/ALICE_logo_transparent.png Graphic file (type png)
 <use Figs/ALICE_logo_transparent.png>
-Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 335.
+Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 334.
 (pdftex.def)             Requested size: 20.0pt x 27.0415pt.
  [12
 
- <./Plots/ITS/eta.png> <./Plots/ITS/eta-phi.png> <./Plots/ITS/phi.png> <./Plots/ITS/Z.png>]
+ <./Plots/ITS/eta.png> <./Plots/ITS/Z.png> <./Plots/ITS/phi.png> <./Plots/ITS/eta-phi.png>]
 File: Figs/ALICE_logo_transparent.png Graphic file (type png)
 <use Figs/ALICE_logo_transparent.png>
-Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 349.
+Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 348.
 (pdftex.def)             Requested size: 20.0pt x 27.0415pt.
  [13
+
+]
+LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
+(Font)              scaled to size 24.88pt on input line 355.
+File: Figs/ALICE_logo_transparent.png Graphic file (type png)
+<use Figs/ALICE_logo_transparent.png>
+Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 355.
+(pdftex.def)             Requested size: 20.0pt x 27.0415pt.
+ [14
 
 ]
 \tf@nav=\write6
@@ -1032,18 +1041,18 @@ Package rerunfilecheck Info: File `kdsmil001_sep_pres.out' has not changed.
 (rerunfilecheck)             Checksum: 9BB43A5AAE9C674ED0B30B65CC71F8D2;454.
  ) 
 Here is how much of TeX's memory you used:
- 26076 strings out of 478287
- 552405 string characters out of 5849289
- 773821 words of memory out of 5000000
- 43700 multiletter control sequences out of 15000+600000
- 480778 words of font info for 68 fonts, out of 8000000 for 9000
+ 26082 strings out of 478287
+ 552496 string characters out of 5849289
+ 774926 words of memory out of 5000000
+ 43703 multiletter control sequences out of 15000+600000
+ 481371 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,19n,122p,509b,965s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/opensans/a_nvvucy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/opensans/a_iz27ck.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/opensans/a_n3lhbv.enc}</usr/share/texlive/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Italic.pfb></usr/share/texlive/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on kdsmil001_sep_pres.pdf (13 pages, 15686261 bytes).
+Output written on kdsmil001_sep_pres.pdf (14 pages, 15688365 bytes).
 PDF statistics:
- 461 PDF objects out of 1000 (max. 8388607)
- 356 compressed objects within 4 object streams
- 31 named destinations out of 1000 (max. 500000)
+ 497 PDF objects out of 1000 (max. 8388607)
+ 390 compressed objects within 4 object streams
+ 33 named destinations out of 1000 (max. 500000)
  221 words of extra memory for PDF output out of 10000 (max. 10000000)
 
