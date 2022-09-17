@@ -32,7 +32,7 @@ from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 
 # Custom imports
-import preprocessing
+import Honours.DS.Top_Tagging.preprocessing as preprocessing
 
 ################################# SETTINGS #####################################
 
