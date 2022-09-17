@@ -40,13 +40,13 @@ import preprocessing
 # parameters, see "Build Tagger and Datasets" section
 
 # Paths to data files. Point these to local download of training / testing sets
-train_path = '/scratch/whiteson_group/kgreif/train_public.h5'
-test_path = '/scratch/whiteson_group/kgreif/test_public.h5'
+train_path = '/home/WindowsDrive/Shared/Top_Tagging_Data/test.h5'
+test_path = '/home/WindowsDrive/Shared/Top_Tagging_Data/test.h5'
 
 # Set the amount of data to be used in training and testing. The full training
 # set is very large (130 GB) and will not fit in memory all at once. Here, we
 # take a subset  of the data. Using the full set will require piping.
-n_train_jets = 3000000
+n_train_jets = -1
 n_test_jets = -1
 
 # Set the fraction of the training data which will be reserved for validation
@@ -56,7 +56,7 @@ valid_fraction = 0.2
 max_constits = 80
 
 # Tagger to train, supported options are 'hldnn', 'dnn', 'efn', 'pfn'.
-tagger_type = 'efn'
+tagger_type = 'hldnn'
 
 # Training parameters
 num_epochs = 20
