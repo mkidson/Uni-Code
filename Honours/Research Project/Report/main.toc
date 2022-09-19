@@ -1,13 +1,9 @@
-\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Background}{3}{section.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}The ALICE Detector}{3}{subsection.2.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Coordinates}{3}{subsection.2.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3}ALICE Run 3}{4}{subsection.2.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}Muon Forward Tracker}{5}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.1}Coordinates}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}ALICE Run 3}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}The Inner Tracking System}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}The Muon Spectrometer}{6}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}The Muon Forward Tracker}{7}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}The Online-Offline Analysis Framework}{7}{subsection.2.6}%
+\contentsline {section}{\numberline {3}First Attempts}{8}{section.3}%
