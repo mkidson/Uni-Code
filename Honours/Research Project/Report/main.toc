@@ -6,4 +6,6 @@
 \contentsline {subsection}{\numberline {2.4}The Muon Spectrometer}{6}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}The Muon Forward Tracker}{7}{subsection.2.5}%
 \contentsline {subsection}{\numberline {2.6}The Online-Offline Analysis Framework}{7}{subsection.2.6}%
-\contentsline {section}{\numberline {3}First Attempts}{8}{section.3}%
+\contentsline {section}{\numberline {3}Writing an Analysis Task}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}AOD Structure}{9}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Analysis Task Structure}{9}{subsection.3.2}%
