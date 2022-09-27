@@ -1,3 +1,4 @@
+% region preamble
 \documentclass[11pt]{article}
 \usepackage{import}
 \usepackage[margin=1in, top=1in]{geometry}
@@ -5,7 +6,7 @@
 \usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
 \usepackage[separate-uncertainty=true, group-digits=false]{siunitx}
 \usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
-\usepackage{listings,xcolor,subfig,caption,import,wrapfig,lipsum,tikz,biblatex}
+\usepackage{listings,xcolor,subfig,caption,import,wrapfig,lipsum,tikz,biblatex,dirtree}
 \usepackage[version=4]{mhchem}
 \usepackage[noabbrev]{cleveref}
 \newcommand{\creflastconjunction}{, and\nobreakspace}
@@ -19,17 +20,56 @@
 \definecolor{codeblue}{HTML}{2162DB}
 \definecolor{commentcolor}{HTML}{4A6E46}
 \captionsetup{font=small, belowskip=0pt}
-\lstdefinestyle{appendix}{
-    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
-    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
-    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
-\lstdefinestyle{inline}{
-    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
-    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
-    captionpos=b,language=Python}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{Darkgreen}{rgb}{0,0.4,0}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\lstset{
+backgroundcolor=\color{lbcolor},
+    tabsize=4,    
+%   rulecolor=,
+    language=[GNU]C++,
+        basicstyle=\scriptsize,
+        upquote=true,
+        aboveskip={1.5\baselineskip},
+        columns=fixed,
+        showstringspaces=false,
+        extendedchars=false,
+        breaklines=true,
+        prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+        frame=single,
+        numbers=left,
+        showtabs=false,
+        showspaces=false,
+        showstringspaces=false,
+        identifierstyle=\ttfamily,
+        keywordstyle=\color[rgb]{0,0,1},
+        commentstyle=\color[rgb]{0.026,0.112,0.095},
+        stringstyle=\color[rgb]{0.627,0.126,0.941},
+        numberstyle=\color[rgb]{0.205, 0.142, 0.73},
+%        \lstdefinestyle{C++}{language=C++,style=numbers}’.
+}
+\lstset{
+    backgroundcolor=\color{lbcolor},
+    tabsize=4,
+  language=C++,
+  captionpos=b,
+  tabsize=3,
+  frame=lines,
+  numbers=left,
+  numberstyle=\tiny,
+  numbersep=5pt,
+  breaklines=true,
+  showstringspaces=false,
+  basicstyle=\footnotesize,
+%  identifierstyle=\color{magenta},
+  keywordstyle=\color[rgb]{0,0,1},
+  commentstyle=\color{Darkgreen},
+  stringstyle=\color{red}
+  }
 \renewcommand{\lstlistingname}{Appendix}
 \pgfplotsset{compat=1.17}
 \addbibresource{bibliography.bib}
+% endregion
 
 \title{{\Huge A ``look-see'' at data from Run 3 at ALICE}}
 \author{{\Large Miles Kidson}\\ \\

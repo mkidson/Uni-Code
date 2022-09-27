@@ -14,26 +14,23 @@ All variables associated with a track, for example, could be included in a singl
 \subsection{Analysis Task Structure}\label{sec:TaskStructure}
 Analysis tasks are written in \Cpp and need to be structured in a specific way for O2 to use them properly. Each task is written as a \lstinline[language=C++]{struct} object which is then called at the end of the task. Below is an outline of what is needed for a task.
 
-\begin{lstlisting}[language=C++]
+\begin{lstlisting}
 #include "Framework/runDataProcessing.h"
 #include "Framework/AnalysisTask.h"
 
 struct MyTask {
-    // Define things here, such as histogram registries, filters for 
-    // data, or new tables
+    // Define things here, such as histogram registries, filters for data, or new tables
 
     void init{o2::framework::InitContext&} {
-        // Here we initialise histograms and other things used in 
-        // the analysis
+        // Here we initialise histograms and other things used in the analysis
     };
 
     void process(aod::Collisions const& collisions, aod::Tracks const& tracks) {
-        // Here we can do any processing that we need, calculating 
-        // things etc, and then fill the histograms we defined earlier
+        // Here we can do any processing that we need, calculating things etc, and then fill the histograms we defined earlier
     };
 };
 
-//This
+// This is what O2 looks at to run the task
 WorkflowSpec defineDataProcessing(ConfigContext const& cfgc)
 {
   return WorkflowSpec{
@@ -42,3 +39,28 @@ WorkflowSpec defineDataProcessing(ConfigContext const& cfgc)
 }
 
 \end{lstlisting}
+
+With the task written, it then needs to be compiled and added to O2 so that it can be run. To do this, we can either add our task to an existing folder or create our own. We chose to create our own as it was easier to manage. 
+
+\dirtree{%
+  .1 alice.
+  .2 alidist.
+  .2 O2.
+  .2 O2Physics.
+  .3 Functional Things.
+  .3 ....
+  .3 myTasks.
+  .4 CMakeLists.txt.
+  .4 Tasks.
+  .5 CMakeLists.txt.
+  .5 analysisTask.cxx.
+  .5 ....
+  .3 Other Working Groups.
+  .3 ....
+  .3 CMakeLists.txt.
+}
+
+Here \texttt{alidist} is the git repository that handles the versioning of O2 and O2Physics. O2 is what handles the backend of the analysis framework, compiling the tasks written in O2Physics. The \texttt{CMakeLists.txt} files are needed at every level of the O2Physics structure to tell O2 what to compile and which commands to use to refer to things. 
+
+\subsection{Compiling O2 & Running a Task}\label{sec:CompileRun}
+O2 is built on your system using \texttt{aliBuild}~\cite{aliBuild_install}
