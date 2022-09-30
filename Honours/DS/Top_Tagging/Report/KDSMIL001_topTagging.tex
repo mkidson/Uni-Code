@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in, top=1in]{geometry}
+\usepackage[all]{nowidow}
+\usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
+\usepackage[separate-uncertainty=true, group-digits=false]{siunitx}
+\usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
+\usepackage{listings,xcolor,subfig,caption,import,wrapfig,biblatex}
+\usepackage[version=4]{mhchem}
+\usepackage[noabbrev]{cleveref}
+\newcommand{\creflastconjunction}{, and\nobreakspace}
+\newcommand{\mb}[1]{\mathbf{#1}}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\definecolor{stringcolor}{HTML}{C792EA}
+\definecolor{codeblue}{HTML}{2162DB}
+\definecolor{commentcolor}{HTML}{4A6E46}
+\captionsetup{font=small, belowskip=0pt}
+\lstdefinestyle{appendix}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,captionpos=t,
+    abovecaptionskip=12pt,belowcaptionskip=12pt,language=Python,breaklines=true,frame=single}
+\lstdefinestyle{inline}{
+    basicstyle=\ttfamily\footnotesize,commentstyle=\color{commentcolor},keywordstyle=\color{codeblue},
+    stringstyle=\color{stringcolor},showstringspaces=false,numbers=left,upquote=true,frame=tb,
+    captionpos=b,language=Python}
+\renewcommand{\lstlistingname}{Appendix}
+\pgfplotsset{compat=1.17}
+\addbibresource{bibliography.bib}
+
+\begin{document}
+
+\begin{center}
+    {\huge Training a neural net to identify top quark jets}\\
+    \vspace{0.2in}
+    \textbf{KDSMIL001 | September 2022}    
+    
+    \begin{abstract}
+        We train a neural net to identify jets as originating from top quarks as opposed to other quarks; a process known as top tagging. High-level variables describing the jets are used as opposed to constituent data as constituent requires considerably more computing power. The model's accuracy is then determined for different cuts of jet kinematics to investigate where the model has deficiencies.
+    \end{abstract}
+\end{center}
+
+\section{Introduction}\label{sec:Introduction}
+In proton-proton collisions at the Large Hadron Collider (LHC) at CERN, top quarks (along with their anti-particle counterpart) are produced about once every few seconds. Due to their proportionally large mass ($\sim\SI{173}{\giga\electronvolt}$) their decay time is too short for them to be observed directly, so the next best way to determine if a top quark was produced is to look at the hadronic jets produced by the interaction and determine if they were a result of a top quark or some other, less interesting quark. This process is called top-tagging.
+
+One way to perform this classification between signal (top quark jet) and background (any other jet) is to use a neural net. Neural nets are well suited to this task as they are able to handle the large volumes of Monte Carlo truth data that are available to us and can easily be constructed to provide an output from 0 to 1, which we can take to be the neural net's classification of signal (closer to 1) and background (closer to 0). We used data from \url{https://cds.cern.ch/record/2825328}~\cite{top-tagging-data} to train and test a deep neural net in top-tagging using ``high-level'' quantities describing the jets. This report will focus on the creation of that neural net, its performance according to commonly used statistics, and some investigation into where the neural net performs best in relation to the kinematics of the jets being top-tagged.
+
+\section{The data}\label{sec:Data}
+As stated before, the data we used to train and test the neural net comes from the dataset used in \cite{top-tagging-data}. Due to computation power restrictions, we were unable to use their train dataset, so we split the test dataset into $\frac 23$ for training and $\frac 13$ for testing.
+
+The data is split up into two types: constituent and high-level. The constituent data is simply the $p_\mathrm{T}$, $\eta$, $\varphi$ and energy $E$ of the particles making up each jet. This is a lot of information and would ultimately be the best data to use as it holds all the available information about a jet, which neural nets are very good at sifting through to find the information relevant to the task at hand. The only issue is that it takes a lot of RAM to load all the data into, as well as requiring a lot of computation power (or time) to really get to a meaningful result. 
+
+To try cut down on computation time and resources, we used the high-level data. These are 15 variables calculated for each jet, from the constituent data, which have been identified by \cite{ATL-PHYS-PUB-2021-028} and \cite{ATL-PHYS-PUB-2017-004} as summarising the data in a way that lends itself to top-tagging. The 15 variables are:
+
+\begin{itemize}
+    \item Energy Correlation Ratios: $ECF_1,\; ECF_2,\; ECF_3,\; C_2,\; D_2$
+    \item N-subjettiness: $\tau_1,\; \tau_2,\; \tau_3,\; \tau_{21},\; \tau_{32}$
+    \item Splitting Measures: $\sqrt{d_{12}},\; \sqrt{d_{23}}$
+    \item $Q_W$
+\end{itemize}
+
+The loss function we used, which is discussed further in \cref{sec:CreatingNeuralNet}, was the binary cross-entropy loss function. If we were to use two input variables with wildly different scales, say energy on the \si[]{\giga\electronvolt} scale and distance on the nanometre scale, then changing an energy parameter even slightly will have such a large impact on the output of the neural net, and thus the loss function, that changing a distance parameter will practically have no effect. To avoid this, we did some basic preprocessing. This involved simply subtracting the mean of a specific quantity from the value for all the jets, then dividing by the standard deviation. This centers the data around 0 and gives it a standard deviation of 1. Doing this ensures that our neural net will not be trained to weight a specific input more simply because it's on a larger scale than another input.
+
+Each jet has a label stating whether it is signal or background, as well as weights used in training to weight the loss function according to the true distribution of signal and background. The 15 high-level quantities, the labels, and the weights are all that we gave to the neural net for training
+
+\section{Creation of the neural net}\label{sec:CreatingNeuralNet}
+The neural net was created using Python and Keras~\cite{keras}, which is an interface for using TensorFlow. We used an input layer with 15 inputs; one for each of the high-level quantities. We then used 3 hidden layers each with 20 neurons using the Rectified Linear Unit activation function. Finally an output layer of 1 neuron using the sigmoid activation function was used. We used a batch size of 100, with our training set being made up of around 1.6 million jets. 8 epochs were used. 
+
+This configuration was chosen fairly arbitrarily, aside from the input and output layers, with a focus on simplicity and short run times (around 10 minutes of training). We chose the binary cross-entropy for our loss function as it is both simple and well-suited to a (surprise surprise) binary classification task such as this one.
+
+\newpage
+\printbibliography
+
+
+\end{document}
