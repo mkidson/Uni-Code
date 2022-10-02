@@ -4,7 +4,7 @@
 \usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
 \usepackage[separate-uncertainty=true, group-digits=false]{siunitx}
 \usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
-\usepackage{listings,xcolor,subfig,caption,import,wrapfig,biblatex}
+\usepackage{listings,xcolor,caption,import,wrapfig,subcaption,biblatex,multirow,booktabs}
 \usepackage[version=4]{mhchem}
 \usepackage[noabbrev]{cleveref}
 \newcommand{\creflastconjunction}{, and\nobreakspace}
@@ -61,12 +61,54 @@ To try cut down on computation time and resources, we used the high-level data. 
 
 The loss function we used, which is discussed further in \cref{sec:CreatingNeuralNet}, was the binary cross-entropy loss function. If we were to use two input variables with wildly different scales, say energy on the \si[]{\giga\electronvolt} scale and distance on the nanometre scale, then changing an energy parameter even slightly will have such a large impact on the output of the neural net, and thus the loss function, that changing a distance parameter will practically have no effect. To avoid this, we did some basic preprocessing. This involved simply subtracting the mean of a specific quantity from the value for all the jets, then dividing by the standard deviation. This centers the data around 0 and gives it a standard deviation of 1. Doing this ensures that our neural net will not be trained to weight a specific input more simply because it's on a larger scale than another input.
 
-Each jet has a label stating whether it is signal or background, as well as weights used in training to weight the loss function according to the true distribution of signal and background. The 15 high-level quantities, the labels, and the weights are all that we gave to the neural net for training
+Each jet has a label stating whether it is signal or background, as well as weights used in training to weight the loss function according to the true distribution of signal and background. The 15 high-level quantities, the labels, and the weights are all that we gave to the neural net for training.
 
 \section{Creation of the neural net}\label{sec:CreatingNeuralNet}
-The neural net was created using Python and Keras~\cite{keras}, which is an interface for using TensorFlow. We used an input layer with 15 inputs; one for each of the high-level quantities. We then used 3 hidden layers each with 20 neurons using the Rectified Linear Unit activation function. Finally an output layer of 1 neuron using the sigmoid activation function was used. We used a batch size of 100, with our training set being made up of around 1.6 million jets. 8 epochs were used. 
+The neural net was created using Python and Keras~\cite{keras}, which is an interface for using TensorFlow. We used an input layer with 15 inputs; one for each of the high-level quantities. We then used 3 hidden layers each with 20 neurons using the Rectified Linear Unit activation function. Finally an output layer of 1 neuron using the sigmoid activation function was used. The model was compiled with the argument \texttt{optimizer='adam'}, which has a learning rate of 0.001. We used a batch size of 100, with our training set being made up of around 1.6 million jets. 8 epochs were used. A validation dataset of 5\% of the training dataset was used.
 
-This configuration was chosen fairly arbitrarily, aside from the input and output layers, with a focus on simplicity and short run times (around 10 minutes of training). We chose the binary cross-entropy for our loss function as it is both simple and well-suited to a (surprise surprise) binary classification task such as this one.
+This configuration was chosen fairly arbitrarily, aside from the input and output layers, with a focus on simplicity and short run times (around 10 minutes of training). We chose the binary cross-entropy for our loss function as it is both simple and well-suited to a (surprise) binary classification task such as this one.
+
+We can look at the evolution of the model with two parameters---the loss function and the accuracy---evaluated at each epoch in \cref{fig:loss_accuracy} for both the training and validation datasets. In this case, the accuracy is defined as the proportion of correct predictions when calling everything with prediction greater than 0.5 a signal, and background otherwise. This is a fairly rudimentary statistic and will be improved upon in later sections.
+
+The neural net finished training with a loss function value of \num{0.3500} and an accuracy of \num{0.8442}.
+
+\begin{figure}[h]%
+    \centering
+    \begin{subfigure}[t]{.49\linewidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{Plots/loss_history.pdf}
+        \caption{Progression of the loss function over the training of the neural net, shown for both the training dataset as well as the validation dataset. The loss function used was binary cross-entropy.}
+        \label{fig:loss_history}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{.49\linewidth}
+        \centering
+        \includegraphics[width=0.98\linewidth]{Plots/accuracy_history.pdf}
+        \caption{Progression of the accuracy of the neural net over its training, evaluated on both the training dataset and the validation dataset. Accuracy here is defined simply as the proportion of correct predictions.}
+        \label{fig:accuracy_history}
+        \begin{minipage}{.1cm}
+            \vfill
+        \end{minipage}
+    \end{subfigure}
+    \caption{}
+    \label{fig:loss_accuracy}
+\end{figure}
+
+\section{Predictions}\label{sec:Predictions}
+With the neural net trained, we were then able to use it to predict the classification of jets in our testing set. This dataset contained around 8 million jets. A first step towards improving the accuracy metric calculated earlier is to look at the confusion matrix, which tells us how many true positives, false negatives, false positives, and true negatives were predicted. In our case we are considering signal to be ``positive'' and background ``negative''.
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cccc}
+        \multicolumn{2}{c}{\multirow{2}{*}{}} & \multicolumn{2}{c}{Predicted Classification} \\ \cmidrule{3-4}
+        \multicolumn{2}{c}{} & Signal & Background \\ \cmidrule(lr){3-3} \cmidrule(lr){4-4}
+        \multirow{2}{*}{Actual Classification} & Signal & TP & FN \\ \cmidrule(lr){2-2}
+        & Background & FP & TN \\ \cmidrule(lr){2-2}
+    \end{tabular}
+    \caption{Confusion matrix for the predictions made by our neural net. Calculated using \texttt{sklearn.metrics.confusion\_matrix} with signal (1) considered positive and background (0) considered negative. Going row by row, each entry is the number of true positives, false negatives, false positives, and true negatives~}
+    \label{tab:conf_matrix}
+\end{table}
 
 \newpage
 \printbibliography
