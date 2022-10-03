@@ -33,11 +33,15 @@
 \newlabel{sec:Data@cref}{{[section][2][]2}{[1][1][]1}}
 \abx@aux@cite{0}{keras}
 \abx@aux@segm{0}{0}{keras}
+\abx@aux@cite{0}{Confusion_Matrix}
+\abx@aux@segm{0}{0}{Confusion_Matrix}
+\abx@aux@cite{0}{Confusion_Matrix}
+\abx@aux@segm{0}{0}{Confusion_Matrix}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Creation of the neural net}{2}{section.3}\protected@file@percent }
 \newlabel{sec:CreatingNeuralNet}{{3}{2}{Creation of the neural net}{section.3}{}}
 \newlabel{sec:CreatingNeuralNet@cref}{{[section][3][]3}{[1][2][]2}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Predictions}{2}{section.4}\protected@file@percent }
-\newlabel{sec:Predictions}{{4}{2}{Predictions}{section.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Predictions and neural net performance}{2}{section.4}\protected@file@percent }
+\newlabel{sec:Predictions}{{4}{2}{Predictions and neural net performance}{section.4}{}}
 \newlabel{sec:Predictions@cref}{{[section][4][]4}{[1][2][]2}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:loss_history}{{3.1a}{3}{Progression of the loss function over the training of the neural net, shown for both the training dataset as well as the validation dataset. The loss function used was binary cross-entropy.\relax }{figure.caption.1}{}}
@@ -51,12 +55,41 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces \relax }}{3}{figure.caption.1}\protected@file@percent }
 \newlabel{fig:loss_accuracy}{{3.1}{3}{\relax }{figure.caption.1}{}}
 \newlabel{fig:loss_accuracy@cref}{{[figure][1][3]3.1}{[1][2][]3}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Confusion matrix for \relax }}{3}{table.caption.2}\protected@file@percent }
-\newlabel{tab:conf_matrix}{{4.1}{3}{Confusion matrix for \relax }{table.caption.2}{}}
-\newlabel{tab:conf_matrix@cref}{{[table][1][4]4.1}{[1][2][]3}}
-\abx@aux@read@bbl@mdfivesum{909B800C56E5CA7C7183CEC1707488FE}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Confusion matrix for the predictions made by our neural net. Calculated using \texttt  {sklearn.metrics.confusion\_matrix} with signal (1) considered positive and background (0) considered negative. Going row by row, each entry is the number of true positives, false negatives, false positives, and true negatives\nobreakspace  {}\blx@tocontentsinit {0}\cite {Confusion_Matrix}\relax }}{3}{table.caption.2}\protected@file@percent }
+\newlabel{tbl:conf_matrix}{{4.1}{3}{Confusion matrix for the predictions made by our neural net. Calculated using \texttt {sklearn.metrics.confusion\_matrix} with signal (1) considered positive and background (0) considered negative. Going row by row, each entry is the number of true positives, false negatives, false positives, and true negatives~\cite {Confusion_Matrix}\relax }{table.caption.2}{}}
+\newlabel{tbl:conf_matrix@cref}{{[table][1][4]4.1}{[1][2][]3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Histograms of true signal and background events, binned according to the prediction made by the neural net. Note that counts are not weighted according to the training weights as there are an equal number of signal and background events already and the weighting was only needed for dealing with the $p_\mathrm  {T}$ distributions.\relax }}{4}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:bkg_vs_signal}{{4.1}{4}{Histograms of true signal and background events, binned according to the prediction made by the neural net. Note that counts are not weighted according to the training weights as there are an equal number of signal and background events already and the weighting was only needed for dealing with the $p_\mathrm {T}$ distributions.\relax }{figure.caption.3}{}}
+\newlabel{fig:bkg_vs_signal@cref}{{[figure][1][4]4.1}{[1][4][]4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Performance in different kinematic regions}{5}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:Kinematic_Performance}{{4.1}{5}{Performance in different kinematic regions}{subsection.4.1}{}}
+\newlabel{sec:Kinematic_Performance@cref}{{[subsection][1][4]4.1}{[1][5][]5}}
+\newlabel{fig:bkg_high_pt}{{4.2a}{5}{Histogram of neural net predictions of background events in the high $p_\mathrm {T}$ region.\relax }{figure.caption.4}{}}
+\newlabel{fig:bkg_high_pt@cref}{{[subfigure][1][4,2]4.2a}{[1][5][]5}}
+\newlabel{sub@fig:bkg_high_pt}{{a}{5}{Histogram of neural net predictions of background events in the high $p_\mathrm {T}$ region.\relax }{figure.caption.4}{}}
+\newlabel{sub@fig:bkg_high_pt@cref}{{[subfigure][1][4,2]4.2a}{[1][5][]5}}
+\newlabel{fig:bkg_low_pt}{{4.2b}{5}{Histogram of neural net predictions of background events in the low $p_\mathrm {T}$ region.\relax }{figure.caption.4}{}}
+\newlabel{fig:bkg_low_pt@cref}{{[subfigure][2][4,2]4.2b}{[1][5][]5}}
+\newlabel{sub@fig:bkg_low_pt}{{b}{5}{Histogram of neural net predictions of background events in the low $p_\mathrm {T}$ region.\relax }{figure.caption.4}{}}
+\newlabel{sub@fig:bkg_low_pt@cref}{{[subfigure][2][4,2]4.2b}{[1][5][]5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces \relax }}{5}{figure.caption.4}\protected@file@percent }
+\newlabel{}{{4.2}{5}{\relax }{figure.caption.4}{}}
+\newlabel{@cref}{{[figure][2][4]4.2}{[1][5][]5}}
+\newlabel{fig:sig_high_pt}{{4.3a}{5}{Histogram of neural net predictions of signal events in the high $p_\mathrm {T}$ region.\relax }{figure.caption.5}{}}
+\newlabel{fig:sig_high_pt@cref}{{[subfigure][1][4,3]4.3a}{[1][5][]5}}
+\newlabel{sub@fig:sig_high_pt}{{a}{5}{Histogram of neural net predictions of signal events in the high $p_\mathrm {T}$ region.\relax }{figure.caption.5}{}}
+\newlabel{sub@fig:sig_high_pt@cref}{{[subfigure][1][4,3]4.3a}{[1][5][]5}}
+\newlabel{fig:sig_low_pt}{{4.3b}{5}{Histogram of neural net predictions of signal events in the high $p_\mathrm {T}$ region.\relax }{figure.caption.5}{}}
+\newlabel{fig:sig_low_pt@cref}{{[subfigure][2][4,3]4.3b}{[1][5][]5}}
+\newlabel{sub@fig:sig_low_pt}{{b}{5}{Histogram of neural net predictions of signal events in the high $p_\mathrm {T}$ region.\relax }{figure.caption.5}{}}
+\newlabel{sub@fig:sig_low_pt@cref}{{[subfigure][2][4,3]4.3b}{[1][5][]5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces \relax }}{5}{figure.caption.5}\protected@file@percent }
+\newlabel{}{{4.3}{5}{\relax }{figure.caption.5}{}}
+\newlabel{@cref}{{[figure][3][4]4.3}{[1][5][]5}}
+\abx@aux@read@bbl@mdfivesum{EA5044E54AFF9FCAA15906B53C0888B5}
+\abx@aux@defaultrefcontext{0}{Confusion_Matrix}{nty/global//global/global}
 \abx@aux@defaultrefcontext{0}{top-tagging-data}{nty/global//global/global}
 \abx@aux@defaultrefcontext{0}{ATL-PHYS-PUB-2021-028}{nty/global//global/global}
 \abx@aux@defaultrefcontext{0}{ATL-PHYS-PUB-2017-004}{nty/global//global/global}
 \abx@aux@defaultrefcontext{0}{keras}{nty/global//global/global}
-\gdef \@abspage@last{4}
+\gdef \@abspage@last{6}

@@ -19,6 +19,33 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{Confusion_Matrix}{inreference}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In the field of machine learning and specifically the problem of statistical classification, a confusion matrix, also known as an error matrix, is a specific table layout that allows visualization of the performance of an algorithm, typically a supervised learning one (in unsupervised learning it is usually called a matching matrix). Each row of the matrix represents the instances in an actual class while each column represents the instances in a predicted class, or vice versa – both variants are found in the literature. The name stems from the fact that it makes it easy to see whether the system is confusing two classes (i.e. commonly mislabeling one as another). It is a special kind of contingency table, with two dimensions ("actual" and "predicted"), and identical sets of "classes" in both dimensions (each combination of dimension and class is a variable in the contingency table).}
+      \field{booktitle}{Wikipedia}
+      \field{day}{31}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{note}{Page Version {ID}: 1107701525}
+      \field{title}{Confusion matrix}
+      \field{urlday}{2}
+      \field{urlmonth}{10}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/home/mkidson/Zotero/storage/PFULX7Q7/Confusion_matrix.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/w/index.php?title=Confusion_matrix&oldid=1107701525
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/w/index.php?title=Confusion_matrix&oldid=1107701525
+      \endverb
+    \endentry
     \entry{top-tagging-data}{report}{}
       \list{institution}{1}{%
         {CERN}%

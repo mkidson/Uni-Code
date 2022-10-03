@@ -2349,10 +2349,13 @@
     <bcf:citekey order="3">ATL-PHYS-PUB-2021-028</bcf:citekey>
     <bcf:citekey order="4">ATL-PHYS-PUB-2017-004</bcf:citekey>
     <bcf:citekey order="5">keras</bcf:citekey>
-    <bcf:citekey order="6">top-tagging-data</bcf:citekey>
-    <bcf:citekey order="7">ATL-PHYS-PUB-2021-028</bcf:citekey>
-    <bcf:citekey order="8">ATL-PHYS-PUB-2017-004</bcf:citekey>
-    <bcf:citekey order="9">keras</bcf:citekey>
+    <bcf:citekey order="6">Confusion_Matrix</bcf:citekey>
+    <bcf:citekey order="7">Confusion_Matrix</bcf:citekey>
+    <bcf:citekey order="8">top-tagging-data</bcf:citekey>
+    <bcf:citekey order="9">ATL-PHYS-PUB-2021-028</bcf:citekey>
+    <bcf:citekey order="10">ATL-PHYS-PUB-2017-004</bcf:citekey>
+    <bcf:citekey order="11">keras</bcf:citekey>
+    <bcf:citekey order="12">Confusion_Matrix</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
