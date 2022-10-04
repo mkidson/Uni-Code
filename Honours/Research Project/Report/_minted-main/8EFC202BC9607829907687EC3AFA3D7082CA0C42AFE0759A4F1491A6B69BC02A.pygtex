@@ -1,0 +1,28 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{c+c1}{\PYGZsh{} The directory in alimonitor where you want to get the data from. Should contain a load of numbered directories}
+    \PYG{c+c1}{\PYGZsh{} For example, /alice/data/2021/OCT/505548/AOD. Note that it\PYGZsq{}s AOD not AO2D}
+    \PYG{n+nv}{sourceMotherDir}\PYG{o}{=}/alice/data/path/to/AOD
+    \PYG{n+nv}{nFiles}\PYG{o}{=}\PYG{n+nv}{\PYGZdl{}1}
+
+    \PYG{c+c1}{\PYGZsh{} This is the directory on your local machine where you want to store your data}
+    \PYG{n+nv}{targetMotherDir}\PYG{o}{=}/path/to/alice/data/\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{sourceMotherDir}\PYG{l+s+si}{\PYGZcb{}}
+    mkdir \PYGZhy{}p \PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{targetMotherDir}\PYG{l+s+si}{\PYGZcb{}}
+
+    \PYG{k}{for} \PYG{o}{((}\PYG{n+nv}{i}\PYG{o}{=}\PYG{l+m}{1}\PYG{p}{;} i\PYGZlt{}\PYG{o}{=}nFiles\PYG{p}{;} i++\PYG{o}{))}
+    \PYG{k}{do}
+        \PYG{k}{if} \PYG{o}{((} i \PYGZlt{} \PYG{l+m}{10} \PYG{o}{))}\PYG{p}{;} \PYG{k}{then}
+            \PYG{n+nv}{pref}\PYG{o}{=}\PYG{l+m}{00}
+        \PYG{k}{fi}
+        \PYG{k}{if} \PYG{o}{((} i \PYGZgt{} \PYG{l+m}{9} \PYG{o}{))}\PYG{p}{;} \PYG{k}{then}
+            \PYG{n+nv}{pref}\PYG{o}{=}\PYG{l+m}{0}
+        \PYG{k}{fi}
+        \PYG{n+nv}{iDir}\PYG{o}{=}\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{pref}\PYG{l+s+si}{\PYGZcb{}\PYGZdl{}\PYGZob{}}\PYG{n+nv}{i}\PYG{l+s+si}{\PYGZcb{}}
+        \PYG{n+nv}{iSourceDir}\PYG{o}{=}\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{sourceMotherDir}\PYG{l+s+si}{\PYGZcb{}}/\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{iDir}\PYG{l+s+si}{\PYGZcb{}}
+        \PYG{n+nv}{iTargetDir}\PYG{o}{=}\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{targetMotherDir}\PYG{l+s+si}{\PYGZcb{}}/\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{iDir}\PYG{l+s+si}{\PYGZcb{}}
+        mkdir \PYGZhy{}p \PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{iTargetDir}\PYG{l+s+si}{\PYGZcb{}}
+
+        \PYG{n+nb}{echo} \PYG{l+s+s2}{\PYGZdq{}copying from }\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{iSourceDir}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ to }\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{iTargetDir}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}
+
+        alien\PYGZus{}cp \PYGZhy{}retry \PYG{l+m}{5} \PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{iSourceDir}\PYG{l+s+si}{\PYGZcb{}}/AO2D.root file://\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{iTargetDir}\PYG{l+s+si}{\PYGZcb{}}/AO2D.root
+    \PYG{k}{done}
+\end{Verbatim}

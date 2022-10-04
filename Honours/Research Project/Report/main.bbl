@@ -10478,6 +10478,25 @@
       \verb https://cds.cern.ch/record/2011297
       \endverb
     \endentry
+    \entry{aliBuild_install}{online}{}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labeltitlesource}{title}
+      \field{title}{Installation via alibuild · {ALICE} Analysis Tutorial}
+      \field{urlday}{26}
+      \field{urlmonth}{9}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Installation via alibuild · ALICE Analysis Tutorial:/home/mkidson/Zotero/storage/Y4DT25UD/custom.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://alice-doc.github.io/alice-analysis-tutorial/building/custom.html
+      \endverb
+      \verb{url}
+      \verb https://alice-doc.github.io/alice-analysis-tutorial/building/custom.html
+      \endverb
+    \endentry
     \entry{ITS_Info}{online}{}
       \field{sortinit}{I}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}

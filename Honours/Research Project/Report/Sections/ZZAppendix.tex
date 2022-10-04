@@ -1,0 +1,29 @@
+\section{Downloading data from the GRID}\label{apx:Downloading_Data}
+\begin{minted}{bash}
+    # The directory in alimonitor where you want to get the data from. Should contain a load of numbered directories
+    # For example, /alice/data/2021/OCT/505548/AOD. Note that it's AOD not AO2D
+    sourceMotherDir=/alice/data/path/to/AOD
+    nFiles=$1
+
+    # This is the directory on your local machine where you want to store your data
+    targetMotherDir=/path/to/alice/data/${sourceMotherDir}
+    mkdir -p ${targetMotherDir}
+
+    for ((i=1; i<=nFiles; i++))
+    do
+        if (( i < 10 )); then
+            pref=00
+        fi
+        if (( i > 9 )); then
+            pref=0
+        fi
+        iDir=${pref}${i}
+        iSourceDir=${sourceMotherDir}/${iDir}
+        iTargetDir=${targetMotherDir}/${iDir}
+        mkdir -p ${iTargetDir}
+
+        echo "copying from ${iSourceDir} to ${iTargetDir}" 
+        
+        alien_cp -retry 5 ${iSourceDir}/AO2D.root file://${iTargetDir}/AO2D.root
+    done
+\end{minted}

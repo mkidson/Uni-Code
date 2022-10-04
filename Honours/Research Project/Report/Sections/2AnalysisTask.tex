@@ -1,0 +1,81 @@
+Writing an analysis task in O2 is structured quite strictly, due to it needing to be run by O2. We will outline the steps needed to go from reconstructed data to histograms of, in our case, kinematic variables. It must be noted that learning how to do this, and how to deal with the idiosyncrasies of the O2 software, were what took up the majority of the time spent on this project. It is written to do one thing very very well, but unfortunately that comes with the side-effect of it being extremely picky about the conditions in which the software will actually work. 
+
+\subsection{AOD Structure}\label{sec:AODStructure}
+The data that we use in our analysis comes in the form of Analysis Object Data. These are in the form of ROOT files, which are based on a tree structure. In the tree are a number of tables corresponding to reconstructed tracks and collisions, among a few others. We call these entries or rows. For each of these tables, there are a number of reconstructed variables associated with each entry, such as their $\pt$, $\eta$, or $\varphi$, which we can access. There are 4 types of variables:
+\begin{itemize}
+    \item Static variables are saved to disk during the reconstruction process and are available at any time. $\varphi$ is a static variable.
+    \item Dynamic variables are calculated on demand, using static variables as input. $\eta$ is a dynamic variable, calculated from $\theta$. 
+    \item Index variables point from one table to another, such as from a track to its associated collision.
+    \item Expression variables no clue
+\end{itemize}
+
+All variables associated with a track, for example, could be included in a single table. However, since we often only need a few of the variables, the tables are split up into sections that contain variables often used together. If needed, these tables can be joined together when doing analysis, using \mintinline{c++}{o2::soa::Join<Table1, Table2>}. Importantly, only tables which correspond row-to-row and have the same number of rows can be joined in this way.
+
+\subsection{Analysis Task Structure}\label{sec:TaskStructure}
+Analysis tasks are written in C\texttt{++} and need to be structured in a specific way for O2 to use them properly. Each task is written as a \Cppinline{struct} object which is then called at the end of the task. Below is an outline of what is needed for a task.
+
+\begin{minted}{c++}
+#include "Framework/runDataProcessing.h"
+#include "Framework/AnalysisTask.h"
+
+struct MyTask {
+    // Define things here, such as histogram registries, filters for data, or new tables
+
+    void init{o2::framework::InitContext&} {
+        // Here we initialise histograms and other things used in the analysis
+    };
+
+    void process(aod::Collisions const& collisions, aod::Tracks const& tracks) {
+        // Here we can do any processing that we need, calculating things etc, and then fill the histograms we defined earlier
+    };
+};
+
+// This is what O2 looks at to run the task
+WorkflowSpec defineDataProcessing(ConfigContext const& cfgc)
+{
+  return WorkflowSpec{
+    adaptAnalysisTask<MyTask>(cfgc),
+  };
+}
+
+\end{minted}
+
+With the task written, it then needs to be compiled and added to O2 so that it can be run. O2Physics has a number of analysis tasks written by people at ALICE which get compiled automatically. These are sorted into physics working groups such as Heavy Flavour (PWGHF) and Electromagnetism (PWGEM). If we want to add our own task to O2Physics, we need to create our own folder with the same structure as the working groups. Below shows the structure of the file system.
+
+\dirtree{%
+  .1 alice.
+  .2 alidist.
+  .2 O2.
+  .2 O2Physics.
+  .3 Functional Things.
+  .3 ....
+  .3 myTasks.
+  .4 CMakeLists.txt.
+  .4 Tasks.
+  .5 CMakeLists.txt.
+  .5 analysisTask.cxx.
+  .5 ....
+  .3 Other Working Groups.
+  .3 ....
+  .3 CMakeLists.txt.
+}
+
+Here \texttt{alidist} is the git repository that handles the versioning of O2 and O2Physics. O2 is what handles the backend of the analysis framework, compiling the tasks written in O2Physics. The \texttt{CMakeLists.txt} files are needed at every level of the O2Physics structure to tell O2 what to compile and which commands to use to refer to things. 
+
+\textbf{\textit{PUT AN EXAMPLE CMAKELISTS HERE}}
+
+
+
+\subsection{Compiling O2 \& Running a Task}\label{sec:CompileRun}
+O2 is built on your system using \texttt{aliBuild}~\cite{aliBuild_install}. It prefers to be built on UNIX systems and requires at least 8 GB of RAM, preferably more. We used both O2 and O2Physics as we wanted to create and run analysis tasks. 
+
+Once O2 is built (those four words are doing some \textit{very} heavy lifting) we can enter the O2Physics environment with \texttt{alienv enter O2Physics} and this will place us in a new terminal shell. The magic of O2 is that it compiles all the analysis tasks in O2Physics, as well as tools for simulation and the like, such that everything can be done by running commands in that shell. Before running our own tasks, however, we need to tell O2 to build our tasks into O2Physics. To do this we use \texttt{ninja}.
+
+
+
+
+For our purposes, the only commands we need to know are how to run a task and the options that come along with that. 
+
+All analysis tasks in O2Physics get assigned a unique command that can be used to run that task. They all begin with \texttt{o2-analysis...} followed by the name assigned to it in the relevant \texttt{CMakeLists.txt} file. Most analysis tasks are run on \texttt{AOD.root} or \texttt{AO2D.root} files and to tell the task which file to use, we use the flag \texttt{--aod-file AO2D.root}. We could also supply a list of files in a text file and use \texttt{--aod-file @AO2D\_list.txt} where \texttt{AO2D\_list.txt} contains the path to the files we want to run on. 
+
+Lastly on the topic of running tasks is piping the output of one task into another. Often we want to run multiple tasks in succession on the same data, feeding the output of one into another. To do this, we simply use the pipe symbol \texttt{|} between the tasks: \texttt{o2-analysis-trackselection | o2-analysis-ud-mytask --aod-file AO2D.root}. Here the ordering of the tasks doesn't matter as the input and output format of a task is known before it runs, so O2 does some quick thinking to arrange the workflow such that the tasks get fed the correct format of data.

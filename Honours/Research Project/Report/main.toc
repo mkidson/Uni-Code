@@ -9,3 +9,5 @@
 \contentsline {section}{\numberline {3}Writing an Analysis Task}{8}{section.3}%
 \contentsline {subsection}{\numberline {3.1}AOD Structure}{9}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Analysis Task Structure}{9}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Compiling O2 \& Running a Task}{10}{subsection.3.3}%
+\contentsline {section}{\numberline {A}Downloading data from the GRID}{13}{appendix.A}%

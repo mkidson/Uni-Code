@@ -2367,17 +2367,19 @@
     <bcf:citekey order="21">ALICE_Upgrade_LOI</bcf:citekey>
     <bcf:citekey order="22">O2_Upgrade_TDR</bcf:citekey>
     <bcf:citekey order="23">O2_Upgrade_TDR</bcf:citekey>
-    <bcf:citekey order="24">ALICE_LOI</bcf:citekey>
-    <bcf:citekey order="25">coords</bcf:citekey>
-    <bcf:citekey order="26">kar_exp_phys</bcf:citekey>
-    <bcf:citekey order="27">ALICE_Upgrade_LOI</bcf:citekey>
-    <bcf:citekey order="28">ALICE_schematic_labels</bcf:citekey>
-    <bcf:citekey order="29">ITS_Upgrade_TDR</bcf:citekey>
-    <bcf:citekey order="30">ITS_Info</bcf:citekey>
-    <bcf:citekey order="31">Muon_Spec_Schematic</bcf:citekey>
-    <bcf:citekey order="32">MFT_Schematic</bcf:citekey>
-    <bcf:citekey order="33">MFT_TDR</bcf:citekey>
-    <bcf:citekey order="34">O2_Upgrade_TDR</bcf:citekey>
+    <bcf:citekey order="24">aliBuild_install</bcf:citekey>
+    <bcf:citekey order="25">ALICE_LOI</bcf:citekey>
+    <bcf:citekey order="26">coords</bcf:citekey>
+    <bcf:citekey order="27">kar_exp_phys</bcf:citekey>
+    <bcf:citekey order="28">ALICE_Upgrade_LOI</bcf:citekey>
+    <bcf:citekey order="29">ALICE_schematic_labels</bcf:citekey>
+    <bcf:citekey order="30">ITS_Upgrade_TDR</bcf:citekey>
+    <bcf:citekey order="31">ITS_Info</bcf:citekey>
+    <bcf:citekey order="32">Muon_Spec_Schematic</bcf:citekey>
+    <bcf:citekey order="33">MFT_Schematic</bcf:citekey>
+    <bcf:citekey order="34">MFT_TDR</bcf:citekey>
+    <bcf:citekey order="35">O2_Upgrade_TDR</bcf:citekey>
+    <bcf:citekey order="36">aliBuild_install</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

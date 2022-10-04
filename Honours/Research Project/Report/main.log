@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  26 SEP 2022 10:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  4 OCT 2022 17:36
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **"/home/mkidson/gitRepos/Uni-Code/Honours/Research Project/Report/main.tex"
@@ -867,41 +867,133 @@ Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
 \DT@baselineskip=\dimen314
 )
 File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
-) (/usr/share/texlive/texmf-dist/tex/latex/mhchem/mhchem.sty
-Package: mhchem 2021/12/31 v4.09 for typesetting chemical formulae
- (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2021/12/24 v2.6 Yet another Pygments shim for LaTeX
+ (/usr/share/texlive/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
+ (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2021/12/21 4.1b verbatim text (tvz,hv)
+\FV@CodeLineNo=\count477
+\FV@InFile=\read5
+\FV@TabBox=\box87
+\c@FancyVerbLine=\count478
+\FV@StepNumber=\count479
+\FV@OutFile=\write5
+) (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+) (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count480
+\output=\toks46
+\linenoprevgraf=\count481
+\linenumbersep=\dimen315
+\linenumberwidth=\dimen316
+\c@linenumber=\count482
+\c@pagewiselinenumber=\count483
+\c@LN@truepage=\count484
+\c@internallinenumber=\count485
+\c@internallinenumbers=\count486
+\quotelinenumbersep=\dimen317
+\bframerule=\dimen318
+\bframesep=\dimen319
+\bframebox=\box88
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\c@FV@TrueTabGroupLevel=\count487
+\c@FV@TrueTabCounter=\count488
+\FV@TabBox@Group=\box89
+\FV@TmpLength=\skip82
+\c@FV@HighlightLinesStart=\count489
+\c@FV@HighlightLinesStop=\count490
+\FV@LoopCount=\count491
+\FV@NCharsBox=\box90
+\FV@BreakIndent=\dimen320
+\FV@BreakIndentNChars=\count492
+\FV@BreakSymbolSepLeft=\dimen321
+\FV@BreakSymbolSepLeftNChars=\count493
+\FV@BreakSymbolSepRight=\dimen322
+\FV@BreakSymbolSepRightNChars=\count494
+\FV@BreakSymbolIndentLeft=\dimen323
+\FV@BreakSymbolIndentLeftNChars=\count495
+\FV@BreakSymbolIndentRight=\dimen324
+\FV@BreakSymbolIndentRightNChars=\count496
+\c@FancyVerbLineBreakLast=\count497
+\FV@LineBox=\box91
+\FV@LineIndentBox=\box92
+\FV@LineWidth=\dimen325
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count477
-\calc@Bcount=\count478
-\calc@Adimen=\dimen315
-\calc@Bdimen=\dimen316
-\calc@Askip=\skip82
-\calc@Bskip=\skip83
+\calc@Acount=\count498
+\calc@Bcount=\count499
+\calc@Adimen=\dimen326
+\calc@Bdimen=\dimen327
+\calc@Askip=\skip83
+\calc@Bskip=\skip84
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count479
-\calc@Cskip=\skip84
-) (/usr/share/texlive/texmf-dist/tex/latex/chemgreek/chemgreek.sty
-Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use in chemistry (CN)
-\l__chemgreek_tmpa_int=\count480
-\g__chemgreek_tmpa_int=\count481
+\calc@Ccount=\count500
+\calc@Cskip=\skip85
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+) (/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+ (/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
-\l__mhchem_ce_distanceFromLastComma_int=\count482
-\__mhchem_arrow_extPgfLength_skip=\skip85
-\mhchem@minispace@tmp=\skip86
-\mhchem@minibackspace@tmp=\skip87
-\mhchem@bondwidth=\skip88
-\mhchem@bondheight=\skip89
-\mhchem@smallbondwidth@tmpA=\skip90
-\mhchem@smallbondwidth@tmpB=\skip91
-\mhchem@smallbondwidth=\skip92
-\mhchem@bondtmp@minussidebearingleft=\skip93
-\mhchem@bondtmp@minussidebearingright=\skip94
-\l__mhchem_option_version_int=\count483
-\mhchem@option@minusmathsidebearingleft=\dimen317
-\mhchem@option@minusmathsidebearingright=\dimen318
-\mhchem@option@minustextsidebearingleft=\dimen319
-\mhchem@option@minustextsidebearingright=\dimen320
+runsystem(uname -s > "main.w18")...executed.
+
+ (./main.w18)
+runsystem(rm -- "main.w18")...executed.
+
+) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count501
+\decimalpart=\count502
+)
+Package: xstring 2021/07/21 v1.84 String manipulations (CT)
+) (/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip86
+\fb@frw=\dimen328
+\fb@frh=\dimen329
+\FrameRule=\dimen330
+\FrameSep=\dimen331
+)
+\minted@appexistsfile=\read6
+\minted@bgbox=\box93
+\minted@code=\write6
+\c@minted@FancyVerbLineTemp=\count503
+\c@minted@pygmentizecounter=\count504
+\@float@every@listing=\toks47
+\c@listing=\count505
+)
+runsystem(mkdir -p _minted-main)...executed.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/mhchem/mhchem.sty
+Package: mhchem 2021/12/31 v4.09 for typesetting chemical formulae
+ (/usr/share/texlive/texmf-dist/tex/latex/chemgreek/chemgreek.sty
+Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use in chemistry (CN)
+\l__chemgreek_tmpa_int=\count506
+\g__chemgreek_tmpa_int=\count507
+)
+\l__mhchem_ce_distanceFromLastComma_int=\count508
+\__mhchem_arrow_extPgfLength_skip=\skip87
+\mhchem@minispace@tmp=\skip88
+\mhchem@minibackspace@tmp=\skip89
+\mhchem@bondwidth=\skip90
+\mhchem@bondheight=\skip91
+\mhchem@smallbondwidth@tmpA=\skip92
+\mhchem@smallbondwidth@tmpB=\skip93
+\mhchem@smallbondwidth=\skip94
+\mhchem@bondtmp@minussidebearingleft=\skip95
+\mhchem@bondtmp@minussidebearingright=\skip96
+\l__mhchem_option_version_int=\count509
+\mhchem@option@minusmathsidebearingleft=\dimen332
+\mhchem@option@minusmathsidebearingright=\dimen333
+\mhchem@option@minustextsidebearingleft=\dimen334
+\mhchem@option@minustextsidebearingright=\dimen335
 ) (/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2370.
@@ -918,39 +1010,35 @@ LaTeX Info: Redefining \labelcpageref on input line 2370.
 Package cleveref Info: `listings' support loaded on input line 3131.
 Package cleveref Info: `subfig' support loaded on input line 3164.
 Package cleveref Info: no abbreviation of names on input line 7852.
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 80.
-\@quotelevel=\count484
-\@quotereset=\count485
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 39.
+\@quotelevel=\count510
+\@quotereset=\count511
+runsystem(which pygmentize && touch main.aex)...executed.
+
+runsystem(rm main.aex)...executed.
+
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -986,7 +1074,7 @@ LaTeX Font Info:    ... okay on input line 80.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 80.
+Package hyperref Info: Link coloring OFF on input line 39.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -994,32 +1082,32 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count486
+\c@section@level=\count512
 )
-LaTeX Info: Redefining \ref on input line 80.
-LaTeX Info: Redefining \pageref on input line 80.
-LaTeX Info: Redefining \nameref on input line 80.
+LaTeX Info: Redefining \ref on input line 39.
+LaTeX Info: Redefining \pageref on input line 39.
+LaTeX Info: Redefining \nameref on input line 39.
  (./main.out) (./main.out)
-\@outlinefile=\write5
-\openout5 = `main.out'.
+\@outlinefile=\write7
+\openout7 = `main.out'.
 
  (/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 80.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 39.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count487
-\scratchdimen=\dimen321
-\scratchbox=\box87
-\nofMPsegments=\count488
-\nofMParguments=\count489
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count490
-\MPscratchDim=\dimen322
-\MPnumerator=\count491
-\makeMPintoPDFobject=\count492
-\everyMPtoPDFconversion=\toks47
+\scratchcounter=\count513
+\scratchdimen=\dimen336
+\scratchbox=\box94
+\nofMPsegments=\count514
+\nofMParguments=\count515
+\everyMPshowfont=\toks48
+\MPscratchCnt=\count516
+\MPscratchDim=\dimen337
+\MPnumerator=\count517
+\makeMPintoPDFobject=\count518
+\everyMPtoPDFconversion=\toks49
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -1028,14 +1116,17 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
 
-\c@lstlisting=\count493
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+\c@lstlisting=\count519
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
 )
 Package biblatex Info: Input encoding 'utf8' detected.
@@ -1046,32 +1137,32 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 80.
-Package biblatex Info: Reference segment=0 on input line 80.
+Package biblatex Info: Reference section=0 on input line 39.
+Package biblatex Info: Reference segment=0 on input line 39.
 
-Package chemgreek Info: Activating mapping `default' on line 80.
+Package chemgreek Info: Activating mapping `default' on line 39.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 83.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 83.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<Figs/UCT.jpg, id=51, 144.54pt x 144.54pt>
+<Figs/UCT.jpg, id=59, 144.54pt x 144.54pt>
 File: Figs/UCT.jpg Graphic file (type jpg)
 <use Figs/UCT.jpg>
-Package pdftex.def Info: Figs/UCT.jpg  used on input line 86.
+Package pdftex.def Info: Figs/UCT.jpg  used on input line 45.
 (pdftex.def)             Requested size: 144.53963pt x 144.53963pt.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Figs/UCT.jpg>] (./main.toc)
-\tf@toc=\write6
-\openout6 = `main.toc'.
+\tf@toc=\write8
+\openout8 = `main.toc'.
 
- [2] (./Sections/Background.tex
-<Figs/coords.pdf, id=81, 385.02144pt x 184.89075pt>
+ [2] (./Sections/1Background.tex
+<Figs/coords.pdf, id=91, 385.02144pt x 184.89075pt>
 File: Figs/coords.pdf Graphic file (type pdf)
 <use Figs/coords.pdf>
 Package pdftex.def Info: Figs/coords.pdf  used on input line 9.
@@ -1081,7 +1172,7 @@ Package pdftex.def Info: Figs/coords.pdf  used on input line 9.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3]
-<Figs/ALICE_RUN3_schematic.png, id=103, 1927.2pt x 872.25874pt>
+<Figs/ALICE_RUN3_schematic.png, id=113, 1927.2pt x 872.25874pt>
 File: Figs/ALICE_RUN3_schematic.png Graphic file (type png)
 <use Figs/ALICE_RUN3_schematic.png>
 Package pdftex.def Info: Figs/ALICE_RUN3_schematic.png  used on input line 43.
@@ -1090,62 +1181,63 @@ Package pdftex.def Info: Figs/ALICE_RUN3_schematic.png  used on input line 43.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figs/ITS_Schematic.png, id=106, 860.46469pt x 490.83376pt>
+<Figs/ITS_Schematic.png, id=116, 860.46469pt x 490.83376pt>
 File: Figs/ITS_Schematic.png Graphic file (type png)
 <use Figs/ITS_Schematic.png>
 Package pdftex.def Info: Figs/ITS_Schematic.png  used on input line 51.
 (pdftex.def)             Requested size: 375.80544pt x 214.37225pt.
 [4 <./Figs/coords.pdf>] [5 <./Figs/ALICE_RUN3_schematic.png> <./Figs/ITS_Schematic.png>]
-<Figs/MCH_schematic_pog.png, id=154, 635.4942pt x 330.5148pt>
+<Figs/MCH_schematic_pog.png, id=164, 635.4942pt x 330.5148pt>
 File: Figs/MCH_schematic_pog.png Graphic file (type png)
 <use Figs/MCH_schematic_pog.png>
 Package pdftex.def Info: Figs/MCH_schematic_pog.png  used on input line 72.
 (pdftex.def)             Requested size: 375.80544pt x 195.45592pt.
  [6 <./Figs/MCH_schematic_pog.png>]
-<Figs/MFT_schematic.jpg, id=167, 3975.60281pt x 2852.40656pt>
+<Figs/MFT_schematic.jpg, id=177, 3975.60281pt x 2852.40656pt>
 File: Figs/MFT_schematic.jpg Graphic file (type jpg)
 <use Figs/MFT_schematic.jpg>
 Package pdftex.def Info: Figs/MFT_schematic.jpg  used on input line 83.
 (pdftex.def)             Requested size: 375.80544pt x 269.63219pt.
  [7 <./Figs/MFT_schematic.jpg>]
-<Figs/O2_flow.png, id=180, 526.21594pt x 584.93532pt>
+<Figs/O2_flow.png, id=190, 526.21594pt x 584.93532pt>
 File: Figs/O2_flow.png Graphic file (type png)
 <use Figs/O2_flow.png>
 Package pdftex.def Info: Figs/O2_flow.png  used on input line 101.
 (pdftex.def)             Requested size: 281.85587pt x 313.31664pt.
-) (./Sections/AnalysisTask.tex [8 <./Figs/O2_flow.png>]
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 12.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
-File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 12.
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 21.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 21.
- [9]) [10] [11] (./main.aux)
+) (./Sections/2AnalysisTask.tex [8 <./Figs/O2_flow.png>]
+\openout6 = `main.pyg'.
+
+ (./_minted-main/vs.pygstyle) (./_minted-main/46B3FEC89EC6D6F78BE0212C5E262417DA69F1F5C42981512A6369A550F495B5.pygtex)
+\openout6 = `main.pyg'.
+
+ (./_minted-main/D2CD4AAF21EC908398737F330808A96DDA69F1F5C42981512A6369A550F495B5.pygtex)
+\openout5 = `main.pyg'.
+
+ (./_minted-main/5ADE1CDFFA9E1ACE0915117AF32FB366DA69F1F5C42981512A6369A550F495B5.pygtex) [9]) [10] [11] [12] (./Sections/ZZAppendix.tex
+\openout5 = `main.pyg'.
+
+ (./_minted-main/8EFC202BC9607829907687EC3AFA3D7082CA0C42AFE0759A4F1491A6B69BC02A.pygtex)) [13] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5D36DF4995920E6794EAE2EF97209821;1699.
+(rerunfilecheck)             Checksum: 5A18BB099C6ADFB276FAE926DA3085AD;2127.
+runsystem(rm main.pyg)...executed.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 49943 strings out of 478287
- 1147678 string characters out of 5849289
- 2370831 words of memory out of 5000000
- 67391 multiletter control sequences out of 15000+600000
- 481768 words of font info for 75 fonts, out of 8000000 for 9000
+ 52484 strings out of 478287
+ 1208388 string characters out of 5849289
+ 2341001 words of memory out of 5000000
+ 69893 multiletter control sequences out of 15000+600000
+ 481430 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,7n,103p,1126b,1582s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on main.pdf (11 pages, 8275801 bytes).
+ 99i,11n,103p,1127b,1584s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb>
+Output written on main.pdf (13 pages, 8299077 bytes).
 PDF statistics:
- 352 PDF objects out of 1000 (max. 8388607)
- 281 compressed objects within 3 object streams
- 69 named destinations out of 1000 (max. 500000)
- 136 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 355 PDF objects out of 1000 (max. 8388607)
+ 280 compressed objects within 3 object streams
+ 52 named destinations out of 1000 (max. 500000)
+ 152 words of extra memory for PDF output out of 10000 (max. 10000000)
 
