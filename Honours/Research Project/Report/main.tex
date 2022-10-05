@@ -7,7 +7,7 @@
 \usepackage[separate-uncertainty=true, group-digits=false]{siunitx}
 \usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
 \usepackage{listings,xcolor,subfig,caption,import,wrapfig,lipsum,tikz,biblatex,dirtree}
-\usepackage{minted}
+\usepackage{minted,soul}
 \usepackage[version=4]{mhchem}
 \usepackage[noabbrev]{cleveref}
 \newcommand{\creflastconjunction}{, and\nobreakspace}
@@ -24,7 +24,9 @@
 \captionsetup{font=small, belowskip=0pt}
 \usemintedstyle{vs}
 \setminted{framesep=2mm,bgcolor=LightGray,fontsize=\footnotesize,linenos,breaklines}
-
+\let\OldTexttt\texttt
+\sethlcolor{LightGray}
+\renewcommand{\texttt}[1]{\OldTexttt{\hl{#1}}}
 \renewcommand{\lstlistingname}{Appendix}
 \pgfplotsset{compat=1.17}
 \addbibresource{bibliography.bib}

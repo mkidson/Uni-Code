@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+add\PYGZus{}subdirectory(Tasks)   \PYGZsh{} Ensures O2 can see the Tasks folder
+o2physics\PYGZus{}add\PYGZus{}dpl\PYGZus{}workflow(my\PYGZhy{}task1           \PYGZsh{} The command assigned to the task. Note only lowercase letters, hyphens, and numbers are allowed
+                  SOURCES myTask1.cxx   \PYGZsh{} The source file for the task
+                  PUBLIC\PYGZus{}LINK\PYGZus{}LIBRARIES O2::Framework
+                  COMPONENT\PYGZus{}NAME Analysis)
+\end{Verbatim}

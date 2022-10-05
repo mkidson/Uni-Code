@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  4 OCT 2022 17:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  5 OCT 2022 17:22
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -971,7 +971,18 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 )
 runsystem(mkdir -p _minted-main)...executed.
 
- (/usr/share/texlive/texmf-dist/tex/latex/mhchem/mhchem.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks48
+\SOUL@lasttoken=\toks49
+\SOUL@cmds=\toks50
+\SOUL@buffer=\toks51
+\SOUL@token=\toks52
+\SOUL@spaceskip=\skip87
+\SOUL@ttwidth=\dimen332
+\SOUL@uldp=\dimen333
+\SOUL@ulht=\dimen334
+) (/usr/share/texlive/texmf-dist/tex/latex/mhchem/mhchem.sty
 Package: mhchem 2021/12/31 v4.09 for typesetting chemical formulae
  (/usr/share/texlive/texmf-dist/tex/latex/chemgreek/chemgreek.sty
 Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use in chemistry (CN)
@@ -979,21 +990,21 @@ Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use 
 \g__chemgreek_tmpa_int=\count507
 )
 \l__mhchem_ce_distanceFromLastComma_int=\count508
-\__mhchem_arrow_extPgfLength_skip=\skip87
-\mhchem@minispace@tmp=\skip88
-\mhchem@minibackspace@tmp=\skip89
-\mhchem@bondwidth=\skip90
-\mhchem@bondheight=\skip91
-\mhchem@smallbondwidth@tmpA=\skip92
-\mhchem@smallbondwidth@tmpB=\skip93
-\mhchem@smallbondwidth=\skip94
-\mhchem@bondtmp@minussidebearingleft=\skip95
-\mhchem@bondtmp@minussidebearingright=\skip96
+\__mhchem_arrow_extPgfLength_skip=\skip88
+\mhchem@minispace@tmp=\skip89
+\mhchem@minibackspace@tmp=\skip90
+\mhchem@bondwidth=\skip91
+\mhchem@bondheight=\skip92
+\mhchem@smallbondwidth@tmpA=\skip93
+\mhchem@smallbondwidth@tmpB=\skip94
+\mhchem@smallbondwidth=\skip95
+\mhchem@bondtmp@minussidebearingleft=\skip96
+\mhchem@bondtmp@minussidebearingright=\skip97
 \l__mhchem_option_version_int=\count509
-\mhchem@option@minusmathsidebearingleft=\dimen332
-\mhchem@option@minusmathsidebearingright=\dimen333
-\mhchem@option@minustextsidebearingleft=\dimen334
-\mhchem@option@minustextsidebearingright=\dimen335
+\mhchem@option@minusmathsidebearingleft=\dimen335
+\mhchem@option@minusmathsidebearingright=\dimen336
+\mhchem@option@minustextsidebearingleft=\dimen337
+\mhchem@option@minustextsidebearingright=\dimen338
 ) (/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2370.
@@ -1011,7 +1022,7 @@ Package cleveref Info: `listings' support loaded on input line 3131.
 Package cleveref Info: `subfig' support loaded on input line 3164.
 Package cleveref Info: no abbreviation of names on input line 7852.
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 39.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 41.
 \@quotelevel=\count510
 \@quotereset=\count511
 runsystem(which pygmentize && touch main.aex)...executed.
@@ -1021,24 +1032,24 @@ runsystem(rm main.aex)...executed.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1074,7 +1085,7 @@ LaTeX Font Info:    ... okay on input line 39.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 39.
+Package hyperref Info: Link coloring OFF on input line 41.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1084,9 +1095,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count512
 )
-LaTeX Info: Redefining \ref on input line 39.
-LaTeX Info: Redefining \pageref on input line 39.
-LaTeX Info: Redefining \nameref on input line 39.
+LaTeX Info: Redefining \ref on input line 41.
+LaTeX Info: Redefining \pageref on input line 41.
+LaTeX Info: Redefining \nameref on input line 41.
  (./main.out) (./main.out)
 \@outlinefile=\write7
 \openout7 = `main.out'.
@@ -1094,20 +1105,20 @@ LaTeX Info: Redefining \nameref on input line 39.
  (/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 39.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 41.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count513
-\scratchdimen=\dimen336
+\scratchdimen=\dimen339
 \scratchbox=\box94
 \nofMPsegments=\count514
 \nofMParguments=\count515
-\everyMPshowfont=\toks48
+\everyMPshowfont=\toks53
 \MPscratchCnt=\count516
-\MPscratchDim=\dimen337
+\MPscratchDim=\dimen340
 \MPnumerator=\count517
 \makeMPintoPDFobject=\count518
-\everyMPtoPDFconversion=\toks49
+\everyMPtoPDFconversion=\toks54
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -1137,23 +1148,23 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 39.
-Package biblatex Info: Reference segment=0 on input line 39.
+Package biblatex Info: Reference section=0 on input line 41.
+Package biblatex Info: Reference segment=0 on input line 41.
 
-Package chemgreek Info: Activating mapping `default' on line 39.
+Package chemgreek Info: Activating mapping `default' on line 41.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<Figs/UCT.jpg, id=59, 144.54pt x 144.54pt>
+<Figs/UCT.jpg, id=63, 144.54pt x 144.54pt>
 File: Figs/UCT.jpg Graphic file (type jpg)
 <use Figs/UCT.jpg>
-Package pdftex.def Info: Figs/UCT.jpg  used on input line 45.
+Package pdftex.def Info: Figs/UCT.jpg  used on input line 47.
 (pdftex.def)             Requested size: 144.53963pt x 144.53963pt.
  [1
 
@@ -1162,7 +1173,7 @@ Package pdftex.def Info: Figs/UCT.jpg  used on input line 45.
 \openout8 = `main.toc'.
 
  [2] (./Sections/1Background.tex
-<Figs/coords.pdf, id=91, 385.02144pt x 184.89075pt>
+<Figs/coords.pdf, id=96, 385.02144pt x 184.89075pt>
 File: Figs/coords.pdf Graphic file (type pdf)
 <use Figs/coords.pdf>
 Package pdftex.def Info: Figs/coords.pdf  used on input line 9.
@@ -1172,7 +1183,7 @@ Package pdftex.def Info: Figs/coords.pdf  used on input line 9.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3]
-<Figs/ALICE_RUN3_schematic.png, id=113, 1927.2pt x 872.25874pt>
+<Figs/ALICE_RUN3_schematic.png, id=118, 1927.2pt x 872.25874pt>
 File: Figs/ALICE_RUN3_schematic.png Graphic file (type png)
 <use Figs/ALICE_RUN3_schematic.png>
 Package pdftex.def Info: Figs/ALICE_RUN3_schematic.png  used on input line 43.
@@ -1181,25 +1192,25 @@ Package pdftex.def Info: Figs/ALICE_RUN3_schematic.png  used on input line 43.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figs/ITS_Schematic.png, id=116, 860.46469pt x 490.83376pt>
+<Figs/ITS_Schematic.png, id=121, 860.46469pt x 490.83376pt>
 File: Figs/ITS_Schematic.png Graphic file (type png)
 <use Figs/ITS_Schematic.png>
 Package pdftex.def Info: Figs/ITS_Schematic.png  used on input line 51.
 (pdftex.def)             Requested size: 375.80544pt x 214.37225pt.
 [4 <./Figs/coords.pdf>] [5 <./Figs/ALICE_RUN3_schematic.png> <./Figs/ITS_Schematic.png>]
-<Figs/MCH_schematic_pog.png, id=164, 635.4942pt x 330.5148pt>
+<Figs/MCH_schematic_pog.png, id=169, 635.4942pt x 330.5148pt>
 File: Figs/MCH_schematic_pog.png Graphic file (type png)
 <use Figs/MCH_schematic_pog.png>
 Package pdftex.def Info: Figs/MCH_schematic_pog.png  used on input line 72.
 (pdftex.def)             Requested size: 375.80544pt x 195.45592pt.
  [6 <./Figs/MCH_schematic_pog.png>]
-<Figs/MFT_schematic.jpg, id=177, 3975.60281pt x 2852.40656pt>
+<Figs/MFT_schematic.jpg, id=182, 3975.60281pt x 2852.40656pt>
 File: Figs/MFT_schematic.jpg Graphic file (type jpg)
 <use Figs/MFT_schematic.jpg>
 Package pdftex.def Info: Figs/MFT_schematic.jpg  used on input line 83.
 (pdftex.def)             Requested size: 375.80544pt x 269.63219pt.
  [7 <./Figs/MFT_schematic.jpg>]
-<Figs/O2_flow.png, id=190, 526.21594pt x 584.93532pt>
+<Figs/O2_flow.png, id=195, 526.21594pt x 584.93532pt>
 File: Figs/O2_flow.png Graphic file (type png)
 <use Figs/O2_flow.png>
 Package pdftex.def Info: Figs/O2_flow.png  used on input line 101.
@@ -1208,17 +1219,17 @@ Package pdftex.def Info: Figs/O2_flow.png  used on input line 101.
 \openout6 = `main.pyg'.
 
  (./_minted-main/vs.pygstyle) (./_minted-main/46B3FEC89EC6D6F78BE0212C5E262417DA69F1F5C42981512A6369A550F495B5.pygtex)
-\openout6 = `main.pyg'.
-
- (./_minted-main/D2CD4AAF21EC908398737F330808A96DDA69F1F5C42981512A6369A550F495B5.pygtex)
 \openout5 = `main.pyg'.
 
- (./_minted-main/5ADE1CDFFA9E1ACE0915117AF32FB366DA69F1F5C42981512A6369A550F495B5.pygtex) [9]) [10] [11] [12] (./Sections/ZZAppendix.tex
+ (./_minted-main/5ADE1CDFFA9E1ACE0915117AF32FB366DA69F1F5C42981512A6369A550F495B5.pygtex) [9]
+\openout5 = `main.pyg'.
+
+ (./_minted-main/50D2C9400E3EDBDB8FF7461F7B963C1BE48FAF1886BFF81AE3111843E944B2C0.pygtex) [10]) [11] [12] (./Sections/ZZAppendix.tex
 \openout5 = `main.pyg'.
 
  (./_minted-main/8EFC202BC9607829907687EC3AFA3D7082CA0C42AFE0759A4F1491A6B69BC02A.pygtex)) [13] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5A18BB099C6ADFB276FAE926DA3085AD;2127.
+(rerunfilecheck)             Checksum: 03707154A8D7ECD808BF2F0B3AFED2AE;2207.
 runsystem(rm main.pyg)...executed.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1226,18 +1237,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52484 strings out of 478287
- 1208388 string characters out of 5849289
- 2341001 words of memory out of 5000000
- 69893 multiletter control sequences out of 15000+600000
- 481430 words of font info for 73 fonts, out of 8000000 for 9000
+ 52682 strings out of 478287
+ 1211173 string characters out of 5849289
+ 2353533 words of memory out of 5000000
+ 70086 multiletter control sequences out of 15000+600000
+ 481384 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,11n,103p,1127b,1584s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on main.pdf (13 pages, 8299077 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb>
+Output written on main.pdf (13 pages, 8292891 bytes).
 PDF statistics:
- 355 PDF objects out of 1000 (max. 8388607)
- 280 compressed objects within 3 object streams
- 52 named destinations out of 1000 (max. 500000)
- 152 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 357 PDF objects out of 1000 (max. 8388607)
+ 284 compressed objects within 3 object streams
+ 53 named destinations out of 1000 (max. 500000)
+ 160 words of extra memory for PDF output out of 10000 (max. 10000000)
 

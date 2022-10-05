@@ -12,7 +12,7 @@ The data that we use in our analysis comes in the form of Analysis Object Data. 
 All variables associated with a track, for example, could be included in a single table. However, since we often only need a few of the variables, the tables are split up into sections that contain variables often used together. If needed, these tables can be joined together when doing analysis, using \mintinline{c++}{o2::soa::Join<Table1, Table2>}. Importantly, only tables which correspond row-to-row and have the same number of rows can be joined in this way.
 
 \subsection{Analysis Task Structure}\label{sec:TaskStructure}
-Analysis tasks are written in C\texttt{++} and need to be structured in a specific way for O2 to use them properly. Each task is written as a \Cppinline{struct} object which is then called at the end of the task. Below is an outline of what is needed for a task.
+Analysis tasks are written in C\OldTexttt{++} and need to be structured in a specific way for O2 to use them properly. Each task is written as a \texttt{struct} object which is then called at the end of the task. Below is an outline of what is needed for a task.
 
 \begin{minted}{c++}
 #include "Framework/runDataProcessing.h"
@@ -52,30 +52,42 @@ With the task written, it then needs to be compiled and added to O2 so that it c
   .3 myTasks.
   .4 CMakeLists.txt.
   .4 Tasks.
+  .4 myTask1.cxx.
   .5 CMakeLists.txt.
-  .5 analysisTask.cxx.
+  .5 myTask2.cxx.
   .5 ....
   .3 Other Working Groups.
   .3 ....
   .3 CMakeLists.txt.
+  .2 sw.
 }
 
 Here \texttt{alidist} is the git repository that handles the versioning of O2 and O2Physics. O2 is what handles the backend of the analysis framework, compiling the tasks written in O2Physics. The \texttt{CMakeLists.txt} files are needed at every level of the O2Physics structure to tell O2 what to compile and which commands to use to refer to things. 
 
-\textbf{\textit{PUT AN EXAMPLE CMAKELISTS HERE}}
+See below an example of what the \texttt{CMakeLists.txt} file in the \texttt{myTasks} folder would look like.
 
+\begin{minted}{text}
+add_subdirectory(Tasks)   # Ensures O2 can see the Tasks folder
+o2physics_add_dpl_workflow(my-task1           # The command assigned to the task. Note only lowercase letters, hyphens, and numbers are allowed
+                  SOURCES myTask1.cxx   # The source file for the task
+                  PUBLIC_LINK_LIBRARIES O2::Framework
+                  COMPONENT_NAME Analysis)
+\end{minted}
 
-
-\subsection{Compiling O2 \& Running a Task}\label{sec:CompileRun}
+\subsection{Compiling O2}\label{sec:CompileO2}
 O2 is built on your system using \texttt{aliBuild}~\cite{aliBuild_install}. It prefers to be built on UNIX systems and requires at least 8 GB of RAM, preferably more. We used both O2 and O2Physics as we wanted to create and run analysis tasks. 
 
 Once O2 is built (those four words are doing some \textit{very} heavy lifting) we can enter the O2Physics environment with \texttt{alienv enter O2Physics} and this will place us in a new terminal shell. The magic of O2 is that it compiles all the analysis tasks in O2Physics, as well as tools for simulation and the like, such that everything can be done by running commands in that shell. Before running our own tasks, however, we need to tell O2 to build our tasks into O2Physics. To do this we use \texttt{ninja}.
 
+If we have our tasks written and files structured as shown in \cref{sec:TaskStructure}, we can enter an O2Physics environment and load ninja alongside using \texttt{alienv enter O2Physics ninja/latest}. In the shell we can then navigate to the build of O2Physics, which should be in \texttt{alice/sw/BUILD\-/O2Physics-latest/O2Physics} and run \texttt{ninja install myTasks/all} which will rebuild only those parts of O2. 
 
+Ninja is the quick way of doing things so every now and then it's a good idea to rebuild O2 and O2Physics entirely, pulling the latest release. We can do this while also making sure our own tasks don't get overwritten using the following steps. We first need to make sure that our work does not get overwritten, which is done by making sure git knows they're there with \texttt{git add path/to/files} and then committing with \texttt{git commit -m "commit message"}. With that done, we can systematically update \texttt{alidist}, \texttt{O2}, and \texttt{O2Physics} by navigating to each and running \texttt{git pull --rebase}. Finally we can rebuild by navigating to \texttt{alice} and running \texttt{aliBuild build O2Physics --defaults o2}. This will take a few hours to complete (if it's even successful) and then will be able to be used again.
 
+\subsection{Running a Task with O2}\label{sec:RunO2}
+Once we have our tasks created and built in O2Physics, we can then run them. For our purposes, the only commands we need to know are how to run a task and the options that come along with that. All analysis tasks in O2Physics get assigned a unique command that can be used to run that task. They all begin with \texttt{o2-analysis...} followed by the name assigned to it in the relevant \texttt{CMakeLists.txt} file as shown in \cref{sec:TaskStructure}. In the case of that task, we would run it with \texttt{o2-analysis-my-task1}. 
 
-For our purposes, the only commands we need to know are how to run a task and the options that come along with that. 
-
-All analysis tasks in O2Physics get assigned a unique command that can be used to run that task. They all begin with \texttt{o2-analysis...} followed by the name assigned to it in the relevant \texttt{CMakeLists.txt} file. Most analysis tasks are run on \texttt{AOD.root} or \texttt{AO2D.root} files and to tell the task which file to use, we use the flag \texttt{--aod-file AO2D.root}. We could also supply a list of files in a text file and use \texttt{--aod-file @AO2D\_list.txt} where \texttt{AO2D\_list.txt} contains the path to the files we want to run on. 
+Most analysis tasks are run on \texttt{AOD.root} or \texttt{AO2D.root} files so in order to tell the task which file to use, we use the flag \texttt{--aod-file AO2D.root}. We could also supply a list of files in a text file and use \texttt{--aod-file @AO2D\_list.txt} where \texttt{AO2D\_list.txt} contains the path to the files we want to run on. 
 
 Lastly on the topic of running tasks is piping the output of one task into another. Often we want to run multiple tasks in succession on the same data, feeding the output of one into another. To do this, we simply use the pipe symbol \texttt{|} between the tasks: \texttt{o2-analysis-trackselection | o2-analysis-ud-mytask --aod-file AO2D.root}. Here the ordering of the tasks doesn't matter as the input and output format of a task is known before it runs, so O2 does some quick thinking to arrange the workflow such that the tasks get fed the correct format of data.
+
+For the most part, the output of an analysis task is either a \texttt{AnalysisResults.root} file or a \texttt{QAResults.root} file, with the former being the most common. This output type is chosen when defining the histogram registry. 
