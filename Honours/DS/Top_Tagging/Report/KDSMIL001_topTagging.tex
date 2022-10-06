@@ -48,7 +48,7 @@ One way to perform this classification between signal (top quark jet) and backgr
 \section{The data}\label{sec:Data}
 The data we used to train and test the neural net comes from the dataset used in \cite{top-tagging-data}. It contains an equal number of background and signal jets. Due to computation power restrictions, we were unable to use their train dataset, so we split the test dataset into $\frac 23$ for training and $\frac 13$ for testing.
 
-The data is split up into two types: constituent and high-level. The constituent data is simply the $p_\mathrm{T}$, $\eta$, $\varphi$ and energy $E$ of the particles making up each jet. This is a lot of information and would ultimately be the best data to use as it holds all the available information about a jet, which neural nets are very good at sifting through to find the information relevant to the task at hand. The only issue is that it takes a lot of RAM to load all the data into, as well as requiring a lot of computation power (or time) to really get to a meaningful result. 
+The data is split up into two types: constituent and high-level. The constituent data is simply the $p_\mathrm{T}$, $\eta$, $\varphi$, and energy $E$ of the particles making up each jet. This is a lot of information and would ultimately be the best data to use as it holds all the available information about a jet, which neural nets are very good at sifting through to find the information relevant to the task at hand. The only issue is that it takes a lot of RAM to load all the data into, as well as requiring a lot of computation power (or time) to really get to a meaningful result. 
 
 To try cut down on computation time and resources, we used the high-level data. These are 15 variables calculated for each jet, from the constituent data, which have been identified by \cite{ATL-PHYS-PUB-2021-028} and \cite{ATL-PHYS-PUB-2017-004} as summarising the data in a way that lends itself to top-tagging. The 15 variables are:
 
@@ -69,9 +69,9 @@ The 15 high-level quantities, the labels, and the weights are all that we gave t
 \section{Creation and training of the neural net}\label{sec:CreatingNeuralNet}
 The neural net was created using Python and Keras~\cite{keras}, which is an interface for using TensorFlow. We used an input layer with 15 inputs; one for each of the high-level quantities. We then used 3 hidden layers each with 20 neurons using the Rectified Linear Unit activation function. Finally, an output layer of 1 neuron using the sigmoid activation function was used to give us a prediction of signal (closer to 1) or background (closer to 0). The model was compiled with the argument \texttt{optimizer=`adam'}, which has a learning rate of 0.001. We used a batch size of 100, with our training set being made up of around 1.6 million jets. 8 epochs were used. A validation dataset of 5\% of the training dataset was used.
 
-This configuration was chosen fairly arbitrarily, aside from the input and output layers, with a focus on simplicity and short run times (around 10 minutes of training). We chose the binary cross-entropy for our loss function as it is both simple and well-suited to a (who could've guessed it) binary classification task such as this one.
+This configuration was chosen fairly arbitrarily, aside from the input and output layers, with a focus on simplicity and short run times (around 10 minutes of training). We chose the binary cross-entropy for our loss function as it is both simple and well-suited to a (this might shock you) binary classification task such as this one.
 
-We can look at the evolution of the model with two parameters---the loss function and the accuracy---evaluated at each epoch in \cref{fig:loss_accuracy} for both the training and validation datasets. In this case, the accuracy is defined as the proportion of correct predictions when calling everything with prediction greater than 0.5 a signal, and background otherwise. This is a fairly rudimentary statistic and will be improved upon in later sections.
+We can look at the evolution of the model with two parameters---the loss function and the accuracy---evaluated at each epoch in \cref{fig:loss_accuracy} for both the training and validation datasets. In this case, the accuracy is defined as the proportion of correct predictions when calling everything with prediction greater than 0.5 a signal, and background otherwise. This is a fairly rudimentary statistic and will be discussed in later sections.
 
 The neural net finished training with a loss function value of \num{0.3500} and an accuracy of \num{0.8442}.
 
@@ -95,7 +95,7 @@ The neural net finished training with a loss function value of \num{0.3500} and 
 \end{figure}
 
 \section{Predictions and neural net performance}\label{sec:Predictions}
-With the neural net trained, we were then able to use it to predict the classification of jets in our testing set. This dataset contained around 8 million jets. All predictions greater than 0.5 were considered signal and all less than or equal to 0.5 were considered background. A first step towards improving the accuracy metric calculated earlier is to look at the confusion matrix, which tells us how many true positives (TP), false negatives (FN), false positives (FP), and true negatives (TN) were predicted. In our case we are considering signal to be ``positive'' and background ``negative''.
+With the neural net trained, we were then able to use it to predict the classification of jets in our testing set. This dataset contained around 8 million jets. All predictions greater than 0.5 were considered signal and all less than or equal to 0.5 were considered background. A first step towards iterating on the accuracy metric calculated earlier is to look at the confusion matrix, which tells us how many true positives (TP), false negatives (FN), false positives (FP), and true negatives (TN) were predicted. In our case we are considering signal to be ``positive'' and background ``negative''.
 
 \begin{table}[h]
     \centering
@@ -121,7 +121,7 @@ We find these values to be
 
 These tell us a few things. Firstly, our neural net is more likely (around 9\%) to correctly identify a signal event as signal than it is to identify a background event as background. We also see that when our neural net predicts a jet to be background, it is about 6\% more likely to be correct than when it predicts a jet to be signal. 
 
-These two statements seem to be at odds with each other but they are in fact saying similar things. The higher TPR tells us that a true signal jet is less likely to be labelled as background than a background jet is to be labelled as signal. Similarly, the higher NPV tells us that if a jet is labelled as background, it is less likely that the jet is actually signal than a jet labelled signal is to actually be background. In other words, our neural net yields a more pure background distribution than it does for signal. 
+These two statements seem to be at odds with each other but they are in fact saying similar things. The higher TPR tells us that a true signal jet is less likely to be labelled as background than a background jet is to be labelled as signal. Similarly, the higher NPV tells us that if a jet is labelled as background, it is less likely that the jet is actually signal than a jet labelled signal is to actually be background. In other words, our neural net yields a more pure background sample than it does for signal. 
 
 For a visual representation of the distribution of signal and background events, we can plot a histogram of true signal and background events according to their prediction from the neural net. \Cref{fig:bkg_vs_signal} shows this. 
 
@@ -169,14 +169,14 @@ Another way that we can evaluate the performance of the neural net is to look at
     \begin{subfigure}[t]{.49\linewidth}
         \centering
         \includegraphics[width=\linewidth]{Plots/sig_low_pt.pdf}
-        \caption{Histogram of neural net predictions of signal events in the high $p_\mathrm{T}$ region.}
+        \caption{Histogram of neural net predictions of signal events in the low $p_\mathrm{T}$ region.}
         \label{fig:sig_low_pt}
     \end{subfigure}
 \caption{}
 \label{fig:sig_high_low}
 \end{figure}
 
-\Cref{fig:bkg_high_low,fig:sig_high_low} show histograms for the true background and signal jets, binned according to their neural net prediction. We have divided the two groups again by their $p_\mathrm{T}$ where low $p_\mathrm{T}$ is simply below the midpoint between the highest and lowest $p_\mathrm{T}$, and high $p_\mathrm{T}$ is above that. The histograms have been normalised for easier comparison as there are more low $p_\mathrm{T}$ events than high. 
+\Cref{fig:bkg_high_low,fig:sig_high_low} show histograms for the true background and signal jets, binned according to their neural net prediction. We have divided the two groups again by their $p_\mathrm{T}$ where low $p_\mathrm{T}$ is simply below the midpoint and high $p_\mathrm{T}$ is above that. The histograms have been normalised for easier comparison as there are more low $p_\mathrm{T}$ events than high. 
 
 We can see from the histograms that our neural net seems to perform a bit better at low $p_\mathrm{T}$ as the histograms for both background and signal are more sharply peaked than their high $p_\mathrm{T}$ counterparts. For a more quantitative view of this, we found the PPV, NPV, and overall accuracy of each $p_\mathrm{T}$ region:
 
@@ -195,7 +195,9 @@ We can see that the accuracy doesn't actually change appreciably, perhaps even f
 This is a curious result as there doesn't seem to be any reason for the neural net to perform differently in different kinematic regions, but investigating the nature and cause of this phenomenon is outside the scope of this report. 
 
 \section{Conclusion}\label{sec:Conclusion}
+We were able to train a neural net to perform top-tagging on simulated hadronic jets. An overall accuracy of 0.85030 was found when predicting test data that the neural net hadn't seen before in training. A higher accuracy could easily be achieved by simply running the neural net for longer or using more training data, but for the purposes of this report that accuracy is reasonable. 
 
+Looking at quantities calculated from the confusion matrix we found that the neural net is naturally more suited to producing a pure background sample than a pure signal sample. This would be useful if we wanted to make sure no signal events were accidentally labelled as background but we didn't specifically care about the purity of the signal sample. We also found that the neural net's behaviour switched when looking at jets with a $p_\mathrm{T}$ higher than the midpoint of our data, which would lend itself to a more pure signal sample. 
 
 \newpage
 \printbibliography
