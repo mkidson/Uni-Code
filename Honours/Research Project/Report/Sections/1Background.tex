@@ -55,9 +55,16 @@ The Inner Tracking System (ITS) sits in the main barrel of ALICE, as seen in \cr
     \end{center}
 \end{figure}
 
-The new ITS consists of 7 layers of pixel detectors; 3 in the ``Inner Barrel'' and 4 in the ``Outer Barrel''. The pixel detectors used are \SI{0.18}{\micro\metre} CMOS chips from TowerJazz. When a charged particle passes through the silicon in the active volume, it liberates the charge carriers in the material, which then collect on electrodes connected to the silicon, telling the detector that a particle has been detected. The fine segmentation of the detectors also allows the detector to determine the point at which the particle hit the detector, up to a resolution of \SI{4}{\micro\metre} in both the $r\varphi$ and $z$ directions~\cite{ITS_Upgrade_TDR}.
+The new ITS consists of 7 layers of pixel detectors; 3 in the ``Inner Barrel'' and 4 in the ``Outer Barrel''. The innermost layer sits at a radius of only \SI{22.4}{\milli\metre} from the IP thanks to a reduction in beam pipe radius for Run 3 and the outermost layer sits at a radius of \SI{391.8}{\milli\metre} from the IP. \Cref{fig:ITS_Schematic} shows the layout more clearly. 
 
-The innermost layer sits at a radius of only \SI{22.4}{\milli\metre} from the IP thanks to a reduction in beam pipe radius for Run 3 and the outermost layer sits at a radius of \SI{391.8}{\milli\metre} from the IP. \Cref{fig:ITS_Schematic} shows the layout more clearly. 
+The pixel detectors used are \SI{0.18}{\micro\metre} CMOS chips from TowerJazz. When a charged particle passes through the silicon in the active volume, it liberates the charge carriers in the material, which then collect on electrodes connected to the silicon, telling the detector that a particle has been detected. The fine segmentation of the detectors also allows the detector to determine the point at which the particle hit the detector, up to a resolution of \SI{4}{\micro\metre} in both the $r\varphi$ and $z$ directions~\cite{ITS_Upgrade_TDR}. The amount of charge deposited on the detector is dependent on the particle species and momentum (Bethe-Bloch). 
+
+Two main methods of readout were considered for the ITS in the new continuous readout scheme. Firstly, a rolling shutter which continually loops through the rows of pixels and reads out the charge deposited on that pixel in the time since the last readout was considered. The time between readings, known as the integration time, for the first method is around \SI{30}{\micro\second}. The rolling shutter scheme lends itself to needing a small number of transistors within each pixel. The second scheme is known as ALPIDE, where each pixel has a comparator that signals when the pixel has an analogue signal greater than the comparator's threshold. The signalled pixels then get read out asynchronously, according to their priority in the chain. This scheme has an effective integration time of around \SI{4}{\micro\second} but has a larger material budget. 
+
+\textbf{\textit{FIND OUT WHICH ONE WAS USED SMH}}
+
+
+
 
 \subsection{The Muon Spectrometer}
 The MCH sits in the forward region of ALICE, as seen in \cref{fig:ALICE_Schematic}, and covers $-4<\eta<-2.5$. It is designed to study heavy quark resonances through their single- and di-muon decay channels.

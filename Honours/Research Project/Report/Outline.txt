@@ -1,0 +1,25 @@
+Intro
+- Introduces ALICE Run 3 & ITS, MFT, O2
+- Outline intent of project: learning how to use O2 and how data goes from detector to analysis
+
+Theory/Background
+- Coordinates fine
+- More about ALICE and what the report is relevant to
+- Bigger ITS, MFT, O2 sections about the path of data from detector to AOD
+    - Reconstruction passes
+
+Analysing
+- How to use O2
+    - Writing tasks
+    - Compiling
+- The intent of the analysis
+- Details of the analysis
+- Why comparison isn't possible (sigh)
+
+Results
+- Plots (pretty)
+- Explanations
+- ITS
+- Comparison of pass3 and pass4 MFT
+
+Conclusion?
