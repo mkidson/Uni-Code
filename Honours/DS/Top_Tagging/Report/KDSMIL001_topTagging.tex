@@ -199,6 +199,8 @@ We were able to train a neural net to perform top-tagging on simulated hadronic 
 
 Looking at quantities calculated from the confusion matrix we found that the neural net is naturally more suited to producing a pure background sample than a pure signal sample. This would be useful if we wanted to make sure no signal events were accidentally labelled as background but we didn't specifically care about the purity of the signal sample. We also found that the neural net's behaviour switched when looking at jets with a $p_\mathrm{T}$ higher than the midpoint of our data, which would lend itself to a more pure signal sample. 
 
+The hyperparameters of this neural net were not investigated but a tuning of the batch size and number of hidden layers or neurons would likely lead to better overall accuracy and perhaps more consistent performance with respect to the jet $p_\mathrm{T}$. 
+
 \newpage
 \printbibliography
 
