@@ -159,7 +159,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortlocale</bcf:key>
-      <bcf:value>english</bcf:value>
+      <bcf:value>british</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortingtemplatename</bcf:key>
@@ -2345,17 +2345,19 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">top-tagging-data</bcf:citekey>
-    <bcf:citekey order="2">top-tagging-data</bcf:citekey>
-    <bcf:citekey order="3">ATL-PHYS-PUB-2021-028</bcf:citekey>
-    <bcf:citekey order="4">ATL-PHYS-PUB-2017-004</bcf:citekey>
-    <bcf:citekey order="5">keras</bcf:citekey>
-    <bcf:citekey order="6">Confusion_Matrix</bcf:citekey>
+    <bcf:citekey order="2">proj_code</bcf:citekey>
+    <bcf:citekey order="3">top-tagging-data</bcf:citekey>
+    <bcf:citekey order="4">ATL-PHYS-PUB-2021-028</bcf:citekey>
+    <bcf:citekey order="5">ATL-PHYS-PUB-2017-004</bcf:citekey>
+    <bcf:citekey order="6">keras</bcf:citekey>
     <bcf:citekey order="7">Confusion_Matrix</bcf:citekey>
-    <bcf:citekey order="8">top-tagging-data</bcf:citekey>
-    <bcf:citekey order="9">ATL-PHYS-PUB-2021-028</bcf:citekey>
-    <bcf:citekey order="10">ATL-PHYS-PUB-2017-004</bcf:citekey>
-    <bcf:citekey order="11">keras</bcf:citekey>
-    <bcf:citekey order="12">Confusion_Matrix</bcf:citekey>
+    <bcf:citekey order="8">Confusion_Matrix</bcf:citekey>
+    <bcf:citekey order="9">top-tagging-data</bcf:citekey>
+    <bcf:citekey order="10">proj_code</bcf:citekey>
+    <bcf:citekey order="11">ATL-PHYS-PUB-2021-028</bcf:citekey>
+    <bcf:citekey order="12">ATL-PHYS-PUB-2017-004</bcf:citekey>
+    <bcf:citekey order="13">keras</bcf:citekey>
+    <bcf:citekey order="14">Confusion_Matrix</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

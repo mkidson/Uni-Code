@@ -4,9 +4,10 @@
 \usepackage[hyperfigures=true, hidelinks, pdfhighlight=/N]{hyperref}
 \usepackage[separate-uncertainty=true, group-digits=false]{siunitx}
 \usepackage{graphicx,amsmath,physics,tabto,float,amssymb,pgfplots,verbatim,tcolorbox}
-\usepackage{listings,xcolor,caption,import,wrapfig,subcaption,biblatex,multirow,booktabs}
+\usepackage{listings,xcolor,caption,import,wrapfig,subcaption,multirow,booktabs,biblatex}
 \usepackage[version=4]{mhchem}
 \usepackage[noabbrev]{cleveref}
+\usepackage[british]{babel}
 \newcommand{\creflastconjunction}{, and\nobreakspace}
 \newcommand{\mb}[1]{\mathbf{#1}}
 \numberwithin{equation}{section}
@@ -33,7 +34,7 @@
 \begin{center}
     {\huge Training a neural net to identify top quark jets}\\
     \vspace{0.2in}
-    \textbf{KDSMIL001 | September 2022}    
+    \textbf{KDSMIL001 | October 2022}    
     
     \begin{abstract}
         We train a neural net to identify jets as originating from top quarks as opposed to other quarks; a process known as top tagging. High-level variables describing the jets are used as opposed to constituent data as constituent requires considerably more computing power. The model's performance is then assessed according to some commonly used statistics and investigated for different $p_\mathrm{T}$ cuts.
@@ -43,7 +44,9 @@
 \section{Introduction}\label{sec:Introduction}
 In proton-proton collisions at the Large Hadron Collider (LHC) at CERN, top quarks (along with their anti-particle counterpart) are produced about once every few seconds. Due to their proportionally large mass ($\sim\SI{173}{\giga\electronvolt}$) their decay time is too short for them to be observed directly, so the next best way to determine if a top quark was produced is to look at the hadronic jets produced by the interaction and determine if they were a result of a top quark or some other, less interesting quark. This process is called top-tagging.
 
-One way to perform this classification between signal (top quark jet) and background (any other jet) is to use a neural net. Neural nets are well suited to this task as they are able to handle the large volumes of Monte Carlo truth data that are available to us and can easily be constructed to provide an output from 0 to 1, which we can take to be the neural net's classification of signal (closer to 1) and background (closer to 0). We used data from \url{https://cds.cern.ch/record/2825328}~\cite{top-tagging-data} to train and test a deep neural net in top-tagging using ``high-level'' quantities describing the jets. This report will focus on the creation of that neural net, its performance according to the confusion matrix, and some investigation into where the neural net performs best in relation to the kinematics of the jets being tagged.
+One way to perform this classification between signal (top quark jet) and background (any other jet) is to use a neural net. Neural nets are well suited to this task as they are able to handle the large volumes of Monte Carlo truth data that are available to us and can easily be constructed to provide an output from 0 to 1, which we can take to be the neural net's classification of signal (closer to 1) and background (closer to 0). We used data from \url{https://cds.cern.ch/record/2825328}~\cite{top-tagging-data} to train and test a deep neural net in top-tagging using ``high-level'' quantities describing the jets. This report will focus on the creation of that neural net, its performance according to the confusion matrix, and some investigation into where the neural net performs best in relation to the kinematics of the jets being tagged. 
+
+The code used for this analysis can be found at \cite{proj_code}.
 
 \section{The data}\label{sec:Data}
 The data we used to train and test the neural net comes from the dataset used in \cite{top-tagging-data}. It contains an equal number of background and signal jets. Due to computation power restrictions, we were unable to use their train dataset, so we split the test dataset into $\frac 23$ for training and $\frac 13$ for testing.

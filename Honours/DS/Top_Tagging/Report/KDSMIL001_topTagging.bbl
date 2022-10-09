@@ -125,6 +125,27 @@
       \verb https://keras.io/
       \endverb
     \endentry
+    \entry{proj_code}{software}{}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Repository for the code used in our {DS} tut about top tagging}
+      \field{day}{9}
+      \field{month}{10}
+      \field{title}{{UCT}\_TopTagging\_2022}
+      \field{urlday}{9}
+      \field{urlmonth}{10}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/mkidson/UCT_TopTagging_2022
+      \endverb
+      \verb{url}
+      \verb https://github.com/mkidson/UCT_TopTagging_2022
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
