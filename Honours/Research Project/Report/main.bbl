@@ -10419,6 +10419,26 @@
       \verb https://cds.cern.ch/record/2748310
       \endverb
     \endentry
+    \entry{MCH_TDR}{book}{}
+      \list{location}{1}{%
+        {Geneva}%
+      }
+      \list{publisher}{1}{%
+        {CERN}%
+      }
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeltitlesource}{title}
+      \field{series}{Technical design report. ALICE}
+      \field{title}{{ALICE dimuon forward spectrometer: Technical Design Report}}
+      \field{year}{1999}
+      \verb{urlraw}
+      \verb https://cds.cern.ch/record/401974
+      \endverb
+      \verb{url}
+      \verb https://cds.cern.ch/record/401974
+      \endverb
+    \endentry
     \entry{ALICE_LOI}{report}{}
       \list{institution}{1}{%
         {CERN}%

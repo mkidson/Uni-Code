@@ -67,9 +67,9 @@ Two main methods of readout were considered for the ITS in the new continuous re
 
 
 \subsection{The Muon Spectrometer}
-The MCH sits in the forward region of ALICE, as seen in \cref{fig:ALICE_Schematic}, and covers $-4<\eta<-2.5$. It is designed to study heavy quark resonances through their single- and di-muon decay channels. As is shown in \cref{fig:Muon Spectrometer}, it is composed of a hadronic absorber, 5 tracking chambers, a dipole magnet, and finally the 2 trigger chambers. The MFT is often also considered part of the MCH but is not shown in \cref{fig:Muon Spectrometer}. 
+The MCH sits in the forward region of ALICE, as seen in \cref{fig:ALICE_Schematic}, and covers $-4<\eta<-2.5$. It is designed to study heavy quark resonances through their single- and di-muon decay channels. As is shown in \cref{fig:Muon Spectrometer}, it is composed of a hadronic absorber, 5 tracking chambers, a dipole magnet, another absorber, and finally the 2 trigger chambers. The MFT is often also considered part of the MCH but is not shown in \cref{fig:Muon Spectrometer}. The details of this section come from \cite{MCH_TDR}.
 
-\begin{figure}[H]
+\begin{figure}[ht]
     \begin{center}
         \includegraphics[width=0.8\textwidth]{Figs/MCH_schematic_pog.png}
         \caption{Diagram of the layout of the Muon Spectrometer~\cite{Muon_Spec_Schematic}. Muons pass through the absorber, are deflected by the dipole magnet, and hit the trigger chambers at the back. Importantly, all detector material sits behind the hadronic absorber, meaning the amount of data that can be used for tracking and vertexing is much lower than, say, the ITS.}
@@ -77,12 +77,13 @@ The MCH sits in the forward region of ALICE, as seen in \cref{fig:ALICE_Schemati
     \end{center}
 \end{figure}
 
-Muons don't tend to interact with matter much, especially when compared to hadrons and electrons. This makes studying muons easier, to some degree, since most other particles can be filtered out by making them pass through a large chunk of matter. As is shown in \cref{fig:Muon Spectrometer}, that is exactly what is done in the MCH. In front of any detector material (ignoring the MFT for now) sits the hadronic absorber, made primarily of carbon and concrete. This is intended to filter out all non-muon particles while not reducing the muon energy much so that they can still be studied. 
+Muons don't tend to interact with matter much, especially when compared to hadrons and electrons. This makes studying muons easier, to some degree, since most other particles can be filtered out by making them pass through a large chunk of matter. As is shown in \cref{fig:Muon Spectrometer}, that is exactly what is done in the MCH. In front of any detector material (ignoring the MFT for now) sits the hadronic absorber, made primarily of carbon and concrete. This is intended to filter out all non-muon particles (mainly hadrons and photons) while not reducing the muon energy much so that they can still be studied. 
 
-After the absorber are 5 gas tracking chambers
+After the absorber are 5 sets of 2 cathode pad tracking detectors, situated around a large warm dipole magnet. Particles that make it through the absorber get picked up by the first two sets of detectors, then pass through the magnetic field and are deflected according to their charge, mass, and momentum. The third set tracks the particles during deflection and then the last two detect them after deflection. This set-up is particularly useful for studying di-muon events as the muons produced would be a muon-antimuon pair, which would deflect in opposite directions in the dipole magnet. This would leave a characteristic track signature that can be studied.
 
+After the last tracking detector, particles pass through another absorber, which serves to further filter out muons from background, as well as filter out background muons. The muons produced in heavy quark resonances have considerably higher $\pt$ than those produced by background processes, so the job of the trigger system is to only trigger on muons with high enough $\pt$ to be interesting (this is defined per process) and the second absorber helps reduce the number of background muons incident on the trigger system. The trigger system is made of 2 stations of 2 Resistive Plate Chamber (RPC) detectors. Comparing the measurement of the same particle in the two stations, the $\pt$ can be determined. The decision to keep or reject an event takes about \SI{300}{\nano\second}.
 
-The absorber, made of carbon and concrete, serves to filter out all particles travelling towards the MCH that are not muons as muons interact very rarely with matter. The 5 tracking chambers track the path of the muons before, during, and after they are deflected by the dipole magnet. These tracking chambers used to also perform tracking and vertexing in Run 1 and Run 2, but not with great accuracy as they sit behind the hadronic absorber. In order to remedy this, as well as deal with the increase in luminosity and energy of the LHC in Run 3, the MFT was added. Lastly, the trigger system consists of two large gas chamber detectors which trigger the MCH to take data only when a muon is detected.
+In Run 1 and Run 2, the MCH performed all its own tracking and vertexing on the particles it studied. Particularly for vertexing, where the collision position is estimated, this was not optimal as most of the particles produced in the interactions didn't make it through to sensitive material. With the increased energy and luminosity of Run 3 a better system was needed to perform these tasks, so the MFT was added in front of the first absorber to take over the job.
 
 
 \subsection{The Muon Forward Tracker}
@@ -91,10 +92,14 @@ The MFT is a brand new detector added to ALICE for Run 3. It serves as a trackin
 \begin{figure}[h]
     \begin{center}
         \includegraphics[width=.8\textwidth]{Figs/MFT_schematic.jpg}
-        \caption{Schematic view of the Muon Forward Tracker~\cite{MFT_Schematic}. The small cone on the left shows the IP. Note that the 5 disks each have a front and back plane of pixel detectors, totalling 10 z-positions for the MFT to ``see'' particles at.}
+        \caption{Schematic view of the Muon Forward Tracker~\cite{MFT_Schematic}. The small cone on the left shows the IP. Note that the 5 disks each have a front and back plane of pixel detectors, totalling 10 $z$-positions for the MFT to ``see'' particles at.}
         \label{fig:MFT Schematic}
     \end{center}
 \end{figure}
+
+The MFT is made of two identical half-cones sandwiching the beam pipe from above and below, each with 5 half-disks positioned at different distances from the IP along the $z$-axis. Each half-disk has a front and back detection plane totalling 10 detection planes. As the disks get further from the IP their radius gets larger in order to cover the same $\eta$ range, aside from the second disk, which is identical to the first. 
+
+The half-disks are made from ladders of 2 to 5 rectangular pixel detector elements
 
 
 The MFT is made up of 5 disks, each made of 2 half-disks. Each half disk has two planes of detectors, one on the front and one on the back. The disks sit at $z$-positions -46.0, -49.3, -53.1, -68.7, and -76.8 \si{\centi\metre} respectively and each disk is \SI{1.4}{\centi\metre} thick, leading to detector planes at $\pm \SI{0.7}{\centi\metre}$ from each of those positions. The MFT Technical Design Report \cite{MFT_TDR} gives more details on the construction and implementation of the MFT.
