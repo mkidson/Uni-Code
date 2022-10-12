@@ -67,7 +67,7 @@ Two main methods of readout were considered for the ITS in the new continuous re
 
 
 \subsection{The Muon Spectrometer}
-The MCH sits in the forward region of ALICE, as seen in \cref{fig:ALICE_Schematic}, and covers $-4<\eta<-2.5$. It is designed to study heavy quark resonances through their single- and di-muon decay channels. As is shown in \cref{fig:Muon Spectrometer}, it is composed of a hadronic absorber, 5 tracking chambers, a dipole magnet, another absorber, and finally the 2 trigger chambers. The MFT is often also considered part of the MCH but is not shown in \cref{fig:Muon Spectrometer}. The details of this section come from \cite{MCH_TDR}.
+The MCH sits in the forward region of ALICE, as seen in \cref{fig:ALICE_Schematic}, and covers $-4<\eta<-2.5$. It is designed to study heavy quark resonances through their single- and di-muon decay channels. As is shown in \cref{fig:Muon Spectrometer}, it is composed of a hadronic absorber, 5 tracking chambers, a dipole magnet, another absorber, and finally the 2 trigger chambers. The MFT is often also considered part of the MCH but is not shown in \cref{fig:Muon Spectrometer}. The section is adapted from the MCH Technical Design Report~\cite{MCH_TDR}.
 
 \begin{figure}[ht]
     \begin{center}
@@ -87,7 +87,7 @@ In Run 1 and Run 2, the MCH performed all its own tracking and vertexing on the 
 
 
 \subsection{The Muon Forward Tracker}
-The MFT is a brand new detector added to ALICE for Run 3. It serves as a tracking detector for the MCH and covers the range $-3.6<\eta<-2.45$. The MFT was made in conjunction with the ITS and uses precisely the same CMOS pixel sensors but in a conical configuration surrounding the beam pipe to better suit the geometry of the problem. Due to the MFT being placed in front of the absorber, it detects a lot more particles than make it through to the MCH, allowing it to be much better at finding the primary vertex of collisions.
+The MFT is a brand new detector added to ALICE for Run 3 to assist the MCH with tracking and vertexing. It covers the range $-3.6<\eta<-2.45$ and was designed in conjunction with the ITS, using precisely the same CMOS pixel detectors. Due to the MFT being placed in front of the absorber, it detects a lot more particles than make it through to the MCH, allowing it to be much better at finding the primary vertex of collisions. \Cref{fig:MFT Schematic} shows the design of the MFT. The rest of this section is adapted from the MFT Technical Design Report~\cite{MFT_TDR}. 
 
 \begin{figure}[h]
     \begin{center}
@@ -97,12 +97,18 @@ The MFT is a brand new detector added to ALICE for Run 3. It serves as a trackin
     \end{center}
 \end{figure}
 
-The MFT is made of two identical half-cones sandwiching the beam pipe from above and below, each with 5 half-disks positioned at different distances from the IP along the $z$-axis. Each half-disk has a front and back detection plane totalling 10 detection planes. As the disks get further from the IP their radius gets larger in order to cover the same $\eta$ range, aside from the second disk, which is identical to the first. 
+The MFT is made of two identical half-cones sandwiching the beam pipe from above and below, each with 5 half-disks positioned at different distances from the IP along the $z$-axis. Each half-disk has a front and back detection plane totalling 10 detection planes. As the disks get further from the IP their radius increases in order to cover the same $\eta$ range, aside from the second disk, which is identical to the first. The disks sit at $z$-positions -46.0, -49.3, -53.1, -68.7, and -76.8 \si{\centi\metre} respectively and each disk is \SI{1.4}{\centi\metre} thick, leading to detector planes at $\pm \SI{0.7}{\centi\metre}$ from each of those positions.
 
-The half-disks are made from ladders of 2 to 5 rectangular pixel detector elements
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[width=.8\textwidth]{Figs/MFT_Disk4_mapping.png}
+        \caption{The layout of pixel detector elements on the front and back plane of one of the half-disks of disk 4 in the MFT. Note that the front and back plane have layouts offset to each other by half the width of the pixel elements. \textbf{\textit{SOMETHING WEIRD ABOUT THIS PLOT. I THINK X AND Y ARE WRONG}} \cite[fig.~6.1]{MFT_TDR}}
+        \label{fig:MFT_Disk4_mapping}
+    \end{center}
+\end{figure}
 
+The half-disks are made from ladders of 2 to 5 rectangular pixel detector elements. \Cref{fig:MFT_Disk4_mapping} shows an example of the layout of the front and back planes of detector elements in both $x$-$y$ and $\eta$-$\varphi$. 
 
-The MFT is made up of 5 disks, each made of 2 half-disks. Each half disk has two planes of detectors, one on the front and one on the back. The disks sit at $z$-positions -46.0, -49.3, -53.1, -68.7, and -76.8 \si{\centi\metre} respectively and each disk is \SI{1.4}{\centi\metre} thick, leading to detector planes at $\pm \SI{0.7}{\centi\metre}$ from each of those positions. The MFT Technical Design Report \cite{MFT_TDR} gives more details on the construction and implementation of the MFT.
 
 
 

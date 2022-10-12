@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  10 OCT 2022 13:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  12 OCT 2022 15:07
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1209,7 +1209,7 @@ File: Figs/MCH_schematic_pog.png Graphic file (type png)
 Package pdftex.def Info: Figs/MCH_schematic_pog.png  used on input line 74.
 (pdftex.def)             Requested size: 375.80544pt x 195.45592pt.
  [6 <./Figs/ITS_Schematic.png>]
-<Figs/MFT_schematic.jpg, id=184, 3975.60281pt x 2852.40656pt>
+<Figs/MFT_schematic.jpg, id=186, 3975.60281pt x 2852.40656pt>
 File: Figs/MFT_schematic.jpg Graphic file (type jpg)
 <use Figs/MFT_schematic.jpg>
 Package pdftex.def Info: Figs/MFT_schematic.jpg  used on input line 94.
@@ -1219,28 +1219,37 @@ Package pdftex.def Info: Figs/MFT_schematic.jpg  used on input line 94.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [7 <./Figs/MCH_schematic_pog.png>]
-<Figs/O2_flow.png, id=197, 526.21594pt x 584.93532pt>
-File: Figs/O2_flow.png Graphic file (type png)
-<use Figs/O2_flow.png>
-Package pdftex.def Info: Figs/O2_flow.png  used on input line 112.
-(pdftex.def)             Requested size: 281.85587pt x 313.31664pt.
+<Figs/MFT_Disk4_mapping.png, id=198, 1343.0175pt x 919.435pt>
+File: Figs/MFT_Disk4_mapping.png Graphic file (type png)
+<use Figs/MFT_Disk4_mapping.png>
+Package pdftex.def Info: Figs/MFT_Disk4_mapping.png  used on input line 104.
+(pdftex.def)             Requested size: 375.80544pt x 257.27168pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./Sections/2AnalysisTask.tex [8 <./Figs/MFT_schematic.jpg>] [9 <./Figs/O2_flow.png>]
+<Figs/O2_flow.png, id=203, 526.21594pt x 584.93532pt>
+File: Figs/O2_flow.png Graphic file (type png)
+<use Figs/O2_flow.png>
+Package pdftex.def Info: Figs/O2_flow.png  used on input line 122.
+(pdftex.def)             Requested size: 281.85587pt x 313.31664pt.
+[8 <./Figs/MFT_schematic.jpg>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./Sections/2AnalysisTask.tex [9 <./Figs/MFT_Disk4_mapping.png>]
 \openout6 = `main.pyg'.
 
  (./_minted-main/vs.pygstyle) (./_minted-main/46B3FEC89EC6D6F78BE0212C5E262417DA69F1F5C42981512A6369A550F495B5.pygtex)
 \openout5 = `main.pyg'.
 
- (./_minted-main/5ADE1CDFFA9E1ACE0915117AF32FB366DA69F1F5C42981512A6369A550F495B5.pygtex) [10]
+ [10 <./Figs/O2_flow.png>] (./_minted-main/5ADE1CDFFA9E1ACE0915117AF32FB366DA69F1F5C42981512A6369A550F495B5.pygtex) [11]
 \openout5 = `main.pyg'.
 
- (./_minted-main/50D2C9400E3EDBDB8FF7461F7B963C1BE48FAF1886BFF81AE3111843E944B2C0.pygtex) [11]) [12] [13] (./Sections/ZZAppendix.tex
+ (./_minted-main/50D2C9400E3EDBDB8FF7461F7B963C1BE48FAF1886BFF81AE3111843E944B2C0.pygtex) [12]) [13] [14] (./Sections/ZZAppendix.tex
 \openout5 = `main.pyg'.
 
- (./_minted-main/8EFC202BC9607829907687EC3AFA3D7082CA0C42AFE0759A4F1491A6B69BC02A.pygtex)) [14] (./main.aux)
+ (./_minted-main/8EFC202BC9607829907687EC3AFA3D7082CA0C42AFE0759A4F1491A6B69BC02A.pygtex)) [15] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: DEED251EACD716E4E27F84E47ADEB09A;2309.
 runsystem(rm main.pyg)...executed.
@@ -1250,18 +1259,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52688 strings out of 478287
- 1211347 string characters out of 5849289
- 2353755 words of memory out of 5000000
- 70089 multiletter control sequences out of 15000+600000
- 481743 words of font info for 74 fonts, out of 8000000 for 9000
+ 52705 strings out of 478287
+ 1211706 string characters out of 5849289
+ 2356189 words of memory out of 5000000
+ 70103 multiletter control sequences out of 15000+600000
+ 483156 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,11n,103p,1130b,1582s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,11n,103p,1130b,1721s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on main.pdf (14 pages, 8309589 bytes).
+Output written on main.pdf (15 pages, 8536368 bytes).
 PDF statistics:
- 371 PDF objects out of 1000 (max. 8388607)
- 295 compressed objects within 3 object streams
- 55 named destinations out of 1000 (max. 500000)
- 160 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 383 PDF objects out of 1000 (max. 8388607)
+ 302 compressed objects within 4 object streams
+ 57 named destinations out of 1000 (max. 500000)
+ 165 words of extra memory for PDF output out of 10000 (max. 10000000)
 
