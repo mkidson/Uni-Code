@@ -30,9 +30,22 @@
 
 
 \section{Introduction}\label{sec:Introduction}
-There are many sources of photon radiation naturally present in the world. Gamma radiation
+There are many sources of photon radiation naturally present in the world. Gamma-rays (roughly between \SI{0.001}{\mega\electronvolt} and \SI{10}{\mega\electronvolt}) are the highest energy and thus most dangerous form of photon radiation. For this reason, understanding where gamma-rays come from and how they interact with matter is of great importance. 
 
-\section{Detector Theory}\label{sec:Theory}
+\section{Theory}\label{sec:Theory}
+
+\subsection{Gamma-rays}\label{sec:GammaTheory}
+One of the main sources of gamma-rays is from the de-excitation of nuclei. Similar to how electrons surrounding the nucleus can be excited and then emit a photon (usually an X-ray) when they de-excite, the nuclei of atoms can be excited and when they drop down to a lower energy, they emit a photon. Due to the greater mass of nuclei compared to electrons, their possible states have a much larger energy gap and thus the energy of the emitted photons is far greater. These energy levels are also very well defined, so for a given nucleus, we might expect to see gamma-rays at specific energies. 
+
+Unlike electrons, nuclei don't often get excited simply by an incoming photon simply because the likelihood of a gamma-ray of the right energy being in the right place is so low. For this reason, the vast majority of gamma-rays that we see come either from nuclear decays or nuclear reactions. When a radionuclide decays, it has a chance to decay to a daughter nucleus that is not in its ground state. The daughter nucleus can then de-excite by emission of a gamma-ray. The half-life of this de-excitation is usually on the order of picoseconds while the common radionuclides that we see in the lab have half-lives on the order of at least a few months. We can then quite confidently correlate gamma-ray emission (and thus detection) with a decay. 
+
+\subsection{Detector theory}\label{sec:DetectorTheory}
+The detector used in this experiment is a NaI (Sodium Iodide) crystal scintillation detector. These detectors are designed to detect photons and work by the following principles. When a photon passes through the detector material it has 3 ways of departing its energy onto the detector. It can either be completely absorbed by an atom through photoelectric absorption (resulting in an energetic photoelectron that gets ejected from the atom), Compton scatter off an electron in the material (and send the electron flying), or pair produce an electron-positron pair. These processes all result in an electron (or positron) travelling freely through the detector material that excites other electrons in the crystal lattice. These electrons de-excite by emission of a visible light photon that is directed to the cathode of a high voltage photomultiplier tube, which turns the signal into a voltage pulse that is proportional to the energy of the initial photon.
+
+The 3 processes which result in the free electrons have different relative cross-sections at different energies. The photoelectric effect is most dominant at low energies, dropping off as energy increases; pair production can only start at an energy of \SI{1.02}{\mega\electronvolt}, as it needs to produce an electron and positron, and only gets more dominant from that point; and Compton scattering takes over between the two. This is relevant as the 3 processes have distinct signatures when looking at the gamma-ray spectrum of some radionuclide. The photoelectric effect is effectively lossless, with all the photon's energy being transferred to the electron and thus onto the detector. Compton scattering, however, is limited by the kinematics of the situation meaning it can only ever deposit a fraction of the photon energy in one interaction. This leads to a so-called Compton continuum that begins at very low energies and stops at the Compton edge, the energy of which is related to the original photon energy by 
+\begin{equation}
+    E_\mathrm{Compton}=\frac{2E_\gamma^2}{m_e c^2 + 2E_\gamma}
+\end{equation}
 
 \section{Calibration}\label{sec:Calibration}
 
