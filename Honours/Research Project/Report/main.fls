@@ -1523,7 +1523,6 @@ INPUT ./Figs/MFT_Disk4_mapping.png
 INPUT Figs/MFT_Disk4_mapping.png
 INPUT ./Figs/MFT_Disk4_mapping.png
 INPUT ./Figs/MFT_Disk4_mapping.png
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT ./Figs/O2_flow.png
 INPUT ./Figs/O2_flow.png
