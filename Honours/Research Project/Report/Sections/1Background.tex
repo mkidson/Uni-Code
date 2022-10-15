@@ -109,13 +109,17 @@ The MFT is made of two identical half-cones sandwiching the beam pipe from above
 
 The half-disks are made from ladders of 2 to 5 rectangular pixel detector elements. \Cref{fig:MFT_Disk4_mapping} shows an example of the layout of the front and back planes of detector elements in both $x$-$y$ and $\eta$-$\varphi$. 
 
+The MFT performs standalone track reconstruction in two steps. Track finding filters through clusters (hits in a certain layer) to group into track candidates and then track fitting to fit tracks to those clusters and determine kinematics and covariance matrices. A Kalman filter~\cite{Kalman} is used for the track fitting but while it could also be used for the track finding, a more advanced algorithm is used to increase efficiency and reduce computation time. 
 
+There are two algorithms used in conjunction to group clusters into track candidates. The first, called the Linear Track Finder (LTF) Algorithm, assumes that in the $\eta$ region that the MFT occupies the solenoid magnet surrounding the central barrel has a reduced bending effect on tracks, leading to effectively straight tracks. A "seeding line" is determined from clusters in the first and last disk, often with the help of the position of the primary vertex, and the algorithm simply minimises the distance of clusters to that line. There is a single parameter for this algorithm which is the radius around a cluster to allow a seeding line to be considered. While the LTF method is very computationally inexpensive, its straight line assumption breaks down at low momenta, so the Cellular Automaton (CA) algorithm is implemented to pick up the pieces.
+
+The CA algorithm works by pairing clusters in neighbouring disks into "cells" and then iterating through cells and determining, based on a number of parameters such as maximum deviation angle and maximum $\theta$ angle of a cell according to the collision vertex, whether neighbouring cells are "compatible" and grouping those cells together as candidates for a track. This algorithm depends on having a determined position of the collision vertex to both create cells and to match cells together as in both cases they need to point towards the vertex within some pre-defined limit. This vertex position can be supplied by external means, such as the ITS, or it can be estimated using cells between the first two disks. The algorithm also has a default minimum track length in terms of number of disks involved in the process, which is set at 4 out of 5 disks. 
+
+Due to the number of cluster combinations that the CA algorithm needs to consider compared to LTF, it ends up being considerably more computationally expensive to run. Since both methods have their advantages, particularly with CA picking up the slack in the low momentum (and specifically low $\pt$) regions, both methods are implemented. LTF goes first, finding as many high $\pt$ tracks as it can, and then CA runs on the clusters that the LTF did not find tracks for. This reduces the overall computation time and take advantage of both algorithms as much as possible. 
 
 
 \subsection{The Online-Offline Analysis Framework}
-With the increased interaction rate expected for Run 3, a new system for real-time processing, as well as offline analysis, needed to be constructed \cite{ALICE_Upgrade_LOI}. The Online-Offline (O2) framework was developed for this purpose. The ``Online'' portion of the framework is the real-time processing, where continuously captured data from ALICE is split into \SI{10}{\milli\second} chunks, called timeframes. These timeframes are then later processed, or ``reconstructed'' into Event Summary Data (ESD) and then Analysis Object Data (AOD) files---this is the ``Offline'' part---which contain only the data of interest. Different passes of reconstruction can be done for purposes and are often iterated upon if something was missed in a previous pass. Because of this, the same data can often look different between reconstruction passes. The AOD files can then be analysed---also Offline---through an ``Analysis Task'', written in C\OldTexttt{++} and ROOT. 
-
-We distinguish between data taken in Run 3 and data taken in Run 1 and 2 by calling Run 3 AOD's ``AO2D'' files, and Run 1 and 2 just ``AOD'' files. The data is stored on the \OldTexttt{alimonitor} system, requiring a certificate to access, which is obtained by joining the ALICE collaboration. Access to all data and most analysis tools used in this report is restricted behind this wall. 
+With the increased interaction rate expected for Run 3, a new system for real-time processing, as well as offline analysis, needed to be constructed~\cite{ALICE_Upgrade_LOI}. The Online-Offline (O2) framework was developed for this purpose. This section is mostly adapted from the O2 Upgrade TDR~\cite{O2_Upgrade_TDR} as well as the O2 documentation at \url{https://aliceo2group.github.io/analysis-framework/}.
 
 \begin{figure}[h]
     \begin{center}
@@ -125,5 +129,18 @@ We distinguish between data taken in Run 3 and data taken in Run 1 and 2 by call
     \end{center}
 \end{figure}
 
-The focus of the upgraded analysis framework was to reduce disk space usage when processing and analysing, as well as making sure all analysis takes advantage of all processing power available to it at all times. \Cref{fig:O2_flow} shows the general flow of data in the O2 processing pipeline from particle hits in detectors until usable data in the form of AOD files. 
+\subsection{Online Analysis}
+The ``Online'' portion of the framework is the part that does all the synchronous processing, i.e. as the raw data is continuously read out from the detectors. The data is first stored in ``sub-time frames'' (STFs), which get processed to generate clusters in order to reduce the volume of data, and then gets built into ``time frames'' (TFs) of \SI{10}{\milli\second} chunks of data. From there the data gets its first pass of detector reconstruction, e.g. track finding, and then gets compressed into ``compressed time frames'' (CTFs). The CTFs are stored on disk and that is where the Online portion ends. Note that at each step, QC and calibration data is extracted and stored for later use.
 
+\subsection{Offline Analysis}
+With the CTFs stored to disk, they can then by processed asynchronously into Event Summary Data (ESD) and then Analysis Object Data (AOD) files. ESDs are not used for analysis and are stored for a while before being deleted. AODs (real and simulated) and CTFs are the only persistent data type. 
+
+The process of turning CTFs into AODs is called ``reconstruction'' and is often performed multiple times on the same data. Iterations of reconstruction are called reconstruction passes and these passes will usually be done many times if the previous passes missed something in their reconstruction, or perhaps if a certain table was not populated in the reconstruction but someone needs that table for their analysis. As a result of this, two different passes on the same data can end up with very different-looking results. 
+
+We distinguish between data taken in Run 3 and data taken in Run 1 and 2 by calling Run 3 AOD's ``AO2D'' files, and Run 1 and 2 just ``AOD'' files. The data is stored on the \OldTexttt{alimonitor} system, requiring a certificate to access, which is obtained by joining the ALICE collaboration. Access to all data and most analysis tools used in this report is restricted behind this wall. AODs can then be analysed using an ``Analysis Task'', which is written in C\OldTexttt{++} and ROOT. 
+
+
+
+
+
+The focus of the upgraded analysis framework was to reduce disk space usage when processing and analysing, as well as making sure all analysis takes advantage of all processing power available to it at all times.

@@ -5,10 +5,15 @@
 \contentsline {subsection}{\numberline {2.3}The Inner Tracking System}{5}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}The Muon Spectrometer}{6}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}The Muon Forward Tracker}{7}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}The Online-Offline Analysis Framework}{8}{subsection.2.6}%
-\contentsline {section}{\numberline {3}Writing an Analysis Task}{9}{section.3}%
-\contentsline {subsection}{\numberline {3.1}AOD Structure}{9}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Analysis Task Structure}{11}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Compiling O2}{12}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Running a Task with O2}{12}{subsection.3.4}%
-\contentsline {section}{\numberline {A}Downloading data from the GRID}{15}{appendix.A}%
+\contentsline {subsection}{\numberline {2.6}The Online-Offline Analysis Framework}{9}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Online Analysis}{10}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Offline Analysis}{10}{subsection.2.8}%
+\contentsline {section}{\numberline {3}Writing an Analysis Task}{11}{section.3}%
+\contentsline {subsection}{\numberline {3.1}AOD Structure}{11}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Analysis Task Structure}{12}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Table Features}{12}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Histogram Registry}{13}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Folder Structure}{13}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Compiling O2Physics}{14}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Running a Task with O2}{15}{subsection.3.7}%
+\contentsline {section}{\numberline {A}Downloading data from the GRID}{17}{appendix.A}%

@@ -1,0 +1,26 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZdq{}Framework/runDataProcessing.h\PYGZdq{}}
+\PYG{c+cp}{\PYGZsh{}include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZdq{}Framework/AnalysisTask.h\PYGZdq{}}
+
+\PYG{k}{using}\PYG{+w}{ }\PYG{k}{namespace}\PYG{+w}{ }\PYG{n+nn}{o2}\PYG{p}{;}
+
+\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{MyTask}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{c+c1}{// Define things here, such as histogram registries, filters for data, or new tables}
+
+\PYG{+w}{  }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{init}\PYG{p}{(}\PYG{n}{o2}\PYG{o}{::}\PYG{n}{framework}\PYG{o}{::}\PYG{n}{InitContext}\PYG{o}{\PYGZam{}}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// Here we initialise histograms and other things used in the analysis}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{};}
+\PYG{+w}{  }\PYG{c+c1}{// The arguments of the process function are where we subscribe to specific tables in the AOD that we\PYGZsq{}re analysing.}
+\PYG{+w}{  }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{process}\PYG{p}{(}\PYG{n}{aod}\PYG{o}{::}\PYG{n}{Collision}\PYG{+w}{ }\PYG{k}{const}\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{collision}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{aod}\PYG{o}{::}\PYG{n}{Tracks}\PYG{+w}{ }\PYG{k}{const}\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{tracks}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// Here we can do any processing that we need, calculating things etc, and then fill the histograms we defined earlier}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{};}
+\PYG{p}{\PYGZcb{};}
+
+\PYG{c+c1}{// This is what O2 looks at to run the task}
+\PYG{n}{WorkflowSpec}\PYG{+w}{ }\PYG{n+nf}{defineDataProcessing}\PYG{p}{(}\PYG{n}{ConfigContext}\PYG{+w}{ }\PYG{k}{const}\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{cfgc}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{WorkflowSpec}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{adaptAnalysisTask}\PYG{o}{\PYGZlt{}}\PYG{n}{MyTask}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{cfgc}\PYG{p}{),}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{};}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

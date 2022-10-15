@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{HistogramRegistry}\PYG{+w}{ }\PYG{n}{myRegistry}\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{c+c1}{// This name and the name in the next line need to be the same}
+\PYG{+w}{  }\PYG{l+s}{\PYGZdq{}myRegistry\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{  }\PYG{p}{\PYGZob{}\PYGZcb{},}\PYG{+w}{   }\PYG{c+c1}{// Histograms could be defined here but we will do it in init()}
+\PYG{+w}{  }\PYG{n}{OutputObjHandlingPolicy}\PYG{o}{::}\PYG{n}{AnalysisObject}\PYG{p}{,}\PYG{+w}{  }\PYG{c+c1}{// Tells the task which format to output in}
+\PYG{+w}{  }\PYG{n+nb}{true}\PYG{p}{,}\PYG{+w}{   }\PYG{c+c1}{// Sorts the output histograms alphabetically}
+\PYG{+w}{  }\PYG{n+nb}{false}\PYG{+w}{   }\PYG{c+c1}{// Won\PYGZsq{}t create a subdirectory for this registry. Set to true if more than one registry is being used}
+\PYG{p}{\PYGZcb{};}
+
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{init}\PYG{p}{(}\PYG{n}{o2}\PYG{o}{::}\PYG{n}{framework}\PYG{o}{::}\PYG{n}{InitContext}\PYG{o}{\PYGZam{}}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{n}{AxisSpec}\PYG{+w}{ }\PYG{n}{etaAxis}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{n}{nBins}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{binMin}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{binMax}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{title}\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{c+c1}{// title is what gets printed on the axis}
+
+\PYG{+w}{  }\PYG{n}{myRegistry}\PYG{p}{.}\PYG{n}{add}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}myHist\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}myHist\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{kTH1F}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{n}{etaAxis}\PYG{p}{\PYGZcb{})}\PYG{+w}{  }\PYG{c+c1}{// Initialises the histogram. First argument is the name of the histogram, to use internally, and second gets printed as the title}
+\PYG{p}{\PYGZcb{};}
+
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{process}\PYG{p}{(}\PYG{n}{aod}\PYG{o}{::}\PYG{n}{Tracks}\PYG{+w}{ }\PYG{k}{const}\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{tracks}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k}{auto}\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{track}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n}{tracks}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{registry}\PYG{p}{.}\PYG{n}{fill}\PYG{p}{(}\PYG{n}{HIST}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}myHist\PYGZdq{}}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{track}\PYG{p}{.}\PYG{n}{eta}\PYG{p}{());}\PYG{+w}{   }\PYG{c+c1}{// Fills the histogram with eta from all tracks}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{};}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

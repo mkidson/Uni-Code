@@ -10536,6 +10536,30 @@
       \verb https://alice-collaboration.web.cern.ch/menu_proj_items/its
       \endverb
     \endentry
+    \entry{Kalman}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=8f999e2ff0e4fbffc192cf659be520b8}{%
+           family={Kálmán},
+           familyi={K\bibinitperiod},
+           given={Rudolf\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f999e2ff0e4fbffc192cf659be520b8}
+      \strng{fullhash}{8f999e2ff0e4fbffc192cf659be520b8}
+      \strng{bibnamehash}{8f999e2ff0e4fbffc192cf659be520b8}
+      \strng{authorbibnamehash}{8f999e2ff0e4fbffc192cf659be520b8}
+      \strng{authornamehash}{8f999e2ff0e4fbffc192cf659be520b8}
+      \strng{authorfullhash}{8f999e2ff0e4fbffc192cf659be520b8}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A new approach to linear filtering and prediction problems" transaction of the asme~journal of basic}
+      \field{year}{1960}
+      \verb{doi}
+      \verb doi:10.1115/1.3662552
+      \endverb
+    \endentry
     \entry{kar_exp_phys}{book}{}
       \name{author}{1}{}{%
         {{hash=590fb7b20ed4af197776f31fde6294e0}{%
