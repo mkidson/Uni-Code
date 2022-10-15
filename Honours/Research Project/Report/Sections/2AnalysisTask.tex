@@ -1,19 +1,19 @@
-One of the main goals of O2 is to take away as much responsibility from the user as possible when it comes to managing memory, writing efficient code, and usage of disk space. To this end, writing an analysis task in O2 is structured quite strictly. This section will outline the information needed when trying to analyse reconstructed to to produce, in our case, histograms of kinematic variables. 
+One of the main goals of O2 is to take away as much responsibility from the user as possible when it comes to managing memory, writing efficient code, and disk space usage. To this end, writing an analysis task in O2 is structured quite strictly. This section will outline the information needed when trying to analyse reconstructed data to produce, in our case, histograms of kinematic variables. 
 
 It must be noted that learning how to do this, and how to deal with the idiosyncrasies of the O2 software, is what took up the majority of the time spent on this project. O2 is written to do one thing very, very well, but unfortunately that comes with the side-effect of it being extremely picky about the conditions in which the software will actually work. Lastly, a distinction needs to be made between O2 and O2Physics. O2 generally refers to the entire analysis framework, including both the online and offline parts. This encompasses O2Physics, which is used only for offline analysis. Despite this, in terms of the structure of the software, O2 and O2Physics are separate things but O2Physics sometimes depends on O2. For this reason it can become ambiguous when discussing O2 and O2Physics but we will try our best to keep them distinct. 
 
 \subsection{AOD Structure}\label{sec:AODStructure}
-The data that we use in our analysis comes in the form of Analysis Object Data. These get produced asynchronously and come in the form of ROOT files containing ``Dataframes''. These are organised in a tree structure where each tree contains a number of tables, for example a table containing collisions and a table containing tracks. The tables have columns which hold variables corresponding for each entry, or row, in the table. There are 4 types of column:
+The data that we use in our analysis comes in the form of Analysis Object Data. These get produced asynchronously and come in the form of ROOT files containing ``Dataframes''. These are organised in a tree structure where each tree contains a number of tables, for example a table containing collisions and a table containing tracks. The tables have columns which hold variables corresponding to each entry, or row, in the table. There are 4 types of column:
 
 \begin{itemize}
     \item Static columns are saved to disk during the reconstruction process and are available at any time. The $z$-position of a collision vertex, for example, is a static variable.
-    \item Dynamic columns are defined as functions with inputs from static variables (or variables input by the user). They will produce a result on demand instead of calculating for the entire column in order to save memory and disk space. Momentum in the $x$ direction is a dynamic variable.
+    \item Dynamic columns are defined as functions with inputs from static variables (or variables input by the user). They will produce a result on demand in order to save memory and disk space. Momentum in the $x$-direction is a dynamic variable.
     \item Index columns point from one table to another, such as from a track to its associated collision. They can also refer to their own table, such as for an MC particle to refer to its mother or daughter particle after decay.
-    \item Expression columns are similar to dynamic columns in that they get calculated on demand, but they get evaluated for the entire table and produce a column that can then be accessed as if it were a static column. Importantly, dynamic columns cannot be used as inputs to expression columns.
+    \item Expression columns are similar to dynamic columns in that they get calculated on demand, but they get evaluated on all entries in a table upon requesting it and produce a column that can then be accessed as if it were a static column. Importantly, dynamic columns cannot be used as inputs to expression columns.
 \end{itemize}
 
 \subsection{Analysis Task Structure}\label{sec:TaskStructure}
-Analysis tasks are written in C\OldTexttt{++} and need to be structured in a specific way for O2Physics to use them properly. Each task is written as a \texttt{struct} object which is then called at the end of the task. Below is an outline of what is needed for a task.
+Analysis tasks are written in C\OldTexttt{++} and need to be structured in a specific way so that O2Physics to use them properly. Each task is written as a \texttt{struct} object which is then called at the end of the task. Below is an outline of what is needed for a task.
 
 \begin{minted}{c++}
 #include "Framework/runDataProcessing.h"
@@ -43,16 +43,16 @@ WorkflowSpec defineDataProcessing(ConfigContext const& cfgc)
 \end{minted}
 
 \subsection{Table Features}
-All variables associated with a track, for example, could be included in a single table. However, since we often only need a few of the variables, the tables are split up into sections that contain variables often used together. If needed, these tables can be joined together when doing analysis, using \texttt{o2::soa::Join<Table1, Table2>}. Importantly, only tables which correspond row-to-row and have the same number of rows can be joined in this way.
+All variables associated with a track, for example, could be included in a single table. However, since we often only need a few of the variables, the tables are split up into sections that contain variables often used together. If needed, these tables can be joined together when doing analysis using \texttt{o2::soa::Join<Table1, Table2>}. Importantly, only tables which correspond row-to-row and have the same number of rows can be joined in this way.
 
 We might also want to only access entries in a table that pass some filter, say having $|\eta| < 0.8$. We can do this by putting \texttt{Filter f = nabs(aod::track::eta) < 0.8;} somewhere before the \texttt{process} function and then instead of subscribing to \texttt{aod::Tracks} as we have done, we can put \texttt{soa::Filtered<aod::Tracks> const\& filteredTracks} in the \texttt{process} function call. Multiple filters can be defined and only compatible tables will be filtered. Once a table has been filtered, the unfiltered version cannot be accessed. 
 
-Similar to filters are partitions, which we define with \texttt{Partition<aod::Tracks> leftEta = aod::track::eta < 0;}. This will create a separate table that we can subscribe to which will only contain tracks with the specified $\eta$ value. This is different to a filter as the original table can also be accessed at any time. 
+Similar to filters are partitions, which we define like \texttt{Partition<aod::Tracks> leftEta = aod::track::eta < 0;}. This will create a separate table that we can subscribe to which will only contain tracks with the specified $\eta$ value. This is different to a filter as the original table can also be accessed at any time. 
 
-Some tables have pre-defined iterators which can be used to more efficiently loop through all entries in the table. \texttt{Collisions}, for example, has an iterator called \texttt{Collision} that we subscribed to in the code example above. When a table is indexed to it, as \texttt{Tracks} is, O2 will group the entries in \texttt{Tracks} by associated collision. 
+Some tables have pre-defined iterators which can be used to more efficiently loop through all entries in the table. \texttt{Collisions}, for example, has an iterator called \texttt{Collision} that we subscribed to in the code example above. When a table has an index column relating to \texttt{Collisions}, as \texttt{Tracks} is, O2 will group the entries in \texttt{Tracks} by associated collision. 
 
 \subsection{Histogram Registry}
-Histograms are the eventual desired output of an analysis task and O2 has a class designed specifically to make filling and playing with histograms easier. Before the \texttt{init()} function we can define our histogram registry and then in the \texttt{init()} function we can define the histograms we want and add them to the registry.
+Histograms are the eventual desired output of an analysis task and O2 has a class designed specifically to make creating and filling histograms easier. Before the \texttt{init} function we can define our histogram registry and then in the \texttt{init} function we can define the histograms we want and add them to the registry. We can then fill the histograms in the \texttt{process} function.
 
 \begin{minted}{c++}
 HistogramRegistry myRegistry{ // This name and the name in the next line need to be the same
@@ -75,9 +75,6 @@ void process(aod::Tracks const& tracks) {
   };
 }
 \end{minted}
-
-
-
 
 \subsection{Folder Structure}\label{sec:FolderStructure}
 With the task written, it then needs to be compiled and added to O2Physics so that it can be run. O2Physics has a number of analysis tasks written by people at ALICE which get compiled automatically. These are sorted into physics working groups such as Heavy Flavour (PWGHF) and Jets (PWGJE). If we want to add our own task to O2Physics, we need to create our own folder with the same structure as the working groups. Below shows the structure of the file system.
@@ -107,8 +104,8 @@ Here \texttt{alidist} is the git repository that handles the versioning of O2 an
 See below an example of what the \texttt{CMakeLists.txt} file in the \texttt{myTasks} folder would look like.
 
 \begin{minted}{text}
-add_subdirectory(Tasks)   # Ensures O2 can see the Tasks folder
-o2physics_add_dpl_workflow(my-task1           # The command assigned to the task. Note only lowercase letters, hyphens, and numbers are allowed
+add_subdirectory(Tasks)                 # Ensures O2 can see the Tasks folder
+o2physics_add_dpl_workflow(my-task1     # The command assigned to the task. Note only lowercase letters, hyphens, and numbers are allowed
                   SOURCES myTask1.cxx   # The source file for the task
                   PUBLIC_LINK_LIBRARIES O2::Framework
                   COMPONENT_NAME Analysis)
@@ -117,11 +114,11 @@ o2physics_add_dpl_workflow(my-task1           # The command assigned to the task
 \subsection{Compiling O2Physics}\label{sec:CompileO2Physics}
 O2 and O2Physics are built on your system using \texttt{aliBuild}~\cite{aliBuild_install}. They prefers to be built on UNIX systems and requires at least 8 GB of RAM, preferably more. We used both O2 and O2Physics as we wanted to create and run analysis tasks. 
 
-Once they are both built (those four words are doing some \textit{very} heavy lifting) we can enter the O2Physics environment with \texttt{alienv enter O2Physics} and this will place us in a new terminal shell. The magic of the software is that it compiles all the analysis tasks in O2Physics, as well as tools for simulation and the like, such that everything can be done by running commands in that shell. Before running our own tasks, however, we need to tell O2 to build our tasks into O2Physics. To do this we use \texttt{ninja}.
+Once they are built (those four words are doing some \textit{very} heavy lifting) we can enter the O2Physics environment with \texttt{alienv enter O2Physics} and this will place us in a new terminal shell. The magic of the software is that it compiles all the analysis tasks in O2Physics, as well as tools for simulation and the like, such that everything can be done by running commands in that shell. Before running our own tasks, however, we need to tell O2 to build our tasks into O2Physics. To do this we use \texttt{ninja}.
 
 If we have our tasks written and files structured as shown in \cref{sec:TaskStructure}, we can enter an O2Physics environment and load ninja alongside using \texttt{alienv enter O2Physics ninja/latest}. In the shell we can then navigate to the build of O2Physics, which should be in \texttt{alice/sw/BUILD\-/O2Physics-latest/O2Physics} and run \texttt{ninja install myTasks/all} which will rebuild only those parts of O2. 
 
-Ninja is the quick and dirty way of doing things so every now and then it's a good idea to rebuild O2 and O2Physics entirely, pulling the latest release. We can do this while also making sure our own tasks don't get overwritten using the following steps. We first need to make sure that our work does not get overwritten, which is done by making sure git knows they're there with \texttt{git add path/to/files} and then committing with \texttt{git commit -m "commit message"}. With that done, we can systematically update \texttt{alidist}, \texttt{O2}, and \texttt{O2Physics} by navigating to each and running \texttt{git pull --rebase}. Finally we can rebuild by navigating to \texttt{alice} and running \texttt{aliBuild build O2Physics --defaults o2 --debug}. This will take a few hours to complete (if it's even successful) and then will be able to be used again.
+Ninja is the quick and dirty way of doing things so every now and then it's a good idea to rebuild O2 and O2Physics entirely, pulling the latest release. We can do this while also making sure our own tasks don't get overwritten using the following steps. We first need to make sure that git knows our files are there with \texttt{git add path/to/files} and then committing with \texttt{git commit -m "commit message"}. With that done, we can systematically update \texttt{alidist}, \texttt{O2}, and \texttt{O2Physics} by navigating to each and running \texttt{git pull --rebase}. Finally we can rebuild by navigating to \texttt{alice} and running \texttt{aliBuild build O2Physics --defaults o2 --debug}. This will take a few hours to complete (if it's even successful) and then will be able to be used again.
 
 \subsection{Running a Task with O2}\label{sec:RunO2}
 Once we have our tasks created and built in O2Physics, we can then run them. For our purposes, the only commands we need to know are how to run a task and the options that come along with that. All analysis tasks in O2Physics get assigned a unique command that can be used to run that task. They all begin with \texttt{o2-analysis...} followed by the name assigned to it in the relevant \texttt{CMakeLists.txt} file as shown in \cref{sec:FolderStructure}. In the case of that task, we would run it with \texttt{o2-analysis-my-task1}. 
@@ -130,6 +127,6 @@ Most analysis tasks are run on \texttt{AOD.root} or \texttt{AO2D.root} files so 
 
 Often we want to run multiple tasks in succession on the same data, feeding the output of one into another. To do this, we simply use the pipe symbol \texttt{|} between the tasks: \texttt{o2-analysis-trackselection | o2-analysis-my-task1 --aod-file AO2D.root}. Here the ordering of the tasks doesn't matter as the input and output format of a task is known before it runs, so O2 does some quick thinking to arrange the workflow such that the tasks get fed the correct format of data.
 
-The \texttt{o2-analysis-trackselection} task above is an example of a helper task. These are specifically designed to use the available data to produce tables that are needed in analysis tasks. This is done once again in the interest of saving disk space as calculating the values needed is much less resource-heavy than storing them for all time. A list of helper tasks and the tables they produce can be found at \url{https://aliceo2group.github.io/analysis-framework/docs/datamodel/helperTaskTables.html}.
+The \texttt{o2-analysis-trackselection} task above is an example of a helper task. These are specifically designed to use the available data to produce tables that are needed in analysis tasks. This is done once again in the interest of saving disk space as calculating the values needed is much less resource-heavy than storing them for all time. A list of helper tasks and the tables they produce can be found at \url{https://aliceo2group.github.io/analysis-framework/docs/datamodel/helperTaskTables.html}. Note that when running a workflow with multiple tasks, if a configuration file is needed, or some other option, the flag needs to be provided before the pipe symbol for each task that gets called.
 
-For the most part, the output of an analysis task is either a \texttt{AnalysisResults.root} file or a \texttt{QAResults.root} file, with the former being the most common. This output type is chosen when defining the histogram registry. 
+For the most part, the output of an analysis task is either a \texttt{AnalysisResults.root} file or a \texttt{QAResults.root} file, with the former being the most common. This output type is chosen when defining the histogram registry. If all goes well (which is a rare occurrence) the ROOT file produced can be opened with TBrowser some lovely histograms should pop up. These can be saved as is or output using ROOT macros. 

@@ -119,7 +119,7 @@ Due to the number of cluster combinations that the CA algorithm needs to conside
 
 
 \subsection{The Online-Offline Analysis Framework}
-With the increased interaction rate expected for Run 3, a new system for real-time processing, as well as offline analysis, needed to be constructed~\cite{ALICE_Upgrade_LOI}. The Online-Offline (O2) framework was developed for this purpose. This section is mostly adapted from the O2 Upgrade TDR~\cite{O2_Upgrade_TDR} as well as the O2 documentation at \url{https://aliceo2group.github.io/analysis-framework/}.
+With the increased interaction rate intended for Run 3, a new system for real-time processing, as well as offline analysis, needed to be constructed~\cite{ALICE_Upgrade_LOI}. The Online-Offline (O2) framework was developed for this purpose. This section is mostly adapted from the O2 Upgrade TDR~\cite{O2_Upgrade_TDR} as well as the O2 documentation at \url{https://aliceo2group.github.io/analysis-framework/}.
 
 \begin{figure}[h]
     \begin{center}
@@ -137,7 +137,7 @@ With the CTFs stored to disk, they can then by processed asynchronously into Eve
 
 The process of turning CTFs into AODs is called ``reconstruction'' and is often performed multiple times on the same data. Iterations of reconstruction are called reconstruction passes and these passes will usually be done many times if the previous passes missed something in their reconstruction, or perhaps if a certain table was not populated in the reconstruction but someone needs that table for their analysis. As a result of this, two different passes on the same data can end up with very different-looking results. 
 
-We distinguish between data taken in Run 3 and data taken in Run 1 and 2 by calling Run 3 AOD's ``AO2D'' files, and Run 1 and 2 just ``AOD'' files. The data is stored on the \OldTexttt{alimonitor} system, requiring a certificate to access, which is obtained by joining the ALICE collaboration. Access to all data and most analysis tools used in this report is restricted behind this wall. AODs can then be analysed using an ``Analysis Task'', which is written in C\OldTexttt{++} and ROOT. 
+We distinguish between data taken in Run 3 and data taken in Runs 1 and 2 by calling Run 3 AOD's ``AO2D'' files, and Run 1 and 2 just ``AOD'' files. The data is stored on the \OldTexttt{alimonitor} system, requiring a certificate to access, which is obtained by joining the ALICE collaboration. Access to all data and most analysis tools used in this report is restricted behind this wall. AODs can then be analysed using an ``Analysis Task'', which is written in C\OldTexttt{++} and ROOT. 
 
 
 

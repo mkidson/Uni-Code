@@ -8,7 +8,7 @@
 \contentsline {subsection}{\numberline {2.6}The Online-Offline Analysis Framework}{9}{subsection.2.6}%
 \contentsline {subsection}{\numberline {2.7}Online Analysis}{10}{subsection.2.7}%
 \contentsline {subsection}{\numberline {2.8}Offline Analysis}{10}{subsection.2.8}%
-\contentsline {section}{\numberline {3}Writing an Analysis Task}{11}{section.3}%
+\contentsline {section}{\numberline {3}Analysing Using O2}{11}{section.3}%
 \contentsline {subsection}{\numberline {3.1}AOD Structure}{11}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Analysis Task Structure}{12}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Table Features}{12}{subsection.3.3}%
