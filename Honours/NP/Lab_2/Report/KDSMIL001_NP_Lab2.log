@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  13 OCT 2022 20:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  16 OCT 2022 22:18
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -582,8 +582,8 @@ File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
 
-(/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
-Package: subfig 2005/06/28 ver: 1.3 subfig package
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
  (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
  (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
@@ -603,25 +603,14 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 )
-\c@KVtest=\count337
-\sf@farskip=\skip55
-\sf@captopadj=\dimen302
-\sf@capskip=\skip56
-\sf@nearskip=\skip57
-\c@subfigure=\count338
-\c@subfigure@save=\count339
-\c@lofdepth=\count340
-\c@subtable=\count341
-\c@subtable@save=\count342
-\c@lotdepth=\count343
-\sf@top=\skip58
-\sf@bottom=\skip59
+\c@subfigure=\count337
+\c@subtable=\count338
 ) (/usr/share/texlive/texmf-dist/tex/latex/import/import.sty
 Package: import 2020/04/01  v 6.2
 ) (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen303
-\WF@size=\dimen304
-\c@WF@wrappedlines=\count344
+\wrapoverhang=\dimen302
+\WF@size=\dimen303
+\c@WF@wrappedlines=\count339
 \WF@box=\box86
 \WF@everypar=\toks45
 Package: wrapfig 2003/01/31  v 3.6
@@ -633,66 +622,66 @@ Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 ) (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2021/12/21 4.1b verbatim text (tvz,hv)
-\FV@CodeLineNo=\count345
+\FV@CodeLineNo=\count340
 \FV@InFile=\read4
 \FV@TabBox=\box87
-\c@FancyVerbLine=\count346
-\FV@StepNumber=\count347
+\c@FancyVerbLine=\count341
+\FV@StepNumber=\count342
 \FV@OutFile=\write4
 ) (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
 ) (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count348
+\linenopenalty=\count343
 \output=\toks46
-\linenoprevgraf=\count349
-\linenumbersep=\dimen305
-\linenumberwidth=\dimen306
-\c@linenumber=\count350
-\c@pagewiselinenumber=\count351
-\c@LN@truepage=\count352
-\c@internallinenumber=\count353
-\c@internallinenumbers=\count354
-\quotelinenumbersep=\dimen307
-\bframerule=\dimen308
-\bframesep=\dimen309
+\linenoprevgraf=\count344
+\linenumbersep=\dimen304
+\linenumberwidth=\dimen305
+\c@linenumber=\count345
+\c@pagewiselinenumber=\count346
+\c@LN@truepage=\count347
+\c@internallinenumber=\count348
+\c@internallinenumbers=\count349
+\quotelinenumbersep=\dimen306
+\bframerule=\dimen307
+\bframesep=\dimen308
 \bframebox=\box88
 LaTeX Info: Redefining \\ on input line 3056.
 )
-\c@FV@TrueTabGroupLevel=\count355
-\c@FV@TrueTabCounter=\count356
+\c@FV@TrueTabGroupLevel=\count350
+\c@FV@TrueTabCounter=\count351
 \FV@TabBox@Group=\box89
-\FV@TmpLength=\skip60
-\c@FV@HighlightLinesStart=\count357
-\c@FV@HighlightLinesStop=\count358
-\FV@LoopCount=\count359
+\FV@TmpLength=\skip55
+\c@FV@HighlightLinesStart=\count352
+\c@FV@HighlightLinesStop=\count353
+\FV@LoopCount=\count354
 \FV@NCharsBox=\box90
-\FV@BreakIndent=\dimen310
-\FV@BreakIndentNChars=\count360
-\FV@BreakSymbolSepLeft=\dimen311
-\FV@BreakSymbolSepLeftNChars=\count361
-\FV@BreakSymbolSepRight=\dimen312
-\FV@BreakSymbolSepRightNChars=\count362
-\FV@BreakSymbolIndentLeft=\dimen313
-\FV@BreakSymbolIndentLeftNChars=\count363
-\FV@BreakSymbolIndentRight=\dimen314
-\FV@BreakSymbolIndentRightNChars=\count364
-\c@FancyVerbLineBreakLast=\count365
+\FV@BreakIndent=\dimen309
+\FV@BreakIndentNChars=\count355
+\FV@BreakSymbolSepLeft=\dimen310
+\FV@BreakSymbolSepLeftNChars=\count356
+\FV@BreakSymbolSepRight=\dimen311
+\FV@BreakSymbolSepRightNChars=\count357
+\FV@BreakSymbolIndentLeft=\dimen312
+\FV@BreakSymbolIndentLeftNChars=\count358
+\FV@BreakSymbolIndentRight=\dimen313
+\FV@BreakSymbolIndentRightNChars=\count359
+\c@FancyVerbLineBreakLast=\count360
 \FV@LineBox=\box91
 \FV@LineIndentBox=\box92
-\FV@LineWidth=\dimen315
+\FV@LineWidth=\dimen314
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count366
-\calc@Bcount=\count367
-\calc@Adimen=\dimen316
-\calc@Bdimen=\dimen317
-\calc@Askip=\skip61
-\calc@Bskip=\skip62
+\calc@Acount=\count361
+\calc@Bcount=\count362
+\calc@Adimen=\dimen315
+\calc@Bdimen=\dimen316
+\calc@Askip=\skip56
+\calc@Bskip=\skip57
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count368
-\calc@Cskip=\skip63
+\calc@Ccount=\count363
+\calc@Cskip=\skip58
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
 Package shellesc Info: Unrestricted shell escape enabled on input line 75.
@@ -709,25 +698,25 @@ runsystem(uname -s > "KDSMIL001_NP_Lab2.w18")...executed.
 runsystem(rm -- "KDSMIL001_NP_Lab2.w18")...executed.
 
 ) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
-\integerpart=\count369
-\decimalpart=\count370
+\integerpart=\count364
+\decimalpart=\count365
 )
 Package: xstring 2021/07/21 v1.84 String manipulations (CT)
 ) (/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip64
-\fb@frw=\dimen318
-\fb@frh=\dimen319
-\FrameRule=\dimen320
-\FrameSep=\dimen321
+\OuterFrameSep=\skip59
+\fb@frw=\dimen317
+\fb@frh=\dimen318
+\FrameRule=\dimen319
+\FrameSep=\dimen320
 )
 \minted@appexistsfile=\read5
 \minted@bgbox=\box93
 \minted@code=\write5
-\c@minted@FancyVerbLineTemp=\count371
-\c@minted@pygmentizecounter=\count372
+\c@minted@FancyVerbLineTemp=\count366
+\c@minted@pygmentizecounter=\count367
 \@float@every@listing=\toks47
-\c@listing=\count373
+\c@listing=\count368
 )
 runsystem(mkdir -p _minted-KDSMIL001_NP_Lab2)...executed.
 
@@ -735,66 +724,66 @@ runsystem(mkdir -p _minted-KDSMIL001_NP_Lab2)...executed.
 Package: biblatex 2022/02/02 v3.17 programmable bibliographies (PK/MW)
  (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count374
+\lrq@indent=\count369
  (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count375
-\c@listtotal=\count376
-\c@listcount=\count377
-\c@liststart=\count378
-\c@liststop=\count379
-\c@citecount=\count380
-\c@citetotal=\count381
-\c@multicitecount=\count382
-\c@multicitetotal=\count383
-\c@instcount=\count384
-\c@maxnames=\count385
-\c@minnames=\count386
-\c@maxitems=\count387
-\c@minitems=\count388
-\c@citecounter=\count389
-\c@maxcitecounter=\count390
-\c@savedcitecounter=\count391
-\c@uniquelist=\count392
-\c@uniquename=\count393
-\c@refsection=\count394
-\c@refsegment=\count395
-\c@maxextratitle=\count396
-\c@maxextratitleyear=\count397
-\c@maxextraname=\count398
-\c@maxextradate=\count399
-\c@maxextraalpha=\count400
-\c@abbrvpenalty=\count401
-\c@highnamepenalty=\count402
-\c@lownamepenalty=\count403
-\c@maxparens=\count404
-\c@parenlevel=\count405
-\blx@tempcnta=\count406
-\blx@tempcntb=\count407
-\blx@tempcntc=\count408
-\c@blx@maxsection=\count409
-\c@blx@maxsegment@0=\count410
-\blx@notetype=\count411
-\blx@parenlevel@text=\count412
-\blx@parenlevel@foot=\count413
-\c@blx@sectionciteorder@0=\count414
-\blx@entrysetcounter=\count415
-\blx@biblioinstance=\count416
-\labelnumberwidth=\skip65
-\labelalphawidth=\skip66
-\biblabelsep=\skip67
-\bibitemsep=\skip68
-\bibnamesep=\skip69
-\bibinitsep=\skip70
-\bibparsep=\skip71
-\bibhang=\skip72
+\c@tabx@nest=\count370
+\c@listtotal=\count371
+\c@listcount=\count372
+\c@liststart=\count373
+\c@liststop=\count374
+\c@citecount=\count375
+\c@citetotal=\count376
+\c@multicitecount=\count377
+\c@multicitetotal=\count378
+\c@instcount=\count379
+\c@maxnames=\count380
+\c@minnames=\count381
+\c@maxitems=\count382
+\c@minitems=\count383
+\c@citecounter=\count384
+\c@maxcitecounter=\count385
+\c@savedcitecounter=\count386
+\c@uniquelist=\count387
+\c@uniquename=\count388
+\c@refsection=\count389
+\c@refsegment=\count390
+\c@maxextratitle=\count391
+\c@maxextratitleyear=\count392
+\c@maxextraname=\count393
+\c@maxextradate=\count394
+\c@maxextraalpha=\count395
+\c@abbrvpenalty=\count396
+\c@highnamepenalty=\count397
+\c@lownamepenalty=\count398
+\c@maxparens=\count399
+\c@parenlevel=\count400
+\blx@tempcnta=\count401
+\blx@tempcntb=\count402
+\blx@tempcntc=\count403
+\c@blx@maxsection=\count404
+\c@blx@maxsegment@0=\count405
+\blx@notetype=\count406
+\blx@parenlevel@text=\count407
+\blx@parenlevel@foot=\count408
+\c@blx@sectionciteorder@0=\count409
+\blx@entrysetcounter=\count410
+\blx@biblioinstance=\count411
+\labelnumberwidth=\skip60
+\labelalphawidth=\skip61
+\biblabelsep=\skip62
+\bibitemsep=\skip63
+\bibnamesep=\skip64
+\bibinitsep=\skip65
+\bibparsep=\skip66
+\bibhang=\skip67
 \blx@bcfin=\read6
 \blx@bcfout=\write6
 \blx@langwohyphens=\language87
-\c@mincomprange=\count417
-\c@maxcomprange=\count418
-\c@mincompwidth=\count419
+\c@mincomprange=\count412
+\c@maxcomprange=\count413
+\c@mincompwidth=\count414
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
@@ -802,88 +791,88 @@ File: blx-dm.def 2022/02/02 v3.17 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count420
-\c@savedafterword=\count421
-\c@annotator=\count422
-\c@savedannotator=\count423
-\c@author=\count424
-\c@savedauthor=\count425
-\c@bookauthor=\count426
-\c@savedbookauthor=\count427
-\c@commentator=\count428
-\c@savedcommentator=\count429
-\c@editor=\count430
-\c@savededitor=\count431
-\c@editora=\count432
-\c@savededitora=\count433
-\c@editorb=\count434
-\c@savededitorb=\count435
-\c@editorc=\count436
-\c@savededitorc=\count437
-\c@foreword=\count438
-\c@savedforeword=\count439
-\c@holder=\count440
-\c@savedholder=\count441
-\c@introduction=\count442
-\c@savedintroduction=\count443
-\c@namea=\count444
-\c@savednamea=\count445
-\c@nameb=\count446
-\c@savednameb=\count447
-\c@namec=\count448
-\c@savednamec=\count449
-\c@translator=\count450
-\c@savedtranslator=\count451
-\c@shortauthor=\count452
-\c@savedshortauthor=\count453
-\c@shorteditor=\count454
-\c@savedshorteditor=\count455
-\c@labelname=\count456
-\c@savedlabelname=\count457
-\c@institution=\count458
-\c@savedinstitution=\count459
-\c@lista=\count460
-\c@savedlista=\count461
-\c@listb=\count462
-\c@savedlistb=\count463
-\c@listc=\count464
-\c@savedlistc=\count465
-\c@listd=\count466
-\c@savedlistd=\count467
-\c@liste=\count468
-\c@savedliste=\count469
-\c@listf=\count470
-\c@savedlistf=\count471
-\c@location=\count472
-\c@savedlocation=\count473
-\c@organization=\count474
-\c@savedorganization=\count475
-\c@origlocation=\count476
-\c@savedoriglocation=\count477
-\c@origpublisher=\count478
-\c@savedorigpublisher=\count479
-\c@publisher=\count480
-\c@savedpublisher=\count481
-\c@language=\count482
-\c@savedlanguage=\count483
-\c@origlanguage=\count484
-\c@savedoriglanguage=\count485
-\c@pageref=\count486
-\c@savedpageref=\count487
-\shorthandwidth=\skip73
-\shortjournalwidth=\skip74
-\shortserieswidth=\skip75
-\shorttitlewidth=\skip76
-\shortauthorwidth=\skip77
-\shorteditorwidth=\skip78
-\locallabelnumberwidth=\skip79
-\locallabelalphawidth=\skip80
-\localshorthandwidth=\skip81
-\localshortjournalwidth=\skip82
-\localshortserieswidth=\skip83
-\localshorttitlewidth=\skip84
-\localshortauthorwidth=\skip85
-\localshorteditorwidth=\skip86
+\c@afterword=\count415
+\c@savedafterword=\count416
+\c@annotator=\count417
+\c@savedannotator=\count418
+\c@author=\count419
+\c@savedauthor=\count420
+\c@bookauthor=\count421
+\c@savedbookauthor=\count422
+\c@commentator=\count423
+\c@savedcommentator=\count424
+\c@editor=\count425
+\c@savededitor=\count426
+\c@editora=\count427
+\c@savededitora=\count428
+\c@editorb=\count429
+\c@savededitorb=\count430
+\c@editorc=\count431
+\c@savededitorc=\count432
+\c@foreword=\count433
+\c@savedforeword=\count434
+\c@holder=\count435
+\c@savedholder=\count436
+\c@introduction=\count437
+\c@savedintroduction=\count438
+\c@namea=\count439
+\c@savednamea=\count440
+\c@nameb=\count441
+\c@savednameb=\count442
+\c@namec=\count443
+\c@savednamec=\count444
+\c@translator=\count445
+\c@savedtranslator=\count446
+\c@shortauthor=\count447
+\c@savedshortauthor=\count448
+\c@shorteditor=\count449
+\c@savedshorteditor=\count450
+\c@labelname=\count451
+\c@savedlabelname=\count452
+\c@institution=\count453
+\c@savedinstitution=\count454
+\c@lista=\count455
+\c@savedlista=\count456
+\c@listb=\count457
+\c@savedlistb=\count458
+\c@listc=\count459
+\c@savedlistc=\count460
+\c@listd=\count461
+\c@savedlistd=\count462
+\c@liste=\count463
+\c@savedliste=\count464
+\c@listf=\count465
+\c@savedlistf=\count466
+\c@location=\count467
+\c@savedlocation=\count468
+\c@organization=\count469
+\c@savedorganization=\count470
+\c@origlocation=\count471
+\c@savedoriglocation=\count472
+\c@origpublisher=\count473
+\c@savedorigpublisher=\count474
+\c@publisher=\count475
+\c@savedpublisher=\count476
+\c@language=\count477
+\c@savedlanguage=\count478
+\c@origlanguage=\count479
+\c@savedoriglanguage=\count480
+\c@pageref=\count481
+\c@savedpageref=\count482
+\shorthandwidth=\skip68
+\shortjournalwidth=\skip69
+\shortserieswidth=\skip70
+\shorttitlewidth=\skip71
+\shortauthorwidth=\skip72
+\shorteditorwidth=\skip73
+\locallabelnumberwidth=\skip74
+\locallabelalphawidth=\skip75
+\localshorthandwidth=\skip76
+\localshortjournalwidth=\skip77
+\localshortserieswidth=\skip78
+\localshorttitlewidth=\skip79
+\localshortauthorwidth=\skip80
+\localshorteditorwidth=\skip81
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
@@ -893,19 +882,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
-\c@textcitecount=\count488
-\c@textcitetotal=\count489
-\c@textcitemaxnames=\count490
-\c@biburlbigbreakpenalty=\count491
-\c@biburlbreakpenalty=\count492
-\c@biburlnumpenalty=\count493
-\c@biburlucpenalty=\count494
-\c@biburllcpenalty=\count495
+\c@textcitecount=\count483
+\c@textcitetotal=\count484
+\c@textcitemaxnames=\count485
+\c@biburlbigbreakpenalty=\count486
+\c@biburlbreakpenalty=\count487
+\c@biburlnumpenalty=\count488
+\c@biburlucpenalty=\count489
+\c@biburllcpenalty=\count490
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count496
+\c@smartand=\count491
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -915,8 +904,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count497
-\c@bbx:relatedtotal=\count498
+\c@bbx:relatedcount=\count492
+\c@bbx:relatedtotal=\count493
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -951,25 +940,25 @@ Package: blx-case-expl3 2022/02/02 v3.17 expl3 case changing code for biblatex
 Package: mhchem 2021/12/31 v4.09 for typesetting chemical formulae
  (/usr/share/texlive/texmf-dist/tex/latex/chemgreek/chemgreek.sty
 Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use in chemistry (CN)
-\l__chemgreek_tmpa_int=\count499
-\g__chemgreek_tmpa_int=\count500
+\l__chemgreek_tmpa_int=\count494
+\g__chemgreek_tmpa_int=\count495
 )
-\l__mhchem_ce_distanceFromLastComma_int=\count501
-\__mhchem_arrow_extPgfLength_skip=\skip87
-\mhchem@minispace@tmp=\skip88
-\mhchem@minibackspace@tmp=\skip89
-\mhchem@bondwidth=\skip90
-\mhchem@bondheight=\skip91
-\mhchem@smallbondwidth@tmpA=\skip92
-\mhchem@smallbondwidth@tmpB=\skip93
-\mhchem@smallbondwidth=\skip94
-\mhchem@bondtmp@minussidebearingleft=\skip95
-\mhchem@bondtmp@minussidebearingright=\skip96
-\l__mhchem_option_version_int=\count502
-\mhchem@option@minusmathsidebearingleft=\dimen322
-\mhchem@option@minusmathsidebearingright=\dimen323
-\mhchem@option@minustextsidebearingleft=\dimen324
-\mhchem@option@minustextsidebearingright=\dimen325
+\l__mhchem_ce_distanceFromLastComma_int=\count496
+\__mhchem_arrow_extPgfLength_skip=\skip82
+\mhchem@minispace@tmp=\skip83
+\mhchem@minibackspace@tmp=\skip84
+\mhchem@bondwidth=\skip85
+\mhchem@bondheight=\skip86
+\mhchem@smallbondwidth@tmpA=\skip87
+\mhchem@smallbondwidth@tmpB=\skip88
+\mhchem@smallbondwidth=\skip89
+\mhchem@bondtmp@minussidebearingleft=\skip90
+\mhchem@bondtmp@minussidebearingright=\skip91
+\l__mhchem_option_version_int=\count497
+\mhchem@option@minusmathsidebearingleft=\dimen321
+\mhchem@option@minusmathsidebearingright=\dimen322
+\mhchem@option@minustextsidebearingleft=\dimen323
+\mhchem@option@minustextsidebearingright=\dimen324
 ) (/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2370.
@@ -984,16 +973,15 @@ LaTeX Info: Redefining \Cpagerefrange on input line 2370.
 LaTeX Info: Redefining \labelcref on input line 2370.
 LaTeX Info: Redefining \labelcpageref on input line 2370.
 Package cleveref Info: `listings' support loaded on input line 3131.
-Package cleveref Info: `subfig' support loaded on input line 3164.
 Package cleveref Info: no abbreviation of names on input line 7852.
 ) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2022/01/26 3.70 The Babel package
-\babel@savecnt=\count503
-\U@D=\dimen326
+\babel@savecnt=\count498
+\U@D=\dimen325
 \l@unhyphenated=\language88
  (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read7
-\bbl@dirlevel=\count504
+\bbl@dirlevel=\count499
  (/usr/share/texlive/texmf-dist/tex/generic/babel-english/british.ldf
 Language: british 2017/06/06 v3.3r English support from the babel system
  (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
@@ -1014,29 +1002,29 @@ runsystem(rm KDSMIL001_NP_Lab2.aex)...executed.
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count505
-\@quotereset=\count506
+\@quotelevel=\count500
+\@quotereset=\count501
 (./KDSMIL001_NP_Lab2.aux)
 \openout1 = `KDSMIL001_NP_Lab2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1072,7 +1060,7 @@ LaTeX Font Info:    ... okay on input line 23.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 23.
+Package hyperref Info: Link coloring OFF on input line 24.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1080,11 +1068,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count507
+\c@section@level=\count502
 )
-LaTeX Info: Redefining \ref on input line 23.
-LaTeX Info: Redefining \pageref on input line 23.
-LaTeX Info: Redefining \nameref on input line 23.
+LaTeX Info: Redefining \ref on input line 24.
+LaTeX Info: Redefining \pageref on input line 24.
+LaTeX Info: Redefining \nameref on input line 24.
  (./KDSMIL001_NP_Lab2.out) (./KDSMIL001_NP_Lab2.out)
 \@outlinefile=\write7
 \openout7 = `KDSMIL001_NP_Lab2.out'.
@@ -1093,16 +1081,16 @@ LaTeX Info: Redefining \nameref on input line 23.
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 ) (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count508
-\scratchdimen=\dimen327
+\scratchcounter=\count503
+\scratchdimen=\dimen326
 \scratchbox=\box94
-\nofMPsegments=\count509
-\nofMParguments=\count510
+\nofMPsegments=\count504
+\nofMParguments=\count505
 \everyMPshowfont=\toks48
-\MPscratchCnt=\count511
-\MPscratchDim=\dimen328
-\MPnumerator=\count512
-\makeMPintoPDFobject=\count513
+\MPscratchCnt=\count506
+\MPscratchDim=\dimen327
+\MPnumerator=\count507
+\makeMPintoPDFobject=\count508
 \everyMPtoPDFconversion=\toks49
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1115,9 +1103,8 @@ Package pgfplots notification 'compat/show suggested version=true': you might be
 (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
-\c@lstlisting=\count514
+\c@lstlisting=\count509
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package biblatex Info: Trying to load language 'british'...
@@ -1137,40 +1124,59 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'KDSMIL001_NP_Lab2.bbl' found.
  (./KDSMIL001_NP_Lab2.bbl)
-Package biblatex Info: Reference section=0 on input line 23.
-Package biblatex Info: Reference segment=0 on input line 23.
+Package biblatex Info: Reference section=0 on input line 24.
+Package biblatex Info: Reference segment=0 on input line 24.
 
-Package chemgreek Info: Activating mapping `default' on line 23.
+Package chemgreek Info: Activating mapping `default' on line 24.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 34.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 33.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./KDSMIL001_NP_Lab2.aux)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+pdfTeX warning: pdflatex (file ./Plots/apparatus.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Plots/apparatus.pdf, id=54, 214.8828pt x 139.4811pt>
+File: Plots/apparatus.pdf Graphic file (type pdf)
+<use Plots/apparatus.pdf>
+Package pdftex.def Info: Plots/apparatus.pdf  used on input line 57.
+(pdftex.def)             Requested size: 281.85587pt x 182.9578pt.
+[2 <./Plots/apparatus.pdf>]
+<Plots/low_calibration.pdf, id=73, 462.52798pt x 346.89601pt>
+File: Plots/low_calibration.pdf Graphic file (type pdf)
+<use Plots/low_calibration.pdf>
+Package pdftex.def Info: Plots/low_calibration.pdf  used on input line 77.
+(pdftex.def)             Requested size: 230.18253pt x 172.63771pt.
+<Plots/high_calibration.pdf, id=74, 462.52798pt x 346.89601pt>
+File: Plots/high_calibration.pdf Graphic file (type pdf)
+<use Plots/high_calibration.pdf>
+Package pdftex.def Info: Plots/high_calibration.pdf  used on input line 84.
+(pdftex.def)             Requested size: 230.18253pt x 172.63771pt.
+ [3 <./Plots/low_calibration.pdf> <./Plots/high_calibration.pdf>] [4] (./KDSMIL001_NP_Lab2.aux)
 Package rerunfilecheck Info: File `KDSMIL001_NP_Lab2.out' has not changed.
-(rerunfilecheck)             Checksum: CFAB81F4FA21C0D6B8636770C8EF9AE0;740.
+(rerunfilecheck)             Checksum: 724C12DECB3CF11515B293C57CB703F7;925.
 Package logreq Info: Writing requests to 'KDSMIL001_NP_Lab2.run.xml'.
 \openout1 = `KDSMIL001_NP_Lab2.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52348 strings out of 478287
- 1201979 string characters out of 5849289
- 2017751 words of memory out of 5000000
- 69848 multiletter control sequences out of 15000+600000
- 475724 words of font info for 52 fonts, out of 8000000 for 9000
+ 52566 strings out of 478287
+ 1206888 string characters out of 5849289
+ 2015741 words of memory out of 5000000
+ 70045 multiletter control sequences out of 15000+600000
+ 478729 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,6n,103p,1143b,2361s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on KDSMIL001_NP_Lab2.pdf (2 pages, 91596 bytes).
+ 99i,16n,103p,1144b,2361s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on KDSMIL001_NP_Lab2.pdf (4 pages, 227652 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 77 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 247 PDF objects out of 1000 (max. 8388607)
+ 129 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
+ 100 words of extra memory for PDF output out of 10000 (max. 10000000)
 
