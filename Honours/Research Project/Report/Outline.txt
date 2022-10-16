@@ -8,10 +8,13 @@ Theory/Background
 - Bigger ITS, MFT, O2 sections about the path of data from detector to AOD
     - Reconstruction passes
 
-Analysing
+Analysing with O2
 - How to use O2
     - Writing tasks
     - Compiling
+
+Our Analysis
+- Data
 - The intent of the analysis
 - Details of the analysis
 - Why comparison isn't possible (sigh)
