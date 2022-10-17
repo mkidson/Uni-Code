@@ -19,6 +19,25 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{deuterium}{online}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labeltitlesource}{title}
+      \field{title}{{CODATA} Value: deuteron mass}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb CODATA Value\: deuteron mass:/home/mkidson/Zotero/storage/KCTUJ9YR/Value.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://physics.nist.gov/cgi-bin/cuu/Value?md
+      \endverb
+      \verb{url}
+      \verb https://physics.nist.gov/cgi-bin/cuu/Value?md
+      \endverb
+    \endentry
     \entry{Knoll}{book}{}
       \name{author}{1}{}{%
         {{hash=6658b3a0dc8d44502ea2cda983468088}{%

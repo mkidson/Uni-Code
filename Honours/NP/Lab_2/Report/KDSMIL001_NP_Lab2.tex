@@ -33,6 +33,8 @@
 \section{Introduction}\label{sec:Introduction}
 There are many sources of photon radiation naturally present in the world. Gamma-rays (roughly between \SI{0.001}{\mega\electronvolt} and \SI{10}{\mega\electronvolt}) are the highest energy and thus most dangerous form of photon radiation. For this reason, understanding where gamma-rays come from and how they interact with matter is of great importance. 
 
+This report will discuss the origins of gamma-rays, how they are detected, and then analyse the gamma-ray spectra from two radionuclides; \ce{^{152}Eu} and AmBe. The NaI scintillation detector and multi-channel analyser that were used needed to be calibrated to output energy so some standard calibration sources were used. The energy resolution of the NaI scintillation detector was also determined.
+
 \section{Theory}\label{sec:Theory}
 
 \subsection{Gamma-rays}\label{sec:GammaTheory}
@@ -59,11 +61,6 @@ The apparatus was configured as in \cref{fig:Apparatus}. The detector is an NaI 
         \label{fig:Apparatus}
     \end{center}
 \end{figure}
-
-
-
-energy resolution from Knoll eqn 18.1
-
 
 \section{Calibration \& Energy Resolution}\label{sec:CalibrationResolution}
 The radioactive sources used for calibration were \ce{^{22}Na}, \ce{^{60}Co}, and \ce{^{137}Cs}. A gamma spectrum was captured for a live time of \SI{1200}{\second} for each source. A background reading of \SI{1200}{\second} was also recorded. Two energy ranges were needed so this was done twice, reducing the gain on the amplifier for the second run in order to reach a higher energy in the highest bin of the MCA. 
@@ -97,15 +94,54 @@ To find the energy resolution, the primary photopeaks of the calibration sources
 \end{equation}
 where $H_0$ is the mean of the gaussian. Taking the mean of the 5 values, a resolution of 6.855\% was found. This means that for a photon of a given energy $E$, there will be a range with width $6.855\%\times E$ around that energy for which a photon of a different energy to the original will not be resolvable. 
 
-\section{125Eu}\label{sec:Eu}
+\section{\ce{^{152}Eu}}\label{sec:Eu}
 
+\subsection{\ce{^{152}Eu} Theory}
+\ce{^{152}Eu} is a radioisotope of \ce{_{63}Eu}. In its ground state it decays by $\beta^-$ emission with an intensity of 27.9\% and electron capture ($\varepsilon$) with an intensity of 72.1\%~\cite{nudat}. Both decays result in gamma-rays but they result in completely different spectra. The expected spectrum, however, must be a combination of the two. 
+
+\subsection{\ce{^{152}Eu} Gamma Spectrum}
+\Cref{fig:Eu_Spectrum} shows the gamma-ray spectrum for \ce{^{152}Eu}. Labelled are the energies of the expected gamma-rays with the highest intensities according to \cite{nudat}. It is evident from the plot that at high energies the expected energies are lower than the energies output by the detector after calibration and at low energies the expected energies are higher than the detector outputs. This seems to imply that the slope of the line determined in calibration, for the low energy regime at least, must be incorrect. 
+
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[width=.8\textwidth]{Plots/eu.pdf}
+        \caption{Gamma-ray spectrum for the \ce{^{152}Eu} source. The most prominent expected gamma-ray emission energies are labelled. Note how for low energies the expected energy is higher than detected and for high energies the opposite is true.}
+        \label{fig:Eu_Spectrum}
+    \end{center}
+\end{figure}
+
+Many of the gamma-rays in the \ce{^{152}Eu} spectrum are close to each other in energy, but there are only a few that have a large enough intensity that they are visible in a spectrum from a detector such as the NaI detector used in this report. The gamma-rays of energy \SI{1085.8}{\kilo\electronvolt} and \SI{1112.1}{\kilo\electronvolt} are two such emissions. Considering the energy resolution calculated in \cref{sec:CalibrationResolution}, both photons lie within the other's resolution range so they are not resolvable as two different peaks. This is made worse by the fact that they have similar intensities (10.11\% and 13.67\% respectively), leading to what looks like just one photopeak in \cref{fig:Eu_Spectrum}.
 
 \section{AmBe}\label{sec:AmBe}
 
 \subsection{AmBe Theory}
-The Americium-Beryllium (AmBe) source is a neutron source that works of the principle of creating 
+The Americium-Beryllium (AmBe) source is a neutron source. $\alpha$ particles are emitted by the \ce{^{241}Am} source leading to the process
+
+\begin{equation}
+    \alpha + \ce{^{9}Be} \rightarrow \ce{^{13}C^*} \rightarrow \ce{^{12}C^*}+n \rightarrow \ce{^{12}C}+n+\gamma_{\SI{4439.82}{\kilo\electronvolt}}.
+    \label{eqn:AmBeProcess}
+\end{equation}
+The photon is mono-energetic but the neutrons are emitted with a wide range of energies including thermal neutrons. Thermal neutrons are very likely to be captured by material surrounding the AmBe source. The source used in this lab was surrounded by high density plastic, which is primarily made up of hydrogen and carbon, so it is expected to have excited deuterium (D or \ce{^{2}H}) and \ce{^{13}C} produced. 
+
+We can find the expected energy of the photon released as deuterium de-excites by looking at the binding energy. The mass of deuterium is \SI{2.0135533893}{u}~\cite{deuterium} and the mass of its constituent parts is \SI{2.01594147}{u}, from the neutron and proton mass. The mass excess is then \SI{2.3880807e-3}{u} leaving a binding energy of \SI{2224.497}{\kilo\electronvolt}. So, when the hydrogen captures a neutron and becomes deuterium, it will end up in an excited state with an energy of \SI{2224.497}{\kilo\electronvolt}. Thus a gamma-ray of that energy should be expected in the AmBe spectrum. 
+
+The deuterium gamma-ray and the \SI{4439.82}{\kilo\electronvolt} gamma-ray from carbon are both above the pair production threshold, so single- and double-escape peaks should be expected. 
+
+\subsection{AmBe Gamma Spectrum}
+\Cref{fig:AmBe_Spectrum} shows the gamma-ray spectrum for the AmBe source with the gamma-rays mentioned above labelled. An unknown gamma-ray is present that doesn't seem to align with any expectation. 
+
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[width=.8\textwidth]{Plots/ambe.pdf}
+        \caption{Gamma=ray spectrum for the AmBe source. The expected peaks are identified but the peak at around \SI{2560}{\kilo\electronvolt} remains a mystery. The large continuum at low energies is mostly bremsstrahlung and Compton continuum. The escape peaks for the deuterium and unknown gamma-ray can also be seen. }
+        \label{fig:AmBe_Spectrum}
+    \end{center}
+\end{figure}
+
+None of the expected peaks intersect each other within the detector's energy resolution, so there is nothing to conclude in that respect. 
 
 \section{Conclusion}\label{sec:Conclusion}
+The gamma-ray spectra for \ce{^{152}Eu} and AmBe were analysed with respect to the predictions of what should be present in each spectrum. These predictions were made based on both theory and previous experiment. The energy resolution of the NaI scintillation detector was found to be 6.855\%.
 
 \newpage
 \printbibliography

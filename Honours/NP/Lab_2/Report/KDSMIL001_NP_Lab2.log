@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  16 OCT 2022 22:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  17 OCT 2022 11:38
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1141,42 +1141,79 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
 pdfTeX warning: pdflatex (file ./Plots/apparatus.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Plots/apparatus.pdf, id=54, 214.8828pt x 139.4811pt>
+<Plots/apparatus.pdf, id=71, 214.8828pt x 139.4811pt>
 File: Plots/apparatus.pdf Graphic file (type pdf)
 <use Plots/apparatus.pdf>
-Package pdftex.def Info: Plots/apparatus.pdf  used on input line 57.
+Package pdftex.def Info: Plots/apparatus.pdf  used on input line 59.
 (pdftex.def)             Requested size: 281.85587pt x 182.9578pt.
 [2 <./Plots/apparatus.pdf>]
-<Plots/low_calibration.pdf, id=73, 462.52798pt x 346.89601pt>
+<Plots/low_calibration.pdf, id=89, 462.52798pt x 346.89601pt>
 File: Plots/low_calibration.pdf Graphic file (type pdf)
 <use Plots/low_calibration.pdf>
-Package pdftex.def Info: Plots/low_calibration.pdf  used on input line 77.
+Package pdftex.def Info: Plots/low_calibration.pdf  used on input line 74.
 (pdftex.def)             Requested size: 230.18253pt x 172.63771pt.
-<Plots/high_calibration.pdf, id=74, 462.52798pt x 346.89601pt>
+<Plots/high_calibration.pdf, id=90, 462.52798pt x 346.89601pt>
 File: Plots/high_calibration.pdf Graphic file (type pdf)
 <use Plots/high_calibration.pdf>
-Package pdftex.def Info: Plots/high_calibration.pdf  used on input line 84.
+Package pdftex.def Info: Plots/high_calibration.pdf  used on input line 81.
 (pdftex.def)             Requested size: 230.18253pt x 172.63771pt.
- [3 <./Plots/low_calibration.pdf> <./Plots/high_calibration.pdf>] [4] (./KDSMIL001_NP_Lab2.aux)
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mhchem@cee' on input line 97.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 97.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mhchem@cee' on input line 99.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 99.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mhchem@cee' on input line 102.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 102.
+
+[3 <./Plots/low_calibration.pdf> <./Plots/high_calibration.pdf>]
+<Plots/eu.pdf, id=197, 722.7pt x 361.35pt>
+File: Plots/eu.pdf Graphic file (type pdf)
+<use Plots/eu.pdf>
+Package pdftex.def Info: Plots/eu.pdf  used on input line 107.
+(pdftex.def)             Requested size: 375.80544pt x 187.90308pt.
+ [4 <./Plots/eu.pdf>]
+<Plots/ambe.pdf, id=247, 722.7pt x 361.35pt>
+File: Plots/ambe.pdf Graphic file (type pdf)
+<use Plots/ambe.pdf>
+Package pdftex.def Info: Plots/ambe.pdf  used on input line 135.
+(pdftex.def)             Requested size: 375.80544pt x 187.90308pt.
+ [5 <./Plots/ambe.pdf>] [6] (./KDSMIL001_NP_Lab2.aux)
 Package rerunfilecheck Info: File `KDSMIL001_NP_Lab2.out' has not changed.
-(rerunfilecheck)             Checksum: 724C12DECB3CF11515B293C57CB703F7;925.
+(rerunfilecheck)             Checksum: 45346E8C72804853BAE6F2DEA6F4D64D;1485.
 Package logreq Info: Writing requests to 'KDSMIL001_NP_Lab2.run.xml'.
 \openout1 = `KDSMIL001_NP_Lab2.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52566 strings out of 478287
- 1206888 string characters out of 5849289
- 2015741 words of memory out of 5000000
- 70045 multiletter control sequences out of 15000+600000
- 478729 words of font info for 64 fonts, out of 8000000 for 9000
+ 52627 strings out of 478287
+ 1207908 string characters out of 5849289
+ 2016521 words of memory out of 5000000
+ 70090 multiletter control sequences out of 15000+600000
+ 483516 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,16n,103p,1144b,2361s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on KDSMIL001_NP_Lab2.pdf (4 pages, 227652 bytes).
+ 99i,20n,103p,1144b,2361s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on KDSMIL001_NP_Lab2.pdf (6 pages, 336725 bytes).
 PDF statistics:
- 247 PDF objects out of 1000 (max. 8388607)
- 129 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
- 100 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 387 PDF objects out of 1000 (max. 8388607)
+ 184 compressed objects within 2 object streams
+ 31 named destinations out of 1000 (max. 500000)
+ 142 words of extra memory for PDF output out of 10000 (max. 10000000)
 

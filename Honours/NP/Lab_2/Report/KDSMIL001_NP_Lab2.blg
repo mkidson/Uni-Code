@@ -1,17 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'KDSMIL001_NP_Lab2.blg'
-[81] biber:340> INFO - === Sun Oct 16, 2022, 22:00:18
-[95] Biber.pm:418> INFO - Reading 'KDSMIL001_NP_Lab2.bcf'
-[167] Biber.pm:972> INFO - Found 2 citekeys in bib section 0
-[180] Biber.pm:4383> INFO - Processing section 0
-[191] Biber.pm:4574> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[192] bibtex.pm:1713> INFO - LaTeX decoding ...
-[195] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliography.bib'
-[240] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[240] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'variable = shifted' with 'variable = non-ignorable'
-[240] Biber.pm:4203> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-GB'
-[240] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-GB'
-[245] bbl.pm:654> INFO - Writing 'KDSMIL001_NP_Lab2.bbl' with encoding 'UTF-8'
-[246] bbl.pm:757> INFO - Output to KDSMIL001_NP_Lab2.bbl
-[246] Biber.pm:130> WARN - legacy month field 'March 18, 2008' in entry 'nudat' is not an integer - this will probably not sort properly.
-[247] Biber.pm:132> INFO - WARNINGS: 1
+[63] biber:340> INFO - === Mon Oct 17, 2022, 10:31:51
+[74] Biber.pm:418> INFO - Reading 'KDSMIL001_NP_Lab2.bcf'
+[126] Biber.pm:972> INFO - Found 3 citekeys in bib section 0
+[136] Biber.pm:4383> INFO - Processing section 0
+[144] Biber.pm:4574> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[145] bibtex.pm:1713> INFO - LaTeX decoding ...
+[149] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliography.bib'
+[184] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[184] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'variable = shifted' with 'variable = non-ignorable'
+[184] Biber.pm:4203> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-GB'
+[184] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-GB'
+[189] bbl.pm:654> INFO - Writing 'KDSMIL001_NP_Lab2.bbl' with encoding 'UTF-8'
+[190] bbl.pm:757> INFO - Output to KDSMIL001_NP_Lab2.bbl
+[190] Biber.pm:130> WARN - legacy month field 'March 18, 2008' in entry 'nudat' is not an integer - this will probably not sort properly.
+[190] Biber.pm:132> INFO - WARNINGS: 1
