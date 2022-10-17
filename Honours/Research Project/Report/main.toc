@@ -17,4 +17,9 @@
 \contentsline {subsection}{\numberline {3.6}Compiling O2Physics}{14}{subsection.3.6}%
 \contentsline {subsection}{\numberline {3.7}Running a Task with O2}{15}{subsection.3.7}%
 \contentsline {section}{\numberline {4}Our Analysis}{15}{section.4}%
-\contentsline {section}{\numberline {A}Downloading data from the GRID}{17}{appendix.A}%
+\contentsline {subsection}{\numberline {4.1}The Data}{16}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Initial MFT Analysis}{16}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Comparing pass3 to pass4}{17}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Initial ITS Analysis}{17}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Using pass4 for hasITS}{17}{subsection.4.5}%
+\contentsline {section}{\numberline {A}Downloading data from the GRID}{21}{appendix.A}%

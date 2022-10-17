@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  16 OCT 2022 11:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  17 OCT 2022 16:48
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -584,8 +584,8 @@ File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
 
-(/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
-Package: subfig 2005/06/28 ver: 1.3 subfig package
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
  (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
  (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
@@ -605,97 +605,86 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 )
-\c@KVtest=\count337
-\sf@farskip=\skip55
-\sf@captopadj=\dimen302
-\sf@capskip=\skip56
-\sf@nearskip=\skip57
-\c@subfigure=\count338
-\c@subfigure@save=\count339
-\c@lofdepth=\count340
-\c@subtable=\count341
-\c@subtable@save=\count342
-\c@lotdepth=\count343
-\sf@top=\skip58
-\sf@bottom=\skip59
+\c@subfigure=\count337
+\c@subtable=\count338
 ) (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen303
-\WF@size=\dimen304
-\c@WF@wrappedlines=\count344
+\wrapoverhang=\dimen302
+\WF@size=\dimen303
+\c@WF@wrappedlines=\count339
 \WF@box=\box86
 \WF@everypar=\toks45
 Package: wrapfig 2003/01/31  v 3.6
 ) (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count345
-\l__lipsum_a_int=\count346
-\l__lipsum_b_int=\count347
+\g__lipsum_par_int=\count340
+\l__lipsum_a_int=\count341
+\l__lipsum_b_int=\count342
  (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2022/02/02 v3.17 programmable bibliographies (PK/MW)
  (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count348
+\lrq@indent=\count343
  (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 )) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@tabx@nest=\count349
-\c@listtotal=\count350
-\c@listcount=\count351
-\c@liststart=\count352
-\c@liststop=\count353
-\c@citecount=\count354
-\c@citetotal=\count355
-\c@multicitecount=\count356
-\c@multicitetotal=\count357
-\c@instcount=\count358
-\c@maxnames=\count359
-\c@minnames=\count360
-\c@maxitems=\count361
-\c@minitems=\count362
-\c@citecounter=\count363
-\c@maxcitecounter=\count364
-\c@savedcitecounter=\count365
-\c@uniquelist=\count366
-\c@uniquename=\count367
-\c@refsection=\count368
-\c@refsegment=\count369
-\c@maxextratitle=\count370
-\c@maxextratitleyear=\count371
-\c@maxextraname=\count372
-\c@maxextradate=\count373
-\c@maxextraalpha=\count374
-\c@abbrvpenalty=\count375
-\c@highnamepenalty=\count376
-\c@lownamepenalty=\count377
-\c@maxparens=\count378
-\c@parenlevel=\count379
-\blx@tempcnta=\count380
-\blx@tempcntb=\count381
-\blx@tempcntc=\count382
-\c@blx@maxsection=\count383
-\c@blx@maxsegment@0=\count384
-\blx@notetype=\count385
-\blx@parenlevel@text=\count386
-\blx@parenlevel@foot=\count387
-\c@blx@sectionciteorder@0=\count388
-\blx@entrysetcounter=\count389
-\blx@biblioinstance=\count390
-\labelnumberwidth=\skip60
-\labelalphawidth=\skip61
-\biblabelsep=\skip62
-\bibitemsep=\skip63
-\bibnamesep=\skip64
-\bibinitsep=\skip65
-\bibparsep=\skip66
-\bibhang=\skip67
+\c@tabx@nest=\count344
+\c@listtotal=\count345
+\c@listcount=\count346
+\c@liststart=\count347
+\c@liststop=\count348
+\c@citecount=\count349
+\c@citetotal=\count350
+\c@multicitecount=\count351
+\c@multicitetotal=\count352
+\c@instcount=\count353
+\c@maxnames=\count354
+\c@minnames=\count355
+\c@maxitems=\count356
+\c@minitems=\count357
+\c@citecounter=\count358
+\c@maxcitecounter=\count359
+\c@savedcitecounter=\count360
+\c@uniquelist=\count361
+\c@uniquename=\count362
+\c@refsection=\count363
+\c@refsegment=\count364
+\c@maxextratitle=\count365
+\c@maxextratitleyear=\count366
+\c@maxextraname=\count367
+\c@maxextradate=\count368
+\c@maxextraalpha=\count369
+\c@abbrvpenalty=\count370
+\c@highnamepenalty=\count371
+\c@lownamepenalty=\count372
+\c@maxparens=\count373
+\c@parenlevel=\count374
+\blx@tempcnta=\count375
+\blx@tempcntb=\count376
+\blx@tempcntc=\count377
+\c@blx@maxsection=\count378
+\c@blx@maxsegment@0=\count379
+\blx@notetype=\count380
+\blx@parenlevel@text=\count381
+\blx@parenlevel@foot=\count382
+\c@blx@sectionciteorder@0=\count383
+\blx@entrysetcounter=\count384
+\blx@biblioinstance=\count385
+\labelnumberwidth=\skip55
+\labelalphawidth=\skip56
+\biblabelsep=\skip57
+\bibitemsep=\skip58
+\bibnamesep=\skip59
+\bibinitsep=\skip60
+\bibparsep=\skip61
+\bibhang=\skip62
 \blx@bcfin=\read4
 \blx@bcfout=\write4
 \blx@langwohyphens=\language87
-\c@mincomprange=\count391
-\c@maxcomprange=\count392
-\c@mincompwidth=\count393
+\c@mincomprange=\count386
+\c@maxcomprange=\count387
+\c@mincompwidth=\count388
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
@@ -703,88 +692,88 @@ File: blx-dm.def 2022/02/02 v3.17 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count394
-\c@savedafterword=\count395
-\c@annotator=\count396
-\c@savedannotator=\count397
-\c@author=\count398
-\c@savedauthor=\count399
-\c@bookauthor=\count400
-\c@savedbookauthor=\count401
-\c@commentator=\count402
-\c@savedcommentator=\count403
-\c@editor=\count404
-\c@savededitor=\count405
-\c@editora=\count406
-\c@savededitora=\count407
-\c@editorb=\count408
-\c@savededitorb=\count409
-\c@editorc=\count410
-\c@savededitorc=\count411
-\c@foreword=\count412
-\c@savedforeword=\count413
-\c@holder=\count414
-\c@savedholder=\count415
-\c@introduction=\count416
-\c@savedintroduction=\count417
-\c@namea=\count418
-\c@savednamea=\count419
-\c@nameb=\count420
-\c@savednameb=\count421
-\c@namec=\count422
-\c@savednamec=\count423
-\c@translator=\count424
-\c@savedtranslator=\count425
-\c@shortauthor=\count426
-\c@savedshortauthor=\count427
-\c@shorteditor=\count428
-\c@savedshorteditor=\count429
-\c@labelname=\count430
-\c@savedlabelname=\count431
-\c@institution=\count432
-\c@savedinstitution=\count433
-\c@lista=\count434
-\c@savedlista=\count435
-\c@listb=\count436
-\c@savedlistb=\count437
-\c@listc=\count438
-\c@savedlistc=\count439
-\c@listd=\count440
-\c@savedlistd=\count441
-\c@liste=\count442
-\c@savedliste=\count443
-\c@listf=\count444
-\c@savedlistf=\count445
-\c@location=\count446
-\c@savedlocation=\count447
-\c@organization=\count448
-\c@savedorganization=\count449
-\c@origlocation=\count450
-\c@savedoriglocation=\count451
-\c@origpublisher=\count452
-\c@savedorigpublisher=\count453
-\c@publisher=\count454
-\c@savedpublisher=\count455
-\c@language=\count456
-\c@savedlanguage=\count457
-\c@origlanguage=\count458
-\c@savedoriglanguage=\count459
-\c@pageref=\count460
-\c@savedpageref=\count461
-\shorthandwidth=\skip68
-\shortjournalwidth=\skip69
-\shortserieswidth=\skip70
-\shorttitlewidth=\skip71
-\shortauthorwidth=\skip72
-\shorteditorwidth=\skip73
-\locallabelnumberwidth=\skip74
-\locallabelalphawidth=\skip75
-\localshorthandwidth=\skip76
-\localshortjournalwidth=\skip77
-\localshortserieswidth=\skip78
-\localshorttitlewidth=\skip79
-\localshortauthorwidth=\skip80
-\localshorteditorwidth=\skip81
+\c@afterword=\count389
+\c@savedafterword=\count390
+\c@annotator=\count391
+\c@savedannotator=\count392
+\c@author=\count393
+\c@savedauthor=\count394
+\c@bookauthor=\count395
+\c@savedbookauthor=\count396
+\c@commentator=\count397
+\c@savedcommentator=\count398
+\c@editor=\count399
+\c@savededitor=\count400
+\c@editora=\count401
+\c@savededitora=\count402
+\c@editorb=\count403
+\c@savededitorb=\count404
+\c@editorc=\count405
+\c@savededitorc=\count406
+\c@foreword=\count407
+\c@savedforeword=\count408
+\c@holder=\count409
+\c@savedholder=\count410
+\c@introduction=\count411
+\c@savedintroduction=\count412
+\c@namea=\count413
+\c@savednamea=\count414
+\c@nameb=\count415
+\c@savednameb=\count416
+\c@namec=\count417
+\c@savednamec=\count418
+\c@translator=\count419
+\c@savedtranslator=\count420
+\c@shortauthor=\count421
+\c@savedshortauthor=\count422
+\c@shorteditor=\count423
+\c@savedshorteditor=\count424
+\c@labelname=\count425
+\c@savedlabelname=\count426
+\c@institution=\count427
+\c@savedinstitution=\count428
+\c@lista=\count429
+\c@savedlista=\count430
+\c@listb=\count431
+\c@savedlistb=\count432
+\c@listc=\count433
+\c@savedlistc=\count434
+\c@listd=\count435
+\c@savedlistd=\count436
+\c@liste=\count437
+\c@savedliste=\count438
+\c@listf=\count439
+\c@savedlistf=\count440
+\c@location=\count441
+\c@savedlocation=\count442
+\c@organization=\count443
+\c@savedorganization=\count444
+\c@origlocation=\count445
+\c@savedoriglocation=\count446
+\c@origpublisher=\count447
+\c@savedorigpublisher=\count448
+\c@publisher=\count449
+\c@savedpublisher=\count450
+\c@language=\count451
+\c@savedlanguage=\count452
+\c@origlanguage=\count453
+\c@savedoriglanguage=\count454
+\c@pageref=\count455
+\c@savedpageref=\count456
+\shorthandwidth=\skip63
+\shortjournalwidth=\skip64
+\shortserieswidth=\skip65
+\shorttitlewidth=\skip66
+\shortauthorwidth=\skip67
+\shorteditorwidth=\skip68
+\locallabelnumberwidth=\skip69
+\locallabelalphawidth=\skip70
+\localshorthandwidth=\skip71
+\localshortjournalwidth=\skip72
+\localshortserieswidth=\skip73
+\localshorttitlewidth=\skip74
+\localshortauthorwidth=\skip75
+\localshorteditorwidth=\skip76
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
@@ -794,19 +783,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
-\c@textcitecount=\count462
-\c@textcitetotal=\count463
-\c@textcitemaxnames=\count464
-\c@biburlbigbreakpenalty=\count465
-\c@biburlbreakpenalty=\count466
-\c@biburlnumpenalty=\count467
-\c@biburlucpenalty=\count468
-\c@biburllcpenalty=\count469
+\c@textcitecount=\count457
+\c@textcitetotal=\count458
+\c@textcitemaxnames=\count459
+\c@biburlbigbreakpenalty=\count460
+\c@biburlbreakpenalty=\count461
+\c@biburlnumpenalty=\count462
+\c@biburlucpenalty=\count463
+\c@biburllcpenalty=\count464
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count470
+\c@smartand=\count465
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -816,8 +805,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count471
-\c@bbx:relatedtotal=\count472
+\c@bbx:relatedcount=\count466
+\c@bbx:relatedtotal=\count467
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -851,20 +840,20 @@ Package: blx-case-expl3 2022/02/02 v3.17 expl3 case changing code for biblatex
 )) (/usr/share/texlive/texmf-dist/tex/generic/dirtree/dirtree.sty
 Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
  (/usr/share/texlive/texmf-dist/tex/generic/dirtree/dirtree.tex `dirtree' v0.32, 2012/12/11 (jcc)
-\DT@offset=\dimen305
-\DT@width=\dimen306
-\DT@sep=\dimen307
-\DT@all=\dimen308
-\DT@rulewidth=\dimen309
-\DT@dotwidth=\dimen310
-\DTbaselineskip=\dimen311
-\DT@counti=\count473
-\DT@countii=\count474
-\DT@countiii=\count475
-\DT@countiv=\count476
-\DT@indent=\dimen312
-\DT@parskip=\dimen313
-\DT@baselineskip=\dimen314
+\DT@offset=\dimen304
+\DT@width=\dimen305
+\DT@sep=\dimen306
+\DT@all=\dimen307
+\DT@rulewidth=\dimen308
+\DT@dotwidth=\dimen309
+\DTbaselineskip=\dimen310
+\DT@counti=\count468
+\DT@countii=\count469
+\DT@countiii=\count470
+\DT@countiv=\count471
+\DT@indent=\dimen311
+\DT@parskip=\dimen312
+\DT@baselineskip=\dimen313
 )
 File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
 ) (/usr/share/texlive/texmf-dist/tex/latex/minted/minted.sty
@@ -873,66 +862,66 @@ Package: minted 2021/12/24 v2.6 Yet another Pygments shim for LaTeX
 Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
  (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2021/12/21 4.1b verbatim text (tvz,hv)
-\FV@CodeLineNo=\count477
+\FV@CodeLineNo=\count472
 \FV@InFile=\read5
 \FV@TabBox=\box87
-\c@FancyVerbLine=\count478
-\FV@StepNumber=\count479
+\c@FancyVerbLine=\count473
+\FV@StepNumber=\count474
 \FV@OutFile=\write5
 ) (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
 ) (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count480
+\linenopenalty=\count475
 \output=\toks46
-\linenoprevgraf=\count481
-\linenumbersep=\dimen315
-\linenumberwidth=\dimen316
-\c@linenumber=\count482
-\c@pagewiselinenumber=\count483
-\c@LN@truepage=\count484
-\c@internallinenumber=\count485
-\c@internallinenumbers=\count486
-\quotelinenumbersep=\dimen317
-\bframerule=\dimen318
-\bframesep=\dimen319
+\linenoprevgraf=\count476
+\linenumbersep=\dimen314
+\linenumberwidth=\dimen315
+\c@linenumber=\count477
+\c@pagewiselinenumber=\count478
+\c@LN@truepage=\count479
+\c@internallinenumber=\count480
+\c@internallinenumbers=\count481
+\quotelinenumbersep=\dimen316
+\bframerule=\dimen317
+\bframesep=\dimen318
 \bframebox=\box88
 LaTeX Info: Redefining \\ on input line 3056.
 )
-\c@FV@TrueTabGroupLevel=\count487
-\c@FV@TrueTabCounter=\count488
+\c@FV@TrueTabGroupLevel=\count482
+\c@FV@TrueTabCounter=\count483
 \FV@TabBox@Group=\box89
-\FV@TmpLength=\skip82
-\c@FV@HighlightLinesStart=\count489
-\c@FV@HighlightLinesStop=\count490
-\FV@LoopCount=\count491
+\FV@TmpLength=\skip77
+\c@FV@HighlightLinesStart=\count484
+\c@FV@HighlightLinesStop=\count485
+\FV@LoopCount=\count486
 \FV@NCharsBox=\box90
-\FV@BreakIndent=\dimen320
-\FV@BreakIndentNChars=\count492
-\FV@BreakSymbolSepLeft=\dimen321
-\FV@BreakSymbolSepLeftNChars=\count493
-\FV@BreakSymbolSepRight=\dimen322
-\FV@BreakSymbolSepRightNChars=\count494
-\FV@BreakSymbolIndentLeft=\dimen323
-\FV@BreakSymbolIndentLeftNChars=\count495
-\FV@BreakSymbolIndentRight=\dimen324
-\FV@BreakSymbolIndentRightNChars=\count496
-\c@FancyVerbLineBreakLast=\count497
+\FV@BreakIndent=\dimen319
+\FV@BreakIndentNChars=\count487
+\FV@BreakSymbolSepLeft=\dimen320
+\FV@BreakSymbolSepLeftNChars=\count488
+\FV@BreakSymbolSepRight=\dimen321
+\FV@BreakSymbolSepRightNChars=\count489
+\FV@BreakSymbolIndentLeft=\dimen322
+\FV@BreakSymbolIndentLeftNChars=\count490
+\FV@BreakSymbolIndentRight=\dimen323
+\FV@BreakSymbolIndentRightNChars=\count491
+\c@FancyVerbLineBreakLast=\count492
 \FV@LineBox=\box91
 \FV@LineIndentBox=\box92
-\FV@LineWidth=\dimen325
+\FV@LineWidth=\dimen324
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count498
-\calc@Bcount=\count499
-\calc@Adimen=\dimen326
-\calc@Bdimen=\dimen327
-\calc@Askip=\skip83
-\calc@Bskip=\skip84
+\calc@Acount=\count493
+\calc@Bcount=\count494
+\calc@Adimen=\dimen325
+\calc@Bdimen=\dimen326
+\calc@Askip=\skip78
+\calc@Bskip=\skip79
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count500
-\calc@Cskip=\skip85
+\calc@Ccount=\count495
+\calc@Cskip=\skip80
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
 Package shellesc Info: Unrestricted shell escape enabled on input line 75.
@@ -949,25 +938,25 @@ runsystem(uname -s > "main.w18")...executed.
 runsystem(rm -- "main.w18")...executed.
 
 ) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
-\integerpart=\count501
-\decimalpart=\count502
+\integerpart=\count496
+\decimalpart=\count497
 )
 Package: xstring 2021/07/21 v1.84 String manipulations (CT)
 ) (/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip86
-\fb@frw=\dimen328
-\fb@frh=\dimen329
-\FrameRule=\dimen330
-\FrameSep=\dimen331
+\OuterFrameSep=\skip81
+\fb@frw=\dimen327
+\fb@frh=\dimen328
+\FrameRule=\dimen329
+\FrameSep=\dimen330
 )
 \minted@appexistsfile=\read6
 \minted@bgbox=\box93
 \minted@code=\write6
-\c@minted@FancyVerbLineTemp=\count503
-\c@minted@pygmentizecounter=\count504
+\c@minted@FancyVerbLineTemp=\count498
+\c@minted@pygmentizecounter=\count499
 \@float@every@listing=\toks47
-\c@listing=\count505
+\c@listing=\count500
 )
 runsystem(mkdir -p _minted-main)...executed.
 
@@ -978,33 +967,33 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@cmds=\toks50
 \SOUL@buffer=\toks51
 \SOUL@token=\toks52
-\SOUL@spaceskip=\skip87
-\SOUL@ttwidth=\dimen332
-\SOUL@uldp=\dimen333
-\SOUL@ulht=\dimen334
+\SOUL@spaceskip=\skip82
+\SOUL@ttwidth=\dimen331
+\SOUL@uldp=\dimen332
+\SOUL@ulht=\dimen333
 ) (/usr/share/texlive/texmf-dist/tex/latex/mhchem/mhchem.sty
 Package: mhchem 2021/12/31 v4.09 for typesetting chemical formulae
  (/usr/share/texlive/texmf-dist/tex/latex/chemgreek/chemgreek.sty
 Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use in chemistry (CN)
-\l__chemgreek_tmpa_int=\count506
-\g__chemgreek_tmpa_int=\count507
+\l__chemgreek_tmpa_int=\count501
+\g__chemgreek_tmpa_int=\count502
 )
-\l__mhchem_ce_distanceFromLastComma_int=\count508
-\__mhchem_arrow_extPgfLength_skip=\skip88
-\mhchem@minispace@tmp=\skip89
-\mhchem@minibackspace@tmp=\skip90
-\mhchem@bondwidth=\skip91
-\mhchem@bondheight=\skip92
-\mhchem@smallbondwidth@tmpA=\skip93
-\mhchem@smallbondwidth@tmpB=\skip94
-\mhchem@smallbondwidth=\skip95
-\mhchem@bondtmp@minussidebearingleft=\skip96
-\mhchem@bondtmp@minussidebearingright=\skip97
-\l__mhchem_option_version_int=\count509
-\mhchem@option@minusmathsidebearingleft=\dimen335
-\mhchem@option@minusmathsidebearingright=\dimen336
-\mhchem@option@minustextsidebearingleft=\dimen337
-\mhchem@option@minustextsidebearingright=\dimen338
+\l__mhchem_ce_distanceFromLastComma_int=\count503
+\__mhchem_arrow_extPgfLength_skip=\skip83
+\mhchem@minispace@tmp=\skip84
+\mhchem@minibackspace@tmp=\skip85
+\mhchem@bondwidth=\skip86
+\mhchem@bondheight=\skip87
+\mhchem@smallbondwidth@tmpA=\skip88
+\mhchem@smallbondwidth@tmpB=\skip89
+\mhchem@smallbondwidth=\skip90
+\mhchem@bondtmp@minussidebearingleft=\skip91
+\mhchem@bondtmp@minussidebearingright=\skip92
+\l__mhchem_option_version_int=\count504
+\mhchem@option@minusmathsidebearingleft=\dimen334
+\mhchem@option@minusmathsidebearingright=\dimen335
+\mhchem@option@minustextsidebearingleft=\dimen336
+\mhchem@option@minustextsidebearingright=\dimen337
 ) (/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2370.
@@ -1019,17 +1008,149 @@ LaTeX Info: Redefining \Cpagerefrange on input line 2370.
 LaTeX Info: Redefining \labelcref on input line 2370.
 LaTeX Info: Redefining \labelcpageref on input line 2370.
 Package cleveref Info: `listings' support loaded on input line 3131.
-Package cleveref Info: `subfig' support loaded on input line 3164.
 Package cleveref Info: no abbreviation of names on input line 7852.
 )
 Package translations Info: No language package found. I am going to use `english' as default language. on input line 41.
-\@quotelevel=\count510
-\@quotereset=\count511
+\@quotelevel=\count505
+\@quotereset=\count506
 runsystem(which pygmentize && touch main.aex)...executed.
 
 runsystem(rm main.aex)...executed.
 
- (./main.aux)
+ (./main.aux
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@' multiply defined.
+
+
+LaTeX Warning: Label `sub@@cref' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@' multiply defined.
+
+
+LaTeX Warning: Label `sub@@cref' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@' multiply defined.
+
+
+LaTeX Warning: Label `sub@@cref' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@' multiply defined.
+
+
+LaTeX Warning: Label `sub@@cref' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@' multiply defined.
+
+
+LaTeX Warning: Label `sub@@cref' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@' multiply defined.
+
+
+LaTeX Warning: Label `sub@@cref' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@' multiply defined.
+
+
+LaTeX Warning: Label `sub@@cref' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@' multiply defined.
+
+
+LaTeX Warning: Label `sub@@cref' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@' multiply defined.
+
+
+LaTeX Warning: Label `sub@@cref' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@' multiply defined.
+
+
+LaTeX Warning: Label `sub@@cref' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@' multiply defined.
+
+
+LaTeX Warning: Label `sub@@cref' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
@@ -1093,7 +1214,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count512
+\c@section@level=\count507
 )
 LaTeX Info: Redefining \ref on input line 41.
 LaTeX Info: Redefining \pageref on input line 41.
@@ -1108,16 +1229,16 @@ File: translations-basic-dictionary-english.trsl (english translation file `tran
 Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 41.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count513
-\scratchdimen=\dimen339
+\scratchcounter=\count508
+\scratchdimen=\dimen338
 \scratchbox=\box94
-\nofMPsegments=\count514
-\nofMParguments=\count515
+\nofMPsegments=\count509
+\nofMParguments=\count510
 \everyMPshowfont=\toks53
-\MPscratchCnt=\count516
-\MPscratchDim=\dimen340
-\MPnumerator=\count517
-\makeMPintoPDFobject=\count518
+\MPscratchCnt=\count511
+\MPscratchDim=\dimen339
+\MPnumerator=\count512
+\makeMPintoPDFobject=\count513
 \everyMPtoPDFconversion=\toks54
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1130,9 +1251,8 @@ Package pgfplots notification 'compat/show suggested version=true': you might be
 (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
-\c@lstlisting=\count519
+\c@lstlisting=\count514
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package biblatex Info: Trying to load language 'english'...
@@ -1161,7 +1281,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<Figs/UCT.jpg, id=87, 144.54pt x 144.54pt>
+<Figs/UCT.jpg, id=107, 144.54pt x 144.54pt>
 File: Figs/UCT.jpg Graphic file (type jpg)
 <use Figs/UCT.jpg>
 Package pdftex.def Info: Figs/UCT.jpg  used on input line 47.
@@ -1173,7 +1293,7 @@ Package pdftex.def Info: Figs/UCT.jpg  used on input line 47.
 \openout8 = `main.toc'.
 
  [2] (./Sections/1Background.tex
-<Figs/coords.pdf, id=126, 385.02144pt x 184.89075pt>
+<Figs/coords.pdf, id=151, 385.02144pt x 184.89075pt>
 File: Figs/coords.pdf Graphic file (type pdf)
 <use Figs/coords.pdf>
 Package pdftex.def Info: Figs/coords.pdf  used on input line 6.
@@ -1183,7 +1303,7 @@ Package pdftex.def Info: Figs/coords.pdf  used on input line 6.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3]
-<Figs/ALICE_RUN3_schematic.png, id=148, 1927.2pt x 872.25874pt>
+<Figs/ALICE_RUN3_schematic.png, id=173, 1927.2pt x 872.25874pt>
 File: Figs/ALICE_RUN3_schematic.png Graphic file (type png)
 <use Figs/ALICE_RUN3_schematic.png>
 Package pdftex.def Info: Figs/ALICE_RUN3_schematic.png  used on input line 40.
@@ -1193,7 +1313,7 @@ Package pdftex.def Info: Figs/ALICE_RUN3_schematic.png  used on input line 40.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4 <./Figs/coords.pdf>]
-<Figs/ITS_Schematic.png, id=183, 860.46469pt x 490.83376pt>
+<Figs/ITS_Schematic.png, id=208, 860.46469pt x 490.83376pt>
 File: Figs/ITS_Schematic.png Graphic file (type png)
 <use Figs/ITS_Schematic.png>
 Package pdftex.def Info: Figs/ITS_Schematic.png  used on input line 52.
@@ -1203,13 +1323,13 @@ Package pdftex.def Info: Figs/ITS_Schematic.png  used on input line 52.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [5 <./Figs/ALICE_RUN3_schematic.png>]
-<Figs/MCH_schematic_pog.png, id=202, 635.4942pt x 330.5148pt>
+<Figs/MCH_schematic_pog.png, id=227, 635.4942pt x 330.5148pt>
 File: Figs/MCH_schematic_pog.png Graphic file (type png)
 <use Figs/MCH_schematic_pog.png>
 Package pdftex.def Info: Figs/MCH_schematic_pog.png  used on input line 75.
 (pdftex.def)             Requested size: 375.80544pt x 195.45592pt.
  [6 <./Figs/ITS_Schematic.png>]
-<Figs/MFT_schematic.jpg, id=216, 3975.60281pt x 2852.40656pt>
+<Figs/MFT_schematic.jpg, id=241, 3975.60281pt x 2852.40656pt>
 File: Figs/MFT_schematic.jpg Graphic file (type jpg)
 <use Figs/MFT_schematic.jpg>
 Package pdftex.def Info: Figs/MFT_schematic.jpg  used on input line 95.
@@ -1219,7 +1339,7 @@ Package pdftex.def Info: Figs/MFT_schematic.jpg  used on input line 95.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [7 <./Figs/MCH_schematic_pog.png>]
-<Figs/MFT_Disk4_mapping.png, id=228, 1343.0175pt x 919.435pt>
+<Figs/MFT_Disk4_mapping.png, id=253, 1343.0175pt x 919.435pt>
 File: Figs/MFT_Disk4_mapping.png Graphic file (type png)
 <use Figs/MFT_Disk4_mapping.png>
 Package pdftex.def Info: Figs/MFT_Disk4_mapping.png  used on input line 105.
@@ -1229,7 +1349,7 @@ Package pdftex.def Info: Figs/MFT_Disk4_mapping.png  used on input line 105.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [8 <./Figs/MFT_schematic.jpg>]
-<Figs/O2_flow.png, id=243, 526.21594pt x 584.93532pt>
+<Figs/O2_flow.png, id=268, 526.21594pt x 584.93532pt>
 File: Figs/O2_flow.png Graphic file (type png)
 <use Figs/O2_flow.png>
 Package pdftex.def Info: Figs/O2_flow.png  used on input line 127.
@@ -1247,12 +1367,111 @@ LaTeX Warning: `h' float specifier changed to `ht'.
  (./_minted-main/1BA681FA54D788B19C7DCD95374A3E8EDA69F1F5C42981512A6369A550F495B5.pygtex) [13]
 \openout5 = `main.pyg'.
 
- (./_minted-main/A0C73179F9C0E20EE11CC1543569E5FDE48FAF1886BFF81AE3111843E944B2C0.pygtex) [14]) [15] [16] (./Sections/ZZAppendix.tex
+ (./_minted-main/A0C73179F9C0E20EE11CC1543569E5FDE48FAF1886BFF81AE3111843E944B2C0.pygtex) [14]) (./Sections/3MyAnalysis.tex [15]
+<Plots/pass3_MFT/MFTeta_pass3.pdf, id=317, 569.12625pt x 385.44pt>
+File: Plots/pass3_MFT/MFTeta_pass3.pdf Graphic file (type pdf)
+<use Plots/pass3_MFT/MFTeta_pass3.pdf>
+Package pdftex.def Info: Plots/pass3_MFT/MFTeta_pass3.pdf  used on input line 17.
+(pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
+<Plots/pass3_MFT/phi_pass3.pdf, id=318, 569.12625pt x 385.44pt>
+File: Plots/pass3_MFT/phi_pass3.pdf Graphic file (type pdf)
+<use Plots/pass3_MFT/phi_pass3.pdf>
+Package pdftex.def Info: Plots/pass3_MFT/phi_pass3.pdf  used on input line 24.
+(pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
+<Plots/pass3_MFT/nClusters_pass3.pdf, id=319, 569.12625pt x 385.44pt>
+File: Plots/pass3_MFT/nClusters_pass3.pdf Graphic file (type pdf)
+<use Plots/pass3_MFT/nClusters_pass3.pdf>
+Package pdftex.def Info: Plots/pass3_MFT/nClusters_pass3.pdf  used on input line 30.
+(pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
+<Plots/pass3_MFT/Z_MFT_pass3.pdf, id=320, 569.12625pt x 385.44pt>
+File: Plots/pass3_MFT/Z_MFT_pass3.pdf Graphic file (type pdf)
+<use Plots/pass3_MFT/Z_MFT_pass3.pdf>
+Package pdftex.def Info: Plots/pass3_MFT/Z_MFT_pass3.pdf  used on input line 37.
+(pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
+<Plots/pass3_MFT/eta_phi_pass3.pdf, id=321, 569.12625pt x 335.2525pt>
+File: Plots/pass3_MFT/eta_phi_pass3.pdf Graphic file (type pdf)
+<use Plots/pass3_MFT/eta_phi_pass3.pdf>
+Package pdftex.def Info: Plots/pass3_MFT/eta_phi_pass3.pdf  used on input line 47.
+(pdftex.def)             Requested size: 375.80544pt x 221.38498pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Plots/pass3_MFT/x_y_1_pass3.pdf, id=322, 569.12625pt x 532.99126pt>
+File: Plots/pass3_MFT/x_y_1_pass3.pdf Graphic file (type pdf)
+<use Plots/pass3_MFT/x_y_1_pass3.pdf>
+Package pdftex.def Info: Plots/pass3_MFT/x_y_1_pass3.pdf  used on input line 58.
+(pdftex.def)             Requested size: 211.38832pt x 197.96815pt.
+<Plots/pass3_MFT/x_y_2_pass3.pdf, id=323, 569.12625pt x 532.99126pt>
+File: Plots/pass3_MFT/x_y_2_pass3.pdf Graphic file (type pdf)
+<use Plots/pass3_MFT/x_y_2_pass3.pdf>
+Package pdftex.def Info: Plots/pass3_MFT/x_y_2_pass3.pdf  used on input line 65.
+(pdftex.def)             Requested size: 211.38832pt x 197.96815pt.
+<Plots/pass3_MFT/x_y_3_pass3.pdf, id=324, 569.12625pt x 532.99126pt>
+File: Plots/pass3_MFT/x_y_3_pass3.pdf Graphic file (type pdf)
+<use Plots/pass3_MFT/x_y_3_pass3.pdf>
+Package pdftex.def Info: Plots/pass3_MFT/x_y_3_pass3.pdf  used on input line 71.
+(pdftex.def)             Requested size: 211.38832pt x 197.96815pt.
+<Plots/pass3_MFT/x_y_4_pass3.pdf, id=325, 569.12625pt x 532.99126pt>
+File: Plots/pass3_MFT/x_y_4_pass3.pdf Graphic file (type pdf)
+<use Plots/pass3_MFT/x_y_4_pass3.pdf>
+Package pdftex.def Info: Plots/pass3_MFT/x_y_4_pass3.pdf  used on input line 78.
+(pdftex.def)             Requested size: 211.38832pt x 197.96815pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Plots/pass4_MFT/MFTeta_pass4.pdf, id=326, 569.12625pt x 385.44pt>
+File: Plots/pass4_MFT/MFTeta_pass4.pdf Graphic file (type pdf)
+<use Plots/pass4_MFT/MFTeta_pass4.pdf>
+Package pdftex.def Info: Plots/pass4_MFT/MFTeta_pass4.pdf  used on input line 92.
+(pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
+<Plots/pass4_MFT/phi_pass4.pdf, id=327, 569.12625pt x 385.44pt>
+File: Plots/pass4_MFT/phi_pass4.pdf Graphic file (type pdf)
+<use Plots/pass4_MFT/phi_pass4.pdf>
+Package pdftex.def Info: Plots/pass4_MFT/phi_pass4.pdf  used on input line 99.
+(pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
+<Plots/pass4_MFT/nClusters_pass4.pdf, id=328, 569.12625pt x 385.44pt>
+File: Plots/pass4_MFT/nClusters_pass4.pdf Graphic file (type pdf)
+<use Plots/pass4_MFT/nClusters_pass4.pdf>
+Package pdftex.def Info: Plots/pass4_MFT/nClusters_pass4.pdf  used on input line 105.
+(pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
+<Plots/pass4_MFT/Z_MFT_pass4.pdf, id=329, 569.12625pt x 385.44pt>
+File: Plots/pass4_MFT/Z_MFT_pass4.pdf Graphic file (type pdf)
+<use Plots/pass4_MFT/Z_MFT_pass4.pdf>
+Package pdftex.def Info: Plots/pass4_MFT/Z_MFT_pass4.pdf  used on input line 112.
+(pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Plots/pass4_MFT/eta_phi_pass4.pdf, id=330, 569.12625pt x 335.2525pt>
+File: Plots/pass4_MFT/eta_phi_pass4.pdf Graphic file (type pdf)
+<use Plots/pass4_MFT/eta_phi_pass4.pdf>
+Package pdftex.def Info: Plots/pass4_MFT/eta_phi_pass4.pdf  used on input line 122.
+(pdftex.def)             Requested size: 375.80544pt x 221.38498pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Plots/pass3_pass4.pdf, id=331, 569.12625pt x 385.44pt>
+File: Plots/pass3_pass4.pdf Graphic file (type pdf)
+<use Plots/pass3_pass4.pdf>
+Package pdftex.def Info: Plots/pass3_pass4.pdf  used on input line 131.
+(pdftex.def)             Requested size: 375.80544pt x 254.52646pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [16 <./Plots/pass3_MFT/MFTeta_pass3.pdf, page is rotated 90 degrees> <./Plots/pass3_MFT/phi_pass3.pdf, page is rotated 90 degrees> <./Plots/pass3_MFT/nClusters_pass3.pdf, page is rotated 90 degrees> <./Plots/pass3_MFT/Z_MFT_pass3.pdf, page is rotated 90 degrees>] [17 <./Plots/pass3_MFT/eta_phi_pass3.pdf, page is rotated 90 degrees>] [18 <./Plots/pass3_MFT/x_y_1_pass3.pdf, page is rotated 90 degrees> <./Plots/pass3_MFT/x_y_2_pass3.pdf, page is rotated 90 degrees> <./Plots/pass3_MFT/x_y_3_pass3.pdf, page is rotated 90 degrees> <./Plots/pass3_MFT/x_y_4_pass3.pdf, page is rotated 90 degrees>] [19 <./Plots/pass4_MFT/MFTeta_pass4.pdf, page is rotated 90 degrees> <./Plots/pass4_MFT/phi_pass4.pdf, page is rotated 90 degrees> <./Plots/pass4_MFT/nClusters_pass4.pdf, page is rotated 90 degrees> <./Plots/pass4_MFT/Z_MFT_pass4.pdf, page is rotated 90 degrees>] [20 <./Plots/pass4_MFT/eta_phi_pass4.pdf, page is rotated 90 degrees>] (./Sections/ZZAppendix.tex
 \openout5 = `main.pyg'.
 
- (./_minted-main/8EFC202BC9607829907687EC3AFA3D7082CA0C42AFE0759A4F1491A6B69BC02A.pygtex)) [17] (./main.aux)
+ (./_minted-main/8EFC202BC9607829907687EC3AFA3D7082CA0C42AFE0759A4F1491A6B69BC02A.pygtex)
+Overfull \vbox (1.7835pt too high) detected at line 29
+ []
+
+[21 <./Plots/pass3_pass4.pdf, page is rotated 90 degrees>]) [22] (./main.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 60DDC42BFD8DEC27AA40241524FE0191;3118.
+(rerunfilecheck)             Checksum: EE9B340DEE5FBBED4E11C48C24F4BA7B;3911.
 runsystem(rm main.pyg)...executed.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1260,18 +1479,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52729 strings out of 478287
- 1212150 string characters out of 5849289
- 2357086 words of memory out of 5000000
- 70118 multiletter control sequences out of 15000+600000
+ 52795 strings out of 478287
+ 1215538 string characters out of 5849289
+ 2360536 words of memory out of 5000000
+ 70148 multiletter control sequences out of 15000+600000
  482797 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,11n,103p,1010b,1719s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on main.pdf (17 pages, 8549575 bytes).
+ 99i,11n,103p,1010b,1812s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb>
+Output written on main.pdf (22 pages, 8919385 bytes).
 PDF statistics:
- 428 PDF objects out of 1000 (max. 8388607)
- 345 compressed objects within 4 object streams
- 66 named destinations out of 1000 (max. 500000)
- 213 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1152 PDF objects out of 1200 (max. 8388607)
+ 669 compressed objects within 7 object streams
+ 82 named destinations out of 1000 (max. 500000)
+ 328 words of extra memory for PDF output out of 10000 (max. 10000000)
 
