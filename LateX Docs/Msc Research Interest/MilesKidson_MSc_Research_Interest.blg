@@ -1,0 +1,9 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'MilesKidson_MSc_Research_Interest.blg'
+[79] biber:340> INFO - === Mon Oct 17, 2022, 19:35:54
+[93] Biber.pm:418> INFO - Reading 'MilesKidson_MSc_Research_Interest.bcf'
+[157] Biber.pm:972> INFO - Found 0 citekeys in bib section 0
+[170] bbl.pm:654> INFO - Writing 'MilesKidson_MSc_Research_Interest.bbl' with encoding 'UTF-8'
+[170] bbl.pm:757> INFO - Output to MilesKidson_MSc_Research_Interest.bbl
+[170] Biber.pm:130> WARN - The file 'MilesKidson_MSc_Research_Interest.bcf' does not contain any citations!
+[170] Biber.pm:132> INFO - WARNINGS: 1
