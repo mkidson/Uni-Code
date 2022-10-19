@@ -43,16 +43,13 @@ Starting with $\eta$, we see the distribution is lopsided to the lower $\eta$ va
 
 The number of clusters per track is interesting. As was mentioned in \cref{sec:MFT_Theory}, the MFT requires a track to be detected in 4 out of the 5 disks in order to be considered a track. The translation of that statement into number of clusters per track is a bit unclear but we might expect that the minimum number of clusters per track should be 4 as each disk has 2 planes but the track only needs to have a cluster in one of them to count towards the 4 out of 5. However, what we see in \cref{fig:MFTnClusters_pass3} is a minimum of 5 clusters per track. This might be down to a choice made in the reconstruction process to instead require that all 5 disks detect the track before it is accepted. It could also be due to a physical limitation where it's simply not possible for 4 disks to detect a track and not see clusters in 5 disks. At the point of writing, we have not been able to determine the reason for this as the details of reconstruction are near impossible to find.
 
-Interpreting \cref{fig:Z_MFT_pass3} was its own adventure. The documentation for the AOD data model is unclear what gets calculated for the $z$ column in the \texttt{MFTTracks} table, but after much consideration we believe that it represents the $z$-position of the first hit (or cluster) of a given track in the MFT. We see that after the fourth plane, i.e. the second disk, there is no data. This supports the fact that 4 out of 5 disks are required to accept a track as having a first hit in the third disk will obviously never result in a track hitting 4 disks. This information seems to be contradicting the information from \cref{fig:MFTnClusters_pass3} but we regrettably have no resolution to the situation.
+Interpreting \cref{fig:Z_MFT_pass3} was its own adventure. The documentation for the AOD data model is unclear what gets calculated for the $z$ column in the \texttt{MFTTracks} table, but we believe that it represents the $z$-position of the first hit (or cluster) of a given track in the MFT. We see that after the fourth plane, i.e. the second disk, there is no data. This supports the fact that 4 out of 5 disks are required to accept a track as having a first hit in the third disk will obviously never result in a track hitting 4 disks. This information seems to be contradicting the information from \cref{fig:MFTnClusters_pass3} but we regrettably have no resolution to the situation.
 
-\begin{figure}[h]
-    \begin{center}
-        \includegraphics[width=.8\textwidth]{Plots/pass3_MFT/eta_phi_pass3.pdf}
-        \caption{caption}
-        \label{fig:eta_phi_pass3}
-    \end{center}
-\end{figure}
+\bigskip
 
+Out of interest, we can look at the $x$ and $y$ positions of the hits in the first 4 layers that we saw in \cref{fig:Z_MFT_pass3}. This is shown in \cref{fig:MFT_x_y_pass3} and the structure of the ladders of pixel detectors can clearly be seen. As with the $z$ plot, there is no further data for the other layers in the MFT. It would be useful to be able to see the positions of all of the hits for a track, but we are restricted to what is added to the AOD and at this point, this is all we have to work with. 
+
+The blank regions in the $x$-$y$ plots are likely areas where the data has been masked. This is most likely to be because the detector had high noise levels in those areas, which would blow out the rest of the data. Looking at the first two plots, we can see how the front and back planes of the first disk are offset from each other, as we saw in \cref{fig:MFT_Disk4_mapping}. We also see an increased number of hits closer to the centre of the disks. This can be explained by the fact that, assuming particles are emitted isotropically from the interaction point, there will be a drop-off in density of particles as the distance from the interaction point increases and since the disks are flat, the larger the radius on the disk, the further from the interaction point. Thus the density of hits should decrease as the disk radius increases. 
 
 \begin{figure}[h]%
     \centering
@@ -60,30 +57,38 @@ Interpreting \cref{fig:Z_MFT_pass3} was its own adventure. The documentation for
         \centering
         \includegraphics[width=\linewidth]{Plots/pass3_MFT/x_y_1_pass3.pdf}
         \caption{}
-        \label{}
+        \label{fig:x_y_1_pass3}
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{.45\linewidth}
         \centering
         \includegraphics[width=\linewidth]{Plots/pass3_MFT/x_y_2_pass3.pdf}
         \caption{}
-        \label{}
+        \label{fig:x_y_2_pass3}
     \end{subfigure}
     \begin{subfigure}[t]{.45\linewidth}
         \centering
         \includegraphics[width=\linewidth]{Plots/pass3_MFT/x_y_3_pass3.pdf}
         \caption{}
-        \label{}
+        \label{fig:x_y_3_pass3}
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{.45\linewidth}
         \centering
         \includegraphics[width=\linewidth]{Plots/pass3_MFT/x_y_4_pass3.pdf}
         \caption{}
-        \label{}
+        \label{fig:x_y_4_pass3}
     \end{subfigure}
-\caption{}
+\caption{$x$ and $y$ positions of hits in the first 4 layers of the MFT. This is related to \cref{fig:Z_MFT_pass3} as these are the first hits for a given track, so looking at the later layers yields no data. }
 \label{fig:MFT_x_y_pass3}
+\end{figure}
+
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[width=.8\textwidth]{Plots/pass3_MFT/eta_phi_pass3.pdf}
+        \caption{caption}
+        \label{fig:eta_phi_pass3}
+    \end{center}
 \end{figure}
 
 \subsection{Comparing pass3 to pass4}\label{sec:comapring}

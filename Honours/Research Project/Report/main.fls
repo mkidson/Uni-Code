@@ -1600,11 +1600,6 @@ INPUT ./Plots/pass3_MFT/Z_MFT_pass3.pdf
 INPUT Plots/pass3_MFT/Z_MFT_pass3.pdf
 INPUT ./Plots/pass3_MFT/Z_MFT_pass3.pdf
 INPUT ./Plots/pass3_MFT/Z_MFT_pass3.pdf
-INPUT ./Plots/pass3_MFT/eta_phi_pass3.pdf
-INPUT ./Plots/pass3_MFT/eta_phi_pass3.pdf
-INPUT Plots/pass3_MFT/eta_phi_pass3.pdf
-INPUT ./Plots/pass3_MFT/eta_phi_pass3.pdf
-INPUT ./Plots/pass3_MFT/eta_phi_pass3.pdf
 INPUT ./Plots/pass3_MFT/x_y_1_pass3.pdf
 INPUT ./Plots/pass3_MFT/x_y_1_pass3.pdf
 INPUT Plots/pass3_MFT/x_y_1_pass3.pdf
@@ -1625,6 +1620,11 @@ INPUT ./Plots/pass3_MFT/x_y_4_pass3.pdf
 INPUT Plots/pass3_MFT/x_y_4_pass3.pdf
 INPUT ./Plots/pass3_MFT/x_y_4_pass3.pdf
 INPUT ./Plots/pass3_MFT/x_y_4_pass3.pdf
+INPUT ./Plots/pass3_MFT/eta_phi_pass3.pdf
+INPUT ./Plots/pass3_MFT/eta_phi_pass3.pdf
+INPUT Plots/pass3_MFT/eta_phi_pass3.pdf
+INPUT ./Plots/pass3_MFT/eta_phi_pass3.pdf
+INPUT ./Plots/pass3_MFT/eta_phi_pass3.pdf
 INPUT ./Plots/pass4_MFT/MFTeta_pass4.pdf
 INPUT ./Plots/pass4_MFT/MFTeta_pass4.pdf
 INPUT Plots/pass4_MFT/MFTeta_pass4.pdf
