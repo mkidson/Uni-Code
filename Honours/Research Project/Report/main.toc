@@ -22,5 +22,5 @@
 \contentsline {subsection}{\numberline {4.3}Comparing pass 3 to pass 4}{16}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Initial ITS Analysis}{18}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Using pass4 for hasITS}{18}{subsection.4.5}%
-\contentsline {section}{\numberline {A}Downloading data from the GRID}{20}{appendix.A}%
-\contentsline {section}{\numberline {B}Additional Plots}{20}{appendix.B}%
+\contentsline {section}{\numberline {A}Downloading data from the GRID}{21}{appendix.A}%
+\contentsline {section}{\numberline {B}Additional Plots}{21}{appendix.B}%

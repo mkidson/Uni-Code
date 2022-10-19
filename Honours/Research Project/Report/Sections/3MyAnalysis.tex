@@ -104,7 +104,7 @@ In \cref{fig:MFTeta_pass3} we can see that the distribution looks slightly jagge
     \end{center}
 \end{figure}
 
-What we can see in \cref{fig:pass3_pass4_eta} is that pass 3 seems to have missed a large chunk of tracks in one specific region of $\eta$ compared to pass 4. The reason for this is unclear as the details of reconstruction are very hard to find but it could be due to considering MCH tracks being connected to MFT tracks. These new tracks, and thus new $\eta$ distribution, seem to contradict the conclusion drawn from the $x$-$y$ plots in \cref{fig:MFT_x_y_pass3}, where we saw a higher density of 
+What we can see in \cref{fig:pass3_pass4_eta} is that pass 3 seems to have missed a large chunk of tracks in one specific $\eta$ region compared to pass 4. The reason for this is unclear as the details of reconstruction are very hard to find but it could be due to considering MCH tracks being connected to MFT tracks. These new tracks, and resultant $\eta$ distribution, seem to contradict the conclusion drawn from the $x$-$y$ plots in \cref{fig:MFT_x_y_pass3}, where we saw a higher density of tracks closer to the centre of the disks, i.e. with a larger rapidity. This tension is, however, resolvable through a discussion of the definition of $\eta$. We define $\eta$ in \cref{eqn:pseudorapidity} and it is very clearly a nonlinear function of $\theta$. This means that even though we might expect tracks to be uniformly distributed in $\theta$, that is certainly not the case for $\eta$. Thus there is no reason to find the distribution for pass 4 in \cref{fig:pass3_pass4_eta} surprising. 
 
 
 
@@ -121,6 +121,35 @@ What we can see in \cref{fig:pass3_pass4_eta} is that pass 3 seems to have misse
 
 
 \subsection{Initial ITS Analysis}
+After looking at the MFT, we turned our attention to the ITS. The first step was to look at the same variables as with the MFT. We would expect, even more than in the MFT, that distributions should be uniform in some sense. The first issue, though, is making sure the data we're looking at is only coming from the ITS. The table that contains tracks as determined by the ITS is \texttt{aod::Tracks}, but this in fact has tracks as determined by all the detectors in the central barrel, such as the TPC and TOF. In order to make sure only ITS tracks are considered, we used the table \texttt{aod::TracksIU} (Innermost Update) alongside the flag \texttt{hasITS}. The table returns the tracks determined at the innermost update, which is not always the ITS, so we use the \texttt{hasITS} flag to make sure that it is. This method is not foolproof but in the rigidly structured data model it was the best we could do without reworking the entire thing or undertaking the reconstruction ourselves.
+
+Out of interest, we present some plots from before choosing only the ITS tracks in \cref{fig:ITS_1D_nohasITS}. The first interesting thing is the spike at $\eta=0$ as well as the slightly lopsided distribution. The spike
+
+
+\begin{figure}[h]%
+    \centering
+    \begin{subfigure}[t]{.49\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Plots/pass4_TracksIU_nohasITS/eta.pdf}
+        \caption{}
+        \label{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{.49\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Plots/pass4_TracksIU_nohasITS/phi.pdf}
+        \caption{}
+        \label{}
+    \end{subfigure}
+    \begin{subfigure}[t]{.49\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{Plots/pass4_TracksIU_nohasITS/itsNClsInnerBarrel.pdf}
+        \caption{}
+        \label{}
+    \end{subfigure}
+\caption{}
+\label{fig:ITS_1D_nohasITS}
+\end{figure}
 
 
 \subsection{Using pass4 for hasITS}
