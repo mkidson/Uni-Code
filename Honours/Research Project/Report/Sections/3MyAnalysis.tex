@@ -35,7 +35,7 @@ In the AOD data model there is a table called \texttt{MFTTracks} which contains 
         \caption{$z$-position of first hit in the MFT. Note how the $z$ range covers the whole MFT but only the first 4 detector planes have hits.}
         \label{fig:Z_MFT_pass3}
     \end{subfigure}
-\caption{1D histograms for some kinematic variables as well as the number of clusters per track in the MFT. Data from reconstruction pass 3. }
+\caption{1-D histograms for some kinematic variables as well as the number of clusters per track in the MFT. Data from reconstruction pass 3. }
 \label{fig:MFT_1D_pass3}
 \end{figure}
 
@@ -51,7 +51,7 @@ Out of interest, we can look at the $x$ and $y$ positions of the hits in the fir
 
 The blank regions in the $x$-$y$ plots are likely areas where the data has been masked. This is most likely to be because the detector had high noise levels in those areas, which would blow out the rest of the data. Looking at the first two plots, we can see how the front and back planes of the first disk are offset from each other, as we saw in \cref{fig:MFT_Disk4_mapping}. We also see an increased number of hits closer to the centre of the disks. This can be explained by the fact that, assuming particles are emitted isotropically from the interaction point, there will be a drop-off in density of particles as the distance from the interaction point increases and since the disks are flat, the larger the radius on the disk, the further from the interaction point. Thus the density of hits should decrease as the disk radius increases. 
 
-\begin{figure}[h]%
+\begin{figure}[H]%
     \centering
     \begin{subfigure}[t]{.45\linewidth}
         \centering
@@ -79,51 +79,34 @@ The blank regions in the $x$-$y$ plots are likely areas where the data has been 
         \caption{}
         \label{fig:x_y_4_pass3}
     \end{subfigure}
-\caption{$x$ and $y$ positions of hits in the first 4 layers of the MFT. This is related to \cref{fig:Z_MFT_pass3} as these are the first hits for a given track, so looking at the later layers yields no data. }
+\caption{$x$ and $y$ positions of hits in the first 4 layers of the MFT. This is related to \cref{fig:Z_MFT_pass3} as these are the first hits for a given track, so looking at the later layers yields no data. The sections with no data have likely been masked out to remove regions of abnormally high noise. Important to note how at the centre of the disk we see a higher hit density than further out.}
 \label{fig:MFT_x_y_pass3}
 \end{figure}
+
+The last interesting plot from reconstruction pass 3 is a 2-D histogram of $\eta$ and $\varphi$. \Cref{fig:eta_phi_pass3} shows this and we can immediately see the resemblance to the layout in \cref{fig:MFT_Disk4_mapping}. As with \cref{fig:MFTphi_pass3}, we can see the gap in between the half-disks. 
 
 \begin{figure}[h]
     \begin{center}
         \includegraphics[width=.8\textwidth]{Plots/pass3_MFT/eta_phi_pass3.pdf}
-        \caption{caption}
+        \caption{Histogram of $\eta$ and $\varphi$ for tracks in the MFT. The half-disk structure can clearly be seen when comparing to \cref{fig:MFT_Disk4_mapping}. }
         \label{fig:eta_phi_pass3}
     \end{center}
 \end{figure}
 
-\subsection{Comparing pass3 to pass4}\label{sec:comapring}
+\subsection{Comparing pass 3 to pass 4}\label{sec:Comapring}
+In \cref{fig:MFTeta_pass3} we can see that the distribution looks slightly jagged from about -2.4 to -3.4, especially when compared to the section between -3.4 and -4. There isn't any reason to expect a non-smooth distribution there, and that viewpoint is supported by looking at the distribution after reconstruction pass 4. Some issues were identified with pass 3 so pass 4 was performed and we have plotted the two $\eta$ distributions in \cref{fig:pass3_pass4_eta} for comparison.
 
-\begin{figure}[h]%
-    \centering
-    \begin{subfigure}[t]{.49\linewidth}
-        \centering
-        \includegraphics[width=\linewidth]{Plots/pass4_MFT/MFTeta_pass4.pdf}
-        \caption{}
-        \label{}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{.49\linewidth}
-        \centering
-        \includegraphics[width=\linewidth]{Plots/pass4_MFT/phi_pass4.pdf}
-        \caption{}
-        \label{}
-    \end{subfigure}
-    \begin{subfigure}[t]{.49\linewidth}
-        \centering
-        \includegraphics[width=\linewidth]{Plots/pass4_MFT/nClusters_pass4.pdf}
-        \caption{}
-        \label{}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{.49\linewidth}
-        \centering
-        \includegraphics[width=\linewidth]{Plots/pass4_MFT/Z_MFT_pass4.pdf}
-        \caption{}
-        \label{}
-    \end{subfigure}
-\caption{}
-\label{fig:MFT_1D_pass4}
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=.8\textwidth]{Plots/pass3_pass4.pdf}
+        \caption{Comparison of the distribution of $\eta$ per track for reconstruction pass 3 and pass 4. We notice that there is an overall increase in number of tracks, as well as a large number of tracks added in one region, leading to an overall more smooth distribution in pass 4. Note also how there seems to be a higher density of tracks in the smaller $\eta$ range before it drops off outside the range of the MFT.}
+        \label{fig:pass3_pass4_eta}
+    \end{center}
 \end{figure}
+
+What we can see in \cref{fig:pass3_pass4_eta} is that pass 3 seems to have missed a large chunk of tracks in one specific region of $\eta$ compared to pass 4. The reason for this is unclear as the details of reconstruction are very hard to find but it could be due to considering MCH tracks being connected to MFT tracks. These new tracks, and thus new $\eta$ distribution, seem to contradict the conclusion drawn from the $x$-$y$ plots in \cref{fig:MFT_x_y_pass3}, where we saw a higher density of 
+
+
 
 \begin{figure}[h]
     \begin{center}
@@ -134,13 +117,7 @@ The blank regions in the $x$-$y$ plots are likely areas where the data has been 
 \end{figure}
 
 
-\begin{figure}[h]
-    \begin{center}
-        \includegraphics[width=.8\textwidth]{Plots/pass3_pass4.pdf}
-        \caption{caption}
-        \label{fig:pass3_pass4_eta}
-    \end{center}
-\end{figure}
+
 
 
 \subsection{Initial ITS Analysis}

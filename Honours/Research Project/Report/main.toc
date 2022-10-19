@@ -19,7 +19,8 @@
 \contentsline {section}{\numberline {4}Our Analysis}{13}{section.4}%
 \contentsline {subsection}{\numberline {4.1}The Data}{14}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Initial MFT Analysis}{14}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Comparing pass3 to pass4}{15}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Initial ITS Analysis}{15}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Using pass4 for hasITS}{15}{subsection.4.5}%
-\contentsline {section}{\numberline {A}Downloading data from the GRID}{17}{appendix.A}%
+\contentsline {subsection}{\numberline {4.3}Comparing pass 3 to pass 4}{16}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Initial ITS Analysis}{18}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Using pass4 for hasITS}{18}{subsection.4.5}%
+\contentsline {section}{\numberline {A}Downloading data from the GRID}{20}{appendix.A}%
+\contentsline {section}{\numberline {B}Additional Plots}{20}{appendix.B}%
