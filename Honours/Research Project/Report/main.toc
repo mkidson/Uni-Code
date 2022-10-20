@@ -5,9 +5,9 @@
 \contentsline {subsection}{\numberline {2.3}The Inner Tracking System}{3}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}The Muon Spectrometer}{4}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}The Muon Forward Tracker}{5}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}The Online-Offline Analysis Framework}{7}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.6}The Online-Offline Analysis Framework}{8}{subsection.2.6}%
 \contentsline {subsection}{\numberline {2.7}Online Analysis}{8}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}Offline Analysis}{8}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.8}Offline Analysis}{9}{subsection.2.8}%
 \contentsline {section}{\numberline {3}Analysing Using O2}{9}{section.3}%
 \contentsline {subsection}{\numberline {3.1}AOD Structure}{9}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Analysis Task Structure}{10}{subsection.3.2}%
@@ -20,7 +20,9 @@
 \contentsline {subsection}{\numberline {4.1}The Data}{14}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Initial MFT Analysis}{14}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Comparing pass 3 to pass 4}{16}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Initial ITS Analysis}{18}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Using pass4 for hasITS}{18}{subsection.4.5}%
-\contentsline {section}{\numberline {A}Downloading data from the GRID}{21}{appendix.A}%
-\contentsline {section}{\numberline {B}Additional Plots}{21}{appendix.B}%
+\contentsline {subsection}{\numberline {4.4}ITS Analysis}{18}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Summary}{19}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Outlook}{19}{section.5}%
+\contentsline {section}{\numberline {6}Conclusions}{19}{section.6}%
+\contentsline {section}{\numberline {A}Downloading data from the GRID}{22}{appendix.A}%
+\contentsline {section}{\numberline {B}Additional Plots}{22}{appendix.B}%

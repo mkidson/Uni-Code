@@ -27,6 +27,6 @@ Results
 
 Conclusion?
 
-In terms of looking forward, there are some things that can be done to get a better picture of the detector performance. Firstly we could look at simulations to compare distributions. We could also compare new to old techniques for tracking and vertexing when looking at the same data, so for example doing vertexing with the MCH and the MFT and comparing.
+In terms of looking forward, there are some things that can be done to get a better picture of the detector performance. Firstly we could look at simulations to compare distributions. We could also compare new to old techniques for tracking and vertexing when looking at the same data, so for example doing vertexing with the MCH and the MFT and comparing. This likely requires delving into AOD structure etc.
 
 Minimum track length expressed in number of clusters (by default 4 out of 5 disks). from pg 54 of MFT TDR
