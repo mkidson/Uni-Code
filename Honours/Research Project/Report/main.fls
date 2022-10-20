@@ -1684,6 +1684,11 @@ INPUT ./Plots/pass4_TracksIU/itsClusterMap.pdf
 INPUT Plots/pass4_TracksIU/itsClusterMap.pdf
 INPUT ./Plots/pass4_TracksIU/itsClusterMap.pdf
 INPUT ./Plots/pass4_TracksIU/itsClusterMap.pdf
+INPUT ./Plots/pass4_TracksIU/eta_phi.pdf
+INPUT ./Plots/pass4_TracksIU/eta_phi.pdf
+INPUT Plots/pass4_TracksIU/eta_phi.pdf
+INPUT ./Plots/pass4_TracksIU/eta_phi.pdf
+INPUT ./Plots/pass4_TracksIU/eta_phi.pdf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcti1095.tfm
 INPUT ./Sections/ZZAppendix.tex
