@@ -50,7 +50,7 @@ Interpreting \cref{fig:Z_MFT_pass3} was its own adventure. The documentation for
 
 Out of interest, we can look at the $x$ and $y$ positions of the hits in the first 4 layers that we saw in \cref{fig:Z_MFT_pass3}. This is shown in \cref{fig:MFT_x_y_pass3} and the structure of the ladders of pixel detectors can clearly be seen. As with the $z$ plot, there is no further data for the other layers in the MFT. It would be useful to be able to see the positions of all of the hits for a track, but we are restricted to what is added to the AOD and at this point, this is all we have to work with. 
 
-The blank regions in the $x$-$y$ plots are likely areas where the data has been masked. This is most likely to be because the detector had high noise levels in those areas, which would blow out the rest of the data. Looking at the first two plots, we can see how the front and back planes of the first disk are offset from each other, as we saw in \cref{fig:MFT_Disk4_mapping}. We also see an increased number of hits closer to the centre of the disks. This can be explained by the fact that, assuming particles are emitted isotropically from the interaction point, there will be a drop-off in density of particles as the distance from the interaction point increases and since the disks are flat, the larger the radius on the disk, the further from the interaction point. Thus the density of hits should decrease as the disk radius increases. 
+The blank regions in the $x$-$y$ plots are likely areas where the data has been masked. This is most likely to be because the detector had high noise levels in those areas, which would blow out the rest of the data. Looking at the first two plots, we can see how the front and back planes of the first disk are offset from each other, as we saw in \cref{fig:MFT_Disk4_mapping}. We also see an increased number of hits closer to the centre of the disks. This can be explained by the fact that, assuming particles are emitted isotropically from the IP, there will be a drop-off in density of particles as the distance from the IP increases and since the disks are flat, the larger the radius on the disk, the further from the IP. Thus the density of hits should decrease as the disk radius increases. 
 
 \begin{figure}[H]%
     \centering
@@ -109,7 +109,7 @@ What we can see in \cref{fig:pass3_pass4_eta} is that pass 3 seems to have misse
 
 \bigskip
 
-Lastly in comparing pass 3 to pass 4, we can have a look at the $\eta$-$\varphi$ histogram, noting the more uniform distribution overall while still showing the structure we expect from \cref{fig:MFT_Disk4_mapping}. The uniformity in the histograms for pass 4 is an indicator that the detector is working properly as we expect isotropic emission of particles from the interaction point. 
+Lastly in comparing pass 3 to pass 4, we can have a look at the $\eta$-$\varphi$ histogram, noting the more uniform distribution overall while still showing the structure we expect from \cref{fig:MFT_Disk4_mapping}. The uniformity in the histograms for pass 4 is an indicator that the detector is working properly as we expect isotropic emission of particles from the IP. 
 
 \begin{figure}[h]
     \begin{center}
@@ -160,8 +160,7 @@ After looking at the MFT, we turned our attention to the ITS. The first step was
 \label{fig:ITS_1D_nohasITS}
 \end{figure}
 
-Upon seeing the ITS tracks, a few questions arise. Firstly, we see how the $\eta$ distribution is remarkably uniform and symmetric, especially considering \cref{fig:nohasITS_eta}. However, there is clearly a dip in the middle, which contradicts our reasoning for the lopsided distribution in the MFT as we would expect a distribution peaked at the centre and slowly decreasing as it goes outwards. This might be explained by the number of tracks at that pseudorapidity being so large that pile-up or overloading occurs, leading to missed tracks. It could also be due 
-
+Upon seeing the ITS tracks, a few questions arise. Firstly, we see how the $\eta$ distribution is remarkably uniform and symmetric, especially considering \cref{fig:nohasITS_eta}. However, there is clearly a dip in the middle, which contradicts our reasoning for the lopsided distribution in the MFT as we would expect a distribution peaked at the centre and slowly decreasing as it goes outwards. This might be explained by the number of tracks at that pseudorapidity being so large that pile-up or overloading occurs, leading to missed tracks. 
 
 \begin{figure}[h]%
     \centering
