@@ -21,8 +21,7 @@
 \contentsline {subsection}{\numberline {4.2}Initial MFT Analysis}{14}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Comparing pass 3 to pass 4}{16}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}ITS Analysis}{18}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Summary}{22}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Outlook}{22}{section.5}%
+\contentsline {section}{\numberline {5}Discussion and Recommendations}{21}{section.5}%
 \contentsline {section}{\numberline {6}Conclusions}{22}{section.6}%
 \contentsline {section}{\numberline {A}Downloading data from the GRID}{24}{appendix.A}%
 \contentsline {section}{\numberline {B}Additional Plots}{25}{appendix.B}%

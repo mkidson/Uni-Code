@@ -158,7 +158,7 @@ After looking at the MFT, we turned our attention to the ITS. The first step was
 \label{fig:ITS_1D_nohasITS}
 \end{figure}
 
-Upon seeing the ITS tracks, a few questions arise. Firstly, we see how the $\eta$ distribution is remarkably uniform and symmetric, especially considering the form of \cref{fig:nohasITS_eta}. However, there is clearly a dip in the middle, which contradicts our reasoning for the lopsided distribution in the MFT as we would expect a distribution peaked at the centre and slowly decreasing as it goes outwards. This might be explained by the number of tracks at that pseudorapidity being so large that pile-up or overloading occurs, leading to missed tracks. This is something that can be investigated alongside the read-out architecture.
+Upon seeing the ITS tracks, a few questions arise. Firstly, we see how the $\eta$ distribution is remarkably uniform and symmetric, especially considering the form of \cref{fig:nohasITS_eta}. However, there is clearly a dip in the middle, which contradicts our reasoning for the lopsided distribution in the MFT as we would expect a distribution peaked at the centre and slowly decreasing as it goes outwards. This might be explained by the number of tracks at that pseudorapidity being so large that pile-up or overloading occurs, leading to missed tracks. \Cref{fig:nohasITS_eta} supports our expectations as it is sharply peaked at the centre. This is requires more investigation alongside the read-out architecture.
 
 \begin{figure}[H]%
     \centering
@@ -192,9 +192,7 @@ Upon seeing the ITS tracks, a few questions arise. Firstly, we see how the $\eta
 \label{fig:ITS_1D}
 \end{figure}
 
-The $\varphi$ distribution in \cref{fig:ITS_phi} looks much more uniform, at least on the whole, than in \cref{fig:nohasITS_phi}. This is made more obvious when taking \cref{fig:nohasITS_phi_no_ITS} into account as there appears to be no pattern or symmetry in the $\varphi$ distribution of tracks when not detected in the ITS. No reason for this is apparent to us so this requires a more in-depth investigation. The valley in \cref{fig:ITS_phi} at about 4.3, and smaller ones in other places, is certainly a concern. \Cref{fig:ITS_eta_phi} helps to elucidate the situation as we can see there is no $\eta$ dependence on the large gap, so we are inclined to say that a whole strip of detectors in the ITS, running along the $z$-axis, was not functioning properly. This is reasonable as the electronics in the ITS run in that direction, grouping pixel chips together. 
-
-Other smaller gaps can also be seen, spanning short ranges of $\eta$, which would imply short strips of pixel chips weren't working properly.
+The $\varphi$ distribution in \cref{fig:ITS_phi} looks much more uniform, at least on the whole, than in \cref{fig:nohasITS_phi}. This is made more obvious when taking \cref{fig:nohasITS_phi_no_ITS} into account as there appears to be no pattern or symmetry in the $\varphi$ distribution of tracks when not detected in the ITS. No reason for this is apparent to us so this requires a more in-depth investigation. The valley in \cref{fig:ITS_phi} at about 4.3, and smaller ones in other places, is certainly a concern. \Cref{fig:ITS_eta_phi} helps to elucidate the situation as we can see there is no $\eta$ dependence on the large gap, so we are inclined to say that a whole strip of detectors in the ITS, running along the $z$-axis, was not functioning properly. This is reasonable as the electronics in the ITS group pixel chips together in that direction. Other smaller gaps can also be seen, spanning short ranges of $\eta$, which would imply short strips of pixel chips weren't working properly.
 
 \begin{figure}[h]
     \begin{center}
@@ -204,7 +202,7 @@ Other smaller gaps can also be seen, spanning short ranges of $\eta$, which woul
     \end{center}
 \end{figure}
 
-Looking at \cref{fig:ITS_NCls_InnerBarrel} in comparison to \cref{fig:nohasITS_NCls_InnerBarrel}, we see a decrease in the number of tracks with no clusters in the inner barrel. This is clearly as expected. Lastly, the $z$-position of the collision vertex is shown in \cref{fig:ITS_Z} with a gaussian function fit to it. Important to note here is that each entry in the histogram is not a track, as it has been before, but rather a collision in the \texttt{aod::Collisions} table. This is less of an indicator of the performance of the ITS but is always a useful plot to look at to make sure that collisions are happening both as close to the IP as possible but also symmetrically around the IP. Both these conditions are met in this case, within acceptable tolerance. 
+Looking at \cref{fig:ITS_NCls_InnerBarrel} in comparison to \cref{fig:nohasITS_NCls_InnerBarrel}, we see a decrease in the number of tracks with no clusters in the inner barrel. This is clearly as expected. Lastly, the $z$-position of the collision vertex is shown in \cref{fig:ITS_Z} with a gaussian function fit to it. Important to note here is that each entry in the histogram is not a track, as it has been before, but rather a collision in the \texttt{aod::Collisions} table. While the ITS is the main detector that determines the vertex position, there is little information about what information was used to determine the vertex so little can be said about how the ITS performs in this regard. Nevertheless, this is a useful plot to look at to make sure that collisions are happening both as close to the IP as possible but also symmetrically around the IP. Both these conditions are met in this case, within acceptable tolerance. 
 
 \bigskip
 

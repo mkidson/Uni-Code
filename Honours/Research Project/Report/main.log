@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  21 OCT 2022 13:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  21 OCT 2022 17:14
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1233,7 +1233,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<Figs/UCT.jpg, id=119, 144.54pt x 144.54pt>
+<Figs/UCT.jpg, id=115, 144.54pt x 144.54pt>
 File: Figs/UCT.jpg Graphic file (type jpg)
 <use Figs/UCT.jpg>
 Package pdftex.def Info: Figs/UCT.jpg  used on input line 47.
@@ -1249,7 +1249,7 @@ Package pdftex.def Info: Figs/UCT.jpg  used on input line 47.
 \openout9 = `main.lof'.
 
  [3] (./Sections/1Background.tex
-<Figs/coords.pdf, id=210, 385.02144pt x 184.89075pt>
+<Figs/coords.pdf, id=205, 385.02144pt x 184.89075pt>
 File: Figs/coords.pdf Graphic file (type pdf)
 <use Figs/coords.pdf>
 Package pdftex.def Info: Figs/coords.pdf  used on input line 6.
@@ -1259,7 +1259,7 @@ Package pdftex.def Info: Figs/coords.pdf  used on input line 6.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [1]
-<Figs/ALICE_RUN3_schematic.png, id=230, 1927.2pt x 872.25874pt>
+<Figs/ALICE_RUN3_schematic.png, id=225, 1927.2pt x 872.25874pt>
 File: Figs/ALICE_RUN3_schematic.png Graphic file (type png)
 <use Figs/ALICE_RUN3_schematic.png>
 Package pdftex.def Info: Figs/ALICE_RUN3_schematic.png  used on input line 40.
@@ -1269,7 +1269,7 @@ Package pdftex.def Info: Figs/ALICE_RUN3_schematic.png  used on input line 40.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2 <./Figs/coords.pdf>]
-<Figs/ITS_Schematic.png, id=263, 860.46469pt x 490.83376pt>
+<Figs/ITS_Schematic.png, id=258, 860.46469pt x 490.83376pt>
 File: Figs/ITS_Schematic.png Graphic file (type png)
 <use Figs/ITS_Schematic.png>
 Package pdftex.def Info: Figs/ITS_Schematic.png  used on input line 52.
@@ -1279,18 +1279,18 @@ Package pdftex.def Info: Figs/ITS_Schematic.png  used on input line 52.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3 <./Figs/ALICE_RUN3_schematic.png>]
-<Figs/MCH_schematic_pog.png, id=285, 635.4942pt x 330.5148pt>
+<Figs/MCH_schematic_pog.png, id=280, 635.4942pt x 330.5148pt>
 File: Figs/MCH_schematic_pog.png Graphic file (type png)
 <use Figs/MCH_schematic_pog.png>
 Package pdftex.def Info: Figs/MCH_schematic_pog.png  used on input line 74.
 (pdftex.def)             Requested size: 375.80544pt x 195.45592pt.
  [4 <./Figs/ITS_Schematic.png>] [5 <./Figs/MCH_schematic_pog.png>]
-<Figs/MFT_schematic.jpg, id=304, 3975.60281pt x 2852.40656pt>
+<Figs/MFT_schematic.jpg, id=299, 3975.60281pt x 2852.40656pt>
 File: Figs/MFT_schematic.jpg Graphic file (type jpg)
 <use Figs/MFT_schematic.jpg>
 Package pdftex.def Info: Figs/MFT_schematic.jpg  used on input line 94.
 (pdftex.def)             Requested size: 375.80544pt x 269.63219pt.
-<Figs/MFT_Disk4_mapping.png, id=307, 1343.0175pt x 919.435pt>
+<Figs/MFT_Disk4_mapping.png, id=302, 1343.0175pt x 919.435pt>
 File: Figs/MFT_Disk4_mapping.png Graphic file (type png)
 <use Figs/MFT_Disk4_mapping.png>
 Package pdftex.def Info: Figs/MFT_Disk4_mapping.png  used on input line 104.
@@ -1300,7 +1300,7 @@ Package pdftex.def Info: Figs/MFT_Disk4_mapping.png  used on input line 104.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [6 <./Figs/MFT_schematic.jpg>] [7 <./Figs/MFT_Disk4_mapping.png>]
-<Figs/O2_flow.png, id=326, 526.21594pt x 584.93532pt>
+<Figs/O2_flow.png, id=321, 526.21594pt x 584.93532pt>
 File: Figs/O2_flow.png Graphic file (type png)
 <use Figs/O2_flow.png>
 Package pdftex.def Info: Figs/O2_flow.png  used on input line 126.
@@ -1315,49 +1315,49 @@ Package pdftex.def Info: Figs/O2_flow.png  used on input line 126.
 \openout5 = `main.pyg'.
 
  (./_minted-main/A0C73179F9C0E20EE11CC1543569E5FDE48FAF1886BFF81AE3111843E944B2C0.pygtex) [12]) (./Sections/3MyAnalysis.tex [13]
-<Plots/pass3_MFT/MFTeta_pass3.pdf, id=369, 569.12625pt x 385.44pt>
+<Plots/pass3_MFT/MFTeta_pass3.pdf, id=364, 569.12625pt x 385.44pt>
 File: Plots/pass3_MFT/MFTeta_pass3.pdf Graphic file (type pdf)
 <use Plots/pass3_MFT/MFTeta_pass3.pdf>
 Package pdftex.def Info: Plots/pass3_MFT/MFTeta_pass3.pdf  used on input line 13.
 (pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
-<Plots/pass3_MFT/phi_pass3.pdf, id=370, 569.12625pt x 385.44pt>
+<Plots/pass3_MFT/phi_pass3.pdf, id=365, 569.12625pt x 385.44pt>
 File: Plots/pass3_MFT/phi_pass3.pdf Graphic file (type pdf)
 <use Plots/pass3_MFT/phi_pass3.pdf>
 Package pdftex.def Info: Plots/pass3_MFT/phi_pass3.pdf  used on input line 20.
 (pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
-<Plots/pass3_MFT/nClusters_pass3.pdf, id=371, 569.12625pt x 385.44pt>
+<Plots/pass3_MFT/nClusters_pass3.pdf, id=366, 569.12625pt x 385.44pt>
 File: Plots/pass3_MFT/nClusters_pass3.pdf Graphic file (type pdf)
 <use Plots/pass3_MFT/nClusters_pass3.pdf>
 Package pdftex.def Info: Plots/pass3_MFT/nClusters_pass3.pdf  used on input line 26.
 (pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
-<Plots/pass3_MFT/Z_MFT_pass3.pdf, id=372, 569.12625pt x 385.44pt>
+<Plots/pass3_MFT/Z_MFT_pass3.pdf, id=367, 569.12625pt x 385.44pt>
 File: Plots/pass3_MFT/Z_MFT_pass3.pdf Graphic file (type pdf)
 <use Plots/pass3_MFT/Z_MFT_pass3.pdf>
 Package pdftex.def Info: Plots/pass3_MFT/Z_MFT_pass3.pdf  used on input line 33.
 (pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
  [14 <./Plots/pass3_MFT/MFTeta_pass3.pdf, page is rotated 90 degrees> <./Plots/pass3_MFT/phi_pass3.pdf, page is rotated 90 degrees> <./Plots/pass3_MFT/nClusters_pass3.pdf, page is rotated 90 degrees> <./Plots/pass3_MFT/Z_MFT_pass3.pdf, page is rotated 90 degrees>]
-<Plots/pass3_MFT/x_y_1_pass3.pdf, id=565, 569.12625pt x 532.99126pt>
+<Plots/pass3_MFT/x_y_1_pass3.pdf, id=560, 569.12625pt x 532.99126pt>
 File: Plots/pass3_MFT/x_y_1_pass3.pdf Graphic file (type pdf)
 <use Plots/pass3_MFT/x_y_1_pass3.pdf>
 Package pdftex.def Info: Plots/pass3_MFT/x_y_1_pass3.pdf  used on input line 63.
 (pdftex.def)             Requested size: 211.38832pt x 197.96815pt.
-<Plots/pass3_MFT/x_y_2_pass3.pdf, id=566, 569.12625pt x 532.99126pt>
+<Plots/pass3_MFT/x_y_2_pass3.pdf, id=561, 569.12625pt x 532.99126pt>
 File: Plots/pass3_MFT/x_y_2_pass3.pdf Graphic file (type pdf)
 <use Plots/pass3_MFT/x_y_2_pass3.pdf>
 Package pdftex.def Info: Plots/pass3_MFT/x_y_2_pass3.pdf  used on input line 70.
 (pdftex.def)             Requested size: 211.38832pt x 197.96815pt.
-<Plots/pass3_MFT/x_y_3_pass3.pdf, id=567, 569.12625pt x 532.99126pt>
+<Plots/pass3_MFT/x_y_3_pass3.pdf, id=562, 569.12625pt x 532.99126pt>
 File: Plots/pass3_MFT/x_y_3_pass3.pdf Graphic file (type pdf)
 <use Plots/pass3_MFT/x_y_3_pass3.pdf>
 Package pdftex.def Info: Plots/pass3_MFT/x_y_3_pass3.pdf  used on input line 76.
 (pdftex.def)             Requested size: 211.38832pt x 197.96815pt.
-<Plots/pass3_MFT/x_y_4_pass3.pdf, id=568, 569.12625pt x 532.99126pt>
+<Plots/pass3_MFT/x_y_4_pass3.pdf, id=563, 569.12625pt x 532.99126pt>
 File: Plots/pass3_MFT/x_y_4_pass3.pdf Graphic file (type pdf)
 <use Plots/pass3_MFT/x_y_4_pass3.pdf>
 Package pdftex.def Info: Plots/pass3_MFT/x_y_4_pass3.pdf  used on input line 83.
 (pdftex.def)             Requested size: 211.38832pt x 197.96815pt.
  [15]
-<Plots/pass3_MFT/eta_phi_pass3.pdf, id=575, 569.12625pt x 335.2525pt>
+<Plots/pass3_MFT/eta_phi_pass3.pdf, id=570, 569.12625pt x 335.2525pt>
 File: Plots/pass3_MFT/eta_phi_pass3.pdf Graphic file (type pdf)
 <use Plots/pass3_MFT/eta_phi_pass3.pdf>
 Package pdftex.def Info: Plots/pass3_MFT/eta_phi_pass3.pdf  used on input line 93.
@@ -1366,119 +1366,123 @@ Package pdftex.def Info: Plots/pass3_MFT/eta_phi_pass3.pdf  used on input line 9
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Plots/pass3_pass4.pdf, id=580, 569.12625pt x 385.44pt>
+<Plots/pass3_pass4.pdf, id=575, 569.12625pt x 385.44pt>
 File: Plots/pass3_pass4.pdf Graphic file (type pdf)
 <use Plots/pass3_pass4.pdf>
 Package pdftex.def Info: Plots/pass3_pass4.pdf  used on input line 104.
 (pdftex.def)             Requested size: 375.80544pt x 254.52646pt.
 [16 <./Plots/pass3_MFT/x_y_1_pass3.pdf, page is rotated 90 degrees> <./Plots/pass3_MFT/x_y_2_pass3.pdf, page is rotated 90 degrees> <./Plots/pass3_MFT/x_y_3_pass3.pdf, page is rotated 90 degrees> <./Plots/pass3_MFT/x_y_4_pass3.pdf, page is rotated 90 degrees>] [17 <./Plots/pass3_MFT/eta_phi_pass3.pdf, page is rotated 90 degrees> <./Plots/pass3_pass4.pdf, page is rotated 90 degrees>]
-<Plots/pass4_MFT/eta_phi_pass4.pdf, id=854, 569.12625pt x 335.2525pt>
+<Plots/pass4_MFT/eta_phi_pass4.pdf, id=849, 569.12625pt x 335.2525pt>
 File: Plots/pass4_MFT/eta_phi_pass4.pdf Graphic file (type pdf)
 <use Plots/pass4_MFT/eta_phi_pass4.pdf>
 Package pdftex.def Info: Plots/pass4_MFT/eta_phi_pass4.pdf  used on input line 118.
 (pdftex.def)             Requested size: 375.80544pt x 221.38498pt.
  [18 <./Plots/pass4_MFT/eta_phi_pass4.pdf, page is rotated 90 degrees>]
-<Plots/pass4_TracksIU_nohasITS/eta.pdf, id=904, 569.12625pt x 385.44pt>
+<Plots/pass4_TracksIU_nohasITS/eta.pdf, id=899, 569.12625pt x 385.44pt>
 File: Plots/pass4_TracksIU_nohasITS/eta.pdf Graphic file (type pdf)
 <use Plots/pass4_TracksIU_nohasITS/eta.pdf>
 Package pdftex.def Info: Plots/pass4_TracksIU_nohasITS/eta.pdf  used on input line 133.
 (pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
-<Plots/pass4_TracksIU_nohasITS/phi.pdf, id=905, 569.12625pt x 385.44pt>
+<Plots/pass4_TracksIU_nohasITS/phi.pdf, id=900, 569.12625pt x 385.44pt>
 File: Plots/pass4_TracksIU_nohasITS/phi.pdf Graphic file (type pdf)
 <use Plots/pass4_TracksIU_nohasITS/phi.pdf>
 Package pdftex.def Info: Plots/pass4_TracksIU_nohasITS/phi.pdf  used on input line 140.
 (pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
-<Plots/pass4_TracksIU_nohasITS/itsNClsInnerBarrel.pdf, id=906, 569.12625pt x 385.44pt>
+<Plots/pass4_TracksIU_nohasITS/itsNClsInnerBarrel.pdf, id=901, 569.12625pt x 385.44pt>
 File: Plots/pass4_TracksIU_nohasITS/itsNClsInnerBarrel.pdf Graphic file (type pdf)
 <use Plots/pass4_TracksIU_nohasITS/itsNClsInnerBarrel.pdf>
 Package pdftex.def Info: Plots/pass4_TracksIU_nohasITS/itsNClsInnerBarrel.pdf  used on input line 146.
 (pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
-<Plots/phi_no_ITS.pdf, id=907, 569.12625pt x 385.44pt>
+<Plots/phi_no_ITS.pdf, id=902, 569.12625pt x 385.44pt>
 File: Plots/phi_no_ITS.pdf Graphic file (type pdf)
 <use Plots/phi_no_ITS.pdf>
 Package pdftex.def Info: Plots/phi_no_ITS.pdf  used on input line 153.
 (pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
-<Plots/pass4_TracksIU/eta.pdf, id=909, 569.12625pt x 385.44pt>
+<Plots/pass4_TracksIU/eta.pdf, id=905, 569.12625pt x 385.44pt>
 File: Plots/pass4_TracksIU/eta.pdf Graphic file (type pdf)
 <use Plots/pass4_TracksIU/eta.pdf>
 Package pdftex.def Info: Plots/pass4_TracksIU/eta.pdf  used on input line 167.
 (pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
-<Plots/pass4_TracksIU/phi.pdf, id=910, 569.12625pt x 385.44pt>
+<Plots/pass4_TracksIU/phi.pdf, id=906, 569.12625pt x 385.44pt>
 File: Plots/pass4_TracksIU/phi.pdf Graphic file (type pdf)
 <use Plots/pass4_TracksIU/phi.pdf>
 Package pdftex.def Info: Plots/pass4_TracksIU/phi.pdf  used on input line 174.
 (pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
-<Plots/pass4_TracksIU/itsNClsInnerBarrel.pdf, id=911, 569.12625pt x 385.44pt>
+<Plots/pass4_TracksIU/itsNClsInnerBarrel.pdf, id=907, 569.12625pt x 385.44pt>
 File: Plots/pass4_TracksIU/itsNClsInnerBarrel.pdf Graphic file (type pdf)
 <use Plots/pass4_TracksIU/itsNClsInnerBarrel.pdf>
 Package pdftex.def Info: Plots/pass4_TracksIU/itsNClsInnerBarrel.pdf  used on input line 180.
 (pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
-<Plots/pass4_TracksIU/Z.pdf, id=914, 569.12625pt x 385.44pt>
+<Plots/pass4_TracksIU/Z.pdf, id=910, 569.12625pt x 385.44pt>
 File: Plots/pass4_TracksIU/Z.pdf Graphic file (type pdf)
 <use Plots/pass4_TracksIU/Z.pdf>
 Package pdftex.def Info: Plots/pass4_TracksIU/Z.pdf  used on input line 187.
 (pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
  [19 <./Plots/pass4_TracksIU_nohasITS/eta.pdf, page is rotated 90 degrees> <./Plots/pass4_TracksIU_nohasITS/phi.pdf, page is rotated 90 degrees> <./Plots/pass4_TracksIU_nohasITS/itsNClsInnerBarrel.pdf, page is rotated 90 degrees> <./Plots/phi_no_ITS.pdf, page is rotated 90 degrees>]
-<Plots/pass4_TracksIU/eta_phi.pdf, id=1097, 569.12625pt x 335.2525pt>
+<Plots/pass4_TracksIU/eta_phi.pdf, id=1093, 569.12625pt x 335.2525pt>
 File: Plots/pass4_TracksIU/eta_phi.pdf Graphic file (type pdf)
 <use Plots/pass4_TracksIU/eta_phi.pdf>
-Package pdftex.def Info: Plots/pass4_TracksIU/eta_phi.pdf  used on input line 201.
+Package pdftex.def Info: Plots/pass4_TracksIU/eta_phi.pdf  used on input line 199.
 (pdftex.def)             Requested size: 375.80544pt x 221.38498pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [20 <./Plots/pass4_TracksIU/eta.pdf, page is rotated 90 degrees> <./Plots/pass4_TracksIU/phi.pdf, page is rotated 90 degrees> <./Plots/pass4_TracksIU/itsNClsInnerBarrel.pdf, page is rotated 90 degrees> <./Plots/pass4_TracksIU/Z.pdf, page is rotated 90 degrees>]
-<Plots/pass4_TracksIU/itsNCls.pdf, id=1279, 569.12625pt x 385.44pt>
+<Plots/pass4_TracksIU/itsNCls.pdf, id=1275, 569.12625pt x 385.44pt>
 File: Plots/pass4_TracksIU/itsNCls.pdf Graphic file (type pdf)
 <use Plots/pass4_TracksIU/itsNCls.pdf>
-Package pdftex.def Info: Plots/pass4_TracksIU/itsNCls.pdf  used on input line 217.
+Package pdftex.def Info: Plots/pass4_TracksIU/itsNCls.pdf  used on input line 215.
 (pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
-<Plots/pass4_TracksIU/itsClusterMap.pdf, id=1280, 569.12625pt x 385.44pt>
+<Plots/pass4_TracksIU/itsClusterMap.pdf, id=1276, 569.12625pt x 385.44pt>
 File: Plots/pass4_TracksIU/itsClusterMap.pdf Graphic file (type pdf)
 <use Plots/pass4_TracksIU/itsClusterMap.pdf>
-Package pdftex.def Info: Plots/pass4_TracksIU/itsClusterMap.pdf  used on input line 224.
+Package pdftex.def Info: Plots/pass4_TracksIU/itsClusterMap.pdf  used on input line 222.
 (pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
- [21 <./Plots/pass4_TracksIU/eta_phi.pdf, page is rotated 90 degrees> <./Plots/pass4_TracksIU/itsNCls.pdf, page is rotated 90 degrees> <./Plots/pass4_TracksIU/itsClusterMap.pdf, page is rotated 90 degrees>]) [22] [23] (./Sections/ZZAppendix.tex
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [21 <./Plots/pass4_TracksIU/eta_phi.pdf, page is rotated 90 degrees>] [22 <./Plots/pass4_TracksIU/itsNCls.pdf, page is rotated 90 degrees> <./Plots/pass4_TracksIU/itsClusterMap.pdf, page is rotated 90 degrees>] [23] (./Sections/ZZAppendix.tex
 \openout5 = `main.pyg'.
 
  (./_minted-main/8EFC202BC9607829907687EC3AFA3D7082CA0C42AFE0759A4F1491A6B69BC02A.pygtex) [24]
-<Plots/pass4_MFT/MFTeta_pass4.pdf, id=1461, 569.12625pt x 385.44pt>
+<Plots/pass4_MFT/MFTeta_pass4.pdf, id=1457, 569.12625pt x 385.44pt>
 File: Plots/pass4_MFT/MFTeta_pass4.pdf Graphic file (type pdf)
 <use Plots/pass4_MFT/MFTeta_pass4.pdf>
 Package pdftex.def Info: Plots/pass4_MFT/MFTeta_pass4.pdf  used on input line 38.
 (pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
-<Plots/pass4_MFT/phi_pass4.pdf, id=1462, 569.12625pt x 385.44pt>
+<Plots/pass4_MFT/phi_pass4.pdf, id=1458, 569.12625pt x 385.44pt>
 File: Plots/pass4_MFT/phi_pass4.pdf Graphic file (type pdf)
 <use Plots/pass4_MFT/phi_pass4.pdf>
 Package pdftex.def Info: Plots/pass4_MFT/phi_pass4.pdf  used on input line 45.
 (pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
-<Plots/pass4_MFT/nClusters_pass4.pdf, id=1463, 569.12625pt x 385.44pt>
+<Plots/pass4_MFT/nClusters_pass4.pdf, id=1459, 569.12625pt x 385.44pt>
 File: Plots/pass4_MFT/nClusters_pass4.pdf Graphic file (type pdf)
 <use Plots/pass4_MFT/nClusters_pass4.pdf>
 Package pdftex.def Info: Plots/pass4_MFT/nClusters_pass4.pdf  used on input line 51.
 (pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
-<Plots/pass4_MFT/Z_MFT_pass4.pdf, id=1464, 569.12625pt x 385.44pt>
+<Plots/pass4_MFT/Z_MFT_pass4.pdf, id=1460, 569.12625pt x 385.44pt>
 File: Plots/pass4_MFT/Z_MFT_pass4.pdf Graphic file (type pdf)
 <use Plots/pass4_MFT/Z_MFT_pass4.pdf>
 Package pdftex.def Info: Plots/pass4_MFT/Z_MFT_pass4.pdf  used on input line 58.
 (pdftex.def)             Requested size: 230.18253pt x 155.89061pt.
-<Plots/pass4_MFT/x_y_1_pass4.pdf, id=1467, 569.12625pt x 532.99126pt>
+<Plots/pass4_MFT/x_y_1_pass4.pdf, id=1463, 569.12625pt x 532.99126pt>
 File: Plots/pass4_MFT/x_y_1_pass4.pdf Graphic file (type pdf)
 <use Plots/pass4_MFT/x_y_1_pass4.pdf>
 Package pdftex.def Info: Plots/pass4_MFT/x_y_1_pass4.pdf  used on input line 70.
 (pdftex.def)             Requested size: 230.18253pt x 215.56749pt.
-<Plots/pass4_MFT/x_y_2_pass4.pdf, id=1468, 569.12625pt x 532.99126pt>
+<Plots/pass4_MFT/x_y_2_pass4.pdf, id=1464, 569.12625pt x 532.99126pt>
 File: Plots/pass4_MFT/x_y_2_pass4.pdf Graphic file (type pdf)
 <use Plots/pass4_MFT/x_y_2_pass4.pdf>
 Package pdftex.def Info: Plots/pass4_MFT/x_y_2_pass4.pdf  used on input line 77.
 (pdftex.def)             Requested size: 230.18253pt x 215.56749pt.
-<Plots/pass4_MFT/x_y_3_pass4.pdf, id=1469, 569.12625pt x 532.99126pt>
+<Plots/pass4_MFT/x_y_3_pass4.pdf, id=1465, 569.12625pt x 532.99126pt>
 File: Plots/pass4_MFT/x_y_3_pass4.pdf Graphic file (type pdf)
 <use Plots/pass4_MFT/x_y_3_pass4.pdf>
 Package pdftex.def Info: Plots/pass4_MFT/x_y_3_pass4.pdf  used on input line 83.
 (pdftex.def)             Requested size: 230.18253pt x 215.56749pt.
-<Plots/pass4_MFT/x_y_4_pass4.pdf, id=1470, 569.12625pt x 532.99126pt>
+<Plots/pass4_MFT/x_y_4_pass4.pdf, id=1466, 569.12625pt x 532.99126pt>
 File: Plots/pass4_MFT/x_y_4_pass4.pdf Graphic file (type pdf)
 <use Plots/pass4_MFT/x_y_4_pass4.pdf>
 Package pdftex.def Info: Plots/pass4_MFT/x_y_4_pass4.pdf  used on input line 90.
@@ -1492,7 +1496,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E8348615EC8DB1A510B43D4187672153;4106.
+(rerunfilecheck)             Checksum: 6E04C16DB39D9A20BA56C4F02C3103AD;4134.
 runsystem(rm main.pyg)...executed.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1500,18 +1504,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53017 strings out of 478287
- 1221859 string characters out of 5849289
+ 53015 strings out of 478287
+ 1221829 string characters out of 5849289
  2364657 words of memory out of 5000000
- 70337 multiletter control sequences out of 15000+600000
+ 70336 multiletter control sequences out of 15000+600000
  483684 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,11n,103p,1217b,1721s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on main.pdf (29 pages, 9319622 bytes).
+Output written on main.pdf (29 pages, 9319740 bytes).
 PDF statistics:
- 1938 PDF objects out of 2073 (max. 8388607)
- 1048 compressed objects within 11 object streams
- 98 named destinations out of 1000 (max. 500000)
- 427 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1934 PDF objects out of 2073 (max. 8388607)
+ 1044 compressed objects within 11 object streams
+ 97 named destinations out of 1000 (max. 500000)
+ 419 words of extra memory for PDF output out of 10000 (max. 10000000)
 
