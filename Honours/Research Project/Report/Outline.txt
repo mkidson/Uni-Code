@@ -31,4 +31,6 @@ In terms of looking forward, there are some things that can be done to get a bet
 
 Finding out which architecture was used in the ITS would be great, maybe to explain the dip in eta.
 
+Would be nice to have a clustermap for the MFT
+
 Minimum track length expressed in number of clusters (by default 4 out of 5 disks). from pg 54 of MFT TDR

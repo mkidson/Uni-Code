@@ -34,7 +34,7 @@ The data analysed in this report was taken in October 2021, where protons were c
         \caption{$z$-position of first hit in the MFT. Note how the $z$ range covers the whole MFT but only the first 4 detector planes have hits.}
         \label{fig:Z_MFT_pass3}
     \end{subfigure}
-\caption{1-D histograms for some kinematic variables as well as the number of clusters per track in the MFT. Data from reconstruction pass 3. }
+\caption[Gistograms of $\eta$, $\varphi$, \OldTexttt{nClusters}, and $z$ for tracks from pass 3 in the MFT]{1-D histograms for some kinematic variables as well as the number of clusters per track in the MFT. Data from reconstruction pass 3. }
 \label{fig:MFT_1D_pass3}
 \end{figure}
 
@@ -51,6 +51,10 @@ Interpreting \cref{fig:Z_MFT_pass3} was its own adventure. The documentation for
 Out of interest, we can look at the $x$ and $y$ positions of the hits in the first 4 layers that we saw in \cref{fig:Z_MFT_pass3}. This is shown in \cref{fig:MFT_x_y_pass3} and the structure of the ladders of pixel detectors can clearly be seen. As with the $z$ plot, there is no further data for the other layers in the MFT. It would be useful to be able to see the positions of all of the hits for a track, but we are restricted to what is added to the AOD and at this point, this is all we have to work with. 
 
 The blank regions in the $x$-$y$ plots are likely areas where the data has been masked. This is most likely to be because the detector had high noise levels in those areas, which would blow out the rest of the data. Looking at the first two plots, we can see how the front and back planes of the first disk are offset from each other, as we saw in \cref{fig:MFT_Disk4_mapping}. We also see an increased number of hits closer to the centre of the disks. This can be explained by the fact that, assuming particles are emitted isotropically from the IP, there will be a drop-off in density of particles as the distance from the IP increases and since the disks are flat, the larger the radius on the disk, the further its outer points are from the IP. Thus the density of hits should decrease as the disk radius increases. 
+
+\bigskip
+
+The last interesting plot from reconstruction pass 3 is a 2-D histogram of $\eta$ and $\varphi$. \Cref{fig:eta_phi_pass3} shows this and we can immediately see the resemblance to the layout in \cref{fig:MFT_Disk4_mapping}. As with \cref{fig:MFTphi_pass3}, we can see the gap in between the half-disks. 
 
 \begin{figure}[H]%
     \centering
@@ -80,16 +84,14 @@ The blank regions in the $x$-$y$ plots are likely areas where the data has been 
         \caption{}
         \label{fig:x_y_4_pass3}
     \end{subfigure}
-\caption{$x$ and $y$ positions of hits in the first 4 layers of the MFT. This is related to \cref{fig:Z_MFT_pass3} as these are the first hits for a given track, so looking at the later layers yields no data. The sections with no data have likely been masked out to remove regions of abnormally high noise. Important to note how at the centre of the disk we see a higher hit density than further out.}
+\caption[$x$-$y$ histograms of tracks at different planes of the MFT]{$x$ and $y$ positions of hits in the first 4 layers of the MFT. This is related to \cref{fig:Z_MFT_pass3} as these are the first hits for a given track, so looking at the later layers yields no data. The sections with no data have likely been masked out to remove regions of abnormally high noise. Important to note how at the centre of the disk we see a higher hit density than further out.}
 \label{fig:MFT_x_y_pass3}
 \end{figure}
-
-The last interesting plot from reconstruction pass 3 is a 2-D histogram of $\eta$ and $\varphi$. \Cref{fig:eta_phi_pass3} shows this and we can immediately see the resemblance to the layout in \cref{fig:MFT_Disk4_mapping}. As with \cref{fig:MFTphi_pass3}, we can see the gap in between the half-disks. 
 
 \begin{figure}[h]
     \begin{center}
         \includegraphics[width=.8\textwidth]{Plots/pass3_MFT/eta_phi_pass3.pdf}
-        \caption{Histogram of $\eta$ and $\varphi$ for tracks in the MFT from reconstruction pass3. The half-disk structure can clearly be seen when comparing to \cref{fig:MFT_Disk4_mapping}. }
+        \caption[$\eta$-$\varphi$ histogram for tracks from pass 3 in the MFT]{Histogram of $\eta$ and $\varphi$ for tracks in the MFT from reconstruction pass3. The half-disk structure can clearly be seen when comparing to \cref{fig:MFT_Disk4_mapping}. }
         \label{fig:eta_phi_pass3}
     \end{center}
 \end{figure}
@@ -100,7 +102,7 @@ In \cref{fig:MFTeta_pass3} we can see that the distribution looks slightly jagge
 \begin{figure}[H]
     \begin{center}
         \includegraphics[width=.8\textwidth]{Plots/pass3_pass4.pdf}
-        \caption{Comparison of the distribution of $\eta$ per track for reconstruction pass 3 and pass 4. We notice that there is an overall increase in number of tracks, as well as a large number of tracks added in one region, leading to an overall more smooth distribution in pass 4. Note also how there seems to be a higher density of tracks in the smaller $\eta$ range before it drops off outside the range of the MFT.}
+        \caption[Comparison of $\eta$ distributions of tracks from pass 3 and pass 4 in the MFT]{Comparison of the distribution of $\eta$ per track for reconstruction pass 3 and pass 4. We notice that there is an overall increase in number of tracks, as well as a large number of tracks added in one region, leading to an overall more smooth distribution in pass 4. Note also how there seems to be a higher density of tracks in the smaller $\eta$ range before it drops off outside the range of the MFT.}
         \label{fig:pass3_pass4_eta}
     \end{center}
 \end{figure}
@@ -109,12 +111,12 @@ What we can see in \cref{fig:pass3_pass4_eta} is that pass 3 seems to have misse
 
 \bigskip
 
-Lastly in comparing pass 3 to pass 4, we can have a look at the $\eta$-$\varphi$ histogram, noting the more uniform distribution overall while still showing the structure we expect from \cref{fig:MFT_Disk4_mapping}. The uniformity in the histograms for pass 4 is an indicator that the detector is working properly as we expect isotropic emission of particles from the IP. 
+Lastly in comparing pass 3 to pass 4, we can have a look at the $\eta$-$\varphi$ histogram, noting the more uniform distribution overall while still showing the structure we expect from \cref{fig:MFT_Disk4_mapping}. The uniformity in the histograms for pass 4 is an indicator that the detector is working properly as we expect isotropic emission of particles from the IP. More histograms for pass 4 can be found in \cref{apx:Additional_Plots}.
 
 \begin{figure}[h]
     \begin{center}
         \includegraphics[width=.8\textwidth]{Plots/pass4_MFT/eta_phi_pass4.pdf}
-        \caption{Histogram of $\eta$ and $\varphi$ for tracks in the MFT from reconstruction pass 4. The overall increase in tracks can clearly be seen, as well as a more uniform overall distribution.}
+        \caption[$\eta$-$\varphi$ histogram for tracks from pass 4 in the MFT]{Histogram of $\eta$ and $\varphi$ for tracks in the MFT from reconstruction pass 4. The overall increase in tracks can clearly be seen, as well as a more uniform overall distribution.}
         \label{fig:eta_phi_pass4}
     \end{center}
 \end{figure}
@@ -124,10 +126,6 @@ After looking at the MFT, we turned our attention to the ITS. The first step was
 
 \Cref{fig:ITS_1D_nohasITS} shows some histograms of the data before using the \texttt{hasITS} flag. The red histograms are without any modification and the green is choosing all tracks that are NOT seen in the ITS. These should be discussed in conjunction with the histograms of just the ITS tracks, which are presented in \cref{fig:ITS_1D}.
 
-% The first thing to notice is the lack of uniform distributions in the $\eta$ and $\varphi$ histograms. 
-% Out of interest, we present some plots from before choosing only the ITS tracks in \cref{fig:ITS_1D_nohasITS}. The first interesting thing is the spike at $\eta=0$ as well as the slightly lopsided distribution. The spike
-
-% The $\varphi$ histogram shows a very non-uniform distribution, as seen in the MFT histograms, but in this case the reason for the unevenness is unclear. The large dip around $\varphi=4.3$ is present after using \texttt{hasITS} so will be discussed later, but the s
 \begin{figure}[h]%
     \centering
     \begin{subfigure}[t]{.49\linewidth}
@@ -156,13 +154,13 @@ After looking at the MFT, we turned our attention to the ITS. The first step was
         \caption{Histogram of $\varphi$ for tracks detected in the barrel but specifically those that were not detected in the ITS.}
         \label{fig:nohasITS_phi_no_ITS}
     \end{subfigure}
-\caption{Some histograms of kinematic variables of tracks detected in the central barrel. This is data for the tracks at their innermost update, but that does not necessarily mean the tracks are only from the ITS. Uniform and symmetric distributions (aside from the number of clusters) are expected but not seen.}
+\caption[Histograms of $\eta$, $\varphi$, and ITS inner barrel \OldTexttt{nClusters} for tracks in the central barrel]{Some histograms of kinematic variables of tracks detected in the central barrel. This is data for the tracks at their innermost update, but that does not necessarily mean the tracks are only from the ITS. Uniform and symmetric distributions (aside from the number of clusters) are expected but not seen.}
 \label{fig:ITS_1D_nohasITS}
 \end{figure}
 
 Upon seeing the ITS tracks, a few questions arise. Firstly, we see how the $\eta$ distribution is remarkably uniform and symmetric, especially considering the form of \cref{fig:nohasITS_eta}. However, there is clearly a dip in the middle, which contradicts our reasoning for the lopsided distribution in the MFT as we would expect a distribution peaked at the centre and slowly decreasing as it goes outwards. This might be explained by the number of tracks at that pseudorapidity being so large that pile-up or overloading occurs, leading to missed tracks. This is something that can be investigated alongside the read-out architecture.
 
-\begin{figure}[h]%
+\begin{figure}[H]%
     \centering
     \begin{subfigure}[t]{.49\linewidth}
         \centering
@@ -187,16 +185,30 @@ Upon seeing the ITS tracks, a few questions arise. Firstly, we see how the $\eta
     \begin{subfigure}[t]{.49\linewidth}
         \centering
         \includegraphics[width=\linewidth]{Plots/pass4_TracksIU/Z.pdf}
-        \caption{Histogram of the $z$-position of the collision vertex for tracks in the central barrel. A gaussian function is fit to the data, with $\mu=0.2951$, $\sigma=6.0205$. Note that this is not the position as determined by the ITS alone as that information is not in the data model at present.}
+        \caption{Histogram of the $z$-position of the collision vertex. A gaussian function is fit to the data, with $\mu=0.2951$, $\sigma=6.0205$. Note that this is not the position as determined by the ITS alone as that information is not in the data model at present. Each entry is a collision, not a track.}
         \label{fig:ITS_Z}
     \end{subfigure}
-\caption{Histograms of kinematic variables of tracks detected by the ITS. }
+\caption[Histograms of $\eta$, $\varphi$, \OldTexttt{nClusters}, and $z$ for tracks in the ITS]{Histograms of kinematic variables of tracks detected by the ITS as well as of collisions.}
 \label{fig:ITS_1D}
 \end{figure}
 
-The $\varphi$ distribution in \cref{fig:ITS_phi} looks much more uniform, at least on the whole, than in \cref{fig:nohasITS_phi}. This is made more obvious when taking \cref{fig:nohasITS_phi_no_ITS} into account as there appears to be no pattern or symmetry in the $\varphi$ distribution of tracks when not detected in the ITS. No reason for this is apparent to us so this requires a more in-depth investigation. The valley in \cref{fig:ITS_phi} at about 4.3, and smaller ones in other places, is certainly a concern. More will be said about this later on.
+The $\varphi$ distribution in \cref{fig:ITS_phi} looks much more uniform, at least on the whole, than in \cref{fig:nohasITS_phi}. This is made more obvious when taking \cref{fig:nohasITS_phi_no_ITS} into account as there appears to be no pattern or symmetry in the $\varphi$ distribution of tracks when not detected in the ITS. No reason for this is apparent to us so this requires a more in-depth investigation. The valley in \cref{fig:ITS_phi} at about 4.3, and smaller ones in other places, is certainly a concern. \Cref{fig:ITS_eta_phi} helps to elucidate the situation as we can see there is no $\eta$ dependence on the large gap, so we are inclined to say that a whole strip of detectors in the ITS, running along the $z$-axis, was not functioning properly. This is reasonable as the electronics in the ITS run in that direction, grouping pixel chips together. 
 
+Other smaller gaps can also be seen, spanning short ranges of $\eta$, which would imply short strips of pixel chips weren't working properly.
 
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[width=.8\textwidth]{Plots/pass4_TracksIU/eta_phi.pdf}
+        \caption[$\eta$-$\varphi$ histogram for tracks in the ITS]{Histogram of $\eta$ and $\varphi$ for tracks detected in the ITS. The valley at $\varphi\approx 4.3$ can clearly be seen, with no specific $\eta$ region being affected. Note a few other smaller strips of lower counts.}
+        \label{fig:ITS_eta_phi}
+    \end{center}
+\end{figure}
+
+Looking at \cref{fig:ITS_NCls_InnerBarrel} in comparison to \cref{fig:nohasITS_NCls_InnerBarrel}, we see a decrease in the number of tracks with no clusters in the inner barrel. This is clearly as expected. Lastly, the $z$-position of the collision vertex is shown in \cref{fig:ITS_Z} with a gaussian function fit to it. Important to note here is that each entry in the histogram is not a track, as it has been before, but rather a collision in the \texttt{aod::Collisions} table. This is less of an indicator of the performance of the ITS but is always a useful plot to look at to make sure that collisions are happening both as close to the IP as possible but also symmetrically around the IP. Both these conditions are met in this case, within acceptable tolerance. 
+
+\bigskip
+
+The last histograms to interrogate are ones corresponding to the clusters contributing to tracks in the ITS, shown in \cref{fig:ITS_Clusters}. The left is easy to interpret, showing the number of ITS clusters used in each track. Interestingly it appears to have a minimum of 4 clusters per track. If these tracks are from the TPC regime, this doesn't make sense, but if they are standalone tracks then we may have discovered something about the method used.
 
 \begin{figure}[h]%
     \centering
@@ -213,20 +225,8 @@ The $\varphi$ distribution in \cref{fig:ITS_phi} looks much more uniform, at lea
         \caption{Histogram of the so-called ``Cluster Map'' of the ITS, where each layer in the ITS is assigned a bit, starting from the innermost.}
         \label{fig:ITS_ClusterMap}
     \end{subfigure}
-\caption{Additional histograms with information about the ITS clusters used in track finding.}
+\caption[Histograms of cluster information for tracks in the ITS]{Additional histograms with information about the ITS clusters used in track finding.}
 \label{fig:ITS_Clusters}
 \end{figure}
 
-
-
-\begin{figure}[H]
-    \begin{center}
-        \includegraphics[width=.8\textwidth]{Plots/pass4_TracksIU/eta_phi.pdf}
-        \caption{Histogram of $\eta$ and $\varphi$ for tracks detected in the ITS. The valley at $\varphi\approx 4.3$ can clearly be seen, with no specific $\eta$ region being affected. Note a few other smaller strips of lower counts.}
-        \label{fig:ITS_eta_phi}
-    \end{center}
-\end{figure}
-
-
-
-\subsection{Summary}
+On the right of \cref{fig:ITS_Clusters} is the ``Cluster Map'' of the ITS. The column in the data model contains an 8 bit unsigned integer with each bit assigned to a layer, excluding the last bit. If a track has a cluster in a specific layer, the bit is set to 1, otherwise it is set to 0. Since integers have unique representations in binary, we can see exactly which layers contributed to a given track simply by decoding the integer. As seen in \cref{fig:ITS_ClusterMap}, the lowest is 15 meaning the innermost 4 layers had clusters contributing, and the highest is 127 meaning all layers had clusters contributing. In between those is all combinations of the 7 bits, but only those with 4 or more clusters, as expected from \cref{fig:ITS_NCls}. 

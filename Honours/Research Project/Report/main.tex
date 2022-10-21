@@ -57,6 +57,9 @@ Assisted By: Dr. B Naik (Postdoctoral fellow)}
 \tableofcontents
 
 \newpage
+\listoffigures
+
+\newpage
 \pagenumbering{arabic}
 \setcounter{page}{1}
 \section{Introduction}\label{sec:Introduction}
@@ -77,7 +80,16 @@ This report aims to introduce the detectors and the data they output, trace the 
 \section{Our Analysis}\label{sec:OurAnalysis}
 \input{Sections/3MyAnalysis.tex}
 
-\section{Outlook}
+\section{Discussion and Recommendations}
+
+
+There were many times during our analysis where we came up against a limitation in the analysis software that restricted our ability to see the details we were after. This really comes down to the fact that the types of analysis that O2 was (and still is being) built for are not the type that we were looking to do. Given more time to attain a greater understanding of the inner workings of particularly the steps from CTFs to AODs, we might have been able to delve into the belly of the beast and find the data ourselves. Since we were limited by our time this year, the best we can do is recommend some modifications to the AOD data model that would lend themselves to these analyses. 
+
+Firstly we recommend introducing more detail about the tracks in the MFT, such as the position of hits in each disk, or even a simple ``Cluster Map''-style column in the \texttt{aod::MFTTracks} table to be able to see which disks or detector planes contributed to the track. At the present moment there is no way to view the vertex position data as determined by the ITS or the MFT alone. Adding this capability would allow for a much deeper investigation into the improvement of the new ITS and MFT in that sector than we were able to do.
+
+Outside the realm of modifying O2 and the data model, there is more that could be done to properly verify if the distributions we see for, say $\eta$ and $\varphi$, are correct. We have attempted to explain them from a physical motivation but comparison to simulated data would prove the most robust way to check if there are no large systematic errors. In the interest of determining how the MFT has improved the tracking capabilities in the forward region, the old techniques used in Runs 1 and 2 using the MCH could be implemented on new data and compared to the new technique on the same data. This would again require investigation at a much more involved level than was possible in this report but could lead to some interesting results. Once again simulation could aid in this endeavour. 
+
+Lastly, we were left with many questions about the details of the track reconstruction, read-out architecture, and columns in the data model such as the $z$ variable in \texttt{aod::MFTTracks}. This effectively comes down to the documentation surrounding these detectors and analysis framework, so a concerted effort to improve that documentation would be greatly appreciated by people new to the ALICE group and these detectors. 
 
 \section{Conclusions}
 
