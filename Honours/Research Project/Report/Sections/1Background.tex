@@ -9,7 +9,7 @@ The coordinate system used at ALICE needs to be discussed in order to fully expl
     \end{center}
 \end{figure}
 
-We place the $z$-axis along the beamline with its origin at the interaction point (IP). The IP is the point at which collisions happen, right in the center of the detector. The angle around the $z$-axis is called the azimuthal angle, denoted by $\varphi$. Sometimes in the literature $\varphi$ ranges from 0 to $2\pi$ and sometimes it ranges from $-\pi$ to $\pi$. We will try stay consistent and use the latter in this report, but we may need use the other convention at times. The angle from the $z$-axis to the $x$-$y$ plane is called the polar angle, denoted by $\theta$, and runs from 0 to $\pi$. We are interested in the standard 3-momentum of particles that we track in the detector, which we call $\vec{p}=(p_x,p_y,p_z)$, but we also define the transverse momentum as 
+We place the $z$-axis along the beamline with its origin at the interaction point (IP). The IP is the point at which collisions happen, right in the center of the detector. The angle around the $z$-axis is called the azimuthal angle, denoted by $\varphi$. Sometimes in the literature $\varphi$ ranges from 0 to $2\pi$ and sometimes it ranges from $-\pi$ to $\pi$. We will try stay consistent and use the latter in this report, but we may need use the other convention at times. The angle from the $z$-axis in the direction of the $x$-$y$ plane is called the polar angle, denoted by $\theta$, and runs from 0 to $\pi$. We are interested in the standard 3-momentum of particles that we track in the detector, which we call $\vec{p}=(p_x,p_y,p_z)$, but we also define the transverse momentum as 
 \begin{equation}
     p_{\mathrm{T}}=\sqrt{p_x^2 + p_y^2}.
     \label{eqn:transverse momentum}
@@ -19,17 +19,15 @@ We define the rapidity, often denoted as $y$, as
     y=\frac 12 \ln\left(\frac{E+p_z}{E-p_z}\right)
     \label{eqn:rapidity}
 \end{equation}
-where $E$ is the total energy of the particle being considered and $p_z$ is the momentum in the $z$ direction~\cite{kar_exp_phys}. This quantity is useful as differences in rapidity are Lorentz invariant for boosts along the $z$-axis. One issue, however, is that the energy of a particle is hard to measure, so we instead use pseudorapidity, denoted as $\eta$. Rapidity and pseudorapidity are equivalent for massless particles, and near equivalent for particles with total 3-momentum magnitude $p$ much greater than their mass $m$. Pseudorapidity is much easier to measure as it is defined in \cite{kar_exp_phys} as
+where $E$ is the total energy of the particle being considered and $p_z$ is the momentum in the $z$ direction~\cite{kar_exp_phys}. This quantity is useful as differences in rapidity are Lorentz invariant for boosts along the $z$-axis. One issue, however, is that the energy of a particle is hard to measure without absorbing the particle entirely, so we instead use pseudorapidity, denoted as $\eta$. Rapidity and pseudorapidity are equivalent for massless particles and near equivalent for particles with total 3-momentum magnitude $p$ much greater than their mass $m$. Pseudorapidity is much easier to measure as it is defined in \cite{kar_exp_phys} as
 \begin{equation}
     \eta=-\ln\tan\frac{\theta}{2}.
     \label{eqn:pseudorapidity}
 \end{equation}
-From \cref{fig:coords} we see that for $z$ positive, $\eta$ is also positive, and similarly for $z$ negative. Confusingly, we define the ``forward region'' of the ALICE detector as the region for which $z$, and thus $\eta$, are negative. The forward region is where our interest lies.
+From \cref{fig:coords} we see that for $z$ positive, $\eta$ is also positive, and similarly for $z$ negative. Confusingly, we define the ``forward region'' of the ALICE detector as the region for which $z$, and thus $\eta$, are negative. The ``central region'' is roughly defined as $|\eta|<1$. The four coordinates that we use most often are $z$, $\varphi$, $p_\mathrm{T}$, and $\eta$. 
 
-The four coordinates that we use most often are $z$, $\varphi$, $p_\mathrm{T}$, and $\eta$. 
-
-\subsection{ALICE Run 3}
-In 2018, the LHC shut down for what was called Long Shutdown 2 (LS2). During this time, the ALICE experiment was being prepared for Run 3, where it will be taking data at higher energies and much higher luminosities than before, from 2022 until 2025~\cite{ALICE_Upgrade_LOI}. \Cref{fig:ALICE_Schematic} shows the detector configuration for Run 3. The intent of these upgrades was in large part to prepare ALICE for a higher luminosity of collisions in both Pb-Pb and p-p cases. 
+\subsection{ALICE Run 3 Detector Array}
+In 2018, the LHC shut down for what was called Long Shutdown 2 (LS2). During this time, the ALICE experiment was being prepared for Run 3, where it will take data at higher energies and much higher luminosities than before, from 2022 until 2025~\cite{ALICE_Upgrade_LOI}. \Cref{fig:ALICE_Schematic} shows the detector configuration for Run 3. The intent of these upgrades was in large part to prepare ALICE for a higher luminosity of collisions in both Pb-Pb and p-p cases. 
 
 Part of the upgrades for Run 3, the details of which can be found in \cite{ALICE_Upgrade_LOI}, were a whole new Inner Tracking System and a brand new detector called the Muon Forward Tracker. These detectors are both silicon-based and their primary purpose is tracking particles and determining the collision vertex, which is the best estimation of where the collision that resulted in these particles happened. 
 
@@ -38,7 +36,7 @@ The read-out electronics for many detectors were upgraded to allow for continuou
 \begin{figure}[h]
     \begin{center}
         \includegraphics[width=\textwidth]{Figs/ALICE_RUN3_schematic.png}
-        \caption[Schematic view of the ALICE detector setup for Run 3 of the LHC]{Schematic view of the ALICE detector setup for Run 3 of the LHC~\cite{ALICE_schematic_labels}. Note here that the MCH is shown separate from the MID, which act as the triggering mechanism for the MCH. For the purposes of this report, the MID will be considered part of the MCH. The ITS (6, 7), MCH (8), and MFT (9) are the focus of this report.}
+        \caption[Schematic view of the ALICE detector setup for Run 3 of the LHC]{Schematic view of the ALICE detector setup for Run 3 of the LHC~\cite{ALICE_schematic_labels}. Note here that the MCH is shown separate from the MID, which act as the triggering mechanism for the MCH. For the purposes of this report, the MID will be considered part of the MCH. The ITS (6, 7), MCH (8), and MFT (9) are the focus of this report. The large red casing is a solenoid magnet whose field lines point along the beam axis and whose direction can be flipped or turned off entirely.}
         \label{fig:ALICE_Schematic}
     \end{center}
 \end{figure}
@@ -50,7 +48,7 @@ The Inner Tracking System (ITS) sits in the main barrel of ALICE, as seen in \cr
 \begin{figure}[h]
     \begin{center}
         \includegraphics[width=.8\textwidth]{Figs/ITS_Schematic.png}
-        \caption[Schematic view of the Inner Tracking System]{Schematic view of the Inner Tracking System~\cite{ITS_Upgrade_TDR}. Note the thinner beam pipe and extremely close Inner Barrel.}
+        \caption[Schematic view of the Inner Tracking System]{Schematic view of the Inner Tracking System~\cite{ITS_Upgrade_TDR}. Note the thinner beam pipe and extremely close Inner Barrel, as well as the structure of pixel chips running along the beam line.}
         \label{fig:ITS_Schematic}
     \end{center}
 \end{figure}
@@ -59,12 +57,9 @@ The new ITS consists of 7 layers of pixel detectors; 3 in the ``Inner Barrel'' a
 
 The pixel detectors used are \SI{0.18}{\micro\metre} CMOS chips from TowerJazz. When a charged particle passes through the silicon in the active volume, it liberates the charge carriers in the material, which then collect on electrodes connected to the silicon, telling the detector that a particle has been detected. The fine segmentation of the detectors also allows the detector to determine the point at which the particle hit the detector, up to a resolution of \SI{4}{\micro\metre} in both the $r\varphi$ and $z$ directions~\cite{ITS_Upgrade_TDR}. The amount of charge deposited on the detector is dependent on the particle species and momentum (Bethe-Bloch). 
 
-The ITS creates particle tracks in two stages. Firstly it looks at tracks found in the TPC and uses them as seeds to create tracks from the clusters of hits in the ITS with a Kalman filter~\cite{Kalman}, thus elongating the TPC tracks. This method works for particles with $\pt\gtrsim\SI{100}{\mega\electronvolt\per c}$ but below that, the TPC acceptance drops off considerably so stand-alone ITS tracking takes over, working on those clusters that were not used in the previous method. The Cellular Automaton method, described in more detail in \cref{sec:MFT_Theory}, is used for this stand-alone track finding. There doesn't appear to be a minimum number of layers required for a track to be accepted in the stand-alone regime but the TPC regime requires 5 out of 7 layers contributing.
+The ITS creates particle tracks in two stages. Firstly it looks at tracks found in the TPC and uses them as seeds to create tracks from the clusters of hits in the ITS with a Kalman filter~\cite{Kalman}, thus extending the TPC tracks and giving them much better timing information. This method works for particles with $\pt\gtrsim\SI{100}{\mega\electronvolt\per c}$ but below that, the TPC acceptance drops off considerably so stand-alone ITS tracking takes over, working on those clusters that were not used in the previous method. The Cellular Automaton method, described in more detail in \cref{sec:MFT_Theory}, is used for this stand-alone track finding. There doesn't appear to be a minimum number of layers required for a track to be accepted in the stand-alone regime but the TPC regime requires 5 out of 7 layers contributing.
 
-Two main methods of read-out were considered for the ITS in the new continuous read-out scheme. Firstly, a rolling shutter which continually loops through the rows of pixels and reads out the charge deposited on that pixel in the time since the last read-out was considered. The time between readings, known as the integration time, for the first method is around \SI{30}{\micro\second}. The rolling shutter scheme lends itself to needing a small number of transistors within each pixel. The second scheme is known as ALPIDE, where each pixel has a comparator that signals when the pixel has an analogue signal greater than the comparator's threshold. The signalled pixels then get read out asynchronously, according to their priority in the chain. This scheme has an effective integration time of around \SI{4}{\micro\second} but has a larger material budget. At time of writing it was not clear to us which read-out architecture is used in the ITS.
-
-% \textcolor{red}{\textbf{\textit{NOTE THAT I AM TRYING TO FIND OUT WHICH ARCHITECTURE WAS DECIDED ON FOR THE ITS. IT'S NOT IN THE TDR AS FAR AS I CAN SEE SO IF I CAN'T FIND IT I WILL REWORK THIS SECTION A BIT}}}
-% % \textbf{\textit{FIND OUT WHICH ONE WAS USED SMH}}
+Two main methods of read-out were considered for the ITS in the new continuous read-out scheme. Firstly, a rolling shutter which continually loops through the rows of pixels and reads out the charge deposited on that pixel in the time since the last read-out was considered. The time between readings, known as the integration time, for the first method is around \SI{30}{\micro\second}. The rolling shutter scheme lends itself to needing a small number of transistors within each pixel. The second scheme is known as ALPIDE, where each pixel has a comparator that signals when the pixel has an analogue signal greater than the comparator's threshold. The signalled pixels then get read out asynchronously, according to their priority in the chain. This scheme has an effective integration time of around \SI{4}{\micro\second} but has a larger material budget. At time of writing it is not clear to us which read-out architecture is used in the ITS.
 
 \subsection{The Muon Spectrometer}
 The MCH sits in the forward region of ALICE, as seen in \cref{fig:ALICE_Schematic}, and covers $-4<\eta<-2.5$. It is designed to study heavy quark resonances through their single- and di-muon decay channels. As is shown in \cref{fig:Muon Spectrometer}, it is composed of a hadronic absorber, 5 tracking chambers, a dipole magnet, another absorber, and finally the 2 trigger chambers. The MFT is often also considered part of the MCH but is not shown in \cref{fig:Muon Spectrometer}. This section is adapted from the MCH Technical Design Report~\cite{MCH_TDR}.
@@ -92,7 +87,7 @@ The MFT is a brand new detector added to ALICE for Run 3 to assist the MCH with 
 \begin{figure}[ht]
     \begin{center}
         \includegraphics[width=.8\textwidth]{Figs/MFT_schematic.jpg}
-        \caption[Schematic view of the Muon Forward Tracker]{Schematic view of the Muon Forward Tracker~\cite{MFT_Schematic}. The small cone on the left shows the IP. Note that the 5 disks each have a front and back plane of pixel detectors, totalling 10 $z$-positions for the MFT to ``see'' particles at.}
+        \caption[Schematic view of the Muon Forward Tracker]{Schematic view of the Muon Forward Tracker~\cite{MFT_Schematic}. The small cone on the left shows the IP. Note that the 5 disks each have a front and back plane of pixel detectors, totalling 10 $z$-positions for the MFT to ``see'' particles at. The slight gap between top and bottom half-disks can also be seen.}
         \label{fig:MFT Schematic}
     \end{center}
 \end{figure}
@@ -115,7 +110,7 @@ There are two algorithms used in conjunction to group clusters into track candid
 
 The CA algorithm works by pairing clusters in neighbouring disks into ``cells'' and then iterating through cells and determining, based on a number of parameters such as maximum deviation angle and maximum $\theta$ angle of a cell according to the collision vertex, whether neighbouring cells are ``compatible'' and grouping those cells together as candidates for a track. This algorithm depends on having a determined position of the collision vertex to both create cells and to match cells together as in both cases they need to point towards the vertex within some pre-defined limit. This vertex position can be supplied by external means, such as the ITS, or it can be estimated using cells between the first two disks. The algorithm also has a default minimum track length in terms of number of disks involved in the process, which is set by default at 4 out of 5 disks. 
 
-Due to the number of cluster combinations that the CA algorithm needs to consider compared to LTF, it ends up being considerably more computationally expensive to run. Since both methods have their advantages, particularly with CA picking up the slack in the low momentum (and specifically low $\pt$) regions, both methods are implemented. LTF goes first, finding as many high $\pt$ tracks as it can, and then CA runs on the clusters that the LTF did not find tracks for. This reduces the overall computation time and take advantage of both algorithms as much as possible. 
+Due to the number of cluster combinations that the CA algorithm needs to consider compared to LTF, it ends up being considerably more computationally expensive to run. Since both methods have their advantages, particularly with CA picking up the slack in the low momentum (and specifically low $\pt$) regions, both methods are implemented. LTF goes first, finding as many high $\pt$ tracks as it can, and then CA runs on the clusters that the LTF did not find tracks for. This reduces the overall computation time and takes advantage of both algorithms as much as possible. 
 
 
 \subsection{The Online-Offline Analysis Framework}
@@ -137,6 +132,6 @@ With the CTFs stored to disk, they can then by processed asynchronously into Eve
 
 The process of turning CTFs into AODs is called ``reconstruction'' and is often performed multiple times on the same data. Iterations of reconstruction are called reconstruction passes and these passes will usually be done many times if the previous passes missed something in their reconstruction, or perhaps if a certain table was not populated in the reconstruction but someone needs that table for their analysis. As a result of this, two different passes on the same data can end up with very different-looking results. 
 
-We distinguish between data taken in Run 3 and data taken in Runs 1 and 2 by calling Run 3 AOD's ``AO2D'' files, and Run 1 and 2 just ``AOD'' files. The data is stored on the \OldTexttt{alimonitor} system, requiring a certificate to access, which is obtained by joining the ALICE collaboration. Access to all data and most analysis tools used in this report is restricted behind this wall. AODs can then be analysed using an ``Analysis Task'', which is written in C\OldTexttt{++} and ROOT. 
+We distinguish between data taken in Run 3 and data taken in Runs 1 and 2 by calling Run 3 AODs ``AO2D'' files, and Run 1 and 2 just ``AOD'' files. The data is stored on the \OldTexttt{alimonitor} system, requiring a browser certificate to access, which is obtained by joining the ALICE collaboration. Access to all data and most analysis tools used in this report is restricted behind this wall. AODs can then be analysed using an ``Analysis Task'', which is written in C\OldTexttt{++} and ROOT. 
 
-The focus of the upgraded analysis framework was to reduce disk space usage when processing and analysing, as well as making sure all analysis takes advantage of all processing power available to it at all times.
+The focus of the upgraded analysis framework was to reduce disk space usage when processing and analysing, as well as making sure all analysis takes advantage of all processing power available to it at all times. These themes are present in every step.

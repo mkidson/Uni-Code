@@ -13,7 +13,7 @@ The data that we use in our analysis comes in the form of Analysis Object Data. 
 \end{itemize}
 
 \subsection{Analysis Task Structure}\label{sec:TaskStructure}
-Analysis tasks are written in C\OldTexttt{++} and need to be structured in a specific way so that O2Physics to use them properly. Each task is written as a \texttt{struct} object which is then called at the end of the task. Below is an outline of what is needed for a task.
+Analysis tasks are written in C\OldTexttt{++} and need to be structured in a specific way so that O2Physics can use them properly. Each task is written as a \texttt{struct} object which is then called at the end of the task. Below is an outline of what is needed for a task.
 
 \begin{minted}{c++}
 #include "Framework/runDataProcessing.h"
@@ -24,7 +24,7 @@ using namespace o2;
 struct MyTask {
   // Define things here, such as histogram registries, filters for data, or new tables
 
-  void init(o2::framework::InitContext&) {
+  void init(framework::InitContext&) {
     // Here we initialise histograms and other things used in the analysis
   };
   // The arguments of the process function are where we subscribe to specific tables in the AOD that we're analysing. 
@@ -43,13 +43,13 @@ WorkflowSpec defineDataProcessing(ConfigContext const& cfgc)
 \end{minted}
 
 \subsection{Table Features}
-All variables associated with for example, a track, could be included in a single table. However, since we often only need a few of the variables, the tables are split up into sections that contain variables often used together. If needed, these tables can be joined together when doing analysis using \texttt{o2::soa::Join<Table1, Table2>}. Importantly, only tables which correspond row-to-row and have the same number of rows can be joined in this way.
+All variables associated with a track, for example, could be included in a single table. However, since we often only need a few of the variables, the tables are split up into sections that contain variables often used together. If needed, these tables can be joined together when doing analysis using \texttt{o2::soa::Join<Table1, Table2>}. Importantly, only tables which correspond row-to-row and have the same number of rows can be joined in this way.
 
 We might also want to only access entries in a table that pass some filter, say having $|\eta| < 0.8$. We can do this by putting \texttt{Filter f = nabs(aod::track::eta) < 0.8;} somewhere before the \texttt{process} function and then instead of subscribing to \texttt{aod::Tracks} as we have done, we can put \texttt{soa::Filtered<aod::Tracks> const\& filteredTracks} in the \texttt{process} function call. Multiple filters can be defined and only compatible tables will be filtered. Once a table has been filtered, the unfiltered version cannot be accessed. 
 
 Similar to filters are partitions, which we define like \texttt{Partition<aod::Tracks> leftEta = aod::track::eta < 0;}. This will create a separate table that we can subscribe to which will only contain tracks with the specified $\eta$ value. This is different to a filter as the original table can also be accessed at any time. 
 
-Some tables have pre-defined iterators which can be used to more efficiently loop through all entries in the table. \texttt{Collisions}, for example, has an iterator called \texttt{Collision} that we subscribed to in the code example above. When a table has an index column relating to \texttt{Collisions}, as \texttt{Tracks} is, O2 will group the entries in \texttt{Tracks} by associated collision. 
+Some tables have pre-defined iterators which can be used to more efficiently loop through all entries in the table. \texttt{Collisions}, for example, has an iterator called \texttt{Collision} that we subscribed to in the code example above. When a table has an index column relating to \texttt{Collisions}, as \texttt{Tracks} is, O2 will automatically group the entries in \texttt{Tracks} by associated collision. 
 
 \subsection{Histogram Registry}
 Histograms are the eventual desired output of an analysis task and O2 has a class designed specifically to make creating and filling histograms easier. Before the \texttt{init} function we can define our histogram registry and then in the \texttt{init} function we can define the histograms we want and add them to the registry. We can then fill the histograms in the \texttt{process} function.
@@ -79,7 +79,7 @@ void process(aod::Tracks const& tracks) {
 \subsection{Folder Structure}\label{sec:FolderStructure}
 With the task written, it then needs to be compiled and added to O2Physics so that it can be run. O2Physics has a number of analysis tasks written by people at ALICE which get compiled automatically. These are sorted into physics working groups such as Heavy Flavour (PWGHF) and Jets (PWGJE). If we want to add our own task to O2Physics, we need to create our own folder with the same structure as the working groups. Below shows the structure of the file system.
 
-\newpage
+% \newpage
 \dirtree{%
   .1 alice.
   .2 alidist.
@@ -99,7 +99,6 @@ With the task written, it then needs to be compiled and added to O2Physics so th
   .3 CMakeLists.txt.
   .2 sw.
 }
-
 Here \texttt{alidist} is the git repository that handles the versioning of O2 and O2Physics. O2 is what handles the backend of the analysis framework, compiling the tasks written in O2Physics. The \texttt{CMakeLists.txt} files are needed at every level of the O2Physics structure to tell O2 what to compile and which commands to use to refer to things. 
 
 See below an example of what the \texttt{CMakeLists.txt} file in the \texttt{myTasks} folder would look like.
@@ -113,7 +112,7 @@ o2physics_add_dpl_workflow(my-task1     # The command assigned to the task. Note
 \end{minted}
 
 \subsection{Compiling O2Physics}\label{sec:CompileO2Physics}
-O2 and O2Physics are built on your system using \texttt{aliBuild}~\cite{aliBuild_install}. They prefer to be built on UNIX systems and require at least 8 GB of RAM, preferably more. We used both O2 and O2Physics as we wanted to create and run analysis tasks. 
+O2 and O2Physics are built using \texttt{aliBuild}~\cite{aliBuild_install}. They prefer to be built on UNIX systems and require at least 8 GB of RAM, preferably more. We used both O2 and O2Physics as we wanted to create and run analysis tasks. 
 
 Once they are built (those four words are doing some \textit{very} heavy lifting) we can enter the O2Physics environment with \texttt{alienv enter O2Physics} and this will place us in a new terminal shell. The magic of the software is that it compiles all the analysis tasks in O2Physics, as well as tools for simulation and the like, such that everything can be done by running commands in that shell. Before running our own tasks, however, we need to tell O2 to build our tasks into O2Physics. To do this we use \texttt{ninja}.
 

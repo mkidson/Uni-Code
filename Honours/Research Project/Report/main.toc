@@ -1,10 +1,10 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {section}{\numberline {2}Background \& Detector Theory}{1}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Coordinates}{1}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}ALICE Run 3}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}ALICE Run 3 Detector Array}{2}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}The Inner Tracking System}{3}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}The Muon Spectrometer}{4}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}The Muon Forward Tracker}{5}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.5}The Muon Forward Tracker}{6}{subsection.2.5}%
 \contentsline {subsection}{\numberline {2.6}The Online-Offline Analysis Framework}{8}{subsection.2.6}%
 \contentsline {subsection}{\numberline {2.7}Online Analysis}{8}{subsection.2.7}%
 \contentsline {subsection}{\numberline {2.8}Offline Analysis}{9}{subsection.2.8}%
@@ -22,6 +22,6 @@
 \contentsline {subsection}{\numberline {4.3}Comparing pass 3 to pass 4}{16}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}ITS Analysis}{18}{subsection.4.4}%
 \contentsline {section}{\numberline {5}Discussion and Recommendations}{21}{section.5}%
-\contentsline {section}{\numberline {6}Conclusions}{22}{section.6}%
-\contentsline {section}{\numberline {A}Downloading data from the GRID}{24}{appendix.A}%
-\contentsline {section}{\numberline {B}Additional Plots}{25}{appendix.B}%
+\contentsline {section}{\numberline {6}Conclusions}{23}{section.6}%
+\contentsline {section}{\numberline {A}Downloading data from the GRID}{25}{appendix.A}%
+\contentsline {section}{\numberline {B}Additional Plots}{26}{appendix.B}%

@@ -7,7 +7,7 @@
 \PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{MyTask}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
 \PYG{+w}{  }\PYG{c+c1}{// Define things here, such as histogram registries, filters for data, or new tables}
 
-\PYG{+w}{  }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{init}\PYG{p}{(}\PYG{n}{o2}\PYG{o}{::}\PYG{n}{framework}\PYG{o}{::}\PYG{n}{InitContext}\PYG{o}{\PYGZam{}}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{init}\PYG{p}{(}\PYG{n}{framework}\PYG{o}{::}\PYG{n}{InitContext}\PYG{o}{\PYGZam{}}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
 \PYG{+w}{    }\PYG{c+c1}{// Here we initialise histograms and other things used in the analysis}
 \PYG{+w}{  }\PYG{p}{\PYGZcb{};}
 \PYG{+w}{  }\PYG{c+c1}{// The arguments of the process function are where we subscribe to specific tables in the AOD that we\PYGZsq{}re analysing.}
