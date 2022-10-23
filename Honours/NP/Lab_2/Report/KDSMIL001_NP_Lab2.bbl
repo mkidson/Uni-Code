@@ -18,24 +18,35 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global}
-    \entry{deuterium}{online}{}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+  \datalist[entry]{none/global//global/global}
+    \entry{nudat}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=dd67c2fc0faeb95e39eab7c600c5d79d}{%
+           family={National\bibnamedelimb Nuclear\bibnamedelimb Data\bibnamedelima Center},
+           familyi={N\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Brookhaven\bibnamedelimb National\bibnamedelima Laboratory},
+           giveni={B\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{dd67c2fc0faeb95e39eab7c600c5d79d}
+      \strng{fullhash}{dd67c2fc0faeb95e39eab7c600c5d79d}
+      \strng{bibnamehash}{dd67c2fc0faeb95e39eab7c600c5d79d}
+      \strng{authorbibnamehash}{dd67c2fc0faeb95e39eab7c600c5d79d}
+      \strng{authornamehash}{dd67c2fc0faeb95e39eab7c600c5d79d}
+      \strng{authorfullhash}{dd67c2fc0faeb95e39eab7c600c5d79d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{{CODATA} Value: deuteron mass}
-      \field{urlday}{17}
-      \field{urlmonth}{10}
-      \field{urlyear}{2022}
-      \field{urldateera}{ce}
-      \verb{file}
-      \verb CODATA Value\: deuteron mass:/home/mkidson/Zotero/storage/KCTUJ9YR/Value.html:text/html
-      \endverb
+      \field{month}{3}
+      \field{number}{16 October 2022}
+      \field{title}{NuDat (Nuclear Structure and Decay Data)}
+      \field{volume}{2022}
+      \field{year}{2008}
       \verb{urlraw}
-      \verb https://physics.nist.gov/cgi-bin/cuu/Value?md
+      \verb www.nndc.bnl.gov/nudat3/
       \endverb
       \verb{url}
-      \verb https://physics.nist.gov/cgi-bin/cuu/Value?md
+      \verb www.nndc.bnl.gov/nudat3/
       \endverb
     \endentry
     \entry{Knoll}{book}{}
@@ -55,8 +66,8 @@
       \strng{authorbibnamehash}{6658b3a0dc8d44502ea2cda983468088}
       \strng{authornamehash}{6658b3a0dc8d44502ea2cda983468088}
       \strng{authorfullhash}{6658b3a0dc8d44502ea2cda983468088}
-      \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{4th ed.}
@@ -64,34 +75,23 @@
       \field{type}{Book}
       \field{year}{2010}
     \endentry
-    \entry{nudat}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=dd67c2fc0faeb95e39eab7c600c5d79d}{%
-           family={National\bibnamedelimb Nuclear\bibnamedelimb Data\bibnamedelima Center},
-           familyi={N\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim C\bibinitperiod},
-           given={Brookhaven\bibnamedelimb National\bibnamedelima Laboratory},
-           giveni={B\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-      }
-      \strng{namehash}{dd67c2fc0faeb95e39eab7c600c5d79d}
-      \strng{fullhash}{dd67c2fc0faeb95e39eab7c600c5d79d}
-      \strng{bibnamehash}{dd67c2fc0faeb95e39eab7c600c5d79d}
-      \strng{authorbibnamehash}{dd67c2fc0faeb95e39eab7c600c5d79d}
-      \strng{authornamehash}{dd67c2fc0faeb95e39eab7c600c5d79d}
-      \strng{authorfullhash}{dd67c2fc0faeb95e39eab7c600c5d79d}
-      \field{sortinit}{N}
-      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
-      \field{labelnamesource}{author}
+    \entry{deuterium}{online}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labeltitlesource}{title}
-      \field{month}{3}
-      \field{number}{16 October 2022}
-      \field{title}{NuDat (Nuclear Structure and Decay Data)}
-      \field{volume}{2022}
-      \field{year}{2008}
+      \field{title}{{CODATA} Value: deuteron mass}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb CODATA Value\: deuteron mass:/home/mkidson/Zotero/storage/KCTUJ9YR/Value.html:text/html
+      \endverb
       \verb{urlraw}
-      \verb www.nndc.bnl.gov/nudat3/
+      \verb https://physics.nist.gov/cgi-bin/cuu/Value?md
       \endverb
       \verb{url}
-      \verb www.nndc.bnl.gov/nudat3/
+      \verb https://physics.nist.gov/cgi-bin/cuu/Value?md
       \endverb
     \endentry
   \enddatalist
