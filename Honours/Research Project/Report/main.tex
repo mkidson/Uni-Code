@@ -81,7 +81,7 @@ This report aims to introduce the detectors and the data they output, trace the 
 \section{Our Analysis}\label{sec:OurAnalysis}
 \input{Sections/3MyAnalysis.tex}
 
-\section{Discussion and Recommendations}
+\section{Discussion and Recommendations}\label{sec:DiscussionRecommendations}
 Our methods of analysis for the most part came down to interpreting histograms of kinematic variables through the lens of assumed isotropic emission of particles. The shape of the coordinate system and detector geometry had to be considered in order to explain some things and there was a lot of guesswork as to the configuration of the detectors and reconstruction process/analysis framework. In this section we present some improvements that can be made to this process.
 
 There were many times during our analysis where we came up against a limitation in the analysis software that restricted our ability to see the details we were after. This really comes down to the fact that the types of analysis that O2 was (and still is being) built for are not the type that we were looking to do. Given more time to attain a greater understanding of the inner workings of particularly the steps from CTFs to AODs, we might have been able to delve into the belly of the beast and find the data ourselves. Since we were limited by our time this year, the best we can do is recommend some modifications to the AOD data model that would lend themselves to these analyses. 
@@ -92,34 +92,43 @@ Outside the realm of modifying O2 and the data model, there is more that could b
 
 Lastly, we were left with many questions about the details of the track reconstruction, read-out architecture, and columns in the data model such as the $z$ variable in \texttt{aod::MFTTracks}. This effectively comes down to the documentation surrounding these detectors and analysis framework, so a concerted effort to improve that documentation would be greatly appreciated by people new to the ALICE group and to these detectors. 
 
-\section{Conclusions}
-Run 3 at the LHC, with its increased energy and luminosity, brings a number of new challenges that required the ALICE detectors and analysis framework to be upgraded. Among the detector upgrades were two new silicon tracking detectors; the ITS and MFT. In this report we used the new O2 analysis framework to look at histograms of variables relating to particle tracks in either the ITS or MFT. The intention was both to learn the new framework and to determine if the new detectors were performing as expected.
+\section{Conclusion}\label{sec:Conclusion}
+The advent of Run 3 at the LHC, with its increased energy and luminosity, brought a number of new challenges that required the ALICE detectors and analysis framework to be upgraded. Among the detector upgrades were two new silicon tracking detectors; the ITS and MFT. In this report we used the new O2 analysis framework to look at distributions of variables relating to particle tracks in either the ITS or MFT, using pilot beam data from October 2021. The intention was both to learn the new framework and to determine if the new detectors are performing as expected.
 
-The basics of creating and running an analysis task in O2 were explained, which were then used to analyse tracks of particles detected in each detector. Using the assumption of isotropic emission of particles from IP as a baseline, we interpreted histograms of kinematic variables through the lens of the geometry of the sensitive material of the detectors as well as the geometry of the coordinates commonly used in particle physics. This led to expectations of smooth distributions in most cases 
+Before any analysis could be done, the new framework had to be learned. Due to its need to be efficient and lightweight on hard disk and memory usage, it is very particular about how things must be structured. Learning O2 took up the majority of the time spent on this project and the basics are presented in \cref{sec:AnalysingWithO2}. 
 
+Simulation of data for comparison was outside the scope of this project so the notion of an ``expected performance'' had to come from an understanding of the physical design of the detectors as well as an interpretation of the read-out architecture and track reconstruction process as outlined in the Technical Design Reports of the two detectors. Isotropic emission of particles from the IP was assumed which led to expectations of smooth, if not uniform, distributions in most cases. Where this was not seen and the geometry of the sensitive material of the detectors couldn't explain the discrepancy, specific areas of research into the detectors were recommended. This analysis is presented in \cref{sec:OurAnalysis}.
 
-
-The notion of ``expected performance'' is hard to define specifically but we started with the assumption of isotropic emission of particles from the IP and interpreted kinematic variable histograms through the lens of the geometry of the sensitive material in each detector. Smooth distributions were expected and in some cases
-
-
-
-
-the physical design of the detectors, as well as descriptions of the track finding algorithms from technical design reports, to 
+Due to time limitations, this report could only give a qualitative review of the performance of the new detectors so we present recommendations for the direction of further investigation in \cref{sec:DiscussionRecommendations} if a more quantitative perspective is desired.
 
 
 
 
-We presented the basics of creating and running an analysis task in O2 before discussing the results of the analysis. Our analysis
-
-comes with a number of new challenges regarding the 
+% O2 was then used to analyse tracks of particles detected in each detector. Using the assumption of isotropic emission of particles from IP as a baseline, we interpreted histograms of kinematic variables through the lens of the geometry of the sensitive material of the detectors as well as the geometry of the coordinates commonly used in particle physics. This led to expectations of smooth distributions in most cases 
 
 
-Pilot beam data from ALICE at the LHC at CERN was given a preliminary analysis using the new Online-Offline analysis framework. The new Inner Tracking System and Muon Forward Tracker silicon tracking detectors were the focus of this analysis. 
+
+% The notion of ``expected performance'' is hard to define specifically but we started with the assumption of isotropic emission of particles from the IP and interpreted kinematic variable histograms through the lens of the geometry of the sensitive material in each detector. Smooth distributions were expected and in some cases
 
 
-The increased energy and luminosity, as well as continuous read-out architecture, of Run 3 at ALICE necessitated a new analysis framework and new and upgraded detectors. We used the new framework to analyse test beam data
 
-The new ITS and MFT detectors at ALICE were introduced and 
+
+% the physical design of the detectors, as well as descriptions of the track finding algorithms from technical design reports, to 
+
+
+
+
+% We presented the basics of creating and running an analysis task in O2 before discussing the results of the analysis. Our analysis
+
+% comes with a number of new challenges regarding the 
+
+
+% Pilot beam data from ALICE at the LHC at CERN was given a preliminary analysis using the new Online-Offline analysis framework. The new Inner Tracking System and Muon Forward Tracker silicon tracking detectors were the focus of this analysis. 
+
+
+% The increased energy and luminosity, as well as continuous read-out architecture, of Run 3 at ALICE necessitated a new analysis framework and new and upgraded detectors. We used the new framework to analyse test beam data
+
+% The new ITS and MFT detectors at ALICE were introduced and 
 
 
 

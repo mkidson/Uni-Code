@@ -208,7 +208,9 @@ Looking at \cref{fig:ITS_NCls_InnerBarrel} in comparison to \cref{fig:nohasITS_N
 
 The last histograms to interrogate are those corresponding to the clusters contributing to tracks in the ITS, shown in \cref{fig:ITS_Clusters}. The left is easy to interpret, showing the number of ITS clusters used in each track. Interestingly it appears to have a minimum of 4 clusters per track. If these tracks are from the TPC-ITS track matching regime, this doesn't make sense, but if they are standalone tracks then we may have discovered something about the method used.
 
-\begin{figure}[h]%
+On the right of \cref{fig:ITS_Clusters} is the ``Cluster Map'' of the ITS. The column in the data model contains an 8 bit unsigned integer with each bit assigned to a layer, excluding the last bit, for each track. If a track has a cluster in a specific layer, the bit is set to 1, otherwise it is set to 0. Since integers have unique representations in binary, we can see exactly which layers contributed to a given track simply by decoding the integer. As seen in \cref{fig:ITS_ClusterMap}, the lowest is 15 meaning the innermost 4 layers had clusters contributing, and the highest is 127 meaning all layers had clusters contributing. In between those is all combinations of the 7 bits, but only those with 4 or more clusters, as expected from \cref{fig:ITS_NCls}. 
+
+\begin{figure}[H]%
     \centering
     \begin{subfigure}[t]{.49\linewidth}
         \centering
@@ -226,5 +228,3 @@ The last histograms to interrogate are those corresponding to the clusters contr
 \caption[Histograms of cluster information for tracks in the ITS]{Additional histograms with information about the ITS clusters used in track finding.}
 \label{fig:ITS_Clusters}
 \end{figure}
-
-On the right of \cref{fig:ITS_Clusters} is the ``Cluster Map'' of the ITS. The column in the data model contains an 8 bit unsigned integer with each bit assigned to a layer, excluding the last bit, for each track. If a track has a cluster in a specific layer, the bit is set to 1, otherwise it is set to 0. Since integers have unique representations in binary, we can see exactly which layers contributed to a given track simply by decoding the integer. As seen in \cref{fig:ITS_ClusterMap}, the lowest is 15 meaning the innermost 4 layers had clusters contributing, and the highest is 127 meaning all layers had clusters contributing. In between those is all combinations of the 7 bits, but only those with 4 or more clusters, as expected from \cref{fig:ITS_NCls}. 
