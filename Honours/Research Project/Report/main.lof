@@ -5,7 +5,7 @@
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Schematic view of the Muon Forward Tracker}}{6}{figure.caption.8}%
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Pixel detector layout on the front and back plane of half-disk 4}}{7}{figure.caption.9}%
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Functional flow of the O2 framework}}{8}{figure.caption.10}%
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Gistograms of $\eta $, $\varphi $, \texttt {nClusters}, and $z$ for tracks from pass 3 in the MFT}}{14}{figure.caption.11}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Histograms of $\eta $, $\varphi $, \texttt {nClusters}, and $z$ for tracks from pass 3 in the MFT}}{14}{figure.caption.11}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces $x$-$y$ histograms of tracks at different planes of the MFT}}{16}{figure.caption.12}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces $\eta $-$\varphi $ histogram for tracks from pass 3 in the MFT}}{17}{figure.caption.13}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Comparison of $\eta $ distributions of tracks from pass 3 and pass 4 in the MFT}}{17}{figure.caption.14}%
