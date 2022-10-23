@@ -34,7 +34,7 @@
 \section{Introduction}\label{sec:Introduction}
 There are many sources of photon radiation naturally present in the world. Gamma-rays (roughly between \SI{0.001}{\mega\electronvolt} and \SI{10}{\mega\electronvolt}) are the highest energy and thus most dangerous form of photon radiation. For this reason, understanding where gamma-rays come from and how they interact with matter is of great importance. 
 
-This report will discuss the origins of gamma-rays, how they are detected, and then analyse the gamma-ray spectra from two radiation sources; \ce{^{152}Eu} and AmBe. The NaI scintillation detector and multi-channel analyser that were used needed to be calibrated to output energy so the standard \ce{^{22}Na}, \ce{^{60}Co}, and \ce{^{137}Cs} calibration sources were used. The energy resolution of the NaI scintillation detector was also determined using the calibration sources for discussion about the sources of interest.
+This report will discuss the origins of gamma-rays and how they are detected, and then analyse the gamma-ray spectra from two radiation sources---\ce{^{152}Eu} and AmBe---with reference to the expectation according to theory as well as previous experiment. The NaI scintillation detector and multi-channel analyser that were used needed to be calibrated to output energy so the standard \ce{^{22}Na}, \ce{^{60}Co}, and \ce{^{137}Cs} calibration sources were used. The energy resolution of the NaI scintillation detector was also determined using the calibration sources for discussion about the sources of interest.
 
 \section{Theory}\label{sec:Theory}
 
@@ -126,17 +126,17 @@ The Americium-Beryllium (AmBe) source is primarily a neutron source. $\alpha$ pa
 \end{equation}
 The photon is mono-energetic but the neutrons are emitted with a wide range of energies including thermal neutrons. Thermal neutrons are very likely to be captured by material surrounding the AmBe source. The source used in this lab was surrounded by high density plastic, which is primarily made up of hydrogen and carbon, so it is expected to have excited deuterium (D or \ce{^{2}H}) and \ce{^{13}C} produced. 
 
-We can find the expected energy of the photon released as deuterium de-excites by looking at the binding energy. The mass of deuterium is \SI{2.0135533893}{u}~\cite{deuterium} and the mass of its constituent parts is \SI{2.01594147}{u}, from the neutron and proton mass. The mass excess is then \SI{2.3880807e-3}{u} leaving a binding energy of \SI{2224.497}{\kilo\electronvolt}. So, when the hydrogen captures a neutron and becomes deuterium, it will end up in an excited state with an energy of \SI{2224.497}{\kilo\electronvolt}. Thus a gamma-ray of that energy should be expected in the AmBe spectrum. 
+The expected energy of the photon released as deuterium de-excited can be found by looking at the binding energy. The mass of deuterium is \SI{2.0135533893}{u}~\cite{deuterium} and the mass of its constituent parts is \SI{2.01594147}{u}, from the neutron and proton mass. The mass excess is then \SI{2.3880807e-3}{u} leaving a binding energy of \SI{2224.497}{\kilo\electronvolt}. So, when the hydrogen captures a neutron and becomes deuterium, it will end up in an excited state with an energy of \SI{2224.497}{\kilo\electronvolt}. Thus a gamma-ray of that energy should be expected in the AmBe spectrum. 
 
 The deuterium gamma-ray and the \SI{4439.82}{\kilo\electronvolt} gamma-ray from carbon are both above the pair production threshold, so single- and double-escape peaks should be expected. 
 
 \subsection{AmBe Gamma Spectrum}
-\Cref{fig:AmBe_Spectrum} shows the gamma-ray spectrum for the AmBe source. Data was taken with a live time of about \SI{13000}{\second} and the counts were divided by that to normalise in time. No background reading was taken as the detector and AmBe source could both not be moved. On the spectrum, the gamma-rays mentioned in \cref{sec:AmBeTheory} are labelled. The escape peaks of the deuterium peak are not labelled as they are saturated by the bremsstrahlung and Compton continuum and thus not visible. An unknown gamma-ray is present that doesn't seem to align with any expectation. 
+\Cref{fig:AmBe_Spectrum} shows the gamma-ray spectrum for the AmBe source. Data was taken with a live time of about \SI{13000}{\second} and the counts were divided by that to normalise in time. No background reading was taken as the detector and AmBe source could both not be moved. On the spectrum, the gamma-rays mentioned in \cref{sec:AmBeTheory} are labelled. The escape peaks of the deuterium peak are not labelled as they are saturated by the bremsstrahlung and Compton continua and thus not visible. An unknown gamma-ray is present that doesn't seem to align with any expectation. 
 
 \begin{figure}[h]
     \begin{center}
         \includegraphics[width=.8\textwidth]{Plots/ambe.pdf}
-        \caption{Gamma=ray spectrum for the AmBe source. The expected peaks are identified but the peak at around \SI{2560}{\kilo\electronvolt} remains a mystery. The large continuum at low energies is mostly bremsstrahlung and Compton continuum. The escape peaks for the deuterium and unknown gamma-ray can also be seen.}
+        \caption{Gamma=ray spectrum for the AmBe source. The expected peaks are identified but the peak at around \SI{2560}{\kilo\electronvolt} remains a mystery. The large continuum at low energies is mostly bremsstrahlung and Compton continuum. The escape peaks for the deuterium and unknown gamma-ray can also be seen although they are obscured by the bremsstrahlung and Compton continua.}
         \label{fig:AmBe_Spectrum}
     \end{center}
 \end{figure}
@@ -144,12 +144,10 @@ The deuterium gamma-ray and the \SI{4439.82}{\kilo\electronvolt} gamma-ray from 
 None of the expected peaks intersect each other within the detector's energy resolution, so there is nothing to conclude in that respect. 
 
 \section{Conclusion}\label{sec:Conclusion}
-The gamma-ray spectra for \ce{^{152}Eu} is well understood from previous experiment. The energies of emissions as well as their intensities are catalogued so the expectation of 
+The gamma-ray spectra of the \ce{^{152}Eu} and AmBe radiation sources were found using a NaI scintillation detector and multi-channel analyser. Two different energy needed to be calibrated for in order to best capture the details of each spectrum. The standard \ce{^{22}Na}, \ce{^{60}Co}, and \ce{^{137}Cs} calibration sources were used for this as well as for determining the energy resolution of the NaI detector, which was found to be 6.855\%. 
 
+In each case, the expected energies of the most prominent photopeaks were determined, either by looking them up on NuDat~\cite{nudat} or by determining the theoretical energy by means of a binding energy calculation. These were then compared to the observed photopeaks. In the case of \ce{^{152}Eu}, the energy calibration was found to likely have an incorrect value for the slope of the function. The AmBe calibration appeared to be reasonable but a peak was found in the spectrum at ~\SI{2560}{\kilo\electronvolt} that was not explained by experimental or theoretical expectation. 
 
-with respect to the predictions of what should be present in each spectrum. These predictions were made based on both theory and previous experiment. The energy resolution of the NaI scintillation detector was found to be 6.855\%.
-
-\newpage
 \printbibliography
 
 \end{document}

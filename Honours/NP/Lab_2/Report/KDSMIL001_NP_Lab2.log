@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  23 OCT 2022 16:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  23 OCT 2022 18:38
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1194,7 +1194,7 @@ File: Plots/ambe.pdf Graphic file (type pdf)
 <use Plots/ambe.pdf>
 Package pdftex.def Info: Plots/ambe.pdf  used on input line 138.
 (pdftex.def)             Requested size: 375.80544pt x 187.90308pt.
- [5 <./Plots/ambe.pdf>] [6] [7] (./KDSMIL001_NP_Lab2.aux)
+ [5 <./Plots/ambe.pdf>] [6] (./KDSMIL001_NP_Lab2.aux)
 Package rerunfilecheck Info: File `KDSMIL001_NP_Lab2.out' has not changed.
 (rerunfilecheck)             Checksum: 7D6148536EF887DE9A2F42055190C3C9;1500.
 Package logreq Info: Writing requests to 'KDSMIL001_NP_Lab2.run.xml'.
@@ -1202,18 +1202,18 @@ Package logreq Info: Writing requests to 'KDSMIL001_NP_Lab2.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52632 strings out of 478287
- 1207988 string characters out of 5849289
- 2017731 words of memory out of 5000000
+ 52631 strings out of 478287
+ 1207982 string characters out of 5849289
+ 2018801 words of memory out of 5000000
  70093 multiletter control sequences out of 15000+600000
  483516 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,20n,103p,1125b,2361s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on KDSMIL001_NP_Lab2.pdf (7 pages, 347812 bytes).
+Output written on KDSMIL001_NP_Lab2.pdf (6 pages, 348393 bytes).
 PDF statistics:
- 407 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
+ 402 PDF objects out of 1000 (max. 8388607)
+ 193 compressed objects within 2 object streams
+ 32 named destinations out of 1000 (max. 500000)
  142 words of extra memory for PDF output out of 10000 (max. 10000000)
 
