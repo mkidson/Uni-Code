@@ -51,7 +51,7 @@ Assisted By: Dr. B Naik (Postdoctoral fellow)}
 
 \begin{abstract}
     \centering
-    We investigate pilot-beam data from proton-proton collisions in Run 3 at ALICE, tracing its journey through two of the new detectors (the Inner Tracking System and Muon Forward Tracker) and the new Online-Offline analysis framework. The data is analysed to assess the performance of the detectors with the expectation of isotropic emission of particles, taking their geometry into account. Recommendations for improvements to the analysis framework and documentation are given.
+    We investigate pilot-beam data from proton-proton collisions in Run 3 at ALICE, tracing its journey through two of the new detectors (the Inner Tracking System and Muon Forward Tracker) and the new Online-Offline analysis framework. The data is analysed to assess the performance of the detectors with the expectation of isotropic emission of particles, taking the detector geometry into account. Recommendations for improvements to the analysis framework and documentation are given.
 \end{abstract}
 
 \newpage
@@ -97,40 +97,9 @@ The advent of Run 3 at the LHC, with its increased energy and luminosity, brough
 
 Before any analysis could be done, the new framework had to be learned. Due to its need to be efficient and lightweight on hard disk and memory usage, it is very particular about how things must be structured. Learning O2 took up the majority of the time spent on this project and the basics are presented in \cref{sec:AnalysingWithO2}. 
 
-Simulation of data for comparison was outside the scope of this project so the notion of an ``expected performance'' had to come from an understanding of the physical design of the detectors as well as an interpretation of the read-out architecture and track reconstruction process as outlined in the Technical Design Reports of the two detectors. Isotropic emission of particles from the IP was assumed which led to expectations of smooth, if not uniform, distributions in most cases. Where this was not seen and the geometry of the sensitive material of the detectors couldn't explain the discrepancy, specific areas of research into the detectors were recommended. This analysis is presented in \cref{sec:OurAnalysis}.
+Simulation of data for comparison was outside the scope of this project so the notion of an ``expected performance'' had to come from an understanding of the physical design of the detectors as well as an interpretation of the read-out architecture and track reconstruction process as outlined in the Technical Design Reports of the two detectors. Isotropic emission of particles from the IP was assumed which led to expectations of smooth, if not uniform, distributions in most cases. Where this was not seen and the geometry of the sensitive material of the detectors couldn't explain the discrepancy, specific areas of investigation into the detectors were recommended. This analysis is presented in \cref{sec:OurAnalysis}.
 
 Due to time limitations, this report could only give a qualitative review of the performance of the new detectors so we present recommendations for the direction of further investigation in \cref{sec:DiscussionRecommendations} if a more quantitative perspective is desired.
-
-
-
-
-% O2 was then used to analyse tracks of particles detected in each detector. Using the assumption of isotropic emission of particles from IP as a baseline, we interpreted histograms of kinematic variables through the lens of the geometry of the sensitive material of the detectors as well as the geometry of the coordinates commonly used in particle physics. This led to expectations of smooth distributions in most cases 
-
-
-
-% The notion of ``expected performance'' is hard to define specifically but we started with the assumption of isotropic emission of particles from the IP and interpreted kinematic variable histograms through the lens of the geometry of the sensitive material in each detector. Smooth distributions were expected and in some cases
-
-
-
-
-% the physical design of the detectors, as well as descriptions of the track finding algorithms from technical design reports, to 
-
-
-
-
-% We presented the basics of creating and running an analysis task in O2 before discussing the results of the analysis. Our analysis
-
-% comes with a number of new challenges regarding the 
-
-
-% Pilot beam data from ALICE at the LHC at CERN was given a preliminary analysis using the new Online-Offline analysis framework. The new Inner Tracking System and Muon Forward Tracker silicon tracking detectors were the focus of this analysis. 
-
-
-% The increased energy and luminosity, as well as continuous read-out architecture, of Run 3 at ALICE necessitated a new analysis framework and new and upgraded detectors. We used the new framework to analyse test beam data
-
-% The new ITS and MFT detectors at ALICE were introduced and 
-
-
 
 \newpage
 \printbibliography
