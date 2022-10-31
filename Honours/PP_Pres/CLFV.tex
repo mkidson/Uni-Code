@@ -2,6 +2,7 @@
 \usepackage{booktabs,siunitx}
 \usepackage[compat=1.1.0]{tikz-feynman}
 \usepackage[default]{opensans}
+\usepackage[version=4]{mhchem}
 \usetheme{Madrid}
 \usefonttheme{default}
 \useinnertheme{circles}
@@ -36,7 +37,7 @@
                 \item Lepton number $L$
             \end{itemize}
             \bigskip
-            If neutrinos were massless, individual lepton flavour numbers $L_e$, $L_\mu$, and $L_\tau$ would be conserved. With massive neutrinos, only $L$ is conserved.
+            If neutrinos were massless, individual lepton flavour numbers $L_e$, $L_\mu$, and $L_\tau$ would be conserved\footnote[frame]{M.E. Peskin, 2018, p.286}. With massive neutrinos, only $L$ is conserved.
 
             (Provided neutrinos are Dirac fermions and not Majorana fermions)
 
@@ -61,10 +62,10 @@
     \begin{columns}[c]
         \begin{column}{0.6\textwidth}
             \begin{itemize}
-                \item Example processes would be $\mu \rightarrow e\gamma$, $\mu\rightarrow e\,e\,e$, and $\tau \rightarrow \mu,e + X$
                 \item We already see lepton flavour being violated in neutrino oscillation
-                \item Best estimates of $\mu \rightarrow e\gamma$ rates by the same mechanism are $<10^{-54}$, which are not realistically measurable
+                \item Best estimates of $\mu \rightarrow e\gamma$ rates by the same mechanism are $<10^{-54}$, which are not realistically measurable\footnote[frame]{de Gouvea, A., \& Vogel, P. (2013). Lepton Flavor and Number Conservation, and Physics Beyond the Standard Model.}. Similar for other processes
                 \item Thus observing these processes implies new physics is at play!
+                \item Example processes would be $\mu\rightarrow e\,e\,e$, $\mu \rightarrow e\gamma$, and $\tau \rightarrow \mu,e + X$
             \end{itemize}
         \end{column}
 
@@ -72,16 +73,16 @@
             \begin{tikzpicture}
                 \begin{feynman}
                     \vertex (a);
-                    \vertex [right=1cm of a] (b);
-                    \vertex [right=1cm of b] (c);
-                    \vertex [right=1cm of c] (d);
-                    \vertex [right=1cm of d] (e);
-                    \vertex [above right=1cm of d] (f);
+                    \vertex [right=1.5cm of a] (b);
+                    \vertex [right=1.5cm of b] (c);
+                    \vertex [right=1.5cm of c] (d);
+                    \vertex [above right=1.2cm of b] (b1);
+                    \vertex [above right=1.5cm of b1] (b2);
 
                     \diagram {
-                        (a) -- [fermion, edge label'=$\mu$] (b) -- [fermion, edge label'=$\nu$] (c) -- [fermion, edge label'=$e$] (d) -- [fermion, edge label'=$e$] (e);
-                        (b) -- [boson, half left, edge label=$W$] (c);
-                        (d) -- [photon, edge label=$\gamma$] (f);
+                        (a) -- [fermion, edge label'=$\mu$] (b) -- [fermion, edge label'=$\nu_i$] (c) -- [fermion, edge label'=$e$] (d);
+                        (b) -- [boson, quarter left, edge label=$W$] (b1) -- [boson, quarter left] (c);
+                        (b1) -- [photon, edge label=$\gamma$] (b2);
                     };
 
                 \end{feynman}
@@ -91,9 +92,85 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Experimental bounds on process rates}
-    The best limits on 
+    \frametitle{$\mu\rightarrow e\,e\,e$}
+    \begin{columns}[c]
+        \begin{column}{0.6\textwidth}
+            \begin{itemize}
+                \item We could see this as $\mu^+\rightarrow e^+ e^+ e^- \nu_\mu \overline{\nu}_e$ and not be new physics
+                \item Thus we look for this with no energy loss
+                \item Could be $\mu \rightarrow e\gamma$ with more steps, or could be something else entirely
+                \item the SINDRUM experiment puts a rate limit of $10^{-12}$ with future experiments aiming for $10^{-16}$\footnote[frame]{Ardu, M., \& Pezzullo, G. (2022). Introduction to Charged Lepton Flavour Violation}
+            \end{itemize}
+        \end{column}
 
+        \begin{column}{0.4\textwidth}
+            \begin{tikzpicture}
+                \begin{feynman}
+                    \vertex (a);
+                    \vertex [right=1.5cm of a] (b);
+                    \vertex [right=1.5cm of b] (c);
+                    \vertex [right=1.5cm of c] (d);
+                    \vertex [above right=1.2cm of b] (b1);
+                    \vertex [above right=1cm of b1] (b2);
+                    \vertex [above right=0.7cm of b2] (b3) {$e^-$};
+                    \vertex [below right=0.7cm of b2] (b4) {$e^+$};
+
+
+                    \diagram {
+                        (d) -- [fermion, edge label=$e^+$] (c) -- [fermion, edge label=$\overline{\nu}_i$] (b) -- [fermion, edge label=$\mu^+$] (a);
+                        (b) -- [boson, quarter left, edge label=$W^+$] (b1) -- [boson, quarter left] (c);
+                        (b1) -- [photon, edge label=$\gamma$] (b2);
+                        (b2) -- [fermion] (b3);
+                        (b4) -- [fermion] (b2);
+                    };
+
+                \end{feynman}
+            \end{tikzpicture}
+            \bigskip
+
+            \begin{tikzpicture}
+                \begin{feynman}
+                    \vertex (a);
+                    \vertex [right=1.5cm of a] (b);
+                    \vertex [above right=1.5cm of b] (c);
+                    \vertex [below right=1.5cm of b] (d);
+                    \vertex [above right=1.5cm of c] (e) {$e^+$};
+                    \vertex [below right=1.5cm of c] (f) {$e^-$};
+
+                    \diagram {
+                        (b) -- [fermion, edge label=$\mu^+$] (a);
+                        (d) -- [fermion, edge label=$e^+$] (b);
+                        (b) -- [plain, edge label=?] (c);
+                        (e) -- [fermion] (c);
+                        (c) -- [fermion] (f);
+
+                    };
+                \end{feynman}
+            \end{tikzpicture}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% \begin{itemize}
+%     \item $\mu\rightarrow e\,e\,e$
+%     \item $\mu N \rightarrow e N$
+%     \item $\mu \rightarrow e\gamma$: $<\num{4.2e-13}$ at 90\% CL
+% \end{itemize}
+
+\begin{frame}
+    \frametitle{$\mu^- N \rightarrow e^- N$}
+
+    \begin{columns}[c]
+        \begin{column}{0.6\textwidth}
+            \begin{itemize}
+                \item Conversion of a muon captured by a nucleus into an electron
+                \item Bombarding a nucleus with muons to see an outgoing electron
+                \item Should result in a monoenergetic electron, $\approx\SI{104.96}{\mega\electronvolt}$ for most nuclei
+                \item Important to ignore $\mu^-\rightarrow e^- \overline{\nu}_e \nu_\mu$
+                \item Rates for gold and titanium are about $<\num{7e-13}$
+            \end{itemize}
+        \end{column}
+    \end{columns}
     
 
 \end{frame}
