@@ -10,7 +10,7 @@
 \sisetup{detect-all}
 \setbeamertemplate{navigation symbols}{} % Uncomment this line to remove the navigation symbols from the bottom of all slides
 
-\title[Charged Lepton Flavour Violation]{Charged Lepton Flavour Violation: \\ An Introduction} % The short title in the optional parameter appears at the bottom of every slide, the full title in the main parameter is only on the title page
+\title[Charged Lepton Flavour Violation]{Charged Lepton Flavour Violation: \\ An Introduction to Muon Experiments} % The short title in the optional parameter appears at the bottom of every slide, the full title in the main parameter is only on the title page
 
 % \subtitle{Optional Subtitle} % Presentation subtitle, remove this command if a subtitle isn't required
 
@@ -109,22 +109,22 @@
             \begin{tikzpicture}
                 \begin{feynman}
                     \vertex (a);
-                    \vertex [right=1.5cm of a] (b);
+                    \vertex [right=1.5cm of a, blob] (b) {};
                     \vertex [right=1.5cm of b] (c);
-                    \vertex [right=1.5cm of c] (d);
-                    \vertex [above right=1.2cm of b] (b1);
-                    \vertex [above right=1cm of b1] (b2);
+                    % \vertex [right=1.5cm of c] (d);
+                    % \vertex [above right=1.2cm of b] (b1);
+                    \vertex [above right=1.5cm of b] (b2);
                     \vertex [above right=0.7cm of b2] (b3) {$e^-$};
                     \vertex [below right=0.7cm of b2] (b4) {$e^+$};
 
 
                     \diagram {
                         (b) -- [fermion, edge label=$\mu^+$] (a);
-                        (d) -- [fermion, edge label=$e^+$] (c);
+                        (c) -- [fermion, edge label=$e^+$] (b);
                         %  -- [fermion, edge label=$\overline{\nu}_i$] 
-                        (b) -- [plain, quarter left] (b1) -- [plain, quarter left] (c);
-                        (b) -- [plain, half right] (c);
-                        (b1) -- [photon, edge label=$\gamma$] (b2);
+                        % (b) -- [plain, quarter left] (b1) -- [plain, quarter left] (c);
+                        % (b) -- [plain, half right] (c);
+                        (b) -- [photon, edge label=$\gamma$] (b2);
                         (b2) -- [fermion] (b3);
                         (b4) -- [fermion] (b2);
                     };
@@ -136,7 +136,7 @@
             \begin{tikzpicture}
                 \begin{feynman}
                     \vertex (a);
-                    \vertex [right=1.5cm of a] (b);
+                    \vertex [right=1.5cm of a, blob] (b);
                     \vertex [above right=1.5cm of b] (c);
                     \vertex [below right=1.5cm of b] (d);
                     \vertex [above right=1.5cm of c] (e) {$e^+$};
@@ -173,6 +173,7 @@
                 \item Should result in a monoenergetic electron, $\approx\SI{104.96}{\mega\electronvolt}$ for most nuclei
                 \item Important to ignore $\mu^-\rightarrow e^- \overline{\nu}_e \nu_\mu$
                 \item Rates for gold and titanium are $\lesssim 10^{-13}$ from SINDRUM-II\footnote[frame]{Bertl, W., Engfer, R., Hermes, E. et al. A search for $\mu$-e conversion in muonic gold. (2006)}
+                \item Has potential to get to $10^{-18}$ at Fermilab and J-PARC with Al target
             \end{itemize}
         \end{column}
         \begin{column}{0.4\textwidth}
@@ -195,8 +196,7 @@
                 \item Longest studied process and with the most potential to reduce limits
                 \item Background events are $\mu^+ \rightarrow e^+ \overline{\nu}_e \nu_\mu$ 
                 \item Must look for total energy of $e +\gamma$ to be $m_\mu$
-                \item MEG experiment found limits of $<\num{4.2e-13}$ in 2016
-                \item MEG-II aims to bring that down to \num{6e-14}
+                \item MEG experiment reduced limits to $<\num{4.2e-13}$ in 2016\footnote[frame]{Meucci, M. (2022). MEG II experiment status and prospect.}
             \end{itemize}
         \end{column}
 
@@ -230,13 +230,28 @@
 
 \begin{frame}
     \frametitle{What the heck is MEG?}
-
+    \begin{columns}[t]
+        \begin{column}{0.4\textwidth}
+            \begin{itemize}
+                \item Muon Electron Gamma detector at PSI in Zurich
+                \item \num{3e7} $\mu^+$ per second beam incident onto polyethylene stopping target
+                \item Looks for coincident $e^+$ and $\gamma$ events, each with energy \SI{52.8}{\mega\electronvolt}
+                \item MEG-II {\footnotesize(Electric Boogaloo)} aims to bring the limit down to \num{6e-14}
+            \end{itemize}
+        \end{column}
     
-
-\end{frame}
-
-\begin{frame}
-    \frametitle{Theoretical Explanations}
+        \begin{column}{0.6\textwidth}
+            \begin{itemize}
+                \item Large scintillation detector for photons and a drift chamber for positron spectrometry
+            \end{itemize}
+            \begin{figure}[h]
+                \begin{center}
+                    \includegraphics[width=.8\textwidth]{MEG.png}
+                \end{center}
+            \end{figure}
+            
+        \end{column}
+    \end{columns}
 
     
 
@@ -244,11 +259,21 @@
 
 \begin{frame}
     \frametitle{Conclusion}
-
+    \begin{itemize}
+        \item CLFV is allowed in the SM, but with rates far too low to be detected
+        \item Seeing CLFV implies new physics is at play and could also help explain neutrino mass and oscillation
+        \item Muon processes are most commonly studied, with upper limits on rates nearing $10^{-14}$ in some cases
+        \item The new MEG-II detector and Al target muon conversion experiments show promise to greatly reduce those limits
+    \end{itemize}
     
 
 \end{frame}
 
+\begin{frame}[allowframebreaks]{References} 
+    \nocite{*}
+    \bibliographystyle{unsrt}
+    \bibliography{bibliography}
+\end{frame}
 
 
 \end{document}

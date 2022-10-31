@@ -1,7 +1,14 @@
 # Fdb version 3
-["pdflatex"] 1667228681 "/home/mkidson/gitRepos/Uni-Code/Honours/PP_Pres/CLFV.tex" "CLFV.pdf" "CLFV" 1667228684
+["bibtex CLFV"] 1667243097 "CLFV.aux" "CLFV.bbl" "CLFV" 1667243102
+  "/usr/share/texlive/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
+  "CLFV.aux" 1667243102 3120 260c25d4365a5f3ef3a273d4015baed8 "pdflatex"
+  "bibliography.bib" 1667243095 6488 bba9284021567a3c593daf41656abcc8 ""
+  (generated)
+  "CLFV.bbl"
+  "CLFV.blg"
+["pdflatex"] 1667243097 "/home/mkidson/gitRepos/Uni-Code/Honours/PP_Pres/CLFV.tex" "CLFV.pdf" "CLFV" 1667243102
   "/etc/texmf/web2c/texmf.cnf" 1661508839 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/mkidson/gitRepos/Uni-Code/Honours/PP_Pres/CLFV.tex" 1667228647 10194 fa63954bebe08d9ab45b96f619b4a638 ""
+  "/home/mkidson/gitRepos/Uni-Code/Honours/PP_Pres/CLFV.tex" 1667242910 11842 450366cdd515b943be51c4feb3136105 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/opensans/a_iz27ck.enc" 1561498186 2880 c07f4a1ce14a88d4ebe18f1c7b4592c1 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/opensans/a_n3lhbv.enc" 1561498186 2876 59df564f2929ccd7d2b24aa7d14cad04 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/opensans/a_nvvucy.enc" 1561498186 3364 7c78cdd102714be824555fc722b51d02 ""
@@ -286,10 +293,12 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1661508860 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1661508881 2801476 7bca9f5429119f49ad166e344afb5e90 ""
-  "CLFV.aux" 1667228684 2111 18dab8decf19c35c017d213826fb1111 "pdflatex"
-  "CLFV.nav" 1667228684 1011 83c4ff004b77303d878240d0bcc95e05 "pdflatex"
-  "CLFV.out" 1667228682 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "CLFV.tex" 1667228647 10194 fa63954bebe08d9ab45b96f619b4a638 ""
+  "CLFV.aux" 1667243102 3120 260c25d4365a5f3ef3a273d4015baed8 "pdflatex"
+  "CLFV.bbl" 1667243097 2563 46171aa014f75bc0c48cffa83379c4c0 "bibtex CLFV"
+  "CLFV.nav" 1667243102 1196 c0d3478288c2b1470537fa449efa3781 "pdflatex"
+  "CLFV.out" 1667243099 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "CLFV.tex" 1667242910 11842 450366cdd515b943be51c4feb3136105 ""
+  "MEG.png" 1667235223 102284 1500ca83019b823a99f8567c54ea34d2 ""
   "SINDRUMII.png" 1667213545 114043 27629506d0e8457456d3f87ce62efcf8 ""
   "SM.png" 1667061804 157981 b149172e0fa4f339abef6d341f9165e3 ""
   (generated)
