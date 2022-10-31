@@ -1,5 +1,6 @@
 \documentclass[11pt]{beamer}
 \usepackage{booktabs,siunitx}
+\usepackage{tikz}
 \usepackage[compat=1.1.0]{tikz-feynman}
 \usepackage[default]{opensans}
 \usepackage[version=4]{mhchem}
@@ -66,6 +67,7 @@
                 \item Best estimates of $\mu \rightarrow e\gamma$ rates by the same mechanism are $<10^{-54}$, which are not realistically measurable\footnote[frame]{de Gouvea, A., \& Vogel, P. (2013). Lepton Flavor and Number Conservation, and Physics Beyond the Standard Model.}. Similar for other processes
                 \item Thus observing these processes implies new physics is at play!
                 \item Example processes would be $\mu\rightarrow e\,e\,e$, $\mu \rightarrow e\gamma$, and $\tau \rightarrow \mu,e + X$
+                \item Muons are much easier to study than tau leptons
             \end{itemize}
         \end{column}
 
@@ -117,8 +119,11 @@
 
 
                     \diagram {
-                        (d) -- [fermion, edge label=$e^+$] (c) -- [fermion, edge label=$\overline{\nu}_i$] (b) -- [fermion, edge label=$\mu^+$] (a);
-                        (b) -- [boson, quarter left, edge label=$W^+$] (b1) -- [boson, quarter left] (c);
+                        (b) -- [fermion, edge label=$\mu^+$] (a);
+                        (d) -- [fermion, edge label=$e^+$] (c);
+                        %  -- [fermion, edge label=$\overline{\nu}_i$] 
+                        (b) -- [plain, quarter left] (b1) -- [plain, quarter left] (c);
+                        (b) -- [plain, half right] (c);
                         (b1) -- [photon, edge label=$\gamma$] (b2);
                         (b2) -- [fermion] (b3);
                         (b4) -- [fermion] (b2);
@@ -189,12 +194,33 @@
             \begin{itemize}
                 \item Longest studied process and with the most potential to reduce limits
                 \item Background events are $\mu^+ \rightarrow e^+ \overline{\nu}_e \nu_\mu$ 
-                \item Must look for total energy of $e$ and $\gamma$ to be $m_\mu$
-                \item 
+                \item Must look for total energy of $e +\gamma$ to be $m_\mu$
+                \item MEG experiment found limits of $<\num{4.2e-13}$ in 2016
+                \item MEG-II aims to bring that down to \num{6e-14}
             \end{itemize}
         \end{column}
 
         \begin{column}{0.4\textwidth}
+            \begin{tikzpicture}
+                \begin{feynman}
+                    \vertex (a) {$\mu^+$};
+                    \vertex [right=of a,blob](b) {};
+                    \vertex [right=of b] (c) {$e^+$};
+                    \vertex [above right=2cm of b] (d) {$\gamma$};
+
+                    % \vertex [left=of b] (a);
+                    % \vertex [right=of b] (c);
+                    % \vertex [above right=of b] (c);
+                    % \vertex [below right=of b] (d);
+
+                    \diagram{
+                        (b) -- [fermion] (a),
+                        (c) -- [fermion] (b),
+                        (b) -- [photon] (d);
+                        % (b) -- [fermion] (d);
+                    };
+                \end{feynman}
+            \end{tikzpicture}
             
         \end{column}
     \end{columns}
@@ -203,14 +229,14 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{MEG detector?}
+    \frametitle{What the heck is MEG?}
 
     
 
 \end{frame}
 
 \begin{frame}
-    \frametitle{Best theories for explaining it}
+    \frametitle{Theoretical Explanations}
 
     
 
