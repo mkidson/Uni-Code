@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Background}{2}{0}{1}
+\beamer@sectionintoc {2}{Detectors \& Analysis Framework}{4}{0}{2}
+\beamer@sectionintoc {3}{Data \& Results}{8}{0}{3}
+\beamer@sectionintoc {4}{Conclusion}{13}{0}{4}
