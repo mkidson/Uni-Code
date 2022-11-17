@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  16 NOV 2022 22:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.26)  17 NOV 2022 14:18
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -797,7 +797,7 @@ LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
 (Font)              scaled to size 7.0pt on input line 28.
 LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/it' will be
 (Font)              scaled to size 7.0pt on input line 28.
-<Figs/ALICE_logo.png, id=69, 345.4506pt x 467.1051pt>
+<Figs/ALICE_logo.png, id=70, 345.4506pt x 467.1051pt>
 File: Figs/ALICE_logo.png Graphic file (type png)
 <use Figs/ALICE_logo.png>
 Package pdftex.def Info: Figs/ALICE_logo.png  used on input line 28.
@@ -805,7 +805,7 @@ Package pdftex.def Info: Figs/ALICE_logo.png  used on input line 28.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Figs/ALICE_logo.png>]
-<Figs/ALICE_RUN3_schematic_cropped.png, id=80, 331.4784pt x 209.3421pt>
+<Figs/ALICE_RUN3_schematic_cropped.png, id=81, 331.4784pt x 209.3421pt>
 File: Figs/ALICE_RUN3_schematic_cropped.png Graphic file (type png)
 <use Figs/ALICE_RUN3_schematic_cropped.png>
 Package pdftex.def Info: Figs/ALICE_RUN3_schematic_cropped.png  used on input line 55.
@@ -824,7 +824,7 @@ File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mat
 )
 LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
 (Font)              scaled to size 4.0pt on input line 55.
-<Figs/ALICE_logo_transparent.png, id=81, 345.4506pt x 467.1051pt>
+<Figs/ALICE_logo_transparent.png, id=82, 345.4506pt x 467.1051pt>
 File: Figs/ALICE_logo_transparent.png Graphic file (type png)
 <use Figs/ALICE_logo_transparent.png>
 Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 55.
@@ -832,7 +832,7 @@ Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 55.
  [2
 
  <./Figs/ALICE_logo_transparent.png> <./Figs/ALICE_RUN3_schematic_cropped.png>]
-<Figs/coords.pdf, id=132, 385.02144pt x 184.89075pt>
+<Figs/coords.pdf, id=135, 385.02144pt x 184.89075pt>
 File: Figs/coords.pdf Graphic file (type pdf)
 <use Figs/coords.pdf>
 Package pdftex.def Info: Figs/coords.pdf  used on input line 93.
@@ -844,7 +844,7 @@ Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 93.
  [3
 
  <./Figs/coords.pdf>]
-<Figs/ITS_Schematic.png, id=185, 860.46469pt x 490.83376pt>
+<Figs/ITS_Schematic.png, id=189, 860.46469pt x 490.83376pt>
 File: Figs/ITS_Schematic.png Graphic file (type png)
 <use Figs/ITS_Schematic.png>
 Package pdftex.def Info: Figs/ITS_Schematic.png  used on input line 120.
@@ -856,7 +856,7 @@ Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 120
  [4
 
  <./Figs/ITS_Schematic.png>]
-<Figs/MCH_schematic.png, id=216, 670.00313pt x 292.09125pt>
+<Figs/MCH_schematic.png, id=221, 670.00313pt x 292.09125pt>
 File: Figs/MCH_schematic.png Graphic file (type png)
 <use Figs/MCH_schematic.png>
 Package pdftex.def Info: Figs/MCH_schematic.png  used on input line 147.
@@ -874,7 +874,7 @@ File: TS1opensans-TLF.fd 2019/06/24 Font definitions for TS1/opensans-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/opensans-TLF/m/n' will be
 (Font)              scaled to size 10.0pt on input line 172.
-<Figs/MFT_schematic_cropped.png, id=246, 2410.50563pt x 2852.40656pt>
+<Figs/MFT_schematic_cropped.png, id=252, 2410.50563pt x 2852.40656pt>
 File: Figs/MFT_schematic_cropped.png Graphic file (type png)
 <use Figs/MFT_schematic_cropped.png>
 Package pdftex.def Info: Figs/MFT_schematic_cropped.png  used on input line 172.
@@ -886,7 +886,7 @@ Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 172
  [6
 
  <./Figs/MFT_schematic_cropped.png>]
-<Figs/O2_flow.png, id=277, 526.21594pt x 584.93532pt>
+<Figs/O2_flow.png, id=284, 526.21594pt x 584.93532pt>
 File: Figs/O2_flow.png Graphic file (type png)
 <use Figs/O2_flow.png>
 Package pdftex.def Info: Figs/O2_flow.png  used on input line 196.
@@ -905,22 +905,22 @@ Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 211
  [8
 
 ]
-<Plots/pass3_MFT/MFTeta_pass3.pdf, id=339, 569.12625pt x 385.44pt>
+<Plots/pass3_MFT/MFTeta_pass3.pdf, id=348, 569.12625pt x 385.44pt>
 File: Plots/pass3_MFT/MFTeta_pass3.pdf Graphic file (type pdf)
 <use Plots/pass3_MFT/MFTeta_pass3.pdf>
 Package pdftex.def Info: Plots/pass3_MFT/MFTeta_pass3.pdf  used on input line 247.
 (pdftex.def)             Requested size: 163.49223pt x 110.72786pt.
-<Plots/pass3_MFT/nClusters_pass3.pdf, id=340, 569.12625pt x 385.44pt>
+<Plots/pass3_MFT/nClusters_pass3.pdf, id=349, 569.12625pt x 385.44pt>
 File: Plots/pass3_MFT/nClusters_pass3.pdf Graphic file (type pdf)
 <use Plots/pass3_MFT/nClusters_pass3.pdf>
 Package pdftex.def Info: Plots/pass3_MFT/nClusters_pass3.pdf  used on input line 247.
 (pdftex.def)             Requested size: 163.49223pt x 110.72786pt.
-<Plots/pass3_MFT/phi_pass3.pdf, id=341, 569.12625pt x 385.44pt>
+<Plots/pass3_MFT/phi_pass3.pdf, id=350, 569.12625pt x 385.44pt>
 File: Plots/pass3_MFT/phi_pass3.pdf Graphic file (type pdf)
 <use Plots/pass3_MFT/phi_pass3.pdf>
 Package pdftex.def Info: Plots/pass3_MFT/phi_pass3.pdf  used on input line 247.
 (pdftex.def)             Requested size: 163.49223pt x 110.72786pt.
-<Plots/pass3_MFT/Z_MFT_pass3.pdf, id=342, 569.12625pt x 385.44pt>
+<Plots/pass3_MFT/Z_MFT_pass3.pdf, id=351, 569.12625pt x 385.44pt>
 File: Plots/pass3_MFT/Z_MFT_pass3.pdf Graphic file (type pdf)
 <use Plots/pass3_MFT/Z_MFT_pass3.pdf>
 Package pdftex.def Info: Plots/pass3_MFT/Z_MFT_pass3.pdf  used on input line 247.
@@ -936,22 +936,22 @@ Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 247
 [9
 
  <./Plots/pass3_MFT/MFTeta_pass3.pdf, page is rotated 90 degrees> <./Plots/pass3_MFT/nClusters_pass3.pdf, page is rotated 90 degrees> <./Plots/pass3_MFT/phi_pass3.pdf, page is rotated 90 degrees> <./Plots/pass3_MFT/Z_MFT_pass3.pdf, page is rotated 90 degrees>]
-<Plots/pass3_MFT/x_y_1_pass3.pdf, id=544, 569.12625pt x 532.99126pt>
+<Plots/pass3_MFT/x_y_1_pass3.pdf, id=554, 569.12625pt x 532.99126pt>
 File: Plots/pass3_MFT/x_y_1_pass3.pdf Graphic file (type pdf)
 <use Plots/pass3_MFT/x_y_1_pass3.pdf>
 Package pdftex.def Info: Plots/pass3_MFT/x_y_1_pass3.pdf  used on input line 283.
 (pdftex.def)             Requested size: 120.46782pt x 112.81793pt.
-<Plots/pass3_MFT/x_y_3_pass3.pdf, id=545, 569.12625pt x 532.99126pt>
+<Plots/pass3_MFT/x_y_3_pass3.pdf, id=555, 569.12625pt x 532.99126pt>
 File: Plots/pass3_MFT/x_y_3_pass3.pdf Graphic file (type pdf)
 <use Plots/pass3_MFT/x_y_3_pass3.pdf>
 Package pdftex.def Info: Plots/pass3_MFT/x_y_3_pass3.pdf  used on input line 283.
 (pdftex.def)             Requested size: 120.46782pt x 112.81793pt.
-<Plots/pass3_MFT/x_y_2_pass3.pdf, id=546, 569.12625pt x 532.99126pt>
+<Plots/pass3_MFT/x_y_2_pass3.pdf, id=556, 569.12625pt x 532.99126pt>
 File: Plots/pass3_MFT/x_y_2_pass3.pdf Graphic file (type pdf)
 <use Plots/pass3_MFT/x_y_2_pass3.pdf>
 Package pdftex.def Info: Plots/pass3_MFT/x_y_2_pass3.pdf  used on input line 283.
 (pdftex.def)             Requested size: 120.46782pt x 112.81793pt.
-<Plots/pass3_MFT/x_y_4_pass3.pdf, id=547, 569.12625pt x 532.99126pt>
+<Plots/pass3_MFT/x_y_4_pass3.pdf, id=557, 569.12625pt x 532.99126pt>
 File: Plots/pass3_MFT/x_y_4_pass3.pdf Graphic file (type pdf)
 <use Plots/pass3_MFT/x_y_4_pass3.pdf>
 Package pdftex.def Info: Plots/pass3_MFT/x_y_4_pass3.pdf  used on input line 283.
@@ -967,7 +967,7 @@ Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 283
 [10
 
  <./Plots/pass3_MFT/x_y_1_pass3.pdf, page is rotated 90 degrees> <./Plots/pass3_MFT/x_y_3_pass3.pdf, page is rotated 90 degrees> <./Plots/pass3_MFT/x_y_2_pass3.pdf, page is rotated 90 degrees> <./Plots/pass3_MFT/x_y_4_pass3.pdf, page is rotated 90 degrees>]
-<Plots/pass3_MFT/eta_phi_pass3.pdf, id=749, 569.12625pt x 335.2525pt>
+<Plots/pass3_MFT/eta_phi_pass3.pdf, id=760, 569.12625pt x 335.2525pt>
 File: Plots/pass3_MFT/eta_phi_pass3.pdf Graphic file (type pdf)
 <use Plots/pass3_MFT/eta_phi_pass3.pdf>
 Package pdftex.def Info: Plots/pass3_MFT/eta_phi_pass3.pdf  used on input line 292.
@@ -979,7 +979,7 @@ Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 292
  [11
 
  <./Plots/pass3_MFT/eta_phi_pass3.pdf, page is rotated 90 degrees>]
-<Plots/pass3_pass4.pdf, id=822, 569.12625pt x 385.44pt>
+<Plots/pass3_pass4.pdf, id=834, 569.12625pt x 385.44pt>
 File: Plots/pass3_pass4.pdf Graphic file (type pdf)
 <use Plots/pass3_pass4.pdf>
 Package pdftex.def Info: Plots/pass3_pass4.pdf  used on input line 301.
@@ -995,22 +995,22 @@ Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 301
 [12
 
  <./Plots/pass3_pass4.pdf, page is rotated 90 degrees>]
-<Plots/pass4_TracksIU/eta.pdf, id=895, 569.12625pt x 385.44pt>
+<Plots/pass4_TracksIU/eta.pdf, id=908, 569.12625pt x 385.44pt>
 File: Plots/pass4_TracksIU/eta.pdf Graphic file (type pdf)
 <use Plots/pass4_TracksIU/eta.pdf>
 Package pdftex.def Info: Plots/pass4_TracksIU/eta.pdf  used on input line 337.
 (pdftex.def)             Requested size: 163.49223pt x 110.72786pt.
-<Plots/pass4_TracksIU/itsNCls.pdf, id=896, 569.12625pt x 385.44pt>
+<Plots/pass4_TracksIU/itsNCls.pdf, id=909, 569.12625pt x 385.44pt>
 File: Plots/pass4_TracksIU/itsNCls.pdf Graphic file (type pdf)
 <use Plots/pass4_TracksIU/itsNCls.pdf>
 Package pdftex.def Info: Plots/pass4_TracksIU/itsNCls.pdf  used on input line 337.
 (pdftex.def)             Requested size: 163.49223pt x 110.72786pt.
-<Plots/pass4_TracksIU/phi.pdf, id=897, 569.12625pt x 385.44pt>
+<Plots/pass4_TracksIU/phi.pdf, id=910, 569.12625pt x 385.44pt>
 File: Plots/pass4_TracksIU/phi.pdf Graphic file (type pdf)
 <use Plots/pass4_TracksIU/phi.pdf>
 Package pdftex.def Info: Plots/pass4_TracksIU/phi.pdf  used on input line 337.
 (pdftex.def)             Requested size: 163.49223pt x 110.72786pt.
-<Plots/pass4_TracksIU/Z.pdf, id=898, 569.12625pt x 385.44pt>
+<Plots/pass4_TracksIU/Z.pdf, id=911, 569.12625pt x 385.44pt>
 File: Plots/pass4_TracksIU/Z.pdf Graphic file (type pdf)
 <use Plots/pass4_TracksIU/Z.pdf>
 Package pdftex.def Info: Plots/pass4_TracksIU/Z.pdf  used on input line 337.
@@ -1026,7 +1026,7 @@ Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 337
 [13
 
  <./Plots/pass4_TracksIU/eta.pdf, page is rotated 90 degrees> <./Plots/pass4_TracksIU/itsNCls.pdf, page is rotated 90 degrees> <./Plots/pass4_TracksIU/phi.pdf, page is rotated 90 degrees> <./Plots/pass4_TracksIU/Z.pdf, page is rotated 90 degrees>]
-<Plots/pass4_TracksIU/eta_phi.pdf, id=1101, 569.12625pt x 335.2525pt>
+<Plots/pass4_TracksIU/eta_phi.pdf, id=1115, 569.12625pt x 335.2525pt>
 File: Plots/pass4_TracksIU/eta_phi.pdf Graphic file (type pdf)
 <use Plots/pass4_TracksIU/eta_phi.pdf>
 Package pdftex.def Info: Plots/pass4_TracksIU/eta_phi.pdf  used on input line 346.
@@ -1040,68 +1040,123 @@ Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 346
  <./Plots/pass4_TracksIU/eta_phi.pdf, page is rotated 90 degrees>]
 File: Figs/ALICE_logo_transparent.png Graphic file (type png)
 <use Figs/ALICE_logo_transparent.png>
-Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 361.
+Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 360.
 (pdftex.def)             Requested size: 20.0pt x 27.0415pt.
  [15
 
 ]
 LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
-(Font)              scaled to size 24.88pt on input line 368.
+(Font)              scaled to size 24.88pt on input line 367.
 File: Figs/ALICE_logo_transparent.png Graphic file (type png)
 <use Figs/ALICE_logo_transparent.png>
-Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 368.
+Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 367.
 (pdftex.def)             Requested size: 20.0pt x 27.0415pt.
  [16
 
 ]
-File: Figs/ALICE_logo_transparent.png Graphic file (type png)
-<use Figs/ALICE_logo_transparent.png>
-Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 374.
-(pdftex.def)             Requested size: 20.0pt x 27.0415pt.
- [17
-
-]
-<Plots/pass4_MFT/eta_phi_pass4.pdf, id=1258, 569.12625pt x 335.2525pt>
-File: Plots/pass4_MFT/eta_phi_pass4.pdf Graphic file (type pdf)
-<use Plots/pass4_MFT/eta_phi_pass4.pdf>
-Package pdftex.def Info: Plots/pass4_MFT/eta_phi_pass4.pdf  used on input line 383.
-(pdftex.def)             Requested size: 309.77368pt x 182.48647pt.
-File: Figs/ALICE_logo_transparent.png Graphic file (type png)
-<use Figs/ALICE_logo_transparent.png>
-Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 383.
-(pdftex.def)             Requested size: 20.0pt x 27.0415pt.
- [18
-
- <./Plots/pass4_MFT/eta_phi_pass4.pdf, page is rotated 90 degrees>]
-<Plots/pass4_TracksIU_nohasITS/eta.pdf, id=1331, 569.12625pt x 385.44pt>
-File: Plots/pass4_TracksIU_nohasITS/eta.pdf Graphic file (type pdf)
-<use Plots/pass4_TracksIU_nohasITS/eta.pdf>
-Package pdftex.def Info: Plots/pass4_TracksIU_nohasITS/eta.pdf  used on input line 419.
+<Plots/pass4_MFT/MFTeta_pass4.pdf, id=1247, 569.12625pt x 385.44pt>
+File: Plots/pass4_MFT/MFTeta_pass4.pdf Graphic file (type pdf)
+<use Plots/pass4_MFT/MFTeta_pass4.pdf>
+Package pdftex.def Info: Plots/pass4_MFT/MFTeta_pass4.pdf  used on input line 407.
 (pdftex.def)             Requested size: 163.49223pt x 110.72786pt.
-<Plots/pass4_TracksIU_nohasITS/itsNCls.pdf, id=1332, 569.12625pt x 385.44pt>
-File: Plots/pass4_TracksIU_nohasITS/itsNCls.pdf Graphic file (type pdf)
-<use Plots/pass4_TracksIU_nohasITS/itsNCls.pdf>
-Package pdftex.def Info: Plots/pass4_TracksIU_nohasITS/itsNCls.pdf  used on input line 419.
+<Plots/pass4_MFT/nClusters_pass4.pdf, id=1248, 569.12625pt x 385.44pt>
+File: Plots/pass4_MFT/nClusters_pass4.pdf Graphic file (type pdf)
+<use Plots/pass4_MFT/nClusters_pass4.pdf>
+Package pdftex.def Info: Plots/pass4_MFT/nClusters_pass4.pdf  used on input line 407.
 (pdftex.def)             Requested size: 163.49223pt x 110.72786pt.
-<Plots/pass4_TracksIU_nohasITS/phi.pdf, id=1333, 569.12625pt x 385.44pt>
-File: Plots/pass4_TracksIU_nohasITS/phi.pdf Graphic file (type pdf)
-<use Plots/pass4_TracksIU_nohasITS/phi.pdf>
-Package pdftex.def Info: Plots/pass4_TracksIU_nohasITS/phi.pdf  used on input line 419.
+<Plots/pass4_MFT/phi_pass4.pdf, id=1249, 569.12625pt x 385.44pt>
+File: Plots/pass4_MFT/phi_pass4.pdf Graphic file (type pdf)
+<use Plots/pass4_MFT/phi_pass4.pdf>
+Package pdftex.def Info: Plots/pass4_MFT/phi_pass4.pdf  used on input line 407.
 (pdftex.def)             Requested size: 163.49223pt x 110.72786pt.
-<Plots/phi_no_ITS.pdf, id=1334, 569.12625pt x 385.44pt>
-File: Plots/phi_no_ITS.pdf Graphic file (type pdf)
-<use Plots/phi_no_ITS.pdf>
-Package pdftex.def Info: Plots/phi_no_ITS.pdf  used on input line 419.
+<Plots/pass4_MFT/Z_MFT_pass4.pdf, id=1250, 569.12625pt x 385.44pt>
+File: Plots/pass4_MFT/Z_MFT_pass4.pdf Graphic file (type pdf)
+<use Plots/pass4_MFT/Z_MFT_pass4.pdf>
+Package pdftex.def Info: Plots/pass4_MFT/Z_MFT_pass4.pdf  used on input line 407.
 (pdftex.def)             Requested size: 163.49223pt x 110.72786pt.
 
-Overfull \vbox (1.37964pt too high) detected at line 419
+Overfull \vbox (1.37964pt too high) detected at line 407
  []
 
 File: Figs/ALICE_logo_transparent.png Graphic file (type png)
 <use Figs/ALICE_logo_transparent.png>
-Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 419.
+Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 407.
 (pdftex.def)             Requested size: 20.0pt x 27.0415pt.
-[19
+[17
+
+ <./Plots/pass4_MFT/MFTeta_pass4.pdf, page is rotated 90 degrees> <./Plots/pass4_MFT/nClusters_pass4.pdf, page is rotated 90 degrees> <./Plots/pass4_MFT/phi_pass4.pdf, page is rotated 90 degrees> <./Plots/pass4_MFT/Z_MFT_pass4.pdf, page is rotated 90 degrees>]
+<Plots/pass4_MFT/x_y_1_pass4.pdf, id=1453, 569.12625pt x 532.99126pt>
+File: Plots/pass4_MFT/x_y_1_pass4.pdf Graphic file (type pdf)
+<use Plots/pass4_MFT/x_y_1_pass4.pdf>
+Package pdftex.def Info: Plots/pass4_MFT/x_y_1_pass4.pdf  used on input line 443.
+(pdftex.def)             Requested size: 120.46782pt x 112.81793pt.
+<Plots/pass4_MFT/x_y_3_pass4.pdf, id=1454, 569.12625pt x 532.99126pt>
+File: Plots/pass4_MFT/x_y_3_pass4.pdf Graphic file (type pdf)
+<use Plots/pass4_MFT/x_y_3_pass4.pdf>
+Package pdftex.def Info: Plots/pass4_MFT/x_y_3_pass4.pdf  used on input line 443.
+(pdftex.def)             Requested size: 120.46782pt x 112.81793pt.
+<Plots/pass4_MFT/x_y_2_pass4.pdf, id=1455, 569.12625pt x 532.99126pt>
+File: Plots/pass4_MFT/x_y_2_pass4.pdf Graphic file (type pdf)
+<use Plots/pass4_MFT/x_y_2_pass4.pdf>
+Package pdftex.def Info: Plots/pass4_MFT/x_y_2_pass4.pdf  used on input line 443.
+(pdftex.def)             Requested size: 120.46782pt x 112.81793pt.
+<Plots/pass4_MFT/x_y_4_pass4.pdf, id=1456, 569.12625pt x 532.99126pt>
+File: Plots/pass4_MFT/x_y_4_pass4.pdf Graphic file (type pdf)
+<use Plots/pass4_MFT/x_y_4_pass4.pdf>
+Package pdftex.def Info: Plots/pass4_MFT/x_y_4_pass4.pdf  used on input line 443.
+(pdftex.def)             Requested size: 120.46782pt x 112.81793pt.
+
+Overfull \vbox (5.37088pt too high) detected at line 443
+ []
+
+File: Figs/ALICE_logo_transparent.png Graphic file (type png)
+<use Figs/ALICE_logo_transparent.png>
+Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 443.
+(pdftex.def)             Requested size: 20.0pt x 27.0415pt.
+[18
+
+ <./Plots/pass4_MFT/x_y_1_pass4.pdf, page is rotated 90 degrees> <./Plots/pass4_MFT/x_y_3_pass4.pdf, page is rotated 90 degrees> <./Plots/pass4_MFT/x_y_2_pass4.pdf, page is rotated 90 degrees> <./Plots/pass4_MFT/x_y_4_pass4.pdf, page is rotated 90 degrees>]
+<Plots/pass4_MFT/eta_phi_pass4.pdf, id=1659, 569.12625pt x 335.2525pt>
+File: Plots/pass4_MFT/eta_phi_pass4.pdf Graphic file (type pdf)
+<use Plots/pass4_MFT/eta_phi_pass4.pdf>
+Package pdftex.def Info: Plots/pass4_MFT/eta_phi_pass4.pdf  used on input line 452.
+(pdftex.def)             Requested size: 309.77368pt x 182.48647pt.
+File: Figs/ALICE_logo_transparent.png Graphic file (type png)
+<use Figs/ALICE_logo_transparent.png>
+Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 452.
+(pdftex.def)             Requested size: 20.0pt x 27.0415pt.
+ [19
+
+ <./Plots/pass4_MFT/eta_phi_pass4.pdf, page is rotated 90 degrees>]
+<Plots/pass4_TracksIU_nohasITS/eta.pdf, id=1733, 569.12625pt x 385.44pt>
+File: Plots/pass4_TracksIU_nohasITS/eta.pdf Graphic file (type pdf)
+<use Plots/pass4_TracksIU_nohasITS/eta.pdf>
+Package pdftex.def Info: Plots/pass4_TracksIU_nohasITS/eta.pdf  used on input line 488.
+(pdftex.def)             Requested size: 163.49223pt x 110.72786pt.
+<Plots/pass4_TracksIU_nohasITS/itsNCls.pdf, id=1734, 569.12625pt x 385.44pt>
+File: Plots/pass4_TracksIU_nohasITS/itsNCls.pdf Graphic file (type pdf)
+<use Plots/pass4_TracksIU_nohasITS/itsNCls.pdf>
+Package pdftex.def Info: Plots/pass4_TracksIU_nohasITS/itsNCls.pdf  used on input line 488.
+(pdftex.def)             Requested size: 163.49223pt x 110.72786pt.
+<Plots/pass4_TracksIU_nohasITS/phi.pdf, id=1735, 569.12625pt x 385.44pt>
+File: Plots/pass4_TracksIU_nohasITS/phi.pdf Graphic file (type pdf)
+<use Plots/pass4_TracksIU_nohasITS/phi.pdf>
+Package pdftex.def Info: Plots/pass4_TracksIU_nohasITS/phi.pdf  used on input line 488.
+(pdftex.def)             Requested size: 163.49223pt x 110.72786pt.
+<Plots/phi_no_ITS.pdf, id=1736, 569.12625pt x 385.44pt>
+File: Plots/phi_no_ITS.pdf Graphic file (type pdf)
+<use Plots/phi_no_ITS.pdf>
+Package pdftex.def Info: Plots/phi_no_ITS.pdf  used on input line 488.
+(pdftex.def)             Requested size: 163.49223pt x 110.72786pt.
+
+Overfull \vbox (1.37964pt too high) detected at line 488
+ []
+
+File: Figs/ALICE_logo_transparent.png Graphic file (type png)
+<use Figs/ALICE_logo_transparent.png>
+Package pdftex.def Info: Figs/ALICE_logo_transparent.png  used on input line 488.
+(pdftex.def)             Requested size: 20.0pt x 27.0415pt.
+[20
 
  <./Plots/pass4_TracksIU_nohasITS/eta.pdf, page is rotated 90 degrees> <./Plots/pass4_TracksIU_nohasITS/itsNCls.pdf, page is rotated 90 degrees> <./Plots/pass4_TracksIU_nohasITS/phi.pdf, page is rotated 90 degrees> <./Plots/phi_no_ITS.pdf, page is rotated 90 degrees>]
 \tf@nav=\write6
@@ -1118,18 +1173,18 @@ Package rerunfilecheck Info: File `kdsmil001_final_pres.out' has not changed.
 (rerunfilecheck)             Checksum: 25D1992B950F8B438E6B4BB0E89CF493;586.
  ) 
 Here is how much of TeX's memory you used:
- 26161 strings out of 478287
- 555632 string characters out of 5849289
- 777076 words of memory out of 5000000
- 43762 multiletter control sequences out of 15000+600000
+ 26221 strings out of 478287
+ 557736 string characters out of 5849289
+ 778209 words of memory out of 5000000
+ 43812 multiletter control sequences out of 15000+600000
  480677 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,19n,122p,507b,971s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/opensans/a_nvvucy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/opensans/a_iz27ck.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/opensans/a_n3lhbv.enc}</usr/share/texlive/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Italic.pfb></usr/share/texlive/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on kdsmil001_final_pres.pdf (19 pages, 15783943 bytes).
+Output written on kdsmil001_final_pres.pdf (20 pages, 15982142 bytes).
 PDF statistics:
- 1607 PDF objects out of 1728 (max. 8388607)
- 977 compressed objects within 10 object streams
- 44 named destinations out of 1000 (max. 500000)
- 259 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2010 PDF objects out of 2073 (max. 8388607)
+ 1168 compressed objects within 12 object streams
+ 46 named destinations out of 1000 (max. 500000)
+ 299 words of extra memory for PDF output out of 10000 (max. 10000000)
 

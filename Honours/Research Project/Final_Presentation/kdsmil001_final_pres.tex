@@ -8,7 +8,7 @@
 \setbeamertemplate{navigation symbols}{} % Uncomment this line to remove the navigation symbols from the bottom of all slides
 \setbeamertemplate{caption}{\raggedright\insertcaption\par}
 
-\title[ITS \& MFT Analysis]{A preliminary analysis of data from ALICE's new ITS and MFT detectors} % The short title in the optional parameter appears at the bottom of every slide, the full title in the main parameter is only on the title page
+\title[ITS \& MFT Analysis]{A preliminary analysis of pilot beam data from ALICE's new ITS and MFT detectors} % The short title in the optional parameter appears at the bottom of every slide, the full title in the main parameter is only on the title page
 
 % \subtitle{Optional Subtitle} % Presentation subtitle, remove this command if a subtitle isn't required
 
@@ -177,8 +177,8 @@
     \begin{columns}[c]
         \begin{column}{0.6\textwidth}
             \begin{itemize}
-                \item Created for Run 3 to deal with untriggered data capture, splitting it into \SI{10}{\milli\second} ``timeframes'' in online processing
-                \item Raw data converted to usable data with ``reconstruction passes'' in the offline stage
+                \item Created for Run 3 to deal with untriggered data capture, splitting it into \SI{10}{\milli\second} ``timeframes'' in online processing, then compressed timeframes (CTFs), which are saved to disk
+                \item Raw data converted to usable data with ``reconstruction passes'' in the offline stage, producing Analysis Object Data (AOD) files
                 \item Then analysed with C\texttt{++} and ROOT to make the most of computational resources and to minimise disk space usage
                 \item Don't breathe near O2, or it might break
             \end{itemize}
@@ -349,13 +349,12 @@
 \section{Conclusion}
 
 \begin{frame}
-    \frametitle{Next Steps}
+    \frametitle{Conclusion}
 
     \begin{itemize}
-        \item Why does $Z_{MFT}$ only show the first two disks?
-        \item What is different about pass4?
-        \item Was ITS working properly/what is that gap in the data?
-        \item James mentioned a report but it's probably not that important
+        \item Doing this fairly basic analysis is not what O2 was made for, so it is often hard to access the variables we want to use
+        \item The documentation is also not made for it, so working out what these variables mean is hard, if not impossible
+        \item If this is going to be studied more, it requires either additions to O2 or analysis at a deeper level, before the AOD's get made
     \end{itemize}
 
 \end{frame}
@@ -367,7 +366,81 @@
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Backup}
+
+\begin{frame}
+    \frametitle{MFT Kinematics (pass 4)}
+
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \vspace*{-0.43cm}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=0.95\textwidth]{Plots/pass4_MFT/MFTeta_pass4.pdf}
+                \end{center}
+            \end{figure}
+            \vspace*{-0.6cm}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=0.95\textwidth]{Plots/pass4_MFT/nClusters_pass4.pdf}
+                \end{center}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \vspace*{-0.43cm}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=0.95\textwidth]{Plots/pass4_MFT/phi_pass4.pdf}
+                \end{center}
+            \end{figure}
+            \vspace*{-0.6cm}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=0.95\textwidth]{Plots/pass4_MFT/Z_MFT_pass4.pdf}
+                \end{center}
+            \end{figure}
+        \end{column}
+    \end{columns}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{MFT x-y Plots (pass 4)}
+
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \vspace*{-0.5cm}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=0.7\textwidth]{Plots/pass4_MFT/x_y_1_pass4.pdf}
+                \end{center}
+            \end{figure}
+            \vspace*{-0.7cm}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=0.7\textwidth]{Plots/pass4_MFT/x_y_3_pass4.pdf}
+                \end{center}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \vspace*{-0.5cm}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=0.7\textwidth]{Plots/pass4_MFT/x_y_2_pass4.pdf}
+                \end{center}
+            \end{figure}
+            \vspace*{-0.7cm}
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[width=0.7\textwidth]{Plots/pass4_MFT/x_y_4_pass4.pdf}
+                \end{center}
+            \end{figure}
+        \end{column}
+    \end{columns}
+
+\end{frame}
 
 \begin{frame}
     \frametitle{$\eta$-$\varphi$ in the MFT (pass 4)}
