@@ -46,7 +46,7 @@
             \begin{itemize}
                 \item LHC Run 3 comes with increased $\sqrt{s}$ and luminosity of collisions
                 \item This requires a new untriggered data capture scheme, so detector readout electronics were upgraded at ALICE
-                \item The MFT (9) was added, the ITS (6, 7) was upgraded, and the analysis framework was overhauled entirely
+                \item The MFT (9) was added, the ITS (6, 7) was upgraded, and the analysis framework was overhauled entirely (called O2)
                 \item Learning this framework, and how the MFT and ITS interact with it, was the main goal of this project
             \end{itemize}
         \end{column}
@@ -104,7 +104,7 @@
                 \item Used to determine position of the primary vertex and help with particle tracking
                 \item \SI{22.4}{\milli\metre} to \SI{391.8}{\milli\metre} radial extension from IP
                 \item Covers $|\eta| < 1.22$
-                \item Stand-alone tracking has no minimum required number of layers with hits
+                \item Stand-alone tracking has no minimum required number of clusters per track
             \end{itemize}
         \end{column}
 
@@ -153,10 +153,10 @@
         \begin{column}{0.5\textwidth}
             \begin{itemize}
                 \item Uses the same pixel detector technology as the ITS in a better-suited geometry
-                \item Sits in front of the hadronic absorber, with 5 double-sided disks between \SI{-46}{\centi\metre} and \SI{-76.8}{\centi\metre}
+                \item Sits in front of the hadronic absorber, with 5 double-sided disks between $z=$\SI{-46}{\centi\metre} and $z=$\SI{-76.8}{\centi\metre}
                 \item Each disk is \SI{1.4}{\centi\metre} thick
                 \item Covers $-3.6\leq\eta\leq -2.45$
-                \item Reconstructing a track requires hits in 4 of the 5 disks
+                \item Reconstructing a track requires contribution from 4 of the 5 disks, according to the documentation
             \end{itemize}
         \end{column}
 
@@ -352,9 +352,10 @@
     \frametitle{Conclusion}
 
     \begin{itemize}
-        \item Doing this fairly basic analysis is not what O2 was made for, so it is often hard to access the variables we want to use
-        \item The documentation is also not made for it, so working out what these variables mean is hard, if not impossible
-        \item If this is going to be studied more, it requires either additions to O2 or analysis at a deeper level, before the AOD's get made
+        \item We performed some low-level analysis of kinematic variables of tracks in the ITS and MFT but came up against some issues related to how O2 is built for more advanced analysis than what we intended
+        \item If more analysis of this type needs to be done, we recommend that O2 gets modified quite extensively to allow for it, or the step between CTFs and AODs gets investigated first to allow a more in-depth analysis
+        \item We also recommend investigating simulations in order to properly compare the distributions we see with what we expect, as we were only able to interpret the plots through the lens of expecting isotropic emission of particles and the geometry of the detectors
+
     \end{itemize}
 
 \end{frame}
